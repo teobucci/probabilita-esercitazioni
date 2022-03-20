@@ -152,7 +152,7 @@ Dopo aver introdotto un opportuno spazio di probabilità per descrivere questo e
 Dato uno spazio di probabilità $( \Omega ,\mathcal{A} ,\P)$, si mostri che:
 \begin{enumerate}
 \item se un evento $A$ è quasi certo, ovvero $\P( A) =1$, allora $\P( A\cap B) =\P( B)$ per ogni $B\in \mathcal{A}$;
-\item se un evento $A$ implica un evento $B$, ovvero $A\subset B$, allora $\P( A) \leqslant \P( B)$.
+\item se un evento $A$ implica un evento $B$, ovvero $A\subset B$, allora $\P( A) \leq \P( B)$.
 \end{enumerate}
 \Esercizio{}
 
@@ -160,11 +160,11 @@ Sia $( \Omega ,\mathcal{A} ,\P)$ uno spazio di probabilità e siano $A$ e $B$ du
 \begin{enumerate}
 \item $\P( A\cup B) =0.4$,
 \item $\P( A\cup B) =0.7$,
-\item $\P( A\cup B) \geqslant 0.7$,
+\item $\P( A\cup B) \geq 0.7$,
 \item $\P( A\cup B) =1.1$,
 \item $\P( A\cap B) =0.28$,
-\item $\P\left( B\cap A^{c}\right) \geqslant 0.3$,
-\item $\P\left( A\cap B^{c}\right) \leqslant 0.3$.
+\item $\P\left( B\cap A^{c}\right) \geq 0.3$,
+\item $\P\left( A\cap B^{c}\right) \leq 0.3$.
 \end{enumerate}
 \Esercizio{}
 
@@ -203,7 +203,7 @@ Sia $( \Omega ,\mathcal{A} ,\P)$ uno spazio di probabilità e sia $A_{n}$ con $n
 
 Dato $( \Omega ,\mathcal{A} ,\P)$ spazio di probabilità, data $A_{n}$ successione di eventi, si provi che
 \begin{equation*}
-\P\left(\liminf _{n} A_{n}\right) \leqslant \liminf _{n}\P( A_{n}) \leqslant \limsup _{n}\P( A_{n})\mathbb{\leqslant P}\left(\limsup _{n} A_{n}\right) .
+\P\left(\liminf _{n} A_{n}\right) \leq \liminf _{n}\P( A_{n}) \leq \limsup _{n}\P( A_{n})\mathbb{\leq P}\left(\limsup _{n} A_{n}\right) .
 \end{equation*}
 Si deduca che se $A_{n}\rightarrow A$, ovvero $\liminf\nolimits _{n} A_{n} =\limsup _{n} A_{n} =A$, allora $\P( A_{n})\rightarrow \P( A)$.
 
@@ -297,27 +297,27 @@ $A=\sigma ( E) =\left\{E,E^{c} ,\emptyset ,\Omega \right\}$.
 \item $\bigcup\limits _{k=1}^{\infty } E_{k}^{c}$. Vediamo l'appartenenza ad $\mathcal{A}$: $E_{k} \in \mathcal{A} \forall k\implies  E_{k}^{c} \in \mathcal{A} \forall k\implies  \bigcap\limits _{k=1}^{\infty } E_{k}^{c} \in \mathcal{A}$
 \item $E_{3} \cap \bigcap\limits _{k\neq 3} E_{k}^{c}$
 \item $\bigcap\limits _{k=1}^{\infty } E_{2k}$
-\item $\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geqslant n} E_{m} =:\liminf _{n} E_{n}$
+\item $\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m} =:\liminf _{n} E_{n}$
 
 \begin{oss}
 \begin{equation*}
 \begin{aligned}
-\omega \in \liminf _{n} E_{n} & \ \ \iff \ \ \omega \in \bigcup _{n=1}^{\infty }\bigcap _{m\geqslant n} E_{m}\\
- & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in \bigcap _{m\geqslant \overline{n}} E_{m}\\
- & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in E_{m} \forall m\geqslant \overline{n}
+\omega \in \liminf _{n} E_{n} & \ \ \iff \ \ \omega \in \bigcup _{n=1}^{\infty }\bigcap _{m\geq n} E_{m}\\
+ & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in \bigcap _{m\geq \overline{n}} E_{m}\\
+ & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in E_{m} \forall m\geq \overline{n}
 \end{aligned}
 \end{equation*}
 i.e. $\omega $ sta in tutti gli $E_{m}$ tranne al più un numero finito di essi.
 
 i.e. ho successi in tutte le prove al più un numero finito di esse.
 \end{oss}
-\item $\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geqslant n} E_{m} =:\limsup _{n} E_{n}$
+\item $\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m} =:\limsup _{n} E_{n}$
 
 \begin{oss}
 \begin{equation*}
 \begin{aligned}
-\omega \in \limsup _{n} E_{n} & \ \ \iff \ \ \omega \in \bigcap _{n=1}^{\infty }\bigcup _{m\geqslant n} E_{m}\\
- & \ \ \iff \ \ \forall n\in \mathbb{N} ,\ \omega \in \bigcup _{m\geqslant n} E_{m}\\
+\omega \in \limsup _{n} E_{n} & \ \ \iff \ \ \omega \in \bigcap _{n=1}^{\infty }\bigcup _{m\geq n} E_{m}\\
+ & \ \ \iff \ \ \forall n\in \mathbb{N} ,\ \omega \in \bigcup _{m\geq n} E_{m}\\
  & \ \ \iff \ \ \forall n\in \mathbb{N} \ \ \exists \overline{m} :\ \omega \in E_{\overline{m}}
 \end{aligned}
 \end{equation*}
@@ -325,7 +325,7 @@ i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \mathbb{N}$.
 
 i.e. ho infiniti successi.
 \end{oss}
-\item $\left(\liminf\limits _{n} E_{n}\right)^{c} =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geqslant n} E_{m}\right)^{c} =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geqslant n} E_{m}^{c}}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}^{c}$
+\item $\left(\liminf\limits _{n} E_{n}\right)^{c} =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m}\right)^{c} =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m}^{c}}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}^{c}$
 \item $\bigcup\limits _{l\in \mathbb{N}}\left( E_{l} \cap \bigcap\limits _{k\neq l} E_{k}^{c}\right)$
 \end{enumerate}
 \Soluzione
@@ -333,10 +333,10 @@ i.e. ho infiniti successi.
 Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \mathcal{A}$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}^{c} \in \mathcal{A}$.
 \begin{enumerate}
 \item $\bigcap\limits _{k=1}^{n} E_{k}^{1} \in \mathcal{A}$,
-\item $\bigcap\limits _{k\geqslant 1} E_{k}^{5} \in \mathcal{A}$,
+\item $\bigcap\limits _{k\geq 1} E_{k}^{5} \in \mathcal{A}$,
 \item $E_{13}^{3} \cap \left(\bigcap\limits _{k\neq 13}\left[\left( E_{k}^{3}\right)^{c}\right]\right) \in \mathcal{A}$,
-\item $\left(\bigcap\limits _{k\geqslant 0} D_{2k+1}\right) \cap \left(\bigcap\limits _{k\geqslant 1} P_{2k}\right) \in \mathcal{A}$,
-\item $\bigcap\limits _{k\geqslant 33} E_{k}^{3} \in \mathcal{A}$,
+\item $\left(\bigcap\limits _{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits _{k\geq 1} P_{2k}\right) \in \mathcal{A}$,
+\item $\bigcap\limits _{k\geq 33} E_{k}^{3} \in \mathcal{A}$,
 \item $\liminf _{k} E_{k}^{3} \in \mathcal{A}$,
 \item $\liminf _{k} D_{k} \in \mathcal{A}$,
 \item $\limsup _{k} E_{k}^{6} \in \mathcal{A}$,
@@ -543,30 +543,30 @@ Quindi la probabilità che ci sia una consegna urgente in città è $\P( U\cap C
 
 Dimostriamo le due disuguaglianze.
 \begin{enumerate}
-\item $\P( B) =\overbrace{\P\left(\left( B\cap A^{c}\right) \cup ( A\cap B)\right) =\underbrace{\P\left( B\cap A^{c}\right)}_{\geqslant 0} +\P( A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geqslant \P( A\cap B)$
-\item $\P( A\cap B) =\P( A) +\P( B) -\underbrace{\P( A\cap B)}_{\leqslant 1} \geqslant \underbrace{\P( A)}_{=1} +\P( B) -1=\P( B)$
+\item $\P( B) =\overbrace{\P\left(\left( B\cap A^{c}\right) \cup ( A\cap B)\right) =\underbrace{\P\left( B\cap A^{c}\right)}_{\geq 0} +\P( A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geq \P( A\cap B)$
+\item $\P( A\cap B) =\P( A) +\P( B) -\underbrace{\P( A\cap B)}_{\leq 1} \geq \underbrace{\P( A)}_{=1} +\P( B) -1=\P( B)$
 \end{enumerate}
 
 Quindi abbiamo $\P( A\cap B) =\P( B)$.
 \item Scriviamo $B$ come unione di insiemi disgiunti: $B=A\cup ( B\smallsetminus A)$.
 
-$\P( B) =\P( A\cup ( B\smallsetminus A)) =\P( A) +\underbrace{\P( B\smallsetminus A)}_{\geqslant 0} \geqslant \P( A)$
+$\P( B) =\P( A\cup ( B\smallsetminus A)) =\P( A) +\underbrace{\P( B\smallsetminus A)}_{\geq 0} \geq \P( A)$
 \end{enumerate}
 \Soluzione
 
 Facciamo due osservazioni per poter rispondere ai primi quesiti.
 \begin{equation*}
 \begin{cases}
-\P( A\cup B) \geqslant \P( A) =0.4\\
-\P( A\cup B) \geqslant \P( B) =0.7
-\end{cases} \implies  \boxed{\P( A\cup B) \geqslant 0.7}
+\P( A\cup B) \geq \P( A) =0.4\\
+\P( A\cup B) \geq \P( B) =0.7
+\end{cases} \implies  \boxed{\P( A\cup B) \geq 0.7}
 \end{equation*}
 analogamente
 \begin{equation*}
 \begin{cases}
-\P( A\cap B) \leqslant \P( A) =0.4\\
-\P( A\cap B) \leqslant \P( B) =0.7
-\end{cases} \implies  \boxed{\P( A\cap B) \leqslant 0.4}
+\P( A\cap B) \leq \P( A) =0.4\\
+\P( A\cap B) \leq \P( B) =0.7
+\end{cases} \implies  \boxed{\P( A\cap B) \leq 0.4}
 \end{equation*}
 Allora:
 \begin{enumerate}
@@ -582,13 +582,13 @@ Allora:
 pertanto
 
 \begin{equation*}
-\P\left( B\cap A^{c}\right) =\underbrace{\P( B)}_{=0.7} -\underbrace{\P( A\cap B)}_{\leqslant 0.4} \geqslant 0.7-0.4=0.3
+\P\left( B\cap A^{c}\right) =\underbrace{\P( B)}_{=0.7} -\underbrace{\P( A\cap B)}_{\leq 0.4} \geq 0.7-0.4=0.3
 \end{equation*}
 \item V, infatti\begin{equation*}
 \begin{cases}
-\P\left( A\cap B^{c}\right) \leqslant \P( A) =0.4\\
-\P\left( A\cap B^{c}\right) \leqslant \P\left( B^{c}\right) =1-\P( B) =1-0.7=0.3
-\end{cases}\mathbb{\implies  P}\left( A\cap B^{c}\right) \leqslant 0.3
+\P\left( A\cap B^{c}\right) \leq \P( A) =0.4\\
+\P\left( A\cap B^{c}\right) \leq \P\left( B^{c}\right) =1-\P( B) =1-0.7=0.3
+\end{cases}\mathbb{\implies  P}\left( A\cap B^{c}\right) \leq 0.3
 \end{equation*}
 \end{enumerate}
 \Soluzione

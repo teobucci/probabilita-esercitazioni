@@ -162,7 +162,7 @@ Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ e
 \end{equation*}
 \end{definition}
 \begin{definition}
-Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leqslant n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
+Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
 \begin{equation*}
 \boxed{D_{r}^{n} =n( n-1)( n-2) \dotsc ( n-r+1) =\frac{n!}{( n-r) !}}
 \end{equation*}
@@ -173,7 +173,7 @@ Le permutazioni sono un caso particolare di disposizioni senza ripetizione: $n!=
 \textit{Esempio.} I primi $r$ classificati in una gara di $n$ persone.
 
 \begin{definition}
-Ogni sottoinsieme di $E$ di cardinalità $r\leqslant n$ è detto \textbf{combinazione di classe} $r$ di $E$. Il modello è quello di un'\textit{estrazione simultanea} di $r$ oggetti da un'urna che ne contiene $n$ $( r\leqslant n)$. Simile alle disposizioni, ma qui \textit{l'ordine non conta}.
+Ogni sottoinsieme di $E$ di cardinalità $r\leq n$ è detto \textbf{combinazione di classe} $r$ di $E$. Il modello è quello di un'\textit{estrazione simultanea} di $r$ oggetti da un'urna che ne contiene $n$ $( r\leq n)$. Simile alle disposizioni, ma qui \textit{l'ordine non conta}.
 \begin{equation*}
 \boxed{C_{r}^{n} =\binom{n}{r} =\frac{n!}{r!( n-r) !}}
 \end{equation*}
@@ -247,13 +247,13 @@ Si consideri l'estrazione di $k$ oggetti da un'urna contenente $n$ oggetti disti
 \item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se le $k$ estrazioni sono indipendenti e per ciascuna singola estrazione gli $n$ possibili risultati sono equiprobabili.
 \item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
 \end{enumerate}
-\item Si consideri l'estrazione senza reimmissione, per cui $1\leqslant k\leqslant n$. Viene osservato il risultato ordinato delle $k$ estrazioni.
+\item Si consideri l'estrazione senza reimmissione, per cui $1\leq k\leq n$. Viene osservato il risultato ordinato delle $k$ estrazioni.
 \begin{enumerate}
 \item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
 \item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se il risultato di ciascuna delle $k$ estrazioni, data la sequenza degli oggetti già estratti, è equiprobabile fra gli oggetti rimanenti.
 \item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
 \end{enumerate}
-\item Si consideri l'estrazione simultanea, per cui $1\leqslant k\leqslant n$. Viene osservato il risultato dell'estrazione.
+\item Si consideri l'estrazione simultanea, per cui $1\leq k\leq n$. Viene osservato il risultato dell'estrazione.
 \begin{enumerate}
 \item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
 \item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$.
@@ -273,7 +273,7 @@ Da un'urna contenente $5$ palline bianche, $7$ rosse e $4$ blu, vengono estratte
 Si estraggono $2$ palline da un'urna contenente $5$ palline bianche, $6$ nere e $4$ rosse. Calcolare la probabilità che siano dello stesso colore. Distinguere il caso di estrazione simultanea o con reimmissione.
 \Esercizio{}
 
-Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse. Qual è la probabilità di estrarne esattamente $k$ rosse, con $0\leqslant k\leqslant n$? Si risponda nel caso di estrazione con reimmissione e nel caso di estrazione simultanea.
+Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse. Qual è la probabilità di estrarne esattamente $k$ rosse, con $0\leq k\leq n$? Si risponda nel caso di estrazione con reimmissione e nel caso di estrazione simultanea.
 \Esercizio{}
 
 A scommette con B che estrarrà 4 carte di 4 semi diversi da un mazzo di 40 carte. Qual è la probabilità che A vinca?
@@ -751,7 +751,7 @@ $( \implies )$ esercizio.
 \item $\{x_{1} \dotsc x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
 \end{enumerate}
 
-Pertanto, $\frac{1}{n^{k}} \leqslant \mathbb{P}( A) \leqslant \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
+Pertanto, $\frac{1}{n^{k}} \leq \mathbb{P}( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
 \end{enumerate}
 \item 
 \begin{enumerate}
