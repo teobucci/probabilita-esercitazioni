@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+
+
+
+\usepackage{geometry}
+\geometry{
+	nomarginpar, % Toglie doppi margini
+	margin=1in, % Imposta i margini a 1 inch
+}
+
+\input{includes/style.tex}
+\input{includes/exercise_book.tex}
+
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+
+%\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% COPERTINA
+
+\pagestyle{empty} % SWITCHA PER NON AVERE NUMERO PAGINA
+\vspace*{\fill}
+%Teo Bucci \\
+\begin{center}
+	{\large \textsc{Esercitazioni di}}\\
+	\vspace*{0.4cm}
+	{\Huge \textsc{Probabilità}}
+\end{center}
+\vspace*{\fill}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\thispagestyle{empty}
+%\clearpage
+%
+%{\Large \textit{Appunti di Matematica Numerica}}
+%
+%\vspace*{\fill}
+%
+%\textcopyright \ Gli autori, tutti i diritti riservati
+%
+%Sono proibite tutte le riproduzioni senza autorizzazione %scritta degli autori.
+%
+%Revisione del \today
+%
+%Developed by Teo Bucci \\
+%Compiled with \ensuremath\heartsuit \\
+%
+%\textbf{Prefazione}
+%
+%% PREFAZIONE
+%
+%Per segnalare eventuali errori o suggerimenti potete %contattare gli autori.
+%
+%\newpage
+%\thispagestyle{empty} % PER NON AVERE COSE NELL'HEADER
+%\clearpage % PER TERMINARE SUBITO LA PAGINA DOPO L'INDICE
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+% INDICE
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents
+\newpage
+%\thispagestyle{empty} % PER NON AVERE COSE NELL'HEADER
+%\clearpage % PER TERMINARE SUBITO LA PAGINA DOPO L'INDICE
+
+
+% PAGINA VUOTA
+%$ $\\
+%\newpage
+%\pagestyle{fancy} % RISWITCHA PER RIAVERE IL NUMERO PAGINA
+\setcounter{page}{1} % FA RIPARTIRE IL CONTATORE PAGINA DA 1
+%\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%           TEMPLATE
+
+
+%           \chapter{Spazi campionari}
+%           
+%           \ParteEsercizi
+%           
+%           \Esercizio{(Nome di un esercizio speciale)}
+%           \Esercizio{}
+%           \Esercizio{}
+%           
+%           \ParteSoluzioni
+%           
+%           \Soluzione
+%           \Soluzione
+%           \Soluzione
+%           
+%           
+%           \chapter{Indipendenza}
+%           
+%           \ParteEsercizi
+%           
+%           \Esercizio{}
+%           \begin{enumerate}
+%               \item ine
+%               \item oh
+%               \item $\!\!\!\!{^*}$ jhk b
+%           \end{enumerate}
+%           \Esercizio{$*$}
+%           \Esercizio{}
+%           
+%           \ParteSoluzioni
+%           
+%           \Soluzione
+%           \Soluzione
+%           \Soluzione
+
+
+\chapter{Spazi campionari, sigma-algebre, probabilità}
+\input{exercise-sessions/01-spazi_campionari_sigma-algebre_probabilita}
+
+\chapter{Calcolo combinatorio}
+\input{exercise-sessions/02-calcolo_combinatorio}
+
+\chapter{Probabilità condizionale e indipendenza}
+\input{exercise-sessions/03-probabilita_condizionale_e_indipendenza}
+
+\chapter{Variabili aleatorie discrete}
+\input{exercise-sessions/04-variabili_aleatorie_discrete}
+
+\chapter{Variabili aleatorie continue}
+\input{exercise-sessions/05-variabili_aleatorie_continue}
+
+\chapter{Vettori aleatori discreti}
+\input{exercise-sessions/06-vettori_aleatori_discreti}
+
+\chapter{Vettori aleatori continui}
+\input{exercise-sessions/07-vettori_aleatori_continui}
+
+\chapter{Funzioni caratteristiche. Vettori aleatori gaussiani}
+\input{exercise-sessions/08-funzioni_caratteristiche_vettori_aleatori_gaussiani}
+
+\chapter{Leggi condizionali}
+\input{exercise-sessions/09-leggi_condizionali}
+
+\chapter{Convergenza di variabili aleatorie}
+\input{exercise-sessions/10-convergenza_di_variabili_aleatorie}
+
+\chapter{Legge dei Grandi Numeri. Teorema Centrale del Limite}
+\input{exercise-sessions/11-legge_dei_grandi_numeri_teorema_centrale_del_limite}
+
+\chapter{Catene di Markov}
+\input{exercise-sessions/12-catene_di_markov}
+
+\end{document}

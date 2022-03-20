@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template Eserciziario
+%
+% Autore:
+% Teo Bucci
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% \input{../template_dispense.tex}
+
+%----------------------------------------------------------------------------------------
+%	SETUP ESERCIZI / SOLUZIONI
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thechapter}{\arabic{chapter}}
+
+\titleformat{\section}{\normalfont\LARGE\bfseries}{}{0em}{} % \LARGE anziche' \Large
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{0em}{}
+
+\newcommand{\Esercizio}[1]{\subsection{Esercizio~\thechapter.\thesubsection~#1}}
+\newcommand{\Soluzione}{\subsection{Soluzione~\thechapter.\thesubsection}}
+
+\newcommand{\ParteEsercizi}{\section{Esercizi}}
+\newcommand{\ParteSoluzioni}{\section{Soluzioni}}
+
+% MI ASSICURO QUESTA COSA IMPORTANTE
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
