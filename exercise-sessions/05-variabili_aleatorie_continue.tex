@@ -55,8 +55,8 @@ f( x) =\lambda e^{-\lambda x} I_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
 \item Calcolare la moda di $X$.
 \item Calcolare il valore atteso $\mathbb{E}[ X]$ e la varianza $\mathrm{Var}( X)$.
 \item Calcolare la funzione di ripartizione $F_{X}$ di $X$.
-\item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >s+t\ |\ X >s) =\mathbb{P}( X >t)$ per ogni $s,t >0$.
-\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\mathbb{P}( T >s+t\ |\ T >s) =\mathbb{P}( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\mathbb{P}( T >1))$.
+\item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >s+t \mid X >s) =\mathbb{P}( X >t)$ per ogni $s,t >0$.
+\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\mathbb{P}( T >s+t\mid T >s) =\mathbb{P}( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\mathbb{P}( T >1))$.
 \end{enumerate}
 \Esercizio{(Distribuzione Gamma)}
 
@@ -155,7 +155,7 @@ A partire dalla distribuzione uniforme si può ottenere qualunque altra distribu
 
 Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left( 0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
 \begin{equation*}
-h_{X}( t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\mathbb{P}( t< X< t+\varepsilon \ |\ X >t)}{\varepsilon } ,\ \ \ \ t >0.
+h_{X}( t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\mathbb{P}( t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
 \end{equation*}
 Interpretando $X$ come un tempo di attesa, il tasso di fallimento rappresenta la probabilità istantanea di arrivo, sapendo che l'attesa è durata fino al tempo $t$.
 \begin{enumerate}
