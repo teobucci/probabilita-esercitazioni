@@ -4,26 +4,26 @@
 
 
 \begin{definition}
-Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità. Siano $A,B\in \mathcal{A}$ con $\mathbb{P}( B)  >0$. Si definisce \textbf{probabilità condizionata} di $A$ dato $B$, $\mathbb{P}( A|B)$, la quantità
+Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità. Siano $A,B\in \mathcal{A}$ con $\mathbb{P}( B)  >0$. Si definisce \textbf{probabilità condizionata} di $A$ dato $B$, $\mathbb{P}( A\mid B)$, la quantità
 \begin{equation*}
-\mathbb{P}( A|B) =\frac{\mathbb{P}( A\cap B)}{\mathbb{P}( B)}
+\mathbb{P}( A\mid B) =\frac{\mathbb{P}( A\cap B)}{\mathbb{P}( B)}
 \end{equation*}
 \end{definition}
 \textbf{Proprietà.}
 
 Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \mathbb{N}} \subseteq \mathcal{A}$ una partizione discreta di $\Omega $:
 \begin{enumerate}
-\item se $\mathbb{P}( A) ,\mathbb{P}( B)  >0$ allora $\mathbb{P}( A|B) =\frac{\mathbb{P}( B|A)\mathbb{P}( A)}{\mathbb{P}( B)}$.
+\item se $\mathbb{P}( A) ,\mathbb{P}( B)  >0$ allora $\mathbb{P}( A\mid B) =\frac{\mathbb{P}( B\mid A)\mathbb{P}( A)}{\mathbb{P}( B)}$.
 \item $\mathbb{P}( A) =\sum\limits _{n}\mathbb{P}( A\cap E_{n})$
-\item \textit{Probabilità totali}: se $\mathbb{P}( E_{n})  >0,\forall n\in \mathbb{N}$ allora $\mathbb{P}( A) =\sum\limits _{n}\mathbb{P}( A|E_{n})\mathbb{P}( E_{n})$.
-\item \textit{Bayes}: se $\mathbb{P}( A) ,\mathbb{P}( E_{n})  >0,\forall n\in \mathbb{N}$ allora $\mathbb{P}( E_{n} |A) =\frac{\mathbb{P}( A|E_{n})\mathbb{P}( E_{n})}{\sum\limits _{n}\mathbb{P}( A|E_{n})\mathbb{P}( E_{n})}$.
+\item \textit{Probabilità totali}: se $\mathbb{P}( E_{n})  >0,\forall n\in \mathbb{N}$ allora $\mathbb{P}( A) =\sum\limits _{n}\mathbb{P}( A\mid E_{n})\mathbb{P}( E_{n})$.
+\item \textit{Bayes}: se $\mathbb{P}( A) ,\mathbb{P}( E_{n})  >0,\forall n\in \mathbb{N}$ allora $\mathbb{P}( E_{n} \mid A) =\frac{\mathbb{P}( A\mid E_{n})\mathbb{P}( E_{n})}{\sum\limits _{n}\mathbb{P}( A\mid E_{n})\mathbb{P}( E_{n})}$.
 \end{enumerate}
 \begin{definition}
 $A$ e $B$ sono indipendenti $( A\Bot B)$ se $\mathbb{P}( A\cap B) =\mathbb{P}( A)\mathbb{P}( B)$.
 \end{definition}
 \textbf{Proprietà.}
 \begin{enumerate}
-\item $A\Bot B\iff \mathbb{P}( A|B) =\mathbb{P}( A)$.
+\item $A\Bot B\iff \mathbb{P}( A\mid B) =\mathbb{P}( A)$.
 \item $A\Bot B\iff A\Bot B\comp \iff A\comp \Bot B\iff A\comp \Bot B\comp$.
 \end{enumerate}
 \begin{definition}
@@ -53,7 +53,7 @@ Siano
 
 Calcolare le seguenti probabilità condizionali:
 \begin{itemize}
-\item $\mathbb{P}( A|C) ,\mathbb{P}( C|A) ,\mathbb{P}( B|C) ,\mathbb{P}( A|F) ,\mathbb{P}( D|F) ,\mathbb{P}( A|B) ,\mathbb{P}( B|A)$.
+\item $\mathbb{P}( A\mid C) ,\mathbb{P}( C\mid A) ,\mathbb{P}( B\mid C) ,\mathbb{P}( A\mid F) ,\mathbb{P}( D\mid F) ,\mathbb{P}( A\mid B) ,\mathbb{P}( B\mid A)$.
 \end{itemize}
 
 Stabilire quindi se:
@@ -156,7 +156,7 @@ Un dado non truccato viene lanciato più volte.
 \end{enumerate}
 \Esercizio{fatto}
 
-Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo costante $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} |k=1,2,\dotsc )$ con
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo costante $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} \mid k=1,2,\dotsc )$ con
 \begin{equation*}
 E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
@@ -234,12 +234,12 @@ Ferrero a questo punto chiede il vostro aiuto.
 \item Quali eventi fra $A$, $B$ e $C$ possono essere ritenuti incompatibili?
 \item Quali eventi fra $A$, $B$ e $C$ possono essere ritenuti indipendenti?
 \item Esprimere in funzione di $A$, $B$ e $C$ l'evento $D:$ una signora viene uccisa.
-\item Esprimere la probabilità condizionata $\mathbb{P}( B|A,D)$ in funzione solo di $\mathbb{P}( B|A)$ e $\mathbb{P}( C)$.
+\item Esprimere la probabilità condizionata $\mathbb{P}( B\mid A,D)$ in funzione solo di $\mathbb{P}( B\mid A)$ e $\mathbb{P}( C)$.
 \end{enumerate}
 
 Negli archivi del Commissariato tuttavia Ferrero non trova $\mathbb{P}( C)$. Trova però che $1$ donna ogni $100000$ muore assassinata.
 \begin{enumerate}
-\item Limitare (dal basso o dall'alto) il valore di $\mathbb{P}( B|A,D)$.
+\item Limitare (dal basso o dall'alto) il valore di $\mathbb{P}( B\mid A,D)$.
 \item È il caso che Ferrero continui ad indagare su Ambrogio?
 \end{enumerate}
 \Esercizio{fatto}
@@ -260,7 +260,7 @@ Un'urna contiene una pallina rossa ed una bianca. Le palline vengono estratte co
 
 Siano $A$, $B$ e $C$ eventi indipendenti e si supponga $\mathbb{P}( A\cap B) \neq 0$.
 \begin{enumerate}
-\item Si mostri che $\mathbb{P}( C|A\cap B) =\mathbb{P}( C)$.
+\item Si mostri che $\mathbb{P}( C\mid A\cap B) =\mathbb{P}( C)$.
 \item Si mostri con un esempio che la proprietà non è vera sotto la sola ipotesi che $C$ sia indipendente sia da $A$ sia da $B$.
 \end{enumerate}
 \Esercizio{}
@@ -278,17 +278,17 @@ Osserviamo innanzitutto che lo spazio campionario è $\Omega =\{1\dotsc 12\}$. O
 \begin{enumerate}
 \item 
 \begin{enumerate}
-\item $\mathbb{P}( A|C) =\frac{\mathbb{P}( A\cap C)}{\mathbb{P}( C)} =\frac{1/12}{3/12} =\frac{1}{3}$
-\item $\mathbb{P}( C|A) =\frac{\mathbb{P}( A\cap C)}{\mathbb{P}( A)} =\frac{1/12}{6/12} =\frac{1}{6}$
-\item $\mathbb{P}( B|C) =\frac{\mathbb{P}( B\cap C)}{\mathbb{P}( C)} =\frac{2/12}{3/12} =\frac{2}{3}$
-\item $\mathbb{P}( A|F) =\frac{\mathbb{P}( A\cap F)}{\mathbb{P}( F)} =0$ dato che $A\cap F=\emptyset $
-\item $\mathbb{P}( D|F) =\underbrace{\frac{\mathbb{P}( D\cap F)}{\mathbb{P}( F)} =\frac{\mathbb{P}( F)}{\mathbb{P}( F)}}_{F\subset D\implies D\cap F=F} =1$
-\item $\mathbb{P}( A|B) =\frac{3/12}{6/12}) =\frac{1}{2} =\mathbb{P}( A)$
-\item $\mathbb{P}( B|A) =\frac{1}{12} =\mathbb{P}( B)$
+\item $\mathbb{P}( A\mid C) =\frac{\mathbb{P}( A\cap C)}{\mathbb{P}( C)} =\frac{1/12}{3/12} =\frac{1}{3}$
+\item $\mathbb{P}( C\mid A) =\frac{\mathbb{P}( A\cap C)}{\mathbb{P}( A)} =\frac{1/12}{6/12} =\frac{1}{6}$
+\item $\mathbb{P}( B\mid C) =\frac{\mathbb{P}( B\cap C)}{\mathbb{P}( C)} =\frac{2/12}{3/12} =\frac{2}{3}$
+\item $\mathbb{P}( A\mid F) =\frac{\mathbb{P}( A\cap F)}{\mathbb{P}( F)} =0$ dato che $A\cap F=\emptyset $
+\item $\mathbb{P}( D\mid F) =\underbrace{\frac{\mathbb{P}( D\cap F)}{\mathbb{P}( F)} =\frac{\mathbb{P}( F)}{\mathbb{P}( F)}}_{F\subset D\implies D\cap F=F} =1$
+\item $\mathbb{P}( A\mid B) =\frac{3/12}{6/12}) =\frac{1}{2} =\mathbb{P}( A)$
+\item $\mathbb{P}( B\mid A) =\frac{1}{12} =\mathbb{P}( B)$
 \end{enumerate}
 \item Dal punto precedente sappiamo già che $A,B$ sono indipendenti. Resta da verificare che $A$ e $D$, $B$ e $D$ sono indipendenti.\begin{gather*}
-\mathbb{P}( A|D) =\frac{1}{2} =\mathbb{P}( A)\\
-\mathbb{P}( B|D) =\frac{1}{2} =\mathbb{P}( B)
+\mathbb{P}( A\mid D) =\frac{1}{2} =\mathbb{P}( A)\\
+\mathbb{P}( B\mid D) =\frac{1}{2} =\mathbb{P}( B)
 \end{gather*}
 
 dunque sì.
@@ -301,8 +301,8 @@ dunque sì.
 
 allora $A,B,D$ non sono indipendenti. L'indipendenza è un concetto più forte dell'indipendenza a coppie.
 \item \begin{gather*}
-\mathbb{P}( A|E) =\frac{1}{2} =\mathbb{P}( A) \implies A\Bot E\\
-\mathbb{P}( B|E) =\frac{1}{2} =\mathbb{P}( B) \implies B\Bot E\\
+\mathbb{P}( A\mid E) =\frac{1}{2} =\mathbb{P}( A) \implies A\Bot E\\
+\mathbb{P}( B\mid E) =\frac{1}{2} =\mathbb{P}( B) \implies B\Bot E\\
 \underbrace{\mathbb{P}( A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\mathbb{P}( A)\mathbb{P}( B)\mathbb{P}( E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\Bot B\Bot E
 \end{gather*}
 \item $\dotsc $
@@ -340,11 +340,11 @@ $\binom{89}{4}\rightarrow $azzecco il numero $15$ e basta, quindi per gli altri 
 
 $\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
 \item L'evento che ci interessa è\begin{equation*}
-\left( A_{42} |\bigcap _{k=1}^{41} A_{k}\comp\right)
+\left( A_{42} \mid \bigcap _{k=1}^{41} A_{k}\comp\right)
 \end{equation*}
 
-sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\mathbb{P}( A|B) =\mathbb{P}( A)$ se $A\Bot B$, si ha\begin{equation*}
-\left( A_{42} |\bigcap _{k=1}^{41} A_{k}\comp\right) =\underbrace{\mathbb{P}( A_{42}) =\mathbb{P}( A)}_{\text{primo punto}} \approx 0.0556
+sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\mathbb{P}( A\mid B) =\mathbb{P}( A)$ se $A\Bot B$, si ha\begin{equation*}
+\left( A_{42} \mid\bigcap _{k=1}^{41} A_{k}\comp\right) =\underbrace{\mathbb{P}( A_{42}) =\mathbb{P}( A)}_{\text{primo punto}} \approx 0.0556
 \end{equation*}
 
 Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
@@ -375,7 +375,7 @@ quindi\begin{equation*}
 Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
 \end{oss}
 \item Introduciamo i nuovi eventi $B_{k} =$ "il $15$ è estratto $k$ volte".\begin{equation*}
-\mathbb{P}( A_{1} |B_{1}) =\frac{\mathbb{P}( A_{1} \cap B_{1})}{\mathbb{P}( B_{1})}
+\mathbb{P}( A_{1} \mid B_{1}) =\frac{\mathbb{P}( A_{1} \cap B_{1})}{\mathbb{P}( B_{1})}
 \end{equation*}
 
 Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come\begin{equation*}
@@ -397,7 +397,7 @@ Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estr
 \end{equation*}
 
 Infine\begin{equation*}
-\mathbb{P}( A_{1} |B_{1}) =\frac{\mathbb{P}( A_{1} \cap B_{1})}{\mathbb{P}( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
+\mathbb{P}( A_{1} \mid B_{1}) =\frac{\mathbb{P}( A_{1} \cap B_{1})}{\mathbb{P}( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
 \end{equation*}
 \item Osserviamo che\begin{gather*}
 B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}\comp\right)\\
@@ -406,7 +406,7 @@ B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq
 
 Allora\begin{equation*}
 \begin{aligned}
-\mathbb{P}( A_{1} \cap A_{2} |B_{2}) & =\frac{\mathbb{P}( A_{1} \cap A_{2} \cap B_{2})}{\mathbb{P}( B_{2})} =\frac{\mathbb{P}\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\mathbb{P}( B_{2})}\\
+\mathbb{P}( A_{1} \cap A_{2} \mid B_{2}) & =\frac{\mathbb{P}( A_{1} \cap A_{2} \cap B_{2})}{\mathbb{P}( B_{2})} =\frac{\mathbb{P}\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\mathbb{P}( B_{2})}\\
  & \overset{\Bot }{=}\frac{\mathbb{P}( A_{1})\mathbb{P}( A_{2})\mathbb{P}\left(\bigcap _{k=3}^{42} A_{k}\comp\right)}{\mathbb{P}( B_{2})}\\
  & =\frac{\mathbb{P}( A)\mathbb{P}( A)( 1-\mathbb{P}( A))^{40}}{\mathbb{P}( B_{2})}\\
  & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
@@ -429,14 +429,14 @@ Possiamo ridurre il nostro esperimento aleatorio a $42$ prove di Bernoulli ripet
 Allora
 \begin{enumerate}
 \item $\mathbb{P}( A) =1/18$
-\item $\mathbb{P}\left( A_{42} |\bigcup _{k=1}^{41} A_{k}\comp\right) =\mathbb{P}( A_{42}) =\mathbb{P}( A) =p$
+\item $\mathbb{P}\left( A_{42} \mid \bigcup _{k=1}^{41} A_{k}\comp\right) =\mathbb{P}( A_{42}) =\mathbb{P}( A) =p$
 \item $\mathbb{P}\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\mathbb{P}\left(\bigcap _{k=1}^{42} A_{k}\comp\right) =1-\prod _{k=1}^{42}\mathbb{P}\left( A_{k}\comp\right) =1-( 1-p)^{42}$
 \item $B_{1} =$ solo un successo.
 
-$\mathbb{P}( B_{1}) =42p( 1-p)^{41} \implies \mathbb{P}( A_{1} |B_{1}) =\frac{p( 1-p)^{41}}{42p( 1-p)^{41}} =\frac{1}{42}$
+$\mathbb{P}( B_{1}) =42p( 1-p)^{41} \implies \mathbb{P}( A_{1} \mid B_{1}) =\frac{p( 1-p)^{41}}{42p( 1-p)^{41}} =\frac{1}{42}$
 \item $B_{2} =$ solo due successi.
 
-$\mathbb{P}( B_{2}) =\binom{42}{2} p^{2}( 1-p)^{40} \implies \mathbb{P}( A_{1} \cap A_{2} |B_{2}) =\frac{p^{2}( 1-p)^{40}}{\binom{42}{2} p^{2}( 1-p)^{40}} =\frac{1}{\binom{42}{2}}$
+$\mathbb{P}( B_{2}) =\binom{42}{2} p^{2}( 1-p)^{40} \implies \mathbb{P}( A_{1} \cap A_{2} \mid B_{2}) =\frac{p^{2}( 1-p)^{40}}{\binom{42}{2} p^{2}( 1-p)^{40}} =\frac{1}{\binom{42}{2}}$
 \end{enumerate}
 \Soluzione
 
@@ -453,7 +453,7 @@ V_{\text{cons}} =\text{"vinco conservando il pacco scelto inizialmente"}
 Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:\begin{theorem}
 Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
 \begin{equation*}
-\mathbb{P}( A) =\sum\limits _{k\in \mathbb{N}}\mathbb{P}( A|E_{k})\mathbb{P}( E_{k})
+\mathbb{P}( A) =\sum\limits _{k\in \mathbb{N}}\mathbb{P}( A\mid E_{k})\mathbb{P}( E_{k})
 \end{equation*}
 \end{theorem}
 
@@ -462,12 +462,12 @@ La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della pr
 \end{equation*}
 
 Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno, o non lo contiene. Quindi\begin{equation*}
-\mathbb{P}( V_{\text{cons}}) =\mathbb{P}( V_{\text{cons}} |A)\mathbb{P}( A) +\mathbb{P}\left( V_{\text{cons}} |A\comp\right)\mathbb{P}\left( A\comp\right) =\frac{1}{3}
+\mathbb{P}( V_{\text{cons}}) =\mathbb{P}( V_{\text{cons}} \mid A)\mathbb{P}( A) +\mathbb{P}\left( V_{\text{cons}} \mid A\comp\right)\mathbb{P}\left( A\comp\right) =\frac{1}{3}
 \end{equation*}
 \begin{enumerate}
-\item $\mathbb{P}( V_{\text{cons}} |A) =1$, se ho scelto inizialmente il pacco contenente l'assegno e conservo il pacco, allora sono sicuro di vincere.
+\item $\mathbb{P}( V_{\text{cons}} \mid A) =1$, se ho scelto inizialmente il pacco contenente l'assegno e conservo il pacco, allora sono sicuro di vincere.
 \item $\mathbb{P}( A) =\frac{1}{3}$
-\item $\mathbb{P}\left( V_{\text{cons}} |A\comp\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
+\item $\mathbb{P}\left( V_{\text{cons}} \mid A\comp\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
 \item $\mathbb{P}\left( A\comp\right) =1-\mathbb{P}( A) =1-\frac{1}{3} =\frac{2}{3}$
 \end{enumerate}
 \item Introduciamo l'evento\begin{equation*}
@@ -475,7 +475,7 @@ V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
 \end{equation*}
 
 allora\begin{equation*}
-\mathbb{P}( V_{\text{camb}}) =\underbrace{\mathbb{P}( V_{\text{camb}} |A)}_{0}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}\left( V_{\text{camb}} |A\comp\right)}_{1}\underbrace{\mathbb{P}\left( A\comp\right)}_{\frac{2}{3}} =\frac{2}{3}
+\mathbb{P}( V_{\text{camb}}) =\underbrace{\mathbb{P}( V_{\text{camb}} \mid A)}_{0}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}\left( V_{\text{camb}} \mid A\comp\right)}_{1}\underbrace{\mathbb{P}\left( A\comp\right)}_{\frac{2}{3}} =\frac{2}{3}
 \end{equation*}
 \end{enumerate}
 
@@ -661,8 +661,8 @@ V_{\text{tc}} =\text{"vinco giocando a testa o croce tra le due strategie"}
 
 Supponiamo la moneta equa e, senza perdita di generalità, assegnamo a $T$ la strategia di cambio pacco. Osserviamo che il lancio della moneta è indipendente dagli eventi $V_{\text{camb}}$ e $V_{\text{cons}}$. Usiamo ancora la formula delle probabilità totali, in questo caso con $\Omega =T\cup C$.\begin{equation*}
 \begin{aligned}
-\mathbb{P}( V_{\text{tc}}) & =\mathbb{P}( V_{\text{tc}} |T)\mathbb{P}( T) +\mathbb{P}( V_{\text{tc}} |C)\mathbb{P}( C) & \\
- & =\mathbb{P}( V_{\text{camb}} |T)\mathbb{P}( T) +\mathbb{P}( V_{\text{cons}} |C)\mathbb{P}( C) & \\
+\mathbb{P}( V_{\text{tc}}) & =\mathbb{P}( V_{\text{tc}} \mid T)\mathbb{P}( T) +\mathbb{P}( V_{\text{tc}} \mid C)\mathbb{P}( C) & \\
+ & =\mathbb{P}( V_{\text{camb}} \mid T)\mathbb{P}( T) +\mathbb{P}( V_{\text{cons}} \mid C)\mathbb{P}( C) & \\
  & =\mathbb{P}( V_{\text{camb}})\mathbb{P}( T) +\mathbb{P}( V_{\text{cons}})\mathbb{P}( C) & \text{(indip.)}\\
  & =\frac{2}{3} \cdotp \frac{1}{2} +\frac{1}{3} \cdotp \frac{1}{2} =\frac{1}{3} +\frac{1}{6} =\frac{1}{2} & 
 \end{aligned}
@@ -674,11 +674,11 @@ P_{s} =\text{"il pacco di sinistra contiene il premio"}
 \end{gather*}
 
 Dal testo sappiamo che, poiché in tal caso il vincitore ha il pacco vincente,\begin{equation*}
-\boxed{\mathbb{P}( D|A) =p}
+\boxed{\mathbb{P}( D\mid A) =p}
 \end{equation*}
 
 $p$ è la probabilità che il conduttore apra il pacco di destra, sapendo che il vincitore ha il pacco vincente (cioè i due pacchi rimasti sono entrambi vuoti). Noi vogliamo calcolare\begin{equation*}
-\boxed{\mathbb{P}( A|D) =?}
+\boxed{\mathbb{P}( A\mid D) =?}
 \end{equation*}
 
 ovvero la probabilità che il pacco scelto inizialmente contenga il premio, sapendo che il conduttore ha aperto il pacco di destra. Per calcolarla usiamo la formula di Bayes.
@@ -686,17 +686,17 @@ ovvero la probabilità che il pacco scelto inizialmente contenga il premio, sape
 \begin{theorem}
 Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità. Siano $A\in \mathcal{A}$, $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $. Se $\mathbb{P}( A) ,\mathbb{P}( E_{k})  >0,\forall k\in \mathbb{N}$, allora
 \begin{equation*}
-\mathbb{P}( E_{k} |A) =\frac{\mathbb{P}( A|E_{k})\mathbb{P}( E_{k})}{\sum\nolimits _{k}\mathbb{P}( A|E_{k})\mathbb{P}( E_{k})}
+\mathbb{P}( E_{k} \mid A) =\frac{\mathbb{P}( A\mid E_{k})\mathbb{P}( E_{k})}{\sum\nolimits _{k}\mathbb{P}( A\mid E_{k})\mathbb{P}( E_{k})}
 \end{equation*}
 \end{theorem}
 
 \begin{oss}
-La prima idea sarebbe stata quella di usare la formula di Bayes nella forma $\mathbb{P}( A|D) =\frac{\mathbb{P}( D|A)\mathbb{P}( A)}{\mathbb{P}( D)}$. Questa formula è però inutile nel nostro caso perché \textbf{non} sappiamo quanto vale $\mathbb{P}( D)$. Utilizziamo quindi la formula sopra proposta.
+La prima idea sarebbe stata quella di usare la formula di Bayes nella forma $\mathbb{P}( A\mid D) =\frac{\mathbb{P}( D\mid A)\mathbb{P}( A)}{\mathbb{P}( D)}$. Questa formula è però inutile nel nostro caso perché \textbf{non} sappiamo quanto vale $\mathbb{P}( D)$. Utilizziamo quindi la formula sopra proposta.
 \end{oss}
 
 La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora\begin{equation*}
 \begin{aligned}
-\mathbb{P}( A|D) & =\frac{\overbrace{\mathbb{P}( D|A)}^{p}\overbrace{\mathbb{P}( A)}^{\frac{1}{3}}}{\underbrace{\mathbb{P}( D|A)}_{p}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}( D|P_{d})}_{0}\underbrace{\mathbb{P}( P_{d})}_{\frac{1}{3}} +\underbrace{\mathbb{P}( D|P_{s})}_{1}\underbrace{\mathbb{P}( P_{s})}_{\frac{1}{3}}}\\
+\mathbb{P}( A\mid D) & =\frac{\overbrace{\mathbb{P}( D\mid A)}^{p}\overbrace{\mathbb{P}( A)}^{\frac{1}{3}}}{\underbrace{\mathbb{P}( D\mid A)}_{p}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}( D\mid P_{d})}_{0}\underbrace{\mathbb{P}( P_{d})}_{\frac{1}{3}} +\underbrace{\mathbb{P}( D\mid P_{s})}_{1}\underbrace{\mathbb{P}( P_{s})}_{\frac{1}{3}}}\\
  & =\frac{\frac{p}{3}}{\frac{p}{3} +\frac{1}{3}} =\frac{p}{p+1}
 \end{aligned}
 \end{equation*}
@@ -707,8 +707,8 @@ In questo caso l'informazione che abbiamo è una info \textit{storica}: dai dati
 
 Analizziamo alcuni casi di valori di $p$
 \begin{enumerate}
-\item $\boxed{p=0}$ i.e. se il concorrente ha il pacco vincente, il pacco di destra non viene mai aperto. In altri termini, se il pacco di destra viene aperto, allora il concorrente non ha il pacco vincente. Questo è quello che ci dice il risultato trovato $\mathbb{P}( A|D) =0$.
-\item $\boxed{p=1}$ i.e. se il concorrente ha il pacco vincente, allora certamente viene aperto il pacco di destra. Quindi, in tal caso, osservando l'apertura del pacco di destra siamo più propensi a credere che il concorrente abbia il premio $\mathbb{P}( A|D) =\frac{1}{2}$.
+\item $\boxed{p=0}$ i.e. se il concorrente ha il pacco vincente, il pacco di destra non viene mai aperto. In altri termini, se il pacco di destra viene aperto, allora il concorrente non ha il pacco vincente. Questo è quello che ci dice il risultato trovato $\mathbb{P}( A\mid D) =0$.
+\item $\boxed{p=1}$ i.e. se il concorrente ha il pacco vincente, allora certamente viene aperto il pacco di destra. Quindi, in tal caso, osservando l'apertura del pacco di destra siamo più propensi a credere che il concorrente abbia il premio $\mathbb{P}( A\mid D) =\frac{1}{2}$.
 \item $\boxed{p=\frac{1}{2}}$ i.e. se il concorrente ha il pacco vincente, allora viene aperto indifferentemente uno dei due pacchi. Non abbiamo ulteriori informazioni, quindi non aggiorneremo le nostre ipotesi \textit{a priori}.
 \end{enumerate}
 \end{enumerate}
@@ -725,37 +725,37 @@ Introduciamo gli eventi
 Allora
 \begin{enumerate}
 \item $\mathbb{P}( R_{1}) =\frac{r}{r+b}$
-\item $\mathbb{P}( R_{1} \cap B_{2}) =\mathbb{P}( B_{2} |R_{1})\mathbb{P}( R_{1}) =\frac{b}{r+b-1} \cdotp \frac{r}{r+b} =\frac{rb}{( r+b)( r+b-1)}$
+\item $\mathbb{P}( R_{1} \cap B_{2}) =\mathbb{P}( B_{2} \mid R_{1})\mathbb{P}( R_{1}) =\frac{b}{r+b-1} \cdotp \frac{r}{r+b} =\frac{rb}{( r+b)( r+b-1)}$
 \item $\begin{aligned}
-\mathbb{P}(( B_{1} \cap R_{2}) \cup ( R_{1} \cap B_{2})) & =\underbrace{\mathbb{P}( B_{1} \cap R_{2})}_{\underbrace{\mathbb{P}( R_{1} |B_{1})}_{\frac{r}{r+b-1}}\underbrace{\mathbb{P}( B_{1})}_{\frac{b}{r+b}}} +\underbrace{\mathbb{P}( R_{1} \cap B_{2})}_{\frac{rb}{( r+b)( r+b-1)}}\\
+\mathbb{P}(( B_{1} \cap R_{2}) \cup ( R_{1} \cap B_{2})) & =\underbrace{\mathbb{P}( B_{1} \cap R_{2})}_{\underbrace{\mathbb{P}( R_{1} \mid B_{1})}_{\frac{r}{r+b-1}}\underbrace{\mathbb{P}( B_{1})}_{\frac{b}{r+b}}} +\underbrace{\mathbb{P}( R_{1} \cap B_{2})}_{\frac{rb}{( r+b)( r+b-1)}}\\
  & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\underbrace{\mathbb{P}(( B_{1} \cap R_{2}) \cap ( R_{1} \cap B_{2}))}_{0}\\
  & =\frac{2rb}{( r+b-1)( r+b)}
 \end{aligned}$
 \item $\begin{aligned}
-\mathbb{P}( R_{2}) & =\mathbb{P}( R_{2} |B_{1})\mathbb{P}( B_{1}) +\mathbb{P}( R_{2} |R_{1})\mathbb{P}( R_{1})\\
+\mathbb{P}( R_{2}) & =\mathbb{P}( R_{2} \mid B_{1})\mathbb{P}( B_{1}) +\mathbb{P}( R_{2} \mid R_{1})\mathbb{P}( R_{1})\\
  & =\frac{rb}{( r+b-1)( r+b)} +\frac{( r-1) b}{( r+b-1)( r+b)} =\frac{r}{b+r}
 \end{aligned}$
 \item $\begin{aligned}
-\mathbb{P}( R_{3}) & =\mathbb{P}( R_{3} |R_{1} \cap R_{2})\mathbb{P}( R_{1} \cap R_{2}) +\\
- & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} |B_{1} \cap B_{2})\mathbb{P}( B_{1} \cap B_{2}) +\\
- & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} |B_{1} \cap R_{2})\mathbb{P}( B_{1} \cap R_{2}) +\\
- & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} |R_{1} \cap B_{2})\mathbb{P}( R_{1} \cap B_{2})
+\mathbb{P}( R_{3}) & =\mathbb{P}( R_{3} \mid R_{1} \cap R_{2})\mathbb{P}( R_{1} \cap R_{2}) +\\
+ & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} \mid B_{1} \cap B_{2})\mathbb{P}( B_{1} \cap B_{2}) +\\
+ & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} \mid B_{1} \cap R_{2})\mathbb{P}( B_{1} \cap R_{2}) +\\
+ & \ \ \ \ \ \ \ \ +\mathbb{P}( R_{3} \mid R_{1} \cap B_{2})\mathbb{P}( R_{1} \cap B_{2})
 \end{aligned}$
 
-Dove $\mathbb{P}( R_{3} |R_{1} \cap R_{2})\mathbb{P}( R_{1} \cap R_{2}) =\mathbb{P}( R_{3} |R_{1} \cap R_{2})\mathbb{P}( R_{2} |R_{1})\mathbb{P}( R_{1})$ e così anche per gli altri pezzi. Si trova infine $\mathbb{P}( R_{3}) =\frac{r}{b+r}$.
+Dove $\mathbb{P}( R_{3} \mid R_{1} \cap R_{2})\mathbb{P}( R_{1} \cap R_{2}) =\mathbb{P}( R_{3} \mid R_{1} \cap R_{2})\mathbb{P}( R_{2} \mid R_{1})\mathbb{P}( R_{1})$ e così anche per gli altri pezzi. Si trova infine $\mathbb{P}( R_{3}) =\frac{r}{b+r}$.
 \end{enumerate}
 \Soluzione
 \Soluzione
 \Soluzione
 \Soluzione
 \begin{enumerate}
-\item $\mathbb{P}( B|A) =\frac{1}{5000} =0.0002\ =\ 0.02\%$
+\item $\mathbb{P}( B\mid A) =\frac{1}{5000} =0.0002\ =\ 0.02\%$
 \item $B\cap C=\emptyset $
 \item $A\Bot C$
 \item $D=B\cup C$
-\item $\mathbb{P}( B|A,D) =\frac{\mathbb{P}( B,A,D)}{\mathbb{P}( A,D)} =\frac{\mathbb{P}( B,A)}{\mathbb{P}( B,A) +\mathbb{P}( C,A)} =\frac{1}{1+\frac{\mathbb{P}( C,A)}{\mathbb{P}( B,A)}} =\frac{1}{1+\frac{\mathbb{P}( C|A)}{\mathbb{P}( B|A)}} =\frac{1}{1+\frac{\mathbb{P}( C)}{\mathbb{P}( B|A)}}$
+\item $\mathbb{P}( B\mid A,D) =\frac{\mathbb{P}( B,A,D)}{\mathbb{P}( A,D)} =\frac{\mathbb{P}( B,A)}{\mathbb{P}( B,A) +\mathbb{P}( C,A)} =\frac{1}{1+\frac{\mathbb{P}( C,A)}{\mathbb{P}( B,A)}} =\frac{1}{1+\frac{\mathbb{P}( C\mid A)}{\mathbb{P}( B\mid A)}} =\frac{1}{1+\frac{\mathbb{P}( C)}{\mathbb{P}( B\mid A)}}$
 \item Poiché $\mathbb{P}( C) \leq \mathbb{P}( D) =\frac{1}{100000}$, vale\begin{equation*}
-\mathbb{P}( B|A,D) \geq \frac{1}{1+\frac{\mathbb{P}( D)}{\mathbb{P}( B|A)}} =\frac{1}{1+\frac{5}{100}} =\frac{20}{21} =0.9524=95.24\%
+\mathbb{P}( B\mid A,D) \geq \frac{1}{1+\frac{\mathbb{P}( D)}{\mathbb{P}( B\mid A)}} =\frac{1}{1+\frac{5}{100}} =\frac{20}{21} =0.9524=95.24\%
 \end{equation*}
 \item Sì è il caso che Ferrero continui ad indagare su Ambrogio.
 \end{enumerate}
@@ -768,12 +768,12 @@ B_{k} =\ \text{"la } k\text{-esima pallina estratta è bianca"}
 Allora
 \begin{enumerate}
 \item $\mathbb{P}( B_{1}) =\frac{1}{2}$
-\item $\mathbb{P}( B_{2} |B_{1}) =\frac{1}{2}$. Si rinforzano solo le rosse: dato che la prima estratta è bianca, alla seconda estrazione mi troverò ancora davanti un'urna con $1B$ e $1R$.
+\item $\mathbb{P}( B_{2} \mid B_{1}) =\frac{1}{2}$. Si rinforzano solo le rosse: dato che la prima estratta è bianca, alla seconda estrazione mi troverò ancora davanti un'urna con $1B$ e $1R$.
 \item Con la formula delle probabilità totali e ricordando $\Omega =B_{1} \cup B_{1}\comp$ (alla prima deve essere estratta $B$ o $R$)\begin{equation*}
-\mathbb{P}( B_{2}) =\underbrace{\mathbb{P}( B_{2} |B_{1})}_{\frac{1}{2}}\underbrace{\mathbb{P}( B_{1})}_{\frac{1}{2}} +\mathbb{P}\left( B_{2} |B_{1}\comp\right)\underbrace{\mathbb{P}\left( B_{1}\comp\right)}_{\frac{1}{2}}
+\mathbb{P}( B_{2}) =\underbrace{\mathbb{P}( B_{2} \mid B_{1})}_{\frac{1}{2}}\underbrace{\mathbb{P}( B_{1})}_{\frac{1}{2}} +\mathbb{P}\left( B_{2} \mid B_{1}\comp\right)\underbrace{\mathbb{P}\left( B_{1}\comp\right)}_{\frac{1}{2}}
 \end{equation*}
 
-Ora, $\mathbb{P}\left( B_{2} |B_{1}\comp\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\mathbb{P}( B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
+Ora, $\mathbb{P}\left( B_{2} \mid B_{1}\comp\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\mathbb{P}( B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
 
 Visivamente può essere utile fare un diagramma ad albero
 
@@ -828,23 +828,23 @@ Visivamente può essere utile fare un diagramma ad albero
 
 \item $\mathbb{P}( B_{1} \cup B_{2}) =\underbrace{\mathbb{P}( B_{1})}_{\frac{1}{2}} +\underbrace{\mathbb{P}( B_{2})}_{\frac{5}{12}} -\underbrace{\mathbb{P}( B_{1} \cap B_{2})}_{\frac{1}{4}} =\frac{6+5-3}{12} =\frac{2}{3}$
 
-$\mathbb{P}( B_{1} \cap B_{2}) =\mathbb{P}( B_{2} |B_{1})\mathbb{P}( B_{1}) =\frac{1}{2} \cdotp \frac{1}{2} =\frac{1}{4}$
+$\mathbb{P}( B_{1} \cap B_{2}) =\mathbb{P}( B_{2} \mid B_{1})\mathbb{P}( B_{1}) =\frac{1}{2} \cdotp \frac{1}{2} =\frac{1}{4}$
 
 Alternativamente:\begin{equation*}
 \begin{aligned}
 \mathbb{P}( B_{1} \cup B_{2}) & =1-\mathbb{P}\left( B_{1}\comp \cap B_{2}\comp\right)\\
- & =1-\mathbb{P}\left( B_{2}\comp |B_{1}\comp\right)\mathbb{P}\left( B_{1}\comp\right) =1-\frac{1}{3} =\frac{2}{3}
+ & =1-\mathbb{P}\left( B_{2}\comp \mid B_{1}\comp\right)\mathbb{P}\left( B_{1}\comp\right) =1-\frac{1}{3} =\frac{2}{3}
 \end{aligned}
 \end{equation*}
-\item $\mathbb{P}( B_{1} |B_{2}) =\frac{\mathbb{P}( B_{2} |B_{1})\mathbb{P}( B_{1})}{\mathbb{P}( B_{2})} =\frac{3}{5}$
+\item $\mathbb{P}( B_{1} \mid B_{2}) =\frac{\mathbb{P}( B_{2} \mid B_{1})\mathbb{P}( B_{1})}{\mathbb{P}( B_{2})} =\frac{3}{5}$
 \item $\begin{aligned}
-\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\mathbb{P}( B_{1})\mathbb{P}( B_{2} |B_{1})\mathbb{P}( B_{3} |B_{1} \cap B_{2}) \cdots \mathbb{P}( B_{n} |B_{1} \cap \cdots \cap B_{n-1})\\
+\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\mathbb{P}( B_{1})\mathbb{P}( B_{2} \mid B_{1})\mathbb{P}( B_{3} \mid B_{1} \cap B_{2}) \cdots \mathbb{P}( B_{n} \mid B_{1} \cap \cdots \cap B_{n-1})\\
  & =\left(\frac{1}{2}\right)^{n}
 \end{aligned}$
 
 Stiamo sfruttando il fatto che c'è rinforzo solo delle rosse e \textit{non} che abbiamo prove ripetute indipendenti!
 \item $\begin{aligned}
-\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & =\mathbb{P}\left( B_{1}\comp\right)\mathbb{P}\left( B_{2}\comp |B_{1}\comp\right) \cdots \mathbb{P}\left( B_{n}\comp |B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
+\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & =\mathbb{P}\left( B_{1}\comp\right)\mathbb{P}\left( B_{2}\comp \mid B_{1}\comp\right) \cdots \mathbb{P}\left( B_{n}\comp \mid B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
  & =\frac{1}{\cancel{2}} \cdotp \frac{\cancel{2}}{\cancel{3}} \cdots \frac{1}{n+1} =\frac{1}{n+1}
 \end{aligned}$
 
