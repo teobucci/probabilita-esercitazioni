@@ -158,7 +158,7 @@ Supponiamo di avere un insieme $E$ formato da $n$ oggetti \textbf{distinti}, da 
 \begin{definition}
 Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ elementi di $E$. Il modello è quello dell'\textit{estrazione con reimmissione} da un'urna contenente $n$ oggetti. Ogni volta lo rimetto nell'urna. Ogni volta ho $n$ modi di scegliere:
 \begin{equation*}
-\boxed{D^{\prime n}_{r} =\underbrace{n\cdot n\cdots n}_{r\ \text{volte}} =n^{r}}
+\boxed{D'^{n}_{r} =\underbrace{n\cdot n\cdots n}_{r\ \text{volte}} =n^{r}}
 \end{equation*}
 \end{definition}
 \begin{definition}
@@ -489,30 +489,30 @@ Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\mathbb{P}( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
-\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dotsc 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A^{c}$ e avremo:\begin{equation*}
+\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dotsc 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
 \begin{array}{ l }
-\mathbb{P}( A) =\mathbb{P}\left( \Omega -A^{c}\right) =1-\mathbb{P}\left( A^{c}\right)\\
-A^{c} =\text{"tutte le persone sono nate in giorni diverse"}\\
-A^{c} =\{\omega =( \omega _{1} ,\dotsc ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
-\left| A^{c}\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
-\mathbb{\implies P}\left( A^{c}\right) =\frac{\left| A^{c}\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
-\mathbb{\implies P}( A) =1-\mathbb{P}\left( A^{c}\right) =1-\frac{365!}{365^{n}( 365-n) !}
+\mathbb{P}( A) =\mathbb{P}\left( \Omega -A\comp\right) =1-\mathbb{P}\left( A\comp\right)\\
+A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
+A\comp =\{\omega =( \omega _{1} ,\dotsc ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+\left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
+\mathbb{\implies P}\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
+\mathbb{\implies P}( A) =1-\mathbb{P}\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
 \end{array}
 \end{equation*}
 
 Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
 \item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:\begin{equation*}
 \begin{array}{ l }
-\mathbb{P}( A) =\mathbb{P}\left( \Omega -A^{c}\right) =1-\mathbb{P}\left( A^{c}\right)\\
-A^{c} =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
-\left| A^{c}\right| =364^{n}
+\mathbb{P}( A) =\mathbb{P}\left( \Omega -A\comp\right) =1-\mathbb{P}\left( A\comp\right)\\
+A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
+\left| A\comp\right| =364^{n}
 \end{array}
 \end{equation*}
 
 Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso giorno del mio compleanno: per ognuna di esse abbiamo $364$ possibilità (i restanti giorni dell'anno).\begin{equation*}
 \begin{array}{ l }
-\mathbb{\implies P}\left( A^{c}\right) =\frac{\left| A^{c}\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
-\mathbb{\implies P}( A) =1-\mathbb{P}\left( A^{c}\right) =1-\left(\frac{364}{365}\right)^{n}
+\mathbb{\implies P}\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
+\mathbb{\implies P}( A) =1-\mathbb{P}\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
 \end{array}
 \end{equation*}
 

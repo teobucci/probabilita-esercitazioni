@@ -24,7 +24,7 @@ $A$ e $B$ sono indipendenti $( A\Bot B)$ se $\mathbb{P}( A\cap B) =\mathbb{P}( A
 \textbf{Proprietà.}
 \begin{enumerate}
 \item $A\Bot B\iff \mathbb{P}( A|B) =\mathbb{P}( A)$.
-\item $A\Bot B\iff A\Bot B^{c} \iff A^{c} \Bot B\iff A^{c} \Bot B^{c}$.
+\item $A\Bot B\iff A\Bot B\comp \iff A\comp \Bot B\iff A\comp \Bot B\comp$.
 \end{enumerate}
 \begin{definition}
 Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
@@ -265,7 +265,7 @@ Siano $A$, $B$ e $C$ eventi indipendenti e si supponga $\mathbb{P}( A\cap B) \ne
 \end{enumerate}
 \Esercizio{}
 
-Sia $I$ un insieme arbitrario. Data una famiglia $( A_{i})_{i\in I}$ di eventi indipendenti, se per ogni $i$ si pone $B_{i} =A_{i}$ oppure $B_{i} =A_{i}^{c}$, allora anche $( B_{i})_{i\in I}$ risulta una famiglia di eventi indipendenti.
+Sia $I$ un insieme arbitrario. Data una famiglia $( A_{i})_{i\in I}$ di eventi indipendenti, se per ogni $i$ si pone $B_{i} =A_{i}$ oppure $B_{i} =A_{i}\comp$, allora anche $( B_{i})_{i\in I}$ risulta una famiglia di eventi indipendenti.
 
 
 \ParteSoluzioni
@@ -340,11 +340,11 @@ $\binom{89}{4}\rightarrow $azzecco il numero $15$ e basta, quindi per gli altri 
 
 $\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
 \item L'evento che ci interessa è\begin{equation*}
-\left( A_{42} |\bigcap _{k=1}^{41} A_{k}^{c}\right)
+\left( A_{42} |\bigcap _{k=1}^{41} A_{k}\comp\right)
 \end{equation*}
 
 sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\mathbb{P}( A|B) =\mathbb{P}( A)$ se $A\Bot B$, si ha\begin{equation*}
-\left( A_{42} |\bigcap _{k=1}^{41} A_{k}^{c}\right) =\underbrace{\mathbb{P}( A_{42}) =\mathbb{P}( A)}_{\text{primo punto}} \approx 0.0556
+\left( A_{42} |\bigcap _{k=1}^{41} A_{k}\comp\right) =\underbrace{\mathbb{P}( A_{42}) =\mathbb{P}( A)}_{\text{primo punto}} \approx 0.0556
 \end{equation*}
 
 Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
@@ -359,14 +359,14 @@ Ricordiamo che l'unica informazione che possiamo sfruttare è che gli evento $A_
 Per calcolare $\mathbb{P}$ potremmo usare la relazione (si osservi che gli $A_{j}$ sono indipendenti \textit{non disgiunti}): $\mathbb{P}( A\cup B) =\mathbb{P}( A) +\mathbb{P}( B) -\mathbb{P}( A\cap B)$, ma diventa più complicata avendo $42$ eventi.
 
 Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo\begin{gather*}
-\left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)^{c}\right)^{c} =\left(\bigcap _{k} A_{k}^{c}\right)^{c} ,\ \ \ \ \mathbb{P}\left( A^{c}\right) =1-\mathbb{P}( A) ,\\
-A_{k} \Bot \text{allora} \ A_{k}^{c} \Bot ,
+\left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)\comp\right)\comp =\left(\bigcap _{k} A_{k}\comp\right)\comp ,\ \ \ \ \mathbb{P}\left( A\comp\right) =1-\mathbb{P}( A) ,\\
+A_{k} \Bot \text{allora} \ A_{k}\comp \Bot ,
 \end{gather*}
 
 quindi\begin{equation*}
 \begin{aligned}
-\mathbb{P}\left(\bigcup _{k=1}^{42} A_{k}\right) & =\mathbb{P}\left(\bigcap _{k} A_{k}^{c}\right)^{c} =1-\mathbb{P}\left(\bigcap _{k} A_{k}^{c}\right) =1-\prod _{k=1}^{42}\mathbb{P}\left( A_{k}^{c}\right)\\
- & =1-\prod _{k=1}^{42}\mathbb{P}\left( A^{c}\right) =1-\left[\mathbb{P}\left( A^{c}\right)\right]^{42}\\
+\mathbb{P}\left(\bigcup _{k=1}^{42} A_{k}\right) & =\mathbb{P}\left(\bigcap _{k} A_{k}\comp\right)\comp =1-\mathbb{P}\left(\bigcap _{k} A_{k}\comp\right) =1-\prod _{k=1}^{42}\mathbb{P}\left( A_{k}\comp\right)\\
+ & =1-\prod _{k=1}^{42}\mathbb{P}\left( A\comp\right) =1-\left[\mathbb{P}\left( A\comp\right)\right]^{42}\\
  & =1-\left( 1-\frac{1}{18}\right)^{42} \approx 0.9093
 \end{aligned}
 \end{equation*}
@@ -379,18 +379,18 @@ Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose
 \end{equation*}
 
 Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come\begin{equation*}
-B_{1} =\bigcup _{j=1}^{42}\left( A_{j} \cap \bigcap _{k\neq j} A_{k}^{c}\right) =
+B_{1} =\bigcup _{j=1}^{42}\left( A_{j} \cap \bigcap _{k\neq j} A_{k}\comp\right) =
 \end{equation*}
 
 i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi\begin{equation*}
-\mathbb{P}( B_{1}) =42\mathbb{P}( A_{j})\mathbb{P}\left(\bigcap _{k\neq j} A_{j}^{c}\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
+\mathbb{P}( B_{1}) =42\mathbb{P}( A_{j})\mathbb{P}\left(\bigcap _{k\neq j} A_{j}\comp\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
 \end{equation*}
 
 ci sono $42$ modi per scegliere $j$ (la $j$-esima estrazione in cui esce $15$); per un $j$ fissato stiamo usando il fatto che l'unione degli eventi è disgiunta.
 
 Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)\begin{equation*}
 \begin{aligned}
-\mathbb{P}( A_{1} \cap B_{1}) & =\mathbb{P}\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}^{c}\right)\overset{\Bot }{=}\mathbb{P}( A_{1})\prod _{k=2}^{42}\mathbb{P}\left( A_{k}^{c}\right)\\
+\mathbb{P}( A_{1} \cap B_{1}) & =\mathbb{P}\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}\comp\right)\overset{\Bot }{=}\mathbb{P}( A_{1})\prod _{k=2}^{42}\mathbb{P}\left( A_{k}\comp\right)\\
  & =\mathbb{P}( A_{1})\prod _{k=2}^{42}( 1-\mathbb{P}( A_{k})) =\\
  & =\mathbb{P}( A)( 1-\mathbb{P}( A))^{41} =\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}
 \end{aligned}
@@ -400,14 +400,14 @@ Infine\begin{equation*}
 \mathbb{P}( A_{1} |B_{1}) =\frac{\mathbb{P}( A_{1} \cap B_{1})}{\mathbb{P}( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
 \end{equation*}
 \item Osserviamo che\begin{gather*}
-B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}^{c}\right)\\
-\mathbb{P}( B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\mathbb{P}( A_{j})\mathbb{P}( A_{i})\mathbb{P}\left(\bigcap _{k\neq i,k\neq j} A_{k}^{c}\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
+B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}\comp\right)\\
+\mathbb{P}( B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\mathbb{P}( A_{j})\mathbb{P}( A_{i})\mathbb{P}\left(\bigcap _{k\neq i,k\neq j} A_{k}\comp\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
 \end{gather*}
 
 Allora\begin{equation*}
 \begin{aligned}
-\mathbb{P}( A_{1} \cap A_{2} |B_{2}) & =\frac{\mathbb{P}( A_{1} \cap A_{2} \cap B_{2})}{\mathbb{P}( B_{2})} =\frac{\mathbb{P}\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}^{c}\right)}{\mathbb{P}( B_{2})}\\
- & \overset{\Bot }{=}\frac{\mathbb{P}( A_{1})\mathbb{P}( A_{2})\mathbb{P}\left(\bigcap _{k=3}^{42} A_{k}^{c}\right)}{\mathbb{P}( B_{2})}\\
+\mathbb{P}( A_{1} \cap A_{2} |B_{2}) & =\frac{\mathbb{P}( A_{1} \cap A_{2} \cap B_{2})}{\mathbb{P}( B_{2})} =\frac{\mathbb{P}\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\mathbb{P}( B_{2})}\\
+ & \overset{\Bot }{=}\frac{\mathbb{P}( A_{1})\mathbb{P}( A_{2})\mathbb{P}\left(\bigcap _{k=3}^{42} A_{k}\comp\right)}{\mathbb{P}( B_{2})}\\
  & =\frac{\mathbb{P}( A)\mathbb{P}( A)( 1-\mathbb{P}( A))^{40}}{\mathbb{P}( B_{2})}\\
  & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 \end{aligned}
@@ -429,8 +429,8 @@ Possiamo ridurre il nostro esperimento aleatorio a $42$ prove di Bernoulli ripet
 Allora
 \begin{enumerate}
 \item $\mathbb{P}( A) =1/18$
-\item $\mathbb{P}\left( A_{42} |\bigcup _{k=1}^{41} A_{k}^{c}\right) =\mathbb{P}( A_{42}) =\mathbb{P}( A) =p$
-\item $\mathbb{P}\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\mathbb{P}\left(\bigcap _{k=1}^{42} A_{k}^{c}\right) =1-\prod _{k=1}^{42}\mathbb{P}\left( A_{k}^{c}\right) =1-( 1-p)^{42}$
+\item $\mathbb{P}\left( A_{42} |\bigcup _{k=1}^{41} A_{k}\comp\right) =\mathbb{P}( A_{42}) =\mathbb{P}( A) =p$
+\item $\mathbb{P}\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\mathbb{P}\left(\bigcap _{k=1}^{42} A_{k}\comp\right) =1-\prod _{k=1}^{42}\mathbb{P}\left( A_{k}\comp\right) =1-( 1-p)^{42}$
 \item $B_{1} =$ solo un successo.
 
 $\mathbb{P}( B_{1}) =42p( 1-p)^{41} \implies \mathbb{P}( A_{1} |B_{1}) =\frac{p( 1-p)^{41}}{42p( 1-p)^{41}} =\frac{1}{42}$
@@ -458,24 +458,24 @@ Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità. Si $A\in \m
 \end{theorem}
 
 La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero\begin{equation*}
-\Omega =A\cup A^{c}
+\Omega =A\cup A\comp
 \end{equation*}
 
 Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno, o non lo contiene. Quindi\begin{equation*}
-\mathbb{P}( V_{\text{cons}}) =\mathbb{P}( V_{\text{cons}} |A)\mathbb{P}( A) +\mathbb{P}\left( V_{\text{cons}} |A^{c}\right)\mathbb{P}\left( A^{c}\right) =\frac{1}{3}
+\mathbb{P}( V_{\text{cons}}) =\mathbb{P}( V_{\text{cons}} |A)\mathbb{P}( A) +\mathbb{P}\left( V_{\text{cons}} |A\comp\right)\mathbb{P}\left( A\comp\right) =\frac{1}{3}
 \end{equation*}
 \begin{enumerate}
 \item $\mathbb{P}( V_{\text{cons}} |A) =1$, se ho scelto inizialmente il pacco contenente l'assegno e conservo il pacco, allora sono sicuro di vincere.
 \item $\mathbb{P}( A) =\frac{1}{3}$
-\item $\mathbb{P}\left( V_{\text{cons}} |A^{c}\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
-\item $\mathbb{P}\left( A^{c}\right) =1-\mathbb{P}( A) =1-\frac{1}{3} =\frac{2}{3}$
+\item $\mathbb{P}\left( V_{\text{cons}} |A\comp\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
+\item $\mathbb{P}\left( A\comp\right) =1-\mathbb{P}( A) =1-\frac{1}{3} =\frac{2}{3}$
 \end{enumerate}
 \item Introduciamo l'evento\begin{equation*}
 V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
 \end{equation*}
 
 allora\begin{equation*}
-\mathbb{P}( V_{\text{camb}}) =\underbrace{\mathbb{P}( V_{\text{camb}} |A)}_{0}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}\left( V_{\text{camb}} |A^{c}\right)}_{1}\underbrace{\mathbb{P}\left( A^{c}\right)}_{\frac{2}{3}} =\frac{2}{3}
+\mathbb{P}( V_{\text{camb}}) =\underbrace{\mathbb{P}( V_{\text{camb}} |A)}_{0}\underbrace{\mathbb{P}( A)}_{\frac{1}{3}} +\underbrace{\mathbb{P}\left( V_{\text{camb}} |A\comp\right)}_{1}\underbrace{\mathbb{P}\left( A\comp\right)}_{\frac{2}{3}} =\frac{2}{3}
 \end{equation*}
 \end{enumerate}
 
@@ -769,11 +769,11 @@ Allora
 \begin{enumerate}
 \item $\mathbb{P}( B_{1}) =\frac{1}{2}$
 \item $\mathbb{P}( B_{2} |B_{1}) =\frac{1}{2}$. Si rinforzano solo le rosse: dato che la prima estratta è bianca, alla seconda estrazione mi troverò ancora davanti un'urna con $1B$ e $1R$.
-\item Con la formula delle probabilità totali e ricordando $\Omega =B_{1} \cup B_{1}^{c}$ (alla prima deve essere estratta $B$ o $R$)\begin{equation*}
-\mathbb{P}( B_{2}) =\underbrace{\mathbb{P}( B_{2} |B_{1})}_{\frac{1}{2}}\underbrace{\mathbb{P}( B_{1})}_{\frac{1}{2}} +\mathbb{P}\left( B_{2} |B_{1}^{c}\right)\underbrace{\mathbb{P}\left( B_{1}^{c}\right)}_{\frac{1}{2}}
+\item Con la formula delle probabilità totali e ricordando $\Omega =B_{1} \cup B_{1}\comp$ (alla prima deve essere estratta $B$ o $R$)\begin{equation*}
+\mathbb{P}( B_{2}) =\underbrace{\mathbb{P}( B_{2} |B_{1})}_{\frac{1}{2}}\underbrace{\mathbb{P}( B_{1})}_{\frac{1}{2}} +\mathbb{P}\left( B_{2} |B_{1}\comp\right)\underbrace{\mathbb{P}\left( B_{1}\comp\right)}_{\frac{1}{2}}
 \end{equation*}
 
-Ora, $\mathbb{P}\left( B_{2} |B_{1}^{c}\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\mathbb{P}( B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
+Ora, $\mathbb{P}\left( B_{2} |B_{1}\comp\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\mathbb{P}( B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
 
 Visivamente può essere utile fare un diagramma ad albero
 
@@ -832,8 +832,8 @@ $\mathbb{P}( B_{1} \cap B_{2}) =\mathbb{P}( B_{2} |B_{1})\mathbb{P}( B_{1}) =\fr
 
 Alternativamente:\begin{equation*}
 \begin{aligned}
-\mathbb{P}( B_{1} \cup B_{2}) & =1-\mathbb{P}\left( B_{1}^{c} \cap B_{2}^{c}\right)\\
- & =1-\mathbb{P}\left( B_{2}^{c} |B_{1}^{c}\right)\mathbb{P}\left( B_{1}^{c}\right) =1-\frac{1}{3} =\frac{2}{3}
+\mathbb{P}( B_{1} \cup B_{2}) & =1-\mathbb{P}\left( B_{1}\comp \cap B_{2}\comp\right)\\
+ & =1-\mathbb{P}\left( B_{2}\comp |B_{1}\comp\right)\mathbb{P}\left( B_{1}\comp\right) =1-\frac{1}{3} =\frac{2}{3}
 \end{aligned}
 \end{equation*}
 \item $\mathbb{P}( B_{1} |B_{2}) =\frac{\mathbb{P}( B_{2} |B_{1})\mathbb{P}( B_{1})}{\mathbb{P}( B_{2})} =\frac{3}{5}$
@@ -844,7 +844,7 @@ Alternativamente:\begin{equation*}
 
 Stiamo sfruttando il fatto che c'è rinforzo solo delle rosse e \textit{non} che abbiamo prove ripetute indipendenti!
 \item $\begin{aligned}
-\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}^{c}\right) & =\mathbb{P}\left( B_{1}^{c}\right)\mathbb{P}\left( B_{2}^{c} |B_{1}^{c}\right) \cdots \mathbb{P}\left( B_{n}^{c} |B_{1}^{c} \cap \cdots \cap B_{n-1}^{c}\right)\\
+\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & =\mathbb{P}\left( B_{1}\comp\right)\mathbb{P}\left( B_{2}\comp |B_{1}\comp\right) \cdots \mathbb{P}\left( B_{n}\comp |B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
  & =\frac{1}{\cancel{2}} \cdotp \frac{\cancel{2}}{\cancel{3}} \cdots \frac{1}{n+1} =\frac{1}{n+1}
 \end{aligned}$
 
@@ -853,8 +853,8 @@ Stiamo sfruttando il rinforzo delle rosse.
 
 Abbiamo sfruttato la continuità dall'alto di $\mathbb{P}$.
 \item $\begin{aligned}
-\mathbb{P}\left(\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits _{k=1}^{\infty } B_{k}^{c}\right)\right) & =\underbrace{\mathbb{P}\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right)}_{0} +\mathbb{P}\left(\bigcap\limits _{k=1}^{\infty } B_{k}^{c}\right) & \text{(unione disgiunta)}\\
- & =\lim\limits _{n\rightarrow \infty }\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}^{c}\right) & \text{(continuità)}\\
+\mathbb{P}\left(\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits _{k=1}^{\infty } B_{k}\comp\right)\right) & =\underbrace{\mathbb{P}\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right)}_{0} +\mathbb{P}\left(\bigcap\limits _{k=1}^{\infty } B_{k}\comp\right) & \text{(unione disgiunta)}\\
+ & =\lim\limits _{n\rightarrow \infty }\mathbb{P}\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & \text{(continuità)}\\
  & =\lim\limits _{n\rightarrow \infty }\frac{1}{n+1} =0 & 
 \end{aligned}$
 \end{enumerate}

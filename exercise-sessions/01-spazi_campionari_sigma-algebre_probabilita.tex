@@ -163,8 +163,8 @@ Sia $( \Omega ,\mathcal{A} ,\P)$ uno spazio di probabilità e siano $A$ e $B$ du
 \item $\P( A\cup B) \geq 0.7$,
 \item $\P( A\cup B) =1.1$,
 \item $\P( A\cap B) =0.28$,
-\item $\P\left( B\cap A^{c}\right) \geq 0.3$,
-\item $\P\left( A\cap B^{c}\right) \leq 0.3$.
+\item $\P\left( B\cap A\comp\right) \geq 0.3$,
+\item $\P\left( A\cap B\comp\right) \leq 0.3$.
 \end{enumerate}
 \Esercizio{}
 
@@ -251,14 +251,14 @@ Vediamo la soluzione dell'esercizio.
 \begin{enumerate}
 \item $A=\{( t,t) ,( t,c)\}$
 \item $B=\{( t,c) ,( c,c)\}$
-\item $A^{c}$
-\item $B^{c}$
+\item $A\comp$
+\item $B\comp$
 \item $A\cap B=\{( t,c)\}$
-\item $A\cap B^{c}$
-\item $A^{c} \cap B$
+\item $A\cap B\comp$
+\item $A\comp \cap B$
 \item $A\cup B$
-\item $A^{c} \cap B^{c} =\{( c,t)\}$
-\item $\left( A\cap B^{c}\right) \cup \left( A^{c} \cap B\right) =\{( t,t) ,( c,c)\}$
+\item $A\comp \cap B\comp =\{( c,t)\}$
+\item $\left( A\cap B\comp\right) \cup \left( A\comp \cap B\right) =\{( t,t) ,( c,c)\}$
 \item $\emptyset $
 \item $\Omega $
 \end{enumerate}
@@ -266,20 +266,20 @@ Vediamo la soluzione dell'esercizio.
 \Soluzione
 \begin{enumerate}
 \item $A\cup B\cup C$
-\item $\left( A\cap B^{c} \cap C^{c}\right) \cup \left( A^{c} \cap B\cap C^{c}\right) \cup \left( A^{c} \cap B^{c} \cap C\right) \cup \left( A^{c} \cap B^{c} \cap C^{c}\right)$
-\item $\left( A^{c} \cap B^{c} \cap C^{c}\right)$
+\item $\left( A\cap B\comp \cap C\comp\right) \cup \left( A\comp \cap B\cap C\comp\right) \cup \left( A\comp \cap B\comp \cap C\right) \cup \left( A\comp \cap B\comp \cap C\comp\right)$
+\item $\left( A\comp \cap B\comp \cap C\comp\right)$
 \item $( A\cap B\cap C)$
-\item $\left( A\cap B^{c} \cap C^{c}\right) \cup \left( A^{c} \cap B\cap C^{c}\right) \cup \left( A^{c} \cap B^{c} \cap C\right)$
-\item $\left( A^{c} \cap B\cap C\right) \cup \left( A\cap B^{c} \cap C\right) \cup \left( A\cap B\cap C^{c}\right)$
+\item $\left( A\cap B\comp \cap C\comp\right) \cup \left( A\comp \cap B\cap C\comp\right) \cup \left( A\comp \cap B\comp \cap C\right)$
+\item $\left( A\comp \cap B\cap C\right) \cup \left( A\cap B\comp \cap C\right) \cup \left( A\cap B\cap C\comp\right)$
 \item $A\subset B$
 \item $A\cap C=\emptyset $
 \item $B\cup C=\Omega $
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
-\item $\left( A\cap B\cap C\cap D^{c}\right) \cup \left( A\cap B\cap C^{c} \cap D\right) \cup \left( A\cap B^{c} \cap C\cap D\right) \cup \left( A^{c} \cap B\cap C\cap D\right)$
-\item $A^{c} \cap B^{c} \cap C\cap D^{c}$
-\item $\left( A^{c} \cap B^{c} \cap C\cap D^{c}\right) \cup \left( A^{c} \cap B^{c} \cap C^{c} \cap D\right)$
+\item $\left( A\cap B\cap C\cap D\comp\right) \cup \left( A\cap B\cap C\comp \cap D\right) \cup \left( A\cap B\comp \cap C\cap D\right) \cup \left( A\comp \cap B\cap C\cap D\right)$
+\item $A\comp \cap B\comp \cap C\cap D\comp$
+\item $\left( A\comp \cap B\comp \cap C\cap D\comp\right) \cup \left( A\comp \cap B\comp \cap C\comp \cap D\right)$
 \item $A\cup B\cup C\cup D$
 \end{enumerate}
 \Soluzione
@@ -291,11 +291,11 @@ Vediamo la soluzione dell'esercizio.
 \end{enumerate}
 \Soluzione
 
-$A=\sigma ( E) =\left\{E,E^{c} ,\emptyset ,\Omega \right\}$.
+$A=\sigma ( E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 \Soluzione
 \begin{enumerate}
-\item $\bigcup\limits _{k=1}^{\infty } E_{k}^{c}$. Vediamo l'appartenenza ad $\mathcal{A}$: $E_{k} \in \mathcal{A} \forall k\implies  E_{k}^{c} \in \mathcal{A} \forall k\implies  \bigcap\limits _{k=1}^{\infty } E_{k}^{c} \in \mathcal{A}$
-\item $E_{3} \cap \bigcap\limits _{k\neq 3} E_{k}^{c}$
+\item $\bigcup\limits _{k=1}^{\infty } E_{k}\comp$. Vediamo l'appartenenza ad $\mathcal{A}$: $E_{k} \in \mathcal{A} \forall k\implies  E_{k}\comp \in \mathcal{A} \forall k\implies  \bigcap\limits _{k=1}^{\infty } E_{k}\comp \in \mathcal{A}$
+\item $E_{3} \cap \bigcap\limits _{k\neq 3} E_{k}\comp$
 \item $\bigcap\limits _{k=1}^{\infty } E_{2k}$
 \item $\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m} =:\liminf _{n} E_{n}$
 
@@ -325,23 +325,23 @@ i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \mathbb{N}$.
 
 i.e. ho infiniti successi.
 \end{oss}
-\item $\left(\liminf\limits _{n} E_{n}\right)^{c} =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m}\right)^{c} =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m}^{c}}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}^{c}$
-\item $\bigcup\limits _{l\in \mathbb{N}}\left( E_{l} \cap \bigcap\limits _{k\neq l} E_{k}^{c}\right)$
+\item $\left(\liminf\limits _{n} E_{n}\right)\comp =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m}\right)\comp =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m}\comp}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}\comp$
+\item $\bigcup\limits _{l\in \mathbb{N}}\left( E_{l} \cap \bigcap\limits _{k\neq l} E_{k}\comp\right)$
 \end{enumerate}
 \Soluzione
 
-Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \mathcal{A}$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}^{c} \in \mathcal{A}$.
+Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \mathcal{A}$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}\comp \in \mathcal{A}$.
 \begin{enumerate}
 \item $\bigcap\limits _{k=1}^{n} E_{k}^{1} \in \mathcal{A}$,
 \item $\bigcap\limits _{k\geq 1} E_{k}^{5} \in \mathcal{A}$,
-\item $E_{13}^{3} \cap \left(\bigcap\limits _{k\neq 13}\left[\left( E_{k}^{3}\right)^{c}\right]\right) \in \mathcal{A}$,
+\item $E_{13}^{3} \cap \left(\bigcap\limits _{k\neq 13}\left[\left( E_{k}^{3}\right)\comp\right]\right) \in \mathcal{A}$,
 \item $\left(\bigcap\limits _{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits _{k\geq 1} P_{2k}\right) \in \mathcal{A}$,
 \item $\bigcap\limits _{k\geq 33} E_{k}^{3} \in \mathcal{A}$,
 \item $\liminf _{k} E_{k}^{3} \in \mathcal{A}$,
 \item $\liminf _{k} D_{k} \in \mathcal{A}$,
 \item $\limsup _{k} E_{k}^{6} \in \mathcal{A}$,
-\item $\left(\liminf _{k}\left( E_{k}^{2}\right)\right)^{c} \in \mathcal{A}$,
-\item $\bigcup _{n}\left( E_{n}^{4} \cap \left(\bigcap _{k\neq n}\left( E_{k}^{4}\right)^{c}\right)\right) \in \mathcal{A}$.
+\item $\left(\liminf _{k}\left( E_{k}^{2}\right)\right)\comp \in \mathcal{A}$,
+\item $\bigcup _{n}\left( E_{n}^{4} \cap \left(\bigcap _{k\neq n}\left( E_{k}^{4}\right)\comp\right)\right) \in \mathcal{A}$.
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
@@ -374,7 +374,7 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 \item $M$
 \item $C\cap M$
 \item $C\cup M$
-\item $( C\cup M)^{c}$
+\item $( C\cup M)\comp$
 \item $( C\cup M) \smallsetminus ( C\cap M)$
 \end{enumerate}
 
@@ -402,7 +402,7 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 Per rispondere era necessario ricordare che le operazioni logiche tra insiemi si traducono in operazioni insiemistiche:\begin{align*}
 \emptyset  & =\text{evento impossibile}\\
 \Omega  & =\text{evento certo}\\
-A^{c} & =\text{contrario di} \ A\\
+A\comp & =\text{contrario di} \ A\\
 A\cup B & \iff A\ \text{oppure} \ B\\
 A\cap B & \iff A\ \text{e} \ B\\
 A\cap B=\emptyset  & \iff A\ \text{e} \ B\ \text{incompatibili}\\
@@ -418,7 +418,7 @@ Allora
 \item $\P( M) =\frac{| M| }{| \Omega | } =\frac{5}{50} =0.1$
 \item $\P( C\cap M) =\frac{1}{50} =0.02$
 \item $\P( C\cup M) =\frac{11}{50} =0.22$
-\item $\P\left(( C\cup M)^{c}\right) =1-0.22=0.78$
+\item $\P\left(( C\cup M)\comp\right) =1-0.22=0.78$
 \item Procediamo come segue
 
 $\begin{aligned}
@@ -487,9 +487,9 @@ L'insieme $\Omega $ delle possibili consegne è unione dei seguenti eventi, tra 
 	\begin{array}{lc}
 			& \text{con probabilità}\\
 		C\cap U & a\\
-		C^{c} \cap U & b\\
-		C\cap U^{c} & c\\
-		C^{c} \cap U^{c} & d
+		C\comp \cap U & b\\
+		C\cap U\comp & c\\
+		C\comp \cap U\comp & d
 	\end{array}
 \]
 Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richiesta. Stiamo partizionando $\Omega $.
@@ -510,40 +510,40 @@ Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richie
 % Text Node
 \draw (237,22.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
 % Text Node
-\draw (237,62.4) node [anchor=north west][inner sep=0.75pt]    {$C^{c}$};
+\draw (237,62.4) node [anchor=north west][inner sep=0.75pt]    {$C\comp$};
 % Text Node
 \draw (274,100.4) node [anchor=north west][inner sep=0.75pt]    {$U$};
 % Text Node
-\draw (312,100.4) node [anchor=north west][inner sep=0.75pt]    {$U^{c}$};
+\draw (312,100.4) node [anchor=north west][inner sep=0.75pt]    {$U\comp$};
 
 
 \end{tikzpicture}
 
 I dati si traducono come segue:
 \begin{itemize}
-\item $0.4=\P\left( C^{c}\right) =\P\left(\left( C^{c} \cap U\right) \cup \left( C^{c} \cap U^{c}\right)\right)
- =\P\left( C^{c} \cap U\right) +\P\left( C^{c} \cap U^{c}\right)
+\item $0.4=\P\left( C\comp\right) =\P\left(\left( C\comp \cap U\right) \cup \left( C\comp \cap U\comp\right)\right)
+ =\P\left( C\comp \cap U\right) +\P\left( C\comp \cap U\comp\right)
  =b+d$
 \item $\begin{aligned}[t]
-0.3=\P( U) =\P\left(\left( C^{c} \cap U\right) \cup ( C\cap U)\right)
- =\P\left( C^{c} \cap U\right) +\P( C\cap U)
+0.3=\P( U) =\P\left(\left( C\comp \cap U\right) \cup ( C\cap U)\right)
+ =\P\left( C\comp \cap U\right) +\P( C\cap U)
  =b+a
 \end{aligned}$
-\item $0.4=\P\left( U^{c} \cap C\right) =c$
+\item $0.4=\P\left( U\comp \cap C\right) =c$
 \end{itemize}
 
 Si ricava allora:
 \begin{equation*}
 a=0.2\ \ \ \ \ \ \ \ b=0.1\ \ \ \ \ \ \ \ c=0.4\ \ \ \ \ \ \ \ d=0.3
 \end{equation*}
-Quindi la probabilità che ci sia una consegna urgente in città è $\P( U\cap C) =a=0.2$ e la probabilità che ci sia una consegna urgente fuori città è $\P\left( U\cap C^{c}\right) =b=0.1$.
+Quindi la probabilità che ci sia una consegna urgente in città è $\P( U\cap C) =a=0.2$ e la probabilità che ci sia una consegna urgente fuori città è $\P\left( U\cap C\comp\right) =b=0.1$.
 \Soluzione
 \begin{enumerate}
-\item Scriviamo $B$ come unione disgiunta di insiemi: $B=( B\smallsetminus A) \cup ( A\cap B) =\left( B\cap A^{c}\right) \cup ( A\cap B)$
+\item Scriviamo $B$ come unione disgiunta di insiemi: $B=( B\smallsetminus A) \cup ( A\cap B) =\left( B\cap A\comp\right) \cup ( A\cap B)$
 
 Dimostriamo le due disuguaglianze.
 \begin{enumerate}
-\item $\P( B) =\overbrace{\P\left(\left( B\cap A^{c}\right) \cup ( A\cap B)\right) =\underbrace{\P\left( B\cap A^{c}\right)}_{\geq 0} +\P( A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geq \P( A\cap B)$
+\item $\P( B) =\overbrace{\P\left(\left( B\cap A\comp\right) \cup ( A\cap B)\right) =\underbrace{\P\left( B\cap A\comp\right)}_{\geq 0} +\P( A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geq \P( A\cap B)$
 \item $\P( A\cap B) =\P( A) +\P( B) -\underbrace{\P( A\cap B)}_{\leq 1} \geq \underbrace{\P( A)}_{=1} +\P( B) -1=\P( B)$
 \end{enumerate}
 
@@ -576,19 +576,19 @@ Allora:
 \item F
 \item V/F (è plausibile)
 \item V, infatti\begin{equation*}
-\P( B) =\P( A\cap B) +\P\left( B\cap A^{c}\right)
+\P( B) =\P( A\cap B) +\P\left( B\cap A\comp\right)
 \end{equation*}
 
 pertanto
 
 \begin{equation*}
-\P\left( B\cap A^{c}\right) =\underbrace{\P( B)}_{=0.7} -\underbrace{\P( A\cap B)}_{\leq 0.4} \geq 0.7-0.4=0.3
+\P\left( B\cap A\comp\right) =\underbrace{\P( B)}_{=0.7} -\underbrace{\P( A\cap B)}_{\leq 0.4} \geq 0.7-0.4=0.3
 \end{equation*}
 \item V, infatti\begin{equation*}
 \begin{cases}
-\P\left( A\cap B^{c}\right) \leq \P( A) =0.4\\
-\P\left( A\cap B^{c}\right) \leq \P\left( B^{c}\right) =1-\P( B) =1-0.7=0.3
-\end{cases}\mathbb{\implies  P}\left( A\cap B^{c}\right) \leq 0.3
+\P\left( A\cap B\comp\right) \leq \P( A) =0.4\\
+\P\left( A\cap B\comp\right) \leq \P\left( B\comp\right) =1-\P( B) =1-0.7=0.3
+\end{cases}\mathbb{\implies  P}\left( A\cap B\comp\right) \leq 0.3
 \end{equation*}
 \end{enumerate}
 \Soluzione

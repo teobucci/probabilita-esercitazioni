@@ -177,7 +177,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ i
 \begin{enumerate}
 \item Si mostri che $X$ e $Y$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y$ q.c.
 \item Si determinino legge $P^{X} ,P^{Y}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y]$.
-\item Si esibisca un'altra variabile aleatoria $X\prime $ con la stessa legge di $X$, ma definita su uno spazio $\Omega \prime $ discreto.
+\item Si esibisca un'altra variabile aleatoria $X' $ con la stessa legge di $X$, ma definita su uno spazio $\Omega ' $ discreto.
 \end{enumerate}
 \Esercizio{}
 
@@ -270,7 +270,7 @@ X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}( \omega ) =\omega _{n} ,\ \ 
 \item Si mostri che $V=\liminf\limits _{n} X_{n}$ e $U=\limsup\limits _{n} X_{n}$ sono variabili aleatorie discrete e se ne calcolino le leggi.
 \end{enumerate}
 
-Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega \prime ,\mathcal{A} \prime ,\mathbb{P} \prime )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} \prime $ indipendenti e tali che $\mathbb{P} \prime ( E_{n} \prime ) =p$, ed avessimo poi posto $X_{n} \prime =\Ind_{E_{n} \prime }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
+Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega ' ,\mathcal{A} ' ,\mathbb{P} ' )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} ' $ indipendenti e tali che $\mathbb{P} ' ( E_{n} ' ) =p$, ed avessimo poi posto $X_{n} ' =\Ind_{E_{n} ' }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
 \Esercizio{(*)}
 
 Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dotsc \}$. Si mostri che
@@ -421,7 +421,7 @@ Se $( \Omega ,\mathcal{A} ,\mathbb{P})$ è uno spazio di probabilità, $X=\Ind_{
 e
 \begin{equation*}
 \begin{drcases}
-\Ind_{A}^{-1}\{0\} =A^{c}\\
+\Ind_{A}^{-1}\{0\} =A\comp\\
 \Ind_{A}^{-1}\{1\} =A
 \end{drcases} \ \in \mathcal{A} \iff A\in \mathcal{A}
 \end{equation*}
@@ -584,7 +584,7 @@ X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty 
  & =\{\omega \in \Omega :\Ind_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
  & =\Ind_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
 \emptyset , & t< 0\\
-E_{n}^{c} , & 0\leq t< 1\\
+E_{n}\comp , & 0\leq t< 1\\
 \Omega , & t\geq 1
 \end{cases}
 \end{aligned}
@@ -597,13 +597,13 @@ Nell'ultimo passaggio bisogna ricordare che\begin{equation*}
 \end{cases}
 \end{equation*}
 
-Dato che $\emptyset ,E_{n}^{c} ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
+Dato che $\emptyset ,E_{n}\comp ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
 
 \textit{Significato:} esito dell'$n$-esima prova, può essere successo o insuccesso.
 \item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta\begin{gather*}
 x\in \{0,1\}\\
 \mathbb{P}( X_{n} =1) =\mathbb{P}(\{\omega \in \Omega :X_{n}( \omega ) =1\}) =\mathbb{P}\left( X_{n}^{-1}(\{1\})\right) =\mathbb{P}( E_{n}) =p\\
-\mathbb{P}( X_{n} =0) =\mathbb{P}(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\mathbb{P}\left( X_{n}^{-1}(\{0\})\right) =\mathbb{P}\left( E_{n}^{c}\right) =1-p
+\mathbb{P}( X_{n} =0) =\mathbb{P}(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\mathbb{P}\left( X_{n}^{-1}(\{0\})\right) =\mathbb{P}\left( E_{n}\comp\right) =1-p
 \end{gather*}
 
 quindi
@@ -638,11 +638,11 @@ Descrive il numero di successi in $n$ prove di Bernoulli.
 Densità discreta:\begin{gather*}
 p_{Y_{n}} :\{0,\dotsc ,n\}\rightarrow [ 0,1]\\
 \begin{aligned}
-p_{Y_{n}}( 0) & =\mathbb{P}( Y_{n} =0) =\mathbb{P}( X_{1} +\cdots +X_{n} =0) =\mathbb{P}\left(\bigcap _{j=1}^{n} E_{j}^{c}\right) =( 1-p)^{n}\\
-p_{Y_{n}}( 1) & =\mathbb{P}( Y_{n} =1) =\mathbb{P}( X_{1} +\cdots +X_{n} =1) =\mathbb{P}\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}^{c}\right)\\
- & =\sum\limits _{i=1}^{n}\mathbb{P}( E_{i})\prod _{j\neq i}\mathbb{P}\left( E_{j}^{c}\right) =np( 1-p)^{n-1}\\
-p_{Y_{n}}( k) & =\mathbb{P}( Y_{n} =k) =\mathbb{P}( X_{1} +\cdots +X_{n} =k) =\mathbb{P}\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}^{c}\right]\right)\\
- & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\mathbb{\prod _{j\in J} P}( E_{j})\prod _{j\notin J}\mathbb{P}\left( E_{j}^{c}\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
+p_{Y_{n}}( 0) & =\mathbb{P}( Y_{n} =0) =\mathbb{P}( X_{1} +\cdots +X_{n} =0) =\mathbb{P}\left(\bigcap _{j=1}^{n} E_{j}\comp\right) =( 1-p)^{n}\\
+p_{Y_{n}}( 1) & =\mathbb{P}( Y_{n} =1) =\mathbb{P}( X_{1} +\cdots +X_{n} =1) =\mathbb{P}\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\comp\right)\\
+ & =\sum\limits _{i=1}^{n}\mathbb{P}( E_{i})\prod _{j\neq i}\mathbb{P}\left( E_{j}\comp\right) =np( 1-p)^{n-1}\\
+p_{Y_{n}}( k) & =\mathbb{P}( Y_{n} =k) =\mathbb{P}( X_{1} +\cdots +X_{n} =k) =\mathbb{P}\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\comp\right]\right)\\
+ & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\mathbb{\prod _{j\in J} P}( E_{j})\prod _{j\notin J}\mathbb{P}\left( E_{j}\comp\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
 \end{aligned}
 \end{gather*}
 
@@ -656,12 +656,12 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 
 \textit{Interpretazione:} la distribuzione binomiale $B\left( n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
 \item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left( Z\right) =\mathbb{N} \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\mathbb{N} \cup \left\{+\infty \right\}\rightarrow \left[ 0,1\right]$. Sia $k\in \mathbb{N}$ fissato\begin{equation*}
-p_{Z}( k) =\underbrace{\mathbb{P}( Z=k) =\mathbb{P}\left(\bigcap\limits _{j=1}^{k-1} E_{j}^{c} \cap E_{k}\right)}_{Z:=\min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
+p_{Z}( k) =\underbrace{\mathbb{P}( Z=k) =\mathbb{P}\left(\bigcap\limits _{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z:=\min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
 \end{equation*}
 
 $Z$ è il numero minimo di prove per dare un successo.\begin{equation*}
 \begin{aligned}
-\overbrace{p_{Z}( +\infty ) =\mathbb{P}( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\mathbb{P}\left(\bigcap _{j\in \mathbb{N}} E_{j}^{c}\right) =\lim _{n\rightarrow \infty }\mathbb{P}\left(\bigcap _{j=1}^{n} E_{j}^{c}\right)\\
+\overbrace{p_{Z}( +\infty ) =\mathbb{P}( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\mathbb{P}\left(\bigcap _{j\in \mathbb{N}} E_{j}\comp\right) =\lim _{n\rightarrow \infty }\mathbb{P}\left(\bigcap _{j=1}^{n} E_{j}\comp\right)\\
  & =\lim _{n\rightarrow \infty }( 1-p)^{n} =0
 \end{aligned}
 \end{equation*}
