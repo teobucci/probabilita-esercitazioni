@@ -642,7 +642,7 @@ p_{Y_{n}}( 0) & =\mathbb{P}( Y_{n} =0) =\mathbb{P}( X_{1} +\cdots +X_{n} =0) =\m
 p_{Y_{n}}( 1) & =\mathbb{P}( Y_{n} =1) =\mathbb{P}( X_{1} +\cdots +X_{n} =1) =\mathbb{P}\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\comp\right)\\
  & =\sum\limits _{i=1}^{n}\mathbb{P}( E_{i})\prod _{j\neq i}\mathbb{P}\left( E_{j}\comp\right) =np( 1-p)^{n-1}\\
 p_{Y_{n}}( k) & =\mathbb{P}( Y_{n} =k) =\mathbb{P}( X_{1} +\cdots +X_{n} =k) =\mathbb{P}\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\comp\right]\right)\\
- & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\mathbb{\prod _{j\in J} P}( E_{j})\prod _{j\notin J}\mathbb{P}\left( E_{j}\comp\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
+ & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\prod _{j\in J} \mathbb{P}( E_{j})\prod _{j\notin J}\mathbb{P}\left( E_{j}\comp\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
 \end{aligned}
 \end{gather*}
 
@@ -879,7 +879,7 @@ X_{i} \sim B( p) ,\forall i,\ \ \ \ \mathbb{E}\left[ X_{i}^{2}\right] :=\sum\lim
 
 Poi\begin{equation*}
 \begin{aligned}
-\text{(b)} & =\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\mathbb{\sum\limits _{i< j} E}[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\mathbb{P}( E_{i} \cap E_{j})\\
+\text{(b)} & =\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \mathbb{E}[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\mathbb{P}( E_{i} \cap E_{j})\\
  & \overset{\Bot }{=}\sum\limits _{i< j}\mathbb{P}( E_{i})\mathbb{P}( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
  & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
 \end{aligned}
