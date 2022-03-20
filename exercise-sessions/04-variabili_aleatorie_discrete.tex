@@ -1,7 +1,6 @@
 %!TEX root = ../main.tex
 
-\newtheorem*{oss}{Osservazione}
-\newtheorem*{theorem}{Teorema}
+\ParteEsercizi
 
 Richiami
 
@@ -160,17 +159,17 @@ $( 3)$ e $( 4)$ ci dicono che: se i punti di $S$ possono essere numerati in modo
 
 $( 5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \mathcal{A}$ a partire dalla densità di probabilità $p_{X}$.
 \end{oss}
-\subsection{fatto}
+\Esercizio{fatto}
 
 Si consideri la probabilità uniforme nell'intervallo $[ 0,1$] su $(\mathbb{R} ,\mathcal{B})$. Qui si definiscano le funzioni
 \begin{itemize}
-\item $X( \omega ) =\mathbb{1}_{[ 0,p]}( \omega ) ,\ \omega \in \mathbb{R} ,$
-\item $Y( \omega ) =\mathbb{1}_{[ 0,p]}( \omega ) +\omega \mathbb{1}_{( -\infty ,0) \cup ( 1,\infty )}( \omega ) ,\ \omega \in \mathbb{R} ,$
+\item $X( \omega ) =\Ind_{[ 0,p]}( \omega ) ,\ \omega \in \mathbb{R} ,$
+\item $Y( \omega ) =\Ind_{[ 0,p]}( \omega ) +\omega \Ind_{( -\infty ,0) \cup ( 1,\infty )}( \omega ) ,\ \omega \in \mathbb{R} ,$
 \end{itemize}
 
-dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\mathbb{1}_{A}$ indica la funzione indicatrice dell'insieme $A\in \mathcal{B}$, ossia
+dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ indica la funzione indicatrice dell'insieme $A\in \mathcal{B}$, ossia
 \begin{equation*}
-\mathbb{1}_{A}( \Omega ) :=\begin{cases}
+\Ind_{A}( \Omega ) :=\begin{cases}
 1,\ \omega \in A,\\
 0,\ \omega \notin A,
 \end{cases} \ \omega \in \mathbb{R} .
@@ -180,7 +179,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\mathbb{1}_
 \item Si determinino legge $P^{X} ,P^{Y}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y]$.
 \item Si esibisca un'altra variabile aleatoria $X\prime $ con la stessa legge di $X$, ma definita su uno spazio $\Omega \prime $ discreto.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Sia $\Omega =[ 0,1]$ e si consideri la $\sigma $-algebra di Borel $A=\mathcal{B}([ 0,1])$. Si definisca $\mathbb{P}$ la probabilità uniforme su $( \Omega ,\mathcal{A})$, caratterizzata dalla proprietà:
 \begin{equation*}
@@ -193,14 +192,14 @@ Sia $\Omega =[ 0,1]$ e si consideri la $\sigma $-algebra di Borel $A=\mathcal{B}
 
 Si definiscano le seguenti funzioni, per ogni $\omega \in \Omega $
 \begin{equation*}
-X( \omega ) \ =\ \mathbb{1}_{[ 0,p]}( \omega ) ,\ \ \ \ Y( \omega ) =\mathbb{1}_{( 0,p)}( \omega ) ,\ \ \ \ Z( \omega ) =\mathbb{1}_{[ 0,p]}( \omega ) +\mathbb{1}_{J}( \omega ) ,
+X( \omega ) \ =\ \Ind_{[ 0,p]}( \omega ) ,\ \ \ \ Y( \omega ) =\Ind_{( 0,p)}( \omega ) ,\ \ \ \ Z( \omega ) =\Ind_{[ 0,p]}( \omega ) +\Ind_{J}( \omega ) ,
 \end{equation*}
 dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \mathbb{N}} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dotsc \right\}$.
 \begin{enumerate}
 \item Si mostri che $X$, $Y$ e $Z$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y=Z$ q.c.
 \item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y] ,\mathbb{E}[ Z]$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Si consideri la funzione reale di variabile reale
 \begin{equation*}
@@ -230,11 +229,11 @@ per ogni $x\in \mathbb{R}$.
 \item Determinare i quartili di $X$.
 \item Mostrare che $Y=( X-2)^{2}$ è una variabile aleatoria discreta. Determinarne legge e valore atteso.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Si consideri la funzione
 \begin{equation*}
-F( x) =\sum\limits _{i=1}^{+\infty }\frac{1}{2^{i}}\mathbb{1}_{\left[\frac{1}{i} ,+\infty \right)}( x) ,\ \ \ \ x\in \mathbb{R}
+F( x) =\sum\limits _{i=1}^{+\infty }\frac{1}{2^{i}}\Ind_{\left[\frac{1}{i} ,+\infty \right)}( x) ,\ \ \ \ x\in \mathbb{R}
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che si tratta di una funzione di ripartizione.
@@ -251,7 +250,7 @@ Sia dunque $X$ una variabile aleatoria discreta con funzione di ripartizione $F$
 \item $0\leq X< \frac{1}{2}$.
 \end{enumerate}
 \end{enumerate}
-\subsection{fatto}
+\Esercizio{fatto}
 
 Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} \ |\ k=1,2,\dotsc )$ con
 \begin{equation*}
@@ -262,7 +261,7 @@ e sia $\mathbb{P}$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia d
 X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}( \omega ) =\omega _{n} ,\ \ \ \ n\in \mathbb{N} .
 \end{equation*}
 \begin{enumerate}
-\item Si mostri che $X_{n} =\mathbb{1}_{E_{n}}$.
+\item Si mostri che $X_{n} =\Ind_{E_{n}}$.
 \item Si mostri che le $X_{n}$ sono variabili aleatorie reali discrete e se ne interpreti il significato probabilistico.
 \item Si determini la legge delle $X_{n}$.
 \item Per ogni $n$, si mostri che $Y_{n} =\sum\nolimits _{k=1}^{n} X_{k}$ è una variabile aleatoria discreta, se ne dia il significato probabilistico e se ne determini la legge.
@@ -271,14 +270,14 @@ X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}( \omega ) =\omega _{n} ,\ \ 
 \item Si mostri che $V=\liminf\limits _{n} X_{n}$ e $U=\limsup\limits _{n} X_{n}$ sono variabili aleatorie discrete e se ne calcolino le leggi.
 \end{enumerate}
 
-Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega \prime ,\mathcal{A} \prime ,\mathbb{P} \prime )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} \prime $ indipendenti e tali che $\mathbb{P} \prime ( E_{n} \prime ) =p$, ed avessimo poi posto $X_{n} \prime =\mathbb{1}_{E_{n} \prime }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
-\subsection{(*)}
+Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega \prime ,\mathcal{A} \prime ,\mathbb{P} \prime )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} \prime $ indipendenti e tali che $\mathbb{P} \prime ( E_{n} \prime ) =p$, ed avessimo poi posto $X_{n} \prime =\Ind_{E_{n} \prime }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
+\Esercizio{(*)}
 
 Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dotsc \}$. Si mostri che
 \begin{equation*}
 \mathbb{E}[ X] =\sum\limits _{n=0}^{\infty }\mathbb{P}( X >n) .
 \end{equation*}
-\subsection{(Distribuzione binomiale). fatto}
+\Esercizio{(Distribuzione binomiale). fatto}
 
 Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $n\in \mathbb{N}$ e $0< p< 1$. Scriviamo $X\sim B( n,p)$.
 \begin{enumerate}
@@ -286,7 +285,7 @@ Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $
 \item Calcolare la varianza di $X$.
 \item Calcolare le mode di $X$, ovvero i punti di massimo della densità discreta di $X$.
 \end{enumerate}
-\subsection{(Distribuzione di Poisson). fatto}
+\Esercizio{(Distribuzione di Poisson). fatto}
 
 Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. Scriviamo $X\sim P( \lambda )$.
 \begin{enumerate}
@@ -295,7 +294,7 @@ Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. 
 \item Calcolare le mode di $X$.
 \item Dato $k\in \{1,2,\dotsc \}$, quale $\lambda  >0$ massimizza $\mathbb{P}( X=k)$?
 \end{enumerate}
-\subsection{(Distribuzione geometrica). fatto}
+\Esercizio{(Distribuzione geometrica). fatto}
 
 Si consideri $X\sim \mathcal{G}( p)$, variabile aleatoria geometrica di parametro $p$, $0< p< 1$. Si ha pertanto
 \begin{equation*}
@@ -309,7 +308,7 @@ Si consideri $X\sim \mathcal{G}( p)$, variabile aleatoria geometrica di parametr
 \item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >i+j\ |\ X >i) =\mathbb{P}( X >j)$ per ogni $i,j\in \mathbb{N}$.
 \item (*) Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale discreta a valori in $\mathbb{N}$ tale che $\mathbb{P}( T >i+j\ |\ T >i) =\mathbb{P}( T >j)$ per ogni $i,j\in \mathbb{N}$, allora $T\sim \mathcal{G}( q$) con $q=\mathbb{P}( T=1)$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Data una variabile aleatoria $X$ di Poisson di media $3$, si considerino
 \begin{equation*}
@@ -320,7 +319,7 @@ Y=\min( 3,X) ,\ \ \ \ W=e^{X/3} .
 \item Si calcolino le loro distribuzioni.
 \item Si calcolino le loro medie.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Data una variabile aleatoria $X$ con distribuzione geometrica di media $3$, si considerino
 \begin{equation*}
@@ -331,7 +330,7 @@ Y=\min( 3,X) ,\ \ \ \ W=e^{X/3} .
 \item Si calcolino le loro distribuzioni.
 \item Si calcolino le loro medie.
 \end{enumerate}
-\subsection{fatto}
+\Esercizio{fatto}
 
 In una certa provincia montuosa si può supporre che il numero $X$ di frane al mese sia una variabile aleatoria con legge di Poisson di parametro $\lambda =2.3$.
 \begin{enumerate}
@@ -339,7 +338,7 @@ In una certa provincia montuosa si può supporre che il numero $X$ di frane al m
 \item Calcolare mediana e quantile di ordine $0.6$ del numero di frane mensili.
 \item Quanto dovrebbe valere il parametro $\lambda $ affinché la probabilità che in un mese non ci siano frane sia superiore a $1/2$?
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Al buio cerco la chiave del mio ufficio in un mazzo di $10$ chiavi tutte della stessa fattura. Ovviamente metto da parte le chiavi provate. Sia $X$ il numero di chiavi che devo provare per aprire l'ufficio.
 \begin{enumerate}
@@ -349,7 +348,7 @@ Al buio cerco la chiave del mio ufficio in un mazzo di $10$ chiavi tutte della s
 \item Sapendo che al primo tentativo non ho trovato la chiave giusta, con quale probabilità non la trovo neanche al secondo?
 \item Come cambiano le risposte ai punti precedenti se stupidamente non metto da parte le chiavi già provate prima di procedere a provarne una nuova?
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Nel Gioco del Lotto ad ogni estrazione settimanale $5$ numeri vengono estratti simultaneamente da un'urna che contiene $90$ palline numerate da $1$ a $90$. Fissato un numero, ad esempio il $67$, sia $p$ la probabilità che esca in una singola estrazione.
 \begin{enumerate}
@@ -359,7 +358,7 @@ Nel Gioco del Lotto ad ogni estrazione settimanale $5$ numeri vengono estratti s
 \item Qual è la probabilità che esca almeno $6$ volte nelle prime $50$ estrazioni?
 \item Se nelle prime $10$ estrazioni il $67$ è comparso $2$ volte, con quale probabilità è comparso alle prime $2$ estrazioni?
 \end{enumerate}
-\subsection{fatto}
+\Esercizio{fatto}
 
 Un'urna contiene una pallina rossa ed una blu. Una pallina viene estratta a caso. Se è blu il gioco termina. Se è rossa la pallina viene rimessa nell'urna insieme ad un'altra rossa.
 \begin{enumerate}
@@ -371,7 +370,7 @@ Un'urna contiene una pallina rossa ed una blu. Una pallina viene estratta a caso
 \item Determinare la distribuzione di $Y$ e il suo valore atteso.
 \end{enumerate}
 \end{enumerate}
-\subsection{fatto}
+\Esercizio{fatto}
 
 I punti $N$ realizzati dai Caprica Buccaneers in una partita di Piramid hanno distribuzione di Poisson di media $\lambda $. Vi propongono di scommettere contro i Caprica Buccaneers alla prossima partita: a fronte di una vostra puntata unitaria riceverete un ricavo pari a
 \begin{equation*}
@@ -397,14 +396,14 @@ Si supponga che la scommessa proposta sia equa.
 
 
 
-\textbf{\underline{SOLUZIONI}}
+\ParteSoluzioni
 
 
 
 
 
 
-\subsubsection{}
+\Soluzione
 \begin{enumerate}
 \item Mostriamo innanzitutto che\begin{equation*}
 X,Y:(\mathbb{R} ,\mathcal{B})\rightarrow (\mathbb{R} ,\mathcal{B})
@@ -415,15 +414,15 @@ sono VA reali. Secondo la definizione dobbiamo mostrare che\begin{equation*}
 \end{equation*}
 
 i.e. $X,Y$ sono misurabili.\begin{oss}
-Se $( \Omega ,\mathcal{A} ,\mathbb{P})$ è uno spazio di probabilità, $X=\mathbb{1}_{A}$ è misurabile $\iff A\in \mathcal{A}$. Infatti
+Se $( \Omega ,\mathcal{A} ,\mathbb{P})$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \mathcal{A}$. Infatti
 \begin{equation*}
-\mathbb{1}_{A} :( \Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \mathbb{R}
+\Ind_{A} :( \Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \mathbb{R}
 \end{equation*}
 e
 \begin{equation*}
 \begin{drcases}
-\mathbb{1}_{A}^{-1}\{0\} =A^{c}\\
-\mathbb{1}_{A}^{-1}\{1\} =A
+\Ind_{A}^{-1}\{0\} =A^{c}\\
+\Ind_{A}^{-1}\{1\} =A
 \end{drcases} \ \in \mathcal{A} \iff A\in \mathcal{A}
 \end{equation*}
 \end{oss}
@@ -445,15 +444,15 @@ p, & x=1\\
 
 Infatti\begin{equation*}
 \begin{aligned}
-\text{se} \ x=1:\mathbb{P}( X=1) & =\mathbb{P}(\mathbb{1}_{[ 0,p]} =1)\\
- & =\mathbb{P}(\{\omega \in \Omega :\mathbb{1}_{[ 0,p]}( \omega ) =1\})\\
- & =\mathbb{P}\left(\mathbb{1}_{[ 0,p]}^{-1}( 1)\right)\\
+\text{se} \ x=1:\mathbb{P}( X=1) & =\mathbb{P}(\Ind_{[ 0,p]} =1)\\
+ & =\mathbb{P}(\{\omega \in \Omega :\Ind_{[ 0,p]}( \omega ) =1\})\\
+ & =\mathbb{P}\left(\Ind_{[ 0,p]}^{-1}( 1)\right)\\
  & =\mathbb{P}([ 0,p])\\
  & =p\ \left(\text{su} \ \mathbb{R} \ \text{ho prob. uniforme}\right)\\
  & \\
-\text{se} \ x=0:\mathbb{P}( X=0) & =\mathbb{P}(\mathbb{1}_{[ 0,p]} =0)\\
- & =\mathbb{P}(\{\omega \in \Omega :\mathbb{1}_{[ 0,p]}( \omega ) =0\})\\
- & =\mathbb{P}\left(\mathbb{1}_{[ 0,p]}^{-1}( 0)\right)\\
+\text{se} \ x=0:\mathbb{P}( X=0) & =\mathbb{P}(\Ind_{[ 0,p]} =0)\\
+ & =\mathbb{P}(\{\omega \in \Omega :\Ind_{[ 0,p]}( \omega ) =0\})\\
+ & =\mathbb{P}\left(\Ind_{[ 0,p]}^{-1}( 0)\right)\\
  & =\mathbb{P}(( -\infty ,p) \cup ( p,+\infty ))\\
  & =\mathbb{P}(\mathbb{R} \smallsetminus [ 0,p])\\
  & =1-\mathbb{P}([ 0,p])\\
@@ -486,23 +485,23 @@ Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\mathbb{P}( X=Y) =1$.\begi
 \begin{aligned}
 \mathbb{P}( X=Y) & =\mathbb{P}(\{\omega \in \Omega :X( \omega ) =Y( \omega )\})\\
  & =\mathbb{P}(\{\omega \in \Omega :X( \omega ) -Y( \omega ) =0\})\\
- & =\mathbb{P}(\{\omega \in \Omega :\omega \mathbb{1}_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\})
+ & =\mathbb{P}(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\})
 \end{aligned}
 \end{equation*}
 
 Abbiamo che\begin{equation*}
 \begin{aligned}
-\omega \in ( -\infty ,0) \cup ( 1,+\infty ) & \implies \omega \mathbb{1}_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) \neq 0\\
-\omega \in [ 0,1] & \implies \omega \mathbb{1}_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0
+\omega \in ( -\infty ,0) \cup ( 1,+\infty ) & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) \neq 0\\
+\omega \in [ 0,1] & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0
 \end{aligned}
 \end{equation*}
 
 i.e.\begin{equation*}
-\{\omega \in \Omega :\omega \mathbb{1}_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\} =[ 0,1]
+\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\} =[ 0,1]
 \end{equation*}
 
 Quindi\begin{equation*}
-\mathbb{P}( X=Y) =\mathbb{P}(\{\omega \in \Omega :\omega \mathbb{1}_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\}) =\mathbb{P}([ 0,1]) =1
+\mathbb{P}( X=Y) =\mathbb{P}(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\}) =\mathbb{P}([ 0,1]) =1
 \end{equation*}
 
 i.e. $X=Y$ q.c.
@@ -539,18 +538,18 @@ Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
 In generale è sempre possibile costruire uno spazio di probabilità $( \Omega ,\mathcal{F} ,\mathbb{P})$ e una VA $X$ su di esso che ha $p( \cdotp )$ come densità, i.e. tale che $p_{X}( x) =p( x)$. Infatti basta prendere $\Omega =S,\mathcal{F} =\mathcal{P}( S)$ e $p$ l'unica misura di probabilità su $S$ tale che $\mathbb{P}(\{x_{k}\}) =p( x_{k})$ con $k\in I$. È immediato verificare che la VA discreta $X( \omega ) =\omega ,\forall \omega \in \Omega $ ha densità $p( \cdotp )$.
 \end{oss}
 \end{enumerate}
-\subsubsection{}
+\Soluzione
 
 Manca.
-\subsubsection{}
+\Soluzione
 
 Manca.
-\subsubsection{}
+\Soluzione
 
 Manca.
-\subsubsection{}
+\Soluzione
 \begin{enumerate}
-\item Fissiamo $\omega \in \Omega $. Dobbiamo mostrare che $X_{n}\left( \omega \right) =\mathbb{1}_{E_{n}}\left( \omega \right)$. Ricordiamo che $E_{n} =\left\{\omega \in \Omega :\omega _{n} =1\right\}$. Abbiamo $\forall \omega \in \Omega $:\begin{equation}
+\item Fissiamo $\omega \in \Omega $. Dobbiamo mostrare che $X_{n}\left( \omega \right) =\Ind_{E_{n}}\left( \omega \right)$. Ricordiamo che $E_{n} =\left\{\omega \in \Omega :\omega _{n} =1\right\}$. Abbiamo $\forall \omega \in \Omega $:\begin{equation}
 X_{n}\left( \omega \right) =\omega _{n} =\begin{cases}
 1, & \omega _{n} =1\\
 0, & \omega _{n} =0
@@ -558,14 +557,14 @@ X_{n}\left( \omega \right) =\omega _{n} =\begin{cases}
 \end{equation}
 
 e\begin{equation}
-\mathbb{1}_{E_{n}}\left( \omega \right) =\begin{cases}
+\Ind_{E_{n}}\left( \omega \right) =\begin{cases}
 1, & \omega \in E_{n} \iff \omega _{n} =1\\
 0, & \omega \notin E_{n} \iff \omega _{n} =0
 \end{cases}
 \end{equation}
 
 Da (1) e (2) si allora che\begin{equation*}
-\forall \omega \in \Omega ,\ \ \ \ X_{n}\left( \omega \right) =\mathbb{1}_{E_{n}}\left( \omega \right) ,\ \ \ \ \text{i.e.} \ \ \ \ X_{n} =\mathbb{1}_{E_{n}}
+\forall \omega \in \Omega ,\ \ \ \ X_{n}\left( \omega \right) =\Ind_{E_{n}}\left( \omega \right) ,\ \ \ \ \text{i.e.} \ \ \ \ X_{n} =\Ind_{E_{n}}
 \end{equation*}
 
 \begin{oss}
@@ -582,8 +581,8 @@ X_{n}^{-1}( B) \in \mathcal{A} ,\forall B\in \mathcal{B}
 Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$\begin{equation*}
 \begin{aligned}
 X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty ,t]\}\\
- & =\{\omega \in \Omega :\mathbb{1}_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
- & =\mathbb{1}_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
+ & =\{\omega \in \Omega :\Ind_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
+ & =\Ind_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
 \emptyset , & t< 0\\
 E_{n}^{c} , & 0\leq t< 1\\
 \Omega , & t\geq 1
@@ -592,7 +591,7 @@ E_{n}^{c} , & 0\leq t< 1\\
 \end{equation*}
 
 Nell'ultimo passaggio bisogna ricordare che\begin{equation*}
-\mathbb{1}_{E_{n}} \in \{0,1\} ,\ \ \ \ \mathbb{1}_{E_{n}}( \omega ) =\begin{cases}
+\Ind_{E_{n}} \in \{0,1\} ,\ \ \ \ \Ind_{E_{n}}( \omega ) =\begin{cases}
 1, & \omega \in E_{n}\\
 0, & \omega \notin E_{n}
 \end{cases}
@@ -697,19 +696,19 @@ p_{W}( k) =\mathbb{P}( W=k) =\mathbb{P}( Z-1=k) =\underbrace{\mathbb{P}( Z=k+1) 
 
 Allora anche $W$ è una geometrica $W\sim \mathcal{G}( p)$.
 \item $V:=\liminf _{n} X_{n}$, $U:=\limsup _{n} X_{n}$ sono VA perché, rispettivamente, $\liminf _{n}$ e $\limsup _{n}$ di VA. In particolare\begin{align*}
-V & =\liminf _{n} X_{n} =\liminf _{n}\mathbb{1}_{E_{n}} =\mathbb{1}_{\liminf\limits _{n} E_{n}}
+V & =\liminf _{n} X_{n} =\liminf _{n}\Ind_{E_{n}} =\Ind_{\liminf\limits _{n} E_{n}}
 \end{align*}
 
 l'ultimo passaggio è giustificato dal fatto che\begin{equation*}
 \begin{aligned}
-\mathbb{1}_{\liminf _{n} E_{n}} & =\mathbb{1}_{\bigcup\limits _{n}\bigcap\limits _{k\geq n} E_{k}} & \text{(definizione)}\\
- & =\sup\limits _{n\geq 0}\mathbb{1}_{\bigcap\limits _{k\geq n} E_{k}} & \mathbb{1}_{A\cup B} =\sup \{\mathbb{1}_{A} ,\mathbb{1}_{B}\}\\
- & =\sup _{n\geq 0}\inf_{k\geq n}\mathbb{1}_{E_{k}} & \mathbb{1}_{A\cap B} =\inf\{\mathbb{1}_{A} ,\mathbb{1}_{B}\}
+\Ind_{\liminf _{n} E_{n}} & =\Ind_{\bigcup\limits _{n}\bigcap\limits _{k\geq n} E_{k}} & \text{(definizione)}\\
+ & =\sup\limits _{n\geq 0}\Ind_{\bigcap\limits _{k\geq n} E_{k}} & \Ind_{A\cup B} =\sup \{\Ind_{A} ,\Ind_{B}\}\\
+ & =\sup _{n\geq 0}\inf_{k\geq n}\Ind_{E_{k}} & \Ind_{A\cap B} =\inf\{\Ind_{A} ,\Ind_{B}\}
 \end{aligned}
 \end{equation*}
 
 Analogamente,\begin{equation*}
-U=\limsup _{n} X_{n} =\mathbb{1}_{\limsup\limits _{n} E_{n}}
+U=\limsup _{n} X_{n} =\Ind_{\limsup\limits _{n} E_{n}}
 \end{equation*}
 
 Allora\begin{equation*}
@@ -765,9 +764,9 @@ Abbiamo introdotto le VA
 \begin{gather*}
 \begin{aligned}
 X:(\mathbb{R} ,\mathcal{B} ,\mathbb{P}_{\text{unif.}}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
-\omega  & \mapsto X( \omega ) :=\mathbb{1}_{[ 0,p]}( \omega )\\
+\omega  & \mapsto X( \omega ) :=\Ind_{[ 0,p]}( \omega )\\
 Y:(\mathbb{R} ,\mathcal{B} ,\mathbb{P}_{\text{unif.}}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
-\omega  & \mapsto Y( \omega ) :=\mathbb{1}_{[ 0,p]}( \omega ) +\omega \mathbb{1}_{( -\infty ,0) \cup ( 1,\infty )}( \omega )
+\omega  & \mapsto Y( \omega ) :=\Ind_{[ 0,p]}( \omega ) +\omega \Ind_{( -\infty ,0) \cup ( 1,\infty )}( \omega )
 \end{aligned}\\
 \ \\
 \implies X\sim B( p) ,Y\sim B( p)
@@ -787,10 +786,10 @@ Z:\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\mathbb{P}}\right) & \rightarrow (\mathb
 \implies Z\sim B( p)
 \end{gather*}
 \end{oss}
-\subsubsection{}
+\Soluzione
 
 Manca.
-\subsubsection{}
+\Soluzione
 
 Richiami**************
 \begin{itemize}
@@ -996,7 +995,7 @@ p( n+1) -1\ \text{e} \ p( n+1) , & p( n+1) \in \mathbb{N}\\
 \end{cases}
 \end{equation*}
 \end{enumerate}
-\subsubsection{}
+\Soluzione
 
 Ricordiamo che: per $\lambda  >0$ la densità di Poisson di parametro $\lambda $ è
 \begin{equation*}
@@ -1027,7 +1026,7 @@ X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda
 \item Si procede come in Es. 7.
 \item hahahah
 \end{enumerate}
-\subsubsection{}
+\Soluzione
 \begin{oss}
 $\mathbb{P}( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\Bot $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\mathbb{P}( X=k) =p( 1-p)^{k-1}$.
 \end{oss}

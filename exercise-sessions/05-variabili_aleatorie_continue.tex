@@ -1,8 +1,8 @@
 %!TEX root = ../main.tex
 
 
-\section{}
-\subsection{}
+\ParteEsercizi
+\Esercizio{}
 
 Si consideri lo spazio di probabilità $( \Omega ,\mathcal{A} ,\mathbb{P}) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m( B\cap ( 0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $( 0,1)$ nel modo seguente:
 \begin{equation*}
@@ -16,7 +16,7 @@ per ogni $\omega \in ( 0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\math
 \item Calcolare i valori attesi di $X$, $Y$ e $Z$.
 \item Esibire un'altra variabile aleatoria $\tilde{X}$ con la stessa legge di $X$, ma definita su un altro spazio di probabilità $\left(\tilde{\Omega } ,\tilde{\mathcal{A}} ,\tilde{\mathbb{P}}\right)$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Data una variabile aleatoria reale continua $X$ con densità $f$ simmetrica rispetto a $\mu \in \mathbb{R}$,
 
@@ -25,7 +25,7 @@ si mostri che
 \item $\mu $ è una mediana,
 \item Se $\mathbb{E}[| X| ] < +\infty $, allora $\mu =\mathbb{E}[ X]$.
 \end{enumerate}
-\subsection{(Distribuzione di Cauchy).}
+\Esercizio{(Distribuzione di Cauchy).}
 
 Data una variabile aleatoria di Cauchy $X$, con densità
 \begin{equation*}
@@ -37,13 +37,13 @@ si calcolino:
 \item $\mathbb{E}[ X]$,
 \item $\mathbb{E}\left[ X^{2}\right]$.
 \end{enumerate}
-\subsection{*}
+\Esercizio{*}
 
 Data $X$ variabile aleatoria positiva e continua, denotata con $F$ la sua funzione di \ ripartizione, si mostri che
 \begin{equation*}
-\mathbb{E}[ X] =\int\limits _{0}^{+\infty }( 1-F( x)) dx.
+\mathbb{E}[ X] =\int _{0}^{+\infty }( 1-F( x)) dx.
 \end{equation*}
-\subsection{(Distribuzione esponenziale).}
+\Esercizio{(Distribuzione esponenziale).}
 
 Si consideri $X\sim \mathcal{E}( \lambda )$, variabile esponenziale di parametro $\lambda  >0$, quindi con densità
 
@@ -58,7 +58,7 @@ f( x) =\lambda e^{-\lambda x} I_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
 \item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >s+t\ |\ X >s) =\mathbb{P}( X >t)$ per ogni $s,t >0$.
 \item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\mathbb{P}( T >s+t\ |\ T >s) =\mathbb{P}( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\mathbb{P}( T >1))$.
 \end{enumerate}
-\subsection{(Distribuzione Gamma).}
+\Esercizio{(Distribuzione Gamma).}
 
 Si consideri $X\sim \Gamma ( \alpha ,\lambda )$, variabile aleatoria di distribuzione Gamma di parametri $\alpha  >0$ e $\lambda  >0$. Si ha quindi
 \begin{equation*}
@@ -66,7 +66,7 @@ f( x) =\frac{\lambda ^{\alpha }}{\Gamma ( \alpha )} x^{\alpha -1} e^{-\lambda x}
 \end{equation*}
 dove $\Gamma $ è la funzione Gamma (di Eulero) definita da
 \begin{equation*}
-\Gamma ( \alpha ) :=\int\limits _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
+\Gamma ( \alpha ) :=\int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
 \end{equation*}
 Si ricordi che
 \begin{equation*}
@@ -84,7 +84,7 @@ da cui $\Gamma ( n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma ( 1/2) =\sq
 \begin{equation*}
 F( t) =\left( 1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{( \lambda t)^{k}}{k!}\right) I_{( 0,+\infty )}( t) .
 \end{equation*}
-\subsection{(Distribuzione normale o gaussiana).}
+\Esercizio{(Distribuzione normale o gaussiana).}
 
 Sia $X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right)$.
 \begin{enumerate}
@@ -104,7 +104,7 @@ Si consideri $Z$ di \textit{legge normale standard}, ossia $Z\sim \mathcal{N}( 0
 \item Calcolare la legge della variabile aleatoria $| Z| $, il valore atteso, la varianza e i quantili.
 \item Si calcoli $\mathbb{E}\left[ Z^{4}\right]$ e $\mathbb{E}\left[ e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Sia $X$ una variabile aleatoria con funzione di ripartizione $F$.
 \begin{enumerate}
@@ -112,7 +112,7 @@ Sia $X$ una variabile aleatoria con funzione di ripartizione $F$.
 \item Nel caso in cui $F$ ammetta derivata continua, si mostri che $Y=| X| $ è continua e se ne calcoli la densità.
 \item Nel caso $X\sim \mathcal{N}( 0,1)$, si confronti il risultato ottenuto nei punti $( 1)$ e $( 2)$ con quanto trovato nel punto $( 6)$ dell'esercizio $7$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 \begin{enumerate}
 \item Dati $U\sim U(( 0,1))$ e $\lambda  >0$, si mostri che $X=-\frac{1}{\lambda }\log U\sim \mathcal{E}( \lambda )$.
 \item Data $X\sim F$ con $F$ invertibile, si mostri che $Y=F( X) \sim U(( 0,1))$.
@@ -151,7 +151,7 @@ Quindi se $U\sim U\left(\left( 0,1\right)\right)$ e $X=-\frac{1}{\lambda }\log U
 A partire dalla distribuzione uniforme si può ottenere qualunque altra distribuzione.
 \item 
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left( 0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
 \begin{equation*}
@@ -173,7 +173,7 @@ f_{Y}( t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-( \lambda t)^{\alpha }} I
 Determinare $F_{Y}$ e $h_{Y}$.
 \item Discutere il significato dei risultati ottenuti nei punti $( 3)$ e $( 4)$ e il loro legame.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Il raggio $R$ di un certo tipo di particella inquinante, espresso in micron, è una variabile aleatoria con densità di probabilità
 \begin{equation*}
@@ -191,7 +191,7 @@ c\ x\ e^{-x^{2}} , & \text{per} \ x >0,\\
 \item Supponendo che le particelle inquinanti siano delle sfere, calcolare la probabilità che una particella abbia un volume superiore ad $1$ micron cubo.
 \item Detto $V$ il volume di una particella, mostrare che si tratta di una variabile aleatoria continua e calcolarne la densità.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Sia $X$ una variabile aleatoria non negativa con densità di probabilità
 \begin{equation*}
@@ -208,7 +208,7 @@ f_{X}( x) =\begin{cases}
 \item Calcolare $\mathbb{E}\left[\frac{1}{X}\right]$.
 \item Stabilire per quali $\alpha \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Si consideri $X$ variabile aleatoria di densità:
 \begin{equation*}
@@ -225,7 +225,7 @@ f_{X}\left( x\right) =\begin{cases}
 \item Stimare la probabilità che $X$ assuma valori distanti dalla media più di $2$ unità, utilizzando la disuguaglianza di Chebychev.
 \item Stabilire per quali $\alpha ,\beta \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left( X-1\right)^{\beta }} \in L^{1}$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Siano $X\sim U\left(\left( 0,1\right)\right)$ e $Y\sim \Gamma \left( \alpha ,\lambda \right) ,\alpha ,\lambda  >0$.
 \begin{enumerate}
@@ -234,7 +234,7 @@ Siano $X\sim U\left(\left( 0,1\right)\right)$ e $Y\sim \Gamma \left( \alpha ,\la
 
 Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel punto $\left( 3\right)$ dell'esercizio $6$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 \textit{Ricavo di un'opzione "call" europea.} Un agente finanziario sottoscrive un contratto che gli dà il diritto (ma non l'obbligo) di acquistare un certo titolo ad una data futura fissata, ad un prezzo $k >0$ anch'esso fissato. Detto $S$ il valore di tale titolo alla data fissata, esso è al momento sconosciuto, ma si ritiene che i suoi possibili valori abbiano distribuzione lognormale, ovvero che siano dati da
 \begin{equation*}
@@ -248,7 +248,7 @@ Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la
 \item Calcolare il ricavo atteso $\mathbb{E}[ R]$.
 \item Calcolare $\lim\limits _{k\rightarrow 0}\mathbb{E}[ R]$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Petyr Baelish vende a Lord Varys il diritto di comprare fra un anno $50$ kg di acciaio di Valyria al prezzo di $100$ monete d'oro. Petyr Baelish non conosce il costo $X$ di $50$ kg di acciaio di Valyria fra un anno, ma ritiene che i suoi possibili valori abbiano una distribuzione (approssimativamente) normale di media $\mu =100$ e varianza $\sigma ^{2} =81$. Ovviamente Lord Varys eserciterà il suo diritto solo se sarà $X >100$. Sia quindi $Y$ la differenza che Petyr Baelish dovrà pagare fra un anno.
 \begin{enumerate}
@@ -260,43 +260,43 @@ Petyr Baelish vende a Lord Varys il diritto di comprare fra un anno $50$ kg di a
 \item Determinare il valore atteso e la varianza di $Y$.
 \item Se Petyr Baelish vende tale diritto di acquisto ad un prezzo pari al valore atteso di $Y$, con quale probabilità prevede di avere un guadagno positivo?
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Un'industria produce su commissione delle sbarre d'acciaio cilindriche, il cui diametro dovrebbe essere di $4$ cm, ma che tuttavia sono accettabili se hanno diametro compreso fra $3.95$ cm e $4.05$ cm. Il cliente, nel controllare le sbarre fornitegli, constata che il $5\%$ sono di diametro inferiore al minimo tollerato ed il $12\%$ di diametro superiore al massimo tollerato.
 \begin{enumerate}
 \item Supponendo che le misure dei diametri seguano una legge normale, determinarne media e deviazione standard.
 \item Mantenendo la media precedentemente calcolata, determinare quale dovrebbe essere il valore delle deviazione standard affinché la percentuale di sbarre con diametro superiore al massimo tollerato sia minore del $5\%$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità fissato. Data una variabile aleatoria reale continua $X$, si mostri che
 \begin{enumerate}
 \item $\{X\in \mathbb{Q}\}$ è un evento, ossia $\{X\in \mathbb{Q}\} \in \mathcal{A}$,
 \item $\mathbb{P}( X\in \mathbb{Q}) =0$.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Si mostri che, se $X$ è una variabile aleatoria continua, la variabile aleatoria $W=\min\{X,1\}$ può essere continua o no, a seconda della legge di $X$.
-\subsection{}
+\Esercizio{}
 
 Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge di $Y\ =aX+b$ per $a\neq 0$. In particolare si riconosca la legge di $Y$ per $X$ di legge $\mathcal{N}\left( \mu ,\sigma ^{2}\right)$, $U([ c,d])$, $\mathcal{E}( \lambda )$.
-\subsection{}
+\Esercizio{}
 
 Data una variabile aleatoria $X\sim U([ -2,-1] \cup [ 1,2])$, calcolarne densità di probabilità $f$, mediane $m$ e, se esiste, media $\mu $.
-\subsection{*}
+\Esercizio{*}
 
 Data una variabile aleatoria $X\sim U(( 0,2\pi ))$ e un angolo fissato $\vartheta \in \mathbb{R}$, si calcoli la legge di $Y=\sin( X+\vartheta )$.
-\subsection{}
+\Esercizio{}
 
 Data $X\sim \mathcal{E}( \lambda )$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
 \begin{equation*}
 Y=\sum\limits _{k=1}^{\ +\infty } kI_{( k-1,k]}( X) =\lceil X\rceil .
 \end{equation*}
 Se quindi $X$ rappresenta un tempo d'attesa, $Y$ rappresenta il corrispondente tempo d'attesa per un osservatore stroboscopico. Si mostri che $Y$ è una variabile aleatoria e se ne calcoli la distribuzione.
-\subsection{}
+\Esercizio{}
 
 Data $X\sim \mathcal{N}( 2,5)$, mostrare che esiste un unico $c$ tale che $\mathbb{P}(| X| < c) =0.4$. Trovare un valore approssimato di $c$ con metodi di analisi numerica.
-\subsection{}
+\Esercizio{}
 
 Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un tempo casuale $X$, che si può considerare una variabile aleatoria con legge esponenziale di media $10$ minuti.
 \begin{enumerate}
@@ -304,7 +304,7 @@ Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un t
 \item $Y$ è una variabile aleatoria discreta? È continua?
 \item Aldo gioca contro Bruno nel modo seguente: se al momento dell'arresto del cronometro il numero di minuti interamente trascorsi è un numero pari allora vince Aldo (ad esempio se $X=2.5$ oppure $X=0.15$); se invece è dispari allora vince Bruno (ad esempio se $X=5$ oppure $X=7.4$). Calcolare la probabilità di vittoria per Aldo.
 \end{enumerate}
-\subsection{}
+\Esercizio{}
 
 Data la funzione $f:\mathbb{R}\rightarrow \mathbb{R}$ definita come
 \begin{equation*}
@@ -325,3 +325,4 @@ f( x) :=\begin{cases}
 \end{enumerate}
 
 
+\ParteSoluzioni
