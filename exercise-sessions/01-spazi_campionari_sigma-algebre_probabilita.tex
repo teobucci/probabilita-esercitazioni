@@ -181,7 +181,7 @@ A_{n} =\bigcap _{k=1}^{n} E_{k}
 \item Si dia l'interpretazione probabilistica degli eventi $A_{n}$.
 \item Si mostri che $A_{n} \supset A_{n+1}$ per ogni $n$.
 \item Si determini $\bigcap _{n} A_{n}$, si mostri che appartiene ad $A$ e se ne dia l'interpretazione probabilistica.
-\item Si supponga ora che $\P( A_{n}) =\frac{1}{2^{n}}$ per ogni $n$. Quanto vale $\P\left(\bigcap\nolimits _{n} A_{n}\right)$?
+\item Si supponga ora che $\P( A_{n}) =\frac{1}{2^{n}}$ per ogni $n$. Quanto vale $\P\left(\bigcap_{n} A_{n}\right)$?
 \end{enumerate}
 \Esercizio{}
 
@@ -205,7 +205,7 @@ Dato $( \Omega ,\mathcal{A} ,\P)$ spazio di probabilità, data $A_{n}$ successio
 \begin{equation*}
 \P\left(\liminf _{n} A_{n}\right) \leq \liminf _{n}\P( A_{n}) \leq \limsup _{n}\P( A_{n})\leq \mathbb{P}\left(\limsup _{n} A_{n}\right) .
 \end{equation*}
-Si deduca che se $A_{n}\rightarrow A$, ovvero $\liminf\nolimits _{n} A_{n} =\limsup _{n} A_{n} =A$, allora $\P( A_{n})\rightarrow \P( A)$.
+Si deduca che se $A_{n}\rightarrow A$, ovvero $\liminf_{n} A_{n} =\limsup _{n} A_{n} =A$, allora $\P( A_{n})\rightarrow \P( A)$.
 
 
 
@@ -612,7 +612,7 @@ A_{n+1} :=\bigcap\limits _{k=1}^{n+1} E_{k} & =E_{k+1} \cap \underbrace{\bigcap\
 $\bigcap\limits _{n\in \mathbb{N}} A_{n} \in \mathcal{A}$ per le proprietà delle $\sigma $-algebre.
 \item Abbiamo $A_{n} \downarrow A$ con $A:=\bigcap\limits _{n\in \mathbb{N}} A_{n}$ infatti $\begin{cases}
 A_{n+1} \subseteq A_{n} \ \forall n\\
-\bigcap\nolimits _{n\in \mathbb{N}} A_{n} =A
+\bigcap_{n\in \mathbb{N}} A_{n} =A
 \end{cases}$. Per la continuità di $\P$ dall'alto si ha $\P( A) =\P\left(\bigcap\limits _{n\in \mathbb{N}} A_{n}\right) =\lim\limits _{n}\P( A_{n}) =\lim\limits _{n}\frac{1}{2^{n}} =0$.
 \end{enumerate}
 \Soluzione
@@ -655,7 +655,7 @@ A_{n+1} \subseteq A_{n} \ \forall n\\
 Osserviamo che gli insiemi $A_{n}$ sono inscatolati, i.e. $A_{n+1} \subseteq A_{n} \ \forall n$. Si ha:\begin{equation*}
 I=\bigcap _{n\in \mathbb{N}} A_{n} \ =\{0\} \ \ \ \ \ \ \ \ U=\bigcup _{n\in \mathbb{N}} A_{n} \ =[ 0,1) =A_{1}
 \end{equation*}
-\item Abbiamo $A_{n} \downarrow I$, infatti $A_{n+1} \subseteq A_{n} \ \forall n$ e $\bigcap\nolimits _{n\in \mathbb{N}} A_{n} =I$.
+\item Abbiamo $A_{n} \downarrow I$, infatti $A_{n+1} \subseteq A_{n} \ \forall n$ e $\bigcap_{n\in \mathbb{N}} A_{n} =I$.
 
 Allora per la continuità dall'alto si ha $\P( I) =\lim\limits _{n}\P( A_{n}) =\lim\limits _{n}\frac{1}{n} =0$.
 
