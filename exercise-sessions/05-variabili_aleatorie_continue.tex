@@ -49,7 +49,7 @@ Si consideri $X\sim \mathcal{E}( \lambda )$, variabile esponenziale di parametro
 
 
 \begin{equation*}
-f( x) =\lambda e^{-\lambda x} I_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
+f( x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
 \end{equation*}
 \begin{enumerate}
 \item Calcolare la moda di $X$.
@@ -62,7 +62,7 @@ f( x) =\lambda e^{-\lambda x} I_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
 
 Si consideri $X\sim \Gamma ( \alpha ,\lambda )$, variabile aleatoria di distribuzione Gamma di parametri $\alpha  >0$ e $\lambda  >0$. Si ha quindi
 \begin{equation*}
-f( x) =\frac{\lambda ^{\alpha }}{\Gamma ( \alpha )} x^{\alpha -1} e^{-\lambda x} I_{( 0,+\infty )}( x) ,
+f( x) =\frac{\lambda ^{\alpha }}{\Gamma ( \alpha )} x^{\alpha -1} e^{-\lambda x} \Ind_{( 0,+\infty )}( x) ,
 \end{equation*}
 dove $\Gamma $ è la funzione Gamma (di Eulero) definita da
 \begin{equation*}
@@ -82,7 +82,7 @@ da cui $\Gamma ( n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma ( 1/2) =\sq
 \item Per $\alpha =n\in \mathbb{N}$, si mostri che la funzione di ripartizione di $X$ è data da
 \end{enumerate}
 \begin{equation*}
-F( t) =\left( 1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{( \lambda t)^{k}}{k!}\right) I_{( 0,+\infty )}( t) .
+F( t) =\left( 1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{( \lambda t)^{k}}{k!}\right) \Ind_{( 0,+\infty )}( t) .
 \end{equation*}
 \Esercizio{(Distribuzione normale o gaussiana)}
 
@@ -143,10 +143,10 @@ e^{-\lambda t} , & 0\leq e^{-\lambda t} < 1\iff t >0\\
 =\begin{cases}
 1-e^{-\lambda t} , & t >0\\
 0, & t\leq 0
-\end{cases} =\left( 1-e^{-\lambda t}\right) I_{\left( 0,+\infty \right)}\left( t\right)
+\end{cases} =\left( 1-e^{-\lambda t}\right) \Ind_{\left( 0,+\infty \right)}\left( t\right)
 \end{gather*}
 
-Quindi se $U\sim U\left(\left( 0,1\right)\right)$ e $X=-\frac{1}{\lambda }\log U$ allora $F_{X}\left( t\right) =\left( 1-e^{-\lambda t}\right) I_{\left( 0,+\infty \right)}\left( t\right)$, che è la funzione di ripartizione di un'esponenziale, ovvero $X\sim \mathcal{E}\left( \lambda \right)$.
+Quindi se $U\sim U\left(\left( 0,1\right)\right)$ e $X=-\frac{1}{\lambda }\log U$ allora $F_{X}\left( t\right) =\left( 1-e^{-\lambda t}\right) \Ind_{\left( 0,+\infty \right)}\left( t\right)$, che è la funzione di ripartizione di un'esponenziale, ovvero $X\sim \mathcal{E}\left( \lambda \right)$.
 
 A partire dalla distribuzione uniforme si può ottenere qualunque altra distribuzione.
 \item 
@@ -164,10 +164,10 @@ h_{X}( t) =\frac{f_{X}( t)}{1-F_{X}( t)} ,\ \ \ \ t >0,
 \end{equation*}
 
 dove $F_{X}$ indica la funzione di ripartizione di $X$.
-\item Dimostrare che $F_{X}( t) =\left( 1-\exp\left( -\int _{0}^{t} h_{X}( s) ds\right)\right) I_{( 0,+\infty )}( t)$.
+\item Dimostrare che $F_{X}( t) =\left( 1-\exp\left( -\int _{0}^{t} h_{X}( s) ds\right)\right) \Ind_{( 0,+\infty )}( t)$.
 \item Si prenda $X$ con legge esponenziale di parametro $\lambda $. Determinare $h_{X}$.
 \item Si prenda $Y$ con legge Weibull di parametri $\alpha  >0$ e $\lambda  >0$, vale a dire\begin{equation*}
-f_{Y}( t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-( \lambda t)^{\alpha }} I_{( 0,+\infty )}( t) .
+f_{Y}( t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-( \lambda t)^{\alpha }} \Ind_{( 0,+\infty )}( t) .
 \end{equation*}
 
 Determinare $F_{Y}$ e $h_{Y}$.
@@ -290,7 +290,7 @@ Data una variabile aleatoria $X\sim U(( 0,2\pi ))$ e un angolo fissato $\varthet
 
 Data $X\sim \mathcal{E}( \lambda )$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
 \begin{equation*}
-Y=\sum\limits _{k=1}^{\ +\infty } kI_{( k-1,k]}( X) =\lceil X\rceil .
+Y=\sum\limits _{k=1}^{\ +\infty } k\Ind_{( k-1,k]}( X) =\lceil X\rceil .
 \end{equation*}
 Se quindi $X$ rappresenta un tempo d'attesa, $Y$ rappresenta il corrispondente tempo d'attesa per un osservatore stroboscopico. Si mostri che $Y$ è una variabile aleatoria e se ne calcoli la distribuzione.
 \Esercizio{}
