@@ -1,0 +1,263 @@
+%!TEX root = ../main.tex
+
+
+\subsection{}
+
+Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definite sul medesimo spazio di probabilità, si consideri il coefficiente di correlazione $\rho _{X,Y} =\frac{\mathrm{Cov} (X,Y)}{\sigma _{X} \sigma _{Y}}$. Si mostri che:
+
+(a) se $X$ e $Y$ sono indipendenti, allora $\rho _{X,Y} =0$
+
+(b) $\rho _{aX+b,cY+d} =\rho _{X,Y}$ per ogni $a,c >0,b,d\in \mathbb{R}$
+
+(c) $\rho _{X,aX+b} =a/|a|$, per ogni $a\neq 0$
+
+(d) $\mathrm{Var}\left(\frac{1}{\sigma _{Y}} Y-\frac{\rho _{X,Y}}{\sigma _{X}} X\right) =1-\rho _{X,Y}^{2}$
+
+(e) $| \rho _{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \mathbb{R}$. Suggerimento: utilizzare il punto d
+\subsection{* }
+
+Dato un vettore aleatorio $X=( X_{1} ,\dotsc ,X_{n}) ,$ in cui ciascuna variabile aleatoria $X_{i}$ ha varianza finita, si mostri che $X\in \mathrm{Im} (\mathrm{C} )+\mathbb{E} [\mathrm{X} ]$ q.c., ovvero $\mathbb{P} (\mathrm{X} \in \mathrm{Im} (\mathrm{C} )+\mathbb{E} [\mathrm{X} ])=1$, dove $\mathrm{C}$ è la
+
+matrice varianza di $X$. Suggerimento: si supponga inizialmente che $\mathbb{E} [X]=0$ e, in tal caso, si mostri che $X\in (\mathrm{Ker} (C))^{\perp } =\mathrm{Im} (C)$ q.c.
+\subsection{}
+
+Date $X_{1} ,\dotsc ,X_{n}$ variabili aleatorie reali i.i.d. con momento secondo funito, introdotti
+\begin{gather*}
+\mu =\mathbb{E}[ X_{k}] ,\ \ \sigma ^{2} =\mathrm{Var}( X_{k}) ,\\
+\overline{X}_{n} =\frac{1}{n}\sum _{k=1}^{n} X_{k} ,\ \ S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n}( X_{k} -\overline{X}_{n})^{2} ,\ \ W_{n}^{2} =\frac{1}{n}\sum _{k=1}^{n}( X_{k} -\mu )^{2}
+\end{gather*}
+si mostri che:
+
+(a) $\mathbb{E}[\overline{X}_{n}] =\mu ,\mathrm{Var}(\overline{X}_{n}) =\sigma ^{2} /n$
+
+(b) $\sum _{k=1}^{n} X_{k}^{2} =\sum _{k=1}^{n}( X_{k} -\overline{X}_{n})^{2} +n\overline{X}_{n}^{2}$
+
+(c) $\mathbb{E}\left[ S_{n}^{2}\right] =\mathbb{E}\left[ W_{n}^{2}\right] =\sigma ^{2}$
+\subsection{}
+
+Siano $X_{1} ,\dotsc ,X_{n}$ variabili aleatorie indipendenti con funzioni di ripartizione $F_{X_{1}} ,\dotsc ,F_{X_{n}}$
+
+(a) Qual è la funzione di ripartizione di $X_{(n)} =\max\{X_{1} ,\dotsc ,X_{n}\} ?$
+
+(b) Qual è la funzione di ripartizione di $X_{(1)} =\min\{X_{1} ,\dotsc ,X_{n}\} ?$
+
+(c) $M=\min\{X_{2} ,X_{3}\}$ e $S=X_{1} +X_{7}$ sono indipendenti?
+
+Le variabili aleatorie $X_{(1)}$ e $X_{(n)}$ sono indipendenti? Si consideri, ad esempio, il caso in cui $n=2$ e
+
+$X_{1} ,X_{2}$ sono variabili aleatorie i.i.d. bernoulliane di parametro $p\in (0,1)$
+
+(d) Come sono distribuite $X_{(1)}$ e $X_{(2)}$?
+
+(e) $X_{(1)}$ e $X_{(2)}$ sono indipendenti?
+\subsection{}
+
+Siano $X,\ Y,\ Z$ variabili aleatorie reali. Mostrare che:
+
+1. Se $Y=c$ q.c., per qualche costante $c\in \mathbb{R} ,$ allora $X$ ed $Y$ sono indipendenti.
+
+$2^{*} .$ Se $\mathbb{P} (Z\in B)\in \{0,1\}$ per ogni boreliano $B,$ allora $Z$ è q.c. costante.
+
+$3^{*} .$ Nel caso $Y=h(X)$, per qualche funzione boreliana $h:\mathbb{R}\rightarrow \mathbb{R} ,X$ e $Y$ sono indipendenti se e solo se $Y=c$ q.c., per qualche costante $c\in \mathbb{R}$
+\subsection{Esercizio 6.}
+
+Un perito elettrotecnico deve costruire un sistema costituito da tre componenti in serie. Egli pesca i tre componenti da una scatola in cui vi sono tre componenti nuovi, due usati ma funzionanti e due difettosi. Siano $X$ ed $Y$ rispettivamente il numero di componenti nuovi e di componenti usati ma funzionanti tra quelli pescati dalla scatola.
+
+(a) Determinare la legge congiunta di $X$ ed $Y$ e le leggi marginali.
+
+(b) Le variabili $X$ ed $Y$ sono indipendenti?
+
+(c) Calcolare $\mathbb{E} [\mathrm{X} ],\mathbb{E} [\mathrm{Y} ],\mathbb{E} [\mathrm{XY} ].$ Scrivere la matrice varianza di $(X,Y)$ e determinare $\rho _{X,Y}$
+
+(d) Calcolare la legge, il valore atteso e la varianza del numero di componenti pescati funzionanti.
+
+(e) Calcolare la probabilità che l'apparecchio funzioni.
+\subsection{Esercizio $7.$ }
+
+Siano $X$ ed $Y$ variabili aleatorie i.i.d. bernoulliane di parametro $p=\frac{1}{2}$ e siano $u=X+Y$
+
+e $V=|X-Y|$
+
+(a) Mostrare che $(U,V)$ è un vettore aleatorio e determinarne la legge.
+
+(b) Calcolare la probabilità che $V$ sia minore di $U$
+
+(c) Calcolare la covarianza di $U$ e $V$ e la matrice varianza di $(U,V)$
+
+(d) $U$ e $V$ sono indipendenti?
+\subsection{Esercizio 8.}
+
+Siano $X$ ed $Y$ due variabili aleatorie con legge congiunta parzialmente data da:
+\begin{equation*}
+\begin{array}{ c|c|c|c|c }
+X\backslash Y & -1 & 5 & 10 & p_{X}\\
+\hline
+0 &  & 0.12 &  & 0.4\\
+\hline
+5 &  &  &  & \\
+\hline
+p_{Y} & 0.3 &  &  & 1
+\end{array}
+\end{equation*}
+(a) Completare la tabella in modo che $X$ ed $Y$ siano indipendenti.
+
+(b) Calcolare $\mathbb{P} (X< Y)$
+
+(c) Calcolare il valore atteso del vettore $(X,Y)$ e $\mathbb{E} [XY]$
+
+(d) Calcolare $\mathbb{P} (|XY|\geq 5)$ e $\mathbb{P} (X+Y >5)$
+
+(e) Siano $U=|XY|$ e $V=X+Y$. Calcolare la legge congiunta di $U$ e $V$ e le leggi marginali.
+\subsection{Esercizio 9.}
+
+Sia $X$ una variabile aleatoria discreta con legge uniforme sull'insieme discreto $\{-1,1\}$
+
+(a) Determinare la legge di $X$.
+
+Sia ora $Y$ un'altra variabile aleatoria discreta, indipendente da $X,$ ma con la stessa legge di $X$. Si introduca $Z=XY$
+
+(b) Calcolare la legge congiunta di $X$ e $Z$ e le leggi marginali.
+
+(c) $X,Y$ e $Z$ sono indipendenti a coppie?
+
+(d) $X,Y$ e $Z$ sono mutuamente indipendenti?
+\subsection{Esercizio 10.}
+
+Date $X$ e $Y$ variabili aleatorie indipendenti di legge geometrica di parametro $1/2$, si definisca $Z=\min \{X,Y\}$ e si calcolino:
+
+(a) $\mathbb{P} (Z\leq k)$ per $k\in \mathbb{N}$
+
+(b) la distribuzione di $Z$
+
+(c) $\mathbb{P} (X=Y)$
+
+(d) $\mathbb{P} (X >Y)$
+\subsection{Esercizio 11.}
+
+Siano $T_{1}$ e $T_{2}$ variabili aleatorie indipendenti di legge geometrica di parametro, rispettivamente, $p_{1}$ e $p_{2} ,$ con cui a tempo discreto si descrive la durata aleatoria di due apparecchiature.
+
+(a) Scrivere la legge congiunta di $T_{1}$ e $T_{2}$
+
+(b) Calcolare la probabilità degli eventi $\{T_{1} =T_{2}\}$ e $\{T_{1} \geq T_{2}\}$
+
+(c) Trovare la legge della durata del sistema composto dalle due apparecchiature collegate in serie.
+
+(d) Trovare la legge della durata del sistema composto dalle due apparecchiature collegate in parallelo.
+
+(e) Trovare la legge congiunta di $U=\min\{T_{1} ,T_{2}\}$ e $V=\max\{T_{1} ,T_{2}\}$
+
+(f) Trovare la legge congiunta di $U$ e $W=V-U$
+
+(g) Trovare la legge di $W$
+
+(h) $U$ e $W$ sono indipendenti?
+\subsection{Esercizio 12.}
+
+Siano $X,\ Z,\ W$ variabili aleatorie indipendenti con $Z$ e $W$ entrambe con legge di Poisson di parametro $\lambda  >0$ e $X\sim \mathrm{Be} (p),p\in (0,1)$. Definiamo la variabile aleatoria $Y=XZ+W$
+
+(a) Determinare le leggi di $(X,Y)$ e $Y$
+
+(b) Calcolare $\mathbb{E} [Y]$ e $\operatorname{Var} (Y)$
+
+(c) Calcolare $\mathrm{Cov} (X,Y)$. Le variabili aleatorie $X$ e $Y$ sono indipendenti?
+\subsection{Esercizio 13.}
+
+Siano $N,X_{1} ,X_{2} ,\dotsc $ variabili aleatorie indipendenti, $N$ abbia legge di Poisson di parametro $\lambda  >0,$ e ciascuna delle $X_{k}$ abbia legge di Bernoulli di parametro $p\in (0,1).$ Si consideri la somma aleatoria (per addendi e per numero di addendi)
+\begin{equation*}
+S=\begin{cases}
+0, & \text{se} \ N=0\\
+X_{1} +\cdots +X_{N} , & \text{se} \ N\neq 0
+\end{cases}
+\end{equation*}
+(a*) Si mostri che $S$ e $N-S$ sono variabili aleatorie.
+
+(b) Qual è la legge di $S$?
+
+(c) Qual è la legge di $N-S$?
+
+(d) La somma $S$ è indipendente da $N$?
+
+(e) Determinare la densità discreta congiunta di $S$ e $N-S$. La somma $S$ è indipendente da $N-S$ ?
+\subsection{Esercizio $14.$}
+
+Sia $X$ una variabile aleatoria discreta, con $\mathrm{Im} (X)=\{1,2,\dotsc \},$ che soddisfa
+\begin{equation*}
+\mathbb{P} (X\geq k)=\frac{1}{k^{\alpha }} ,\ \ k\geq 1
+\end{equation*}
+dove $\alpha  >0$ è un parametro reale.
+
+(a) Calcolare la densità discreta di $X$.
+
+(b) Calcolare la funzione di ripartizione di $X,$ disegnandone un grafico qualitativo.
+
+(c) Per $\alpha =1$, calcolare il valore atteso di $X$
+
+Si supponga d'ora in poi $\alpha =1.$ Sia $Y$ un'altra variabile aleatoria, indipendente da $X,$ ma con la stessa legge.
+
+(d) Calcolare la densità discreta di $M=\min \{X,Y\}$
+
+(e) Calcolare la densità discreta congiunta di $X$ e $X+Y$.
+\subsection{Esercizio $15.$}
+
+Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse ($B\geq 1$ e $R\geq 1$). Sia $X_{k}$ la variabile aleatoria bernoulliana che indica se alla $k$-esima estrazione esce una pallina rossa e sia $Y=\sum _{k=1}^{n} X_{k}$ il numero di palline rosse sulle $n$ estratte. Si risponda ai seguenti quesiti, sia nel caso di estrazione con reimmissione sia nel caso senza reimmissione (in quest'ultimo caso $n\leq B+R$).
+
+(a) Qual è la legge di $Y$?
+
+(b) Qual è il valore atteso delle $X_{k} ?$
+
+(c) Qual è il valore atteso di $Y?$
+
+(d) Le $X_{k}$ sono indipendenti?
+
+(e) $Y$ e $X_{1}$ sono indipendenti?
+
+(f) Calcolare $\mathrm{Cov}( X_{1} ,X_{2})$
+
+$(\mathrm{g} )$ Calcolare $\mathrm{Var} (Y)$ per $n=2$
+\subsection{Esercizio 16.}
+
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $p\in (0,1)$. Siano quindi $\Omega =\{0,1\}^{\mathbb{N}}$ e $\mathcal{A} =\sigma ( E_{k} |k=1,2,\dotsc )$,
+\begin{equation*}
+E_{k} =\ \text{successo alla prova } k
+\end{equation*}
+e sia $\mathbb{P}$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\mathbb{P}( E_{k}) =p$ per ogni $k$. Indicato con $\omega =( \omega _{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo infine le variabili aleatorie
+\begin{equation*}
+X_{k} :\Omega \rightarrow \mathbb{R} ,\ \ X_{k} (\omega )=\omega _{k} ,\ \ k\in \mathbb{N}
+\end{equation*}
+(a) Le variabili aleatorie $X_{k}$ sono indipendenti?
+
+(b) Le variabili aleatorie $Y=\sum _{k=1}^{2} X_{k}$ e $N=\sum _{k=5}^{7} X_{k}$ sono indipendenti?
+
+(c) Le variabili aleatorie $\overline{X}_{n} =\frac{1}{n}\sum _{k=1}^{n} X_{k}$ e $S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n}( X_{k} -\overline{X}_{n})^{2}$ sono indipendenti?
+
+[Suggerimento: per il punto (b) dell'esercizio 3, si ha che $S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n} X_{k}^{2} -\frac{n}{n-1}\overline{X}_{n}^{2} ;$ notare poi che $X_{k}^{2} =X_{k}$.
+
+(d) Se nelle prime $10$ prove vengono registrati $2$ successi, con quale probabilità almeno un successo si è verificato nelle prime $2$ prove?
+
+(e) Se nelle prime $10$ prove viene registrato almeno un successo, con quale probabilità le prime $8$ prove danno esattamente un successo?
+
+(f) Introdotte anche $Z=$ "numero di prove necessarie per il primo successo" e $W=$ "numero di insuccessi prima del primo successo", calcolare le leggi congiunte delle coppie $(Z,W),(Y,Z)$ $(Y,W).$ Sono coppie di variabili aleatorie indipendenti?
+
+(g) Determinare il coefficiente di correlazione $\rho _{Z,W}$ e la covarianza $\mathrm{Cov} (Z,W)$
+
+cosa sarebbe cambiato se avessimo realizzato una successione di variabili aleatorie $X_{n}$ i.i.d., $X_{n} \sim \mathrm{Be} (p)$, in un altro spazio di probabilità $(\Omega ,\mathcal{A} ,\mathbb{P} )$?
+\subsection{Esercizio $17.$}
+
+Esibire due diversi spazi $(\Omega ,\mathcal{A} ,\mathbb{P} )$, uno discreto e uno continuo, su cui è possibile definire un vettore aleatorio $( X_{1} ,X_{2}) ,$ con $X_{1}$ e $X_{2}$ indipendenti, $X_{1} \sim \mathrm{Bi}( n_{1} ,p)$, $X_{2} \sim \mathrm{Bi}( n_{2} ,p)$, dove $n_{1} ,n_{2} \in \mathbb{N}$ e $p\in (0,1)$.
+\subsection{Esercizio 18.}
+
+Alberto usa le lenti a contatto, ma è parecchio maldestro e, quando al mattino cerca di mettersele, spesso nell'operazione ne perde una, se non entrambe. Detto quindi $X$ il numero di lenti a contatto perse al mattino da Alberto, sappiamo che per un qualche valore del parametro $p$ il numero casuale $X$ ha distribuzione
+\begin{equation*}
+p_{X} (k)=\mathbb{P} (X=k)=\begin{cases}
+p & k=0\\
+1-p-p^{2} & k=1\\
+p^{2} & k=2
+\end{cases}
+\end{equation*}
+1. Stabilire i possibili valori del parametro $p$.
+
+Occupiamoci ora di quel che puó capitare in due giorni, considerando indipendenti, e distribuiti entrambi come $X,$ i totali $X_{1}$ e $X_{2}$ di lenti perse alla prima e alla seconda mattina. Quando Alberto perde (almeno) una lente, esce in ritardo nel vano tentativo di cercarla. Siano $Y=$ "numero di lenti a contatto perse da Alberto in due giorni", $\mathrm{Z} =$ "numero di mattine su due giorni in cui Alberto è in ritardo". Trovare:
+
+2. La distribuzione di $Y$.
+
+3. La distribuzione di $Z$.
