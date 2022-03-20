@@ -17,7 +17,7 @@ Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definit
 (e) $| \rho _{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \mathbb{R}$. Suggerimento: utilizzare il punto d
 \Esercizio{$\star$}
 
-Dato un vettore aleatorio $X=( X_{1} ,\dots ,X_{n}) ,$ in cui ciascuna variabile aleatoria $X_{i}$ ha varianza finita, si mostri che $X\in \mathrm{Im} (\mathrm{C} )+\EE [\mathrm{X} ]$ q.c., ovvero $\PP (\mathrm{X} \in \mathrm{Im} (\mathrm{C} )+\EE [\mathrm{X} ])=1$, dove $\mathrm{C}$ è la
+Dato un vettore aleatorio $X=( X_{1} ,\dots ,X_{n}) ,$ in cui ciascuna variabile aleatoria $X_{i}$ ha varianza finita, si mostri che $X\in \mathrm{Im} (\mathrm{C} )+\EE [\mathrm{X} ]$ q.c., ovvero $\mathbb{P} (\mathrm{X} \in \mathrm{Im} (\mathrm{C} )+\EE [\mathrm{X} ])=1$, dove $\mathrm{C}$ è la
 
 matrice varianza di $X$. Suggerimento: si supponga inizialmente che $\EE [X]=0$ e, in tal caso, si mostri che $X\in (\mathrm{Ker} (C))^{\perp } =\mathrm{Im} (C)$ q.c.
 \Esercizio{}
@@ -57,7 +57,7 @@ Siano $X,\ Y,\ Z$ variabili aleatorie reali. Mostrare che:
 
 1. Se $Y=c$ q.c., per qualche costante $c\in \mathbb{R} ,$ allora $X$ ed $Y$ sono indipendenti.
 
-$2^{*} .$ Se $\PP (Z\in B)\in \{0,1\}$ per ogni boreliano $B,$ allora $Z$ è q.c. costante.
+$2^{*} .$ Se $\mathbb{P} (Z\in B)\in \{0,1\}$ per ogni boreliano $B,$ allora $Z$ è q.c. costante.
 
 $3^{*} .$ Nel caso $Y=h(X)$, per qualche funzione boreliana $h:\mathbb{R}\rightarrow \mathbb{R} ,X$ e $Y$ sono indipendenti se e solo se $Y=c$ q.c., per qualche costante $c\in \mathbb{R}$
 \Esercizio{}
@@ -102,11 +102,11 @@ p_{Y} & 0.3 &  &  & 1
 \end{equation*}
 (a) Completare la tabella in modo che $X$ ed $Y$ siano indipendenti.
 
-(b) Calcolare $\PP (X< Y)$
+(b) Calcolare $\mathbb{P} (X< Y)$
 
 (c) Calcolare il valore atteso del vettore $(X,Y)$ e $\EE [XY]$
 
-(d) Calcolare $\PP (|XY|\geq 5)$ e $\PP (X+Y >5)$
+(d) Calcolare $\mathbb{P} (|XY|\geq 5)$ e $\mathbb{P} (X+Y >5)$
 
 (e) Siano $U=|XY|$ e $V=X+Y$. Calcolare la legge congiunta di $U$ e $V$ e le leggi marginali.
 \Esercizio{}
@@ -126,13 +126,13 @@ Sia ora $Y$ un'altra variabile aleatoria discreta, indipendente da $X,$ ma con l
 
 Date $X$ e $Y$ variabili aleatorie indipendenti di legge geometrica di parametro $1/2$, si definisca $Z=\min \{X,Y\}$ e si calcolino:
 
-(a) $\PP (Z\leq k)$ per $k\in \mathbb{N}$
+(a) $\mathbb{P} (Z\leq k)$ per $k\in \mathbb{N}$
 
 (b) la distribuzione di $Z$
 
-(c) $\PP (X=Y)$
+(c) $\mathbb{P} (X=Y)$
 
-(d) $\PP (X >Y)$
+(d) $\mathbb{P} (X >Y)$
 \Esercizio{}
 
 Siano $T_{1}$ e $T_{2}$ variabili aleatorie indipendenti di legge geometrica di parametro, rispettivamente, $p_{1}$ e $p_{2} ,$ con cui a tempo discreto si descrive la durata aleatoria di due apparecchiature.
@@ -183,7 +183,7 @@ X_{1} +\cdots +X_{N} , & \text{se} \ N\neq 0
 
 Sia $X$ una variabile aleatoria discreta, con $\mathrm{Im} (X)=\{1,2,\dots \},$ che soddisfa
 \begin{equation*}
-\PP (X\geq k)=\frac{1}{k^{\alpha }} ,\ \ k\geq 1
+\mathbb{P} (X\geq k)=\frac{1}{k^{\alpha }} ,\ \ k\geq 1
 \end{equation*}
 dove $\alpha  >0$ è un parametro reale.
 
@@ -221,7 +221,7 @@ Consideriamo infinite prove di Bernoulli indipendenti con probabilità di succes
 \begin{equation*}
 E_{k} =\ \text{successo alla prova } k
 \end{equation*}
-e sia $\PP$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\PP( E_{k}) =p$ per ogni $k$. Indicato con $\omega =( \omega _{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo infine le variabili aleatorie
+e sia $\mathbb{P}$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\mathbb{P}( E_{k}) =p$ per ogni $k$. Indicato con $\omega =( \omega _{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo infine le variabili aleatorie
 \begin{equation*}
 X_{k} :\Omega \rightarrow \mathbb{R} ,\ \ X_{k} (\omega )=\omega _{k} ,\ \ k\in \mathbb{N}
 \end{equation*}
@@ -241,15 +241,15 @@ X_{k} :\Omega \rightarrow \mathbb{R} ,\ \ X_{k} (\omega )=\omega _{k} ,\ \ k\in 
 
 (g) Determinare il coefficiente di correlazione $\rho _{Z,W}$ e la covarianza $\mathrm{Cov} (Z,W)$
 
-cosa sarebbe cambiato se avessimo realizzato una successione di variabili aleatorie $X_{n}$ i.i.d., $X_{n} \sim \mathrm{Be} (p)$, in un altro spazio di probabilità $(\Omega ,\mathcal{A} ,\PP )$?
+cosa sarebbe cambiato se avessimo realizzato una successione di variabili aleatorie $X_{n}$ i.i.d., $X_{n} \sim \mathrm{Be} (p)$, in un altro spazio di probabilità $(\Omega ,\mathcal{A} ,\mathbb{P} )$?
 \Esercizio{}
 
-Esibire due diversi spazi $(\Omega ,\mathcal{A} ,\PP )$, uno discreto e uno continuo, su cui è possibile definire un vettore aleatorio $( X_{1} ,X_{2}) ,$ con $X_{1}$ e $X_{2}$ indipendenti, $X_{1} \sim \mathrm{Bi}( n_{1} ,p)$, $X_{2} \sim \mathrm{Bi}( n_{2} ,p)$, dove $n_{1} ,n_{2} \in \mathbb{N}$ e $p\in (0,1)$.
+Esibire due diversi spazi $(\Omega ,\mathcal{A} ,\mathbb{P} )$, uno discreto e uno continuo, su cui è possibile definire un vettore aleatorio $( X_{1} ,X_{2}) ,$ con $X_{1}$ e $X_{2}$ indipendenti, $X_{1} \sim \mathrm{Bi}( n_{1} ,p)$, $X_{2} \sim \mathrm{Bi}( n_{2} ,p)$, dove $n_{1} ,n_{2} \in \mathbb{N}$ e $p\in (0,1)$.
 \Esercizio{}
 
 Alberto usa le lenti a contatto, ma è parecchio maldestro e, quando al mattino cerca di mettersele, spesso nell'operazione ne perde una, se non entrambe. Detto quindi $X$ il numero di lenti a contatto perse al mattino da Alberto, sappiamo che per un qualche valore del parametro $p$ il numero casuale $X$ ha distribuzione
 \begin{equation*}
-p_{X} (k)=\PP (X=k)=\begin{cases}
+p_{X} (k)=\mathbb{P} (X=k)=\begin{cases}
 p & k=0\\
 1-p-p^{2} & k=1\\
 p^{2} & k=2

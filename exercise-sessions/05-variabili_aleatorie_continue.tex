@@ -4,7 +4,7 @@
 \ParteEsercizi
 \Esercizio{}
 
-Si consideri lo spazio di probabilità $( \Omega ,\mathcal{A} ,\PP) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m( B\cap ( 0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $( 0,1)$ nel modo seguente:
+Si consideri lo spazio di probabilità $( \Omega ,\mathcal{A} ,\mathbb{P}) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m( B\cap ( 0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $( 0,1)$ nel modo seguente:
 \begin{equation*}
 X( \omega ) =\frac{1}{\omega } ,\ \ \ \ Y( \omega ) =\frac{1}{\sqrt{\omega }} ,\ \ \ \ Z( \omega ) =\log \omega ,
 \end{equation*}
@@ -14,7 +14,7 @@ per ogni $\omega \in ( 0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\math
 \item Determinare le distribuzioni di $X$, $Y$ e $Z$, mostrando in particolare che si tratta di variabili aleatorie continue.
 \item Calcolare le densità di probabilità di $X$, $Y$ e $Z$.
 \item Calcolare i valori attesi di $X$, $Y$ e $Z$.
-\item Esibire un'altra variabile aleatoria $\tilde{X}$ con la stessa legge di $X$, ma definita su un altro spazio di probabilità $\left(\tilde{\Omega } ,\tilde{\mathcal{A}} ,\tilde{\PP}\right)$.
+\item Esibire un'altra variabile aleatoria $\tilde{X}$ con la stessa legge di $X$, ma definita su un altro spazio di probabilità $\left(\tilde{\Omega } ,\tilde{\mathcal{A}} ,\tilde{\mathbb{P}}\right)$.
 \end{enumerate}
 \Esercizio{}
 
@@ -55,8 +55,8 @@ f( x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} 
 \item Calcolare la moda di $X$.
 \item Calcolare il valore atteso $\EE[ X]$ e la varianza $\mathrm{Var}( X)$.
 \item Calcolare la funzione di ripartizione $F_{X}$ di $X$.
-\item (Proprietà di assenza di memoria) Mostrare che $\PP( X >s+t \mid X >s) =\PP( X >t)$ per ogni $s,t >0$.
-\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\PP( T >s+t\mid T >s) =\PP( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\PP( T >1))$.
+\item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >s+t \mid X >s) =\mathbb{P}( X >t)$ per ogni $s,t >0$.
+\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\mathbb{P}( T >s+t\mid T >s) =\mathbb{P}( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\mathbb{P}( T >1))$.
 \end{enumerate}
 \Esercizio{(Distribuzione Gamma)}
 
@@ -132,9 +132,9 @@ x, & 0\leq x< 1\\
 \end{equation*}
 
 a partire da questa ci troviamo\begin{gather*}
-F_{X}\left( t\right) :=\PP\left( X\leq t\right) =\PP\left( -\frac{1}{\lambda }\log U\leq t\right)\\
+F_{X}\left( t\right) :=\mathbb{P}\left( X\leq t\right) =\mathbb{P}\left( -\frac{1}{\lambda }\log U\leq t\right)\\
 -\frac{1}{\lambda }\log U\leq t\iff \log U\geq -\lambda t\iff U\geq e^{-\lambda t}\\
-=\PP\left( U\geq e^{-\lambda t}\right) =1-\underbrace{\PP\left( U< e^{-\lambda t}\right)}_{F_{U}\left( e^{-\lambda t}\right)} =\\
+=\mathbb{P}\left( U\geq e^{-\lambda t}\right) =1-\underbrace{\mathbb{P}\left( U< e^{-\lambda t}\right)}_{F_{U}\left( e^{-\lambda t}\right)} =\\
 =1-\begin{cases}
 0, & e^{-\lambda t} < 0\ MAI\\
 e^{-\lambda t} , & 0\leq e^{-\lambda t} < 1\iff t >0\\
@@ -155,7 +155,7 @@ A partire dalla distribuzione uniforme si può ottenere qualunque altra distribu
 
 Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left( 0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
 \begin{equation*}
-h_{X}( t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\PP( t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
+h_{X}( t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\mathbb{P}( t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
 \end{equation*}
 Interpretando $X$ come un tempo di attesa, il tasso di fallimento rappresenta la probabilità istantanea di arrivo, sapendo che l'attesa è durata fino al tempo $t$.
 \begin{enumerate}
@@ -220,7 +220,7 @@ f_{X}\left( x\right) =\begin{cases}
 \begin{enumerate}
 \item Determinare il valore della costante reale $\lambda $ e calcolare la funzione di ripartizione.
 \item Posta $Y=e^{X}$, si determini la distribuzione di $Y$, e si calcolino $\EE\left[ Y\right]$ e $\EE\left[ Y^{2}\right]$.
-\item Si calcolino $\PP\left( X >3\right)$ e $\PP\left( X^{3}  >27\right)$.
+\item Si calcolino $\mathbb{P}\left( X >3\right)$ e $\mathbb{P}\left( X^{3}  >27\right)$.
 \item Si calcoli la media di $3X^{2} -1$.
 \item Stimare la probabilità che $X$ assuma valori distanti dalla media più di $2$ unità, utilizzando la disuguaglianza di Chebychev.
 \item Stabilire per quali $\alpha ,\beta \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left( X-1\right)^{\beta }} \in L^{1}$.
@@ -242,8 +242,8 @@ S=\exp X,\ \ \ \ X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right) ,\ \ \ \ \mu \i
 \end{equation*}
 Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la differenza $S-k$, altrimenti non lo eserciterà e avrà ricavo nullo. Sia quindi $R$ il ricavo dell'agente.
 \begin{enumerate}
-\item Calcolare la probabilità di un ricavo positivo, $\PP\left( R >0\right)$.
-\item Calcolare la probabilità di un ricavo nullo, $\PP\left( R=0\right)$.
+\item Calcolare la probabilità di un ricavo positivo, $\mathbb{P}\left( R >0\right)$.
+\item Calcolare la probabilità di un ricavo nullo, $\mathbb{P}\left( R=0\right)$.
 \item Calcolare la legge del ricavo $R$. Si tratta di una variabile aleatoria continua? Discreta? Perché?
 \item Calcolare il ricavo atteso $\EE[ R]$.
 \item Calcolare $\lim\limits _{k\rightarrow 0}\EE[ R]$.
@@ -269,10 +269,10 @@ Un'industria produce su commissione delle sbarre d'acciaio cilindriche, il cui d
 \end{enumerate}
 \Esercizio{}
 
-Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità fissato. Data una variabile aleatoria reale continua $X$, si mostri che
+Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità fissato. Data una variabile aleatoria reale continua $X$, si mostri che
 \begin{enumerate}
 \item $\{X\in \mathbb{Q}\}$ è un evento, ossia $\{X\in \mathbb{Q}\} \in \mathcal{A}$,
-\item $\PP( X\in \mathbb{Q}) =0$.
+\item $\mathbb{P}( X\in \mathbb{Q}) =0$.
 \end{enumerate}
 \Esercizio{}
 
@@ -295,7 +295,7 @@ Y=\sum\limits _{k=1}^{\ +\infty } k\Ind_{( k-1,k]}( X) =\lceil X\rceil .
 Se quindi $X$ rappresenta un tempo d'attesa, $Y$ rappresenta il corrispondente tempo d'attesa per un osservatore stroboscopico. Si mostri che $Y$ è una variabile aleatoria e se ne calcoli la distribuzione.
 \Esercizio{}
 
-Data $X\sim \mathcal{N}( 2,5)$, mostrare che esiste un unico $c$ tale che $\PP(| X| < c) =0.4$. Trovare un valore approssimato di $c$ con metodi di analisi numerica.
+Data $X\sim \mathcal{N}( 2,5)$, mostrare che esiste un unico $c$ tale che $\mathbb{P}(| X| < c) =0.4$. Trovare un valore approssimato di $c$ con metodi di analisi numerica.
 \Esercizio{}
 
 Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un tempo casuale $X$, che si può considerare una variabile aleatoria con legge esponenziale di media $10$ minuti.

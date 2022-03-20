@@ -10,14 +10,14 @@ In generale non è sempre lecito supporre che la probabilità sia uniforme.
 \end{oss}
 Dagli assiomi della probabilità segue che:
 \begin{equation*}
-1=\PP( \Omega ) =\underbrace{\sum\limits _{k=1}^{n}\PP(\{\omega _{k}\}) =\sum\limits _{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
+1=\mathbb{P}( \Omega ) =\underbrace{\sum\limits _{k=1}^{n}\mathbb{P}(\{\omega _{k}\}) =\sum\limits _{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
 \end{equation*}
 Pertanto, quando abbiamo a che fare con esperimenti aleatori su spazi di probabilità uniformi procediamo nel seguente modo:
 \begin{enumerate}
 \item individuiamo $\Omega $ (i.e. i possibili esiti dell'esperimento aleatorio) finito, $| \Omega | < +\infty \ \rightarrow \ \mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
 \item individuiamo il sottoinsieme $A\subseteq \Omega $ che rappresenta l'evento.
 \item se abbiamo probabilità uniforme, cioè gli eventi sono equiprobabili,\begin{equation*}
-\boxed{\forall A\in \mathcal{A} \ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}}
+\boxed{\forall A\in \mathcal{A} \ \ \ \ \mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}}
 \end{equation*}
 \end{enumerate}
 
@@ -344,11 +344,11 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 i=\text{primo lancio} \ \ \ \ j=\text{secondo lancio}
 \end{gather*}
 
-Come famiglia ($\sigma $-algebra) degli eventi possibili possiamo scegliere $\mathcal{A} :=\mathcal{P}( \Omega ) =2^{\Omega }$. Per quanto riguarda l'assegnazione di una probabilità $\PP$ su $( \Omega ,\mathcal{A})$ osserviamo che se assumiamo che i due non siano truccati e vogliamo che il nostro spazio di probabilità $( \Omega ,\mathcal{A} ,\PP)$ modellizzi questo fatto fisico, dobbiamo ammettere che tutti gli eventi elementari di $\Omega $ abbiano la stessa probabilità $\PP =\frac{1}{| \Omega | } =\frac{1}{36}$. Siamo pertanto in uno spazio campionario con probabilità uniforme. Allora $\forall A\in \mathcal{A} ,\PP( A) =\frac{| A| }{| \Omega | } =\frac{| A| }{36}$.
+Come famiglia ($\sigma $-algebra) degli eventi possibili possiamo scegliere $\mathcal{A} :=\mathcal{P}( \Omega ) =2^{\Omega }$. Per quanto riguarda l'assegnazione di una probabilità $\mathbb{P}$ su $( \Omega ,\mathcal{A})$ osserviamo che se assumiamo che i due non siano truccati e vogliamo che il nostro spazio di probabilità $( \Omega ,\mathcal{A} ,\mathbb{P})$ modellizzi questo fatto fisico, dobbiamo ammettere che tutti gli eventi elementari di $\Omega $ abbiano la stessa probabilità $\mathbb{P} =\frac{1}{| \Omega | } =\frac{1}{36}$. Siamo pertanto in uno spazio campionario con probabilità uniforme. Allora $\forall A\in \mathcal{A} ,\mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{| A| }{36}$.
 
 Sia $A$ l'evento "avere un $6$ al primo lancio", allora\begin{gather*}
 A=\{( 6,1) ,( 6,2) ,( 6,3)( 6,4) ,( 6,5) ,( 6,6)\} ,\ \ \ \ | A| =6\\
-\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
+\implies \mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
 \end{gather*}
 
 \begin{oss}
@@ -356,21 +356,21 @@ In questo caso $\Omega $ ed $A$ hanno pochi elementi e possiamo elencarli senza 
 \end{oss}
 \item Sia $B$ l'evento "la somma dei due risultati è $6$", allora\begin{gather*}
 B=\{( 5,1) ,( 2,4) ,( 3,3) ,( 4,2) ,( 1,5)\} ,\ \ \ \ | B| =5\\
-\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{5}{36} \approx 0.1389
+\implies \mathbb{P}( B) =\frac{| B| }{| \Omega | } =\frac{5}{36} \approx 0.1389
 \end{gather*}
 
 \begin{oss}
 I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dots ,12$,\begin{equation*}
 \begin{array}{ l }
-\PP(\{2\}) =\PP(\{12\}) =1/36\\
-\PP(\{3\}) =\PP(\{11\}) =1/18\\
-\PP(\{4\}) =\PP(\{10\}) =1/12\\
-\PP(\{5\}) =\PP(\{9\}) =1/9\\
-\PP(\{6\}) =\PP(\{8\}) =5/36\\
-\PP(\{7\}) =1/6
+\mathbb{P}(\{2\}) =\mathbb{P}(\{12\}) =1/36\\
+\mathbb{P}(\{3\}) =\mathbb{P}(\{11\}) =1/18\\
+\mathbb{P}(\{4\}) =\mathbb{P}(\{10\}) =1/12\\
+\mathbb{P}(\{5\}) =\mathbb{P}(\{9\}) =1/9\\
+\mathbb{P}(\{6\}) =\mathbb{P}(\{8\}) =5/36\\
+\mathbb{P}(\{7\}) =1/6
 \end{array}
 \end{equation*}Se invece assumiamo che i possibili risultati della somma siano equiprobabili, dobbiamo porre\begin{equation*}
-\PP(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dots ,12\}
+\mathbb{P}(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dots ,12\}
 \end{equation*}$\Omega =$ spazio degli eventi elementari, somma degli esiti del lancio dei due dadi. Lo spazio di probabilità così costruito è matematicamente corretto, ma non ha nulla a che fare con la realtà fisica dell'esperimento.
 \end{oss}
 \item Lanciando $3$ volte il dado lo spazio campionario diventa\begin{equation*}
@@ -383,7 +383,7 @@ C= & (\{1,1,4\} ,\{1,4,1\} ,\{4,1,1\} ,\\
  & \{1,2,3\} ,\{1,3,2\} ,\{2,1,3\} ,\{2,3,1\} ,\{3,1,2\} ,\{3,2,1\} ,\\
  & \{2,2,2\})
 \end{aligned}\\
-\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10}{6^{3}} \approx 0.0463
+\implies \mathbb{P}( C) =\frac{| C| }{| \Omega | } =\frac{10}{6^{3}} \approx 0.0463
 \end{gather*}
 
 \begin{oss}
@@ -423,10 +423,10 @@ Tutte le possibili quintuple sono date dalla disposizione (l'ordine conta!) di $
 Per il primo ci sono $40$ possibilità, per il secondo $39$, ecc. (visualizzabile con un diagramma ad albero.
 \begin{enumerate}
 \item Ho esattamente $1$ possibilità (su tutte quelle possibili) di vincere.\begin{equation*}
-| A| =1\implies \PP( A) =| A| /| \Omega | =1/78960960\approx 1.3\times 10^{-8}
+| A| =1\implies \mathbb{P}( A) =| A| /| \Omega | =1/78960960\approx 1.3\times 10^{-8}
 \end{equation*}
 \item Se non preciso l'ordine ho $5!$ modi di scegliere la cinquina vincente, i.e. tutte le $5!$ permutazioni dei primi $5$ classificati.\begin{equation*}
-| B| =5!\implies \PP( B) =| B| /| \Omega | =5!/78960960\approx 1.5\times 10^{-6}
+| B| =5!\implies \mathbb{P}( B) =| B| /| \Omega | =5!/78960960\approx 1.5\times 10^{-6}
 \end{equation*}
 \end{enumerate}
 
@@ -453,7 +453,7 @@ Guardiamo tutta la classifica. In questo caso dobbiamo considerare le permutazio
 \end{array}
 \end{equation*}
 
-i.e. $| A| =35!\implies \PP( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{-8}$.
+i.e. $| A| =35!\implies \mathbb{P}( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{-8}$.
 \item Evento $B$. Simile a prima, ma abbiamo $5!$ modi di scegliere i primi $5$ arrivati:
 
 \begin{equation*}
@@ -472,7 +472,7 @@ i.e. $| A| =35!\implies \PP( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{
 \end{array}
 \end{equation*}
 
-i.e. $| A| =5!\cdot 35!\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{35!\ 5!}{40!} \approx 1.5\times 10^{-6}$.
+i.e. $| A| =5!\cdot 35!\implies \mathbb{P}( B) =\frac{| B| }{| \Omega | } =\frac{35!\ 5!}{40!} \approx 1.5\times 10^{-6}$.
 \end{enumerate}
 
 \textbf{Metodo 3.}
@@ -483,27 +483,27 @@ Se dovessimo rispondere esclusivamente alla seconda domanda potremmo considerare
 \end{equation*}
 Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 \begin{equation*}
-| B| =1\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
+| B| =1\implies \mathbb{P}( B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
 \end{equation*}
 \Soluzione
 
-Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\PP( A) =\frac{| A| }{| \Omega | }$.
+Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\mathbb{P}( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
 \item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dots 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
 \begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
+\mathbb{P}( A) =\mathbb{P}\left( \Omega -A\comp\right) =1-\mathbb{P}\left( A\comp\right)\\
 A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
 A\comp =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 \left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
+\implies \mathbb{P}\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
+\implies \mathbb{P}( A) =1-\mathbb{P}\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
 \end{array}
 \end{equation*}
 
 Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
 \item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:\begin{equation*}
 \begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
+\mathbb{P}( A) =\mathbb{P}\left( \Omega -A\comp\right) =1-\mathbb{P}\left( A\comp\right)\\
 A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
 \left| A\comp\right| =364^{n}
 \end{array}
@@ -511,8 +511,8 @@ A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
 
 Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso giorno del mio compleanno: per ognuna di esse abbiamo $364$ possibilità (i restanti giorni dell'anno).\begin{equation*}
 \begin{array}{ l }
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
+\implies \mathbb{P}\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
+\implies \mathbb{P}( A) =1-\mathbb{P}\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
 \end{array}
 \end{equation*}
 
@@ -540,7 +540,7 @@ Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. 
 In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
 \begin{enumerate}
 \item Sia $A=$ "indovino i primi $6$ numeri estratti, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).\begin{equation*}
-| A| =1\implies \PP( A) =| A| /| \Omega | =1/\binom{90}{6} \approx 1.6\times 10^{-9}
+| A| =1\implies \mathbb{P}( A) =| A| /| \Omega | =1/\binom{90}{6} \approx 1.6\times 10^{-9}
 \end{equation*}
 
 \begin{oss}
@@ -555,7 +555,7 @@ Sia $A=$ "indovino i primi $6$ numeri estratti".\begin{equation*}
 \end{equation*}
 
 Dato che \textit{non} conta l'ordine, abbiamo $6!$ modi possibili (i.e. tutte le possibili permutazioni) di scegliere la $6$-pla vincente.\begin{equation*}
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{6!}{\frac{90!}{84!}} =\frac{6!\ 84!}{90!} \approx 1.6\times 10^{-9}
+\mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{6!}{\frac{90!}{84!}} =\frac{6!\ 84!}{90!} \approx 1.6\times 10^{-9}
 \end{equation*}
 
 Il ragionamento esposto sopra (schema di scelte successive formalmente giustificato dal principio di calcolo combinatorio) può essere graficamente visualizzato tramite uno schema di diagramma ad albero
@@ -647,7 +647,7 @@ L'evento $A=$ "indovino i $6$ numeri estratti" è visibile, sull'albero, come un
 \end{enumerate}
 
 \begin{equation*}
-| B| =6\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{6}{\binom{90}{6}} \approx 9.6\times 10^{-9}
+| B| =6\implies \mathbb{P}( B) =\frac{| B| }{| \Omega | } =\frac{6}{\binom{90}{6}} \approx 9.6\times 10^{-9}
 \end{equation*}
 
 Alternativamente, possiamo pensare in quanti possiamo sostituire il numero "sbagliato" con il jolly:
@@ -703,7 +703,7 @@ Alternativamente, possiamo pensare in quanti possiamo sostituire il numero "sbag
 
 Il numero sbagliato può essere uno qualsiasi dei $6$ numeri che ho scelto, quindi ho $6$ modi possibili di sostituire il jolly al numero sbagliato.
 \item L'evento è dato dall'unione disgiunta:\begin{equation*}
-A\cup B\implies \PP( A\cup B) =\PP( A) +\PP( B) =\frac{7}{\binom{90}{6}} \approx 1.12\times 10^{-8}
+A\cup B\implies \mathbb{P}( A\cup B) =\mathbb{P}( A) +\mathbb{P}( B) =\frac{7}{\binom{90}{6}} \approx 1.12\times 10^{-8}
 \end{equation*}
 \end{enumerate}
 \Soluzione
@@ -725,20 +725,20 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} 
 \item $( \Leftarrow )$ Ipotesi:
 \begin{enumerate}
 \item le $k$ estrazioni sono indipendenti, i.e.\begin{equation*}
-\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right)
+\mathbb{P}\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\mathbb{P}\left( A_{j}^{\omega _{j}}\right)
 \end{equation*}
 \item per ciascuna estrazione gli $n$ risultati possibili sono equiprobabili, i.e.\begin{equation*}
-\PP\left( A_{j}^{m}\right) =1/n\ \ \ \ \forall m,\forall j
+\mathbb{P}\left( A_{j}^{m}\right) =1/n\ \ \ \ \forall m,\forall j
 \end{equation*}
 \end{enumerate}
 
-Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
+Tesi da dimostrare: $\mathbb{P}(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
 Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora\begin{equation*}
 \begin{aligned}
-\PP(\{\omega \}) & =\PP(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
- & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
- & =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
+\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
+ & =\mathbb{P}\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
+ & =\prod _{j=1}^{k}\mathbb{P}\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
  & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
  & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
 \end{aligned}
@@ -751,7 +751,7 @@ $( \implies )$ esercizio.
 \item $\{x_{1} \dots x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
 \end{enumerate}
 
-Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
+Pertanto, $\frac{1}{n^{k}} \leq \mathbb{P}( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
 \end{enumerate}
 \item 
 \begin{enumerate}
@@ -763,19 +763,19 @@ Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezz
 \end{aligned}
 \end{equation*}
 \item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che\begin{equation*}
-\forall \omega \in \Omega \ \ \ \ \PP( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
+\forall \omega \in \Omega \ \ \ \ \mathbb{P}( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
 \end{equation*}
 
 Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \textit{condizionatamente} rispetto ai risultati delle passate estrazioni. Sfruttiamo il seguente risultato teorico \textit{(J.P. 3.3)} che connette indipendenza con probabilità condizionata per un numero finito di eventi.
 
-Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap _{n} A_{n}\right) =\PP( A_{1})\PP( A_{2} |A_{1}) \cdots \PP( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
+Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\mathbb{P}( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\mathbb{P}\left(\bigcap _{n} A_{n}\right) =\mathbb{P}( A_{1})\mathbb{P}( A_{2} |A_{1}) \cdots \mathbb{P}( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
 \begin{oss}
 Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:\begin{equation*}
 \begin{aligned}
-\PP(\{\omega \}) & =\PP(\{\omega _{1} ,\dots ,\omega _{k}\})\\
- & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
- & =\PP\left( A_{1}^{\omega _{1}}\right)\PP\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \PP\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
+\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{\omega _{1} ,\dots ,\omega _{k}\})\\
+ & =\mathbb{P}\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
+ & =\mathbb{P}\left( A_{1}^{\omega _{1}}\right)\mathbb{P}\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \mathbb{P}\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
  & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
  & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-( k-1)}\\
  & =\frac{1}{n( n-1) \cdots ( n-k+1)} =\frac{1}{| \Omega | }
@@ -785,7 +785,7 @@ Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-
 
 $( \Leftarrow )$ Esercizio.
 \item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque\begin{equation*}
-| A| =k!,\ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
+| A| =k!,\ \ \ \ \mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
 \end{equation*}
 \end{enumerate}
 \item 
@@ -793,13 +793,13 @@ $( \Leftarrow )$ Esercizio.
 \item $\Omega $ è lo spazio campionario delle combinazioni\begin{equation*}
 \Omega =\{\omega \subset \{1,\dots ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
 \end{equation*}
-\item Sia $A$ come sopra, allora deve essere $\PP( A) =\frac{1}{\binom{n}{k}}$.
+\item Sia $A$ come sopra, allora deve essere $\mathbb{P}( A) =\frac{1}{\binom{n}{k}}$.
 \end{enumerate}
 \end{enumerate}
 
 \textbf{Osservazioni.}
 \begin{itemize}
-\item Deve risultare che le probabilità $\PP( A)$ dei punti $2c$ e $3b$ siano uguali (confronta con es $3b$ e es $9a$ [OSS]).
+\item Deve risultare che le probabilità $\mathbb{P}( A)$ dei punti $2c$ e $3b$ siano uguali (confronta con es $3b$ e es $9a$ [OSS]).
 \item Importanza di questo esercizio.
 \begin{itemize}
 \item Serve per capire quando la probabilità uniforme è il modello corretto.
@@ -825,7 +825,7 @@ Spazio campionario delle disposizioni con ripetizione\begin{equation*}
 \end{equation*}
 
 Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Ho $3^{2} \cdot 7^{2}$ possibilità di scelta, ma poi dobbiamo considerare tutte le possibili permutazioni $\binom{4}{2} =\frac{4!}{2!2!}$.\begin{equation*}
-\implies | A| =\binom{4}{2} 3^{2} 7^{2}\implies \PP( A) =\frac{| A| }{| \Omega | } =\binom{4}{2}\frac{3^{2} 7^{2}}{10^{4}} \approx 0.2646.
+\implies | A| =\binom{4}{2} 3^{2} 7^{2}\implies \mathbb{P}( A) =\frac{| A| }{| \Omega | } =\binom{4}{2}\frac{3^{2} 7^{2}}{10^{4}} \approx 0.2646.
 \end{equation*}
 \item \textit{Estrazione senza reimmissione.}
 
@@ -846,7 +846,7 @@ Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline
 \binom{4}{2} =\frac{4!}{2!2!} =\frac{4\cdot 3\cdot 2}{4} =6\ \text{possibili modi}\\
 \Downarrow \\
 | A| =\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)\\
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)}{10\cdot 9\cdot 8\cdot 7} \approx 0.3
+\mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)}{10\cdot 9\cdot 8\cdot 7} \approx 0.3
 \end{gather*}
 \end{oss}
 \item Metodo $2$\begin{equation*}
@@ -861,7 +861,7 @@ Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre
 \binom{3}{2} \ \text{modi di scegliere le palline rosse}\\
 \binom{7}{2} \ \text{modi di scegliere le palline blu}\\
 \implies | A| =\binom{3}{2}\binom{7}{2}\\
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}} \approx 0.3
+\mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}} \approx 0.3
 \end{gather*}
 \end{enumerate}
 \item \textit{Estrazione simultanea}
@@ -902,7 +902,7 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}{2}$ perché i casi $( 3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit ) \neq ( 6\varheartsuit \ 6\spadesuit \ 6\vardiamondsuit \ 3\varheartsuit \ 3\clubsuit )$, differenza con il punto successivo
 \end{oss}
 \item ho $\binom{4}{2}$ possibilità di scegliere il seme (es. $\varheartsuit ,\clubsuit $)\begin{equation*}
-\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.0014
+\implies \mathbb{P}( A) =\frac{| A| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.0014
 \end{equation*}
 \end{enumerate}
 \item Sia $B$ l'evento "esce una doppia coppia" (esempio di doppia coppia: $3\varheartsuit \ 3\vardiamondsuit \ 7\clubsuit \ 7\varheartsuit \ 11\spadesuit $)\begin{equation*}
@@ -914,7 +914,7 @@ In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}
 \item ho $\binom{4}{2}$ modi di scegliere i semi per la seconda coppia
 \item mi rimangono $11$ possibilità tra cui scegliere il \textit{numero/figura} dell'ultima carta
 \item posso scegliere uno qualunque dei $4$ semi possibili per l'ultima carta\begin{equation*}
-\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
+\implies \mathbb{P}( B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
 \end{equation*}
 \end{enumerate}
 \item [punto e] Sia $C$ l'evento "esce una scala".\begin{gather*}
@@ -924,7 +924,7 @@ A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
 \begin{enumerate}
 \item $10$ possibilità $\rightarrow $ blocco la prima carta: ho $10$ possibilità, non posso far partire la scala da $J,Q,K$.
 \item per ogni carta ho $4$ possibilità sui semi\begin{equation*}
-\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
+\implies \mathbb{P}( C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
 \end{equation*}
 \end{enumerate}
 \item [punto h] Sia $D$ l'evento "esce un tris" (esempio di tris: $3\varheartsuit \ 3\vardiamondsuit \ 3\spadesuit \ 4\vardiamondsuit \ 5\varheartsuit $)\begin{equation*}
@@ -935,7 +935,7 @@ A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
 \item ho $\binom{4}{3}$ possibilità per scegliere il seme del tris
 \item ho $\binom{12}{2}$ possibilità per scegliere il tipo delle altre carte
 \item ho $4$ possibilità per scegliere il seme della quarta e della quinta carta\begin{equation*}
-\implies \PP( D) =\frac{| D| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4}{\binom{52}{5}}
+\implies \mathbb{P}( D) =\frac{| D| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4}{\binom{52}{5}}
 \end{equation*}
 \end{enumerate}
 \end{enumerate}
