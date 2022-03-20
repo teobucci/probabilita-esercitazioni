@@ -176,7 +176,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ i
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che $X$ e $Y$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y$ q.c.
-\item Si determinino legge $P^{X} ,P^{Y}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y]$.
+\item Si determinino legge $P^{X} ,P^{Y}$ e valore atteso $\EE[ X] ,\EE[ Y]$.
 \item Si esibisca un'altra variabile aleatoria $X' $ con la stessa legge di $X$, ma definita su uno spazio $\Omega ' $ discreto.
 \end{enumerate}
 \Esercizio{}
@@ -197,7 +197,7 @@ X( \omega ) \ =\ \Ind_{[ 0,p]}( \omega ) ,\ \ \ \ Y( \omega ) =\Ind_{( 0,p)}( \o
 dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \mathbb{N}} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dots \right\}$.
 \begin{enumerate}
 \item Si mostri che $X$, $Y$ e $Z$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y=Z$ q.c.
-\item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y] ,\mathbb{E}[ Z]$.
+\item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\EE[ X] ,\EE[ Y] ,\EE[ Z]$.
 \end{enumerate}
 \Esercizio{}
 
@@ -275,13 +275,13 @@ Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità 
 
 Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dots \}$. Si mostri che
 \begin{equation*}
-\mathbb{E}[ X] =\sum\limits _{n=0}^{\infty }\mathbb{P}( X >n) .
+\EE[ X] =\sum\limits _{n=0}^{\infty }\mathbb{P}( X >n) .
 \end{equation*}
 \Esercizio{(Distribuzione binomiale). fatto}
 
 Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $n\in \mathbb{N}$ e $0< p< 1$. Scriviamo $X\sim B( n,p)$.
 \begin{enumerate}
-\item Calcolare il valore atteso $\mathbb{E}[ X]$.
+\item Calcolare il valore atteso $\EE[ X]$.
 \item Calcolare la varianza di $X$.
 \item Calcolare le mode di $X$, ovvero i punti di massimo della densità discreta di $X$.
 \end{enumerate}
@@ -289,7 +289,7 @@ Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $
 
 Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. Scriviamo $X\sim P( \lambda )$.
 \begin{enumerate}
-\item Calcolare il valore atteso $\mathbb{E}[ X]$.
+\item Calcolare il valore atteso $\EE[ X]$.
 \item Calcolare la varianza di $X$.
 \item Calcolare le mode di $X$.
 \item Dato $k\in \{1,2,\dots \}$, quale $\lambda  >0$ massimizza $\mathbb{P}( X=k)$?
@@ -304,7 +304,7 @@ Si consideri $X\sim \mathcal{G}( p)$, variabile aleatoria geometrica di parametr
 \item Mostrare due diversi spazi $( \Omega ,\mathcal{A} ,\mathbb{P})$, uno discreto e uno continuo, su cui è possibile definire $X$.
 \item Calcolare le mode di $X$.
 \item Calcolare la funzione di ripartizione $F$ di $X$.
-\item Calcolare il valore atteso $\mathbb{E}[ X]$.
+\item Calcolare il valore atteso $\EE[ X]$.
 \item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >i+j\ |\ X >i) =\mathbb{P}( X >j)$ per ogni $i,j\in \mathbb{N}$.
 \item (*) Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale discreta a valori in $\mathbb{N}$ tale che $\mathbb{P}( T >i+j\ |\ T >i) =\mathbb{P}( T >j)$ per ogni $i,j\in \mathbb{N}$, allora $T\sim \mathcal{G}( q$) con $q=\mathbb{P}( T=1)$.
 \end{enumerate}
@@ -508,21 +508,21 @@ i.e. $X=Y$ q.c.
 \item \begin{theorem}
 Sia $X$ una VA reale definita su $( \Omega ,\mathcal{A} ,\mathbb{P})$ e sia $h:\mathbb{R}\rightarrow \mathbb{R}$ boreliana. Allora
 \begin{equation*}
-\mathbb{E}[| h( x)| ] =\int _{\Omega }| h( X( \omega ))| d\mathbb{P}( \omega ) < +\infty \ \ \iff \ \ \int _{\mathbb{R}}| h( x)| P^{X}( dx) < +\infty 
+\EE[| h( x)| ] =\int _{\Omega }| h( X( \omega ))| d\mathbb{P}( \omega ) < +\infty \ \ \iff \ \ \int _{\mathbb{R}}| h( x)| P^{X}( dx) < +\infty 
 \end{equation*}
 i.e. $h\circ X=h( X) \in \mathcal{L}^{1}(\mathbb{P}) \iff h\in \mathcal{L}^{1}\left( P^{X}\right)$.
 
 Nel caso precedente, oppure se $h\geq 0$, valgono\begin{equation*}
-\mathbb{E}[ h( X)] =\int _{\mathbb{R}} h( x) P^{X}( dx) \ \ \ \ \mathbb{E}[ X] =\int _{\mathbb{R}} xP^{X}( dx)
+\EE[ h( X)] =\int _{\mathbb{R}} h( x) P^{X}( dx) \ \ \ \ \EE[ X] =\int _{\mathbb{R}} xP^{X}( dx)
 \end{equation*}
 
 Se, in particolare, $X$ è discreta con densità $p_{X}$\begin{equation*}
-\mathbb{E}[ h( X)] =\sum\limits _{x\in S} h( x) p_{X}( x) \ \ \ \ \mathbb{E}[ X] =\sum\limits _{x\in S} xp_{X}( x)
+\EE[ h( X)] =\sum\limits _{x\in S} h( x) p_{X}( x) \ \ \ \ \EE[ X] =\sum\limits _{x\in S} xp_{X}( x)
 \end{equation*}
 \end{theorem}
 
 Abbiamo già calcolato la legge di $X$ e $Y$: $X\sim Y\sim B( p)$.\begin{equation*}
-\mathbb{E}[ X] =\sum\limits _{x\in S} xp_{X}( x)\overset{S=\{0,1\}}{=}\underbrace{\sum\limits _{x\in \{0,1\}} xp_{X}( x) =0( 1-p) +1p}_{\text{ricordando la legge di } X} =p
+\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)\overset{S=\{0,1\}}{=}\underbrace{\sum\limits _{x\in \{0,1\}} xp_{X}( x) =0( 1-p) +1p}_{\text{ricordando la legge di } X} =p
 \end{equation*}
 
 Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
@@ -811,27 +811,27 @@ Vamonos
 
 Richiami Teoria
 \begin{equation*}
-\mathbb{E}[ X] :=\int _{\Omega } Xd\mathbb{P} ,\ \ \ \ X:( \Omega ,\mathcal{A} ,\mathbb{P})\rightarrow ( E,\mathcal{E}) \ \text{VA}
+\EE[ X] :=\int _{\Omega } Xd\mathbb{P} ,\ \ \ \ X:( \Omega ,\mathcal{A} ,\mathbb{P})\rightarrow ( E,\mathcal{E}) \ \text{VA}
 \end{equation*}
 Se $X$ è una VA discreta con densità $p_{X} :S\rightarrow [ 0,1]$, allora
 \begin{equation*}
-\mathbb{E}[ X] =\sum\limits _{x\in S} xp_{X}( x)
+\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)
 \end{equation*}
 Infatti:
 \begin{equation*}
-\mathbb{E}[ X] =\underbrace{\int _{\Omega } X( \omega ) d\mathbb{P}( \omega ) =\int _{\mathbb{R}} xdP^{X}( x)}_{\text{Teorema "astratto-concreto"}}\overset{\text{discreta}}{=}\sum\limits _{x\in S} xp_{X}( x) =\sum\limits _{x\in S} x\mathbb{P}( X=x)
+\EE[ X] =\underbrace{\int _{\Omega } X( \omega ) d\mathbb{P}( \omega ) =\int _{\mathbb{R}} xdP^{X}( x)}_{\text{Teorema "astratto-concreto"}}\overset{\text{discreta}}{=}\sum\limits _{x\in S} xp_{X}( x) =\sum\limits _{x\in S} x\mathbb{P}( X=x)
 \end{equation*}
 Vamonos ora! Hay carramba!
 \begin{enumerate}
-\item Per calcolare $\mathbb{E}[ X]$, con $X\sim B( n,p)$ possiamo procedere in due modi.
+\item Per calcolare $\EE[ X]$, con $X\sim B( n,p)$ possiamo procedere in due modi.
 
 \textbf{[Metodo 1]}
 
-Utilizziamo la definizione di $\mathbb{E}[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:\begin{equation*}
+Utilizziamo la definizione di $\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:\begin{equation*}
 p_{X}( x) =\mathbb{P}( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
 \end{equation*}Avremo\begin{equation*}
 \begin{aligned}
-\mathbb{E}[ X] & =\sum\limits _{x\in S} xp_{X}( x) & \\
+\EE[ X] & =\sum\limits _{x\in S} xp_{X}( x) & \\
  & =\sum\limits _{x=0}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & \\
  & =\sum\limits _{x=1}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & ( j+1=x)\\
  & =\sum\limits _{j=0}^{n-1}( j+1)\binom{n}{j+1} p^{j+1}( 1-p)^{n-( j+1)} & \\
@@ -843,7 +843,7 @@ p_{X}( x) =\mathbb{P}( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
 \end{aligned}
 \end{equation*}
 
-i.e. se $X\sim B( n,p)$, allora $\boxed{\mathbb{E}[ X] =np}$.
+i.e. se $X\sim B( n,p)$, allora $\boxed{\EE[ X] =np}$.
 
 \textbf{[Metodo 2]}
 
@@ -851,35 +851,35 @@ Utilizziamo il fatto che\begin{equation*}
 X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \Bot 
 \end{equation*}
 
-e la linearità di $\mathbb{E}$\begin{equation*}
-\mathbb{E}[ X] =\mathbb{E}\left[\sum\limits _{i=1}^{n} X_{i}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\mathbb{E}[ X_{i}] =\sum\limits _{i=1}^{n} p=np
+e la linearità di $\EE$\begin{equation*}
+\EE[ X] =\EE\left[\sum\limits _{i=1}^{n} X_{i}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\EE[ X_{i}] =\sum\limits _{i=1}^{n} p=np
 \end{equation*}
 \item Ricordiamo che TEORIA OVER HEREEEEE
 
-Se $X\in L^{2}(\mathbb{P})$, i.e. $\mathbb{E}\left[ X^{2}\right] < +\infty $, allora\begin{equation*}
-\mathrm{Var}[ X] :=\mathbb{E}( X-\mathbb{E}[ X])^{2} =\mathbb{E}\left[ X^{2}\right] -(\mathbb{E}[ X])^{2}
+Se $X\in L^{2}(\mathbb{P})$, i.e. $\EE\left[ X^{2}\right] < +\infty $, allora\begin{equation*}
+\mathrm{Var}[ X] :=\EE( X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
 \end{equation*}
 
 Usiamo\begin{equation*}
-\mathrm{Var}[ X] =\mathbb{E}\left[ X^{2}\right] -(\mathbb{E}[ X])^{2}\overset{( 1)}{=}\mathbb{E}\left[ X^{2}\right] -( np)^{2}
+\mathrm{Var}[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -( np)^{2}
 \end{equation*}
 
-Resta da calcolare $\mathbb{E}\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che\begin{gather*}
+Resta da calcolare $\EE\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che\begin{gather*}
 X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \Bot X_{j} ,\forall i\neq j\\
-\mathbb{E}\left[ X^{2}\right] =\mathbb{E}\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\mathbb{E}\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
+\EE\left[ X^{2}\right] =\EE\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
 \end{gather*}
 
 Ora\begin{equation*}
-\text{(a)} =\mathbb{E}\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\mathbb{E}\left[ X_{i}^{2}\right]\overset{\text{(a1)}}{=}\sum\limits _{i=1}^{n} p=np
+\text{(a)} =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\EE\left[ X_{i}^{2}\right]\overset{\text{(a1)}}{=}\sum\limits _{i=1}^{n} p=np
 \end{equation*}
 
 Il passaggio (a1) è giustificato da\begin{equation*}
-X_{i} \sim B( p) ,\forall i,\ \ \ \ \mathbb{E}\left[ X_{i}^{2}\right] :=\sum\limits _{k\in \{0,1\}} k^{2}\mathbb{P}( X_{i} =k) =1\cdotp \mathbb{P}( X_{i} =1) =p
+X_{i} \sim B( p) ,\forall i,\ \ \ \ \EE\left[ X_{i}^{2}\right] :=\sum\limits _{k\in \{0,1\}} k^{2}\mathbb{P}( X_{i} =k) =1\cdotp \mathbb{P}( X_{i} =1) =p
 \end{equation*}
 
 Poi\begin{equation*}
 \begin{aligned}
-\text{(b)} & =\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \mathbb{E}[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\mathbb{P}( E_{i} \cap E_{j})\\
+\text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\mathbb{P}( E_{i} \cap E_{j})\\
  & \overset{\Bot }{=}\sum\limits _{i< j}\mathbb{P}( E_{i})\mathbb{P}( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
  & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
 \end{aligned}
@@ -887,7 +887,7 @@ Poi\begin{equation*}
 
 Il passaggio (b1) è giustificato da\begin{equation*}
 \begin{aligned}
-X_{i} ,X_{j} \sim B( p) \implies \mathbb{E}[ X_{i} X_{j}] & =\sum\limits _{k\in \{0,1\}} k\mathbb{P}( X_{i} X_{j} =k)\\
+X_{i} ,X_{j} \sim B( p) \implies \EE[ X_{i} X_{j}] & =\sum\limits _{k\in \{0,1\}} k\mathbb{P}( X_{i} X_{j} =k)\\
  & =\mathbb{P}( X_{i} X_{j} =1)\\
  & =\mathbb{P}( E_{i} \cap E_{j})
 \end{aligned}
@@ -948,8 +948,8 @@ pattern radius = 1pt}\makeatletter
 
 Mettendo insieme i pezzi\begin{gather*}
 \begin{aligned}
-\mathrm{Var}[ X] & =\mathbb{E}\left[ X^{2}\right] -(\mathbb{E}[ X])^{2}\\
- & =\mathbb{E}\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right] +2\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right] -(\mathbb{E}[ X])^{2}\\
+\mathrm{Var}[ X] & =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\\
+ & =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right] +2\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right] -(\EE[ X])^{2}\\
  & =np+2p^{2}\frac{n( n-1)}{2} -( np)^{2}\\
  & =np( 1+p( n-1) -np)\\
  & =np( 1+pn-p-np)\\
@@ -1008,7 +1008,7 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
 \begin{enumerate}
 \item \begin{equation*}
 \begin{aligned}
-\mathbb{E}[ X] & :=\int _{\Omega } X( \omega ) d\mathbb{P}( \omega ) =\int _{\mathbb{R}} xdP^{X}( x) & \\
+\EE[ X] & :=\int _{\Omega } X( \omega ) d\mathbb{P}( \omega ) =\int _{\mathbb{R}} xdP^{X}( x) & \\
  & =\sum\limits _{k=0}^{\infty } kp_{X}( k) & \\
  & =\sum\limits _{k=1}^{\infty } ke^{-\lambda }\frac{\lambda ^{k}}{k!} & \text{(} k\ \text{dà contributo nullo)}\\
  & =e^{-\lambda } \lambda \sum\limits _{k=1}^{\infty }\frac{\lambda ^{k-1}}{( k-1) !} & \\
@@ -1017,10 +1017,10 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
 \end{aligned}
 \end{equation*}
 \item \begin{equation*}
-\mathrm{Var}[ X] =\mathbb{E}[ X-\mathbb{E}[ X]]^{2} =\mathbb{E}\left[ X^{2}\right] -(\mathbb{E}[ X])^{2}\overset{( 1)}{=}\mathbb{E}\left[ X^{2}\right] -\lambda ^{2}
+\mathrm{Var}[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
 \end{equation*}
 
-Per esercizio, calcolare $\mathbb{E}\left[ X^{2}\right]$ e concludere:\begin{equation*}
+Per esercizio, calcolare $\EE\left[ X^{2}\right]$ e concludere:\begin{equation*}
 X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda 
 \end{equation*}
 \item Si procede come in Es. 7.

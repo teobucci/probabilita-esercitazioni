@@ -23,7 +23,7 @@ Data una variabile aleatoria reale continua $X$ con densità $f$ simmetrica risp
 si mostri che
 \begin{enumerate}
 \item $\mu $ è una mediana,
-\item Se $\mathbb{E}[| X| ] < +\infty $, allora $\mu =\mathbb{E}[ X]$.
+\item Se $\EE[| X| ] < +\infty $, allora $\mu =\EE[ X]$.
 \end{enumerate}
 \Esercizio{(Distribuzione di Cauchy)}
 
@@ -34,14 +34,14 @@ f( x) =\frac{1}{\pi \left( 1+( x-\alpha )^{2}\right)} ,\ \ \ \ \alpha \in \mathb
 si calcolino:
 \begin{enumerate}
 \item la mediana,
-\item $\mathbb{E}[ X]$,
-\item $\mathbb{E}\left[ X^{2}\right]$.
+\item $\EE[ X]$,
+\item $\EE\left[ X^{2}\right]$.
 \end{enumerate}
 \Esercizio{$\star$}
 
 Data $X$ variabile aleatoria positiva e continua, denotata con $F$ la sua funzione di \ ripartizione, si mostri che
 \begin{equation*}
-\mathbb{E}[ X] =\int _{0}^{+\infty }( 1-F( x)) dx.
+\EE[ X] =\int _{0}^{+\infty }( 1-F( x)) dx.
 \end{equation*}
 \Esercizio{(Distribuzione esponenziale)}
 
@@ -53,7 +53,7 @@ f( x) =\lambda e^{-\lambda x} I_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
 \end{equation*}
 \begin{enumerate}
 \item Calcolare la moda di $X$.
-\item Calcolare il valore atteso $\mathbb{E}[ X]$ e la varianza $\mathrm{Var}( X)$.
+\item Calcolare il valore atteso $\EE[ X]$ e la varianza $\mathrm{Var}( X)$.
 \item Calcolare la funzione di ripartizione $F_{X}$ di $X$.
 \item (Proprietà di assenza di memoria) Mostrare che $\mathbb{P}( X >s+t \mid X >s) =\mathbb{P}( X >t)$ per ogni $s,t >0$.
 \item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\mathbb{P}( T >s+t\mid T >s) =\mathbb{P}( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\mathbb{P}( T >1))$.
@@ -76,7 +76,7 @@ da cui $\Gamma ( n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma ( 1/2) =\sq
 \begin{enumerate}
 \item Si verifichi che $f$ è una densità di probabilità.
 \item Si calcolino le mode di $f$.
-\item Si calcolino i momenti $\mathbb{E}\left[ X^{k}\right] ,\ k\in \mathbb{Z} ,\ \alpha +k >0$, e la varianza $\mathrm{Var}( X)$.
+\item Si calcolino i momenti $\EE\left[ X^{k}\right] ,\ k\in \mathbb{Z} ,\ \alpha +k >0$, e la varianza $\mathrm{Var}( X)$.
 \item Dato $c >0$, si mostri che $Y=cX\sim \Gamma ( \alpha ,\lambda /c)$.
 \item Per $\alpha =n/2,\ n\in \mathbb{N}$, si determini la relazione fra i punti percentuali di una $\Gamma \left(\frac{n}{2} ,\lambda \right)$ e quelli di una $\chi ^{2}( n) =\Gamma \left(\frac{n}{2} ,\frac{1}{2}\right)$.
 \item Per $\alpha =n\in \mathbb{N}$, si mostri che la funzione di ripartizione di $X$ è data da
@@ -94,15 +94,15 @@ Sia $X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right)$.
 
 Si consideri $Y$ di \textit{legge lognormale} di parametri $\mu $ e $\sigma ^{2}$, ovvero $Y=e^{X}$.
 \begin{enumerate}
-\item Calcolare la distribuzione della variabile aleatoria $Y$, i momenti (ossia $\mathbb{E}[ Y_{k}] ,k\in \mathbb{Z}$) e la varianza.
-\item Si calcoli $\mathbb{E}\left[ Xe^{X}\right]$.
+\item Calcolare la distribuzione della variabile aleatoria $Y$, i momenti (ossia $\EE[ Y_{k}] ,k\in \mathbb{Z}$) e la varianza.
+\item Si calcoli $\EE\left[ Xe^{X}\right]$.
 \end{enumerate}
 
 Si consideri $Z$ di \textit{legge normale standard}, ossia $Z\sim \mathcal{N}( 0,1)$.
 \begin{enumerate}
 \item Calcolare la distribuzione della variabile aleatoria $Z^{2}$.
 \item Calcolare la legge della variabile aleatoria $| Z| $, il valore atteso, la varianza e i quantili.
-\item Si calcoli $\mathbb{E}\left[ Z^{4}\right]$ e $\mathbb{E}\left[ e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
+\item Si calcoli $\EE\left[ Z^{4}\right]$ e $\EE\left[ e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
 \end{enumerate}
 \Esercizio{}
 
@@ -205,7 +205,7 @@ f_{X}( x) =\begin{cases}
 \item Determinare il tasso di fallimento di $X$.
 \item Determinare la legge di $X^{2}$ e riconoscerla.
 \item Calcolare la media e la varianza di $e^{-X^{2} /\lambda }$.
-\item Calcolare $\mathbb{E}\left[\frac{1}{X}\right]$.
+\item Calcolare $\EE\left[\frac{1}{X}\right]$.
 \item Stabilire per quali $\alpha \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$.
 \end{enumerate}
 \Esercizio{}
@@ -219,7 +219,7 @@ f_{X}\left( x\right) =\begin{cases}
 \end{equation*}
 \begin{enumerate}
 \item Determinare il valore della costante reale $\lambda $ e calcolare la funzione di ripartizione.
-\item Posta $Y=e^{X}$, si determini la distribuzione di $Y$, e si calcolino $\mathbb{E}\left[ Y\right]$ e $\mathbb{E}\left[ Y^{2}\right]$.
+\item Posta $Y=e^{X}$, si determini la distribuzione di $Y$, e si calcolino $\EE\left[ Y\right]$ e $\EE\left[ Y^{2}\right]$.
 \item Si calcolino $\mathbb{P}\left( X >3\right)$ e $\mathbb{P}\left( X^{3}  >27\right)$.
 \item Si calcoli la media di $3X^{2} -1$.
 \item Stimare la probabilità che $X$ assuma valori distanti dalla media più di $2$ unità, utilizzando la disuguaglianza di Chebychev.
@@ -245,8 +245,8 @@ Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la
 \item Calcolare la probabilità di un ricavo positivo, $\mathbb{P}\left( R >0\right)$.
 \item Calcolare la probabilità di un ricavo nullo, $\mathbb{P}\left( R=0\right)$.
 \item Calcolare la legge del ricavo $R$. Si tratta di una variabile aleatoria continua? Discreta? Perché?
-\item Calcolare il ricavo atteso $\mathbb{E}[ R]$.
-\item Calcolare $\lim\limits _{k\rightarrow 0}\mathbb{E}[ R]$.
+\item Calcolare il ricavo atteso $\EE[ R]$.
+\item Calcolare $\lim\limits _{k\rightarrow 0}\EE[ R]$.
 \end{enumerate}
 \Esercizio{}
 
