@@ -2,9 +2,9 @@
 
 \ParteEsercizi
 
-Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega _{1} ,\dotsc ,\omega _{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
+Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega _{1} ,\dots ,\omega _{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
 
-Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\dotsc =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
+Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\dots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
 \begin{oss}
 In generale non è sempre lecito supporre che la probabilità sia uniforme.
 \end{oss}
@@ -148,9 +148,9 @@ Ho $n$ scelte per il primo oggetto, $( n-1)$ scelte per il secondo ecc.
 \begin{oss}
 Vi sono
 \begin{equation*}
-\boxed{P_{n}^{n_{1} ,n_{2} ,\dotsc ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\dotsc n_{r} !}}
+\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\dots n_{r} !}}
 \end{equation*}
-permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dotsc $, $n_{r}$ sono identici e distinti dai precedenti.
+permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dots $, $n_{r}$ sono identici e distinti dai precedenti.
 \end{oss}
 \textit{Esempio.} Classifica di $n$ persone, ci sono $n!$ possibili ordinamenti delle persone.
 
@@ -164,7 +164,7 @@ Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ e
 \begin{definition}
 Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
 \begin{equation*}
-\boxed{D_{r}^{n} =n( n-1)( n-2) \dotsc ( n-r+1) =\frac{n!}{( n-r) !}}
+\boxed{D_{r}^{n} =n( n-1)( n-2) \dots ( n-r+1) =\frac{n!}{( n-r) !}}
 \end{equation*}
 \end{definition}
 \begin{oss}
@@ -185,7 +185,7 @@ D_{r}^{n} =r!\ C_{r}^{n}
 \end{equation*}
 Ora,
 \begin{equation*}
-D_{r}^{n} =n( n-1) \dotsc ( n-r+1) =\frac{n!}{( n-r) !}
+D_{r}^{n} =n( n-1) \dots ( n-r+1) =\frac{n!}{( n-r) !}
 \end{equation*}
 Quindi:
 \begin{equation*}
@@ -245,18 +245,18 @@ Si consideri l'estrazione di $k$ oggetti da un'urna contenente $n$ oggetti disti
 \begin{enumerate}
 \item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
 \item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se le $k$ estrazioni sono indipendenti e per ciascuna singola estrazione gli $n$ possibili risultati sono equiprobabili.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
+\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
 \end{enumerate}
 \item Si consideri l'estrazione senza reimmissione, per cui $1\leq k\leq n$. Viene osservato il risultato ordinato delle $k$ estrazioni.
 \begin{enumerate}
 \item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
 \item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se il risultato di ciascuna delle $k$ estrazioni, data la sequenza degli oggetti già estratti, è equiprobabile fra gli oggetti rimanenti.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
+\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
 \end{enumerate}
 \item Si consideri l'estrazione simultanea, per cui $1\leq k\leq n$. Viene osservato il risultato dell'estrazione.
 \begin{enumerate}
 \item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dotsc ,x_{k}\}$.
+\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$.
 \end{enumerate}
 \end{enumerate}
 \Esercizio{}
@@ -340,7 +340,7 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 \Soluzione
 \begin{enumerate}
 \item Lo spazio degli eventi elementari è\begin{gather*}
-\Omega =\{( i,j) :i,j=1,\dotsc ,6\} =\{1,\dotsc ,6\}^{2} ,\ \ \ \ | \Omega | =36\\
+\Omega =\{( i,j) :i,j=1,\dots ,6\} =\{1,\dots ,6\}^{2} ,\ \ \ \ | \Omega | =36\\
 i=\text{primo lancio} \ \ \ \ j=\text{secondo lancio}
 \end{gather*}
 
@@ -360,7 +360,7 @@ B=\{( 5,1) ,( 2,4) ,( 3,3) ,( 4,2) ,( 1,5)\} ,\ \ \ \ | B| =5\\
 \end{gather*}
 
 \begin{oss}
-I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dotsc ,12$,\begin{equation*}
+I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dots ,12$,\begin{equation*}
 \begin{array}{ l }
 \mathbb{P}(\{2\}) =\mathbb{P}(\{12\}) =1/36\\
 \mathbb{P}(\{3\}) =\mathbb{P}(\{11\}) =1/18\\
@@ -370,11 +370,11 @@ I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due 
 \mathbb{P}(\{7\}) =1/6
 \end{array}
 \end{equation*}Se invece assumiamo che i possibili risultati della somma siano equiprobabili, dobbiamo porre\begin{equation*}
-\mathbb{P}(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dotsc ,12\}
+\mathbb{P}(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dots ,12\}
 \end{equation*}$\Omega =$ spazio degli eventi elementari, somma degli esiti del lancio dei due dadi. Lo spazio di probabilità così costruito è matematicamente corretto, ma non ha nulla a che fare con la realtà fisica dell'esperimento.
 \end{oss}
 \item Lanciando $3$ volte il dado lo spazio campionario diventa\begin{equation*}
-\Omega =\{( i,j,k) :i,j,k=1,\dotsc ,6\} =\{1,\dotsc ,6\}^{3} \ \ \ \ | \Omega | =6^{3} =216
+\Omega =\{( i,j,k) :i,j,k=1,\dots ,6\} =\{1,\dots ,6\}^{3} \ \ \ \ | \Omega | =6^{3} =216
 \end{equation*}
 
 Sia $C$ l'evento "la somma dei dadi è $6$"\begin{gather*}
@@ -414,7 +414,7 @@ Svolgiamo l'esercizio in $3$ diversi modi.
 
 Determiniamo innanzitutto l'insieme campionario $\Omega $: c'è una classifica di cui ci interessano solo i primi $5$:
 \begin{equation*}
-\Omega =\{( \omega _{1} ,\dotsc ,\omega _{5}) :\omega _{i} \in \{1\dotsc 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+\Omega =\{( \omega _{1} ,\dots ,\omega _{5}) :\omega _{i} \in \{1\dots 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
 \end{equation*}
 Tutte le possibili quintuple sono date dalla disposizione (l'ordine conta!) di $n=40$ persone in $r=5$ posti, i.e.
 \begin{equation*}
@@ -434,7 +434,7 @@ Per il primo ci sono $40$ possibilità, per il secondo $39$, ecc. (visualizzabil
 
 Guardiamo tutta la classifica. In questo caso dobbiamo considerare le permutazioni di $40$ oggetti:
 \begin{equation*}
-\Omega =\{( \omega _{1} ,\dotsc ,\omega _{40}) :\omega _{i} \in \{1\dotsc 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
+\Omega =\{( \omega _{1} ,\dots ,\omega _{40}) :\omega _{i} \in \{1\dots 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
 \end{equation*}
 \begin{enumerate}
 \item Evento $A$.\begin{equation*}
@@ -489,11 +489,11 @@ Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\mathbb{P}( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
-\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dotsc 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
+\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dots 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
 \begin{array}{ l }
 \mathbb{P}( A) =\mathbb{P}\left( \Omega -A\comp\right) =1-\mathbb{P}\left( A\comp\right)\\
 A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
-A\comp =\{\omega =( \omega _{1} ,\dotsc ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+A\comp =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 \left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
 \implies \mathbb{P}\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
 \implies \mathbb{P}( A) =1-\mathbb{P}\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
@@ -534,7 +534,7 @@ Manca.
 
 Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. Pensiamo all'esperimento casuale come segue: lo spazio degli esiti è dato da tutte le giocate possibili, ossia scegliamo una combinazione di $90$ numeri di classe $6$:
 \begin{gather*}
-\Omega =\{\omega \subset \{1\dotsc 90\} :| \omega | =6\}\\
+\Omega =\{\omega \subset \{1\dots 90\} :| \omega | =6\}\\
 \implies | \Omega | =C_{6}^{90} =\binom{90}{6} =622614630
 \end{gather*}
 In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
@@ -545,7 +545,7 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 
 \begin{oss}
 Si sarebbe potuto rispondere alla domanda anche introducendo $\Omega $ come lo spazio delle disposizioni anziché combinazioni (confronta con Es. 2.3.2.)\begin{gather*}
-\Omega =\{( \omega _{1} ,\dotsc ,\omega _{6}) :\omega _{i} \in \{1\dotsc 90\} \ \forall i=1\dotsc 6,\ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+\Omega =\{( \omega _{1} ,\dots ,\omega _{6}) :\omega _{i} \in \{1\dots 90\} \ \forall i=1\dots 6,\ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 | \Omega | =D_{6}^{90} =\underbrace{90\cdot 89\cdot 88\cdot 87\cdot 86\cdot 85}_{6\ \text{termini}} =\frac{90!}{84!}
 \end{gather*}
 \end{oss}
@@ -710,15 +710,15 @@ A\cup B\implies \mathbb{P}( A\cup B) =\mathbb{P}( A) +\mathbb{P}( B) =\frac{7}{\
 
 Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ "esce l'oggetto $m$ all'estrazione $j$":
 \begin{equation*}
-A_{j}^{m} =\{\omega =( \omega _{1} ,\dotsc ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1\dotsc n\} ,\ \ \ \ j\in \{1\dotsc k\}
+A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1\dots n\} ,\ \ \ \ j\in \{1\dots k\}
 \end{equation*}
 \begin{enumerate}
 \item 
 \begin{enumerate}
 \item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:\begin{equation*}
 \begin{aligned}
-\Omega  & =\{1\dotsc n\}^{k}\\
- & =\{\omega =( \omega _{1} ,\dotsc ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dotsc n\} ,i\in \{i\dotsc k\}\}\\
+\Omega  & =\{1\dots n\}^{k}\\
+ & =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\}\\
  & \implies | \Omega | =n^{k}
 \end{aligned}
 \end{equation*}
@@ -734,9 +734,9 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dotsc ,\omega _{k}) \in \Omega :\omega _{j}
 
 Tesi da dimostrare: $\mathbb{P}(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
-Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dotsc ,\omega _{k})$ con $\omega _{i} \in \{1\dotsc n\}$ e $i\in \{1\dotsc k\}$, allora\begin{equation*}
+Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora\begin{equation*}
 \begin{aligned}
-\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{( \omega _{1} ,\dotsc ,\omega _{k})\}) & \\
+\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
  & =\mathbb{P}\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
  & =\prod _{j=1}^{k}\mathbb{P}\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
  & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
@@ -745,10 +745,10 @@ Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\ome
 \end{equation*}
 
 $( \implies )$ esercizio.
-\item Sia $A=$ "estraggo gli oggetti $\{x_{1} \dotsc x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
+\item Sia $A=$ "estraggo gli oggetti $\{x_{1} \dots x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
 \begin{enumerate}
-\item $\{x_{1} \dotsc x_{k}\}$ è composto da oggetti tutti uguali: no permutazioni! (o meglio permutazioni di $k$ oggetti indistinguibili) $k!/k!=1$ possibilità. Quindi $| A| =1$.
-\item $\{x_{1} \dotsc x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
+\item $\{x_{1} \dots x_{k}\}$ è composto da oggetti tutti uguali: no permutazioni! (o meglio permutazioni di $k$ oggetti indistinguibili) $k!/k!=1$ possibilità. Quindi $| A| =1$.
+\item $\{x_{1} \dots x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
 \end{enumerate}
 
 Pertanto, $\frac{1}{n^{k}} \leq \mathbb{P}( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
@@ -757,7 +757,7 @@ Pertanto, $\frac{1}{n^{k}} \leq \mathbb{P}( A) \leq \frac{k!}{n^{k}}$, nel \text
 \begin{enumerate}
 \item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:\begin{equation*}
 \begin{aligned}
-\Omega = & \{\omega =( \omega _{1} ,\dotsc ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dotsc n\} ,i\in \{i\dotsc k\}\\
+\Omega = & \{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\\
  & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 \implies  & | \Omega | =n( n-1) \cdots ( n-k+1) =\frac{n!}{( n-k) !}
 \end{aligned}
@@ -768,12 +768,12 @@ Pertanto, $\frac{1}{n^{k}} \leq \mathbb{P}( A) \leq \frac{k!}{n^{k}}$, nel \text
 
 Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \textit{condizionatamente} rispetto ai risultati delle passate estrazioni. Sfruttiamo il seguente risultato teorico \textit{(J.P. 3.3)} che connette indipendenza con probabilità condizionata per un numero finito di eventi.
 
-Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità e siano $A_{1} ,\dotsc ,A_{n} \in \mathcal{A}$ tale che $\mathbb{P}( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\mathbb{P}\left(\bigcap _{n} A_{n}\right) =\mathbb{P}( A_{1})\mathbb{P}( A_{2} |A_{1}) \cdots \mathbb{P}( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
+Sia $( \Omega ,\mathcal{A} ,\mathbb{P})$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\mathbb{P}( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\mathbb{P}\left(\bigcap _{n} A_{n}\right) =\mathbb{P}( A_{1})\mathbb{P}( A_{2} |A_{1}) \cdots \mathbb{P}( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
 \begin{oss}
 Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:\begin{equation*}
 \begin{aligned}
-\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{\omega _{1} ,\dotsc ,\omega _{k}\})\\
+\mathbb{P}(\{\omega \}) & =\mathbb{P}(\{\omega _{1} ,\dots ,\omega _{k}\})\\
  & =\mathbb{P}\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
  & =\mathbb{P}\left( A_{1}^{\omega _{1}}\right)\mathbb{P}\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \mathbb{P}\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
  & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
@@ -791,7 +791,7 @@ $( \Leftarrow )$ Esercizio.
 \item 
 \begin{enumerate}
 \item $\Omega $ è lo spazio campionario delle combinazioni\begin{equation*}
-\Omega =\{\omega \subset \{1,\dotsc ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
+\Omega =\{\omega \subset \{1,\dots ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
 \end{equation*}
 \item Sia $A$ come sopra, allora deve essere $\mathbb{P}( A) =\frac{1}{\binom{n}{k}}$.
 \end{enumerate}
@@ -817,7 +817,7 @@ $( \Leftarrow )$ Esercizio.
 \item \textit{Estrazione con reimmissione.}
 
 In questo caso abbiamo:\begin{equation*}
-\Omega =\{( \omega _{1} ,\dotsc ,\omega _{4}) :\omega _{i} \in \{1,\dotsc ,10\}\}
+\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\}\}
 \end{equation*}
 
 Spazio campionario delle disposizioni con ripetizione\begin{equation*}
@@ -832,7 +832,7 @@ Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre
 Svolgiamo l'esercizio in due diversi modi, introducendo $\Omega $ in due diversi modi.
 \begin{enumerate}
 \item Metodo $1$\begin{equation*}
-\Omega =\{( \omega _{1} ,\dotsc ,\omega _{4}) :\omega _{i} \in \{1,\dotsc ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
 \end{equation*}
 
 Spazio campionario delle disposizioni senza ripetizione\begin{equation*}
@@ -850,7 +850,7 @@ Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline
 \end{gather*}
 \end{oss}
 \item Metodo $2$\begin{equation*}
-\Omega =\{\omega \subset \{1,\dotsc ,10\} \ |\ | \omega | =4\}
+\Omega =\{\omega \subset \{1,\dots ,10\} \ |\ | \omega | =4\}
 \end{equation*}
 
 Spazio campionario delle combinazioni\begin{equation*}
@@ -887,7 +887,7 @@ Manca.
 
 Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di classe $5$, i.e.
 \begin{equation*}
-\Omega =\{\omega \subset \{1,\dotsc ,52\} \ |\ | \omega | =5\} ,\ \ \ \ | \Omega | =\binom{52}{5}
+\Omega =\{\omega \subset \{1,\dots ,52\} \ |\ | \omega | =5\} ,\ \ \ \ | \Omega | =\binom{52}{5}
 \end{equation*}
 \begin{enumerate}
 \item Sia $A$ l'evento "esce un full" (esempio di full: $3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit $)\begin{equation*}

@@ -194,7 +194,7 @@ Si definiscano le seguenti funzioni, per ogni $\omega \in \Omega $
 \begin{equation*}
 X( \omega ) \ =\ \Ind_{[ 0,p]}( \omega ) ,\ \ \ \ Y( \omega ) =\Ind_{( 0,p)}( \omega ) ,\ \ \ \ Z( \omega ) =\Ind_{[ 0,p]}( \omega ) +\Ind_{J}( \omega ) ,
 \end{equation*}
-dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \mathbb{N}} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dotsc \right\}$.
+dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \mathbb{N}} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dots \right\}$.
 \begin{enumerate}
 \item Si mostri che $X$, $Y$ e $Z$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y=Z$ q.c.
 \item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\mathbb{E}[ X] ,\mathbb{E}[ Y] ,\mathbb{E}[ Z]$.
@@ -252,7 +252,7 @@ Sia dunque $X$ una variabile aleatoria discreta con funzione di ripartizione $F$
 \end{enumerate}
 \Esercizio{fatto}
 
-Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} \ |\ k=1,2,\dotsc )$ con
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} \ |\ k=1,2,\dots )$ con
 \begin{equation*}
 E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
@@ -273,7 +273,7 @@ X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}( \omega ) =\omega _{n} ,\ \ 
 Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega ' ,\mathcal{A} ' ,\mathbb{P} ' )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} ' $ indipendenti e tali che $\mathbb{P} ' ( E_{n} ' ) =p$, ed avessimo poi posto $X_{n} ' =\Ind_{E_{n} ' }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
 \Esercizio{$\star$}
 
-Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dotsc \}$. Si mostri che
+Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dots \}$. Si mostri che
 \begin{equation*}
 \mathbb{E}[ X] =\sum\limits _{n=0}^{\infty }\mathbb{P}( X >n) .
 \end{equation*}
@@ -292,7 +292,7 @@ Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. 
 \item Calcolare il valore atteso $\mathbb{E}[ X]$.
 \item Calcolare la varianza di $X$.
 \item Calcolare le mode di $X$.
-\item Dato $k\in \{1,2,\dotsc \}$, quale $\lambda  >0$ massimizza $\mathbb{P}( X=k)$?
+\item Dato $k\in \{1,2,\dots \}$, quale $\lambda  >0$ massimizza $\mathbb{P}( X=k)$?
 \end{enumerate}
 \Esercizio{(Distribuzione geometrica). fatto}
 
@@ -631,12 +631,12 @@ i.e.\begin{equation*}
 
 È una VA reale perché è somma di VA reali.
 
-È discreta perché $\mathrm{Im}( Y_{n}) =\{0,\dotsc ,n\}$.
+È discreta perché $\mathrm{Im}( Y_{n}) =\{0,\dots ,n\}$.
 
 Descrive il numero di successi in $n$ prove di Bernoulli.
 
 Densità discreta:\begin{gather*}
-p_{Y_{n}} :\{0,\dotsc ,n\}\rightarrow [ 0,1]\\
+p_{Y_{n}} :\{0,\dots ,n\}\rightarrow [ 0,1]\\
 \begin{aligned}
 p_{Y_{n}}( 0) & =\mathbb{P}( Y_{n} =0) =\mathbb{P}( X_{1} +\cdots +X_{n} =0) =\mathbb{P}\left(\bigcap _{j=1}^{n} E_{j}\comp\right) =( 1-p)^{n}\\
 p_{Y_{n}}( 1) & =\mathbb{P}( Y_{n} =1) =\mathbb{P}( X_{1} +\cdots +X_{n} =1) =\mathbb{P}\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\comp\right)\\
@@ -686,11 +686,11 @@ Quindi\begin{equation*}
 
 \textit{Interpretazione:} la distribuzione geometrica descrive la probabilità che il primo successo richieda l'esecuzione di $k$ prove.
 \item $W$ è il numero di insuccessi prima del primo successo. Ricordiamo che $Z$ era uguale al numero di prove necessarie per il primo successo, per esempio avremo\begin{equation*}
-\underbrace{\overbrace{0,0,0}^{W=3} ,1}_{Z=4} ,\dotsc \implies W=Z-1\ \text{q.c.}
+\underbrace{\overbrace{0,0,0}^{W=3} ,1}_{Z=4} ,\dots \implies W=Z-1\ \text{q.c.}
 \end{equation*}
 
 Quindi $W$ è una VA discreta.\begin{gather*}
-p_{W} :\{0,1,\dotsc \}\rightarrow [ 0,1]\\
+p_{W} :\{0,1,\dots \}\rightarrow [ 0,1]\\
 p_{W}( k) =\mathbb{P}( W=k) =\mathbb{P}( Z-1=k) =\underbrace{\mathbb{P}( Z=k+1) =p( 1-p)^{k}}_{Z\sim \mathcal{G}( p)}
 \end{gather*}
 
@@ -865,7 +865,7 @@ Usiamo\begin{equation*}
 \end{equation*}
 
 Resta da calcolare $\mathbb{E}\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che\begin{gather*}
-X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dotsc ,n,\ \ \ \ X_{i} \Bot X_{j} ,\forall i\neq j\\
+X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \Bot X_{j} ,\forall i\neq j\\
 \mathbb{E}\left[ X^{2}\right] =\mathbb{E}\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\mathbb{E}\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\mathbb{E}\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
 \end{gather*}
 
@@ -1000,8 +1000,8 @@ p( n+1) -1\ \text{e} \ p( n+1) , & p( n+1) \in \mathbb{N}\\
 Ricordiamo che: per $\lambda  >0$ la densità di Poisson di parametro $\lambda $ è
 \begin{equation*}
 p( k) :=\begin{cases}
-e^{-\lambda }\frac{\lambda ^{k}}{k!} , & k\in \{0,1,2,\dotsc \}\\
-0, & k\notin \{0,1,2,\dotsc \}
+e^{-\lambda }\frac{\lambda ^{k}}{k!} , & k\in \{0,1,2,\dots \}\\
+0, & k\notin \{0,1,2,\dots \}
 \end{cases}
 \end{equation*}
 Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriviamo $X\sim \mathcal{P}( \lambda )$.
