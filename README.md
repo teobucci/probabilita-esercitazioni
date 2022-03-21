@@ -20,17 +20,17 @@ Ottima domanda Rick, ecco alcune motivazioni:
 ## Progresso
 |Data|Avanzamento|Autori|
 |--|--|--|
-|2020-03-17|non iniziata||
-|2020-03-18|non iniziata||
-|2020-03-18|non iniziata||
-|2020-03-24|non iniziata||
-|2020-03-25|non iniziata||
-|2020-04-03|non iniziata||
-|2020-04-06|non iniziata||
-|2020-04-08|non iniziata||
-|2020-04-09|non iniziata||
-|2020-04-22|non iniziata||
-|2020-04-23|non iniziata||
+|2020-03-17|in corso|Teo Bucci|
+|2020-03-18|in corso|Teo Bucci|
+|2020-03-18|in corso|Teo Bucci|
+|2020-03-24|in corso|Teo Bucci|
+|2020-03-25|in corso|Teo Bucci|
+|2020-04-03|in corso|Teo Bucci|
+|2020-04-06|in corso|Teo Bucci|
+|2020-04-08|in corso|Teo Bucci|
+|2020-04-09|in corso|Teo Bucci|
+|2020-04-22|in corso|Teo Bucci|
+|2020-04-23|in corso|Teo Bucci|
 |2020-04-28|non iniziata||
 |2020-05-05|non iniziata||
 |2020-05-06|non iniziata||
