@@ -292,12 +292,10 @@ Osserviamo innanzitutto che lo spazio campionario è $\Omega =\{1\dots 12\}$. Os
 \end{gather*}
 
 dunque sì.
-\item Gli eventi $A,B,D$ sono indipendenti?\begin{equation*}
-\begin{aligned}
+\item Gli eventi $A,B,D$ sono indipendenti?\begin{align*}
 \PP( A\cap B\cap D) & \questeq \PP( A)\PP( B)\PP( D)\\
 \frac{1}{2} & \neq \frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{1}{2} =\frac{1}{8}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 allora $A,B,D$ non sono indipendenti. L'indipendenza è un concetto più forte dell'indipendenza a coppie.
 \item \begin{gather*}
@@ -363,13 +361,11 @@ Dato che la proprietà di indipendenza la si sfrutta quando si considerano \text
 A_{k} \Bot \text{allora} \ A_{k}\comp \Bot ,
 \end{gather*}
 
-quindi\begin{equation*}
-\begin{aligned}
+quindi\begin{align*}
 \PP\left(\bigcup _{k=1}^{42} A_{k}\right) & =\PP\left(\bigcap _{k} A_{k}\comp\right)\comp =1-\PP\left(\bigcap _{k} A_{k}\comp\right) =1-\prod _{k=1}^{42}\PP\left( A_{k}\comp\right)\\
  & =1-\prod _{k=1}^{42}\PP\left( A\comp\right) =1-\left[\PP\left( A\comp\right)\right]^{42}\\
  & =1-\left( 1-\frac{1}{18}\right)^{42} \approx 0.9093
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 \begin{oss}
 Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
@@ -388,13 +384,11 @@ i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima est
 
 ci sono $42$ modi per scegliere $j$ (la $j$-esima estrazione in cui esce $15$); per un $j$ fissato stiamo usando il fatto che l'unione degli eventi è disgiunta.
 
-Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)\begin{equation*}
-\begin{aligned}
+Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)\begin{align*}
 \PP( A_{1} \cap B_{1}) & =\PP\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}\comp\right)\overset{\Bot }{=}\PP( A_{1})\prod _{k=2}^{42}\PP\left( A_{k}\comp\right)\\
  & =\PP( A_{1})\prod _{k=2}^{42}( 1-\PP( A_{k})) =\\
  & =\PP( A)( 1-\PP( A))^{41} =\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Infine\begin{equation*}
 \PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
@@ -404,14 +398,12 @@ B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq
 \PP( B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\PP( A_{j})\PP( A_{i})\PP\left(\bigcap _{k\neq i,k\neq j} A_{k}\comp\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
 \end{gather*}
 
-Allora\begin{equation*}
-\begin{aligned}
+Allora\begin{align*}
 \PP( A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP( A_{1} \cap A_{2} \cap B_{2})}{\PP( B_{2})} =\frac{\PP\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP( B_{2})}\\
  & \overset{\Bot }{=}\frac{\PP( A_{1})\PP( A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP( B_{2})}\\
  & =\frac{\PP( A)\PP( A)( 1-\PP( A))^{40}}{\PP( B_{2})}\\
  & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 \begin{oss}
 Osserviamo che in tutto l'esercizio non abbiamo fatto altro che usare la probabilità che esca il $15$ in una singola estrazione, infatti sfruttando l'\textbf{indipendenza} degli eventi ci siamo sempre ricondotti a calcolare le probabilità richieste utilizzando $\PP( A)$. Pertanto se interpretiamo $\PP( A)$ come probabilità di successo, semplifichiamo!
@@ -659,14 +651,12 @@ pattern radius = 1pt}
 V_{\text{tc}} =\text{"vinco giocando a testa o croce tra le due strategie"}
 \end{equation*}
 
-Supponiamo la moneta equa e, senza perdita di generalità, assegnamo a $T$ la strategia di cambio pacco. Osserviamo che il lancio della moneta è indipendente dagli eventi $V_{\text{camb}}$ e $V_{\text{cons}}$. Usiamo ancora la formula delle probabilità totali, in questo caso con $\Omega =T\cup C$.\begin{equation*}
-\begin{aligned}
+Supponiamo la moneta equa e, senza perdita di generalità, assegnamo a $T$ la strategia di cambio pacco. Osserviamo che il lancio della moneta è indipendente dagli eventi $V_{\text{camb}}$ e $V_{\text{cons}}$. Usiamo ancora la formula delle probabilità totali, in questo caso con $\Omega =T\cup C$.\begin{align*}
 \PP( V_{\text{tc}}) & =\PP( V_{\text{tc}} \mid T)\PP( T) +\PP( V_{\text{tc}} \mid C)\PP( C) & \\
  & =\PP( V_{\text{camb}} \mid T)\PP( T) +\PP( V_{\text{cons}} \mid C)\PP( C) & \\
  & =\PP( V_{\text{camb}})\PP( T) +\PP( V_{\text{cons}})\PP( C) & \text{(indip.)}\\
  & =\frac{2}{3} \cdotp \frac{1}{2} +\frac{1}{3} \cdotp \frac{1}{2} =\frac{1}{3} +\frac{1}{6} =\frac{1}{2} & 
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item Introduciamo gli eventi\begin{gather*}
 D=\text{"il conduttore apre il pacco di destra"}\\
 P_{d} =\text{"il pacco di destra contiene il premio"}\\
@@ -694,12 +684,10 @@ Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Siano $A\in \mathc
 La prima idea sarebbe stata quella di usare la formula di Bayes nella forma $\PP( A\mid D) =\frac{\PP( D\mid A)\PP( A)}{\PP( D)}$. Questa formula è però inutile nel nostro caso perché \textbf{non} sappiamo quanto vale $\PP( D)$. Utilizziamo quindi la formula sopra proposta.
 \end{oss}
 
-La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora\begin{equation*}
-\begin{aligned}
+La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora\begin{align*}
 \PP( A\mid D) & =\frac{\overbrace{\PP( D\mid A)}^{p}\overbrace{\PP( A)}^{\frac{1}{3}}}{\underbrace{\PP( D\mid A)}_{p}\underbrace{\PP( A)}_{\frac{1}{3}} +\underbrace{\PP( D\mid P_{d})}_{0}\underbrace{\PP( P_{d})}_{\frac{1}{3}} +\underbrace{\PP( D\mid P_{s})}_{1}\underbrace{\PP( P_{s})}_{\frac{1}{3}}}\\
  & =\frac{\frac{p}{3}}{\frac{p}{3} +\frac{1}{3}} =\frac{p}{p+1}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 \begin{oss}
 In questo caso l'informazione che abbiamo è una info \textit{storica}: dai dati che abbiamo raccolto abbiamo una informazione in più sul gioco e questa informazione \textit{non} dipende dalla scelta del conduttore. La probabilità $\PP$ si \textit{aggiorna} con questa nuova informazione (Teorema di Bayes).
@@ -830,12 +818,10 @@ Visivamente può essere utile fare un diagramma ad albero
 
 $\PP( B_{1} \cap B_{2}) =\PP( B_{2} \mid B_{1})\PP( B_{1}) =\frac{1}{2} \cdotp \frac{1}{2} =\frac{1}{4}$
 
-Alternativamente:\begin{equation*}
-\begin{aligned}
+Alternativamente:\begin{align*}
 \PP( B_{1} \cup B_{2}) & =1-\PP\left( B_{1}\comp \cap B_{2}\comp\right)\\
  & =1-\PP\left( B_{2}\comp \mid B_{1}\comp\right)\PP\left( B_{1}\comp\right) =1-\frac{1}{3} =\frac{2}{3}
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item $\PP( B_{1} \mid B_{2}) =\frac{\PP( B_{2} \mid B_{1})\PP( B_{1})}{\PP( B_{2})} =\frac{3}{5}$
 \item $\begin{aligned}
 \PP\left(\bigcap\limits _{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\PP( B_{1})\PP( B_{2} \mid B_{1})\PP( B_{3} \mid B_{1} \cap B_{2}) \cdots \PP( B_{n} \mid B_{1} \cap \cdots \cap B_{n-1})\\

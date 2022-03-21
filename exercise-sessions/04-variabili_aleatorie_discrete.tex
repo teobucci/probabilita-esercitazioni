@@ -442,8 +442,7 @@ p, & x=1\\
 \end{cases}
 \end{equation*}
 
-Infatti\begin{equation*}
-\begin{aligned}
+Infatti\begin{align*}
 \text{se} \ x=1:\PP( X=1) & =\PP(\Ind_{[ 0,p]} =1)\\
  & =\PP(\{\omega \in \Omega :\Ind_{[ 0,p]}( \omega ) =1\})\\
  & =\PP\left(\Ind_{[ 0,p]}^{-1}( 1)\right)\\
@@ -457,8 +456,7 @@ Infatti\begin{equation*}
  & =\PP(\mathbb{R} \smallsetminus [ 0,p])\\
  & =1-\PP([ 0,p])\\
  & =1-p
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Possiamo allora determinare la legge di $X$\begin{gather*}
 \forall B\in \mathcal{B} ,P^{X}( B) =\PP( X\in B) =\sum\limits _{x\in B\cap \{0,1\}} p_{X}( x) =\\
@@ -481,20 +479,16 @@ Quindi da $\mathrm{Im}( Y)$ non possiamo dedurre nulla.
 
 Se però proviamo che $X=Y$ q.c. allora, in particolare, avranno la stessa legge $X\sim Y\sim B( n) \implies Y$ discreta.
 
-Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\PP( X=Y) =1$.\begin{equation*}
-\begin{aligned}
+Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\PP( X=Y) =1$.\begin{align*}
 \PP( X=Y) & =\PP(\{\omega \in \Omega :X( \omega ) =Y( \omega )\})\\
  & =\PP(\{\omega \in \Omega :X( \omega ) -Y( \omega ) =0\})\\
  & =\PP(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\})
-\end{aligned}
-\end{equation*}
+\end{align*}
 
-Abbiamo che\begin{equation*}
-\begin{aligned}
+Abbiamo che\begin{align*}
 \omega \in ( -\infty ,0) \cup ( 1,+\infty ) & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) \neq 0\\
 \omega \in [ 0,1] & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 i.e.\begin{equation*}
 \{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\} =[ 0,1]
@@ -578,8 +572,7 @@ X_{n}( \Omega ,\mathcal{A}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
 X_{n}^{-1}( B) \in \mathcal{A} ,\forall B\in \mathcal{B}
 \end{gather*}
 
-Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$\begin{equation*}
-\begin{aligned}
+Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$\begin{align*}
 X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty ,t]\}\\
  & =\{\omega \in \Omega :\Ind_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
  & =\Ind_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
@@ -587,8 +580,7 @@ X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty 
 E_{n}\comp , & 0\leq t< 1\\
 \Omega , & t\geq 1
 \end{cases}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Nell'ultimo passaggio bisogna ricordare che\begin{equation*}
 \Ind_{E_{n}} \in \{0,1\} ,\ \ \ \ \Ind_{E_{n}}( \omega ) =\begin{cases}
@@ -659,21 +651,17 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z:=\min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
 \end{equation*}
 
-$Z$ è il numero minimo di prove per dare un successo.\begin{equation*}
-\begin{aligned}
+$Z$ è il numero minimo di prove per dare un successo.\begin{align*}
 \overbrace{p_{Z}( +\infty ) =\PP( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\comp\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\comp\right)\\
  & =\lim _{n\rightarrow \infty }( 1-p)^{n} =0
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 \begin{oss}
 Potevamo calcolare $p_{Z}( +\infty )$ anche nel seguente modo
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 p_{Z}( +\infty ) & =1-\sum\limits _{k=1}^{\infty } p_{Z}( k) =1-p\sum\limits _{k=1}^{\infty }( 1-p)^{k-1} =1-p\sum\limits _{k=0}^{\infty }( 1-p)^{k}\\
  & =1-p\frac{1}{1-( 1-p)} =1-\frac{p}{p} =0
-\end{aligned}
-\end{equation*}
+\end{align*}
 dove abbiamo usato la serie geometrica
 \begin{equation*}
 \sum\limits _{n=0}^{\infty } q^{n} =\frac{1}{1-q} ,\ \ \ \ | q| < 1.
@@ -699,13 +687,11 @@ Allora anche $W$ è una geometrica $W\sim \mathcal{G}( p)$.
 V & =\liminf _{n} X_{n} =\liminf _{n}\Ind_{E_{n}} =\Ind_{\liminf\limits _{n} E_{n}}
 \end{align*}
 
-l'ultimo passaggio è giustificato dal fatto che\begin{equation*}
-\begin{aligned}
+l'ultimo passaggio è giustificato dal fatto che\begin{align*}
 \Ind_{\liminf _{n} E_{n}} & =\Ind_{\bigcup\limits _{n}\bigcap\limits _{k\geq n} E_{k}} & \text{(definizione)}\\
  & =\sup\limits _{n\geq 0}\Ind_{\bigcap\limits _{k\geq n} E_{k}} & \Ind_{A\cup B} =\sup \{\Ind_{A} ,\Ind_{B}\}\\
  & =\sup _{n\geq 0}\inf_{k\geq n}\Ind_{E_{k}} & \Ind_{A\cap B} =\inf\{\Ind_{A} ,\Ind_{B}\}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Analogamente,\begin{equation*}
 U=\limsup _{n} X_{n} =\Ind_{\limsup\limits _{n} E_{n}}
@@ -829,8 +815,7 @@ Vamonos ora! Hay carramba!
 
 Utilizziamo la definizione di $\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:\begin{equation*}
 p_{X}( x) =\PP( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
-\end{equation*}Avremo\begin{equation*}
-\begin{aligned}
+\end{equation*}Avremo\begin{align*}
 \EE[ X] & =\sum\limits _{x\in S} xp_{X}( x) & \\
  & =\sum\limits _{x=0}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & \\
  & =\sum\limits _{x=1}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & ( j+1=x)\\
@@ -840,8 +825,7 @@ p_{X}( x) =\PP( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
  & =np\sum\limits _{j=0}^{n-1}\frac{( n-1) !}{j!(( n-j) -1)) !} p^{j}( 1-p)^{( n-1) -j)} & \\
  & =np\underbrace{\sum\limits _{j=0}^{n-1}\binom{n-1}{j} p^{j}( 1-p)^{( n-1) -j)}}_{=1} & \\
  & =np & 
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 i.e. se $X\sim B( n,p)$, allora $\boxed{\EE[ X] =np}$.
 
@@ -877,21 +861,17 @@ Il passaggio (a1) è giustificato da\begin{equation*}
 X_{i} \sim B( p) ,\forall i,\ \ \ \ \EE\left[ X_{i}^{2}\right] :=\sum\limits _{k\in \{0,1\}} k^{2}\PP( X_{i} =k) =1\cdotp \PP( X_{i} =1) =p
 \end{equation*}
 
-Poi\begin{equation*}
-\begin{aligned}
+Poi\begin{align*}
 \text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\PP( E_{i} \cap E_{j})\\
  & \overset{\Bot }{=}\sum\limits _{i< j}\PP( E_{i})\PP( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
  & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
-\end{aligned}
-\end{equation*}
+\end{align*}
 
-Il passaggio (b1) è giustificato da\begin{equation*}
-\begin{aligned}
+Il passaggio (b1) è giustificato da\begin{align*}
 X_{i} ,X_{j} \sim B( p) \implies \EE[ X_{i} X_{j}] & =\sum\limits _{k\in \{0,1\}} k\PP( X_{i} X_{j} =k)\\
  & =\PP( X_{i} X_{j} =1)\\
  & =\PP( E_{i} \cap E_{j})
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 mentre il risultato della sommatoria (b2) si può vedere graficamente
 
@@ -966,8 +946,7 @@ Cerchiamo i punti di massimo locale, i.e. i $k$ per cui\begin{equation*}
 \boxed{p_{X}( k+1) \leq p_{X}( k) \ \ \ \ \text{e} \ \ \ \ p_{X}( k-2) \leq p_{X}( k)}
 \end{equation*}
 
-Abbiamo\begin{equation*}
-\begin{aligned}
+Abbiamo\begin{align*}
 p_{X}( k+1) \leq p_{X}( k) & \iff \binom{n}{k+1}\cancel{p^{k}} p( 1-p)^{n-k-1} \leq \binom{n}{k}\cancel{p^{k}}( 1-p)^{n-k}\\
  & \iff \frac{\cancel{n!} p}{( k+1) !( n-k-1) !}\frac{\cancel{( 1-p)^{n-k}}}{( 1-p)} \leq \frac{\cancel{n!}}{k!( n-k) !}\cancel{( 1-p)^{n-k}}\\
  & \iff \frac{p}{( k+1)\cancel{k!}\cancel{( n-k-1) !}( 1-p)} \leq \frac{1}{\cancel{k!}( n-k)\cancel{( n-k-1) !}}\\
@@ -978,8 +957,7 @@ p_{X}( k+1) \leq p_{X}( k) & \iff \binom{n}{k+1}\cancel{p^{k}} p( 1-p)^{n-k-1} \
 p_{X}( k-2) \leq p_{X}( k) & \iff \binom{n}{k-1} p^{k-1}( 1-p)^{n-k+1} \leq \binom{n}{k} p^{k}( 1-p)^{n-k}\\
  & \vdots \\
  & \iff k\leq p( n+1)
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Allora la condizione si verifica per\begin{equation*}
 \begin{cases}
@@ -1006,16 +984,14 @@ e^{-\lambda }\frac{\lambda ^{k}}{k!} , & k\in \{0,1,2,\dots \}\\
 \end{equation*}
 Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriviamo $X\sim \mathcal{P}( \lambda )$.
 \begin{enumerate}
-\item \begin{equation*}
-\begin{aligned}
+\item \begin{align*}
 \EE[ X] & :=\int _{\Omega } X( \omega ) d\PP( \omega ) =\int _{\mathbb{R}} xdP^{X}( x) & \\
  & =\sum\limits _{k=0}^{\infty } kp_{X}( k) & \\
  & =\sum\limits _{k=1}^{\infty } ke^{-\lambda }\frac{\lambda ^{k}}{k!} & \text{(} k\ \text{dà contributo nullo)}\\
  & =e^{-\lambda } \lambda \sum\limits _{k=1}^{\infty }\frac{\lambda ^{k-1}}{( k-1) !} & \\
  & =\lambda \sum\limits _{x=0}^{\infty } e^{-\lambda }\frac{\lambda ^{x}}{x!} & k-1=:x\\
  & =\lambda  & 
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item \begin{equation*}
 \mathrm{Var}[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
 \end{equation*}

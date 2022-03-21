@@ -715,13 +715,11 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} 
 \begin{enumerate}
 \item 
 \begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:\begin{equation*}
-\begin{aligned}
+\item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:\begin{align*}
 \Omega  & =\{1\dots n\}^{k}\\
  & =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\}\\
  & \implies | \Omega | =n^{k}
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item $( \Leftarrow )$ Ipotesi:
 \begin{enumerate}
 \item le $k$ estrazioni sono indipendenti, i.e.\begin{equation*}
@@ -734,15 +732,13 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} 
 
 Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
-Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora\begin{equation*}
-\begin{aligned}
+Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora\begin{align*}
 \PP(\{\omega \}) & =\PP(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
  & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
  & =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
  & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
  & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 $( \implies )$ esercizio.
 \item Sia $A=$ "estraggo gli oggetti $\{x_{1} \dots x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
@@ -755,13 +751,11 @@ Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezz
 \end{enumerate}
 \item 
 \begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:\begin{equation*}
-\begin{aligned}
+\item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:\begin{align*}
 \Omega = & \{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\\
  & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 \implies  & | \Omega | =n( n-1) \cdots ( n-k+1) =\frac{n!}{( n-k) !}
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che\begin{equation*}
 \forall \omega \in \Omega \ \ \ \ \PP( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
 \end{equation*}
@@ -771,16 +765,14 @@ Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \te
 Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap _{n} A_{n}\right) =\PP( A_{1})\PP( A_{2} |A_{1}) \cdots \PP( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
 \begin{oss}
-Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:\begin{equation*}
-\begin{aligned}
+Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:\begin{align*}
 \PP(\{\omega \}) & =\PP(\{\omega _{1} ,\dots ,\omega _{k}\})\\
  & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
  & =\PP\left( A_{1}^{\omega _{1}}\right)\PP\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \PP\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
  & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
  & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-( k-1)}\\
  & =\frac{1}{n( n-1) \cdots ( n-k+1)} =\frac{1}{| \Omega | }
-\end{aligned}
-\end{equation*}
+\end{align*}
 \end{oss}
 
 $( \Leftarrow )$ Esercizio.
