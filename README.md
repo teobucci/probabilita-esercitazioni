@@ -1,6 +1,6 @@
 # Crowd-writing Esercitazioni di Probabilità
 ## Scopo
-Lo scopo di questa repository è raccogliere l'aiuto del pubblico per trascrivere le **Esercitazioni di Probabilità** dell'anno accademico 2019-2020 per produrre un documento completo (non ufficiale) a cura degli studenti per gli studenti. :books:
+Lo scopo di questa repository è raccogliere l'aiuto del pubblico per trascrivere le **Esercitazioni di Probabilità** per il corso di Laurea in Ingegneria Matematica al Politecnico di Milano nell'anno accademico 2019-2020 per produrre un documento completo (non ufficiale) a cura degli studenti per gli studenti. :books:
 Si tratta di un progetto *indipendente e non supervisionato da docenti*, che mantengono la proprietà intellettuale del materiale. L'obiettivo è fornire materiale utile per lo studio del corso e al contempo fare esperienza con `LaTeX` e `GitHub`.
 ### Perché l'anno 2019-2020?
 Perché di quell'anno abbiamo accesso al 99% delle soluzioni degli esercizi, scritti da esercitatori o da studenti che le hanno condivise.
