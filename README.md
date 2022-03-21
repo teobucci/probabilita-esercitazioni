@@ -18,17 +18,17 @@ Ottima domanda Rick, ecco alcune motivazioni:
 :round_pushpin: Scrivi su Telegram! `@teobucci`
 
 ## Progresso
-|Argomento|Avanzamento|Autori|
-|--|--|--|
-|01 Spazi campionari, sigma-algebre, probabilità|in corso|Teo Bucci|
-|02 Calcolo combinatorio|in corso|Teo Bucci|
-|03 Probabilità condizionale e indipendenza|in corso|Teo Bucci|
-|04 Variabili aleatorie discrete|in corso|Teo Bucci|
-|05 Variabili aleatorie continue|in corso|Teo Bucci|
-|06 Vettori aleatori discreti|in corso|Teo Bucci|
-|07 Vettori aleatori continui|non iniziata||
-|08 Funzioni caratteristiche. Vettori aleatori gaussiani|non iniziata||
-|09 Leggi condizionali|non iniziata||
-|10 Convergenza di variabili aleatorie|non iniziata||
-|11 Legge dei Grandi Numeri. Teorema Centrale del Limite|non iniziata||
-|12 Catene di Markov|non iniziata||
+|ID|Argomento|Avanzamento|Autori|
+|--|--|--|--|
+|01|Spazi campionari, sigma-algebre, probabilità|in corso|Teo Bucci|
+|02|Calcolo combinatorio|in corso|Teo Bucci|
+|03|Probabilità condizionale e indipendenza|in corso|Teo Bucci|
+|04|Variabili aleatorie discrete|in corso|Teo Bucci|
+|05|Variabili aleatorie continue|in corso|Teo Bucci|
+|06|Vettori aleatori discreti|in corso|Teo Bucci|
+|07|Vettori aleatori continui|non iniziata||
+|08|Funzioni caratteristiche. Vettori aleatori gaussiani|non iniziata||
+|09|Leggi condizionali|non iniziata||
+|10|Convergenza di variabili aleatorie|non iniziata||
+|11|Legge dei Grandi Numeri. Teorema Centrale del Limite|non iniziata||
+|12|Catene di Markov|non iniziata||
