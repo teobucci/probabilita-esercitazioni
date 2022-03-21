@@ -20,23 +20,15 @@ Ottima domanda Rick, ecco alcune motivazioni:
 ## Progresso
 |Data|Avanzamento|Autori|
 |--|--|--|
-|2020-03-17|in corso|Teo Bucci|
-|2020-03-18|in corso|Teo Bucci|
-|2020-03-18|in corso|Teo Bucci|
-|2020-03-24|in corso|Teo Bucci|
-|2020-03-25|in corso|Teo Bucci|
-|2020-04-03|in corso|Teo Bucci|
-|2020-04-06|in corso|Teo Bucci|
-|2020-04-08|in corso|Teo Bucci|
-|2020-04-09|in corso|Teo Bucci|
-|2020-04-22|in corso|Teo Bucci|
-|2020-04-23|in corso|Teo Bucci|
-|2020-04-28|non iniziata||
-|2020-05-05|non iniziata||
-|2020-05-06|non iniziata||
-|2020-05-12|non iniziata||
-|2020-05-14|non iniziata||
-|2020-05-19|non iniziata||
-|2020-05-26|non iniziata||
-|2020-05-28|non iniziata||
-|2020-06-05|non iniziata||
+|01 Spazi campionari, sigma-algebre, probabilità|in corso|Teo Bucci|
+|02 Calcolo combinatorio|in corso|Teo Bucci|
+|03 Probabilità condizionale e indipendenza|in corso|Teo Bucci|
+|04 Variabili aleatorie discrete|in corso|Teo Bucci|
+|05 Variabili aleatorie continue|in corso|Teo Bucci|
+|06 Vettori aleatori discreti|in corso|Teo Bucci|
+|07 Vettori aleatori continui|non iniziata||
+|08 Funzioni caratteristiche. Vettori aleatori gaussiani|non iniziata||
+|09 Leggi condizionali|non iniziata||
+|10 Convergenza di variabili aleatorie|non iniziata||
+|11 Legge dei Grandi Numeri. Teorema Centrale del Limite|non iniziata||
+|12 Catene di Markov|non iniziata||
