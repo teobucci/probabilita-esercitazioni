@@ -18,7 +18,7 @@ Ottima domanda Rick, ecco alcune motivazioni:
 :round_pushpin: Scrivi su Telegram! `@teobucci`
 
 ## Progresso
-|Data|Avanzamento|Autori|
+|Argomento|Avanzamento|Autori|
 |--|--|--|
 |01 Spazi campionari, sigma-algebre, probabilità|in corso|Teo Bucci|
 |02 Calcolo combinatorio|in corso|Teo Bucci|
