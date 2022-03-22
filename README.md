@@ -20,12 +20,12 @@ Ottima domanda Rick, ecco alcune motivazioni:
 ## Progresso
 |ID|Argomento|Avanzamento|Autori|
 |--|--|--|--|
-|01|Spazi campionari, sigma-algebre, probabilità|in corso|Teo Bucci|
-|02|Calcolo combinatorio|in corso|Teo Bucci|
-|03|Probabilità condizionale e indipendenza|in corso|Teo Bucci|
-|04|Variabili aleatorie discrete|in corso|Teo Bucci|
-|05|Variabili aleatorie continue|in corso|Teo Bucci|
-|06|Vettori aleatori discreti|in corso|Teo Bucci|
+|01|Spazi campionari, sigma-algebre, probabilità|in completamento|Teo Bucci|
+|02|Calcolo combinatorio|in completamento|Teo Bucci|
+|03|Probabilità condizionale e indipendenza|in completamento|Teo Bucci|
+|04|Variabili aleatorie discrete|in completamento|Teo Bucci|
+|05|Variabili aleatorie continue|in completamento|Teo Bucci|
+|06|Vettori aleatori discreti|in completamento|Teo Bucci|
 |07|Vettori aleatori continui|iniziata|Matteo Bonfadini|
 |08|Funzioni caratteristiche. Vettori aleatori gaussiani|iniziata|Matteo Bonfadini|
 |09|Leggi condizionali|non iniziata||
