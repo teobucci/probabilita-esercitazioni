@@ -8,7 +8,7 @@ Si consideri lo spazio di probabilità $( \Omega ,\mathcal{A} ,\PP) =(\mathbb{R}
 \begin{equation*}
 X( \omega ) =\frac{1}{\omega } ,\ \ \ \ Y( \omega ) =\frac{1}{\sqrt{\omega }} ,\ \ \ \ Z( \omega ) =\log \omega ,
 \end{equation*}
-per ogni $\omega \in ( 0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathbb{R} \smallsetminus ( 0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
+per ogni $\omega \in ( 0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathbb{R} \setminus ( 0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
 \begin{enumerate}
 \item Mostrare che $X$, $Y$ e $Z$ sono variabili aleatorie ben definite q.c.
 \item Determinare le distribuzioni di $X$, $Y$ e $Z$, mostrando in particolare che si tratta di variabili aleatorie continue.
@@ -66,7 +66,7 @@ f( x) =\frac{\lambda ^{\alpha }}{\Gamma ( \alpha )} x^{\alpha -1} e^{-\lambda x}
 \end{equation*}
 dove $\Gamma $ è la funzione Gamma (di Eulero) definita da
 \begin{equation*}
-\Gamma ( \alpha ) :=\int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
+\Gamma ( \alpha ) \coloneqq \int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
 \end{equation*}
 Si ricordi che
 \begin{equation*}
@@ -132,7 +132,7 @@ x, & 0\leq x< 1\\
 \end{equation*}
 
 a partire da questa ci troviamo\begin{gather*}
-F_{X}\left( t\right) :=\PP\left( X\leq t\right) =\PP\left( -\frac{1}{\lambda }\log U\leq t\right)\\
+F_{X}\left( t\right) \coloneqq \PP\left( X\leq t\right) =\PP\left( -\frac{1}{\lambda }\log U\leq t\right)\\
 -\frac{1}{\lambda }\log U\leq t\iff \log U\geq -\lambda t\iff U\geq e^{-\lambda t}\\
 =\PP\left( U\geq e^{-\lambda t}\right) =1-\underbrace{\PP\left( U< e^{-\lambda t}\right)}_{F_{U}\left( e^{-\lambda t}\right)} =\\
 =1-\begin{cases}
@@ -308,7 +308,7 @@ Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un t
 
 Data la funzione $f:\mathbb{R}\rightarrow \mathbb{R}$ definita come
 \begin{equation*}
-f( x) :=\begin{cases}
+f( x) \coloneqq \begin{cases}
 0 & x< 0\\
 \frac{1}{2} & 0\leq x< \frac{1}{2}\\
 2x-1 & \frac{1}{2} \leq x< 1\\

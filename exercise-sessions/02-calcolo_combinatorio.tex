@@ -5,31 +5,32 @@
 Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega _{1} ,\dots ,\omega _{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
 
 Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\dots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
+
 \begin{oss}
-In generale non è sempre lecito supporre che la probabilità sia uniforme.
+	In generale non è sempre lecito supporre che la probabilità sia uniforme.
 \end{oss}
+
 Dagli assiomi della probabilità segue che:
+
 \begin{equation*}
-1=\PP( \Omega ) =\underbrace{\sum\limits _{k=1}^{n}\PP(\{\omega _{k}\}) =\sum\limits _{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
+	1=\PP( \Omega ) =\underbrace{\sum\limits _{k=1}^{n}\PP(\{\omega _{k}\}) =\sum\limits _{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
 \end{equation*}
+
 Pertanto, quando abbiamo a che fare con esperimenti aleatori su spazi di probabilità uniformi procediamo nel seguente modo:
 \begin{enumerate}
-\item individuiamo $\Omega $ (i.e. i possibili esiti dell'esperimento aleatorio) finito, $| \Omega | < +\infty \ \rightarrow \ \mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
-\item individuiamo il sottoinsieme $A\subseteq \Omega $ che rappresenta l'evento.
-\item se abbiamo probabilità uniforme, cioè gli eventi sono equiprobabili,\begin{equation*}
-\boxed{\forall A\in \mathcal{A} \ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}}
-\end{equation*}
+	\item individuiamo $\Omega $ (i.e. i possibili esiti dell'esperimento aleatorio) finito, $| \Omega | < +\infty \ \rightarrow \ \mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
+	\item individuiamo il sottoinsieme $A\subseteq \Omega $ che rappresenta l'evento.
+	\item se abbiamo probabilità uniforme, cioè gli eventi sono equiprobabili,
+	\begin{equation*}
+		\boxed{\forall A\in \mathcal{A} \ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}}
+	\end{equation*}
 \end{enumerate}
-
-Il problema si riduce sostanzialmente a contare gli elementi di $\Omega $ e di $A$ (i.e. determinare $| \Omega | $ e $| A| $). Per farlo dobbiamo trovare uno \textbf{schema di scelte successive} che ci porti ad individuare univocamente un elemento di $\Omega $ (e di $A$). Questo schema di scelte successive è:
+Il problema si riduce sostanzialmente a contare gli elementi di $\Omega $ e di $A$ (i.e. determinare $| \Omega | $ e $|A| $). Per farlo dobbiamo trovare uno \textbf{schema di scelte successive} che ci porti ad individuare univocamente un elemento di $\Omega $ (e di $A$). Questo schema di scelte successive è:
 \begin{itemize}
-\item giustificato dal principio fondamentale del calcolo combinatorio
-\item graficamente visualizzabile tramite un \textbf{diagramma ad albero}
+	\item giustificato dal principio fondamentale del calcolo combinatorio;
+	\item graficamente visualizzabile tramite un \textbf{diagramma ad albero}.
 \end{itemize}
-
 Il calcolo combinatorio è costituito da tecniche che ci permettono di \textbf{contare} il numero di elementi di un insieme \textbf{senza enumerarli} esplicitamente.
-
-
 
 \textbf{Principio fondamentale del calcolo combinatorio.} Si realizzano $r$ esperimenti. Si supponga che il primo esperimento abbia $n_{1}$ esiti possibili; che per ognuno di essi il secondo abbia $n_{2} \ $esiti possibili; che per ognuno degli esiti dei primi due esperimenti il terzo esperimento abbia $n_{3}$ esiti possibili ecc. Allora, se sequenze distinte di esiti degli $r$ esperimenti producono esiti finali distinti, allora gli $r$ esperimenti hanno in tutto $n_{1} \cdot n_{2} \cdots n_{r}$ esiti possibili.
 
@@ -127,285 +128,306 @@ Il calcolo combinatorio è costituito da tecniche che ci permettono di \textbf{c
 \end{tikzpicture}
 
 \begin{oss}
-Il diagramma ad albero è utile per rappresentare tutti i casi possibili: ci permette di avere un'elencazione grafica di tutti gli elementi di $\Omega $ (e/o di $A\in \mathcal{A}$).
-\end{oss}
-\begin{oss}
-Lo schema di scelte successive deve individuare univocamente gli elementi degli insiemi (come da principio).
+	Il diagramma ad albero è utile per rappresentare tutti i casi possibili: ci permette di avere un'elencazione grafica di tutti gli elementi di $\Omega $ (e/o di $A\in \mathcal{A}$).
 \end{oss}
 
+\begin{oss}
+	Lo schema di scelte successive deve individuare univocamente gli elementi degli insiemi (come da principio).
+\end{oss}
 
 \textbf{Permutazioni, disposizioni e combinazioni.}
 
 Sono concetti utili per contare gli elementi in un insieme.
 
 \begin{definition}
-Le permutazioni di $n$ oggetti sono tutti i possibili ordinamenti di $n$ oggetti. Le permutazioni di $n$ oggetti sono pari a:
-\begin{equation*}
-\boxed{P_{n} =n!=n( n-1)( n-2) \cdots 1} \ \ \ \ ( 0!:=1)
-\end{equation*}
-Ho $n$ scelte per il primo oggetto, $( n-1)$ scelte per il secondo ecc.
+	Le permutazioni di $n$ oggetti sono tutti i possibili ordinamenti di $n$ oggetti. Le permutazioni di $n$ oggetti sono pari a:
+	\begin{equation*}
+		\boxed{P_{n} =n!=n( n-1)( n-2) \cdots 1} \ \ \ \ ( 0!\coloneqq 1)
+	\end{equation*}
+	Ho $n$ scelte per il primo oggetto, $( n-1)$ scelte per il secondo ecc.
 \end{definition}
+
 \begin{oss}
-Vi sono
-\begin{equation*}
-\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\dots n_{r} !}}
-\end{equation*}
-permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dots $, $n_{r}$ sono identici e distinti dai precedenti.
+	Vi sono
+	\begin{equation*}
+		\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\dots n_{r} !}}
+	\end{equation*}
+	permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dots $, $n_{r}$ sono identici e distinti dai precedenti.
 \end{oss}
+
 \textit{Esempio.} Classifica di $n$ persone, ci sono $n!$ possibili ordinamenti delle persone.
 
 Supponiamo di avere un insieme $E$ formato da $n$ oggetti \textbf{distinti}, da cui ne estraiamo $r$.
 \begin{definition}
-Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ elementi di $E$. Il modello è quello dell'\textit{estrazione con reimmissione} da un'urna contenente $n$ oggetti. Ogni volta lo rimetto nell'urna. Ogni volta ho $n$ modi di scegliere:
-\begin{equation*}
-\boxed{D'^{n}_{r} =\underbrace{n\cdot n\cdots n}_{r\ \text{volte}} =n^{r}}
-\end{equation*}
+	Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ elementi di $E$. Il modello è quello dell'\textit{estrazione con reimmissione} da un'urna contenente $n$ oggetti. Ogni volta lo rimetto nell'urna. Ogni volta ho $n$ modi di scegliere:
+	\begin{equation*}
+		\boxed{D'^{n}_{r} =\underbrace{n\cdot n\cdots n}_{r\ \text{volte}} =n^{r}}
+	\end{equation*}
 \end{definition}
+
 \begin{definition}
-Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
-\begin{equation*}
-\boxed{D_{r}^{n} =n( n-1)( n-2) \dots ( n-r+1) =\frac{n!}{( n-r) !}}
-\end{equation*}
+	Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
+	\begin{equation*}
+		\boxed{D_{r}^{n} =n( n-1)( n-2) \dots ( n-r+1) =\frac{n!}{( n-r) !}}
+	\end{equation*}
 \end{definition}
+
 \begin{oss}
-Le permutazioni sono un caso particolare di disposizioni senza ripetizione: $n!=D_{n}^{n}$.
+	Le permutazioni sono un caso particolare di disposizioni senza ripetizione: $n!=D_{n}^{n}$.
 \end{oss}
+
 \textit{Esempio.} I primi $r$ classificati in una gara di $n$ persone.
 
 \begin{definition}
-Ogni sottoinsieme di $E$ di cardinalità $r\leq n$ è detto \textbf{combinazione di classe} $r$ di $E$. Il modello è quello di un'\textit{estrazione simultanea} di $r$ oggetti da un'urna che ne contiene $n$ $( r\leq n)$. Simile alle disposizioni, ma qui \textit{l'ordine non conta}.
-\begin{equation*}
-\boxed{C_{r}^{n} =\binom{n}{r} =\frac{n!}{r!( n-r) !}}
-\end{equation*}
+	Ogni sottoinsieme di $E$ di cardinalità $r\leq n$ è detto \textbf{combinazione di classe} $r$ di $E$. Il modello è quello di un'\textit{estrazione simultanea} di $r$ oggetti da un'urna che ne contiene $n$ $( r\leq n)$. Simile alle disposizioni, ma qui \textit{l'ordine non conta}.
+	\begin{equation*}
+		\boxed{C_{r}^{n} =\binom{n}{r} =\frac{n!}{r!( n-r) !}}
+	\end{equation*}
 \end{definition}
+
 \begin{oss}
 Per determinare $C_{r}^{n}$ basta osservare che: ogni fissata combinazione di classe $r$ dà luogo a $r!$ disposizioni di classe $r$, i.e. ho $r!$ possibili modi di permutare gli oggetti:
-\begin{equation*}
-D_{r}^{n} =r!\ C_{r}^{n}
-\end{equation*}
-Ora,
-\begin{equation*}
-D_{r}^{n} =n( n-1) \dots ( n-r+1) =\frac{n!}{( n-r) !}
-\end{equation*}
-Quindi:
-\begin{equation*}
-r!\ C_{r}^{n} =\frac{n!}{( n-r) !} \implies C_{r}^{n} =\frac{n!}{r!( n-r) !} =\binom{n}{r}
-\end{equation*}
+	\begin{equation*}
+		D_{r}^{n} =r!\ C_{r}^{n}
+	\end{equation*}
+	Ora,
+	\begin{equation*}
+		D_{r}^{n} =n( n-1) \dots ( n-r+1) =\frac{n!}{( n-r) !}
+	\end{equation*}
+	Quindi:
+	\begin{equation*}
+		r!\ C_{r}^{n} =\frac{n!}{( n-r) !} \implies C_{r}^{n} =\frac{n!}{r!( n-r) !} =\binom{n}{r}
+	\end{equation*}
 \end{oss}
+
 \Esercizio{}
 
 Lanciate due volte un dado non truccato.
 \begin{enumerate}
-\item Qual è la probabilità di un $6$ al primo lancio?
-\item Qual è la probabilità che la somma dei due risultati dia un $6$?
-\item A quanto è pari quest'ultima probabilità se lanciate tre volte il dado?
+	\item Qual è la probabilità di un $6$ al primo lancio?
+	\item Qual è la probabilità che la somma dei due risultati dia un $6$?
+	\item A quanto è pari quest'ultima probabilità se lanciate tre volte il dado?
 \end{enumerate}
+
 \Esercizio{}
 
 Trovate una ventiquattrore chiusa con combinazione di $6$ cifre. Con quale probabilità riuscirete ad aprirla al primo tentativo? E se la combinazione fosse di $6$ lettere scelte fra $A$, $B$, $C$ e $D$?
+
 \Esercizio{}
 
 Scommetto sui primi $5$ classificati di una gara con $40$ concorrenti, senza conoscerli.
 \begin{enumerate}
-\item Qual è la probabilità di vincere?
-\item E se scommettessi sui nomi dei primi cinque, senza precisarne l'ordine?
+	\item Qual è la probabilità di vincere?
+	\item E se scommettessi sui nomi dei primi cinque, senza precisarne l'ordine?
 \end{enumerate}
+
 \Esercizio{(Paradosso dei compleanni)}
+
 \begin{enumerate}
-\item Qual è la probabilità $p_{n}$ che, in un gruppo di $n$ persone selezionate in modo casuale (nate tutte in un anno non bisestile), almeno due di esse compiano gli anni lo stesso giorno? Quanto deve essere grande $n$ affinché $p_{n}  >\frac{1}{2}$?
-\item Qual è la probabilità $q_{n}$ che, nel gruppo di $n$ persone, ve ne sia almeno una che compie gli anni il vostro stesso giorno (posto che non siate nati il 29 febbraio)?Quanto deve essere grande $n$ affinché $q_{n}  >\frac{1}{2}$?
+	\item Qual è la probabilità $p_{n}$ che, in un gruppo di $n$ persone selezionate in modo casuale (nate tutte in un anno non bisestile), almeno due di esse compiano gli anni lo stesso giorno? Quanto deve essere grande $n$ affinché $p_{n}  >\frac{1}{2}$?
+	\item Qual è la probabilità $q_{n}$ che, nel gruppo di $n$ persone, ve ne sia almeno una che compie gli anni il vostro stesso giorno (posto che non siate nati il 29 febbraio)?Quanto deve essere grande $n$ affinché $q_{n}  >\frac{1}{2}$?
 \end{enumerate}
+
 \Esercizio{}
 
 Tre amici si danno appuntamento nel bar della piazza centrale della città senza sapere che ci sono quattro bar. Qual è la probabilità che scelgano lo stesso bar? Tre bar differenti?
+
 \Esercizio{}
 
 Confrontate la probabilità di ottenere almeno un $6$ nel lancio di $6$ dadi con la probabilità di ottenere almeno due $6$ nel lancio di $12$ dadi.
+
 \Esercizio{}
 
 Una moneta viene lanciata $4$ volte. Quali sono le probabilità di ottenere $3$ teste e una croce e di ottenere $2$ teste e $2$ croci?
+
 \Esercizio{}
 
 Per compilare una colonna di una schedina del Totocalcio occorre scegliere, per ciascuna delle $13$ partite in esame, tra la vittoria della squadra di casa $( 1)$, il pareggio $( X)$ o la vittoria della squadra in trasferta $( 2)$. Si calcoli la probabilità di fare $13$ o $12$ al Totocalcio giocando per ogni partita una doppia (due possibili risultati per ogni partita). Si suppongano equiprobabili le possibili schedine.
+
 \Esercizio{}
 
 Giocate $6$ numeri al Superenalotto. Saranno estratti $6$ numeri senza ripetizione dai primi $90$ naturali, seguiti dall'estrazione di un $7^{o}$ numero jolly, diverso quindi dai precedenti. Qual è la probabilità di fare
 \begin{enumerate}
-\item $6$ (indovinare i primi $6$ numeri estratti)?
-\item $5+1$ (indovinare $5$ dei primi $6$ numeri estratti e in più il numero jolly)?
-\item $6$ o $5+1$?
+	\item $6$ (indovinare i primi $6$ numeri estratti)?
+	\item $5+1$ (indovinare $5$ dei primi $6$ numeri estratti e in più il numero jolly)?
+	\item $6$ o $5+1$?
 \end{enumerate}
 
 Quale o quali spazi campionari avete introdotto per rispondere ai punti precedenti? Sono scelte coerenti?
+
 \Esercizio{}
 
 Si consideri l'estrazione di $k$ oggetti da un'urna contenente $n$ oggetti distinti, numerati da $1$ a $n$.
 \begin{enumerate}
-\item Si consideri l'estrazione con reimmissione, per cui $k\in \mathbb{N}$. Viene osservato il risultato ordinato delle $k$ estrazioni.
-\begin{enumerate}
-\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
-\item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se le $k$ estrazioni sono indipendenti e per ciascuna singola estrazione gli $n$ possibili risultati sono equiprobabili.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
+
+	\item Si consideri l'estrazione con reimmissione, per cui $k\in \mathbb{N}$. Viene osservato il risultato ordinato delle $k$ estrazioni.
+	\begin{enumerate}
+		\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
+		\item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se le $k$ estrazioni sono indipendenti e per ciascuna singola estrazione gli $n$ possibili risultati sono equiprobabili.
+		\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
+	\end{enumerate}
+
+	\item Si consideri l'estrazione senza reimmissione, per cui $1\leq k\leq n$. Viene osservato il risultato ordinato delle $k$ estrazioni.
+	\begin{enumerate}
+		\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
+		\item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se il risultato di ciascuna delle $k$ estrazioni, data la sequenza degli oggetti già estratti, è equiprobabile fra gli oggetti rimanenti.
+		\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
+	\end{enumerate}
+
+	\item Si consideri l'estrazione simultanea, per cui $1\leq k\leq n$. Viene osservato il risultato dell'estrazione.
+	\begin{enumerate}
+		\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
+		\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$.
+	\end{enumerate}
+
 \end{enumerate}
-\item Si consideri l'estrazione senza reimmissione, per cui $1\leq k\leq n$. Viene osservato il risultato ordinato delle $k$ estrazioni.
-\begin{enumerate}
-\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
-\item * Dimostrare che i possibili risultati dell'esperimento aleatorio sono equiprobabili se e solo se il risultato di ciascuna delle $k$ estrazioni, data la sequenza degli oggetti già estratti, è equiprobabile fra gli oggetti rimanenti.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$, senza riguardo per l'ordine di estrazione.
-\end{enumerate}
-\item Si consideri l'estrazione simultanea, per cui $1\leq k\leq n$. Viene osservato il risultato dell'estrazione.
-\begin{enumerate}
-\item Individuare il più piccolo spazio campionario $\Omega $ che permette di descrivere l'esperimento aleatorio.
-\item Calcolare la probabilità di estrarre un dato insieme di oggetti $\{x_{1} ,\dots ,x_{k}\}$.
-\end{enumerate}
-\end{enumerate}
+
 \Esercizio{}
 
 Si calcoli la probabilità di ottenere $2$ palline rosse estraendone $4$ da un'urna che contiene $3$ palline rosse e $7$ bianche. Si confrontino i casi di estrazioni con reimmissione, senza reimmissione e simultanea.
+
 \Esercizio{}
 
 Si estraggono, con o senza reimmissione, $7$ palline da un'urna contenente $4$ palline bianche e $8$ rosse. Qual è la probabilità di estrarne esattamente $3$ bianche?
+
 \Esercizio{}
 
 Da un'urna contenente $5$ palline bianche, $7$ rosse e $4$ blu, vengono estratte senza reimmissione $5$ palline. Con quale probabilità si ottengono $3$ bianche, $1$ rossa e $1$ blu?
+
 \Esercizio{}
 
 Si estraggono $2$ palline da un'urna contenente $5$ palline bianche, $6$ nere e $4$ rosse. Calcolare la probabilità che siano dello stesso colore. Distinguere il caso di estrazione simultanea o con reimmissione.
+
 \Esercizio{}
 
 Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse. Qual è la probabilità di estrarne esattamente $k$ rosse, con $0\leq k\leq n$? Si risponda nel caso di estrazione con reimmissione e nel caso di estrazione simultanea.
+
 \Esercizio{}
 
 A scommette con B che estrarrà 4 carte di 4 semi diversi da un mazzo di 40 carte. Qual è la probabilità che A vinca?
+
 \Esercizio{}
 
 Supponiamo di giocare a poker con un mazzo da $52$ carte, identificate dal seme (cuori $\varheartsuit $, quadri $\vardiamondsuit $, fiori $\clubsuit $, picche $\spadesuit $) e dal tipo (un numero da $2$ a $10$ oppure $J$, $Q$, $K$, $A$). Si calcolino:
 \begin{enumerate}
-\item la probabilità di avere un full, ovvero un sottoinsieme di $5$ carte $\{X_{1} ,X_{2} ,X_{3} ,Y_{1} ,Y_{2}\}$ costituito dall'unione di un tris (un sottoinsieme di $3$ carte $X_{1} ,X_{2} ,X_{3}$ dello stesso tipo) e di una coppia (un sottoinsieme di $2$ carte $Y_{1} ,Y_{2}$ dello stesso tipo);
-\item la probabilità di avere una doppia coppia, ovvero un sottoinsieme di $5$ carte $\{X_{1} ,X_{2} ,Y_{1} ,Y_{2} ,Z\}$ costituito dall'unione di due coppie $\{X_{1} ,X_{2}\}$, $\{Y_{1} ,Y_{2}\}$ di tipi diversi, più una quinta carta $Z$ di tipo diverso dai tipi delle due coppie;
-\item la probabilità di avere una scala reale massima, ovvero le $5$ carte $10,J,Q,K,A$ dello stesso seme;
-\item la probabilità di avere una scala reale, ovvero una qualsiasi scala di $5$ carte dello stesso seme (ricordiamo che con l'asso possiamo fare la scala $A,2,3,4,5$ ma anche $10,J,Q,K,A$);
-\item la probabilità di avere una scala, ovvero una qualsiasi scala di $5$ carte non necessariamente dello stesso seme;
-\item la probabilità di avere colore, ovvero un sottoinsieme di $5$ carte dello stesso seme;
-\item la probabilità di avere poker, ovvero un sottoinsieme di $5$ carte in cui ci sono $4$ carte dello stesso tipo;
-\item la probabilità di avere un tris, ovvero un sottoinsieme di $5$ carte in cui ci sono $3$ carte dello stesso tipo e le altre due di tipo diverso tra loro e dalle prime tre;
-\item la probabilità di avere una coppia, ovvero un sottoinsieme di $5$ carte in cui ci sono $2$ carte dello stesso tipo e le altre tre di tipo diverso tra loro e dalle prime due.
+	\item la probabilità di avere un full, ovvero un sottoinsieme di $5$ carte $\{X_{1} ,X_{2} ,X_{3} ,Y_{1} ,Y_{2}\}$ costituito dall'unione di un tris (un sottoinsieme di $3$ carte $X_{1} ,X_{2} ,X_{3}$ dello stesso tipo) e di una coppia (un sottoinsieme di $2$ carte $Y_{1} ,Y_{2}$ dello stesso tipo);
+	\item la probabilità di avere una doppia coppia, ovvero un sottoinsieme di $5$ carte $\{X_{1} ,X_{2} ,Y_{1} ,Y_{2} ,Z\}$ costituito dall'unione di due coppie $\{X_{1} ,X_{2}\}$, $\{Y_{1} ,Y_{2}\}$ di tipi diversi, più una quinta carta $Z$ di tipo diverso dai tipi delle due coppie;
+	\item la probabilità di avere una scala reale massima, ovvero le $5$ carte $10,J,Q,K,A$ dello stesso seme;
+	\item la probabilità di avere una scala reale, ovvero una qualsiasi scala di $5$ carte dello stesso seme (ricordiamo che con l'asso possiamo fare la scala $A,2,3,4,5$ ma anche $10,J,Q,K,A$);
+	\item la probabilità di avere una scala, ovvero una qualsiasi scala di $5$ carte non necessariamente dello stesso seme;
+	\item la probabilità di avere colore, ovvero un sottoinsieme di $5$ carte dello stesso seme;
+	\item la probabilità di avere poker, ovvero un sottoinsieme di $5$ carte in cui ci sono $4$ carte dello stesso tipo;
+	\item la probabilità di avere un tris, ovvero un sottoinsieme di $5$ carte in cui ci sono $3$ carte dello stesso tipo e le altre due di tipo diverso tra loro e dalle prime tre;
+	\item la probabilità di avere una coppia, ovvero un sottoinsieme di $5$ carte in cui ci sono $2$ carte dello stesso tipo e le altre tre di tipo diverso tra loro e dalle prime due.
 \end{enumerate}
+
 \Esercizio{}
 
 Un mazzo di carte da scopone scientifico è costituito da $40$ carte, identificate dal seme (spade, coppe, bastoni, denari) e dal tipo (asso, $2$, $3$, $4$, $5$, $6$, $7$, fante, cavallo, re). Supponendo di pescare $10$ carte dal mazzo, calcolare la probabilità di estrarre:
 \begin{enumerate}
-\item l'asso di bastoni,
-\item l'asso di spade e l'asso di coppe,
-\item almeno un asso fra l'asso di spade e l'asso di coppe.
+	\item l'asso di bastoni,
+	\item l'asso di spade e l'asso di coppe,
+	\item almeno un asso fra l'asso di spade e l'asso di coppe.
 \end{enumerate}
+
 \Esercizio{}
 
 Facendo uso del calcolo combinatorio, dimostrare che
 \begin{equation*}
-( a+b)^{n} =\sum\limits _{k=0}^{n}\binom{n}{k} a^{k} b^{n-k}
+	( a+b)^{n} =\sum\limits _{k=0}^{n}\binom{n}{k} a^{k} b^{n-k}
 \end{equation*}
+
 \Esercizio{}
 
 Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che il suo insieme delle parti $\mathcal{P}( \Omega ) =2^{\Omega }$ ha cardinalità $2^{| \Omega | }$.
 
-
-
 \ParteSoluzioni
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \Soluzione
+
 \begin{enumerate}
-\item Lo spazio degli eventi elementari è\begin{gather*}
-\Omega =\{( i,j) :i,j=1,\dots ,6\} =\{1,\dots ,6\}^{2} ,\ \ \ \ | \Omega | =36\\
-i=\text{primo lancio} \ \ \ \ j=\text{secondo lancio}
-\end{gather*}
+	\item Lo spazio degli eventi elementari è
+	\begin{gather*}
+		\Omega =\{( i,j) :i,j=1,\dots ,6\} =\{1,\dots ,6\}^{2} ,\ \ \ \ | \Omega | =36\\
+		i=\text{primo lancio} \ \ \ \ j=\text{secondo lancio}
+	\end{gather*}
+	Come famiglia ($\sigma $-algebra) degli eventi possibili possiamo scegliere $\mathcal{A} \coloneqq \mathcal{P}( \Omega ) =2^{\Omega }$. Per quanto riguarda l'assegnazione di una probabilità $\PP$ su $( \Omega ,\mathcal{A})$ osserviamo che se assumiamo che i due non siano truccati e vogliamo che il nostro spazio di probabilità $( \Omega ,\mathcal{A} ,\PP)$ modellizzi questo fatto fisico, dobbiamo ammettere che tutti gli eventi elementari di $\Omega $ abbiano la stessa probabilità $\PP =\frac{1}{| \Omega | } =\frac{1}{36}$. Siamo pertanto in uno spazio campionario con probabilità uniforme. Allora $\forall A\in \mathcal{A} ,\PP( A) =\frac{| A| }{| \Omega | } =\frac{| A| }{36}$.
 
-Come famiglia ($\sigma $-algebra) degli eventi possibili possiamo scegliere $\mathcal{A} :=\mathcal{P}( \Omega ) =2^{\Omega }$. Per quanto riguarda l'assegnazione di una probabilità $\PP$ su $( \Omega ,\mathcal{A})$ osserviamo che se assumiamo che i due non siano truccati e vogliamo che il nostro spazio di probabilità $( \Omega ,\mathcal{A} ,\PP)$ modellizzi questo fatto fisico, dobbiamo ammettere che tutti gli eventi elementari di $\Omega $ abbiano la stessa probabilità $\PP =\frac{1}{| \Omega | } =\frac{1}{36}$. Siamo pertanto in uno spazio campionario con probabilità uniforme. Allora $\forall A\in \mathcal{A} ,\PP( A) =\frac{| A| }{| \Omega | } =\frac{| A| }{36}$.
+	Sia $A$ l'evento "avere un $6$ al primo lancio", allora
+	\begin{gather*}
+		A=\{( 6,1) ,( 6,2) ,( 6,3)( 6,4) ,( 6,5) ,( 6,6)\} ,\ \ \ \ | A| =6\\
+		\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
+	\end{gather*}
 
-Sia $A$ l'evento "avere un $6$ al primo lancio", allora\begin{gather*}
-A=\{( 6,1) ,( 6,2) ,( 6,3)( 6,4) ,( 6,5) ,( 6,6)\} ,\ \ \ \ | A| =6\\
-\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
-\end{gather*}
+	\begin{oss}
+		In questo caso $\Omega $ ed $A$ hanno pochi elementi e possiamo elencarli senza problemi. Avremmo anche potuto contare gli elementi di $A$ e $\Omega $ senza elencarli con un diagramma ad albero.
+	\end{oss}
 
-\begin{oss}
-In questo caso $\Omega $ ed $A$ hanno pochi elementi e possiamo elencarli senza problemi. Avremmo anche potuto contare gli elementi di $A$ e $\Omega $ senza elencarli con un diagramma ad albero.
-\end{oss}
-\item Sia $B$ l'evento "la somma dei due risultati è $6$", allora\begin{gather*}
-B=\{( 5,1) ,( 2,4) ,( 3,3) ,( 4,2) ,( 1,5)\} ,\ \ \ \ | B| =5\\
-\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{5}{36} \approx 0.1389
-\end{gather*}
+	\item Sia $B$ l'evento "la somma dei due risultati è $6$", allora
+	\begin{gather*}
+		B=\{( 5,1) ,( 2,4) ,( 3,3) ,( 4,2) ,( 1,5)\} ,\ \ \ \ | B| =5\\
+		\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{5}{36} \approx 0.1389
+	\end{gather*}
 
-\begin{oss}
-I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dots ,12$,\begin{equation*}
-\begin{array}{ l }
-\PP(\{2\}) =\PP(\{12\}) =1/36\\
-\PP(\{3\}) =\PP(\{11\}) =1/18\\
-\PP(\{4\}) =\PP(\{10\}) =1/12\\
-\PP(\{5\}) =\PP(\{9\}) =1/9\\
-\PP(\{6\}) =\PP(\{8\}) =5/36\\
-\PP(\{7\}) =1/6
-\end{array}
-\end{equation*}Se invece assumiamo che i possibili risultati della somma siano equiprobabili, dobbiamo porre\begin{equation*}
-\PP(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dots ,12\}
-\end{equation*}$\Omega =$ spazio degli eventi elementari, somma degli esiti del lancio dei due dadi. Lo spazio di probabilità così costruito è matematicamente corretto, ma non ha nulla a che fare con la realtà fisica dell'esperimento.
-\end{oss}
-\item Lanciando $3$ volte il dado lo spazio campionario diventa\begin{equation*}
-\Omega =\{( i,j,k) :i,j,k=1,\dots ,6\} =\{1,\dots ,6\}^{3} \ \ \ \ | \Omega | =6^{3} =216
-\end{equation*}
+	\begin{oss}
+		I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dots ,12$,
+		\begin{equation*}
+			\begin{array}{ l }
+				\PP(\{2\}) =\PP(\{12\}) =1/36\\
+				\PP(\{3\}) =\PP(\{11\}) =1/18\\
+				\PP(\{4\}) =\PP(\{10\}) =1/12\\
+				\PP(\{5\}) =\PP(\{9\}) =1/9\\
+				\PP(\{6\}) =\PP(\{8\}) =5/36\\
+				\PP(\{7\}) =1/6
+			\end{array}
+		\end{equation*}
+		Se invece assumiamo che i possibili risultati della somma siano equiprobabili, dobbiamo porre
+		\begin{equation*}
+			\PP(\{i\}) =\frac{1}{11} \ \ \ \ 11=| \Omega | \ \text{con} \ \Omega =\{2,3,\dots ,12\}
+		\end{equation*}
+		$\Omega =$ spazio degli eventi elementari, somma degli esiti del lancio dei due dadi. Lo spazio di probabilità così costruito è matematicamente corretto, ma non ha nulla a che fare con la realtà fisica dell'esperimento.
+	\end{oss}
 
-Sia $C$ l'evento "la somma dei dadi è $6$"\begin{gather*}
-\begin{aligned}
-C= & (\{1,1,4\} ,\{1,4,1\} ,\{4,1,1\} ,\\
- & \{1,2,3\} ,\{1,3,2\} ,\{2,1,3\} ,\{2,3,1\} ,\{3,1,2\} ,\{3,2,1\} ,\\
- & \{2,2,2\})
-\end{aligned}\\
-\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10}{6^{3}} \approx 0.0463
-\end{gather*}
+	\item Lanciando $3$ volte il dado lo spazio campionario diventa
+	\begin{equation*}
+		\Omega =\{( i,j,k) :i,j,k=1,\dots ,6\} =\{1,\dots ,6\}^{3} \ \ \ \ | \Omega | =6^{3} =216
+	\end{equation*}
 
-\begin{oss}
-Avremmo potuto risolvere l'esercizio anche sfruttando il concetto di permutazioni, definendo\begin{gather*}
-C=\text{possibili permutazioni di} \ \begin{cases}
-\{1,2,3\} & \rightarrow 3!=6\ \text{permutazioni}\\
-\{2,2,2\} & \rightarrow 1\ \text{permutazione}\\
-\{1,1,4\} & \rightarrow 3!/2!=3\ \text{permutazioni}
-\end{cases}\\
-\implies | C| =6+3+1=10
-\end{gather*}
-\end{oss}
+	Sia $C$ l'evento "la somma dei dadi è $6$"
+	\begin{gather*}
+		\begin{aligned}
+			C= & (\{1,1,4\} ,\{1,4,1\} ,\{4,1,1\} ,\\
+			 & \{1,2,3\} ,\{1,3,2\} ,\{2,1,3\} ,\{2,3,1\} ,\{3,1,2\} ,\{3,2,1\} ,\\
+			 & \{2,2,2\})
+		\end{aligned}\\
+		\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10}{6^{3}} \approx 0.0463
+	\end{gather*}
+
+	\begin{oss}
+		Avremmo potuto risolvere l'esercizio anche sfruttando il concetto di permutazioni, definendo
+		\begin{gather*}
+			C=\text{possibili permutazioni di} \ 
+			\begin{cases}
+				\{1,2,3\} & \rightarrow 3!=6\ \text{permutazioni}\\
+				\{2,2,2\} & \rightarrow 1\ \text{permutazione}\\
+				\{1,1,4\} & \rightarrow 3!/2!=3\ \text{permutazioni}
+			\end{cases}\\
+			\implies | C| =6+3+1=10
+		\end{gather*}
+	\end{oss}
+	
 \end{enumerate}
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Consideriamo i due eventi
 \begin{itemize}
-\item $A=$ "vinco", i.e. azzecco la cinquina vincente
-\item $B=$ "vinco senza precisare l'ordine"
+	\item $A=$ "vinco", i.e. azzecco la cinquina vincente
+	\item $B=$ "vinco senza precisare l'ordine"
 \end{itemize}
 
 Svolgiamo l'esercizio in $3$ diversi modi.
@@ -437,42 +459,46 @@ Guardiamo tutta la classifica. In questo caso dobbiamo considerare le permutazio
 \Omega =\{( \omega _{1} ,\dots ,\omega _{40}) :\omega _{i} \in \{1\dots 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
 \end{equation*}
 \begin{enumerate}
-\item Evento $A$.\begin{equation*}
-\begin{array}{ r l }
-\begin{drcases}
-\text{scelgo il numero} \ 1: & 1\ \text{modo}\\
-\vdots  & \vdots \\
-\text{scelgo il numero} \ 5: & 1\ \text{modo}
-\end{drcases} & \text{un modo per la cinquina vincente}\\
-\begin{drcases}
-\text{scelgo il numero} \ 6: & 35\ \text{modi}\\
-\text{scelgo il numero} \ 7: & 34\ \text{modi}\\
-\vdots  & \vdots \\
-\text{scelgo il numero} \ 40: & 1\ \text{modo}
-\end{drcases} & 35!
-\end{array}
-\end{equation*}
+\item Evento $A$.
+
+\begin{center}
+\addstackgap[5pt]{
+	\begin{tabular}{cc|c}
+		\hline 
+		scelgo il numero $1$: & $1$ modo & \multirow{3}{*}{$1$ permutazione} \\
+		$\vdots $ & $\vdots $ &   \\
+		scelgo il numero $5$: & $1$ modo &   \\
+		\hline 
+		scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
+		scelgo il numero $7$: & $34$ modi &   \\
+		$\vdots $ & $\vdots $ &   \\
+		scelgo il numero $40$: & $1$ modo &   \\
+		\hline
+	\end{tabular}
+	}
+\end{center}
 
 i.e. $| A| =35!\implies \PP( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{-8}$.
 \item Evento $B$. Simile a prima, ma abbiamo $5!$ modi di scegliere i primi $5$ arrivati:
 
-\begin{equation*}
-\begin{array}{ r l }
-\begin{drcases}
-\text{scelgo il numero} \ 1: & 1\ \text{modo}\\
-\vdots  & \vdots \\
-\text{scelgo il numero} \ 5: & 1\ \text{modo}
-\end{drcases} & \text{di questi tutte le permutazioni}\rightarrow 5!\\
-\begin{drcases}
-\text{scelgo il numero} \ 6: & 35\ \text{modi}\\
-\text{scelgo il numero} \ 7: & 34\ \text{modi}\\
-\vdots  & \vdots \\
-\text{scelgo il numero} \ 40: & 1\ \text{modo}
-\end{drcases} & 35!
-\end{array}
-\end{equation*}
+\begin{center}
+\addstackgap[5pt]{
+	\begin{tabular}{cc|c}
+		\hline 
+		scelgo il numero $1$: & $5$ modi & \multirow{3}{*}{$5!$ permutazioni} \\
+		$\vdots $ & $\vdots $ &   \\
+		scelgo il numero $5$: & $1$ modo &   \\
+		\hline 
+		scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
+		scelgo il numero $7$: & $34$ modi &   \\
+		$\vdots $ & $\vdots $ &   \\
+		scelgo il numero $40$: & $1$ modo &   \\
+		\hline
+	\end{tabular}
+	}
+\end{center}
 
-i.e. $| A| =5!\cdot 35!\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{35!\ 5!}{40!} \approx 1.5\times 10^{-6}$.
+i.e. $|B| =5!\cdot 35!\implies \PP(B) = |B|/|\Omega| = 35!\cdot 5! / 40! \approx 1.5\times 10^{-6}$.
 \end{enumerate}
 
 \textbf{Metodo 3.}
@@ -485,6 +511,7 @@ Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 \begin{equation*}
 | B| =1\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
 \end{equation*}
+
 \Soluzione
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\PP( A) =\frac{| A| }{| \Omega | }$.
@@ -518,18 +545,23 @@ Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso gior
 
 Si può calcolare $n$ per cui $q_{n}  >\frac{1}{2}$: $n=253$.
 \end{enumerate}
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. Pensiamo all'esperimento casuale come segue: lo spazio degli esiti è dato da tutte le giocate possibili, ossia scegliamo una combinazione di $90$ numeri di classe $6$:
@@ -706,6 +738,7 @@ Il numero sbagliato può essere uno qualsiasi dei $6$ numeri che ho scelto, quin
 A\cup B\implies \PP( A\cup B) =\PP( A) +\PP( B) =\frac{7}{\binom{90}{6}} \approx 1.12\times 10^{-8}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
 
 Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ "esce l'oggetto $m$ all'estrazione $j$":
@@ -720,7 +753,7 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} 
  & =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\}\\
  & \implies | \Omega | =n^{k}
 \end{align*}
-\item $( \Leftarrow )$ Ipotesi:
+\item $(\impliedby)$ Ipotesi:
 \begin{enumerate}
 \item le $k$ estrazioni sono indipendenti, i.e.\begin{equation*}
 \PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right)
@@ -775,7 +808,7 @@ Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-
 \end{align*}
 \end{oss}
 
-$( \Leftarrow )$ Esercizio.
+$( \impliedby )$ Esercizio.
 \item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque\begin{equation*}
 | A| =k!,\ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
 \end{equation*}
@@ -798,7 +831,9 @@ $( \Leftarrow )$ Esercizio.
 \item La probabilità uniforme \textit{dipende} da $\Omega $, confronta punti $1b$ e $2b$.
 \end{itemize}
 \end{itemize}
+
 \Soluzione
+
 \begin{equation*}
 \begin{drcases}
 7\ \text{blu}\\
@@ -860,21 +895,27 @@ Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre
 
 Questo caso si tratta esattamente come il metodo $2$ del punto precedente.
 \end{enumerate}
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di classe $5$, i.e.
