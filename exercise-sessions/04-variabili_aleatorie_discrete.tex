@@ -63,7 +63,8 @@ Se $X$ è VA reale con funzione di ripartizione $F_{X}$ costante a tratti, allor
 \end{oss}
 Esempio. Sia $X$ la VA che indica il numero di teste ottenute in un lancio di $3$ monete non truccate. Si può calcolare
 \begin{equation*}
-\PP( X\leq x) =F_{X}( x) =\begin{cases}
+\PP( X\leq x) =F_{X}( x) =
+\begin{cases}
 0 & \text{se} \ x< 0\\
 \frac{1}{8} & \text{se} \ 0\leq x< 1\\
 \frac{1}{2} & \text{se} \ 1\leq x< 2\\
@@ -162,6 +163,7 @@ $( 3)$ e $( 4)$ ci dicono che: se i punti di $S$ possono essere numerati in modo
 
 $( 5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \mathcal{A}$ a partire dalla densità di probabilità $p_{X}$.
 \end{oss}
+
 \Esercizio{fatto}
 
 Si consideri la probabilità uniforme nell'intervallo $[ 0,1$] su $(\mathbb{R} ,\mathcal{B})$. Qui si definiscano le funzioni
@@ -172,7 +174,8 @@ Si consideri la probabilità uniforme nell'intervallo $[ 0,1$] su $(\mathbb{R} ,
 
 dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ indica la funzione indicatrice dell'insieme $A\in \mathcal{B}$, ossia
 \begin{equation*}
-\Ind_{A}( \Omega ) \coloneqq \begin{cases}
+\Ind_{A}( \Omega ) \coloneqq
+\begin{cases}
 1,\ \omega \in A,\\
 0,\ \omega \notin A,
 \end{cases}
@@ -183,6 +186,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ i
 \item Si determinino legge $P^{X} ,P^{Y}$ e valore atteso $\EE[ X] ,\EE[ Y]$.
 \item Si esibisca un'altra variabile aleatoria $X' $ con la stessa legge di $X$, ma definita su uno spazio $\Omega ' $ discreto.
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $\Omega =[ 0,1]$ e si consideri la $\sigma $-algebra di Borel $A=\mathcal{B}([ 0,1])$. Si definisca $\PP$ la probabilità uniforme su $( \Omega ,\mathcal{A})$, caratterizzata dalla proprietà:
@@ -203,11 +207,13 @@ dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \ma
 \item Si mostri che $X$, $Y$ e $Z$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y=Z$ q.c.
 \item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\EE[ X] ,\EE[ Y] ,\EE[ Z]$.
 \end{enumerate}
+
 \Esercizio{}
 
 Si consideri la funzione reale di variabile reale
 \begin{equation*}
-F( x) =\begin{cases}
+F( x) =
+\begin{cases}
 0, & x< 0,\\
 1/2, & 0\leq x< 1,\\
 2/3, & 1\leq x< \ 2,\\
@@ -217,8 +223,10 @@ F( x) =\begin{cases}
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che $F$ è la funzione di ripartizione di una probabilità $\PP$ su $(\mathbb{R} ,\mathcal{B})$.
-\item Si mostri che $\PP$ è una probabilità discreta su $(\mathbb{R} ,\mathcal{B})$, trovando i punti $x_{k}$ dove $\PP$ è concentrata e le corrispondenti probabilità $p_{k}$, o equivalentemente determinando la densità (discreta) $p:\mathbb{R}\rightarrow [ 0,1]$ definita come segue:\begin{equation*}
-p( x) =P(\{x\}) =\begin{cases}
+\item Si mostri che $\PP$ è una probabilità discreta su $(\mathbb{R} ,\mathcal{B})$, trovando i punti $x_{k}$ dove $\PP$ è concentrata e le corrispondenti probabilità $p_{k}$, o equivalentemente determinando la densità (discreta) $p:\mathbb{R}\rightarrow [ 0,1]$ definita come segue:
+\begin{equation*}
+p( x) =P(\{x\}) =
+\begin{cases}
 p_{k} & \text{se} \ x=x_{k}\\
 0 & \text{altrimenti}
 \end{cases}
@@ -233,6 +241,7 @@ per ogni $x\in \mathbb{R}$.
 \item Determinare i quartili di $X$.
 \item Mostrare che $Y=( X-2)^{2}$ è una variabile aleatoria discreta. Determinarne legge e valore atteso.
 \end{enumerate}
+
 \Esercizio{}
 
 Si consideri la funzione
@@ -254,6 +263,7 @@ Sia dunque $X$ una variabile aleatoria discreta con funzione di ripartizione $F$
 \item $0\leq X< \frac{1}{2}$.
 \end{enumerate}
 \end{enumerate}
+
 \Esercizio{fatto}
 
 Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma ( E_{k} \ |\ k=1,2,\dots )$ con
@@ -275,12 +285,14 @@ X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}( \omega ) =\omega _{n} ,\ \ 
 \end{enumerate}
 
 Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $( \Omega ' ,\mathcal{A} ' ,\PP ' )$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} ' $ indipendenti e tali che $\PP ' ( E_{n} ' ) =p$, ed avessimo poi posto $X_{n} ' =\Ind_{E_{n} ' }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
+
 \Esercizio{$\star$}
 
 Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dots \}$. Si mostri che
 \begin{equation*}
 \EE[ X] =\sum\limits _{n=0}^{\infty }\PP( X >n) .
 \end{equation*}
+
 \Esercizio{(Distribuzione binomiale). fatto}
 
 Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $n\in \mathbb{N}$ e $0< p< 1$. Scriviamo $X\sim B( n,p)$.
@@ -289,6 +301,7 @@ Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $
 \item Calcolare la varianza di $X$.
 \item Calcolare le mode di $X$, ovvero i punti di massimo della densità discreta di $X$.
 \end{enumerate}
+
 \Esercizio{(Distribuzione di Poisson). fatto}
 
 Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. Scriviamo $X\sim P( \lambda )$.
@@ -298,6 +311,7 @@ Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. 
 \item Calcolare le mode di $X$.
 \item Dato $k\in \{1,2,\dots \}$, quale $\lambda  >0$ massimizza $\PP( X=k)$?
 \end{enumerate}
+
 \Esercizio{(Distribuzione geometrica). fatto}
 
 Si consideri $X\sim \mathcal{G}( p)$, variabile aleatoria geometrica di parametro $p$, $0< p< 1$. Si ha pertanto
@@ -312,6 +326,7 @@ Si consideri $X\sim \mathcal{G}( p)$, variabile aleatoria geometrica di parametr
 \item (Proprietà di assenza di memoria) Mostrare che $\PP( X >i+j\ |\ X >i) =\PP( X >j)$ per ogni $i,j\in \mathbb{N}$.
 \item (*) Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale discreta a valori in $\mathbb{N}$ tale che $\PP( T >i+j\ |\ T >i) =\PP( T >j)$ per ogni $i,j\in \mathbb{N}$, allora $T\sim \mathcal{G}( q$) con $q=\PP( T=1)$.
 \end{enumerate}
+
 \Esercizio{}
 
 Data una variabile aleatoria $X$ di Poisson di media $3$, si considerino
@@ -323,6 +338,7 @@ Y=\min( 3,X) ,\ \ \ \ W=e^{X/3} .
 \item Si calcolino le loro distribuzioni.
 \item Si calcolino le loro medie.
 \end{enumerate}
+
 \Esercizio{}
 
 Data una variabile aleatoria $X$ con distribuzione geometrica di media $3$, si considerino
@@ -334,6 +350,7 @@ Y=\min( 3,X) ,\ \ \ \ W=e^{X/3} .
 \item Si calcolino le loro distribuzioni.
 \item Si calcolino le loro medie.
 \end{enumerate}
+
 \Esercizio{fatto}
 
 In una certa provincia montuosa si può supporre che il numero $X$ di frane al mese sia una variabile aleatoria con legge di Poisson di parametro $\lambda =2.3$.
@@ -342,6 +359,7 @@ In una certa provincia montuosa si può supporre che il numero $X$ di frane al m
 \item Calcolare mediana e quantile di ordine $0.6$ del numero di frane mensili.
 \item Quanto dovrebbe valere il parametro $\lambda $ affinché la probabilità che in un mese non ci siano frane sia superiore a $1/2$?
 \end{enumerate}
+
 \Esercizio{}
 
 Al buio cerco la chiave del mio ufficio in un mazzo di $10$ chiavi tutte della stessa fattura. Ovviamente metto da parte le chiavi provate. Sia $X$ il numero di chiavi che devo provare per aprire l'ufficio.
@@ -352,6 +370,7 @@ Al buio cerco la chiave del mio ufficio in un mazzo di $10$ chiavi tutte della s
 \item Sapendo che al primo tentativo non ho trovato la chiave giusta, con quale probabilità non la trovo neanche al secondo?
 \item Come cambiano le risposte ai punti precedenti se stupidamente non metto da parte le chiavi già provate prima di procedere a provarne una nuova?
 \end{enumerate}
+
 \Esercizio{}
 
 Nel Gioco del Lotto ad ogni estrazione settimanale $5$ numeri vengono estratti simultaneamente da un'urna che contiene $90$ palline numerate da $1$ a $90$. Fissato un numero, ad esempio il $67$, sia $p$ la probabilità che esca in una singola estrazione.
@@ -362,6 +381,7 @@ Nel Gioco del Lotto ad ogni estrazione settimanale $5$ numeri vengono estratti s
 \item Qual è la probabilità che esca almeno $6$ volte nelle prime $50$ estrazioni?
 \item Se nelle prime $10$ estrazioni il $67$ è comparso $2$ volte, con quale probabilità è comparso alle prime $2$ estrazioni?
 \end{enumerate}
+
 \Esercizio{fatto}
 
 Un'urna contiene una pallina rossa ed una blu. Una pallina viene estratta a caso. Se è blu il gioco termina. Se è rossa la pallina viene rimessa nell'urna insieme ad un'altra rossa.
@@ -374,6 +394,7 @@ Un'urna contiene una pallina rossa ed una blu. Una pallina viene estratta a caso
 \item Determinare la distribuzione di $Y$ e il suo valore atteso.
 \end{enumerate}
 \end{enumerate}
+
 \Esercizio{fatto}
 
 I punti $N$ realizzati dai Caprica Buccaneers in una partita di Piramid hanno distribuzione di Poisson di media $\lambda $. Vi propongono di scommettere contro i Caprica Buccaneers alla prossima partita: a fronte di una vostra puntata unitaria riceverete un ricavo pari a
@@ -394,20 +415,10 @@ Si supponga che la scommessa proposta sia equa.
 \item Qual è il ricavo più probabile?
 \end{enumerate}
 
-
-
-
-
-
-
 \ParteSoluzioni
 
-
-
-
-
-
 \Soluzione
+
 \begin{enumerate}
 \item Mostriamo innanzitutto che
 \begin{equation*}
@@ -419,7 +430,8 @@ sono VA reali. Secondo la definizione dobbiamo mostrare che
 \forall B\in \mathcal{B} ,\ \ \ \ X^{-1}( B) \in \mathcal{B} ,\ \ \ \ Y^{-1}( B) \in \mathcal{B} ,
 \end{equation*}
 
-i.e. $X,Y$ sono misurabili.\begin{oss}
+i.e. $X,Y$ sono misurabili.
+\begin{oss}
 Se $( \Omega ,\mathcal{A} ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \mathcal{A}$. Infatti
 \begin{equation*}
 \Ind_{A} :( \Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \mathbb{R}
@@ -445,7 +457,8 @@ Per dimostrare che $X,Y$ sono VA discrete, dobbiamo dimostrare che la legge imma
 
 Inoltre
 \begin{equation*}
-p_{X}( x) =\PP( X=x) =\begin{cases}
+p_{X}( x) =\PP( X=x) =
+\begin{cases}
 p, & x=1\\
 1-p, & x=0
 \end{cases}
@@ -468,9 +481,11 @@ Infatti
  & =1-p
 \end{align*}
 
-Possiamo allora determinare la legge di $X$\begin{gather*}
+Possiamo allora determinare la legge di $X$
+\begin{gather*}
 \forall B\in \mathcal{B} ,P^{X}( B) =\PP( X\in B) =\sum\limits _{x\in B\cap \{0,1\}} p_{X}( x) =\\
-=\begin{cases}
+=
+\begin{cases}
 p, & B=\{1\}\\
 1-p, & B=\{0\}\\
 0 & \text{altrimenti}
@@ -490,7 +505,8 @@ Quindi da $\mathrm{Im}( Y)$ non possiamo dedurre nulla.
 
 Se però proviamo che $X=Y$ q.c. allora, in particolare, avranno la stessa legge $X\sim Y\sim B( n) \implies Y$ discreta.
 
-Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\PP( X=Y) =1$.\begin{align*}
+Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\PP( X=Y) =1$.
+\begin{align*}
 \PP( X=Y) & =\PP(\{\omega \in \Omega :X( \omega ) =Y( \omega )\})\\
  & =\PP(\{\omega \in \Omega :X( \omega ) -Y( \omega ) =0\})\\
  & =\PP(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\})
@@ -502,7 +518,8 @@ Abbiamo che
 \omega \in [ 0,1] & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0
 \end{align*}
 
-i.e.\begin{equation*}
+i.e.
+\begin{equation*}
 \{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\} =[ 0,1]
 \end{equation*}
 
@@ -512,7 +529,8 @@ Quindi
 \end{equation*}
 
 i.e. $X=Y$ q.c.
-\item \begin{theorem}
+\item
+\begin{theorem}
 Sia $X$ una VA reale definita su $( \Omega ,\mathcal{A} ,\PP)$ e sia $h:\mathbb{R}\rightarrow \mathbb{R}$ boreliana. Allora
 \begin{equation*}
 \EE[| h( x)| ] =\int _{\Omega }| h( X( \omega ))| d\PP( \omega ) < +\infty \ \ \iff \ \ \int _{\mathbb{R}}| h( x)| P^{X}( dx) < +\infty 
@@ -524,17 +542,20 @@ Nel caso precedente, oppure se $h\geq 0$, valgono
 \EE[ h( X)] =\int _{\mathbb{R}} h( x) P^{X}( dx) \ \ \ \ \EE[ X] =\int _{\mathbb{R}} xP^{X}( dx)
 \end{equation*}
 
-Se, in particolare, $X$ è discreta con densità $p_{X}$\begin{equation*}
+Se, in particolare, $X$ è discreta con densità $p_{X}$
+\begin{equation*}
 \EE[ h( X)] =\sum\limits _{x\in S} h( x) p_{X}( x) \ \ \ \ \EE[ X] =\sum\limits _{x\in S} xp_{X}( x)
 \end{equation*}
 \end{theorem}
 
-Abbiamo già calcolato la legge di $X$ e $Y$: $X\sim Y\sim B( p)$.\begin{equation*}
+Abbiamo già calcolato la legge di $X$ e $Y$: $X\sim Y\sim B( p)$.
+\begin{equation*}
 \EE[ X] =\sum\limits _{x\in S} xp_{X}( x)\overset{S=\{0,1\}}{=}\underbrace{\sum\limits _{x\in \{0,1\}} xp_{X}( x) =0( 1-p) +1p}_{\text{ricordando la legge di } X} =p
 \end{equation*}
 
 Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
-\item Basta considerare l'identità (vedi esercizio $5$)\begin{gather*}
+\item Basta considerare l'identità (vedi esercizio $5$)
+\begin{gather*}
 \Omega '=\{0,1\} ,\ \ \ \ \mathcal{A} '=2^{\Omega '} ,\ \ \ \ \PP =P^{X} ,\ \ \ \ \tilde{X}( \omega ) \coloneqq \omega \\
 \begin{aligned}
 \tilde{X} =I:( \Omega ',\mathcal{A} ') & \rightarrow ( \Omega ',\mathcal{A} ')\\
@@ -546,19 +567,26 @@ Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
 In generale è sempre possibile costruire uno spazio di probabilità $( \Omega ,\mathcal{F} ,\PP)$ e una VA $X$ su di esso che ha $p( \cdotp )$ come densità, i.e. tale che $p_{X}( x) =p( x)$. Infatti basta prendere $\Omega =S,\mathcal{F} =\mathcal{P}( S)$ e $p$ l'unica misura di probabilità su $S$ tale che $\PP(\{x_{k}\}) =p( x_{k})$ con $k\in I$. È immediato verificare che la VA discreta $X( \omega ) =\omega ,\forall \omega \in \Omega $ ha densità $p( \cdotp )$.
 \end{oss}
 \end{enumerate}
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Manca.
+
 \Soluzione
+
 \begin{enumerate}
-\item Fissiamo $\omega \in \Omega $. Dobbiamo mostrare che $X_{n}\left( \omega \right) =\Ind_{E_{n}}\left( \omega \right)$. Ricordiamo che $E_{n} =\left\{\omega \in \Omega :\omega _{n} =1\right\}$. Abbiamo $\forall \omega \in \Omega $:\begin{equation}
-X_{n}\left( \omega \right) =\omega _{n} =\begin{cases}
+\item Fissiamo $\omega \in \Omega $. Dobbiamo mostrare che $X_{n}\left( \omega \right) =\Ind_{E_{n}}\left( \omega \right)$. Ricordiamo che $E_{n} =\left\{\omega \in \Omega :\omega _{n} =1\right\}$. Abbiamo $\forall \omega \in \Omega $:
+\begin{equation}
+X_{n}\left( \omega \right) =\omega _{n} =
+\begin{cases}
 1, & \omega _{n} =1\\
 0, & \omega _{n} =0
 \end{cases}
@@ -566,7 +594,8 @@ X_{n}\left( \omega \right) =\omega _{n} =\begin{cases}
 
 e
 \begin{equation}
-\Ind_{E_{n}}\left( \omega \right) =\begin{cases}
+\Ind_{E_{n}}\left( \omega \right) =
+\begin{cases}
 1, & \omega \in E_{n} \iff \omega _{n} =1\\
 0, & \omega \notin E_{n} \iff \omega _{n} =0
 \end{cases}
@@ -580,7 +609,8 @@ Da (1) e (2) si allora che
 \begin{oss}
 Questo ci dice che la VA $X_{n}$ rappresenta l'esito della $n$-esima prova, i.e. $1$ se otteniamo un successo, $0$ altrimenti.
 \end{oss}
-\item Sono funzioni a valori reali. In particolare $\forall n,\mathrm{Im}( X_{n}) =\{0,1\} \implies $ sono discrete. Resta da verificare che sono VA, ovvero che sono misurabili, i.e.\begin{gather*}
+\item Sono funzioni a valori reali. In particolare $\forall n,\mathrm{Im}( X_{n}) =\{0,1\} \implies $ sono discrete. Resta da verificare che sono VA, ovvero che sono misurabili, i.e.
+\begin{gather*}
 \begin{aligned}
 X_{n}( \Omega ,\mathcal{A}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
 \omega  & \mapsto X_{n}( \omega ) =\omega _{n}
@@ -588,10 +618,12 @@ X_{n}( \Omega ,\mathcal{A}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
 X_{n}^{-1}( B) \in \mathcal{A} ,\forall B\in \mathcal{B}
 \end{gather*}
 
-Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$\begin{align*}
+Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$
+\begin{align*}
 X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty ,t]\}\\
  & =\{\omega \in \Omega :\Ind_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
- & =\Ind_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
+ & =\Ind_{E_{n}}^{-1}( -\infty ,t] =
+\begin{cases}
 \emptyset , & t< 0\\
 E_{n}\comp , & 0\leq t< 1\\
 \Omega , & t\geq 1
@@ -600,7 +632,8 @@ E_{n}\comp , & 0\leq t< 1\\
 
 Nell'ultimo passaggio bisogna ricordare che
 \begin{equation*}
-\Ind_{E_{n}} \in \{0,1\} ,\ \ \ \ \Ind_{E_{n}}( \omega ) =\begin{cases}
+\Ind_{E_{n}} \in \{0,1\} ,\ \ \ \ \Ind_{E_{n}}( \omega ) =
+\begin{cases}
 1, & \omega \in E_{n}\\
 0, & \omega \notin E_{n}
 \end{cases}
@@ -620,7 +653,8 @@ quindi
 
 \begin{gather*}
 p_{X_{n}} :\{0,1\}\rightarrow [ 0,1]\\
-p_{X_{n}}( x) =\PP( X_{n} =x) =\begin{cases}
+p_{X_{n}}( x) =\PP( X_{n} =x) =
+\begin{cases}
 p, & x=1\\
 1-p, & x=0
 \end{cases}
@@ -628,14 +662,16 @@ p, & x=1\\
 
 Infine
 \begin{equation*}
-P^{X}( B) =\sum\limits _{x\in B\cap \{0,1\}} p_{X_{n}}( x) =\begin{cases}
+P^{X}( B) =\sum\limits _{x\in B\cap \{0,1\}} p_{X_{n}}( x) =
+\begin{cases}
 p, & B=\{1\}\\
 1-p, & B=\{0\}\\
 0 & \text{altrimenti}
 \end{cases}
 \end{equation*}
 
-i.e.\begin{equation*}
+i.e.
+\begin{equation*}
 \boxed{X_{n} \sim B( p)}
 \end{equation*}
 \item $Y_{n} =\sum\limits _{k=1}^{n} X_{k}$
@@ -646,7 +682,8 @@ i.e.\begin{equation*}
 
 Descrive il numero di successi in $n$ prove di Bernoulli.
 
-Densità discreta:\begin{gather*}
+Densità discreta:
+\begin{gather*}
 p_{Y_{n}} :\{0,\dots ,n\}\rightarrow [ 0,1]\\
 \begin{aligned}
 p_{Y_{n}}( 0) & =\PP( Y_{n} =0) =\PP( X_{1} +\cdots +X_{n} =0) =\PP\left(\bigcap _{j=1}^{n} E_{j}\comp\right) =( 1-p)^{n}\\
@@ -657,11 +694,13 @@ p_{Y_{n}}( k) & =\PP( Y_{n} =k) =\PP( X_{1} +\cdots +X_{n} =k) =\PP\left(\bigcup
 \end{aligned}
 \end{gather*}
 
-i.e.\begin{equation*}
+i.e.
+\begin{equation*}
 \forall k,\ \ \ \ p_{Y_{n}}\left( k\right) =\binom{n}{k} p^{k}\left( 1-p\right)^{n-k} ,\ \ \ \ Y_{n} \sim B\left( n,p\right)
 \end{equation*}
 
-la somma di $n$ Bernoulliane di parametro $p$ è una Binomiale $B\left( n,p\right)$.\begin{oss}
+la somma di $n$ Bernoulliane di parametro $p$ è una Binomiale $B\left( n,p\right)$.
+\begin{oss}
 Questo risultato non è vero in generale. La somma di VA bernoulliane è binomiale solo se queste sono indipendenti e con la stessa probabilità di successo $p$.
 \end{oss}
 
@@ -671,7 +710,8 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
 \end{equation*}
 
-$Z$ è il numero minimo di prove per dare un successo.\begin{align*}
+$Z$ è il numero minimo di prove per dare un successo.
+\begin{align*}
 \overbrace{p_{Z}( +\infty ) =\PP( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\comp\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\comp\right)\\
  & =\lim _{n\rightarrow \infty }( 1-p)^{n} =0
 \end{align*}
@@ -699,7 +739,8 @@ Quindi
 \underbrace{\overbrace{0,0,0}^{W=3} ,1}_{Z=4} ,\dots \implies W=Z-1\ \text{q.c.}
 \end{equation*}
 
-Quindi $W$ è una VA discreta.\begin{gather*}
+Quindi $W$ è una VA discreta.
+\begin{gather*}
 p_{W} :\{0,1,\dots \}\rightarrow [ 0,1]\\
 p_{W}( k) =\PP( W=k) =\PP( Z-1=k) =\underbrace{\PP( Z=k+1) =p( 1-p)^{k}}_{Z\sim \mathcal{G}( p)}
 \end{gather*}
@@ -717,7 +758,8 @@ l'ultimo passaggio è giustificato dal fatto che
  & =\sup _{n\geq 0}\inf_{k\geq n}\Ind_{E_{k}} & \Ind_{A\cap B} =\inf\{\Ind_{A} ,\Ind_{B}\}
 \end{align*}
 
-Analogamente,\begin{equation*}
+Analogamente,
+\begin{equation*}
 U=\limsup _{n} X_{n} =\Ind_{\limsup\limits _{n} E_{n}}
 \end{equation*}
 
@@ -726,7 +768,8 @@ Allora
 \mathrm{Im}( V) =\mathrm{Im}( U) =\{0,1\}
 \end{equation*}
 
-Ricaviamoci la densità discreta di $V$ (il procedimento per $U$ è simile)\begin{gather*}
+Ricaviamoci la densità discreta di $V$ (il procedimento per $U$ è simile)
+\begin{gather*}
 p_{V} :\{0,1\}\rightarrow [ 0,1]\\
 p_{V}( 1) =\PP( V=1) =\PP\left(\liminf _{n} X_{n} =1\right) =\PP\left(\liminf _{n} E_{n}\right)
 \end{gather*}
@@ -757,7 +800,8 @@ p_{V}( 0) & =\PP( V=0) =1-\PP( V=1) =1
 
 Concludiamo che
 \begin{equation*}
-p_{V}\left( k\right) =\PP\left( V=k\right) =\begin{cases}
+p_{V}\left( k\right) =\PP\left( V=k\right) =
+\begin{cases}
 0, & k=1\\
 1, & k=0
 \end{cases}
@@ -804,9 +848,11 @@ Z:\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right) & \rightarrow (\mathbb{R} ,\
 \implies Z\sim B( p)
 \end{gather*}
 \end{oss}
+
 \Soluzione
 
 Manca.
+
 \Soluzione
 
 Richiami**************
@@ -817,10 +863,12 @@ Richiami**************
 \item $n$ i.e. il numero di prove effettuate
 \item $p$ i.e. la probabilità di successo della singola prova di Bernoulli $( 0\leq p\leq 1)$.
 \end{itemize}
-\item Formalmente $X\sim B( n,p)$ si scrive come somma di $n$ VA $\Bot $ $X_{i} \sim B( p)$ (bernoulliane di parametro $p$)\begin{equation*}
+\item Formalmente $X\sim B( n,p)$ si scrive come somma di $n$ VA $\Bot $ $X_{i} \sim B( p)$ (bernoulliane di parametro $p$)
+\begin{equation*}
 X=\sum\limits _{i=1}^{n} X_{i}
 \end{equation*}
-\item La distribuzione di probabilità di $X\sim B( n,p)$, dimostrata formalmente nel punto (4) di Es. 5, è la probabilità di avere $k$ successi in $n$ prove, con probabilità di successo $p$\begin{equation*}
+\item La distribuzione di probabilità di $X\sim B( n,p)$, dimostrata formalmente nel punto (4) di Es. 5, è la probabilità di avere $k$ successi in $n$ prove, con probabilità di successo $p$
+\begin{equation*}
 \boxed{p_{X}( k) =\PP( X=k) =\binom{n}{k} p^{k}( 1-p)^{n-k}}
 \end{equation*}
 \end{itemize}
@@ -845,7 +893,8 @@ Vamonos ora! Hay carramba!
 
 \textbf{[Metodo 1]}
 
-Utilizziamo la definizione di $\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:\begin{equation*}
+Utilizziamo la definizione di $\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:
+\begin{equation*}
 p_{X}( x) =\PP( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
 \end{equation*}
 Avremo
@@ -870,7 +919,8 @@ Utilizziamo il fatto che
 X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \Bot 
 \end{equation*}
 
-e la linearità di $\EE$\begin{equation*}
+e la linearità di $\EE$
+\begin{equation*}
 \EE[ X] =\EE\left[\sum\limits _{i=1}^{n} X_{i}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\EE[ X_{i}] =\sum\limits _{i=1}^{n} p=np
 \end{equation*}
 \item Ricordiamo che TEORIA OVER HEREEEEE
@@ -1015,24 +1065,28 @@ k\leq p( n+1)
 
 Quindi
 \begin{equation*}
-\text{Moda}( X) =\begin{cases}
+\text{Moda}( X) =
+\begin{cases}
 p( n+1) -1\ \text{e} \ p( n+1) , & p( n+1) \in \mathbb{N}\\
 \lfloor p( n+1)\rfloor , & p( n+1) \notin \mathbb{N}
 \end{cases}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
 
 Ricordiamo che: per $\lambda  >0$ la densità di Poisson di parametro $\lambda $ è
 \begin{equation*}
-p( k) \coloneqq \begin{cases}
+p( k) \coloneqq
+\begin{cases}
 e^{-\lambda }\frac{\lambda ^{k}}{k!} , & k\in \{0,1,2,\dots \}\\
 0, & k\notin \{0,1,2,\dots \}
 \end{cases}
 \end{equation*}
 Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriviamo $X\sim \mathcal{P}( \lambda )$.
 \begin{enumerate}
-\item \begin{align*}
+\item
+\begin{align*}
 \EE[ X] & \coloneqq \int _{\Omega } X( \omega ) d\PP( \omega ) =\int _{\mathbb{R}} xdP^{X}( x) & \\
  & =\sum\limits _{k=0}^{\infty } kp_{X}( k) & \\
  & =\sum\limits _{k=1}^{\infty } ke^{-\lambda }\frac{\lambda ^{k}}{k!} & \text{(} k\ \text{dà contributo nullo)}\\
@@ -1040,17 +1094,21 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
  & =\lambda \sum\limits _{x=0}^{\infty } e^{-\lambda }\frac{\lambda ^{x}}{x!} & k-1=:x\\
  & =\lambda  & 
 \end{align*}
-\item \begin{equation*}
+\item
+\begin{equation*}
 \mathrm{Var}[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
 \end{equation*}
 
-Per esercizio, calcolare $\EE\left[ X^{2}\right]$ e concludere:\begin{equation*}
+Per esercizio, calcolare $\EE\left[ X^{2}\right]$ e concludere:
+\begin{equation*}
 X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda 
 \end{equation*}
 \item Si procede come in Es. 7.
 \item hahahah
 \end{enumerate}
+
 \Soluzione
+
 \begin{oss}
 $\PP( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\Bot $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP( X=k) =p( 1-p)^{k-1}$.
 \end{oss}
@@ -1063,16 +1121,19 @@ X\sim \mathcal{G}( p) \ \ \ \ \text{i.e.} \ \ \ \ \PP( X=k) =p( 1-p)^{k-1} =:\ti
 
 \textbf{Spazio di probabilità discreto:}
 
-$( \Omega ,\mathcal{A} ,\PP)$ con $\Omega =\mathbb{N} ,\mathcal{A} =2^{\mathbb{N}}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.\begin{equation}
+$( \Omega ,\mathcal{A} ,\PP)$ con $\Omega =\mathbb{N} ,\mathcal{A} =2^{\mathbb{N}}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
+\begin{equation}
 \PP( k) =\tilde{p}( k) =p( 1-p)^{k-1}
 \end{equation}
 
-Con questa scelta di $( \Omega ,\mathcal{A} ,\PP)$ si ha che $X( \cdotp ) \coloneqq I( \cdotp )$\begin{align*}
+Con questa scelta di $( \Omega ,\mathcal{A} ,\PP)$ si ha che $X( \cdotp ) \coloneqq I( \cdotp )$
+\begin{align*}
 X:\left(\mathbb{N} ,2^{\mathbb{N}} ,\PP\right) & \rightarrow \mathbb{N}\\
 \omega  & \rightarrow X( \omega ) \coloneqq \omega ,\ \ \ \ X\sim \mathcal{G}( p)
 \end{align*}
 
-Verifica: dobbiamo mostrare che $\forall k\in \mathbb{N} ,p_{X}( k) =\tilde{p}( k)$\begin{align*}
+Verifica: dobbiamo mostrare che $\forall k\in \mathbb{N} ,p_{X}( k) =\tilde{p}( k)$
+\begin{align*}
 p_{X}( k) & =\PP( X=k)\\
  & =\PP(\{\omega \in \mathbb{N} :X( \omega ) =k\})\\
  & =\PP(\{\omega \in \mathbb{N} :\omega =k\})\\
@@ -1113,7 +1174,8 @@ con
 X\sim \mathcal{G}( p)
 \end{equation*}
 
-cioè\begin{equation*}
+cioè
+\begin{equation*}
 \forall B\in \mathcal{B}(\mathbb{R}) ,\ \ P^{X}( B) =\PP( X\in B)
 \end{equation*}
 
