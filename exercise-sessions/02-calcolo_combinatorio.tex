@@ -765,7 +765,8 @@ A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} 
 
 Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
-Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora\begin{align*}
+Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora
+\begin{align*}
 \PP(\{\omega \}) & =\PP(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
  & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
  & =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
@@ -789,7 +790,8 @@ Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezz
  & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
 \implies  & | \Omega | =n( n-1) \cdots ( n-k+1) =\frac{n!}{( n-k) !}
 \end{align*}
-\item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che\begin{equation*}
+\item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che
+\begin{equation*}
 \forall \omega \in \Omega \ \ \ \ \PP( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
 \end{equation*}
 
@@ -809,13 +811,15 @@ Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-
 \end{oss}
 
 $( \impliedby )$ Esercizio.
-\item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque\begin{equation*}
+\item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque
+\begin{equation*}
 | A| =k!,\ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
 \end{equation*}
 \end{enumerate}
 \item 
 \begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle combinazioni\begin{equation*}
+\item $\Omega $ è lo spazio campionario delle combinazioni
+\begin{equation*}
 \Omega =\{\omega \subset \{1,\dots ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
 \end{equation*}
 \item Sia $A$ come sopra, allora deve essere $\PP( A) =\frac{1}{\binom{n}{k}}$.
@@ -847,7 +851,8 @@ In questo caso abbiamo:\begin{equation*}
 \Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\}\}
 \end{equation*}
 
-Spazio campionario delle disposizioni con ripetizione\begin{equation*}
+Spazio campionario delle disposizioni con ripetizione
+\begin{equation*}
 | \Omega | =10^{4}
 \end{equation*}
 
@@ -862,7 +867,8 @@ Svolgiamo l'esercizio in due diversi modi, introducendo $\Omega $ in due diversi
 \Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
 \end{equation*}
 
-Spazio campionario delle disposizioni senza ripetizione\begin{equation*}
+Spazio campionario delle disposizioni senza ripetizione
+\begin{equation*}
 | \Omega | =10\cdot 9\cdot 8\cdot 7=\frac{10!}{6!}
 \end{equation*}
 
@@ -880,11 +886,13 @@ Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline
 \Omega =\{\omega \subset \{1,\dots ,10\} \ |\ | \omega | =4\}
 \end{equation*}
 
-Spazio campionario delle combinazioni\begin{equation*}
+Spazio campionario delle combinazioni
+\begin{equation*}
 | \Omega | =\binom{10}{4}
 \end{equation*}
 
-Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo\begin{gather*}
+Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo
+\begin{gather*}
 \binom{3}{2} \ \text{modi di scegliere le palline rosse}\\
 \binom{7}{2} \ \text{modi di scegliere le palline blu}\\
 \implies | A| =\binom{3}{2}\binom{7}{2}\\
@@ -946,7 +954,8 @@ In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}
 \item ho $\binom{4}{2}$ modi di scegliere i semi per la prima coppia
 \item ho $\binom{4}{2}$ modi di scegliere i semi per la seconda coppia
 \item mi rimangono $11$ possibilità tra cui scegliere il \textit{numero/figura} dell'ultima carta
-\item posso scegliere uno qualunque dei $4$ semi possibili per l'ultima carta\begin{equation*}
+\item posso scegliere uno qualunque dei $4$ semi possibili per l'ultima carta
+\begin{equation*}
 \implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
 \end{equation*}
 \end{enumerate}
@@ -956,7 +965,8 @@ A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
 \end{gather*}
 \begin{enumerate}
 \item $10$ possibilità $\rightarrow $ blocco la prima carta: ho $10$ possibilità, non posso far partire la scala da $J,Q,K$.
-\item per ogni carta ho $4$ possibilità sui semi\begin{equation*}
+\item per ogni carta ho $4$ possibilità sui semi
+\begin{equation*}
 \implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
 \end{equation*}
 \end{enumerate}
@@ -967,7 +977,8 @@ A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
 \item ho $13$ possibilità per il tipo del tris (es. esce il $3$)
 \item ho $\binom{4}{3}$ possibilità per scegliere il seme del tris
 \item ho $\binom{12}{2}$ possibilità per scegliere il tipo delle altre carte
-\item ho $4$ possibilità per scegliere il seme della quarta e della quinta carta\begin{equation*}
+\item ho $4$ possibilità per scegliere il seme della quarta e della quinta carta
+\begin{equation*}
 \implies \PP( D) =\frac{| D| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4}{\binom{52}{5}}
 \end{equation*}
 \end{enumerate}

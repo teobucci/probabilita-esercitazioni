@@ -341,12 +341,14 @@ $\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
 \left( A_{42} \mid \bigcap _{k=1}^{41} A_{k}\comp\right)
 \end{equation*}
 
-sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP( A\mid B) =\PP( A)$ se $A\Bot B$, si ha\begin{equation*}
+sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP( A\mid B) =\PP( A)$ se $A\Bot B$, si ha
+\begin{equation*}
 \left( A_{42} \mid\bigcap _{k=1}^{41} A_{k}\comp\right) =\underbrace{\PP( A_{42}) =\PP( A)}_{\text{primo punto}} \approx 0.0556
 \end{equation*}
 
 Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
-\item L'evento "almeno un $15$ su $42$ estrazioni" si traduce formalmente in\begin{equation*}
+\item L'evento "almeno un $15$ su $42$ estrazioni" si traduce formalmente in
+\begin{equation*}
 \bigcup _{k=1}^{42} A_{k}
 \end{equation*}
 
@@ -356,12 +358,14 @@ Ricordiamo che l'unica informazione che possiamo sfruttare è che gli evento $A_
 
 Per calcolare $\PP$ potremmo usare la relazione (si osservi che gli $A_{j}$ sono indipendenti \textit{non disgiunti}): $\PP( A\cup B) =\PP( A) +\PP( B) -\PP( A\cap B)$, ma diventa più complicata avendo $42$ eventi.
 
-Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo\begin{gather*}
+Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
+\begin{gather*}
 \left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)\comp\right)\comp =\left(\bigcap _{k} A_{k}\comp\right)\comp ,\ \ \ \ \PP\left( A\comp\right) =1-\PP( A) ,\\
 A_{k} \Bot \text{allora} \ A_{k}\comp \Bot ,
 \end{gather*}
 
-quindi\begin{align*}
+quindi
+\begin{align*}
 \PP\left(\bigcup _{k=1}^{42} A_{k}\right) & =\PP\left(\bigcap _{k} A_{k}\comp\right)\comp =1-\PP\left(\bigcap _{k} A_{k}\comp\right) =1-\prod _{k=1}^{42}\PP\left( A_{k}\comp\right)\\
  & =1-\prod _{k=1}^{42}\PP\left( A\comp\right) =1-\left[\PP\left( A\comp\right)\right]^{42}\\
  & =1-\left( 1-\frac{1}{18}\right)^{42} \approx 0.9093
@@ -374,11 +378,13 @@ Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose
 \PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})}
 \end{equation*}
 
-Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come\begin{equation*}
+Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come
+\begin{equation*}
 B_{1} =\bigcup _{j=1}^{42}\left( A_{j} \cap \bigcap _{k\neq j} A_{k}\comp\right) =
 \end{equation*}
 
-i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi\begin{equation*}
+i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi
+\begin{equation*}
 \PP( B_{1}) =42\PP( A_{j})\PP\left(\bigcap _{k\neq j} A_{j}\comp\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
 \end{equation*}
 
@@ -390,15 +396,18 @@ Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estr
  & =\PP( A)( 1-\PP( A))^{41} =\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}
 \end{align*}
 
-Infine\begin{equation*}
+Infine
+\begin{equation*}
 \PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
 \end{equation*}
-\item Osserviamo che\begin{gather*}
+\item Osserviamo che
+\begin{gather*}
 B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}\comp\right)\\
 \PP( B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\PP( A_{j})\PP( A_{i})\PP\left(\bigcap _{k\neq i,k\neq j} A_{k}\comp\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
 \end{gather*}
 
-Allora\begin{align*}
+Allora
+\begin{align*}
 \PP( A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP( A_{1} \cap A_{2} \cap B_{2})}{\PP( B_{2})} =\frac{\PP\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP( B_{2})}\\
  & \overset{\Bot }{=}\frac{\PP( A_{1})\PP( A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP( B_{2})}\\
  & =\frac{\PP( A)\PP( A)( 1-\PP( A))^{40}}{\PP( B_{2})}\\
@@ -438,7 +447,8 @@ A=\text{"il pacco scelto inizialmente contiene l'assegno"}
 \end{equation*}
 \begin{enumerate}
 \item $\PP( A) =1/3$
-\item Introduciamo l'evento\begin{equation*}
+\item Introduciamo l'evento
+\begin{equation*}
 V_{\text{cons}} =\text{"vinco conservando il pacco scelto inizialmente"}
 \end{equation*}
 
@@ -449,11 +459,13 @@ Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{
 \end{equation*}
 \end{theorem}
 
-La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero\begin{equation*}
+La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero
+\begin{equation*}
 \Omega =A\cup A\comp
 \end{equation*}
 
-Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno, o non lo contiene. Quindi\begin{equation*}
+Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno, o non lo contiene. Quindi
+\begin{equation*}
 \PP( V_{\text{cons}}) =\PP( V_{\text{cons}} \mid A)\PP( A) +\PP\left( V_{\text{cons}} \mid A\comp\right)\PP\left( A\comp\right) =\frac{1}{3}
 \end{equation*}
 \begin{enumerate}
@@ -462,11 +474,13 @@ Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno
 \item $\PP\left( V_{\text{cons}} \mid A\comp\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
 \item $\PP\left( A\comp\right) =1-\PP( A) =1-\frac{1}{3} =\frac{2}{3}$
 \end{enumerate}
-\item Introduciamo l'evento\begin{equation*}
+\item Introduciamo l'evento
+\begin{equation*}
 V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
 \end{equation*}
 
-allora\begin{equation*}
+allora
+\begin{equation*}
 \PP( V_{\text{camb}}) =\underbrace{\PP( V_{\text{camb}} \mid A)}_{0}\underbrace{\PP( A)}_{\frac{1}{3}} +\underbrace{\PP\left( V_{\text{camb}} \mid A\comp\right)}_{1}\underbrace{\PP\left( A\comp\right)}_{\frac{2}{3}} =\frac{2}{3}
 \end{equation*}
 \end{enumerate}
@@ -647,7 +661,8 @@ pattern radius = 1pt}
 \end{tikzpicture}
 \end{oss}
 \begin{enumerate}
-\item Consideriamo l'evento\begin{equation*}
+\item Consideriamo l'evento
+\begin{equation*}
 V_{\text{tc}} =\text{"vinco giocando a testa o croce tra le due strategie"}
 \end{equation*}
 
@@ -657,7 +672,8 @@ Supponiamo la moneta equa e, senza perdita di generalità, assegnamo a $T$ la st
  & =\PP( V_{\text{camb}})\PP( T) +\PP( V_{\text{cons}})\PP( C) & \text{(indip.)}\\
  & =\frac{2}{3} \cdotp \frac{1}{2} +\frac{1}{3} \cdotp \frac{1}{2} =\frac{1}{3} +\frac{1}{6} =\frac{1}{2} & 
 \end{align*}
-\item Introduciamo gli eventi\begin{gather*}
+\item Introduciamo gli eventi
+\begin{gather*}
 D=\text{"il conduttore apre il pacco di destra"}\\
 P_{d} =\text{"il pacco di destra contiene il premio"}\\
 P_{s} =\text{"il pacco di sinistra contiene il premio"}
@@ -667,7 +683,8 @@ Dal testo sappiamo che, poiché in tal caso il vincitore ha il pacco vincente,\b
 \boxed{\PP( D\mid A) =p}
 \end{equation*}
 
-$p$ è la probabilità che il conduttore apra il pacco di destra, sapendo che il vincitore ha il pacco vincente (cioè i due pacchi rimasti sono entrambi vuoti). Noi vogliamo calcolare\begin{equation*}
+$p$ è la probabilità che il conduttore apra il pacco di destra, sapendo che il vincitore ha il pacco vincente (cioè i due pacchi rimasti sono entrambi vuoti). Noi vogliamo calcolare
+\begin{equation*}
 \boxed{\PP( A\mid D) =?}
 \end{equation*}
 
@@ -684,7 +701,8 @@ Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Siano $A\in \mathc
 La prima idea sarebbe stata quella di usare la formula di Bayes nella forma $\PP( A\mid D) =\frac{\PP( D\mid A)\PP( A)}{\PP( D)}$. Questa formula è però inutile nel nostro caso perché \textbf{non} sappiamo quanto vale $\PP( D)$. Utilizziamo quindi la formula sopra proposta.
 \end{oss}
 
-La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora\begin{align*}
+La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora
+\begin{align*}
 \PP( A\mid D) & =\frac{\overbrace{\PP( D\mid A)}^{p}\overbrace{\PP( A)}^{\frac{1}{3}}}{\underbrace{\PP( D\mid A)}_{p}\underbrace{\PP( A)}_{\frac{1}{3}} +\underbrace{\PP( D\mid P_{d})}_{0}\underbrace{\PP( P_{d})}_{\frac{1}{3}} +\underbrace{\PP( D\mid P_{s})}_{1}\underbrace{\PP( P_{s})}_{\frac{1}{3}}}\\
  & =\frac{\frac{p}{3}}{\frac{p}{3} +\frac{1}{3}} =\frac{p}{p+1}
 \end{align*}
@@ -742,7 +760,8 @@ Dove $\PP( R_{3} \mid R_{1} \cap R_{2})\PP( R_{1} \cap R_{2}) =\PP( R_{3} \mid R
 \item $A\Bot C$
 \item $D=B\cup C$
 \item $\PP( B\mid A,D) =\frac{\PP( B,A,D)}{\PP( A,D)} =\frac{\PP( B,A)}{\PP( B,A) +\PP( C,A)} =\frac{1}{1+\frac{\PP( C,A)}{\PP( B,A)}} =\frac{1}{1+\frac{\PP( C\mid A)}{\PP( B\mid A)}} =\frac{1}{1+\frac{\PP( C)}{\PP( B\mid A)}}$
-\item Poiché $\PP( C) \leq \PP( D) =\frac{1}{100000}$, vale\begin{equation*}
+\item Poiché $\PP( C) \leq \PP( D) =\frac{1}{100000}$, vale
+\begin{equation*}
 \PP( B\mid A,D) \geq \frac{1}{1+\frac{\PP( D)}{\PP( B\mid A)}} =\frac{1}{1+\frac{5}{100}} =\frac{20}{21} =0.9524=95.24\%
 \end{equation*}
 \item Sì è il caso che Ferrero continui ad indagare su Ambrogio.

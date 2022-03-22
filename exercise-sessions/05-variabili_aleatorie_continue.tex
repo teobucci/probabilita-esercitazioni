@@ -123,7 +123,8 @@ Sia $X$ una variabile aleatoria con funzione di ripartizione $F$.
 \end{enumerate}
 \subsubsection{}
 \begin{enumerate}
-\item Allora\begin{equation*}
+\item Allora
+\begin{equation*}
 U\sim U\left(\left( 0,1\right)\right) \implies F_{U}\left( x\right) =\begin{cases}
 0, & x< 0\\
 x, & 0\leq x< 1\\
@@ -131,7 +132,8 @@ x, & 0\leq x< 1\\
 \end{cases}
 \end{equation*}
 
-a partire da questa ci troviamo\begin{gather*}
+a partire da questa ci troviamo
+\begin{gather*}
 F_{X}\left( t\right) \coloneqq \PP\left( X\leq t\right) =\PP\left( -\frac{1}{\lambda }\log U\leq t\right)\\
 -\frac{1}{\lambda }\log U\leq t\iff \log U\geq -\lambda t\iff U\geq e^{-\lambda t}\\
 =\PP\left( U\geq e^{-\lambda t}\right) =1-\underbrace{\PP\left( U< e^{-\lambda t}\right)}_{F_{U}\left( e^{-\lambda t}\right)} =\\
@@ -166,7 +168,8 @@ h_{X}( t) =\frac{f_{X}( t)}{1-F_{X}( t)} ,\ \ \ \ t >0,
 dove $F_{X}$ indica la funzione di ripartizione di $X$.
 \item Dimostrare che $F_{X}( t) =\left( 1-\exp\left( -\int _{0}^{t} h_{X}( s) ds\right)\right) \Ind_{( 0,+\infty )}( t)$.
 \item Si prenda $X$ con legge esponenziale di parametro $\lambda $. Determinare $h_{X}$.
-\item Si prenda $Y$ con legge Weibull di parametri $\alpha  >0$ e $\lambda  >0$, vale a dire\begin{equation*}
+\item Si prenda $Y$ con legge Weibull di parametri $\alpha  >0$ e $\lambda  >0$, vale a dire
+\begin{equation*}
 f_{Y}( t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-( \lambda t)^{\alpha }} \Ind_{( 0,+\infty )}( t) .
 \end{equation*}
 

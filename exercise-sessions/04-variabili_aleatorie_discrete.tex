@@ -144,13 +144,16 @@ Sia $X:\Omega \rightarrow S\subset \mathbb{R}$ una VA discreta che assume, con p
 \begin{enumerate}
 \item $0\leq p_{X}( x) \leq 1,\forall x\in \mathbb{R}$ e $p_{X}( x) =0,\forall x\notin S$
 \item $\sum\limits _{k\in I} p_{X}( k) =1$
-\item se $F_{X}$ è la funzione di ripartizione di $X$ allora\begin{equation*}
+\item se $F_{X}$ è la funzione di ripartizione di $X$ allora
+\begin{equation*}
 F_{X}( x) =\sum\limits _{k:x_{k} \leq x} p_{X}( x_{k}) ,\ \ \ \ \forall x\in \mathbb{R}
 \end{equation*}
-\item se i punti di $S$ possono essere numerati in modo tale che $x_{h} < x_{k}$ se $h< k$, allora\begin{equation*}
+\item se i punti di $S$ possono essere numerati in modo tale che $x_{h} < x_{k}$ se $h< k$, allora
+\begin{equation*}
 p_{X}( x_{k}) =F_{X}( x_{k}) -F_{X}( x_{k-1}) ,\ \ \ \ \forall k\in I
 \end{equation*}
-\item se $B\subset \mathbb{R}$ allora\begin{equation*}
+\item se $B\subset \mathbb{R}$ allora
+\begin{equation*}
 \PP( X\in B) =\sum\limits _{k:x_{k} \in B} p_{X}( x_{k})
 \end{equation*}
 \end{enumerate}
@@ -405,11 +408,13 @@ Si supponga che la scommessa proposta sia equa.
 
 \Soluzione
 \begin{enumerate}
-\item Mostriamo innanzitutto che\begin{equation*}
+\item Mostriamo innanzitutto che
+\begin{equation*}
 X,Y:(\mathbb{R} ,\mathcal{B})\rightarrow (\mathbb{R} ,\mathcal{B})
 \end{equation*}
 
-sono VA reali. Secondo la definizione dobbiamo mostrare che\begin{equation*}
+sono VA reali. Secondo la definizione dobbiamo mostrare che
+\begin{equation*}
 \forall B\in \mathcal{B} ,\ \ \ \ X^{-1}( B) \in \mathcal{B} ,\ \ \ \ Y^{-1}( B) \in \mathcal{B} ,
 \end{equation*}
 
@@ -431,18 +436,21 @@ Quindi per verificare che $X$ è una VA ci basterà verificare che $[ 0,p] \in \
 
 In maniera simile deduciamo che $Y$ è VA reale perché somma di $X$ e del prodotto di funzioni misurabili.
 
-Per dimostrare che $X,Y$ sono VA discrete, dobbiamo dimostrare che la legge immagine di $X,Y$ $\left( P^{X} ,P^{Y}\right)$ è discreta, i.e. $\exists S\subset \mathbb{R}$ al più numerabile e $p_{X} :S\rightarrow [ 0,1]$ tale che $P^{X}( B) =\sum\limits _{x\in B\cap S} p_{X}( x)$. Osserviamo però che\begin{equation*}
+Per dimostrare che $X,Y$ sono VA discrete, dobbiamo dimostrare che la legge immagine di $X,Y$ $\left( P^{X} ,P^{Y}\right)$ è discreta, i.e. $\exists S\subset \mathbb{R}$ al più numerabile e $p_{X} :S\rightarrow [ 0,1]$ tale che $P^{X}( B) =\sum\limits _{x\in B\cap S} p_{X}( x)$. Osserviamo però che
+\begin{equation*}
 \mathrm{Im}( X) =\{0,1\} \implies X\ \text{discreta}
 \end{equation*}
 
-Inoltre\begin{equation*}
+Inoltre
+\begin{equation*}
 p_{X}( x) =\PP( X=x) =\begin{cases}
 p, & x=1\\
 1-p, & x=0
 \end{cases}
 \end{equation*}
 
-Infatti\begin{align*}
+Infatti
+\begin{align*}
 \text{se} \ x=1:\PP( X=1) & =\PP(\Ind_{[ 0,p]} =1)\\
  & =\PP(\{\omega \in \Omega :\Ind_{[ 0,p]}( \omega ) =1\})\\
  & =\PP\left(\Ind_{[ 0,p]}^{-1}( 1)\right)\\
@@ -485,7 +493,8 @@ Proviamo allora che $X=Y$ q.c. Dobbiamo mostrare che $\PP( X=Y) =1$.\begin{align
  & =\PP(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\})
 \end{align*}
 
-Abbiamo che\begin{align*}
+Abbiamo che
+\begin{align*}
 \omega \in ( -\infty ,0) \cup ( 1,+\infty ) & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) \neq 0\\
 \omega \in [ 0,1] & \implies \omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0
 \end{align*}
@@ -494,7 +503,8 @@ i.e.\begin{equation*}
 \{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\} =[ 0,1]
 \end{equation*}
 
-Quindi\begin{equation*}
+Quindi
+\begin{equation*}
 \PP( X=Y) =\PP(\{\omega \in \Omega :\omega \Ind_{( -\infty ,0) \cup ( 1,+\infty )}( \omega ) =0\}) =\PP([ 0,1]) =1
 \end{equation*}
 
@@ -506,7 +516,8 @@ Sia $X$ una VA reale definita su $( \Omega ,\mathcal{A} ,\PP)$ e sia $h:\mathbb{
 \end{equation*}
 i.e. $h\circ X=h( X) \in \mathcal{L}^{1}(\PP) \iff h\in \mathcal{L}^{1}\left( P^{X}\right)$.
 
-Nel caso precedente, oppure se $h\geq 0$, valgono\begin{equation*}
+Nel caso precedente, oppure se $h\geq 0$, valgono
+\begin{equation*}
 \EE[ h( X)] =\int _{\mathbb{R}} h( x) P^{X}( dx) \ \ \ \ \EE[ X] =\int _{\mathbb{R}} xP^{X}( dx)
 \end{equation*}
 
@@ -550,14 +561,16 @@ X_{n}\left( \omega \right) =\omega _{n} =\begin{cases}
 \end{cases}
 \end{equation}
 
-e\begin{equation}
+e
+\begin{equation}
 \Ind_{E_{n}}\left( \omega \right) =\begin{cases}
 1, & \omega \in E_{n} \iff \omega _{n} =1\\
 0, & \omega \notin E_{n} \iff \omega _{n} =0
 \end{cases}
 \end{equation}
 
-Da (1) e (2) si allora che\begin{equation*}
+Da (1) e (2) si allora che
+\begin{equation*}
 \forall \omega \in \Omega ,\ \ \ \ X_{n}\left( \omega \right) =\Ind_{E_{n}}\left( \omega \right) ,\ \ \ \ \text{i.e.} \ \ \ \ X_{n} =\Ind_{E_{n}}
 \end{equation*}
 
@@ -582,7 +595,8 @@ E_{n}\comp , & 0\leq t< 1\\
 \end{cases}
 \end{align*}
 
-Nell'ultimo passaggio bisogna ricordare che\begin{equation*}
+Nell'ultimo passaggio bisogna ricordare che
+\begin{equation*}
 \Ind_{E_{n}} \in \{0,1\} ,\ \ \ \ \Ind_{E_{n}}( \omega ) =\begin{cases}
 1, & \omega \in E_{n}\\
 0, & \omega \notin E_{n}
@@ -592,7 +606,8 @@ Nell'ultimo passaggio bisogna ricordare che\begin{equation*}
 Dato che $\emptyset ,E_{n}\comp ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
 
 \textit{Significato:} esito dell'$n$-esima prova, può essere successo o insuccesso.
-\item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta\begin{gather*}
+\item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta
+\begin{gather*}
 x\in \{0,1\}\\
 \PP( X_{n} =1) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =1\}) =\PP\left( X_{n}^{-1}(\{1\})\right) =\PP( E_{n}) =p\\
 \PP( X_{n} =0) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\PP\left( X_{n}^{-1}(\{0\})\right) =\PP\left( E_{n}\comp\right) =1-p
@@ -608,7 +623,8 @@ p, & x=1\\
 \end{cases}
 \end{gather*}
 
-Infine\begin{equation*}
+Infine
+\begin{equation*}
 P^{X}( B) =\sum\limits _{x\in B\cap \{0,1\}} p_{X_{n}}( x) =\begin{cases}
 p, & B=\{1\}\\
 1-p, & B=\{0\}\\
@@ -647,7 +663,8 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 \end{oss}
 
 \textit{Interpretazione:} la distribuzione binomiale $B\left( n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
-\item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left( Z\right) =\mathbb{N} \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\mathbb{N} \cup \left\{+\infty \right\}\rightarrow \left[ 0,1\right]$. Sia $k\in \mathbb{N}$ fissato\begin{equation*}
+\item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left( Z\right) =\mathbb{N} \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\mathbb{N} \cup \left\{+\infty \right\}\rightarrow \left[ 0,1\right]$. Sia $k\in \mathbb{N}$ fissato
+\begin{equation*}
 p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
 \end{equation*}
 
@@ -668,12 +685,14 @@ dove abbiamo usato la serie geometrica
 \end{equation*}
 \end{oss}
 
-Quindi\begin{equation*}
+Quindi
+\begin{equation*}
 \forall k,\ \ \ \ p_{Z}( k) =p( 1-p)^{k-1} ,\ \ \ \ \boxed{Z\sim \mathcal{G}( p)}
 \end{equation*}
 
 \textit{Interpretazione:} la distribuzione geometrica descrive la probabilità che il primo successo richieda l'esecuzione di $k$ prove.
-\item $W$ è il numero di insuccessi prima del primo successo. Ricordiamo che $Z$ era uguale al numero di prove necessarie per il primo successo, per esempio avremo\begin{equation*}
+\item $W$ è il numero di insuccessi prima del primo successo. Ricordiamo che $Z$ era uguale al numero di prove necessarie per il primo successo, per esempio avremo
+\begin{equation*}
 \underbrace{\overbrace{0,0,0}^{W=3} ,1}_{Z=4} ,\dots \implies W=Z-1\ \text{q.c.}
 \end{equation*}
 
@@ -683,11 +702,13 @@ p_{W}( k) =\PP( W=k) =\PP( Z-1=k) =\underbrace{\PP( Z=k+1) =p( 1-p)^{k}}_{Z\sim 
 \end{gather*}
 
 Allora anche $W$ è una geometrica $W\sim \mathcal{G}( p)$.
-\item $V\coloneqq \liminf _{n} X_{n}$, $U\coloneqq \limsup _{n} X_{n}$ sono VA perché, rispettivamente, $\liminf _{n}$ e $\limsup _{n}$ di VA. In particolare\begin{align*}
+\item $V\coloneqq \liminf _{n} X_{n}$, $U\coloneqq \limsup _{n} X_{n}$ sono VA perché, rispettivamente, $\liminf _{n}$ e $\limsup _{n}$ di VA. In particolare
+\begin{align*}
 V & =\liminf _{n} X_{n} =\liminf _{n}\Ind_{E_{n}} =\Ind_{\liminf\limits _{n} E_{n}}
 \end{align*}
 
-l'ultimo passaggio è giustificato dal fatto che\begin{align*}
+l'ultimo passaggio è giustificato dal fatto che
+\begin{align*}
 \Ind_{\liminf _{n} E_{n}} & =\Ind_{\bigcup\limits _{n}\bigcap\limits _{k\geq n} E_{k}} & \text{(definizione)}\\
  & =\sup\limits _{n\geq 0}\Ind_{\bigcap\limits _{k\geq n} E_{k}} & \Ind_{A\cup B} =\sup \{\Ind_{A} ,\Ind_{B}\}\\
  & =\sup _{n\geq 0}\inf_{k\geq n}\Ind_{E_{k}} & \Ind_{A\cap B} =\inf\{\Ind_{A} ,\Ind_{B}\}
@@ -697,7 +718,8 @@ Analogamente,\begin{equation*}
 U=\limsup _{n} X_{n} =\Ind_{\limsup\limits _{n} E_{n}}
 \end{equation*}
 
-Allora\begin{equation*}
+Allora
+\begin{equation*}
 \mathrm{Im}( V) =\mathrm{Im}( U) =\{0,1\}
 \end{equation*}
 
@@ -706,19 +728,23 @@ p_{V} :\{0,1\}\rightarrow [ 0,1]\\
 p_{V}( 1) =\PP( V=1) =\PP\left(\liminf _{n} X_{n} =1\right) =\PP\left(\liminf _{n} E_{n}\right)
 \end{gather*}
 
-Ora\begin{equation*}
+Ora
+\begin{equation*}
 \liminf _{n} E_{n} =\bigcup _{n\geq 0}\underbrace{\bigcap\limits _{k\geq n} E_{k}}_{A_{n} \ } \ \ \ \implies \ \ \ \ A_{n} \uparrow \bigcup _{n\geq 0} A_{n}
 \end{equation*}
 
-Quindi\begin{equation*}
+Quindi
+\begin{equation*}
 \PP\left(\liminf _{n} E_{n}\right) =\PP\left(\bigcup _{n\geq 0} A_{n}\right)
 \end{equation*}
 
-Osserviamo ora che\begin{equation*}
+Osserviamo ora che
+\begin{equation*}
 \forall n\ \text{fissato} ,\ \PP\left( A_{n}\right) =\lim _{m\rightarrow +\infty }\PP\left(\bigcap\limits _{k=n}^{m} E_{k}\right) =\lim _{m\rightarrow +\infty } p^{m-n+1} =0
 \end{equation*}
 
-Allora\begin{gather*}
+Allora
+\begin{gather*}
 \PP\left(\liminf _{n} E_{n}\right) =\PP\left(\bigcup _{n\geq 0} A_{n}\right) =0\\
 \begin{aligned}
 \implies p_{V}( 1) & =0\\
@@ -726,14 +752,16 @@ p_{V}( 0) & =\PP( V=0) =1-\PP( V=1) =1
 \end{aligned}
 \end{gather*}
 
-Concludiamo che\begin{equation*}
+Concludiamo che
+\begin{equation*}
 p_{V}\left( k\right) =\PP\left( V=k\right) =\begin{cases}
 0, & k=1\\
 1, & k=0
 \end{cases} \ \ \ \ V\sim B\left( 0\right) ,\ \ \ \ V=0\ \text{q.c.}
 \end{equation*}
 
-Analogamente si mostra che\begin{equation*}
+Analogamente si mostra che
+\begin{equation*}
 U\sim B( 1) ,\ \ \ \ U=1\ \text{q.c.}
 \end{equation*}
 \end{enumerate}
@@ -815,7 +843,9 @@ Vamonos ora! Hay carramba!
 
 Utilizziamo la definizione di $\EE[ X] =\sum\limits _{x\in S} xp_{X}( x)$ e la forma esplicita della densità binomiale:\begin{equation*}
 p_{X}( x) =\PP( X=x) =\binom{n}{x} p^{x}( 1-p)^{n-x}
-\end{equation*}Avremo\begin{align*}
+\end{equation*}
+Avremo
+\begin{align*}
 \EE[ X] & =\sum\limits _{x\in S} xp_{X}( x) & \\
  & =\sum\limits _{x=0}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & \\
  & =\sum\limits _{x=1}^{n} x\binom{n}{x} p^{x}( 1-p)^{n-x} & ( j+1=x)\\
@@ -831,7 +861,8 @@ i.e. se $X\sim B( n,p)$, allora $\boxed{\EE[ X] =np}$.
 
 \textbf{[Metodo 2]}
 
-Utilizziamo il fatto che\begin{equation*}
+Utilizziamo il fatto che
+\begin{equation*}
 X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \Bot 
 \end{equation*}
 
@@ -840,34 +871,41 @@ e la linearità di $\EE$\begin{equation*}
 \end{equation*}
 \item Ricordiamo che TEORIA OVER HEREEEEE
 
-Se $X\in L^{2}(\PP)$, i.e. $\EE\left[ X^{2}\right] < +\infty $, allora\begin{equation*}
+Se $X\in L^{2}(\PP)$, i.e. $\EE\left[ X^{2}\right] < +\infty $, allora
+\begin{equation*}
 \mathrm{Var}[ X] \coloneqq \EE( X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
 \end{equation*}
 
-Usiamo\begin{equation*}
+Usiamo
+\begin{equation*}
 \mathrm{Var}[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -( np)^{2}
 \end{equation*}
 
-Resta da calcolare $\EE\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che\begin{gather*}
+Resta da calcolare $\EE\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che
+\begin{gather*}
 X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \Bot X_{j} ,\forall i\neq j\\
 \EE\left[ X^{2}\right] =\EE\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
 \end{gather*}
 
-Ora\begin{equation*}
+Ora
+\begin{equation*}
 \text{(a)} =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]\overset{\text{lin.}}{=}\sum\limits _{i=1}^{n}\EE\left[ X_{i}^{2}\right]\overset{\text{(a1)}}{=}\sum\limits _{i=1}^{n} p=np
 \end{equation*}
 
-Il passaggio (a1) è giustificato da\begin{equation*}
+Il passaggio (a1) è giustificato da
+\begin{equation*}
 X_{i} \sim B( p) ,\forall i,\ \ \ \ \EE\left[ X_{i}^{2}\right] \coloneqq \sum\limits _{k\in \{0,1\}} k^{2}\PP( X_{i} =k) =1\cdotp \PP( X_{i} =1) =p
 \end{equation*}
 
-Poi\begin{align*}
+Poi
+\begin{align*}
 \text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\PP( E_{i} \cap E_{j})\\
  & \overset{\Bot }{=}\sum\limits _{i< j}\PP( E_{i})\PP( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
  & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
 \end{align*}
 
-Il passaggio (b1) è giustificato da\begin{align*}
+Il passaggio (b1) è giustificato da
+\begin{align*}
 X_{i} ,X_{j} \sim B( p) \implies \EE[ X_{i} X_{j}] & =\sum\limits _{k\in \{0,1\}} k\PP( X_{i} X_{j} =k)\\
  & =\PP( X_{i} X_{j} =1)\\
  & =\PP( E_{i} \cap E_{j})
@@ -926,7 +964,8 @@ pattern radius = 1pt}\makeatletter
 \end{tikzpicture}
 
 
-Mettendo insieme i pezzi\begin{gather*}
+Mettendo insieme i pezzi
+\begin{gather*}
 \begin{aligned}
 \mathrm{Var}[ X] & =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\\
  & =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right] +2\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right] -(\EE[ X])^{2}\\
@@ -942,11 +981,13 @@ Mettendo insieme i pezzi\begin{gather*}
 
 Mode: sono i valori che con maggior probabilità vengono assunti da $X$, ossia che massimizzano $p_{X}( k) =\PP( X=k)$.
 
-Cerchiamo i punti di massimo locale, i.e. i $k$ per cui\begin{equation*}
+Cerchiamo i punti di massimo locale, i.e. i $k$ per cui
+\begin{equation*}
 \boxed{p_{X}( k+1) \leq p_{X}( k) \ \ \ \ \text{e} \ \ \ \ p_{X}( k-2) \leq p_{X}( k)}
 \end{equation*}
 
-Abbiamo\begin{align*}
+Abbiamo
+\begin{align*}
 p_{X}( k+1) \leq p_{X}( k) & \iff \binom{n}{k+1}\cancel{p^{k}} p( 1-p)^{n-k-1} \leq \binom{n}{k}\cancel{p^{k}}( 1-p)^{n-k}\\
  & \iff \frac{\cancel{n!} p}{( k+1) !( n-k-1) !}\frac{\cancel{( 1-p)^{n-k}}}{( 1-p)} \leq \frac{\cancel{n!}}{k!( n-k) !}\cancel{( 1-p)^{n-k}}\\
  & \iff \frac{p}{( k+1)\cancel{k!}\cancel{( n-k-1) !}( 1-p)} \leq \frac{1}{\cancel{k!}( n-k)\cancel{( n-k-1) !}}\\
@@ -959,14 +1000,16 @@ p_{X}( k-2) \leq p_{X}( k) & \iff \binom{n}{k-1} p^{k-1}( 1-p)^{n-k+1} \leq \bin
  & \iff k\leq p( n+1)
 \end{align*}
 
-Allora la condizione si verifica per\begin{equation*}
+Allora la condizione si verifica per
+\begin{equation*}
 \begin{cases}
 k\geq p( n+1) -1\\
 k\leq p( n+1)
 \end{cases} \ \ \ \ \iff \ \ \ \ p( n+1) -1\leq k\leq p( n+1)
 \end{equation*}
 
-Quindi\begin{equation*}
+Quindi
+\begin{equation*}
 \text{Moda}( X) =\begin{cases}
 p( n+1) -1\ \text{e} \ p( n+1) , & p( n+1) \in \mathbb{N}\\
 \lfloor p( n+1)\rfloor , & p( n+1) \notin \mathbb{N}
@@ -1007,7 +1050,8 @@ X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda
 $\PP( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\Bot $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP( X=k) =p( 1-p)^{k-1}$.
 \end{oss}
 \begin{enumerate}
-\item Abbiamo\begin{gather*}
+\item Abbiamo
+\begin{gather*}
 X:( \Omega ,\mathcal{F} ,\PP)\rightarrow \mathbb{N} \subset \mathbb{R}\\
 X\sim \mathcal{G}( p) \ \ \ \ \text{i.e.} \ \ \ \ \PP( X=k) =p( 1-p)^{k-1} =:\tilde{p}( k) ,\ k\in \mathbb{N}
 \end{gather*}
@@ -1043,20 +1087,24 @@ La misura che dobbiamo mettere su $\left(\mathbb{N} ,2^{\mathbb{N}}\right)$ è p
 
 \textbf{Spazio di probabilità continuo:}
 
-Abbiamo\begin{equation*}
+Abbiamo
+\begin{equation*}
 ( \Omega ,\mathcal{F} ,\PP) =\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)
 \end{equation*}
 
-e\begin{equation*}
+e
+\begin{equation*}
 X( \omega ) =\omega \ \ \forall \omega \in \Omega 
 \end{equation*}
 
-L'idea è la seguente: sia $( \Omega ,\mathcal{F} ,\PP)$ un generico spazio di probabilità e\begin{align*}
+L'idea è la seguente: sia $( \Omega ,\mathcal{F} ,\PP)$ un generico spazio di probabilità e
+\begin{align*}
 X:( \Omega ,\mathcal{F} ,\PP) & \rightarrow \left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)\\
 \omega  & \rightarrow X( \omega )
 \end{align*}
 
-con\begin{equation*}
+con
+\begin{equation*}
 X\sim \mathcal{G}( p)
 \end{equation*}
 
@@ -1066,7 +1114,8 @@ cioè\begin{equation*}
 
 $P^{X}$ è la legge immagine di $X$.
 
-Se quindi come spazio di probabilità consideriamo proprio $\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)$ e\begin{align*}
+Se quindi come spazio di probabilità consideriamo proprio $\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)$ e
+\begin{align*}
 X=I:\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right) & \rightarrow \left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)\\
 \omega  & \rightarrow X( \omega ) =\omega 
 \end{align*}
