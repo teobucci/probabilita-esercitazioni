@@ -26,8 +26,8 @@ Ottima domanda Rick, ecco alcune motivazioni:
 |04|Variabili aleatorie discrete|in corso|Teo Bucci|
 |05|Variabili aleatorie continue|in corso|Teo Bucci|
 |06|Vettori aleatori discreti|in corso|Teo Bucci|
-|07|Vettori aleatori continui|non iniziata||
-|08|Funzioni caratteristiche. Vettori aleatori gaussiani|non iniziata||
+|07|Vettori aleatori continui|iniziata|Matteo Bonfadini|
+|08|Funzioni caratteristiche. Vettori aleatori gaussiani|iniziata|Matteo Bonfadini|
 |09|Leggi condizionali|non iniziata||
 |10|Convergenza di variabili aleatorie|non iniziata||
 |11|Legge dei Grandi Numeri. Teorema Centrale del Limite|non iniziata||
