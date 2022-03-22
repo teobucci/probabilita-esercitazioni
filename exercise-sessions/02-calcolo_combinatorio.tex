@@ -4,7 +4,7 @@
 
 Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega _{1} ,\dots ,\omega _{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}( \Omega ) =2^{\Omega }$.
 
-Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\dots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
+Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\cdots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
 
 \begin{oss}
 	In generale non è sempre lecito supporre che la probabilità sia uniforme.
@@ -150,7 +150,7 @@ Sono concetti utili per contare gli elementi in un insieme.
 \begin{oss}
 	Vi sono
 	\begin{equation*}
-		\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\dots n_{r} !}}
+		\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\cdots n_{r} !}}
 	\end{equation*}
 	permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dots $, $n_{r}$ sono identici e distinti dai precedenti.
 \end{oss}
@@ -168,7 +168,7 @@ Supponiamo di avere un insieme $E$ formato da $n$ oggetti \textbf{distinti}, da 
 \begin{definition}
 	Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
 	\begin{equation*}
-		\boxed{D_{r}^{n} =n( n-1)( n-2) \dots ( n-r+1) =\frac{n!}{( n-r) !}}
+		\boxed{D_{r}^{n} =n( n-1)( n-2) \cdots ( n-r+1) =\frac{n!}{( n-r) !}}
 	\end{equation*}
 \end{definition}
 
@@ -192,7 +192,7 @@ Per determinare $C_{r}^{n}$ basta osservare che: ogni fissata combinazione di cl
 	\end{equation*}
 	Ora,
 	\begin{equation*}
-		D_{r}^{n} =n( n-1) \dots ( n-r+1) =\frac{n!}{( n-r) !}
+		D_{r}^{n} =n( n-1) \cdots ( n-r+1) =\frac{n!}{( n-r) !}
 	\end{equation*}
 	Quindi:
 	\begin{equation*}
@@ -436,114 +436,112 @@ Svolgiamo l'esercizio in $3$ diversi modi.
 
 Determiniamo innanzitutto l'insieme campionario $\Omega $: c'è una classifica di cui ci interessano solo i primi $5$:
 \begin{equation*}
-\Omega =\{( \omega _{1} ,\dots ,\omega _{5}) :\omega _{i} \in \{1\dots 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+	\Omega =\{( \omega _{1} ,\dots ,\omega _{5}) :\omega _{i} \in \{1,\dots,40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
 \end{equation*}
 Tutte le possibili quintuple sono date dalla disposizione (l'ordine conta!) di $n=40$ persone in $r=5$ posti, i.e.
 \begin{equation*}
-| \Omega | =D_{5}^{40} =\underbrace{40\cdot 39\cdots 36}_{5\ \text{numeri}} =78960960
+	| \Omega | =D_{5}^{40} =\underbrace{40\cdot 39\cdots 36}_{5\ \text{numeri}} =78960960
 \end{equation*}
 Per il primo ci sono $40$ possibilità, per il secondo $39$, ecc. (visualizzabile con un diagramma ad albero.
 \begin{enumerate}
-\item Ho esattamente $1$ possibilità (su tutte quelle possibili) di vincere.\begin{equation*}
-| A| =1\implies \PP( A) =| A| /| \Omega | =1/78960960\approx 1.3\times 10^{-8}
-\end{equation*}
-\item Se non preciso l'ordine ho $5!$ modi di scegliere la cinquina vincente, i.e. tutte le $5!$ permutazioni dei primi $5$ classificati.\begin{equation*}
-| B| =5!\implies \PP( B) =| B| /| \Omega | =5!/78960960\approx 1.5\times 10^{-6}
-\end{equation*}
+	\item Ho esattamente $1$ possibilità (su tutte quelle possibili) di vincere.
+	\begin{equation*}
+		| A| =1\implies \PP( A) =| A| /| \Omega | =1/78960960\approx 1.3\times 10^{-8}
+	\end{equation*}
+	\item Se non preciso l'ordine ho $5!$ modi di scegliere la cinquina vincente, i.e. tutte le $5!$ permutazioni dei primi $5$ classificati.
+	\begin{equation*}
+		| B| =5!\implies \PP( B) =| B| /| \Omega | =5!/78960960\approx 1.5\times 10^{-6}
+	\end{equation*}
 \end{enumerate}
 
 \textbf{[Metodo 2]}
 
 Guardiamo tutta la classifica. In questo caso dobbiamo considerare le permutazioni di $40$ oggetti:
 \begin{equation*}
-\Omega =\{( \omega _{1} ,\dots ,\omega _{40}) :\omega _{i} \in \{1\dots 40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
+	\Omega =\{( \omega _{1} ,\dots ,\omega _{40}) :\omega _{i} \in \{1,\dots,40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
 \end{equation*}
 \begin{enumerate}
-\item Evento $A$.
-
-\begin{center}
-\addstackgap[5pt]{
-	\begin{tabular}{cc|c}
-		\hline 
-		scelgo il numero $1$: & $1$ modo & \multirow{3}{*}{$1$ permutazione} \\
-		$\vdots $ & $\vdots $ &   \\
-		scelgo il numero $5$: & $1$ modo &   \\
-		\hline 
-		scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
-		scelgo il numero $7$: & $34$ modi &   \\
-		$\vdots $ & $\vdots $ &   \\
-		scelgo il numero $40$: & $1$ modo &   \\
-		\hline
-	\end{tabular}
-	}
-\end{center}
-
-i.e. $| A| =35!\implies \PP( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{-8}$.
-\item Evento $B$. Simile a prima, ma abbiamo $5!$ modi di scegliere i primi $5$ arrivati:
-
-\begin{center}
-\addstackgap[5pt]{
-	\begin{tabular}{cc|c}
-		\hline 
-		scelgo il numero $1$: & $5$ modi & \multirow{3}{*}{$5!$ permutazioni} \\
-		$\vdots $ & $\vdots $ &   \\
-		scelgo il numero $5$: & $1$ modo &   \\
-		\hline 
-		scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
-		scelgo il numero $7$: & $34$ modi &   \\
-		$\vdots $ & $\vdots $ &   \\
-		scelgo il numero $40$: & $1$ modo &   \\
-		\hline
-	\end{tabular}
-	}
-\end{center}
-
-i.e. $|B| =5!\cdot 35!\implies \PP(B) = |B|/|\Omega| = 35!\cdot 5! / 40! \approx 1.5\times 10^{-6}$.
+	\item Evento $A$.
+	\begin{center}
+	\addstackgap[5pt]{
+		\begin{tabular}{cc|c}
+			\hline 
+			scelgo il numero $1$: & $1$ modo & \multirow{3}{*}{$1$ permutazione} \\
+			$\vdots $ & $\vdots $ &   \\
+			scelgo il numero $5$: & $1$ modo &   \\
+			\hline 
+			scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
+			scelgo il numero $7$: & $34$ modi &   \\
+			$\vdots $ & $\vdots $ &   \\
+			scelgo il numero $40$: & $1$ modo &   \\
+			\hline
+		\end{tabular}
+		}
+	\end{center}
+	i.e. $| A| =35!\implies \PP( A) =| A| /| \Omega | =35!/40!\approx 1.3\times 10^{-8}$.
+	\item Evento $B$. Simile a prima, ma abbiamo $5!$ modi di scegliere i primi $5$ arrivati:
+	\begin{center}
+	\addstackgap[5pt]{
+		\begin{tabular}{cc|c}
+			\hline 
+			scelgo il numero $1$: & $5$ modi & \multirow{3}{*}{$5!$ permutazioni} \\
+			$\vdots $ & $\vdots $ &   \\
+			scelgo il numero $5$: & $1$ modo &   \\
+			\hline 
+			scelgo il numero $6$: & $35$ modi & \multirow{4}{*}{$35!$ permutazioni} \\
+			scelgo il numero $7$: & $34$ modi &   \\
+			$\vdots $ & $\vdots $ &   \\
+			scelgo il numero $40$: & $1$ modo &   \\
+			\hline
+		\end{tabular}
+		}
+	\end{center}
+	i.e. $|B| =5!\cdot 35!\implies \PP(B) = |B|/|\Omega| = 35!\cdot 5! / 40! \approx 1.5\times 10^{-6}$.
 \end{enumerate}
 
 \textbf{Metodo 3.}
 
 Se dovessimo rispondere esclusivamente alla seconda domanda potremmo considerare lo spazio delle combinazioni di $n=40$ elementi in $r=5$ posti, i.e.
 \begin{equation*}
-| \Omega | =C_{5}^{40} =\binom{40}{5} =\frac{40!}{35!\ 5!}
+	| \Omega | =C_{5}^{40} =\binom{40}{5} =\frac{40!}{35!\ 5!}
 \end{equation*}
 Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 \begin{equation*}
-| B| =1\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
+	| B| =1\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
 \end{equation*}
 
 \Soluzione
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\PP( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
-\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dots 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
-\begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
-A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
-A\comp =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
-\left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
-\end{array}
-\end{equation*}
-
-Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
-\item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:\begin{equation*}
-\begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
-A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
-\left| A\comp\right| =364^{n}
-\end{array}
-\end{equation*}
-
-Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso giorno del mio compleanno: per ognuna di esse abbiamo $364$ possibilità (i restanti giorni dell'anno).\begin{equation*}
-\begin{array}{ l }
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
-\end{array}
-\end{equation*}
-
-Si può calcolare $n$ per cui $q_{n}  >\frac{1}{2}$: $n=253$.
+	\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1,\dots,365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:
+	\begin{equation*}
+		\begin{array}{ l }
+			\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
+			A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
+			A\comp =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			\left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
+			\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
+			\implies \PP( A) =1-\PP\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
+		\end{array}
+	\end{equation*}
+	Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
+	\item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:
+	\begin{equation*}
+		\begin{array}{ l }
+			\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
+			A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
+			\left| A\comp\right| =364^{n}
+		\end{array}
+	\end{equation*}
+	Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso giorno del mio compleanno: per ognuna di esse abbiamo $364$ possibilità (i restanti giorni dell'anno).
+	\begin{equation*}
+		\begin{array}{ l }
+			\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
+			\implies \PP( A) =1-\PP\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
+		\end{array}
+	\end{equation*}
+	Si può calcolare $n$ per cui $q_{n}  >\frac{1}{2}$: $n=253$.
 \end{enumerate}
 
 \Soluzione
@@ -565,344 +563,348 @@ Manca.
 \Soluzione
 
 Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. Pensiamo all'esperimento casuale come segue: lo spazio degli esiti è dato da tutte le giocate possibili, ossia scegliamo una combinazione di $90$ numeri di classe $6$:
-\begin{gather*}
-\Omega =\{\omega \subset \{1\dots 90\} :| \omega | =6\}\\
-\implies | \Omega | =C_{6}^{90} =\binom{90}{6} =622614630
-\end{gather*}
+\[
+	\Omega =\{\omega \subset \{1,\dots,90\} :| \omega | =6\} \implies | \Omega | =C_{6}^{90} =\binom{90}{6} =622614630
+\]
 In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
 \begin{enumerate}
-\item Sia $A=$ "indovino i primi $6$ numeri estratti, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).\begin{equation*}
-| A| =1\implies \PP( A) =| A| /| \Omega | =1/\binom{90}{6} \approx 1.6\times 10^{-9}
-\end{equation*}
+	\item Sia $A=$ "indovino i primi $6$ numeri estratti, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).
+	\begin{equation*}
+		| A| =1\implies \PP( A) =| A| /| \Omega | =1/\binom{90}{6} \approx 1.6\times 10^{-9}
+	\end{equation*}
 
-\begin{oss}
-Si sarebbe potuto rispondere alla domanda anche introducendo $\Omega $ come lo spazio delle disposizioni anziché combinazioni (confronta con Es. 2.3.2.)\begin{gather*}
-\Omega =\{( \omega _{1} ,\dots ,\omega _{6}) :\omega _{i} \in \{1\dots 90\} \ \forall i=1\dots 6,\ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
-| \Omega | =D_{6}^{90} =\underbrace{90\cdot 89\cdot 88\cdot 87\cdot 86\cdot 85}_{6\ \text{termini}} =\frac{90!}{84!}
-\end{gather*}
-\end{oss}
+	\begin{oss}
+		Si sarebbe potuto rispondere alla domanda anche introducendo $\Omega $ come lo spazio delle disposizioni anziché combinazioni (confronta con Es. 2.3.2.)
+		\begin{gather*}
+			\Omega =\{( \omega _{1} ,\dots ,\omega _{6}) :\omega _{i} \in \{1,\dots,90\} \ \forall i=1,\dots,6,\ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			| \Omega | =D_{6}^{90} =\underbrace{90\cdot 89\cdot 88\cdot 87\cdot 86\cdot 85}_{6\ \text{termini}} =\frac{90!}{84!}
+		\end{gather*}
+	\end{oss}
 
-Sia $A=$ "indovino i primi $6$ numeri estratti".\begin{equation*}
-| A| =6!
-\end{equation*}
+	Sia $A=$ "indovino i primi $6$ numeri estratti".
+	\begin{equation*}
+		| A| =6!
+	\end{equation*}
+	Dato che \textit{non} conta l'ordine, abbiamo $6!$ modi possibili (i.e. tutte le possibili permutazioni) di scegliere la $6$-pla vincente.
+	\begin{equation*}
+		\PP( A) =\frac{| A| }{| \Omega | } =\frac{6!}{\frac{90!}{84!}} =\frac{6!\ 84!}{90!} \approx 1.6\times 10^{-9}
+	\end{equation*}
+	Il ragionamento esposto sopra (schema di scelte successive formalmente giustificato dal principio di calcolo combinatorio) può essere graficamente visualizzato tramite uno schema di diagramma ad albero
 
-Dato che \textit{non} conta l'ordine, abbiamo $6!$ modi possibili (i.e. tutte le possibili permutazioni) di scegliere la $6$-pla vincente.\begin{equation*}
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{6!}{\frac{90!}{84!}} =\frac{6!\ 84!}{90!} \approx 1.6\times 10^{-9}
-\end{equation*}
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
-Il ragionamento esposto sopra (schema di scelte successive formalmente giustificato dal principio di calcolo combinatorio) può essere graficamente visualizzato tramite uno schema di diagramma ad albero
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,229); %set diagram left start at 0, and has height of 229
 
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	%Straight Lines [id:da7855330926245441] 
+	\draw    (120,100) -- (200,50) ;
+	\draw [shift={(200,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(120,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da040580577550131336] 
+	\draw    (120,100) -- (200,70) ;
+	\draw [shift={(200,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(120,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da2306425536240584] 
+	\draw    (120,100) -- (200,150) ;
+	\draw [shift={(200,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(120,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da2747219164087562] 
+	\draw    (120,100) -- (200,130) ;
+	\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(120,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da6865956571924272] 
+	\draw    (200,130) -- (280,80) ;
+	\draw [shift={(280,80)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(200,130)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da7503928139510518] 
+	\draw    (200,130) -- (280,100) ;
+	\draw [shift={(280,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(200,130)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da46418143484636754] 
+	\draw    (200,130) -- (280,180) ;
+	\draw [shift={(280,180)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(200,130)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da03557774417074011] 
+	\draw    (200,130) -- (280,160) ;
+	\draw [shift={(280,160)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da9336686808598069] 
+	\draw    (350,100) -- (430,50) ;
+	\draw [shift={(430,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(350,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da46944720959200703] 
+	\draw    (350,100) -- (430,70) ;
+	\draw [shift={(430,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(350,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da3073333322617353] 
+	\draw    (350,100) -- (430,150) ;
+	\draw [shift={(430,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(350,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da1834195966154788] 
+	\draw    (350,100) -- (430,130) ;
+	\draw [shift={(430,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(350,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,229); %set diagram left start at 0, and has height of 229
+	% Text Node
+	\draw (311,92.4) node [anchor=north west][inner sep=0.75pt]    {$\cdots $};
+	% Text Node
+	\draw (110,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1^{o} \ \text{num estratto}$};
+	% Text Node
+	\draw (93,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{1} =90\ \text{possibilità}$};
+	% Text Node
+	\draw (194,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
+	% Text Node
+	\draw (274,122.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
+	% Text Node
+	\draw (424,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
+	% Text Node
+	\draw (210,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2^{o} \ \text{num estratto}$};
+	% Text Node
+	\draw (350,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$6^{o} \ \text{num estratto}$};
+	% Text Node
+	\draw (213,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{2} =89\ \text{possibilità}$};
+	% Text Node
+	\draw (353,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{6} =84\ \text{possibilità}$};
 
-%Straight Lines [id:da7855330926245441] 
-\draw    (120,100) -- (200,50) ;
-\draw [shift={(200,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(120,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da040580577550131336] 
-\draw    (120,100) -- (200,70) ;
-\draw [shift={(200,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(120,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da2306425536240584] 
-\draw    (120,100) -- (200,150) ;
-\draw [shift={(200,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(120,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da2747219164087562] 
-\draw    (120,100) -- (200,130) ;
-\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(120,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da6865956571924272] 
-\draw    (200,130) -- (280,80) ;
-\draw [shift={(280,80)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(200,130)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da7503928139510518] 
-\draw    (200,130) -- (280,100) ;
-\draw [shift={(280,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(200,130)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da46418143484636754] 
-\draw    (200,130) -- (280,180) ;
-\draw [shift={(280,180)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(200,130)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da03557774417074011] 
-\draw    (200,130) -- (280,160) ;
-\draw [shift={(280,160)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da9336686808598069] 
-\draw    (350,100) -- (430,50) ;
-\draw [shift={(430,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(350,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da46944720959200703] 
-\draw    (350,100) -- (430,70) ;
-\draw [shift={(430,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(350,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da3073333322617353] 
-\draw    (350,100) -- (430,150) ;
-\draw [shift={(430,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(350,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Straight Lines [id:da1834195966154788] 
-\draw    (350,100) -- (430,130) ;
-\draw [shift={(430,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-\draw [shift={(350,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\end{tikzpicture}
 
-% Text Node
-\draw (311,92.4) node [anchor=north west][inner sep=0.75pt]    {$\cdots $};
-% Text Node
-\draw (110,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1^{o} \ \text{num estratto}$};
-% Text Node
-\draw (93,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{1} =90\ \text{possibilità}$};
-% Text Node
-\draw (194,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-% Text Node
-\draw (274,122.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-% Text Node
-\draw (424,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-% Text Node
-\draw (210,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2^{o} \ \text{num estratto}$};
-% Text Node
-\draw (350,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$6^{o} \ \text{num estratto}$};
-% Text Node
-\draw (213,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{2} =89\ \text{possibilità}$};
-% Text Node
-\draw (353,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{6} =84\ \text{possibilità}$};
+	L'evento $A=$ "indovino i $6$ numeri estratti" è visibile, sull'albero, come una particolare diramazione. Dato che però non ci interessa l'ordine di estrazione consideriamo tutte le possibili permutazioni di $A$, i.e. $| A| =6!$.
+	\item Sia $B=$ "indovino $5$ dei $6$ numeri estratti e in più un numero jolly". Determiniamo ogni esito possibile $B$ come segue:
+	\begin{enumerate}
+		\item quali sottoinsiemi di $5$ numeri dei $6$ azzecco: $\binom{6}{5} =\frac{6!}{5!\ 1!} =6$ modi,
+		\item azzecco il jolly: $1$ modo.
+	\end{enumerate}
 
+	\begin{equation*}
+		| B| =6\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{6}{\binom{90}{6}} \approx 9.6\times 10^{-9}
+	\end{equation*}
 
-\end{tikzpicture}
+	Alternativamente, possiamo pensare in quanti possiamo sostituire il numero "sbagliato" con il jolly:
 
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
-L'evento $A=$ "indovino i $6$ numeri estratti" è visibile, sull'albero, come una particolare diramazione. Dato che però non ci interessa l'ordine di estrazione consideriamo tutte le possibili permutazioni di $A$, i.e. $| A| =6!$.
-\item Sia $B=$ "indovino $5$ dei $6$ numeri estratti e in più un numero jolly". Determiniamo ogni esito possibile $B$ come segue:
-\begin{enumerate}
-\item quali sottoinsiemi di $5$ numeri dei $6$ azzecco: $\binom{6}{5} =\frac{6!}{5!\ 1!} =6$ modi,
-\item azzecco il jolly: $1$ modo.
-\end{enumerate}
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,77); %set diagram left start at 0, and has height of 77
 
-\begin{equation*}
-| B| =6\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{6}{\binom{90}{6}} \approx 9.6\times 10^{-9}
-\end{equation*}
+	%Straight Lines [id:da09449098783720666] 
+	\draw    (50,60) -- (290,60) ;
+	%Shape: Circle [id:dp40594633380564016] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (60,40) .. controls (60,34.48) and (64.48,30) .. (70,30) .. controls (75.52,30) and (80,34.48) .. (80,40) .. controls (80,45.52) and (75.52,50) .. (70,50) .. controls (64.48,50) and (60,45.52) .. (60,40) -- cycle ;
+	%Shape: Circle [id:dp6641428274341103] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (100,40) .. controls (100,34.48) and (104.48,30) .. (110,30) .. controls (115.52,30) and (120,34.48) .. (120,40) .. controls (120,45.52) and (115.52,50) .. (110,50) .. controls (104.48,50) and (100,45.52) .. (100,40) -- cycle ;
+	%Shape: Circle [id:dp7905252015750659] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (140,40) .. controls (140,34.48) and (144.48,30) .. (150,30) .. controls (155.52,30) and (160,34.48) .. (160,40) .. controls (160,45.52) and (155.52,50) .. (150,50) .. controls (144.48,50) and (140,45.52) .. (140,40) -- cycle ;
+	%Shape: Circle [id:dp33901503243236997] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (180,40) .. controls (180,34.48) and (184.48,30) .. (190,30) .. controls (195.52,30) and (200,34.48) .. (200,40) .. controls (200,45.52) and (195.52,50) .. (190,50) .. controls (184.48,50) and (180,45.52) .. (180,40) -- cycle ;
+	%Shape: Circle [id:dp9005911918848624] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (220,40) .. controls (220,34.48) and (224.48,30) .. (230,30) .. controls (235.52,30) and (240,34.48) .. (240,40) .. controls (240,45.52) and (235.52,50) .. (230,50) .. controls (224.48,50) and (220,45.52) .. (220,40) -- cycle ;
+	%Shape: Circle [id:dp4207926820924768] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (260,40) .. controls (260,34.48) and (264.48,30) .. (270,30) .. controls (275.52,30) and (280,34.48) .. (280,40) .. controls (280,45.52) and (275.52,50) .. (270,50) .. controls (264.48,50) and (260,45.52) .. (260,40) -- cycle ;
+	%Straight Lines [id:da9159657244031865] 
+	\draw    (50,20) -- (50,60) ;
+	%Straight Lines [id:da7573967278607023] 
+	\draw    (90,20) -- (90,60) ;
+	%Straight Lines [id:da7463985181158719] 
+	\draw    (130,20) -- (130,60) ;
+	%Straight Lines [id:da9290196388669603] 
+	\draw    (170,20) -- (170,60) ;
+	%Straight Lines [id:da06680789769911977] 
+	\draw    (210,20) -- (210,60) ;
+	%Straight Lines [id:da40034730485648806] 
+	\draw    (250,20) -- (250,60) ;
+	%Straight Lines [id:da4056303578838951] 
+	\draw    (290,20) -- (290,60) ;
+	%Shape: Circle [id:dp8217285666442] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (330,20) .. controls (330,14.48) and (334.48,10) .. (340,10) .. controls (345.52,10) and (350,14.48) .. (350,20) .. controls (350,25.52) and (345.52,30) .. (340,30) .. controls (334.48,30) and (330,25.52) .. (330,20) -- cycle ;
+	%Shape: Circle [id:dp043484895799565715] 
+	\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (330,50) .. controls (330,44.48) and (334.48,40) .. (340,40) .. controls (345.52,40) and (350,44.48) .. (350,50) .. controls (350,55.52) and (345.52,60) .. (340,60) .. controls (334.48,60) and (330,55.52) .. (330,50) -- cycle ;
 
-Alternativamente, possiamo pensare in quanti possiamo sostituire il numero "sbagliato" con il jolly:
+	% Text Node
+	\draw (361,10) node [anchor=north west][inner sep=0.75pt]   [align=left] {numero sbagliato};
+	% Text Node
+	\draw (361,40) node [anchor=north west][inner sep=0.75pt]   [align=left] {numero giusto};
 
+	\end{tikzpicture}
 
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,77); %set diagram left start at 0, and has height of 77
-
-%Straight Lines [id:da09449098783720666] 
-\draw    (50,60) -- (290,60) ;
-%Shape: Circle [id:dp40594633380564016] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (60,40) .. controls (60,34.48) and (64.48,30) .. (70,30) .. controls (75.52,30) and (80,34.48) .. (80,40) .. controls (80,45.52) and (75.52,50) .. (70,50) .. controls (64.48,50) and (60,45.52) .. (60,40) -- cycle ;
-%Shape: Circle [id:dp6641428274341103] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (100,40) .. controls (100,34.48) and (104.48,30) .. (110,30) .. controls (115.52,30) and (120,34.48) .. (120,40) .. controls (120,45.52) and (115.52,50) .. (110,50) .. controls (104.48,50) and (100,45.52) .. (100,40) -- cycle ;
-%Shape: Circle [id:dp7905252015750659] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (140,40) .. controls (140,34.48) and (144.48,30) .. (150,30) .. controls (155.52,30) and (160,34.48) .. (160,40) .. controls (160,45.52) and (155.52,50) .. (150,50) .. controls (144.48,50) and (140,45.52) .. (140,40) -- cycle ;
-%Shape: Circle [id:dp33901503243236997] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (180,40) .. controls (180,34.48) and (184.48,30) .. (190,30) .. controls (195.52,30) and (200,34.48) .. (200,40) .. controls (200,45.52) and (195.52,50) .. (190,50) .. controls (184.48,50) and (180,45.52) .. (180,40) -- cycle ;
-%Shape: Circle [id:dp9005911918848624] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (220,40) .. controls (220,34.48) and (224.48,30) .. (230,30) .. controls (235.52,30) and (240,34.48) .. (240,40) .. controls (240,45.52) and (235.52,50) .. (230,50) .. controls (224.48,50) and (220,45.52) .. (220,40) -- cycle ;
-%Shape: Circle [id:dp4207926820924768] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (260,40) .. controls (260,34.48) and (264.48,30) .. (270,30) .. controls (275.52,30) and (280,34.48) .. (280,40) .. controls (280,45.52) and (275.52,50) .. (270,50) .. controls (264.48,50) and (260,45.52) .. (260,40) -- cycle ;
-%Straight Lines [id:da9159657244031865] 
-\draw    (50,20) -- (50,60) ;
-%Straight Lines [id:da7573967278607023] 
-\draw    (90,20) -- (90,60) ;
-%Straight Lines [id:da7463985181158719] 
-\draw    (130,20) -- (130,60) ;
-%Straight Lines [id:da9290196388669603] 
-\draw    (170,20) -- (170,60) ;
-%Straight Lines [id:da06680789769911977] 
-\draw    (210,20) -- (210,60) ;
-%Straight Lines [id:da40034730485648806] 
-\draw    (250,20) -- (250,60) ;
-%Straight Lines [id:da4056303578838951] 
-\draw    (290,20) -- (290,60) ;
-%Shape: Circle [id:dp8217285666442] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (330,20) .. controls (330,14.48) and (334.48,10) .. (340,10) .. controls (345.52,10) and (350,14.48) .. (350,20) .. controls (350,25.52) and (345.52,30) .. (340,30) .. controls (334.48,30) and (330,25.52) .. (330,20) -- cycle ;
-%Shape: Circle [id:dp043484895799565715] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (330,50) .. controls (330,44.48) and (334.48,40) .. (340,40) .. controls (345.52,40) and (350,44.48) .. (350,50) .. controls (350,55.52) and (345.52,60) .. (340,60) .. controls (334.48,60) and (330,55.52) .. (330,50) -- cycle ;
-
-% Text Node
-\draw (361,10) node [anchor=north west][inner sep=0.75pt]   [align=left] {numero sbagliato};
-% Text Node
-\draw (361,40) node [anchor=north west][inner sep=0.75pt]   [align=left] {numero giusto};
-
-
-\end{tikzpicture}
-
-
-Il numero sbagliato può essere uno qualsiasi dei $6$ numeri che ho scelto, quindi ho $6$ modi possibili di sostituire il jolly al numero sbagliato.
-\item L'evento è dato dall'unione disgiunta:\begin{equation*}
-A\cup B\implies \PP( A\cup B) =\PP( A) +\PP( B) =\frac{7}{\binom{90}{6}} \approx 1.12\times 10^{-8}
-\end{equation*}
+	Il numero sbagliato può essere uno qualsiasi dei $6$ numeri che ho scelto, quindi ho $6$ modi possibili di sostituire il jolly al numero sbagliato.
+	\item L'evento è dato dall'unione disgiunta:
+	\begin{equation*}
+		A\cup B\implies \PP( A\cup B) =\PP( A) +\PP( B) =\frac{7}{\binom{90}{6}} \approx 1.12\times 10^{-8}
+	\end{equation*}
 \end{enumerate}
 
 \Soluzione
 
 Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ "esce l'oggetto $m$ all'estrazione $j$":
 \begin{equation*}
-A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1\dots n\} ,\ \ \ \ j\in \{1\dots k\}
+	A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1,\dots,n\} ,\ \ \ \ j\in \{1,\dots,k\}
 \end{equation*}
 \begin{enumerate}
-\item 
-\begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:\begin{align*}
-\Omega  & =\{1\dots n\}^{k}\\
- & =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\}\\
- & \implies | \Omega | =n^{k}
-\end{align*}
-\item $(\impliedby)$ Ipotesi:
-\begin{enumerate}
-\item le $k$ estrazioni sono indipendenti, i.e.\begin{equation*}
-\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right)
-\end{equation*}
-\item per ciascuna estrazione gli $n$ risultati possibili sono equiprobabili, i.e.\begin{equation*}
-\PP\left( A_{j}^{m}\right) =1/n\ \ \ \ \forall m,\forall j
-\end{equation*}
-\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:
+		\begin{align*}
+			\Omega  & =\{1,\dots,n\}^{k}\\
+			 & =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\}\\
+			 & \implies | \Omega | =n^{k}
+		\end{align*}
+		\item $(\impliedby)$ Ipotesi:
+		\begin{enumerate}
+			\item le $k$ estrazioni sono indipendenti, i.e.
+			\begin{equation*}
+				\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right)
+			\end{equation*}
+			\item per ciascuna estrazione gli $n$ risultati possibili sono equiprobabili, i.e.
+			\begin{equation*}
+				\PP\left( A_{j}^{m}\right) =1/n\ \ \ \ \forall m,\forall j
+			\end{equation*}
+		\end{enumerate}
+		Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
-Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
+		Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1,\dots,n\}$ e $i\in \{1,\dots,k\}$, allora
+		\begin{align*}
+			\PP(\{\omega \}) & =\PP(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
+			 & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
+			 & =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
+			 & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
+			 & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
+		\end{align*}
 
-Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =( \omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1\dots n\}$ e $i\in \{1\dots k\}$, allora
-\begin{align*}
-\PP(\{\omega \}) & =\PP(\{( \omega _{1} ,\dots ,\omega _{k})\}) & \\
- & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
- & =\prod _{j=1}^{k}\PP\left( A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
- & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
- & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
-\end{align*}
+		$( \implies )$ esercizio.
+		\item Sia $A=$ "estraggo gli oggetti $\{x_{1},\dots,x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
+		\begin{enumerate}
+			\item $\{x_{1},\dots,x_{k}\}$ è composto da oggetti tutti uguali: no permutazioni! (o meglio permutazioni di $k$ oggetti indistinguibili) $k!/k!=1$ possibilità. Quindi $| A| =1$.
+			\item $\{x_{1},\dots,x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
+		\end{enumerate}
 
-$( \implies )$ esercizio.
-\item Sia $A=$ "estraggo gli oggetti $\{x_{1} \dots x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
-\begin{enumerate}
-\item $\{x_{1} \dots x_{k}\}$ è composto da oggetti tutti uguali: no permutazioni! (o meglio permutazioni di $k$ oggetti indistinguibili) $k!/k!=1$ possibilità. Quindi $| A| =1$.
-\item $\{x_{1} \dots x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
-\end{enumerate}
+		Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:
+		\begin{align*}
+			\Omega = & \{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\\
+			 & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			\implies  & | \Omega | =n( n-1) \cdots ( n-k+1) =\frac{n!}{( n-k) !}
+		\end{align*}
+		\item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che
+		\begin{equation*}
+			\forall \omega \in \Omega \ \ \ \ \PP( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
+		\end{equation*}
 
-Pertanto, $\frac{1}{n^{k}} \leq \PP( A) \leq \frac{k!}{n^{k}}$, nel \textit{mezzo} ci sono i casi con sottoclassi di oggetti uguali tra loro.
-\end{enumerate}
-\item 
-\begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:\begin{align*}
-\Omega = & \{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1\dots n\} ,i\in \{i\dots k\}\\
- & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
-\implies  & | \Omega | =n( n-1) \cdots ( n-k+1) =\frac{n!}{( n-k) !}
-\end{align*}
-\item $( \implies )$ Analogamente al caso $1$, dobbiamo provare che
-\begin{equation*}
-\forall \omega \in \Omega \ \ \ \ \PP( \omega ) =\frac{1}{| \Omega | } =\frac{1}{n( n-1) \cdots ( n-k+1)}
-\end{equation*}
+		Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \textit{condizionatamente} rispetto ai risultati delle passate estrazioni. Sfruttiamo il seguente risultato teorico \textit{(J.P. 3.3)} che connette indipendenza con probabilità condizionata per un numero finito di eventi.
 
-Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \textit{condizionatamente} rispetto ai risultati delle passate estrazioni. Sfruttiamo il seguente risultato teorico \textit{(J.P. 3.3)} che connette indipendenza con probabilità condizionata per un numero finito di eventi.
+		Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap _{n} A_{n}\right) =\PP( A_{1})\PP( A_{2} |A_{1}) \cdots \PP( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
-Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP( A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap _{n} A_{n}\right) =\PP( A_{1})\PP( A_{2} |A_{1}) \cdots \PP( A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
+		\begin{oss}
+			Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:
+			\begin{align*}
+				\PP(\{\omega \}) & =\PP(\{\omega _{1} ,\dots ,\omega _{k}\})\\
+				 & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
+				 & =\PP\left( A_{1}^{\omega _{1}}\right)\PP\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \PP\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
+				 & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
+				 & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-( k-1)}\\
+				 & =\frac{1}{n( n-1) \cdots ( n-k+1)} =\frac{1}{| \Omega | }
+			\end{align*}
+		\end{oss}
 
-\begin{oss}
-Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:\begin{align*}
-\PP(\{\omega \}) & =\PP(\{\omega _{1} ,\dots ,\omega _{k}\})\\
- & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
- & =\PP\left( A_{1}^{\omega _{1}}\right)\PP\left( A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \PP\left( A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
- & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
- & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-( k-1)}\\
- & =\frac{1}{n( n-1) \cdots ( n-k+1)} =\frac{1}{| \Omega | }
-\end{align*}
-\end{oss}
-
-$( \impliedby )$ Esercizio.
-\item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque
-\begin{equation*}
-| A| =k!,\ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
-\end{equation*}
-\end{enumerate}
-\item 
-\begin{enumerate}
-\item $\Omega $ è lo spazio campionario delle combinazioni
-\begin{equation*}
-\Omega =\{\omega \subset \{1,\dots ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
-\end{equation*}
-\item Sia $A$ come sopra, allora deve essere $\PP( A) =\frac{1}{\binom{n}{k}}$.
-\end{enumerate}
+		$( \impliedby )$ Esercizio.
+		\item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque
+		\begin{equation*}
+			| A| =k!,\ \ \ \ \PP( A) =\frac{| A| }{| \Omega | } =\frac{k!( n-k) !}{n!} =\frac{1}{\binom{n}{k}}
+		\end{equation*}
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item $\Omega $ è lo spazio campionario delle combinazioni
+		\begin{equation*}
+			\Omega =\{\omega \subset \{1,\dots ,n\} :| \omega | =k\} ,\ \ \ \ | \Omega | =\binom{n}{k}
+		\end{equation*}
+		\item Sia $A$ come sopra, allora deve essere $\PP( A) =\frac{1}{\binom{n}{k}}$.
+	\end{enumerate}
 \end{enumerate}
 
 \textbf{Osservazioni.}
 \begin{itemize}
-\item Deve risultare che le probabilità $\PP( A)$ dei punti $2c$ e $3b$ siano uguali (confronta con es $3b$ e es $9a$ [OSS]).
-\item Importanza di questo esercizio.
-\begin{itemize}
-\item Serve per capire quando la probabilità uniforme è il modello corretto.
-\item La probabilità uniforme \textit{dipende} da $\Omega $, confronta punti $1b$ e $2b$.
-\end{itemize}
+	\item Deve risultare che le probabilità $\PP( A)$ dei punti $2c$ e $3b$ siano uguali (confronta con es $3b$ e es $9a$ [OSS]).
+	\item Importanza di questo esercizio.
+	\begin{itemize}
+		\item Serve per capire quando la probabilità uniforme è il modello corretto.
+		\item La probabilità uniforme \textit{dipende} da $\Omega $, confronta punti $1b$ e $2b$.
+	\end{itemize}
 \end{itemize}
 
 \Soluzione
 
 \begin{equation*}
-\begin{drcases}
-7\ \text{blu}\\
-3\ \text{rosse}
-\end{drcases}
-\ 10\ \text{palline}\rightarrow \text{ne estraggo} \ 4
+	\begin{drcases}
+		7\ \text{blu}\\
+		3\ \text{rosse}
+	\end{drcases}
+	\ 10\ \text{palline}\rightarrow \text{ne estraggo} \ 4
 \end{equation*}
 \begin{enumerate}
-\item \textit{Estrazione con reimmissione.}
+	\item \textit{Estrazione con reimmissione.}
 
-In questo caso abbiamo:\begin{equation*}
-\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\}\}
-\end{equation*}
+	In questo caso abbiamo:
+	\begin{equation*}
+	\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\}\}
+	\end{equation*}
 
-Spazio campionario delle disposizioni con ripetizione
-\begin{equation*}
-| \Omega | =10^{4}
-\end{equation*}
+	Spazio campionario delle disposizioni con ripetizione
+	\begin{equation*}
+	| \Omega | =10^{4}
+	\end{equation*}
 
-Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Ho $3^{2} \cdot 7^{2}$ possibilità di scelta, ma poi dobbiamo considerare tutte le possibili permutazioni $\binom{4}{2} =\frac{4!}{2!2!}$.\begin{equation*}
-\implies | A| =\binom{4}{2} 3^{2} 7^{2}\implies \PP( A) =\frac{| A| }{| \Omega | } =\binom{4}{2}\frac{3^{2} 7^{2}}{10^{4}} \approx 0.2646.
-\end{equation*}
-\item \textit{Estrazione senza reimmissione.}
+	Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Ho $3^{2} \cdot 7^{2}$ possibilità di scelta, ma poi dobbiamo considerare tutte le possibili permutazioni $\binom{4}{2} =\frac{4!}{2!2!}$.
+	\begin{equation*}
+		\implies | A| =\binom{4}{2} 3^{2} 7^{2}\implies \PP( A) =\frac{| A| }{| \Omega | } =\binom{4}{2}\frac{3^{2} 7^{2}}{10^{4}} \approx 0.2646.
+	\end{equation*}
+	\item \textit{Estrazione senza reimmissione.}
 
-Svolgiamo l'esercizio in due diversi modi, introducendo $\Omega $ in due diversi modi.
-\begin{enumerate}
-\item Metodo $1$\begin{equation*}
-\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
-\end{equation*}
+	Svolgiamo l'esercizio in due diversi modi, introducendo $\Omega $ in due diversi modi.
+	\begin{enumerate}
+		\item Metodo $1$
+		\begin{equation*}
+			\Omega =\{( \omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+		\end{equation*}
 
-Spazio campionario delle disposizioni senza ripetizione
-\begin{equation*}
-| \Omega | =10\cdot 9\cdot 8\cdot 7=\frac{10!}{6!}
-\end{equation*}
+		Spazio campionario delle disposizioni senza ripetizione
+		\begin{equation*}
+			| \Omega | =10\cdot 9\cdot 8\cdot 7=\frac{10!}{6!}
+		\end{equation*}
 
-Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $( 3\cdot 2) \cdot ( 7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
+		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $( 3\cdot 2) \cdot ( 7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
 
-\begin{oss}
-Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline, tenendo conto che $2$ rosse sono indistinguibili e $2$ blu sono indistinguibili.\begin{gather*}
-\binom{4}{2} =\frac{4!}{2!2!} =\frac{4\cdot 3\cdot 2}{4} =6\ \text{possibili modi}\\
-\Downarrow \\
-| A| =\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)\\
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)}{10\cdot 9\cdot 8\cdot 7} \approx 0.3
-\end{gather*}
-\end{oss}
-\item Metodo $2$\begin{equation*}
-\Omega =\{\omega \subset \{1,\dots ,10\} \ |\ | \omega | =4\}
-\end{equation*}
+		\begin{oss}
+			Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline, tenendo conto che $2$ rosse sono indistinguibili e $2$ blu sono indistinguibili.
+			\begin{gather*}
+				\binom{4}{2} =\frac{4!}{2!2!} =\frac{4\cdot 3\cdot 2}{4} =6\ \text{possibili modi}\\
+				\Downarrow \\
+				| A| =\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)\\
+				\PP A) =\frac{| A| }{| \Omega | } =\frac{\binom{4}{2} \cdot ( 3\cdot 2) \cdot ( 7\cdot 6)}{10\cdot 9\cdot 8\cdot 7} \approx 0.3
+			\end{gather*}
+		\end{oss}
 
-Spazio campionario delle combinazioni
-\begin{equation*}
-| \Omega | =\binom{10}{4}
-\end{equation*}
+		\item Metodo $2$
+		\begin{equation*}
+			\Omega =\{\omega \subset \{1,\dots ,10\} \ |\ | \omega | =4\}
+		\end{equation*}
+		Spazio campionario delle combinazioni
+		\begin{equation*}
+			| \Omega | =\binom{10}{4}
+		\end{equation*}
+		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo
+		\begin{gather*}
+			\binom{3}{2} \ \text{modi di scegliere le palline rosse}\\
+			\binom{7}{2} \ \text{modi di scegliere le palline blu}\\
+			\implies | A| =\binom{3}{2}\binom{7}{2}\\
+			\PP( A) =\frac{| A| }{| \Omega | } =\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}} \approx 0.3
+		\end{gather*}
+	\end{enumerate}
+	\item \textit{Estrazione simultanea}
 
-Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo
-\begin{gather*}
-\binom{3}{2} \ \text{modi di scegliere le palline rosse}\\
-\binom{7}{2} \ \text{modi di scegliere le palline blu}\\
-\implies | A| =\binom{3}{2}\binom{7}{2}\\
-\PP( A) =\frac{| A| }{| \Omega | } =\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}} \approx 0.3
-\end{gather*}
-\end{enumerate}
-\item \textit{Estrazione simultanea}
-
-Questo caso si tratta esattamente come il metodo $2$ del punto precedente.
+	Questo caso si tratta esattamente come il metodo $2$ del punto precedente.
 \end{enumerate}
 
 \Soluzione
@@ -929,59 +931,63 @@ Manca.
 
 Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di classe $5$, i.e.
 \begin{equation*}
-\Omega =\{\omega \subset \{1,\dots ,52\} \ |\ | \omega | =5\} ,\ \ \ \ | \Omega | =\binom{52}{5}
+	\Omega =\{\omega \subset \{1,\dots ,52\} \ |\ | \omega | =5\} ,\ \ \ \ | \Omega | =\binom{52}{5}
 \end{equation*}
 \begin{enumerate}
-\item Sia $A$ l'evento "esce un full" (esempio di full: $3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit $)\begin{equation*}
-| A| =13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}
-\end{equation*}
-\begin{enumerate}
-\item ho $13$ possibilità per scegliere il tipo del tris (es. scelgo il $3$)
-\item ho $\binom{4}{3}$ possibilità di scegliere il seme (posso pensarlo come ad un'urna in cui ho $4$ semi e ne estraggo $3$, es. estratto $\varheartsuit ,\spadesuit ,\vardiamondsuit $)
-\item ho $12$ possibilità per scegliere il tipo della coppia (es. scelgo il $6$)
+	\item Sia $A$ l'evento "esce un full" (esempio di full: $3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit $)\begin{equation*}
+	| A| =13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}
+	\end{equation*}
+	\begin{enumerate}
+		\item ho $13$ possibilità per scegliere il tipo del tris (es. scelgo il $3$)
+		\item ho $\binom{4}{3}$ possibilità di scegliere il seme (posso pensarlo come ad un'urna in cui ho $4$ semi e ne estraggo $3$, es. estratto $\varheartsuit ,\spadesuit ,\vardiamondsuit $)
+		\item ho $12$ possibilità per scegliere il tipo della coppia (es. scelgo il $6$)
 
-\begin{oss}
-In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}{2}$ perché i casi $( 3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit ) \neq ( 6\varheartsuit \ 6\spadesuit \ 6\vardiamondsuit \ 3\varheartsuit \ 3\clubsuit )$, differenza con il punto successivo
-\end{oss}
-\item ho $\binom{4}{2}$ possibilità di scegliere il seme (es. $\varheartsuit ,\clubsuit $)\begin{equation*}
-\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.0014
-\end{equation*}
-\end{enumerate}
-\item Sia $B$ l'evento "esce una doppia coppia" (esempio di doppia coppia: $3\varheartsuit \ 3\vardiamondsuit \ 7\clubsuit \ 7\varheartsuit \ 11\spadesuit $)\begin{equation*}
-| B| =\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4
-\end{equation*}
-\begin{enumerate}
-\item ho $\binom{13}{2}$ modi per scegliere i due tipi (es. escono il $3$ e il $7$)
-\item ho $\binom{4}{2}$ modi di scegliere i semi per la prima coppia
-\item ho $\binom{4}{2}$ modi di scegliere i semi per la seconda coppia
-\item mi rimangono $11$ possibilità tra cui scegliere il \textit{numero/figura} dell'ultima carta
-\item posso scegliere uno qualunque dei $4$ semi possibili per l'ultima carta
-\begin{equation*}
-\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
-\end{equation*}
-\end{enumerate}
-\item [punto e] Sia $C$ l'evento "esce una scala".\begin{gather*}
-| C| =10\cdot 4^{5}\\
-A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
-\end{gather*}
-\begin{enumerate}
-\item $10$ possibilità $\rightarrow $ blocco la prima carta: ho $10$ possibilità, non posso far partire la scala da $J,Q,K$.
-\item per ogni carta ho $4$ possibilità sui semi
-\begin{equation*}
-\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
-\end{equation*}
-\end{enumerate}
-\item [punto h] Sia $D$ l'evento "esce un tris" (esempio di tris: $3\varheartsuit \ 3\vardiamondsuit \ 3\spadesuit \ 4\vardiamondsuit \ 5\varheartsuit $)\begin{equation*}
-| D| =13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4
-\end{equation*}
-\begin{enumerate}
-\item ho $13$ possibilità per il tipo del tris (es. esce il $3$)
-\item ho $\binom{4}{3}$ possibilità per scegliere il seme del tris
-\item ho $\binom{12}{2}$ possibilità per scegliere il tipo delle altre carte
-\item ho $4$ possibilità per scegliere il seme della quarta e della quinta carta
-\begin{equation*}
-\implies \PP( D) =\frac{| D| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4}{\binom{52}{5}}
-\end{equation*}
-\end{enumerate}
-\end{enumerate}
+		\begin{oss}
+			In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}{2}$ perché i casi $( 3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit ) \neq ( 6\varheartsuit \ 6\spadesuit \ 6\vardiamondsuit \ 3\varheartsuit \ 3\clubsuit )$, differenza con il punto successivo
+		\end{oss}
 
+		\item ho $\binom{4}{2}$ possibilità di scegliere il seme (es. $\varheartsuit ,\clubsuit $)
+		\begin{equation*}
+			\implies \PP( A) =\frac{| A| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.0014
+		\end{equation*}
+	\end{enumerate}
+	\item Sia $B$ l'evento "esce una doppia coppia" (esempio di doppia coppia: $3\varheartsuit \ 3\vardiamondsuit \ 7\clubsuit \ 7\varheartsuit \ 11\spadesuit $)
+	\begin{equation*}
+		| B| =\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4
+	\end{equation*}
+	\begin{enumerate}
+		\item ho $\binom{13}{2}$ modi per scegliere i due tipi (es. escono il $3$ e il $7$)
+		\item ho $\binom{4}{2}$ modi di scegliere i semi per la prima coppia
+		\item ho $\binom{4}{2}$ modi di scegliere i semi per la seconda coppia
+		\item mi rimangono $11$ possibilità tra cui scegliere il \textit{numero/figura} dell'ultima carta
+		\item posso scegliere uno qualunque dei $4$ semi possibili per l'ultima carta
+		\begin{equation*}
+			\implies \PP( B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
+		\end{equation*}
+	\end{enumerate}
+	\item [punto e] Sia $C$ l'evento "esce una scala".
+	\begin{gather*}
+		| C| =10\cdot 4^{5}\\
+		A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
+	\end{gather*}
+	\begin{enumerate}
+		\item $10$ possibilità $\rightarrow $ blocco la prima carta: ho $10$ possibilità, non posso far partire la scala da $J,Q,K$.
+		\item per ogni carta ho $4$ possibilità sui semi
+		\begin{equation*}
+			\implies \PP( C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
+		\end{equation*}
+	\end{enumerate}
+	\item [punto h] Sia $D$ l'evento "esce un tris" (esempio di tris: $3\varheartsuit \ 3\vardiamondsuit \ 3\spadesuit \ 4\vardiamondsuit \ 5\varheartsuit $)
+	\begin{equation*}
+		| D| =13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4
+	\end{equation*}
+	\begin{enumerate}
+		\item ho $13$ possibilità per il tipo del tris (es. esce il $3$)
+		\item ho $\binom{4}{3}$ possibilità per scegliere il seme del tris
+		\item ho $\binom{12}{2}$ possibilità per scegliere il tipo delle altre carte
+		\item ho $4$ possibilità per scegliere il seme della quarta e della quinta carta
+		\begin{equation*}
+			\implies \PP( D) =\frac{| D| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4}{\binom{52}{5}}
+		\end{equation*}
+	\end{enumerate}
+\end{enumerate}
