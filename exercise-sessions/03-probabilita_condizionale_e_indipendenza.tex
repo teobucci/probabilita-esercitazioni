@@ -43,12 +43,12 @@ Una roulette semplificata è formata da $12$ numeri che sono \emph{rosso} $( R)$
 \end{equation*}
 Siano
 \begin{itemize}
-	\item $A=$ esce un numero pari,
-	\item $B=$ esce un numero rosso,
-	\item $C=$ esce un numero $\leq 3$,
-	\item $D=$ esce un numero $\leq 6$,
-	\item $E=$ esce un numero $\leq 8$,
-	\item $F=$ esce un numero dispari $\leq 3$.
+	\item $A=$ \event{esce un numero pari},
+	\item $B=$ \event{esce un numero rosso},
+	\item $C=$ \event{esce un numero $\leq 3$},
+	\item $D=$ \event{esce un numero $\leq 6$},
+	\item $E=$ \event{esce un numero $\leq 8$},
+	\item $F=$ \event{esce un numero dispari $\leq 3$}.
 \end{itemize}
 Calcolare le seguenti probabilità condizionali:
 \begin{itemize}
@@ -69,16 +69,16 @@ Si consideri il lancio di un dado, ripetuto due volte.
 \begin{enumerate}
 	\item Si considerino i seguenti eventi:
 	\begin{itemize}
-		\item $A=$ numero dispari sul primo lancio,
-		\item $B=$ numero dispari sul secondo lancio,
-		\item $C=$ la somma dei risultati dei due lanci è dispari.
+		\item $A=$ \event{numero dispari sul primo lancio},
+		\item $B=$ \event{numero dispari sul secondo lancio},
+		\item $C=$ \event{la somma dei risultati dei due lanci è dispari}.
 	\end{itemize}
 	Gli eventi $A$, $B$ e $C$ sono indipendenti?
 	\item Si considerino ora gli eventi:
 	\begin{itemize}
-		\item $E=$ il risultato del secondo lancio è $1$, $2$ o $5$,
-		\item $F=$ il risultato del secondo lancio è $4$, $5$ o $6$,
-		\item $G=$ la somma dei risultati dei due lanci è $9$.
+		\item $E=$ \event{il risultato del secondo lancio è $1$, $2$ o $5$},
+		\item $F=$ \event{il risultato del secondo lancio è $4$, $5$ o $6$},
+		\item $G=$ \event{la somma dei risultati dei due lanci è $9$}.
 	\end{itemize}
 	\item Gli eventi $E$, $F$ e $G$ sono indipendenti?
 \end{enumerate}
@@ -333,7 +333,7 @@ Manca.
 
 \Soluzione
 
-Introdurre $\Omega =$ "spazio campionario delle combinazioni di $90$ elementi di classe $5$" andrebbe bene solo per rispondere al primo punto, agli altri punti abbiamo esperimenti ripetuti, quindi \textit{non} introduciamo $\Omega $. Dal meccanismo del gioco sappiamo solo che le diverse estrazioni sono tra loro indipendenti e in ciascuna estrazione gli esiti sono equiprobabili.
+Introdurre $\Omega =$ \event{spazio campionario delle combinazioni di $90$ elementi di classe $5$} andrebbe bene solo per rispondere al primo punto, agli altri punti abbiamo esperimenti ripetuti, quindi \textit{non} introduciamo $\Omega $. Dal meccanismo del gioco sappiamo solo che le diverse estrazioni sono tra loro indipendenti e in ciascuna estrazione gli esiti sono equiprobabili.
 
 \textbf{Metodo 1}
 
@@ -385,7 +385,7 @@ Introduciamo gli eventi:
 	\begin{oss}
 		Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
 	\end{oss}
-	\item Introduciamo i nuovi eventi $B_{k} =$ "il $15$ è estratto $k$ volte".
+	\item Introduciamo i nuovi eventi $B_{k} =$ \event{il $15$ è estratto $k$ volte}.
 	\begin{equation*}
 		\PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})}
 	\end{equation*}
@@ -431,19 +431,19 @@ Introduciamo gli eventi:
 
 Possiamo ridurre il nostro esperimento aleatorio a $42$ prove di Bernoulli ripetute e \textbf{indipendenti}, ciascuna con probabilità di successo $p=1/18$, i.e. interpretiamo
 \begin{itemize}
-	\item $A=$ successo
-	\item $A_{k} =$ successo alla prova $k$
-	\item $p=\PP( A) =$ probabilità di successo $\left( =\frac{1}{18}\right)$.
+	\item $A=$ \event{successo}
+	\item $A_{k} =$ \event{successo alla prova $k$}
+	\item $p=\PP( A) =$ \event{probabilità di successo $\left( =\frac{1}{18}\right)$}.
 \end{itemize}
 Allora
 \begin{enumerate}
 	\item $\PP( A) =1/18$
 	\item $\PP\left( A_{42} \mid \bigcup _{k=1}^{41} A_{k}\comp\right) =\PP( A_{42}) =\PP( A) =p$
 	\item $\PP\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\PP\left(\bigcap _{k=1}^{42} A_{k}\comp\right) =1-\prod _{k=1}^{42}\PP\left( A_{k}\comp\right) =1-( 1-p)^{42}$
-	\item $B_{1} =$ solo un successo.
+	\item $B_{1} =$ \event{solo un successo}.
 
 	$\PP( B_{1}) =42p( 1-p)^{41} \implies \PP( A_{1} \mid B_{1}) =\frac{p( 1-p)^{41}}{42p( 1-p)^{41}} =\frac{1}{42}$
-	\item $B_{2} =$ solo due successi.
+	\item $B_{2} =$ \event{solo due successi}.
 
 	$\PP( B_{2}) =\binom{42}{2} p^{2}( 1-p)^{40} \implies \PP( A_{1} \cap A_{2} \mid B_{2}) =\frac{p^{2}( 1-p)^{40}}{\binom{42}{2} p^{2}( 1-p)^{40}} =\frac{1}{\binom{42}{2}}$
 \end{enumerate}
@@ -729,8 +729,8 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 
 Introduciamo gli eventi
 \begin{itemize}
-	\item $R_{k} =$ "la $k$-esima pallina estratta è rossa"
-	\item $B_{k} =$ "la $k$-esima pallina estratta è bianca"
+	\item $R_{k} =$ \event{la $k$-esima pallina estratta è rossa}.
+	\item $B_{k} =$ \event{la $k$-esima pallina estratta è bianca}.
 \end{itemize}
 Allora
 \begin{enumerate}

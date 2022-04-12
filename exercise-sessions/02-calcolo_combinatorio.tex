@@ -426,8 +426,8 @@ Manca.
 
 Consideriamo i due eventi
 \begin{itemize}
-	\item $A=$ "vinco", i.e. azzecco la cinquina vincente
-	\item $B=$ "vinco senza precisare l'ordine"
+	\item $A=$ \event{vinco}, i.e. azzecco la cinquina vincente
+	\item $B=$ \event{vinco senza precisare l'ordine}
 \end{itemize}
 
 Svolgiamo l'esercizio in $3$ diversi modi.
@@ -514,7 +514,7 @@ Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\PP( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
-	\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1,\dots,365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:
+	\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1,\dots,365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ \event{almeno due persone compiono gli anni lo stesso giorno}, calcoliamo $A\comp$ e avremo:
 	\begin{equation*}
 		\begin{array}{ l }
 			\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
@@ -526,7 +526,7 @@ Dato che le persone sono selezionate in modo casuale possiamo considerare una di
 		\end{array}
 	\end{equation*}
 	Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
-	\item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:
+	\item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ \event{almeno una persona compie gli anni il mio stesso giorno}, anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:
 	\begin{equation*}
 		\begin{array}{ l }
 			\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
@@ -568,7 +568,7 @@ Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. 
 \]
 In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
 \begin{enumerate}
-	\item Sia $A=$ "indovino i primi $6$ numeri estratti, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).
+	\item Sia $A=$ \event{indovino i primi $6$ numeri estratti}, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).
 	\begin{equation*}
 		| A| =1\implies \PP( A) =| A| /| \Omega | =1/\binom{90}{6} \approx 1.6\times 10^{-9}
 	\end{equation*}
@@ -581,7 +581,7 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 		\end{gather*}
 	\end{oss}
 
-	Sia $A=$ "indovino i primi $6$ numeri estratti".
+	Sia $A=$ \event{indovino i primi $6$ numeri estratti}.
 	\begin{equation*}
 		| A| =6!
 	\end{equation*}
@@ -668,8 +668,8 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 
 	\end{tikzpicture}
 
-	L'evento $A=$ "indovino i $6$ numeri estratti" è visibile, sull'albero, come una particolare diramazione. Dato che però non ci interessa l'ordine di estrazione consideriamo tutte le possibili permutazioni di $A$, i.e. $| A| =6!$.
-	\item Sia $B=$ "indovino $5$ dei $6$ numeri estratti e in più un numero jolly". Determiniamo ogni esito possibile $B$ come segue:
+	L'evento $A=$ \event{indovino i $6$ numeri estratti} è visibile, sull'albero, come una particolare diramazione. Dato che però non ci interessa l'ordine di estrazione consideriamo tutte le possibili permutazioni di $A$, i.e. $| A| =6!$.
+	\item Sia $B=$ \event{indovino $5$ dei $6$ numeri estratti e in più un numero jolly}. Determiniamo ogni esito possibile $B$ come segue:
 	\begin{enumerate}
 		\item quali sottoinsiemi di $5$ numeri dei $6$ azzecco: $\binom{6}{5} =\frac{6!}{5!\ 1!} =6$ modi,
 		\item azzecco il jolly: $1$ modo.
@@ -735,7 +735,7 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 
 \Soluzione
 
-Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ "esce l'oggetto $m$ all'estrazione $j$":
+Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ \event{esce l'oggetto $m$ all'estrazione $j$}:
 \begin{equation*}
 	A_{j}^{m} =\{\omega =( \omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1,\dots,n\} ,\ \ \ \ j\in \{1,\dots,k\}
 \end{equation*}
@@ -771,7 +771,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 		\end{align*}
 
 		$( \implies )$ esercizio.
-		\item Sia $A=$ "estraggo gli oggetti $\{x_{1},\dots,x_{k}\}$ senza riguardo per l'ordine". Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
+		\item Sia $A=$ \event{estraggo gli oggetti $\{x_{1},\dots,x_{k}\}$ senza riguardo per l'ordine}. Dato che abbiamo la possibilità di ripetizioni, i casi possibili oscillano tra due estremi:
 		\begin{enumerate}
 			\item $\{x_{1},\dots,x_{k}\}$ è composto da oggetti tutti uguali: no permutazioni! (o meglio permutazioni di $k$ oggetti indistinguibili) $k!/k!=1$ possibilità. Quindi $| A| =1$.
 			\item $\{x_{1},\dots,x_{k}\}$ è composto da oggetti tutti distinti: dato che non teniamo conto dell'ordine, dobbiamo tenere conto di tutte le possibili permutazioni. Quindi $| A| =k!$.
@@ -874,7 +874,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 			| \Omega | =10\cdot 9\cdot 8\cdot 7=\frac{10!}{6!}
 		\end{equation*}
 
-		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $( 3\cdot 2) \cdot ( 7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
+		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $( 3\cdot 2) \cdot ( 7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$ palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
 
 		\begin{oss}
 			Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline, tenendo conto che $2$ rosse sono indistinguibili e $2$ blu sono indistinguibili.
