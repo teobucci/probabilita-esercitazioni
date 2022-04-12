@@ -386,7 +386,7 @@ leftline=true,
 topline=false,
 bottomline=false,
 linecolor=orange,
-backgroundcolor=orange!5,
+backgroundcolor=orange!0,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
 innertopmargin=5pt,
@@ -403,7 +403,7 @@ leftline=true,
 topline=false,
 bottomline=false,
 linecolor=green,
-backgroundcolor=green!5,
+backgroundcolor=green!0,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
 innertopmargin=5pt,
@@ -420,7 +420,7 @@ leftline=true,
 topline=false,
 bottomline=false,
 linecolor=blue,
-backgroundcolor=blue!5,
+backgroundcolor=blue!0,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
 innertopmargin=5pt,
@@ -472,5 +472,5 @@ innerbottommargin=5pt]{dimBox}
 
 \newcommand{\nocontentsline}[3]{} % QUESTO COMANDO E QUELLO DOPO SERVONO PER AVERE IL COMANDO \tocless DA METTERE PRIMA DI UNA SEZIONE CHE NON VOGLIO FAR APPARIRE NELL'INDICE
 \newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
-
+\usepackage[textsize=tiny, textwidth=1.5cm]{todonotes} %add disable to options to not show in pdf
 
