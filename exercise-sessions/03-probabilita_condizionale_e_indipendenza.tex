@@ -13,9 +13,9 @@
 Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \mathbb{N}} \subseteq \mathcal{A}$ una partizione discreta di $\Omega $:
 \begin{enumerate}
 	\item se $\PP(A) ,\PP(B)  >0$ allora $\PP(A\mid B) =\frac{\PP(B\mid A)\PP(A)}{\PP(B)}$.
-	\item $\PP(A) =\sum\limits _{n}\PP(A\cap E_{n})$
-	\item \textit{Probabilità totali}: se $\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(A) =\sum\limits _{n}\PP(A\mid E_{n})\PP(E_{n})$.
-	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits _{n}\PP(A\mid E_{n})\PP(E_{n})}$.
+	\item $\PP(A) =\sum\limits_{n}\PP(A\cap E_{n})$
+	\item \textit{Probabilità totali}: se $\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(A) =\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})$.
+	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})}$.
 \end{enumerate}
 \begin{definition}
 	$A$ e $B$ sono indipendenti $(A\Bot B)$ se $\PP(A\cap B) =\PP(A)\PP(B)$.
@@ -28,7 +28,7 @@ Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \mathbb{N}} \subseteq \mathcal
 \begin{definition}
 	Sia $(\Omega ,\mathcal{A} ,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
 	\begin{equation*}
-		\PP\left(\bigcap _{i\in I} A_{i}\right) =\prod _{i\in J}\PP(A_{i})
+		\PP\left(\bigcap_{i\in I} A_{i}\right) =\prod_{i\in J}\PP(A_{i})
 	\end{equation*}
 \end{definition}
 
@@ -353,18 +353,18 @@ Introduciamo gli eventi:
 	$\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
 	\item L'evento che ci interessa è
 	\begin{equation*}
-		\left(A_{42} \mid \bigcap _{k=1}^{41} A_{k}\comp\right)
+		\left(A_{42} \mid \bigcap_{k=1}^{41} A_{k}\comp\right)
 	\end{equation*}
 	sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP(A\mid B) =\PP(A)$ se $A\Bot B$, si ha
 	\begin{equation*}
-		\left(A_{42} \mid\bigcap _{k=1}^{41} A_{k}\comp\right) =\underbrace{\PP(A_{42}) =\PP(A)}_{\text{primo punto}} \approx 0.0556
+		\left(A_{42} \mid\bigcap_{k=1}^{41} A_{k}\comp\right) =\underbrace{\PP(A_{42}) =\PP(A)}_{\text{primo punto}} \approx 0.0556
 	\end{equation*}
 	Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
 	\item L'evento "almeno un $15$ su $42$ estrazioni" si traduce formalmente in
 	\begin{equation*}
-		\bigcup _{k=1}^{42} A_{k}
+		\bigcup_{k=1}^{42} A_{k}
 	\end{equation*}
-	Dobbiamo quindi calcolare $\PP\left(\bigcup _{k=1}^{42} A_{k}\right)$.
+	Dobbiamo quindi calcolare $\PP\left(\bigcup_{k=1}^{42} A_{k}\right)$.
 
 	Ricordiamo che l'unica informazione che possiamo sfruttare è che gli evento $A_{j} ,j=1,\dots,42$ sono \textit{indipendenti}.
 
@@ -372,13 +372,13 @@ Introduciamo gli eventi:
 
 	Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
 	\begin{gather*}
-		\left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)\comp\right)\comp =\left(\bigcap _{k} A_{k}\comp\right)\comp ,\ \ \ \ \PP\left(A\comp\right) =1-\PP(A) ,\\
+		\left(\bigcup_{k} A_{k}\right) =\left(\left(\bigcup_{k} A_{k}\right)\comp\right)\comp =\left(\bigcap_{k} A_{k}\comp\right)\comp ,\ \ \ \ \PP\left(A\comp\right) =1-\PP(A) ,\\
 		A_{k} \Bot \text{allora} \ A_{k}\comp \Bot ,
 	\end{gather*}
 	quindi
 	\begin{align*}
-		\PP\left(\bigcup _{k=1}^{42} A_{k}\right) & =\PP\left(\bigcap _{k} A_{k}\comp\right)\comp =1-\PP\left(\bigcap _{k} A_{k}\comp\right) =1-\prod _{k=1}^{42}\PP\left(A_{k}\comp\right)\\
-		 & =1-\prod _{k=1}^{42}\PP\left(A\comp\right) =1-\left[\PP\left(A\comp\right)\right]^{42}\\
+		\PP\left(\bigcup_{k=1}^{42} A_{k}\right) & =\PP\left(\bigcap_{k} A_{k}\comp\right)\comp =1-\PP\left(\bigcap_{k} A_{k}\comp\right) =1-\prod_{k=1}^{42}\PP\left(A_{k}\comp\right)\\
+		 & =1-\prod_{k=1}^{42}\PP\left(A\comp\right) =1-\left[\PP\left(A\comp\right)\right]^{42}\\
 		 & =1-\left(1-\frac{1}{18}\right)^{42} \approx 0.9093
 	\end{align*}
 
@@ -391,18 +391,18 @@ Introduciamo gli eventi:
 	\end{equation*}
 	Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come
 	\begin{equation*}
-		B_{1} =\bigcup _{j=1}^{42}\left(A_{j} \cap \bigcap _{k\neq j} A_{k}\comp\right) =
+		B_{1} =\bigcup_{j=1}^{42}\left(A_{j} \cap \bigcap_{k\neq j} A_{k}\comp\right) =
 	\end{equation*}
 	i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi
 	\begin{equation*}
-		\PP(B_{1}) =42\PP(A_{j})\PP\left(\bigcap _{k\neq j} A_{j}\comp\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
+		\PP(B_{1}) =42\PP(A_{j})\PP\left(\bigcap_{k\neq j} A_{j}\comp\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
 	\end{equation*}
 	ci sono $42$ modi per scegliere $j$ (la $j$-esima estrazione in cui esce $15$); per un $j$ fissato stiamo usando il fatto che l'unione degli eventi è disgiunta.
 
 	Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)
 	\begin{align*}
-		\PP(A_{1} \cap B_{1}) & =\PP\left(A_{1} \cap \bigcap _{k=2}^{42} A_{k}\comp\right)\overset{\Bot }{=}\PP(A_{1})\prod _{k=2}^{42}\PP\left(A_{k}\comp\right)\\
-		 & =\PP(A_{1})\prod _{k=2}^{42}(1-\PP(A_{k})) =\\
+		\PP(A_{1} \cap B_{1}) & =\PP\left(A_{1} \cap \bigcap_{k=2}^{42} A_{k}\comp\right)\overset{\Bot }{=}\PP(A_{1})\prod_{k=2}^{42}\PP\left(A_{k}\comp\right)\\
+		 & =\PP(A_{1})\prod_{k=2}^{42}(1-\PP(A_{k})) =\\
 		 & =\PP(A)(1-\PP(A))^{41} =\frac{1}{18}\left(1-\frac{1}{18}\right)^{41}
 	\end{align*}
 	Infine
@@ -411,13 +411,13 @@ Introduciamo gli eventi:
 	\end{equation*}
 	\item Osserviamo che
 	\begin{gather*}
-		B_{2} =\bigcup _{i,j=1}^{42}\left(A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}\comp\right)\\
-		\PP(B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\PP(A_{j})\PP(A_{i})\PP\left(\bigcap _{k\neq i,k\neq j} A_{k}\comp\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
+		B_{2} =\bigcup_{i,j=1}^{42}\left(A_{j} \cap A_{i} \cap \bigcap_{k\neq i,k\neq j} A_{k}\comp\right)\\
+		\PP(B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\PP(A_{j})\PP(A_{i})\PP\left(\bigcap_{k\neq i,k\neq j} A_{k}\comp\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
 	\end{gather*}
 	Allora
 	\begin{align*}
-		\PP(A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP(A_{1} \cap A_{2} \cap B_{2})}{\PP(B_{2})} =\frac{\PP\left(A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
-		 & \overset{\Bot }{=}\frac{\PP(A_{1})\PP(A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
+		\PP(A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP(A_{1} \cap A_{2} \cap B_{2})}{\PP(B_{2})} =\frac{\PP\left(A_{1} \cap A_{2} \cap \bigcap_{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
+		 & \overset{\Bot }{=}\frac{\PP(A_{1})\PP(A_{2})\PP\left(\bigcap_{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
 		 & =\frac{\PP(A)\PP(A)(1-\PP(A))^{40}}{\PP(B_{2})}\\
 		 & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 	\end{align*}
@@ -438,8 +438,8 @@ Possiamo ridurre il nostro esperimento aleatorio a $42$ prove di Bernoulli ripet
 Allora
 \begin{enumerate}
 	\item $\PP(A) =1/18$
-	\item $\PP\left(A_{42} \mid \bigcup _{k=1}^{41} A_{k}\comp\right) =\PP(A_{42}) =\PP(A) =p$
-	\item $\PP\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\PP\left(\bigcap _{k=1}^{42} A_{k}\comp\right) =1-\prod _{k=1}^{42}\PP\left(A_{k}\comp\right) =1-(1-p)^{42}$
+	\item $\PP\left(A_{42} \mid \bigcup_{k=1}^{41} A_{k}\comp\right) =\PP(A_{42}) =\PP(A) =p$
+	\item $\PP\left(\bigcup_{k=1}^{42} A_{k}\right) =1-\PP\left(\bigcap_{k=1}^{42} A_{k}\comp\right) =1-\prod_{k=1}^{42}\PP\left(A_{k}\comp\right) =1-(1-p)^{42}$
 	\item $B_{1} =$ \event{solo un successo}.
 
 	$\PP(B_{1}) =42p(1-p)^{41} \implies \PP(A_{1} \mid B_{1}) =\frac{p(1-p)^{41}}{42p(1-p)^{41}} =\frac{1}{42}$
@@ -464,7 +464,7 @@ Consideriamo l'evento
 	\begin{theorem}
 		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
 		\begin{equation*}
-			\PP(A) =\sum\limits _{k\in \mathbb{N}}\PP(A\mid E_{k})\PP(E_{k})
+			\PP(A) =\sum\limits_{k\in \mathbb{N}}\PP(A\mid E_{k})\PP(E_{k})
 		\end{equation*}
 	\end{theorem}
 	La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero
@@ -857,26 +857,26 @@ Allora
 	\item $\PP(B_{1} \mid B_{2}) =\frac{\PP(B_{2} \mid B_{1})\PP(B_{1})}{\PP(B_{2})} =\frac{3}{5}$
 	\item $
 	\begin{aligned}
-		\PP\left(\bigcap\limits _{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\PP(B_{1})\PP(B_{2} \mid B_{1})\PP(B_{3} \mid B_{1} \cap B_{2}) \cdots \PP(B_{n} \mid B_{1} \cap \cdots \cap B_{n-1})\\
+		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\PP(B_{1})\PP(B_{2} \mid B_{1})\PP(B_{3} \mid B_{1} \cap B_{2}) \cdots \PP(B_{n} \mid B_{1} \cap \cdots \cap B_{n-1})\\
 		 & =\left(\frac{1}{2}\right)^{n}
 	\end{aligned}$
 	
 	Stiamo sfruttando il fatto che c'è rinforzo solo delle rosse e \textit{non} che abbiamo prove ripetute indipendenti!
 	\item $
 	\begin{aligned}
-		\PP\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & =\PP\left(B_{1}\comp\right)\PP\left(B_{2}\comp \mid B_{1}\comp\right) \cdots \PP\left(B_{n}\comp \mid B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
+		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\comp\right) & =\PP\left(B_{1}\comp\right)\PP\left(B_{2}\comp \mid B_{1}\comp\right) \cdots \PP\left(B_{n}\comp \mid B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
 		 & =\frac{1}{\cancel{2}} \cdotp \frac{\cancel{2}}{\cancel{3}} \cdots \frac{1}{n+1} =\frac{1}{n+1}
 	\end{aligned}$
 
 	Stiamo sfruttando il rinforzo delle rosse.
-	\item $\underbrace{\PP\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right) =\lim\limits _{n\rightarrow \infty }\PP\left(\bigcap\limits _{k=1}^{n} B_{k}\right)}_{\bigcap _{k=1}^{n} B_{k} \ \downarrow \ \bigcap _{k=1}^{\infty } B_{k}} =\liminf\limits _{n\rightarrow \infty }\left(\frac{1}{2}\right)^{n} =0$
+	\item $\underbrace{\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right) =\lim\limits_{n\rightarrow \infty }\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\right)}_{\bigcap_{k=1}^{n} B_{k} \ \downarrow \ \bigcap_{k=1}^{\infty } B_{k}} =\liminf\limits_{n\rightarrow \infty }\left(\frac{1}{2}\right)^{n} =0$
 
 	Abbiamo sfruttato la continuità dall'alto di $\PP$.
 	\item $
 	\begin{aligned}
-		\PP\left(\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits _{k=1}^{\infty } B_{k}\comp\right)\right) & =\underbrace{\PP\left(\bigcap\limits _{k=1}^{\infty } B_{k}\right)}_{0} +\PP\left(\bigcap\limits _{k=1}^{\infty } B_{k}\comp\right) & \text{(unione disgiunta)}\\
-		 & =\lim\limits _{n\rightarrow \infty }\PP\left(\bigcap\limits _{k=1}^{n} B_{k}\comp\right) & \text{(continuità)}\\
-		 & =\lim\limits _{n\rightarrow \infty }\frac{1}{n+1} =0 & 
+		\PP\left(\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits_{k=1}^{\infty } B_{k}\comp\right)\right) & =\underbrace{\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right)}_{0} +\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\comp\right) & \text{(unione disgiunta)}\\
+		 & =\lim\limits_{n\rightarrow \infty }\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\comp\right) & \text{(continuità)}\\
+		 & =\lim\limits_{n\rightarrow \infty }\frac{1}{n+1} =0 & 
 	\end{aligned}$
 \end{enumerate}
 

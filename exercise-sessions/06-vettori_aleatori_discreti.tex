@@ -4,13 +4,13 @@
 
 \Esercizio{}
 
-Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definite sul medesimo spazio di probabilità, si consideri il coefficiente di correlazione $\rho _{X,Y} =\frac{\mathrm{Cov} (X,Y)}{\sigma _{X} \sigma _{Y}}$. Si mostri che:
+Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definite sul medesimo spazio di probabilità, si consideri il coefficiente di correlazione $\rho_{X,Y} =\frac{\mathrm{Cov} (X,Y)}{\sigma_{X} \sigma_{Y}}$. Si mostri che:
 \begin{enumerate}[a)]
-	\item se $X$ e $Y$ sono indipendenti, allora $\rho _{X,Y} =0$
-	\item $\rho _{aX+b,cY+d} =\rho _{X,Y}$ per ogni $a,c >0,b,d\in \mathbb{R}$
-	\item $\rho _{X,aX+b} =a/|a|$, per ogni $a\neq 0$
-	\item $\mathrm{Var}\left(\frac{1}{\sigma _{Y}} Y-\frac{\rho _{X,Y}}{\sigma _{X}} X\right)=1-\rho _{X,Y}^{2}$
-	\item $| \rho _{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \mathbb{R}$. Suggerimento: utilizzare il punto d
+	\item se $X$ e $Y$ sono indipendenti, allora $\rho_{X,Y} =0$
+	\item $\rho_{aX+b,cY+d} =\rho_{X,Y}$ per ogni $a,c >0,b,d\in \mathbb{R}$
+	\item $\rho_{X,aX+b} =a/|a|$, per ogni $a\neq 0$
+	\item $\mathrm{Var}\left(\frac{1}{\sigma_{Y}} Y-\frac{\rho_{X,Y}}{\sigma_{X}} X\right)=1-\rho_{X,Y}^{2}$
+	\item $| \rho_{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \mathbb{R}$. Suggerimento: utilizzare il punto d
 \end{enumerate}
 
 \Esercizio{$\star$}
@@ -23,14 +23,14 @@ matrice varianza di $X$. Suggerimento: si supponga inizialmente che $\EE[X]=0$ e
 
 Date $X_{1} ,\dots ,X_{n}$ variabili aleatorie reali i.i.d. con momento secondo finito, introdotti
 \begin{gather*}
-\mu =\EE[X_{k}] ,\ \ \sigma ^{2} =\mathrm{Var}(X_{k}) ,\\
-\overline{X}_{n} =\frac{1}{n}\sum _{k=1}^{n} X_{k} ,\ \ S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} ,\ \ W_{n}^{2} =\frac{1}{n}\sum _{k=1}^{n}(X_{k} -\mu)^{2}
+\mu =\EE[X_{k}] ,\ \ \sigma^{2} =\mathrm{Var}(X_{k}) ,\\
+\overline{X}_{n} =\frac{1}{n}\sum_{k=1}^{n} X_{k} ,\ \ S_{n}^{2} =\frac{1}{n-1}\sum_{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} ,\ \ W_{n}^{2} =\frac{1}{n}\sum_{k=1}^{n}(X_{k} -\mu)^{2}
 \end{gather*}
 si mostri che:
 \begin{enumerate}[a)]
-	\item $\EE[\overline{X}_{n}] =\mu ,\mathrm{Var}(\overline{X}_{n}) =\sigma ^{2} /n$
-	\item\label{esercizio3b} $\sum _{k=1}^{n} X_{k}^{2} =\sum _{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} +n\overline{X}_{n}^{2}$
-	\item $\EE\left[S_{n}^{2}\right] =\EE\left[W_{n}^{2}\right] =\sigma ^{2}$
+	\item $\EE[\overline{X}_{n}] =\mu ,\mathrm{Var}(\overline{X}_{n}) =\sigma^{2} /n$
+	\item\label{esercizio3b} $\sum_{k=1}^{n} X_{k}^{2} =\sum_{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} +n\overline{X}_{n}^{2}$
+	\item $\EE\left[S_{n}^{2}\right] =\EE\left[W_{n}^{2}\right] =\sigma^{2}$
 \end{enumerate}
 
 \Esercizio{}
@@ -65,7 +65,7 @@ Un perito elettrotecnico deve costruire un sistema costituito da tre componenti 
 \begin{enumerate}[a)]
 	\item Determinare la legge congiunta di $X$ ed $Y$ e le leggi marginali.
 	\item Le variabili $X$ ed $Y$ sono indipendenti?
-	\item Calcolare $\EE[\mathrm{X}],\EE[\mathrm{Y}],\EE[\mathrm{XY}].$ Scrivere la matrice varianza di $(X,Y)$ e determinare $\rho _{X,Y}$
+	\item Calcolare $\EE[\mathrm{X}],\EE[\mathrm{Y}],\EE[\mathrm{XY}].$ Scrivere la matrice varianza di $(X,Y)$ e determinare $\rho_{X,Y}$
 	\item Calcolare la legge, il valore atteso e la varianza del numero di componenti pescati funzionanti.
 	\item Calcolare la probabilità che l'apparecchio funzioni.
 \end{enumerate}
@@ -189,7 +189,7 @@ Si supponga d'ora in poi $\alpha =1.$ Sia $Y$ un'altra variabile aleatoria, indi
 
 \Esercizio{}
 
-Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse ($B\geq 1$ e $R\geq 1$). Sia $X_{k}$ la variabile aleatoria bernoulliana che indica se alla $k$-esima estrazione esce una pallina rossa e sia $Y=\sum _{k=1}^{n} X_{k}$ il numero di palline rosse sulle $n$ estratte. Si risponda ai seguenti quesiti, sia nel caso di estrazione con reimmissione sia nel caso senza reimmissione (in quest'ultimo caso $n\leq B+R$).
+Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianche e $R$ palline rosse ($B\geq 1$ e $R\geq 1$). Sia $X_{k}$ la variabile aleatoria bernoulliana che indica se alla $k$-esima estrazione esce una pallina rossa e sia $Y=\sum_{k=1}^{n} X_{k}$ il numero di palline rosse sulle $n$ estratte. Si risponda ai seguenti quesiti, sia nel caso di estrazione con reimmissione sia nel caso senza reimmissione (in quest'ultimo caso $n\leq B+R$).
 \begin{enumerate}[a)]
 	\item Qual è la legge di $Y$?
 	\item Qual è il valore atteso delle $X_{k} ?$
@@ -206,21 +206,21 @@ Consideriamo infinite prove di Bernoulli indipendenti con probabilità di succes
 \begin{equation*}
 E_{k} =\ \text{successo alla prova } k
 \end{equation*}
-e sia $\PP$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k$. Indicato con $\omega =(\omega _{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo infine le variabili aleatorie
+e sia $\PP$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k$. Indicato con $\omega =(\omega_{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo infine le variabili aleatorie
 \begin{equation*}
-X_{k} :\Omega \rightarrow \mathbb{R} ,\ \ X_{k} (\omega)=\omega _{k} ,\ \ k\in \mathbb{N}
+X_{k} :\Omega \rightarrow \mathbb{R} ,\ \ X_{k} (\omega)=\omega_{k} ,\ \ k\in \mathbb{N}
 \end{equation*}
 \begin{enumerate}[a)]
 	\item Le variabili aleatorie $X_{k}$ sono indipendenti?
-	\item Le variabili aleatorie $Y=\sum _{k=1}^{2} X_{k}$ e $N=\sum _{k=5}^{7} X_{k}$ sono indipendenti?
-	\item Le variabili aleatorie $\overline{X}_{n} =\frac{1}{n}\sum _{k=1}^{n} X_{k}$ e $S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n}(X_{k} -\overline{X}_{n})^{2}$ sono indipendenti?
+	\item Le variabili aleatorie $Y=\sum_{k=1}^{2} X_{k}$ e $N=\sum_{k=5}^{7} X_{k}$ sono indipendenti?
+	\item Le variabili aleatorie $\overline{X}_{n} =\frac{1}{n}\sum_{k=1}^{n} X_{k}$ e $S_{n}^{2} =\frac{1}{n-1}\sum_{k=1}^{n}(X_{k} -\overline{X}_{n})^{2}$ sono indipendenti?
 \end{enumerate}
-Suggerimento: per il punto \ref{esercizio3b} dell'Esercizio \ref{sec:ese3}, si ha che $S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n} X_{k}^{2} -\frac{n}{n-1}\overline{X}_{n}^{2} ;$ notare poi che $X_{k}^{2} =X_{k}$.
+Suggerimento: per il punto \ref{esercizio3b} dell'Esercizio \ref{sec:ese3}, si ha che $S_{n}^{2} =\frac{1}{n-1}\sum_{k=1}^{n} X_{k}^{2} -\frac{n}{n-1}\overline{X}_{n}^{2} ;$ notare poi che $X_{k}^{2} =X_{k}$.
 \begin{enumerate}[a),resume]
 	\item Se nelle prime $10$ prove vengono registrati $2$ successi, con quale probabilità almeno un successo si è verificato nelle prime $2$ prove?
 	\item Se nelle prime $10$ prove viene registrato almeno un successo, con quale probabilità le prime $8$ prove danno esattamente un successo?
 	\item Introdotte anche $Z=$ \event{numero di prove necessarie per il primo successo} e $W=$ \event{numero di insuccessi prima del primo successo}, calcolare le leggi congiunte delle coppie $(Z,W),(Y,Z)$ $(Y,W).$ Sono coppie di variabili aleatorie indipendenti?
-	\item Determinare il coefficiente di correlazione $\rho _{Z,W}$ e la covarianza $\mathrm{Cov} (Z,W)$
+	\item Determinare il coefficiente di correlazione $\rho_{Z,W}$ e la covarianza $\mathrm{Cov} (Z,W)$
 \end{enumerate}
 cosa sarebbe cambiato se avessimo realizzato una successione di variabili aleatorie $X_{n}$ i.i.d., $X_{n} \sim \mathrm{Be} (p)$, in un altro spazio di probabilità $(\Omega ,\mathcal{A} ,\PP)$?
 

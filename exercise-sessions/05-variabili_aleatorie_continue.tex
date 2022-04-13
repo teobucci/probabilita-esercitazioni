@@ -41,7 +41,7 @@ si calcolino:
 
 Data $X$ variabile aleatoria positiva e continua, denotata con $F$ la sua funzione di \ ripartizione, si mostri che
 \begin{equation*}
-\EE[X] =\int _{0}^{+\infty }(1-F(x)) dx.
+\EE[X] =\int_{0}^{+\infty }(1-F(x)) dx.
 \end{equation*}
 \Esercizio{(Distribuzione esponenziale)}
 
@@ -62,11 +62,11 @@ f(x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty)}(x) ,\ \ \ \ x\in \mathbb{R} .
 
 Si consideri $X\sim \Gamma (\alpha ,\lambda)$, variabile aleatoria di distribuzione Gamma di parametri $\alpha  >0$ e $\lambda  >0$. Si ha quindi
 \begin{equation*}
-f(x) =\frac{\lambda ^{\alpha }}{\Gamma (\alpha)} x^{\alpha -1} e^{-\lambda x} \Ind_{(0,+\infty)}(x) ,
+f(x) =\frac{\lambda^{\alpha }}{\Gamma (\alpha)} x^{\alpha -1} e^{-\lambda x} \Ind_{(0,+\infty)}(x) ,
 \end{equation*}
 dove $\Gamma $ è la funzione Gamma (di Eulero) definita da
 \begin{equation*}
-\Gamma (\alpha) \coloneqq \int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
+\Gamma (\alpha) \coloneqq \int_{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
 \end{equation*}
 Si ricordi che
 \begin{equation*}
@@ -78,21 +78,21 @@ da cui $\Gamma (n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma (1/2) =\sqrt
 \item Si calcolino le mode di $f$.
 \item Si calcolino i momenti $\EE\left[X^{k}\right] ,\ k\in \mathbb{Z} ,\ \alpha +k >0$, e la varianza $\mathrm{Var}(X)$.
 \item Dato $c >0$, si mostri che $Y=cX\sim \Gamma (\alpha ,\lambda /c)$.
-\item Per $\alpha =n/2,\ n\in \mathbb{N}$, si determini la relazione fra i punti percentuali di una $\Gamma \left(\frac{n}{2} ,\lambda \right)$ e quelli di una $\chi ^{2}(n) =\Gamma \left(\frac{n}{2} ,\frac{1}{2}\right)$.
+\item Per $\alpha =n/2,\ n\in \mathbb{N}$, si determini la relazione fra i punti percentuali di una $\Gamma \left(\frac{n}{2} ,\lambda \right)$ e quelli di una $\chi^{2}(n) =\Gamma \left(\frac{n}{2} ,\frac{1}{2}\right)$.
 \item Per $\alpha =n\in \mathbb{N}$, si mostri che la funzione di ripartizione di $X$ è data da
 \end{enumerate}
 \begin{equation*}
-F(t) =\left(1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{(\lambda t)^{k}}{k!}\right) \Ind_{(0,+\infty)}(t) .
+F(t) =\left(1-\sum\limits_{k=0}^{n-1} e^{-\lambda t}\frac{(\lambda t)^{k}}{k!}\right) \Ind_{(0,+\infty)}(t) .
 \end{equation*}
 \Esercizio{(Distribuzione normale o gaussiana)}
 
-Sia $X\sim \mathcal{N}\left(\mu ,\sigma ^{2}\right)$.
+Sia $X\sim \mathcal{N}\left(\mu ,\sigma^{2}\right)$.
 \begin{enumerate}
 \item Si calcolino media e varianza di $X$.
 \item Si esprimano i punti percentuali $c_{\alpha }$ di $X$ in funzione di quelli di una normale standard.
 \end{enumerate}
 
-Si consideri $Y$ di \textit{legge lognormale} di parametri $\mu $ e $\sigma ^{2}$, ovvero $Y=e^{X}$.
+Si consideri $Y$ di \textit{legge lognormale} di parametri $\mu $ e $\sigma^{2}$, ovvero $Y=e^{X}$.
 \begin{enumerate}
 \item Calcolare la distribuzione della variabile aleatoria $Y$, i momenti (ossia $\EE[Y_{k}] ,k\in \mathbb{Z}$) e la varianza.
 \item Si calcoli $\EE\left[Xe^{X}\right]$.
@@ -158,7 +158,7 @@ A partire dalla distribuzione uniforme si può ottenere qualunque altra distribu
 
 Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left(0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
 \begin{equation*}
-h_{X}(t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\PP(t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
+h_{X}(t) =\lim_{\varepsilon \rightarrow 0^{+}}\frac{\PP(t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
 \end{equation*}
 Interpretando $X$ come un tempo di attesa, il tasso di fallimento rappresenta la probabilità istantanea di arrivo, sapendo che l'attesa è durata fino al tempo $t$.
 \begin{enumerate}
@@ -167,11 +167,11 @@ h_{X}(t) =\frac{f_{X}(t)}{1-F_{X}(t)} ,\ \ \ \ t >0,
 \end{equation*}
 
 dove $F_{X}$ indica la funzione di ripartizione di $X$.
-\item Dimostrare che $F_{X}(t) =\left(1-\exp\left(-\int _{0}^{t} h_{X}(s) ds\right)\right) \Ind_{(0,+\infty)}(t)$.
+\item Dimostrare che $F_{X}(t) =\left(1-\exp\left(-\int_{0}^{t} h_{X}(s) ds\right)\right) \Ind_{(0,+\infty)}(t)$.
 \item Si prenda $X$ con legge esponenziale di parametro $\lambda $. Determinare $h_{X}$.
 \item Si prenda $Y$ con legge Weibull di parametri $\alpha  >0$ e $\lambda  >0$, vale a dire
 \begin{equation*}
-f_{Y}(t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-(\lambda t)^{\alpha }} \Ind_{(0,+\infty)}(t) .
+f_{Y}(t) =\alpha \lambda^{\alpha } t^{\alpha -1} e^{-(\lambda t)^{\alpha }} \Ind_{(0,+\infty)}(t) .
 \end{equation*}
 
 Determinare $F_{Y}$ e $h_{Y}$.
@@ -242,7 +242,7 @@ Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel p
 
 \textit{Ricavo di un'opzione "call" europea.} Un agente finanziario sottoscrive un contratto che gli dà il diritto (ma non l'obbligo) di acquistare un certo titolo ad una data futura fissata, ad un prezzo $k >0$ anch'esso fissato. Detto $S$ il valore di tale titolo alla data fissata, esso è al momento sconosciuto, ma si ritiene che i suoi possibili valori abbiano distribuzione lognormale, ovvero che siano dati da
 \begin{equation*}
-S=\exp X,\ \ \ \ X\sim \mathcal{N}\left(\mu ,\sigma ^{2}\right) ,\ \ \ \ \mu \in \mathbb{R} ,\sigma  >0.
+S=\exp X,\ \ \ \ X\sim \mathcal{N}\left(\mu ,\sigma^{2}\right) ,\ \ \ \ \mu \in \mathbb{R} ,\sigma  >0.
 \end{equation*}
 Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la differenza $S-k$, altrimenti non lo eserciterà e avrà ricavo nullo. Sia quindi $R$ il ricavo dell'agente.
 \begin{enumerate}
@@ -250,11 +250,11 @@ Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la
 \item Calcolare la probabilità di un ricavo nullo, $\PP\left(R=0\right)$.
 \item Calcolare la legge del ricavo $R$. Si tratta di una variabile aleatoria continua? Discreta? Perché?
 \item Calcolare il ricavo atteso $\EE[R]$.
-\item Calcolare $\lim\limits _{k\rightarrow 0}\EE[R]$.
+\item Calcolare $\lim\limits_{k\rightarrow 0}\EE[R]$.
 \end{enumerate}
 \Esercizio{}
 
-Petyr Baelish vende a Lord Varys il diritto di comprare fra un anno $50$ kg di acciaio di Valyria al prezzo di $100$ monete d'oro. Petyr Baelish non conosce il costo $X$ di $50$ kg di acciaio di Valyria fra un anno, ma ritiene che i suoi possibili valori abbiano una distribuzione (approssimativamente) normale di media $\mu =100$ e varianza $\sigma ^{2} =81$. Ovviamente Lord Varys eserciterà il suo diritto solo se sarà $X >100$. Sia quindi $Y$ la differenza che Petyr Baelish dovrà pagare fra un anno.
+Petyr Baelish vende a Lord Varys il diritto di comprare fra un anno $50$ kg di acciaio di Valyria al prezzo di $100$ monete d'oro. Petyr Baelish non conosce il costo $X$ di $50$ kg di acciaio di Valyria fra un anno, ma ritiene che i suoi possibili valori abbiano una distribuzione (approssimativamente) normale di media $\mu =100$ e varianza $\sigma^{2} =81$. Ovviamente Lord Varys eserciterà il suo diritto solo se sarà $X >100$. Sia quindi $Y$ la differenza che Petyr Baelish dovrà pagare fra un anno.
 \begin{enumerate}
 \item Scrivere $Y$ in funzione di $X$.
 \item Determinare la funzione di ripartizione di $Y$, in termini della funzione di ripartizione della legge normale standard, e tracciarne un grafico qualitativo.
@@ -283,7 +283,7 @@ Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità fissato. Data una va
 Si mostri che, se $X$ è una variabile aleatoria continua, la variabile aleatoria $W=\min\{X,1\}$ può essere continua o no, a seconda della legge di $X$.
 \Esercizio{}
 
-Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge di $Y\ =aX+b$ per $a\neq 0$. In particolare si riconosca la legge di $Y$ per $X$ di legge $\mathcal{N}\left(\mu ,\sigma ^{2}\right)$, $U([c,d])$, $\mathcal{E}(\lambda)$.
+Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge di $Y\ =aX+b$ per $a\neq 0$. In particolare si riconosca la legge di $Y$ per $X$ di legge $\mathcal{N}\left(\mu ,\sigma^{2}\right)$, $U([c,d])$, $\mathcal{E}(\lambda)$.
 \Esercizio{}
 
 Data una variabile aleatoria $X\sim U([-2,-1] \cup [1,2])$, calcolarne densità di probabilità $f$, mediane $m$ e, se esiste, media $\mu $.
@@ -294,7 +294,7 @@ Data una variabile aleatoria $X\sim U((0,2\pi))$ e un angolo fissato $\vartheta 
 
 Data $X\sim \mathcal{E}(\lambda)$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
 \begin{equation*}
-Y=\sum\limits _{k=1}^{\ +\infty } k\Ind_{(k-1,k]}(X) =\lceil X\rceil .
+Y=\sum\limits_{k=1}^{\ +\infty } k\Ind_{(k-1,k]}(X) =\lceil X\rceil .
 \end{equation*}
 Se quindi $X$ rappresenta un tempo d'attesa, $Y$ rappresenta il corrispondente tempo d'attesa per un osservatore stroboscopico. Si mostri che $Y$ è una variabile aleatoria e se ne calcoli la distribuzione.
 \Esercizio{}

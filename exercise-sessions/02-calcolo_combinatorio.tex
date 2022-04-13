@@ -2,7 +2,7 @@
 
 \ParteEsercizi
 
-Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega _{1} ,\dots ,\omega _{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}(\Omega) =2^{\Omega }$.
+Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega_{1} ,\dots ,\omega_{n}\}$ lo spazio campionario associato all'esperimento e $\mathcal{A} =\mathcal{P}(\Omega) =2^{\Omega }$.
 
 Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\cdots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
 
@@ -13,7 +13,7 @@ Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p
 Dagli assiomi della probabilità segue che:
 
 \begin{equation*}
-	1=\PP(\Omega) =\underbrace{\sum\limits _{k=1}^{n}\PP(\{\omega _{k}\}) =\sum\limits _{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
+	1=\PP(\Omega) =\underbrace{\sum\limits_{k=1}^{n}\PP(\{\omega_{k}\}) =\sum\limits_{k=1}^{n} p}_{\text{eventi equiprobabili}} =np=| \Omega | p\implies \boxed{p=\frac{1}{| \Omega | }}
 \end{equation*}
 
 Pertanto, quando abbiamo a che fare con esperimenti aleatori su spazi di probabilità uniformi procediamo nel seguente modo:
@@ -334,7 +334,7 @@ Un mazzo di carte da scopone scientifico è costituito da $40$ carte, identifica
 
 Facendo uso del calcolo combinatorio, dimostrare che
 \begin{equation*}
-	(a+b)^{n} =\sum\limits _{k=0}^{n}\binom{n}{k} a^{k} b^{n-k}
+	(a+b)^{n} =\sum\limits_{k=0}^{n}\binom{n}{k} a^{k} b^{n-k}
 \end{equation*}
 
 \Esercizio{}
@@ -436,7 +436,7 @@ Svolgiamo l'esercizio in $3$ diversi modi.
 
 Determiniamo innanzitutto l'insieme campionario $\Omega $: c'è una classifica di cui ci interessano solo i primi $5$:
 \begin{equation*}
-	\Omega =\{(\omega _{1} ,\dots ,\omega _{5}) :\omega _{i} \in \{1,\dots,40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+	\Omega =\{(\omega_{1} ,\dots ,\omega_{5}) :\omega_{i} \in \{1,\dots,40\} ,\omega_{i} \neq \omega_{j} \ \forall i\neq j\}
 \end{equation*}
 Tutte le possibili quintuple sono date dalla disposizione (l'ordine conta!) di $n=40$ persone in $r=5$ posti, i.e.
 \begin{equation*}
@@ -458,7 +458,7 @@ Per il primo ci sono $40$ possibilità, per il secondo $39$, ecc. (visualizzabil
 
 Guardiamo tutta la classifica. In questo caso dobbiamo considerare le permutazioni di $40$ oggetti:
 \begin{equation*}
-	\Omega =\{(\omega _{1} ,\dots ,\omega _{40}) :\omega _{i} \in \{1,\dots,40\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
+	\Omega =\{(\omega_{1} ,\dots ,\omega_{40}) :\omega_{i} \in \{1,\dots,40\} ,\omega_{i} \neq \omega_{j} \ \forall i\neq j\} \ \ \ \ | \Omega | =40!
 \end{equation*}
 \begin{enumerate}
 	\item Evento $A$.
@@ -519,7 +519,7 @@ Dato che le persone sono selezionate in modo casuale possiamo considerare una di
 		\begin{array}{ l }
 			\PP(A) =\PP\left(\Omega -A\comp\right) =1-\PP\left(A\comp\right)\\
 			A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
-			A\comp =\{\omega =(\omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			A\comp =\{\omega =(\omega_{1} ,\dots ,\omega_{n}) :\omega_{i} \neq \omega_{j} \ \forall i\neq j\}\\
 			\left| A\comp\right| =365\cdot 364\cdots (365-n+1) =\frac{365!}{(365-n) !}\\
 			\implies \PP\left(A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}(365-n) !}\\
 			\implies \PP(A) =1-\PP\left(A\comp\right) =1-\frac{365!}{365^{n}(365-n) !}
@@ -576,7 +576,7 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 	\begin{oss}
 		Si sarebbe potuto rispondere alla domanda anche introducendo $\Omega $ come lo spazio delle disposizioni anziché combinazioni (confronta con Es. 2.3.2.)
 		\begin{gather*}
-			\Omega =\{(\omega _{1} ,\dots ,\omega _{6}) :\omega _{i} \in \{1,\dots,90\} \ \forall i=1,\dots,6,\ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			\Omega =\{(\omega_{1} ,\dots ,\omega_{6}) :\omega_{i} \in \{1,\dots,90\} \ \forall i=1,\dots,6,\ \omega_{i} \neq \omega_{j} \ \forall i\neq j\}\\
 			| \Omega | =D_{6}^{90} =\underbrace{90\cdot 89\cdot 88\cdot 87\cdot 86\cdot 85}_{6\ \text{termini}} =\frac{90!}{84!}
 		\end{gather*}
 	\end{oss}
@@ -737,7 +737,7 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 
 Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$. Introduciamo gli eventi $A_{j}^{m} =$ \event{esce l'oggetto $m$ all'estrazione $j$}:
 \begin{equation*}
-	A_{j}^{m} =\{\omega =(\omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{j} =m\} ,\ \ \ \ m\in \{1,\dots,n\} ,\ \ \ \ j\in \{1,\dots,k\}
+	A_{j}^{m} =\{\omega =(\omega_{1} ,\dots ,\omega_{k}) \in \Omega :\omega_{j} =m\} ,\ \ \ \ m\in \{1,\dots,n\} ,\ \ \ \ j\in \{1,\dots,k\}
 \end{equation*}
 \begin{enumerate}
 	\item 
@@ -745,14 +745,14 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 		\item $\Omega $ è lo spazio campionario delle disposizioni \textit{con} ripetizione:
 		\begin{align*}
 			\Omega  & =\{1,\dots,n\}^{k}\\
-			 & =\{\omega =(\omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\}\\
+			 & =\{\omega =(\omega_{1} ,\dots ,\omega_{k}) \in \Omega :\omega_{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\}\\
 			 & \implies | \Omega | =n^{k}
 		\end{align*}
 		\item $(\impliedby)$ Ipotesi:
 		\begin{enumerate}
 			\item le $k$ estrazioni sono indipendenti, i.e.
 			\begin{equation*}
-				\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) =\prod _{j=1}^{k}\PP\left(A_{j}^{\omega _{j}}\right)
+				\PP\left(\bigcap_{j=1}^{k} A_{j}^{\omega_{j}}\right) =\prod_{j=1}^{k}\PP\left(A_{j}^{\omega_{j}}\right)
 			\end{equation*}
 			\item per ciascuna estrazione gli $n$ risultati possibili sono equiprobabili, i.e.
 			\begin{equation*}
@@ -761,12 +761,12 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 		\end{enumerate}
 		Tesi da dimostrare: $\PP(\{\omega \}) =\frac{1}{| \Omega | } =\frac{1}{n^{k}} ,\forall \omega \in \Omega $.
 
-		Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =(\omega _{1} ,\dots ,\omega _{k})$ con $\omega _{i} \in \{1,\dots,n\}$ e $i\in \{1,\dots,k\}$, allora
+		Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =(\omega_{1} ,\dots ,\omega_{k})$ con $\omega_{i} \in \{1,\dots,n\}$ e $i\in \{1,\dots,k\}$, allora
 		\begin{align*}
-			\PP(\{\omega \}) & =\PP(\{(\omega _{1} ,\dots ,\omega _{k})\}) & \\
-			 & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{j}}\right) & \text{significato di} \ \omega \\
-			 & =\prod _{j=1}^{k}\PP\left(A_{j}^{\omega _{j}}\right) & \text{indipendenza}\\
-			 & =\prod _{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
+			\PP(\{\omega \}) & =\PP(\{(\omega_{1} ,\dots ,\omega_{k})\}) & \\
+			 & =\PP\left(\bigcap_{j=1}^{k} A_{j}^{\omega_{j}}\right) & \text{significato di} \ \omega \\
+			 & =\prod_{j=1}^{k}\PP\left(A_{j}^{\omega_{j}}\right) & \text{indipendenza}\\
+			 & =\prod_{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
 			 & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
 		\end{align*}
 
@@ -783,8 +783,8 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 	\begin{enumerate}
 		\item $\Omega $ è lo spazio campionario delle disposizioni \textit{senza} ripetizione:
 		\begin{align*}
-			\Omega = & \{\omega =(\omega _{1} ,\dots ,\omega _{k}) \in \Omega :\omega _{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\\
-			 & \ \ \ \ \omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+			\Omega = & \{\omega =(\omega_{1} ,\dots ,\omega_{k}) \in \Omega :\omega_{i} \in \{1,\dots,n\} ,i\in \{i,\dots,k\}\\
+			 & \ \ \ \ \omega_{i} \neq \omega_{j} \ \forall i\neq j\}\\
 			\implies  & | \Omega | =n(n-1) \cdots (n-k+1) =\frac{n!}{(n-k) !}
 		\end{align*}
 		\item $(\implies)$ Analogamente al caso $1$, dobbiamo provare che
@@ -794,15 +794,15 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 
 		Per ipotesi, sappiamo che ogni esito di ciascuna estrazione è equiprobabile \textit{condizionatamente} rispetto ai risultati delle passate estrazioni. Sfruttiamo il seguente risultato teorico \textit{(J.P. 3.3)} che connette indipendenza con probabilità condizionata per un numero finito di eventi.
 
-		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP(A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap _{n} A_{n}\right) =\PP(A_{1})\PP(A_{2} |A_{1}) \cdots \PP(A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
+		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \mathcal{A}$ tale che $\PP(A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap_{n} A_{n}\right) =\PP(A_{1})\PP(A_{2} |A_{1}) \cdots \PP(A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
 		\begin{oss}
 			Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:
 			\begin{align*}
-				\PP(\{\omega \}) & =\PP(\{\omega _{1} ,\dots ,\omega _{k}\})\\
-				 & =\PP\left(\bigcap _{j=1}^{k} A_{j}^{\omega _{k}}\right)\\
-				 & =\PP\left(A_{1}^{\omega _{1}}\right)\PP\left(A_{2}^{\omega _{2}} |A_{1}^{\omega _{1}}\right) \cdots \PP\left(A_{k}^{\omega _{k}} |A_{1}^{\omega _{1}} \cap \cdots \cap A_{k-1}^{\omega _{k-1}}\right)\\
-				 & =\frac{\left| A_{1}^{\omega _{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega _{2}} \cap A_{1}^{\omega _{1}}\right| }{\left| A_{1}^{\omega _{1}}\right| } \cdots \frac{| A_{k}^{\omega _{k}} \cap \cdots \cap A_{1}^{\omega _{1}} |}{\left| A_{k-1}^{\omega _{k-1}} \cap \cdots \cap A_{1}^{\omega _{1}}\right| }\\
+				\PP(\{\omega \}) & =\PP(\{\omega_{1} ,\dots ,\omega_{k}\})\\
+				 & =\PP\left(\bigcap_{j=1}^{k} A_{j}^{\omega_{k}}\right)\\
+				 & =\PP\left(A_{1}^{\omega_{1}}\right)\PP\left(A_{2}^{\omega_{2}} |A_{1}^{\omega_{1}}\right) \cdots \PP\left(A_{k}^{\omega_{k}} |A_{1}^{\omega_{1}} \cap \cdots \cap A_{k-1}^{\omega_{k-1}}\right)\\
+				 & =\frac{\left| A_{1}^{\omega_{1}}\right| }{| \Omega | }\frac{\left| A_{2}^{\omega_{2}} \cap A_{1}^{\omega_{1}}\right| }{\left| A_{1}^{\omega_{1}}\right| } \cdots \frac{| A_{k}^{\omega_{k}} \cap \cdots \cap A_{1}^{\omega_{1}} |}{\left| A_{k-1}^{\omega_{k-1}} \cap \cdots \cap A_{1}^{\omega_{1}}\right| }\\
 				 & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-(k-1)}\\
 				 & =\frac{1}{n(n-1) \cdots (n-k+1)} =\frac{1}{| \Omega | }
 			\end{align*}
@@ -848,7 +848,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 
 	In questo caso abbiamo:
 	\begin{equation*}
-	\Omega =\{(\omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\}\}
+	\Omega =\{(\omega_{1} ,\dots ,\omega_{4}) :\omega_{i} \in \{1,\dots ,10\}\}
 	\end{equation*}
 
 	Spazio campionario delle disposizioni con ripetizione
@@ -866,7 +866,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 	\begin{enumerate}
 		\item Metodo $1$
 		\begin{equation*}
-			\Omega =\{(\omega _{1} ,\dots ,\omega _{4}) :\omega _{i} \in \{1,\dots ,10\} ,\omega _{i} \neq \omega _{j} \ \forall i\neq j\}
+			\Omega =\{(\omega_{1} ,\dots ,\omega_{4}) :\omega_{i} \in \{1,\dots ,10\} ,\omega_{i} \neq \omega_{j} \ \forall i\neq j\}
 		\end{equation*}
 
 		Spazio campionario delle disposizioni senza ripetizione
