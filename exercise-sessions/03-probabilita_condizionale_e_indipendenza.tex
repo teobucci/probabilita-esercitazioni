@@ -10,12 +10,12 @@
 \end{definition}
 \textbf{Proprietà.}
 
-Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \mathbb{N}} \subseteq \mathcal{A}$ una partizione discreta di $\Omega $:
+Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \NN} \subseteq \mathcal{A}$ una partizione discreta di $\Omega $:
 \begin{enumerate}
 	\item se $\PP(A) ,\PP(B)  >0$ allora $\PP(A\mid B) =\frac{\PP(B\mid A)\PP(A)}{\PP(B)}$.
 	\item $\PP(A) =\sum\limits_{n}\PP(A\cap E_{n})$
-	\item \textit{Probabilità totali}: se $\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(A) =\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})$.
-	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})}$.
+	\item \textit{Probabilità totali}: se $\PP(E_{n})  >0,\forall n\in \NN$ allora $\PP(A) =\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})$.
+	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \NN$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})}$.
 \end{enumerate}
 \begin{definition}
 	$A$ e $B$ sono indipendenti $(A\Bot B)$ se $\PP(A\cap B) =\PP(A)\PP(B)$.
@@ -159,11 +159,11 @@ Un dado non truccato viene lanciato più volte.
 
 \Esercizio{fatto}
 
-Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo costante $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma (E_{k} \mid k=1,2,\dots)$ con
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo costante $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\NN}$, sia $\mathcal{A} =\sigma (E_{k} \mid k=1,2,\dots)$ con
 \begin{equation*}
 	E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
-e sia $\PP$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k\in \mathbb{N}$.
+e sia $\PP$ tale che $\{E_{k}\}_{k\in \NN}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k\in \NN$.
 \begin{enumerate}
 	\item Quanto vale la probabilità di ottenere solo insuccessi nelle prime $n$ prove?
 	\item Quante prove dovete fare per ottenere almeno un successo con probabilità maggiore di $\frac{1}{2}$?
@@ -213,7 +213,7 @@ Si consideri l'esperimento seguente. Si lancia una moneta non truccata e, se esc
 \end{enumerate}
 Se, invece, si effettuano estrazioni \textbf{con reimmissione}:
 \begin{enumerate}
-	\item Fissato $n\in \mathbb{N}$, qual è la probabilità che il gioco proceda oltre la $n$-esima estrazione?
+	\item Fissato $n\in \NN$, qual è la probabilità che il gioco proceda oltre la $n$-esima estrazione?
 	\item Sapendo che il gioco procede oltre la $n$-esima estrazione, qual è la probabilità che sia uscita testa?
 \end{enumerate}
 
@@ -462,9 +462,9 @@ Consideriamo l'evento
 	\end{equation*}
 	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:
 	\begin{theorem}
-		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
+		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \NN} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
 		\begin{equation*}
-			\PP(A) =\sum\limits_{k\in \mathbb{N}}\PP(A\mid E_{k})\PP(E_{k})
+			\PP(A) =\sum\limits_{k\in \NN}\PP(A\mid E_{k})\PP(E_{k})
 		\end{equation*}
 	\end{theorem}
 	La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero
@@ -693,7 +693,7 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 	\end{equation*}
 	ovvero la probabilità che il pacco scelto inizialmente contenga il premio, sapendo che il conduttore ha aperto il pacco di destra. Per calcolarla usiamo la formula di Bayes.
 	\begin{theorem}
-		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Siano $A\in \mathcal{A}$, $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $. Se $\PP(A) ,\PP(E_{k})  >0,\forall k\in \mathbb{N}$, allora
+		Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Siano $A\in \mathcal{A}$, $\{E_{k}\}_{k\in \NN} \subset \mathcal{A}$ una partizione discreta di $\Omega $. Se $\PP(A) ,\PP(E_{k})  >0,\forall k\in \NN$, allora
 		\begin{equation*}
 			\PP(E_{k} \mid A) =\frac{\PP(A\mid E_{k})\PP(E_{k})}{\sum_{k}\PP(A\mid E_{k})\PP(E_{k})}
 		\end{equation*}

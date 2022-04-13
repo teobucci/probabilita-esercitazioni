@@ -85,11 +85,11 @@ Restringere il nostro interesse alla sola moneta, significa considerare solo alc
 
 \Esercizio{}
 
-Per $k=1,2,\mathbb{N}$, si consideri $\Omega =\{0,1\}^{k}$ lo spazio degli esiti di $1$, $2$ o infinite prove di Bernoulli. In tutti e tre i casi, si consideri l'evento $E=$ \event{successo alla prima prova}, e si descriva esplicitamente la $\sigma$-algebra $\mathcal{A} =\sigma (E)$.
+Per $k=1,2,\NN$, si consideri $\Omega =\{0,1\}^{k}$ lo spazio degli esiti di $1$, $2$ o infinite prove di Bernoulli. In tutti e tre i casi, si consideri l'evento $E=$ \event{successo alla prima prova}, e si descriva esplicitamente la $\sigma$-algebra $\mathcal{A} =\sigma (E)$.
 
 \Esercizio{}
 
-Si consideri $\Omega =\{0,1\}^{\mathbb{N}}$, lo spazio degli esiti di infinite prove di Bernoulli. Per $k=1,2,\dots $, si considerino gli eventi:
+Si consideri $\Omega =\{0,1\}^{\NN}$, lo spazio degli esiti di infinite prove di Bernoulli. Per $k=1,2,\dots $, si considerino gli eventi:
 \begin{center}
 	$E_{k}=$ \event{successo alla prova $k$},
 \end{center}
@@ -178,7 +178,7 @@ Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A$ e $B$ du
 
 \Esercizio{}
 
-Si consideri $\Omega =\{0,1\}^{\mathbb{N}}$, lo spazio degli esiti di infinite prove di Bernoulli. Per $k=1,2,\dots $ si considerino gli eventi
+Si consideri $\Omega =\{0,1\}^{\NN}$, lo spazio degli esiti di infinite prove di Bernoulli. Per $k=1,2,\dots $ si considerino gli eventi
 \begin{center}
 	$E_{k} =$ \event{successo alla prova $k$},
 \end{center}
@@ -199,21 +199,21 @@ Si supponga ora che $\PP(A_{n}) =\frac{1}{2^{n}}$ per ogni $n$.
 
 \Esercizio{}
 
-Sia $\Omega =[0,1]$ e $\mathcal{A} \coloneqq \mathcal{B}([0,1])$ la $\sigma $-algebra di Borel. Si considerino, per ogni $n\in \mathbb{N}$, gli insiemi $A_{n} \coloneqq \left[0,\frac{1}{n}\right] \subset \Omega $.
+Sia $\Omega =[0,1]$ e $\mathcal{A} \coloneqq \mathcal{B}([0,1])$ la $\sigma $-algebra di Borel. Si considerino, per ogni $n\in \NN$, gli insiemi $A_{n} \coloneqq \left[0,\frac{1}{n}\right] \subset \Omega $.
 \begin{enumerate}
 	\item Determinare gli insiemi $I$ e $U$, definiti come segue:
 	\begin{equation*}
-		I\coloneqq \bigcap_{n\in \mathbb{N}} A_{n} \ \ \ \ \ \ \ \ U\coloneqq \bigcup_{n\in \mathbb{N}} A_{n} .
+		I\coloneqq \bigcap_{n\in \NN} A_{n} \ \ \ \ \ \ \ \ U\coloneqq \bigcup_{n\in \NN} A_{n} .
 	\end{equation*}
 	\item Si supponga che $\PP(A_{n}) =\frac{1}{n}$ per ogni $n$. Quanto valgono $\PP(I)$ e $\PP(U)$?
 \end{enumerate}
 
 \Esercizio{$\star$}
 
-Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e sia $A_{n}$ con $n\in \mathbb{N}$ una successione di eventi.
+Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e sia $A_{n}$ con $n\in \NN$ una successione di eventi.
 \begin{enumerate}
-	\item Si mostri che se $\PP(A_{n}) =0$ per ogni $n\in \mathbb{N}$ allora $\PP\left(\bigcup\limits_{n\in \mathbb{N}} A_{n}\right) =0$.
-	\item Si mostri che se $\PP(A_{n}) =1$ per ogni $n\in \mathbb{N}$ allora $\PP\left(\bigcap\limits_{n\in \mathbb{N}} A_{n}\right) =1$.
+	\item Si mostri che se $\PP(A_{n}) =0$ per ogni $n\in \NN$ allora $\PP\left(\bigcup\limits_{n\in \NN} A_{n}\right) =0$.
+	\item Si mostri che se $\PP(A_{n}) =1$ per ogni $n\in \NN$ allora $\PP\left(\bigcap\limits_{n\in \NN} A_{n}\right) =1$.
 \end{enumerate}
 
 \Esercizio{$\star$}
@@ -235,7 +235,7 @@ Si deduca che se $A_{n}\rightarrow A$, ovvero $\liminf_{n} A_{n} =\limsup_{n} A_
 \begin{enumerate}
 	\item $\Omega =\{0,1\}^{n} .$
 	\item $\Omega =\{0,\dots ,n\}$.
-	\item $\Omega =\{0,1\}^{\mathbb{N}}$.
+	\item $\Omega =\{0,1\}^{\NN}$.
 	\item $\Omega =\{1,2,3,4,5,6,7,8,9,10\} \times \{t,c\}$.
 	\item Lo spazio delle combinazioni di $90$ elementi di classe $5$, ossia
 	\begin{equation*}
@@ -323,8 +323,8 @@ $A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 	\begin{oss}
 		\begin{align*}
 			\omega \in \liminf_{n} E_{n} & \ \ \iff \ \ \omega \in \bigcup_{n=1}^{\infty }\bigcap_{m\geq n} E_{m}\\
-			 & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in \bigcap_{m\geq \overline{n}} E_{m}\\
-			 & \ \ \iff \ \ \exists \overline{n} \in \mathbb{N} :\ \omega \in E_{m} \forall m\geq \overline{n}
+			 & \ \ \iff \ \ \exists \overline{n} \in \NN :\ \omega \in \bigcap_{m\geq \overline{n}} E_{m}\\
+			 & \ \ \iff \ \ \exists \overline{n} \in \NN :\ \omega \in E_{m} \forall m\geq \overline{n}
 		\end{align*}
 		i.e. $\omega $ sta in tutti gli $E_{m}$ tranne al più un numero finito di essi.\\
 		i.e. ho successi in tutte le prove al più un numero finito di esse.
@@ -333,14 +333,14 @@ $A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 	\begin{oss}
 		\begin{align*}
 			\omega \in \limsup_{n} E_{n} & \ \ \iff \ \ \omega \in \bigcap_{n=1}^{\infty }\bigcup_{m\geq n} E_{m}\\
-			 & \ \ \iff \ \ \forall n\in \mathbb{N} ,\ \omega \in \bigcup_{m\geq n} E_{m}\\
-			 & \ \ \iff \ \ \forall n\in \mathbb{N} \ \ \exists \overline{m} :\ \omega \in E_{\overline{m}}
+			 & \ \ \iff \ \ \forall n\in \NN ,\ \omega \in \bigcup_{m\geq n} E_{m}\\
+			 & \ \ \iff \ \ \forall n\in \NN \ \ \exists \overline{m} :\ \omega \in E_{\overline{m}}
 		\end{align*}
-		i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \mathbb{N}$.\\
+		i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \NN$.\\
 		i.e. ho infiniti successi.
 	\end{oss}
 	\item $\left(\liminf\limits_{n} E_{n}\right)\comp =\underbrace{\left(\bigcup\limits_{n=1}^{\infty }\bigcap\limits_{m\geq n} E_{m}\right)\comp =\bigcap\limits_{n=1}^{\infty }\bigcup\limits_{m\geq n} E_{m}\comp}_{\text{Leggi di De Morgan}} =:\limsup\limits_{n} E_{n}\comp$
-	\item $\bigcup\limits_{l\in \mathbb{N}}\left(E_{l} \cap \bigcap\limits_{k\neq l} E_{k}\comp\right)$
+	\item $\bigcup\limits_{l\in \NN}\left(E_{l} \cap \bigcap\limits_{k\neq l} E_{k}\comp\right)$
 \end{enumerate}
 
 \Soluzione
@@ -604,27 +604,27 @@ Allora:
 	\end{align*}
 	\item Scriviamo le relazioni insiemistiche
 	\begin{align*}
-		\bigcap\limits_{n\in \mathbb{N}} A_{n} =\bigcap\limits_{n\in \mathbb{N}}\bigcap\limits_{k=1}^{n} E_{k} =\bigcap\limits_{k\in \mathbb{N}} E_{k} & =\text{solo successi}\\
-		\omega \in \bigcap\limits_{n\in \mathbb{N}} A_{n} & \iff \omega \in A_{n} \ \forall n\in \mathbb{N}\\
-		 & \iff \omega \in \bigcap\limits_{k=1}^{n} E_{k} \ \forall n\in \mathbb{N}\\
-		 & \iff \omega \in E_{k} \ \forall n\in \mathbb{N} \ \forall k=1,\dots ,n\\
+		\bigcap\limits_{n\in \NN} A_{n} =\bigcap\limits_{n\in \NN}\bigcap\limits_{k=1}^{n} E_{k} =\bigcap\limits_{k\in \NN} E_{k} & =\text{solo successi}\\
+		\omega \in \bigcap\limits_{n\in \NN} A_{n} & \iff \omega \in A_{n} \ \forall n\in \NN\\
+		 & \iff \omega \in \bigcap\limits_{k=1}^{n} E_{k} \ \forall n\in \NN\\
+		 & \iff \omega \in E_{k} \ \forall n\in \NN \ \forall k=1,\dots ,n\\
 		 & \iff \omega \in E_{k} \ \forall k
 	\end{align*}
-	$\bigcap\limits_{n\in \mathbb{N}} A_{n} \in \mathcal{A}$ per le proprietà delle $\sigma $-algebre.
-	\item Abbiamo $A_{n} \downarrow A$ con $A\coloneqq \bigcap\limits_{n\in \mathbb{N}} A_{n}$ infatti
+	$\bigcap\limits_{n\in \NN} A_{n} \in \mathcal{A}$ per le proprietà delle $\sigma $-algebre.
+	\item Abbiamo $A_{n} \downarrow A$ con $A\coloneqq \bigcap\limits_{n\in \NN} A_{n}$ infatti
 	\[
 		\begin{cases}
 			A_{n+1} \subseteq A_{n} \ \forall n\\
-			\bigcap_{n\in \mathbb{N}} A_{n} =A.
+			\bigcap_{n\in \NN} A_{n} =A.
 		\end{cases}
 	\]
-	Per la continuità di $\PP$ dall'alto si ha $\PP(A) =\PP\left(\bigcap\limits_{n\in \mathbb{N}} A_{n}\right) =\lim\limits_{n}\PP(A_{n}) =\lim\limits_{n}\frac{1}{2^{n}} =0$.
+	Per la continuità di $\PP$ dall'alto si ha $\PP(A) =\PP\left(\bigcap\limits_{n\in \NN} A_{n}\right) =\lim\limits_{n}\PP(A_{n}) =\lim\limits_{n}\frac{1}{2^{n}} =0$.
 \end{enumerate}
 
 \Soluzione
 
 \begin{enumerate}
-	\item $\forall n\in \mathbb{N} \ \ \ \ A_{n} =\left[ 0,\frac{1}{n}\right)$
+	\item $\forall n\in \NN \ \ \ \ A_{n} =\left[ 0,\frac{1}{n}\right)$
 	\begin{figure}[htpb]
 		\centering
 		\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -661,9 +661,9 @@ Allora:
 	\FloatBarrier
 	Osserviamo che gli insiemi $A_{n}$ sono inscatolati, i.e. $A_{n+1} \subseteq A_{n} \ \forall n$. Si ha:
 	\begin{equation*}
-		I=\bigcap_{n\in \mathbb{N}} A_{n} \ =\{0\} \ \ \ \ \ \ \ \ U=\bigcup_{n\in \mathbb{N}} A_{n} \ =[ 0,1) =A_{1}
+		I=\bigcap_{n\in \NN} A_{n} \ =\{0\} \ \ \ \ \ \ \ \ U=\bigcup_{n\in \NN} A_{n} \ =[ 0,1) =A_{1}
 	\end{equation*}
-	\item Abbiamo $A_{n} \downarrow I$, infatti $A_{n+1} \subseteq A_{n} \ \forall n$ e $\bigcap_{n\in \mathbb{N}} A_{n} =I$.\\
+	\item Abbiamo $A_{n} \downarrow I$, infatti $A_{n+1} \subseteq A_{n} \ \forall n$ e $\bigcap_{n\in \NN} A_{n} =I$.\\
 	Allora per la continuità dall'alto si ha $\PP(I) =\lim_{n}\PP(A_{n}) =\lim_{n}\frac{1}{n} =0$.\\
 	Infine $\PP(U) =\PP([ 0,1)) =\PP(A_{1}) =1$.
 \end{enumerate}

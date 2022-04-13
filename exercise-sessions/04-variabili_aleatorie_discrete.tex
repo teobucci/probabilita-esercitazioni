@@ -201,7 +201,7 @@ Si definiscano le seguenti funzioni, per ogni $\omega \in \Omega $
 \begin{equation*}
 X(\omega) \ =\ \Ind_{[0,p]}(\omega) ,\ \ \ \ Y(\omega) =\Ind_{(0,p)}(\omega) ,\ \ \ \ Z(\omega) =\Ind_{[0,p]}(\omega) +\Ind_{J}(\omega) ,
 \end{equation*}
-dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \mathbb{N}} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dots \right\}$.
+dove $0< p< 1$ è un parametro fissato e $J=\left\{\frac{1}{n}\right\}_{n\in \NN} =\left\{1,\frac{1}{2} ,\frac{1}{3} ,\dots \right\}$.
 \begin{enumerate}
 \item Si mostri che $X$, $Y$ e $Z$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y=Z$ q.c.
 \item Si determinino legge $P^{X} ,P^{Y} ,P^{Z}$ e valore atteso $\EE[X] ,\EE[Y] ,\EE[Z]$.
@@ -264,20 +264,20 @@ Sia dunque $X$ una variabile aleatoria discreta con funzione di ripartizione $F$
 
 \Esercizio{fatto}
 
-Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\mathbb{N}}$, sia $\mathcal{A} =\sigma (E_{k} \ |\ k=1,2,\dots)$ con
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\NN}$, sia $\mathcal{A} =\sigma (E_{k} \ |\ k=1,2,\dots)$ con
 \begin{equation*}
 E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
-e sia $\PP$ tale che $\{E_{k}\}_{k\in \mathbb{N}}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k$. Indicato con $\omega =(\omega_{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo le funzioni
+e sia $\PP$ tale che $\{E_{k}\}_{k\in \NN}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k$. Indicato con $\omega =(\omega_{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo le funzioni
 \begin{equation*}
-X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}(\omega) =\omega_{n} ,\ \ \ \ n\in \mathbb{N} .
+X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}(\omega) =\omega_{n} ,\ \ \ \ n\in \NN .
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che $X_{n} =\Ind_{E_{n}}$.
 \item Si mostri che le $X_{n}$ sono variabili aleatorie reali discrete e se ne interpreti il significato probabilistico.
 \item Si determini la legge delle $X_{n}$.
 \item Per ogni $n$, si mostri che $Y_{n} =\sum_{k=1}^{n} X_{k}$ è una variabile aleatoria discreta, se ne dia il significato probabilistico e se ne determini la legge.
-\item Si mostri che $Z=\min\{n\in \mathbb{N} :X_{n} =1\} =$ \event{numero di prove necessarie per il primo successo}, con la convenzione $\min \emptyset =+\infty $, è una variabile aleatoria discreta e se ne calcoli la legge.
+\item Si mostri che $Z=\min\{n\in \NN :X_{n} =1\} =$ \event{numero di prove necessarie per il primo successo}, con la convenzione $\min \emptyset =+\infty $, è una variabile aleatoria discreta e se ne calcoli la legge.
 \item Si mostri che $W=$ \event{numero di insuccessi prima del primo successo} è una variabile aleatoria discreta e se ne calcoli la legge.
 \item Si mostri che $V=\liminf\limits_{n} X_{n}$ e $U=\limsup\limits_{n} X_{n}$ sono variabili aleatorie discrete e se ne calcolino le leggi.
 \end{enumerate}
@@ -293,7 +293,7 @@ Sia $X$ una variabile aleatoria a valori in $\{0,1,2,\dots \}$. Si mostri che
 
 \Esercizio{(Distribuzione binomiale). fatto}
 
-Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $n\in \mathbb{N}$ e $0< p< 1$. Scriviamo $X\sim B(n,p)$.
+Si consideri una variabile aleatoria binomiale $X$ di parametri $n$ e $p$, con $n\in \NN$ e $0< p< 1$. Scriviamo $X\sim B(n,p)$.
 \begin{enumerate}
 \item Calcolare il valore atteso $\EE[X]$.
 \item Calcolare la varianza di $X$.
@@ -314,15 +314,15 @@ Si consideri una variabile aleatoria di Poisson $X$ di parametro $\lambda  >0$. 
 
 Si consideri $X\sim \mathcal{G}(p)$, variabile aleatoria geometrica di parametro $p$, $0< p< 1$. Si ha pertanto
 \begin{equation*}
-\PP(X=k) =p(1-p)^{k-1} ,\ \ \ \ k\in \mathbb{N} .
+\PP(X=k) =p(1-p)^{k-1} ,\ \ \ \ k\in \NN .
 \end{equation*}
 \begin{enumerate}
 \item Mostrare due diversi spazi $(\Omega ,\mathcal{A} ,\PP)$, uno discreto e uno continuo, su cui è possibile definire $X$.
 \item Calcolare le mode di $X$.
 \item Calcolare la funzione di ripartizione $F$ di $X$.
 \item Calcolare il valore atteso $\EE[X]$.
-\item (Proprietà di assenza di memoria) Mostrare che $\PP(X >i+j\ |\ X >i) =\PP(X >j)$ per ogni $i,j\in \mathbb{N}$.
-\item (*) Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale discreta a valori in $\mathbb{N}$ tale che $\PP(T >i+j\ |\ T >i) =\PP(T >j)$ per ogni $i,j\in \mathbb{N}$, allora $T\sim \mathcal{G}(q$) con $q=\PP(T=1)$.
+\item (Proprietà di assenza di memoria) Mostrare che $\PP(X >i+j\ |\ X >i) =\PP(X >j)$ per ogni $i,j\in \NN$.
+\item (*) Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale discreta a valori in $\NN$ tale che $\PP(T >i+j\ |\ T >i) =\PP(T >j)$ per ogni $i,j\in \NN$, allora $T\sim \mathcal{G}(q$) con $q=\PP(T=1)$.
 \end{enumerate}
 
 \Esercizio{}
@@ -686,13 +686,13 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 \end{oss}
 
 \textit{Interpretazione:} la distribuzione binomiale $B\left(n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
-\item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left(Z\right) =\mathbb{N} \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\mathbb{N} \cup \left\{+\infty \right\}\rightarrow \left[0,1\right]$. Sia $k\in \mathbb{N}$ fissato
+\item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left(Z\right) =\NN \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\NN \cup \left\{+\infty \right\}\rightarrow \left[0,1\right]$. Sia $k\in \NN$ fissato
 \begin{equation*}
-p_{Z}(k) =\underbrace{\PP(Z=k) =\PP\left(\bigcap\limits_{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p(1-p)^{k-1}
+p_{Z}(k) =\underbrace{\PP(Z=k) =\PP\left(\bigcap\limits_{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \NN :X_{n} =1\}} =p(1-p)^{k-1}
 \end{equation*}
 $Z$ è il numero minimo di prove per dare un successo.
 \begin{align*}
-\overbrace{p_{Z}(+\infty) =\PP(Z=+\infty)}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap_{j\in \mathbb{N}} E_{j}\comp\right) =\lim_{n\rightarrow \infty }\PP\left(\bigcap_{j=1}^{n} E_{j}\comp\right)\\
+\overbrace{p_{Z}(+\infty) =\PP(Z=+\infty)}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap_{j\in \NN} E_{j}\comp\right) =\lim_{n\rightarrow \infty }\PP\left(\bigcap_{j=1}^{n} E_{j}\comp\right)\\
  & =\lim_{n\rightarrow \infty }(1-p)^{n} =0
 \end{align*}
 
@@ -1026,8 +1026,8 @@ Quindi
 \begin{equation*}
 \text{Moda}(X) =
 \begin{cases}
-p(n+1) -1\ \text{e} \ p(n+1) , & p(n+1) \in \mathbb{N}\\
-\lfloor p(n+1)\rfloor , & p(n+1) \notin \mathbb{N}
+p(n+1) -1\ \text{e} \ p(n+1) , & p(n+1) \in \NN\\
+\lfloor p(n+1)\rfloor , & p(n+1) \notin \NN
 \end{cases}
 \end{equation*}
 \end{enumerate}
@@ -1073,26 +1073,26 @@ $\PP(X=k) =p(1-p)^{k-1}$ rappresenta la probabilità che il primo successo richi
 \begin{enumerate}
 \item Abbiamo
 \begin{gather*}
-X:(\Omega ,\mathcal{F} ,\PP)\rightarrow \mathbb{N} \subset \mathbb{R}\\
-X\sim \mathcal{G}(p) \ \ \ \ \text{i.e.} \ \ \ \ \PP(X=k) =p(1-p)^{k-1} =:\tilde{p}(k) ,\ k\in \mathbb{N}
+X:(\Omega ,\mathcal{F} ,\PP)\rightarrow \NN \subset \mathbb{R}\\
+X\sim \mathcal{G}(p) \ \ \ \ \text{i.e.} \ \ \ \ \PP(X=k) =p(1-p)^{k-1} =:\tilde{p}(k) ,\ k\in \NN
 \end{gather*}
 
 \textbf{Spazio di probabilità discreto:}
 
-$(\Omega ,\mathcal{A} ,\PP)$ con $\Omega =\mathbb{N} ,\mathcal{A} =2^{\mathbb{N}}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
+$(\Omega ,\mathcal{A} ,\PP)$ con $\Omega =\NN ,\mathcal{A} =2^{\NN}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
 \begin{equation}
 \PP(k) =\tilde{p}(k) =p(1-p)^{k-1}
 \end{equation}
 Con questa scelta di $(\Omega ,\mathcal{A} ,\PP)$ si ha che $X(\cdotp) \coloneqq I(\cdotp)$
 \begin{align*}
-X:\left(\mathbb{N} ,2^{\mathbb{N}} ,\PP\right) & \rightarrow \mathbb{N}\\
+X:\left(\NN ,2^{\NN} ,\PP\right) & \rightarrow \NN\\
 \omega  & \rightarrow X(\omega) \coloneqq \omega ,\ \ \ \ X\sim \mathcal{G}(p)
 \end{align*}
-Verifica: dobbiamo mostrare che $\forall k\in \mathbb{N} ,p_{X}(k) =\tilde{p}(k)$
+Verifica: dobbiamo mostrare che $\forall k\in \NN ,p_{X}(k) =\tilde{p}(k)$
 \begin{align*}
 p_{X}(k) & =\PP(X=k)\\
- & =\PP(\{\omega \in \mathbb{N} :X(\omega) =k\})\\
- & =\PP(\{\omega \in \mathbb{N} :\omega =k\})\\
+ & =\PP(\{\omega \in \NN :X(\omega) =k\})\\
+ & =\PP(\{\omega \in \NN :\omega =k\})\\
  & =\PP(k)\\
  & =\tilde{p}(k) =p(1-p)^{k-1}
 \end{align*}
@@ -1102,9 +1102,9 @@ Dato che le v.c. discrete sono caratterizzate dalla probabilità sugli atomi, ne
 \begin{equation*}
 \forall B\in \mathcal{A} \ \ \ \ \PP(X\in B) =\sum\limits_{k:\ x_{k} \in B\cap S} p_{X}(x_{k})
 \end{equation*}
-caratterizzare $\PP$ sugli atomi, come fatto in (3), significa sostanzialmente dire che $\PP$ è l'unica misura di probabilità su $\left(\mathbb{N} ,2^{\mathbb{N}}\right)$ t.c. $\PP =P^{X}$, dove $P^{X}(\cdotp) =\PP(X\in \cdotp)$ è la legge di $X$.
+caratterizzare $\PP$ sugli atomi, come fatto in (3), significa sostanzialmente dire che $\PP$ è l'unica misura di probabilità su $\left(\NN ,2^{\NN}\right)$ t.c. $\PP =P^{X}$, dove $P^{X}(\cdotp) =\PP(X\in \cdotp)$ è la legge di $X$.
 
-La misura che dobbiamo mettere su $\left(\mathbb{N} ,2^{\mathbb{N}}\right)$ è proprio la legge immagine di una v.c. geometrica di parametro $p$. Poi basta considerare su questo spazio di probabilità la v.c. $X=I$ e abbiamo immediatamente $X\sim \mathcal{G}(p)$.
+La misura che dobbiamo mettere su $\left(\NN ,2^{\NN}\right)$ è proprio la legge immagine di una v.c. geometrica di parametro $p$. Poi basta considerare su questo spazio di probabilità la v.c. $X=I$ e abbiamo immediatamente $X\sim \mathcal{G}(p)$.
 \end{oss}
 
 \textbf{Spazio di probabilità continuo:}
