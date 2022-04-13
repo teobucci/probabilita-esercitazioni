@@ -670,11 +670,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 
 		Abbiamo visto che i possibili evento $\omega \in \Omega $ sono della forma $\omega =(\omega_{1} ,\dots ,\omega_{k})$ con $\omega_{i} \in \{1,\dots,n\}$ e $i\in \{1,\dots,k\}$, allora
 		\begin{align*}
-			\PP(\{\omega \}) & =\PP(\{(\omega_{1} ,\dots ,\omega_{k})\}) & \\
-			 & =\PP\left(\bigcap_{j=1}^{k} A_{j}^{\omega_{j}}\right) & \text{significato di} \ \omega \\
-			 & =\prod_{j=1}^{k}\PP\left(A_{j}^{\omega_{j}}\right) & \text{indipendenza}\\
-			 & =\prod_{j=1}^{k}\frac{1}{n} & \text{estrazioni equiprobabili}\\
-			 & =\frac{1}{n^{k}} =\frac{1}{| \Omega | } & 
+			\PP(\{\omega \}) & =\PP(\{(\omega_{1} ,\dots ,\omega_{k})\}) = \PP\left(\bigcap_{j=1}^{k} A_{j}^{\omega_{j}}\right) \indepeq \prod_{j=1}^{k}\PP\left(A_{j}^{\omega_{j}}\right) \ideq \prod_{j=1}^{k}\frac{1}{n} =\frac{1}{n^{k}} =\frac{1}{| \Omega | }
 		\end{align*}
 
 		$(\implies)$ esercizio.
