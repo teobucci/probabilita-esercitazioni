@@ -4,25 +4,25 @@
 
 Richiami
 
-VA: Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\mathcal{A})\rightarrow (\mathbb{R} ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \mathcal{A}$.
+VA: Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\mathcal{A})\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \mathcal{A}$.
 
 LEGGE: la legge di una variabile aleatoria reale $X$ è la misura di probabilità $P^{X}(B) =\PP(X\in B) =\PP\left(X^{-1}(B)\right) =\PP(\{\omega \in \Omega :X(\omega) \in B\})$, $\forall B\in \mathcal{B}$.
 \begin{oss}
-	La legge è univocamente determinata dalla funzione di ripartizione, ossia $F:\mathbb{R}\rightarrow \mathbb{R}$ tale che $F(t) =\PP(X\leq t) =P^{X}((-\infty ,t])$. La funzione di ripartizione è definita su tutto $\mathbb{R}$ e si definisce solo per le VA reali.
+	La legge è univocamente determinata dalla funzione di ripartizione, ossia $F:\RR\rightarrow \RR$ tale che $F(t) =\PP(X\leq t) =P^{X}((-\infty ,t])$. La funzione di ripartizione è definita su tutto $\RR$ e si definisce solo per le VA reali.
 \end{oss}
 \begin{oss}
 Somme, prodotti, limiti di VA reali sono VA reali.
 \end{oss}
-Funzioni boreliane: una funzione $f:(\mathbb{R} ,\mathcal{B})\rightarrow (\mathbb{R} ,\mathcal{B})$ si dice boreliana se è misurabile.
+Funzioni boreliane: una funzione $f:(\RR ,\mathcal{B})\rightarrow (\RR ,\mathcal{B})$ si dice boreliana se è misurabile.
 \begin{oss}
 Sono boreliane le funzioni continue e generalmente continue (i.e. continue a tratti).
 \end{oss}
 \begin{oss}
 Composizione di VA reali con funzioni boreliane sono VA reali.
 \end{oss}
-VA discrete: una VA reale $X$ si dice \textbf{discreta} se assume con probabilità $1$ valori in un insieme $S$ al più numerabile $\PP(X\in S) =1$. $\iff $Una VA reale $X$ si dice discreta se e solo se $P^{X}$ è discreta, ossia $\exists S\subset \mathbb{R}$ al più numerabile e $p_{X} :S\rightarrow [0,1]$ tale che $P^{X}(B) =\sum\limits_{x\in B\cap S} p_{X}(x)$, $\forall B\in \mathcal{B}$.
+VA discrete: una VA reale $X$ si dice \textbf{discreta} se assume con probabilità $1$ valori in un insieme $S$ al più numerabile $\PP(X\in S) =1$. $\iff $Una VA reale $X$ si dice discreta se e solo se $P^{X}$ è discreta, ossia $\exists S\subset \RR$ al più numerabile e $p_{X} :S\rightarrow [0,1]$ tale che $P^{X}(B) =\sum\limits_{x\in B\cap S} p_{X}(x)$, $\forall B\in \mathcal{B}$.
 
-La funzione $p_{X}$ si dice \textbf{densità discreta} di $X$. Si dice \textbf{supporto} di $P^{X}$ l'insieme $S_{X} =\{x\in \mathbb{R} :p_{X}(x)  >0\}$.
+La funzione $p_{X}$ si dice \textbf{densità discreta} di $X$. Si dice \textbf{supporto} di $P^{X}$ l'insieme $S_{X} =\{x\in \RR :p_{X}(x)  >0\}$.
 \begin{oss}
 Posso, ma non per forza, pensare $S=S_{X}$.
 \end{oss}
@@ -53,7 +53,7 @@ Graficamente
 \draw [shift={(350,114)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 
 % Text Node
-\draw (390,103.4) node [anchor=north west][inner sep=0.75pt]    {$\mathbb{R}$};
+\draw (390,103.4) node [anchor=north west][inner sep=0.75pt]    {$\RR$};
 
 
 \end{tikzpicture}
@@ -139,20 +139,20 @@ $\Omega \ \text{discreto} \implies \mathrm{Im}(X) \ \text{discreta} \implies X\ 
 \end{oss}
 Possiamo riassumere quanto detto sopra nella seguente
 \begin{theorem}
-Sia $X:\Omega \rightarrow S\subset \mathbb{R}$ una VA discreta che assume, con probabilità $1$, valori in $S=\{x_{k} :k\in I\}$, $I\subset \mathbb{Z}$. Allora
+Sia $X:\Omega \rightarrow S\subset \RR$ una VA discreta che assume, con probabilità $1$, valori in $S=\{x_{k} :k\in I\}$, $I\subset \mathbb{Z}$. Allora
 \end{theorem}
 \begin{enumerate}
-\item $0\leq p_{X}(x) \leq 1,\forall x\in \mathbb{R}$ e $p_{X}(x) =0,\forall x\notin S$
+\item $0\leq p_{X}(x) \leq 1,\forall x\in \RR$ e $p_{X}(x) =0,\forall x\notin S$
 \item $\sum\limits_{k\in I} p_{X}(k) =1$
 \item se $F_{X}$ è la funzione di ripartizione di $X$ allora
 \begin{equation*}
-F_{X}(x) =\sum\limits_{k:x_{k} \leq x} p_{X}(x_{k}) ,\ \ \ \ \forall x\in \mathbb{R}
+F_{X}(x) =\sum\limits_{k:x_{k} \leq x} p_{X}(x_{k}) ,\ \ \ \ \forall x\in \RR
 \end{equation*}
 \item se i punti di $S$ possono essere numerati in modo tale che $x_{h} < x_{k}$ se $h< k$, allora
 \begin{equation*}
 p_{X}(x_{k}) =F_{X}(x_{k}) -F_{X}(x_{k-1}) ,\ \ \ \ \forall k\in I
 \end{equation*}
-\item se $B\subset \mathbb{R}$ allora
+\item se $B\subset \RR$ allora
 \begin{equation*}
 \PP(X\in B) =\sum\limits_{k:x_{k} \in B} p_{X}(x_{k})
 \end{equation*}
@@ -165,10 +165,10 @@ $(5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \m
 
 \Esercizio{fatto}
 
-Si consideri la probabilità uniforme nell'intervallo $[0,1$] su $(\mathbb{R} ,\mathcal{B})$. Qui si definiscano le funzioni
+Si consideri la probabilità uniforme nell'intervallo $[0,1$] su $(\RR ,\mathcal{B})$. Qui si definiscano le funzioni
 \begin{itemize}
-\item $X(\omega) =\Ind_{[0,p]}(\omega) ,\ \omega \in \mathbb{R} ,$
-\item $Y(\omega) =\Ind_{[0,p]}(\omega) +\omega \Ind_{(-\infty ,0) \cup (1,\infty)}(\omega) ,\ \omega \in \mathbb{R} ,$
+\item $X(\omega) =\Ind_{[0,p]}(\omega) ,\ \omega \in \RR ,$
+\item $Y(\omega) =\Ind_{[0,p]}(\omega) +\omega \Ind_{(-\infty ,0) \cup (1,\infty)}(\omega) ,\ \omega \in \RR ,$
 \end{itemize}
 
 dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ indica la funzione indicatrice dell'insieme $A\in \mathcal{B}$, ossia
@@ -178,7 +178,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ i
 1,\ \omega \in A,\\
 0,\ \omega \notin A,
 \end{cases}
-\ \omega \in \mathbb{R} .
+\ \omega \in \RR .
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che $X$ e $Y$ sono variabili aleatorie reali discrete. Si dimostri inoltre che $X=Y$ q.c.
@@ -221,8 +221,8 @@ F(x) =
 \end{cases}
 \end{equation*}
 \begin{enumerate}
-\item Si mostri che $F$ è la funzione di ripartizione di una probabilità $\PP$ su $(\mathbb{R} ,\mathcal{B})$.
-\item Si mostri che $\PP$ è una probabilità discreta su $(\mathbb{R} ,\mathcal{B})$, trovando i punti $x_{k}$ dove $\PP$ è concentrata e le corrispondenti probabilità $p_{k}$, o equivalentemente determinando la densità (discreta) $p:\mathbb{R}\rightarrow [0,1]$ definita come segue:
+\item Si mostri che $F$ è la funzione di ripartizione di una probabilità $\PP$ su $(\RR ,\mathcal{B})$.
+\item Si mostri che $\PP$ è una probabilità discreta su $(\RR ,\mathcal{B})$, trovando i punti $x_{k}$ dove $\PP$ è concentrata e le corrispondenti probabilità $p_{k}$, o equivalentemente determinando la densità (discreta) $p:\RR\rightarrow [0,1]$ definita come segue:
 \begin{equation*}
 p(x) =P(\{x\}) =
 \begin{cases}
@@ -230,7 +230,7 @@ p_{k} & \text{se} \ x=x_{k}\\
 0 & \text{altrimenti}
 \end{cases}
 \end{equation*}
-per ogni $x\in \mathbb{R}$.
+per ogni $x\in \RR$.
 \item Quanto valgono $\PP((1/2,+\infty)) ,\PP((2,4]) ,\PP((1,2)) ,\PP((-\infty ,3))$?
 \item Si introduca una variabile aleatoria reale e discreta $X$ di legge $P$, definita su uno spazio $\Omega $ \textit{discreto}.
 \item Si introduca una variabile aleatoria reale e discreta $X$ di legge $P$, definita su uno spazio $\Omega $ \textit{continuo}.
@@ -244,7 +244,7 @@ per ogni $x\in \mathbb{R}$.
 
 Si consideri la funzione
 \begin{equation*}
-F(x) =\sum\limits_{i=1}^{+\infty }\frac{1}{2^{i}}\Ind_{\left[\frac{1}{i} ,+\infty \right)}(x) ,\ \ \ \ x\in \mathbb{R}
+F(x) =\sum\limits_{i=1}^{+\infty }\frac{1}{2^{i}}\Ind_{\left[\frac{1}{i} ,+\infty \right)}(x) ,\ \ \ \ x\in \RR
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che si tratta di una funzione di ripartizione.
@@ -270,7 +270,7 @@ E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
 e sia $\PP$ tale che $\{E_{k}\}_{k\in \NN}$ risulti una famiglia di eventi indipendenti con $\PP(E_{k}) =p$ per ogni $k$. Indicato con $\omega =(\omega_{k})_{k=1}^{\infty }$ il generico esito dello spazio campionario $\Omega $, definiamo le funzioni
 \begin{equation*}
-X_{n} :\Omega \rightarrow \mathbb{R} ,\ \ \ \ X_{n}(\omega) =\omega_{n} ,\ \ \ \ n\in \NN .
+X_{n} :\Omega \rightarrow \RR ,\ \ \ \ X_{n}(\omega) =\omega_{n} ,\ \ \ \ n\in \NN .
 \end{equation*}
 \begin{enumerate}
 \item Si mostri che $X_{n} =\Ind_{E_{n}}$.
@@ -420,7 +420,7 @@ Si supponga che la scommessa proposta sia equa.
 \begin{enumerate}
 \item Mostriamo innanzitutto che
 \begin{equation*}
-X,Y:(\mathbb{R} ,\mathcal{B})\rightarrow (\mathbb{R} ,\mathcal{B})
+X,Y:(\RR ,\mathcal{B})\rightarrow (\RR ,\mathcal{B})
 \end{equation*}
 sono VA reali. Secondo la definizione dobbiamo mostrare che
 \begin{equation*}
@@ -430,7 +430,7 @@ i.e. $X,Y$ sono misurabili.
 \begin{oss}
 Se $(\Omega ,\mathcal{A} ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \mathcal{A}$. Infatti
 \begin{equation*}
-\Ind_{A} :(\Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \mathbb{R}
+\Ind_{A} :(\Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \RR
 \end{equation*}
 e
 \begin{equation*}
@@ -446,7 +446,7 @@ Quindi per verificare che $X$ è una VA ci basterà verificare che $[0,p] \in \m
 
 In maniera simile deduciamo che $Y$ è VA reale perché somma di $X$ e del prodotto di funzioni misurabili.
 
-Per dimostrare che $X,Y$ sono VA discrete, dobbiamo dimostrare che la legge immagine di $X,Y$ $\left(P^{X} ,P^{Y}\right)$ è discreta, i.e. $\exists S\subset \mathbb{R}$ al più numerabile e $p_{X} :S\rightarrow [0,1]$ tale che $P^{X}(B) =\sum\limits_{x\in B\cap S} p_{X}(x)$. Osserviamo però che
+Per dimostrare che $X,Y$ sono VA discrete, dobbiamo dimostrare che la legge immagine di $X,Y$ $\left(P^{X} ,P^{Y}\right)$ è discreta, i.e. $\exists S\subset \RR$ al più numerabile e $p_{X} :S\rightarrow [0,1]$ tale che $P^{X}(B) =\sum\limits_{x\in B\cap S} p_{X}(x)$. Osserviamo però che
 \begin{equation*}
 \mathrm{Im}(X) =\{0,1\} \implies X\ \text{discreta}
 \end{equation*}
@@ -464,13 +464,13 @@ Infatti
  & =\PP(\{\omega \in \Omega :\Ind_{[0,p]}(\omega) =1\})\\
  & =\PP\left(\Ind_{[0,p]}^{-1}(1)\right)\\
  & =\PP([0,p])\\
- & =p\ \left(\text{su} \ \mathbb{R} \ \text{ho prob. uniforme}\right)\\
+ & =p\ \left(\text{su} \ \RR \ \text{ho prob. uniforme}\right)\\
  & \\
 \text{se} \ x=0:\PP(X=0) & =\PP(\Ind_{[0,p]} =0)\\
  & =\PP(\{\omega \in \Omega :\Ind_{[0,p]}(\omega) =0\})\\
  & =\PP\left(\Ind_{[0,p]}^{-1}(0)\right)\\
  & =\PP((-\infty ,p) \cup (p,+\infty))\\
- & =\PP(\mathbb{R} \setminus [0,p])\\
+ & =\PP(\RR \setminus [0,p])\\
  & =1-\PP([0,p])\\
  & =1-p
 \end{align*}
@@ -520,15 +520,15 @@ Quindi
 i.e. $X=Y$ q.c.
 \item
 \begin{theorem}
-Sia $X$ una VA reale definita su $(\Omega ,\mathcal{A} ,\PP)$ e sia $h:\mathbb{R}\rightarrow \mathbb{R}$ boreliana. Allora
+Sia $X$ una VA reale definita su $(\Omega ,\mathcal{A} ,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
 \begin{equation*}
-\EE[|h(x)|] =\int_{\Omega }| h(X(\omega))| d\PP(\omega) < +\infty \ \ \iff \ \ \int_{\mathbb{R}}| h(x)| P^{X}(dx) < +\infty 
+\EE[|h(x)|] =\int_{\Omega }| h(X(\omega))| d\PP(\omega) < +\infty \ \ \iff \ \ \int_{\RR}| h(x)| P^{X}(dx) < +\infty 
 \end{equation*}
 i.e. $h\circ X=h(X) \in \mathcal{L}^{1}(\PP) \iff h\in \mathcal{L}^{1}\left(P^{X}\right)$.
 
 Nel caso precedente, oppure se $h\geq 0$, valgono
 \begin{equation*}
-\EE[h(X)] =\int_{\mathbb{R}} h(x) P^{X}(dx) \ \ \ \ \EE[X] =\int_{\mathbb{R}} xP^{X}(dx)
+\EE[h(X)] =\int_{\RR} h(x) P^{X}(dx) \ \ \ \ \EE[X] =\int_{\RR} xP^{X}(dx)
 \end{equation*}
 Se, in particolare, $X$ è discreta con densità $p_{X}$
 \begin{equation*}
@@ -597,7 +597,7 @@ Questo ci dice che la VA $X_{n}$ rappresenta l'esito della $n$-esima prova, i.e.
 \item Sono funzioni a valori reali. In particolare $\forall n,\mathrm{Im}(X_{n}) =\{0,1\} \implies $ sono discrete. Resta da verificare che sono VA, ovvero che sono misurabili, i.e.
 \begin{gather*}
 \begin{aligned}
-X_{n}(\Omega ,\mathcal{A}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
+X_{n}(\Omega ,\mathcal{A}) & \rightarrow (\RR ,\mathcal{B})\\
 \omega  & \mapsto X_{n}(\omega) =\omega_{n}
 \end{aligned}\\
 X_{n}^{-1}(B) \in \mathcal{A} ,\forall B\in \mathcal{B}
@@ -790,14 +790,14 @@ In quegli esercizi abbiamo visto \textit{diversi possibili modi} in cui introdur
 
 Nell'Es. 1 abbiamo considerato uno spazio di probabilità continuo
 \begin{equation*}
-(\Omega ,\mathcal{A} ,\PP) =(\mathbb{R} ,\mathcal{B} ,\PP_{\text{unif.}})
+(\Omega ,\mathcal{A} ,\PP) =(\RR ,\mathcal{B} ,\PP_{\text{unif.}})
 \end{equation*}
 Abbiamo introdotto le VA
 \begin{gather*}
 \begin{aligned}
-X:(\mathbb{R} ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
+X:(\RR ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\RR ,\mathcal{B})\\
 \omega  & \mapsto X(\omega) \coloneqq \Ind_{[0,p]}(\omega)\\
-Y:(\mathbb{R} ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
+Y:(\RR ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\RR ,\mathcal{B})\\
 \omega  & \mapsto Y(\omega) \coloneqq \Ind_{[0,p]}(\omega) +\omega \Ind_{(-\infty ,0) \cup (1,\infty)}(\omega)
 \end{aligned}\\
 \ \\
@@ -811,7 +811,7 @@ Negli Es. 5 e 1.c abbiamo considerato uno spazio di probabilità discreto
 Abbiamo introdotto la VA
 \begin{gather*}
 \begin{aligned}
-Z:\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right) & \rightarrow (\mathbb{R} ,\mathcal{B})\\
+Z:\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right) & \rightarrow (\RR ,\mathcal{B})\\
 \omega  & \mapsto Z(\omega)
 \end{aligned}\\
 \\
@@ -855,7 +855,7 @@ Se $X$ è una VA discreta con densità $p_{X} :S\rightarrow [0,1]$, allora
 \end{equation*}
 Infatti:
 \begin{equation*}
-\EE[X] =\underbrace{\int_{\Omega } X(\omega) d\PP(\omega) =\int_{\mathbb{R}} xdP^{X}(x)}_{\text{Teorema "astratto-concreto"}}\overset{\text{discreta}}{=}\sum\limits_{x\in S} xp_{X}(x) =\sum\limits_{x\in S} x\PP(X=x)
+\EE[X] =\underbrace{\int_{\Omega } X(\omega) d\PP(\omega) =\int_{\RR} xdP^{X}(x)}_{\text{Teorema "astratto-concreto"}}\overset{\text{discreta}}{=}\sum\limits_{x\in S} xp_{X}(x) =\sum\limits_{x\in S} x\PP(X=x)
 \end{equation*}
 Vamonos ora! Hay carramba!
 \begin{enumerate}
@@ -1046,7 +1046,7 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
 \begin{enumerate}
 \item
 \begin{align*}
-\EE[X] & \coloneqq \int_{\Omega } X(\omega) d\PP(\omega) =\int_{\mathbb{R}} xdP^{X}(x) & \\
+\EE[X] & \coloneqq \int_{\Omega } X(\omega) d\PP(\omega) =\int_{\RR} xdP^{X}(x) & \\
  & =\sum\limits_{k=0}^{\infty } kp_{X}(k) & \\
  & =\sum\limits_{k=1}^{\infty } ke^{-\lambda }\frac{\lambda^{k}}{k!} & \text{(} k\ \text{dà contributo nullo)}\\
  & =e^{-\lambda } \lambda \sum\limits_{k=1}^{\infty }\frac{\lambda^{k-1}}{(k-1) !} & \\
@@ -1073,7 +1073,7 @@ $\PP(X=k) =p(1-p)^{k-1}$ rappresenta la probabilità che il primo successo richi
 \begin{enumerate}
 \item Abbiamo
 \begin{gather*}
-X:(\Omega ,\mathcal{F} ,\PP)\rightarrow \NN \subset \mathbb{R}\\
+X:(\Omega ,\mathcal{F} ,\PP)\rightarrow \NN \subset \RR\\
 X\sim \mathcal{G}(p) \ \ \ \ \text{i.e.} \ \ \ \ \PP(X=k) =p(1-p)^{k-1} =:\tilde{p}(k) ,\ k\in \NN
 \end{gather*}
 
@@ -1111,7 +1111,7 @@ La misura che dobbiamo mettere su $\left(\NN ,2^{\NN}\right)$ è proprio la legg
 
 Abbiamo
 \begin{equation*}
-(\Omega ,\mathcal{F} ,\PP) =\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)
+(\Omega ,\mathcal{F} ,\PP) =\left(\RR ,\mathcal{B}(\RR) ,P^{X}\right)
 \end{equation*}
 e
 \begin{equation*}
@@ -1119,7 +1119,7 @@ X(\omega) =\omega \ \ \forall \omega \in \Omega
 \end{equation*}
 L'idea è la seguente: sia $(\Omega ,\mathcal{F} ,\PP)$ un generico spazio di probabilità e
 \begin{align*}
-X:(\Omega ,\mathcal{F} ,\PP) & \rightarrow \left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)\\
+X:(\Omega ,\mathcal{F} ,\PP) & \rightarrow \left(\RR ,\mathcal{B}(\RR) ,P^{X}\right)\\
 \omega  & \rightarrow X(\omega)
 \end{align*}
 con
@@ -1128,13 +1128,13 @@ X\sim \mathcal{G}(p)
 \end{equation*}
 cioè
 \begin{equation*}
-\forall B\in \mathcal{B}(\mathbb{R}) ,\ \ P^{X}(B) =\PP(X\in B)
+\forall B\in \mathcal{B}(\RR) ,\ \ P^{X}(B) =\PP(X\in B)
 \end{equation*}
 $P^{X}$ è la legge immagine di $X$.
 
-Se quindi come spazio di probabilità consideriamo proprio $\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)$ e
+Se quindi come spazio di probabilità consideriamo proprio $\left(\RR ,\mathcal{B}(\RR) ,P^{X}\right)$ e
 \begin{align*}
-X=I:\left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right) & \rightarrow \left(\mathbb{R} ,\mathcal{B}(\mathbb{R}) ,P^{X}\right)\\
+X=I:\left(\RR ,\mathcal{B}(\RR) ,P^{X}\right) & \rightarrow \left(\RR ,\mathcal{B}(\RR) ,P^{X}\right)\\
 \omega  & \rightarrow X(\omega) =\omega 
 \end{align*}
 abbiamo costruito uno spazio di probabilità continuo dove è possibile definire $X$.

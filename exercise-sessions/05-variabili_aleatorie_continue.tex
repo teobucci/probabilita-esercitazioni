@@ -4,11 +4,11 @@
 \ParteEsercizi
 \Esercizio{}
 
-Si consideri lo spazio di probabilità $(\Omega ,\mathcal{A} ,\PP) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m(B\cap (0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $(0,1)$ nel modo seguente:
+Si consideri lo spazio di probabilità $(\Omega ,\mathcal{A} ,\PP) =(\RR ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m(B\cap (0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\RR\rightarrow \RR$ definite sull'intervallo $(0,1)$ nel modo seguente:
 \begin{equation*}
 X(\omega) =\frac{1}{\omega } ,\ \ \ \ Y(\omega) =\frac{1}{\sqrt{\omega }} ,\ \ \ \ Z(\omega) =\log \omega ,
 \end{equation*}
-per ogni $\omega \in (0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathbb{R} \setminus (0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
+per ogni $\omega \in (0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\RR \setminus (0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
 \begin{enumerate}
 \item Mostrare che $X$, $Y$ e $Z$ sono variabili aleatorie ben definite q.c.
 \item Determinare le distribuzioni di $X$, $Y$ e $Z$, mostrando in particolare che si tratta di variabili aleatorie continue.
@@ -18,7 +18,7 @@ per ogni $\omega \in (0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathb
 \end{enumerate}
 \Esercizio{}
 
-Data una variabile aleatoria reale continua $X$ con densità $f$ simmetrica rispetto a $\mu \in \mathbb{R}$,
+Data una variabile aleatoria reale continua $X$ con densità $f$ simmetrica rispetto a $\mu \in \RR$,
 
 si mostri che
 \begin{enumerate}
@@ -29,7 +29,7 @@ si mostri che
 
 Data una variabile aleatoria di Cauchy $X$, con densità
 \begin{equation*}
-f(x) =\frac{1}{\pi \left(1+(x-\alpha)^{2}\right)} ,\ \ \ \ \alpha \in \mathbb{R} ,
+f(x) =\frac{1}{\pi \left(1+(x-\alpha)^{2}\right)} ,\ \ \ \ \alpha \in \RR ,
 \end{equation*}
 si calcolino:
 \begin{enumerate}
@@ -49,7 +49,7 @@ Si consideri $X\sim \mathcal{E}(\lambda)$, variabile esponenziale di parametro $
 
 
 \begin{equation*}
-f(x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty)}(x) ,\ \ \ \ x\in \mathbb{R} .
+f(x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty)}(x) ,\ \ \ \ x\in \RR .
 \end{equation*}
 \begin{enumerate}
 \item Calcolare la moda di $X$.
@@ -102,7 +102,7 @@ Si consideri $Z$ di \textit{legge normale standard}, ossia $Z\sim \mathcal{N}(0,
 \begin{enumerate}
 \item Calcolare la distribuzione della variabile aleatoria $Z^{2}$.
 \item Calcolare la legge della variabile aleatoria $| Z| $, il valore atteso, la varianza e i quantili.
-\item Si calcoli $\EE\left[Z^{4}\right]$ e $\EE\left[e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
+\item Si calcoli $\EE\left[Z^{4}\right]$ e $\EE\left[e^{tZ^{2}}\right] ,t\in \RR$.
 \end{enumerate}
 \Esercizio{}
 
@@ -119,7 +119,7 @@ Sia $X$ una variabile aleatoria con funzione di ripartizione $F$.
 \item Date $U\sim U((0,1))$ e una funzione di ripartizione $F$ invertibile, si mostri che $X=F^{-1}(U) \sim F$.
 \item * Data $X\sim F$, con $F$ continua, si mostri che $Y=F(X) \sim U((0,1))$. [Suggerimento: sia $t\in \left(0,1\right)$ e $G\left(t\right) =\inf\left\{x:F\left(x\right) \geq t\right\}$. Utilizzando la continuità di $F$, si mostri che $F\left(G\left(t\right)\right) =t$. Si noti infine che $F\left(x\right) \geq t\iff x\geq G\left(t\right)$.]
 \item * Date $U\sim U\left(\left(0,1\right)\right)$ e una funzione di ripartizione $F$ continua, definita $G\left(t\right) =\inf\left\{x:F\left(x\right) \geq t\right\}$, si mostri che $X=G\left(U\right)$ è una variabile aleatoria di legge $F$.
-\item * Date $U\sim U((0,1))$ e una distribuzione discreta $P_{0}$ su $\left(\mathbb{R} ,\mathcal{B}\right)$, si trovi una trasformazione misurabile $G$ tale che $X=G\left(U\right) \sim P_{0}$.
+\item * Date $U\sim U((0,1))$ e una distribuzione discreta $P_{0}$ su $\left(\RR ,\mathcal{B}\right)$, si trovi una trasformazione misurabile $G$ tale che $X=G\left(U\right) \sim P_{0}$.
 \end{enumerate}
 \subsubsection{}
 \begin{enumerate}
@@ -205,12 +205,12 @@ f_{X}(x) =\begin{cases}
 \end{cases}
 \end{equation*}
 \begin{enumerate}
-\item Determinare i possibili valori della costante $\lambda \in \mathbb{R}$.
+\item Determinare i possibili valori della costante $\lambda \in \RR$.
 \item Determinare il tasso di fallimento di $X$.
 \item Determinare la legge di $X^{2}$ e riconoscerla.
 \item Calcolare la media e la varianza di $e^{-X^{2} /\lambda }$.
 \item Calcolare $\EE\left[\frac{1}{X}\right]$.
-\item Stabilire per quali $\alpha \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$.
+\item Stabilire per quali $\alpha \in \RR$ si ha che $Y=X^{\alpha } \in L^{1}$.
 \end{enumerate}
 \Esercizio{}
 
@@ -227,14 +227,14 @@ f_{X}\left(x\right) =\begin{cases}
 \item Si calcolino $\PP\left(X >3\right)$ e $\PP\left(X^{3}  >27\right)$.
 \item Si calcoli la media di $3X^{2} -1$.
 \item Stimare la probabilità che $X$ assuma valori distanti dalla media più di $2$ unità, utilizzando la disuguaglianza di Chebychev.
-\item Stabilire per quali $\alpha ,\beta \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left(X-1\right)^{\beta }} \in L^{1}$.
+\item Stabilire per quali $\alpha ,\beta \in \RR$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left(X-1\right)^{\beta }} \in L^{1}$.
 \end{enumerate}
 \Esercizio{}
 
 Siano $X\sim U\left(\left(0,1\right)\right)$ e $Y\sim \Gamma \left(\alpha ,\lambda \right) ,\alpha ,\lambda  >0$.
 \begin{enumerate}
-\item Si stabilisca per quali $\beta \in \mathbb{R}$ la variabile aleatoria $Z=\frac{1}{\ \left(1-X\right)^{\beta }} \in L^{1}$.
-\item Si determini, al variare dei parametri $\alpha $, $\lambda $, per quali $\gamma \in \mathbb{R}$ la variabile aleatoria $W=Y^{\gamma } \in L^{1}$.
+\item Si stabilisca per quali $\beta \in \RR$ la variabile aleatoria $Z=\frac{1}{\ \left(1-X\right)^{\beta }} \in L^{1}$.
+\item Si determini, al variare dei parametri $\alpha $, $\lambda $, per quali $\gamma \in \RR$ la variabile aleatoria $W=Y^{\gamma } \in L^{1}$.
 
 Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel punto $\left(3\right)$ dell'esercizio $6$.
 \end{enumerate}
@@ -242,7 +242,7 @@ Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel p
 
 \textit{Ricavo di un'opzione "call" europea.} Un agente finanziario sottoscrive un contratto che gli dà il diritto (ma non l'obbligo) di acquistare un certo titolo ad una data futura fissata, ad un prezzo $k >0$ anch'esso fissato. Detto $S$ il valore di tale titolo alla data fissata, esso è al momento sconosciuto, ma si ritiene che i suoi possibili valori abbiano distribuzione lognormale, ovvero che siano dati da
 \begin{equation*}
-S=\exp X,\ \ \ \ X\sim \mathcal{N}\left(\mu ,\sigma^{2}\right) ,\ \ \ \ \mu \in \mathbb{R} ,\sigma  >0.
+S=\exp X,\ \ \ \ X\sim \mathcal{N}\left(\mu ,\sigma^{2}\right) ,\ \ \ \ \mu \in \RR ,\sigma  >0.
 \end{equation*}
 Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la differenza $S-k$, altrimenti non lo eserciterà e avrà ricavo nullo. Sia quindi $R$ il ricavo dell'agente.
 \begin{enumerate}
@@ -289,7 +289,7 @@ Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge
 Data una variabile aleatoria $X\sim U([-2,-1] \cup [1,2])$, calcolarne densità di probabilità $f$, mediane $m$ e, se esiste, media $\mu $.
 \Esercizio{$\star$}
 
-Data una variabile aleatoria $X\sim U((0,2\pi))$ e un angolo fissato $\vartheta \in \mathbb{R}$, si calcoli la legge di $Y=\sin(X+\vartheta)$.
+Data una variabile aleatoria $X\sim U((0,2\pi))$ e un angolo fissato $\vartheta \in \RR$, si calcoli la legge di $Y=\sin(X+\vartheta)$.
 \Esercizio{}
 
 Data $X\sim \mathcal{E}(\lambda)$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
@@ -310,7 +310,7 @@ Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un t
 \end{enumerate}
 \Esercizio{}
 
-Data la funzione $f:\mathbb{R}\rightarrow \mathbb{R}$ definita come
+Data la funzione $f:\RR\rightarrow \RR$ definita come
 \begin{equation*}
 f(x) \coloneqq \begin{cases}
 0 & x< 0\\
