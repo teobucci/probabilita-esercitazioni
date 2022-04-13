@@ -4,7 +4,7 @@
 
 Richiami
 
-VA: Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\Ac)\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \Ac$.
+VA: Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\Ac)\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \Ac$.
 
 LEGGE: la legge di una variabile aleatoria reale $X$ è la misura di probabilità $P^{X}(B) =\PP(X\in B) =\PP\left(X^{-1}(B)\right) =\PP(\{\omega \in \Omega :X(\omega) \in B\})$, $\forall B\in \mathcal{B}$.
 \begin{oss}
@@ -317,7 +317,7 @@ Si consideri $X\sim \mathcal{G}(p)$, variabile aleatoria geometrica di parametro
 \PP(X=k) =p(1-p)^{k-1} ,\ \ \ \ k\in \NN .
 \end{equation*}
 \begin{enumerate}
-\item Mostrare due diversi spazi $(\Omega ,\Ac ,\PP)$, uno discreto e uno continuo, su cui è possibile definire $X$.
+\item Mostrare due diversi spazi $(\Omega,\Ac,\PP)$, uno discreto e uno continuo, su cui è possibile definire $X$.
 \item Calcolare le mode di $X$.
 \item Calcolare la funzione di ripartizione $F$ di $X$.
 \item Calcolare il valore atteso $\EE[X]$.
@@ -428,7 +428,7 @@ sono VA reali. Secondo la definizione dobbiamo mostrare che
 \end{equation*}
 i.e. $X,Y$ sono misurabili.
 \begin{oss}
-Se $(\Omega ,\Ac ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \Ac$. Infatti
+Se $(\Omega,\Ac,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \Ac$. Infatti
 \begin{equation*}
 \Ind_{A} :(\Omega ,\Ac)\rightarrow \{0,1\} \subset \RR
 \end{equation*}
@@ -520,7 +520,7 @@ Quindi
 i.e. $X=Y$ q.c.
 \item
 \begin{theorem}
-Sia $X$ una VA reale definita su $(\Omega ,\Ac ,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
+Sia $X$ una VA reale definita su $(\Omega,\Ac,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
 \begin{equation*}
 \EE[|h(x)|] =\int_{\Omega }| h(X(\omega))| d\PP(\omega) < +\infty \ \ \iff \ \ \int_{\RR}| h(x)| P^{X}(dx) < +\infty 
 \end{equation*}
@@ -790,7 +790,7 @@ In quegli esercizi abbiamo visto \textit{diversi possibili modi} in cui introdur
 
 Nell'Es. 1 abbiamo considerato uno spazio di probabilità continuo
 \begin{equation*}
-(\Omega ,\Ac ,\PP) =(\RR ,\mathcal{B} ,\PP_{\text{unif.}})
+(\Omega,\Ac,\PP) =(\RR ,\mathcal{B} ,\PP_{\text{unif.}})
 \end{equation*}
 Abbiamo introdotto le VA
 \begin{gather*}
@@ -805,7 +805,7 @@ Y:(\RR ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\RR ,\mathcal{B})\\
 \end{gather*}
 Negli Es. 5 e 1.c abbiamo considerato uno spazio di probabilità discreto
 \begin{gather*}
-(\Omega ,\Ac ,\PP) =\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right)\\
+(\Omega,\Ac,\PP) =\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right)\\
 \tilde{\PP}(\{0\}) =1-p,\ \ \ \ \tilde{\PP}(\{1\}) =p
 \end{gather*}
 Abbiamo introdotto la VA
@@ -847,7 +847,7 @@ Vamonos
 
 Richiami Teoria
 \begin{equation*}
-\EE[X] \coloneqq \int_{\Omega } Xd\PP ,\ \ \ \ X:(\Omega ,\Ac ,\PP)\rightarrow (E,\mathcal{E}) \ \text{VA}
+\EE[X] \coloneqq \int_{\Omega } Xd\PP ,\ \ \ \ X:(\Omega,\Ac,\PP)\rightarrow (E,\mathcal{E}) \ \text{VA}
 \end{equation*}
 Se $X$ è una VA discreta con densità $p_{X} :S\rightarrow [0,1]$, allora
 \begin{equation*}
@@ -1079,11 +1079,11 @@ X\sim \mathcal{G}(p) \ \ \ \ \text{i.e.} \ \ \ \ \PP(X=k) =p(1-p)^{k-1} =:\tilde
 
 \textbf{Spazio di probabilità discreto:}
 
-$(\Omega ,\Ac ,\PP)$ con $\Omega =\NN ,\Ac =2^{\NN}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
+$(\Omega,\Ac,\PP)$ con $\Omega =\NN ,\Ac =2^{\NN}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
 \begin{equation}
 \PP(k) =\tilde{p}(k) =p(1-p)^{k-1}
 \end{equation}
-Con questa scelta di $(\Omega ,\Ac ,\PP)$ si ha che $X(\cdotp) \coloneqq I(\cdotp)$
+Con questa scelta di $(\Omega,\Ac,\PP)$ si ha che $X(\cdotp) \coloneqq I(\cdotp)$
 \begin{align*}
 X:\left(\NN ,2^{\NN} ,\PP\right) & \rightarrow \NN\\
 \omega  & \rightarrow X(\omega) \coloneqq \omega ,\ \ \ \ X\sim \mathcal{G}(p)

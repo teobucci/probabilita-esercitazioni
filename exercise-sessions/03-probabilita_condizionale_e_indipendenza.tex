@@ -3,7 +3,7 @@
 \ParteEsercizi
 
 \begin{definition}
-	Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità. Siano $A,B\in \Ac$ con $\PP(B)  >0$. Si definisce \textbf{probabilità condizionata} di $A$ dato $B$, $\PP(A\mid B)$, la quantità
+	Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Siano $A,B\in \Ac$ con $\PP(B)  >0$. Si definisce \textbf{probabilità condizionata} di $A$ dato $B$, $\PP(A\mid B)$, la quantità
 	\begin{equation*}
 		\PP(A\mid B) =\frac{\PP(A\cap B)}{\PP(B)}
 	\end{equation*}
@@ -26,7 +26,7 @@ Siano $A,B\in \Ac$ e sia $\{E_{n}\}_{n\in \NN} \subseteq \Ac$ una partizione dis
 	\item $A\Bot B\iff A\Bot B\comp \iff A\comp \Bot B\iff A\comp \Bot B\comp$.
 \end{enumerate}
 \begin{definition}
-	Sia $(\Omega ,\Ac ,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
+	Sia $(\Omega,\Ac,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
 	\begin{equation*}
 		\PP\left(\bigcap_{i\in I} A_{i}\right) =\prod_{i\in J}\PP(A_{i})
 	\end{equation*}
@@ -177,7 +177,7 @@ e sia $\PP$ tale che $\{E_{k}\}_{k\in \NN}$ risulti una famiglia di eventi indip
 	\item Gli eventi "solo insuccessi dalla settima prova alla decima" e "$1$ successo nelle prime $10$ prove" sono indipendenti?
 	\item Gli eventi "solo insuccessi dalla settima prova alla decima" e "$1$ successo nelle prime $5$ prove" sono indipendenti?
 \end{enumerate}
-Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $(\Omega ,\Ac ,\PP)$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n}$ indipendenti e tali che $\PP(E_{n}) =p$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$? Si motivi adeguatamente la risposta.
+Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $(\Omega,\Ac,\PP)$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n}$ indipendenti e tali che $\PP(E_{n}) =p$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$? Si motivi adeguatamente la risposta.
 
 \Esercizio{fatto}
 
@@ -462,7 +462,7 @@ Consideriamo l'evento
 	\end{equation*}
 	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:
 	\begin{theorem}
-		Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità. Si $A\in \Ac$ e $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $, allora
+		Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Si $A\in \Ac$ e $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $, allora
 		\begin{equation*}
 			\PP(A) =\sum\limits_{k\in \NN}\PP(A\mid E_{k})\PP(E_{k})
 		\end{equation*}
@@ -693,7 +693,7 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 	\end{equation*}
 	ovvero la probabilità che il pacco scelto inizialmente contenga il premio, sapendo che il conduttore ha aperto il pacco di destra. Per calcolarla usiamo la formula di Bayes.
 	\begin{theorem}
-		Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità. Siano $A\in \Ac$, $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $. Se $\PP(A) ,\PP(E_{k})  >0,\forall k\in \NN$, allora
+		Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Siano $A\in \Ac$, $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $. Se $\PP(A) ,\PP(E_{k})  >0,\forall k\in \NN$, allora
 		\begin{equation*}
 			\PP(E_{k} \mid A) =\frac{\PP(A\mid E_{k})\PP(E_{k})}{\sum_{k}\PP(A\mid E_{k})\PP(E_{k})}
 		\end{equation*}
