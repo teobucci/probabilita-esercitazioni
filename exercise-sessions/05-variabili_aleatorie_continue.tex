@@ -4,11 +4,11 @@
 \ParteEsercizi
 \Esercizio{}
 
-Si consideri lo spazio di probabilità $( \Omega ,\mathcal{A} ,\PP) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m( B\cap ( 0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $( 0,1)$ nel modo seguente:
+Si consideri lo spazio di probabilità $(\Omega ,\mathcal{A} ,\PP) =(\mathbb{R} ,\mathcal{B} ,m_{0,1})$, dove $m_{0,1} =m(B\cap (0,1]) ,\forall B\in \mathcal{B}$, ed $m$ è la misura di Lebesgue sui boreliani. Si considerino inoltre le funzioni $X,Y,Z:\Omega =\mathbb{R}\rightarrow \mathbb{R}$ definite sull'intervallo $(0,1)$ nel modo seguente:
 \begin{equation*}
-X( \omega ) =\frac{1}{\omega } ,\ \ \ \ Y( \omega ) =\frac{1}{\sqrt{\omega }} ,\ \ \ \ Z( \omega ) =\log \omega ,
+X(\omega) =\frac{1}{\omega } ,\ \ \ \ Y(\omega) =\frac{1}{\sqrt{\omega }} ,\ \ \ \ Z(\omega) =\log \omega ,
 \end{equation*}
-per ogni $\omega \in ( 0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathbb{R} \setminus ( 0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
+per ogni $\omega \in (0,1)$. Per quanto riguarda il valore di $X,Y,Z$ su $\mathbb{R} \setminus (0,1)$, si sa solamente che $X,Y,Z$ sono costanti su tale insieme.
 \begin{enumerate}
 \item Mostrare che $X$, $Y$ e $Z$ sono variabili aleatorie ben definite q.c.
 \item Determinare le distribuzioni di $X$, $Y$ e $Z$, mostrando in particolare che si tratta di variabili aleatorie continue.
@@ -23,70 +23,70 @@ Data una variabile aleatoria reale continua $X$ con densità $f$ simmetrica risp
 si mostri che
 \begin{enumerate}
 \item $\mu $ è una mediana,
-\item Se $\EE[| X| ] < +\infty $, allora $\mu =\EE[ X]$.
+\item Se $\EE[|X|] < +\infty $, allora $\mu =\EE[X]$.
 \end{enumerate}
 \Esercizio{(Distribuzione di Cauchy)}
 
 Data una variabile aleatoria di Cauchy $X$, con densità
 \begin{equation*}
-f( x) =\frac{1}{\pi \left( 1+( x-\alpha )^{2}\right)} ,\ \ \ \ \alpha \in \mathbb{R} ,
+f(x) =\frac{1}{\pi \left(1+(x-\alpha)^{2}\right)} ,\ \ \ \ \alpha \in \mathbb{R} ,
 \end{equation*}
 si calcolino:
 \begin{enumerate}
 \item la mediana,
-\item $\EE[ X]$,
-\item $\EE\left[ X^{2}\right]$.
+\item $\EE[X]$,
+\item $\EE\left[X^{2}\right]$.
 \end{enumerate}
 \Esercizio{$\star$}
 
 Data $X$ variabile aleatoria positiva e continua, denotata con $F$ la sua funzione di \ ripartizione, si mostri che
 \begin{equation*}
-\EE[ X] =\int _{0}^{+\infty }( 1-F( x)) dx.
+\EE[X] =\int _{0}^{+\infty }(1-F(x)) dx.
 \end{equation*}
 \Esercizio{(Distribuzione esponenziale)}
 
-Si consideri $X\sim \mathcal{E}( \lambda )$, variabile esponenziale di parametro $\lambda  >0$, quindi con densità
+Si consideri $X\sim \mathcal{E}(\lambda)$, variabile esponenziale di parametro $\lambda  >0$, quindi con densità
 
 
 \begin{equation*}
-f( x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty )}( x) ,\ \ \ \ x\in \mathbb{R} .
+f(x) =\lambda e^{-\lambda x} \Ind_{[ 0,+\infty)}(x) ,\ \ \ \ x\in \mathbb{R} .
 \end{equation*}
 \begin{enumerate}
 \item Calcolare la moda di $X$.
-\item Calcolare il valore atteso $\EE[ X]$ e la varianza $\mathrm{Var}( X)$.
+\item Calcolare il valore atteso $\EE[X]$ e la varianza $\mathrm{Var}(X)$.
 \item Calcolare la funzione di ripartizione $F_{X}$ di $X$.
-\item (Proprietà di assenza di memoria) Mostrare che $\PP( X >s+t \mid X >s) =\PP( X >t)$ per ogni $s,t >0$.
-\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\PP( T >s+t\mid T >s) =\PP( T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}( \nu )$ con $\nu =-\log(\PP( T >1))$.
+\item (Proprietà di assenza di memoria) Mostrare che $\PP(X >s+t \mid X >s) =\PP(X >t)$ per ogni $s,t >0$.
+\item * Si inverta il risultato appena ottenuto: se $T$ è una variabile aleatoria reale strettamente positiva tale che $\PP(T >s+t\mid T >s) =\PP(T >t)$ per ogni $s,t >0$, allora $T\sim \mathcal{E}(\nu)$ con $\nu =-\log(\PP(T >1))$.
 \end{enumerate}
 \Esercizio{(Distribuzione Gamma)}
 
-Si consideri $X\sim \Gamma ( \alpha ,\lambda )$, variabile aleatoria di distribuzione Gamma di parametri $\alpha  >0$ e $\lambda  >0$. Si ha quindi
+Si consideri $X\sim \Gamma (\alpha ,\lambda)$, variabile aleatoria di distribuzione Gamma di parametri $\alpha  >0$ e $\lambda  >0$. Si ha quindi
 \begin{equation*}
-f( x) =\frac{\lambda ^{\alpha }}{\Gamma ( \alpha )} x^{\alpha -1} e^{-\lambda x} \Ind_{( 0,+\infty )}( x) ,
+f(x) =\frac{\lambda ^{\alpha }}{\Gamma (\alpha)} x^{\alpha -1} e^{-\lambda x} \Ind_{(0,+\infty)}(x) ,
 \end{equation*}
 dove $\Gamma $ è la funzione Gamma (di Eulero) definita da
 \begin{equation*}
-\Gamma ( \alpha ) \coloneqq \int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
+\Gamma (\alpha) \coloneqq \int _{0}^{+\infty } t^{\alpha -1} e^{-t} dt,\ \ \ \ \forall \alpha  >0.
 \end{equation*}
 Si ricordi che
 \begin{equation*}
-\Gamma ( \alpha +1) =\alpha \Gamma ( \alpha ) ,\ \ \ \ \forall \alpha  >0,\ \ \ \ \ \ \ \ \ \ \ \ \Gamma ( 1) =1,
+\Gamma (\alpha +1) =\alpha \Gamma (\alpha) ,\ \ \ \ \forall \alpha  >0,\ \ \ \ \ \ \ \ \ \ \ \ \Gamma (1) =1,
 \end{equation*}
-da cui $\Gamma ( n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma ( 1/2) =\sqrt{\pi }$.
+da cui $\Gamma (n+1) =n!,\ \forall n\in \mathbb{N}$. Infine $\Gamma (1/2) =\sqrt{\pi }$.
 \begin{enumerate}
 \item Si verifichi che $f$ è una densità di probabilità.
 \item Si calcolino le mode di $f$.
-\item Si calcolino i momenti $\EE\left[ X^{k}\right] ,\ k\in \mathbb{Z} ,\ \alpha +k >0$, e la varianza $\mathrm{Var}( X)$.
-\item Dato $c >0$, si mostri che $Y=cX\sim \Gamma ( \alpha ,\lambda /c)$.
-\item Per $\alpha =n/2,\ n\in \mathbb{N}$, si determini la relazione fra i punti percentuali di una $\Gamma \left(\frac{n}{2} ,\lambda \right)$ e quelli di una $\chi ^{2}( n) =\Gamma \left(\frac{n}{2} ,\frac{1}{2}\right)$.
+\item Si calcolino i momenti $\EE\left[X^{k}\right] ,\ k\in \mathbb{Z} ,\ \alpha +k >0$, e la varianza $\mathrm{Var}(X)$.
+\item Dato $c >0$, si mostri che $Y=cX\sim \Gamma (\alpha ,\lambda /c)$.
+\item Per $\alpha =n/2,\ n\in \mathbb{N}$, si determini la relazione fra i punti percentuali di una $\Gamma \left(\frac{n}{2} ,\lambda \right)$ e quelli di una $\chi ^{2}(n) =\Gamma \left(\frac{n}{2} ,\frac{1}{2}\right)$.
 \item Per $\alpha =n\in \mathbb{N}$, si mostri che la funzione di ripartizione di $X$ è data da
 \end{enumerate}
 \begin{equation*}
-F( t) =\left( 1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{( \lambda t)^{k}}{k!}\right) \Ind_{( 0,+\infty )}( t) .
+F(t) =\left(1-\sum\limits _{k=0}^{n-1} e^{-\lambda t}\frac{(\lambda t)^{k}}{k!}\right) \Ind_{(0,+\infty)}(t) .
 \end{equation*}
 \Esercizio{(Distribuzione normale o gaussiana)}
 
-Sia $X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right)$.
+Sia $X\sim \mathcal{N}\left(\mu ,\sigma ^{2}\right)$.
 \begin{enumerate}
 \item Si calcolino media e varianza di $X$.
 \item Si esprimano i punti percentuali $c_{\alpha }$ di $X$ in funzione di quelli di una normale standard.
@@ -94,15 +94,15 @@ Sia $X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right)$.
 
 Si consideri $Y$ di \textit{legge lognormale} di parametri $\mu $ e $\sigma ^{2}$, ovvero $Y=e^{X}$.
 \begin{enumerate}
-\item Calcolare la distribuzione della variabile aleatoria $Y$, i momenti (ossia $\EE[ Y_{k}] ,k\in \mathbb{Z}$) e la varianza.
-\item Si calcoli $\EE\left[ Xe^{X}\right]$.
+\item Calcolare la distribuzione della variabile aleatoria $Y$, i momenti (ossia $\EE[Y_{k}] ,k\in \mathbb{Z}$) e la varianza.
+\item Si calcoli $\EE\left[Xe^{X}\right]$.
 \end{enumerate}
 
-Si consideri $Z$ di \textit{legge normale standard}, ossia $Z\sim \mathcal{N}( 0,1)$.
+Si consideri $Z$ di \textit{legge normale standard}, ossia $Z\sim \mathcal{N}(0,1)$.
 \begin{enumerate}
 \item Calcolare la distribuzione della variabile aleatoria $Z^{2}$.
 \item Calcolare la legge della variabile aleatoria $| Z| $, il valore atteso, la varianza e i quantili.
-\item Si calcoli $\EE\left[ Z^{4}\right]$ e $\EE\left[ e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
+\item Si calcoli $\EE\left[Z^{4}\right]$ e $\EE\left[e^{tZ^{2}}\right] ,t\in \mathbb{R}$.
 \end{enumerate}
 \Esercizio{}
 
@@ -110,22 +110,22 @@ Sia $X$ una variabile aleatoria con funzione di ripartizione $F$.
 \begin{enumerate}
 \item Si calcoli la legge di $Y=| X| $.
 \item Nel caso in cui $F$ ammetta derivata continua, si mostri che $Y=| X| $ è continua e se ne calcoli la densità.
-\item Nel caso $X\sim \mathcal{N}( 0,1)$, si confronti il risultato ottenuto nei punti $( 1)$ e $( 2)$ con quanto trovato nel punto $( 6)$ dell'esercizio $7$.
+\item Nel caso $X\sim \mathcal{N}(0,1)$, si confronti il risultato ottenuto nei punti $(1)$ e $(2)$ con quanto trovato nel punto $(6)$ dell'esercizio $7$.
 \end{enumerate}
 \Esercizio{}
 \begin{enumerate}
-\item Dati $U\sim U(( 0,1))$ e $\lambda  >0$, si mostri che $X=-\frac{1}{\lambda }\log U\sim \mathcal{E}( \lambda )$.
-\item Data $X\sim F$ con $F$ invertibile, si mostri che $Y=F( X) \sim U(( 0,1))$.
-\item Date $U\sim U(( 0,1))$ e una funzione di ripartizione $F$ invertibile, si mostri che $X=F^{-1}( U) \sim F$.
-\item * Data $X\sim F$, con $F$ continua, si mostri che $Y=F( X) \sim U(( 0,1))$. [Suggerimento: sia $t\in \left( 0,1\right)$ e $G\left( t\right) =\inf\left\{x:F\left( x\right) \geq t\right\}$. Utilizzando la continuità di $F$, si mostri che $F\left( G\left( t\right)\right) =t$. Si noti infine che $F\left( x\right) \geq t\iff x\geq G\left( t\right)$.]
-\item * Date $U\sim U\left(\left( 0,1\right)\right)$ e una funzione di ripartizione $F$ continua, definita $G\left( t\right) =\inf\left\{x:F\left( x\right) \geq t\right\}$, si mostri che $X=G\left( U\right)$ è una variabile aleatoria di legge $F$.
-\item * Date $U\sim U(( 0,1))$ e una distribuzione discreta $P_{0}$ su $\left(\mathbb{R} ,\mathcal{B}\right)$, si trovi una trasformazione misurabile $G$ tale che $X=G\left( U\right) \sim P_{0}$.
+\item Dati $U\sim U((0,1))$ e $\lambda  >0$, si mostri che $X=-\frac{1}{\lambda }\log U\sim \mathcal{E}(\lambda)$.
+\item Data $X\sim F$ con $F$ invertibile, si mostri che $Y=F(X) \sim U((0,1))$.
+\item Date $U\sim U((0,1))$ e una funzione di ripartizione $F$ invertibile, si mostri che $X=F^{-1}(U) \sim F$.
+\item * Data $X\sim F$, con $F$ continua, si mostri che $Y=F(X) \sim U((0,1))$. [Suggerimento: sia $t\in \left(0,1\right)$ e $G\left(t\right) =\inf\left\{x:F\left(x\right) \geq t\right\}$. Utilizzando la continuità di $F$, si mostri che $F\left(G\left(t\right)\right) =t$. Si noti infine che $F\left(x\right) \geq t\iff x\geq G\left(t\right)$.]
+\item * Date $U\sim U\left(\left(0,1\right)\right)$ e una funzione di ripartizione $F$ continua, definita $G\left(t\right) =\inf\left\{x:F\left(x\right) \geq t\right\}$, si mostri che $X=G\left(U\right)$ è una variabile aleatoria di legge $F$.
+\item * Date $U\sim U((0,1))$ e una distribuzione discreta $P_{0}$ su $\left(\mathbb{R} ,\mathcal{B}\right)$, si trovi una trasformazione misurabile $G$ tale che $X=G\left(U\right) \sim P_{0}$.
 \end{enumerate}
 \subsubsection{}
 \begin{enumerate}
 \item Allora
 \begin{equation*}
-U\sim U\left(\left( 0,1\right)\right) \implies F_{U}\left( x\right) =\begin{cases}
+U\sim U\left(\left(0,1\right)\right) \implies F_{U}\left(x\right) =\begin{cases}
 0, & x< 0\\
 x, & 0\leq x< 1\\
 1, & x\geq 1
@@ -134,9 +134,9 @@ x, & 0\leq x< 1\\
 
 a partire da questa ci troviamo
 \begin{gather*}
-F_{X}\left( t\right) \coloneqq \PP\left( X\leq t\right) =\PP\left( -\frac{1}{\lambda }\log U\leq t\right)\\
+F_{X}\left(t\right) \coloneqq \PP\left(X\leq t\right) =\PP\left(-\frac{1}{\lambda }\log U\leq t\right)\\
 -\frac{1}{\lambda }\log U\leq t\iff \log U\geq -\lambda t\iff U\geq e^{-\lambda t}\\
-=\PP\left( U\geq e^{-\lambda t}\right) =1-\underbrace{\PP\left( U< e^{-\lambda t}\right)}_{F_{U}\left( e^{-\lambda t}\right)} =\\
+=\PP\left(U\geq e^{-\lambda t}\right) =1-\underbrace{\PP\left(U< e^{-\lambda t}\right)}_{F_{U}\left(e^{-\lambda t}\right)} =\\
 =1-\begin{cases}
 0, & e^{-\lambda t} < 0\ MAI\\
 e^{-\lambda t} , & 0\leq e^{-\lambda t} < 1\iff t >0\\
@@ -146,42 +146,42 @@ e^{-\lambda t} , & 0\leq e^{-\lambda t} < 1\iff t >0\\
 1-e^{-\lambda t} , & t >0\\
 0, & t\leq 0
 \end{cases}
-=\left( 1-e^{-\lambda t}\right) \Ind_{\left( 0,+\infty \right)}\left( t\right)
+=\left(1-e^{-\lambda t}\right) \Ind_{\left(0,+\infty \right)}\left(t\right)
 \end{gather*}
 
-Quindi se $U\sim U\left(\left( 0,1\right)\right)$ e $X=-\frac{1}{\lambda }\log U$ allora $F_{X}\left( t\right) =\left( 1-e^{-\lambda t}\right) \Ind_{\left( 0,+\infty \right)}\left( t\right)$, che è la funzione di ripartizione di un'esponenziale, ovvero $X\sim \mathcal{E}\left( \lambda \right)$.
+Quindi se $U\sim U\left(\left(0,1\right)\right)$ e $X=-\frac{1}{\lambda }\log U$ allora $F_{X}\left(t\right) =\left(1-e^{-\lambda t}\right) \Ind_{\left(0,+\infty \right)}\left(t\right)$, che è la funzione di ripartizione di un'esponenziale, ovvero $X\sim \mathcal{E}\left(\lambda \right)$.
 
 A partire dalla distribuzione uniforme si può ottenere qualunque altra distribuzione.
 \item 
 \end{enumerate}
 \Esercizio{}
 
-Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left( 0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
+Data una variabile aleatoria continua, non negativa $X$, con densità di probabilità $f_{X}$ continua su $\left(0,+\infty \right)$, definiamo "tasso di fallimento" la funzione
 \begin{equation*}
-h_{X}( t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\PP( t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
+h_{X}(t) =\lim _{\varepsilon \rightarrow 0^{+}}\frac{\PP(t< X< t+\varepsilon \mid X >t)}{\varepsilon } ,\ \ \ \ t >0.
 \end{equation*}
 Interpretando $X$ come un tempo di attesa, il tasso di fallimento rappresenta la probabilità istantanea di arrivo, sapendo che l'attesa è durata fino al tempo $t$.
 \begin{enumerate}
 \item Dimostrare che vale la seguente relazione:\begin{equation*}
-h_{X}( t) =\frac{f_{X}( t)}{1-F_{X}( t)} ,\ \ \ \ t >0,
+h_{X}(t) =\frac{f_{X}(t)}{1-F_{X}(t)} ,\ \ \ \ t >0,
 \end{equation*}
 
 dove $F_{X}$ indica la funzione di ripartizione di $X$.
-\item Dimostrare che $F_{X}( t) =\left( 1-\exp\left( -\int _{0}^{t} h_{X}( s) ds\right)\right) \Ind_{( 0,+\infty )}( t)$.
+\item Dimostrare che $F_{X}(t) =\left(1-\exp\left(-\int _{0}^{t} h_{X}(s) ds\right)\right) \Ind_{(0,+\infty)}(t)$.
 \item Si prenda $X$ con legge esponenziale di parametro $\lambda $. Determinare $h_{X}$.
 \item Si prenda $Y$ con legge Weibull di parametri $\alpha  >0$ e $\lambda  >0$, vale a dire
 \begin{equation*}
-f_{Y}( t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-( \lambda t)^{\alpha }} \Ind_{( 0,+\infty )}( t) .
+f_{Y}(t) =\alpha \lambda ^{\alpha } t^{\alpha -1} e^{-(\lambda t)^{\alpha }} \Ind_{(0,+\infty)}(t) .
 \end{equation*}
 
 Determinare $F_{Y}$ e $h_{Y}$.
-\item Discutere il significato dei risultati ottenuti nei punti $( 3)$ e $( 4)$ e il loro legame.
+\item Discutere il significato dei risultati ottenuti nei punti $(3)$ e $(4)$ e il loro legame.
 \end{enumerate}
 \Esercizio{}
 
 Il raggio $R$ di un certo tipo di particella inquinante, espresso in micron, è una variabile aleatoria con densità di probabilità
 \begin{equation*}
-f( x) =\begin{cases}
+f(x) =\begin{cases}
 c\ x\ e^{-x^{2}} , & \text{per} \ x >0,\\
 0, & \text{per} \ x\leq 0.
 \end{cases}
@@ -199,7 +199,7 @@ c\ x\ e^{-x^{2}} , & \text{per} \ x >0,\\
 
 Sia $X$ una variabile aleatoria non negativa con densità di probabilità
 \begin{equation*}
-f_{X}( x) =\begin{cases}
+f_{X}(x) =\begin{cases}
 \frac{2x}{\lambda } e^{-x^{2} /\lambda } , & \text{per} \ x\geq 0,\\
 0, & \text{per} \ x< 0.
 \end{cases}
@@ -216,41 +216,41 @@ f_{X}( x) =\begin{cases}
 
 Si consideri $X$ variabile aleatoria di densità:
 \begin{equation*}
-f_{X}\left( x\right) =\begin{cases}
-\lambda \ e^{-\left( x-\lambda \right)} , & x >\lambda ,\\
+f_{X}\left(x\right) =\begin{cases}
+\lambda \ e^{-\left(x-\lambda \right)} , & x >\lambda ,\\
 0, & x\leq \lambda .
 \end{cases}
 \end{equation*}
 \begin{enumerate}
 \item Determinare il valore della costante reale $\lambda $ e calcolare la funzione di ripartizione.
-\item Posta $Y=e^{X}$, si determini la distribuzione di $Y$, e si calcolino $\EE\left[ Y\right]$ e $\EE\left[ Y^{2}\right]$.
-\item Si calcolino $\PP\left( X >3\right)$ e $\PP\left( X^{3}  >27\right)$.
+\item Posta $Y=e^{X}$, si determini la distribuzione di $Y$, e si calcolino $\EE\left[Y\right]$ e $\EE\left[Y^{2}\right]$.
+\item Si calcolino $\PP\left(X >3\right)$ e $\PP\left(X^{3}  >27\right)$.
 \item Si calcoli la media di $3X^{2} -1$.
 \item Stimare la probabilità che $X$ assuma valori distanti dalla media più di $2$ unità, utilizzando la disuguaglianza di Chebychev.
-\item Stabilire per quali $\alpha ,\beta \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left( X-1\right)^{\beta }} \in L^{1}$.
+\item Stabilire per quali $\alpha ,\beta \in \mathbb{R}$ si ha che $Y=X^{\alpha } \in L^{1}$ e $Z=\frac{1}{\left(X-1\right)^{\beta }} \in L^{1}$.
 \end{enumerate}
 \Esercizio{}
 
-Siano $X\sim U\left(\left( 0,1\right)\right)$ e $Y\sim \Gamma \left( \alpha ,\lambda \right) ,\alpha ,\lambda  >0$.
+Siano $X\sim U\left(\left(0,1\right)\right)$ e $Y\sim \Gamma \left(\alpha ,\lambda \right) ,\alpha ,\lambda  >0$.
 \begin{enumerate}
-\item Si stabilisca per quali $\beta \in \mathbb{R}$ la variabile aleatoria $Z=\frac{1}{\ \left( 1-X\right)^{\beta }} \in L^{1}$.
+\item Si stabilisca per quali $\beta \in \mathbb{R}$ la variabile aleatoria $Z=\frac{1}{\ \left(1-X\right)^{\beta }} \in L^{1}$.
 \item Si determini, al variare dei parametri $\alpha $, $\lambda $, per quali $\gamma \in \mathbb{R}$ la variabile aleatoria $W=Y^{\gamma } \in L^{1}$.
 
-Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel punto $\left( 3\right)$ dell'esercizio $6$.
+Si confronti questo risultato con la condizione imposta su $\alpha $ e $k$ nel punto $\left(3\right)$ dell'esercizio $6$.
 \end{enumerate}
 \Esercizio{}
 
 \textit{Ricavo di un'opzione "call" europea.} Un agente finanziario sottoscrive un contratto che gli dà il diritto (ma non l'obbligo) di acquistare un certo titolo ad una data futura fissata, ad un prezzo $k >0$ anch'esso fissato. Detto $S$ il valore di tale titolo alla data fissata, esso è al momento sconosciuto, ma si ritiene che i suoi possibili valori abbiano distribuzione lognormale, ovvero che siano dati da
 \begin{equation*}
-S=\exp X,\ \ \ \ X\sim \mathcal{N}\left( \mu ,\sigma ^{2}\right) ,\ \ \ \ \mu \in \mathbb{R} ,\sigma  >0.
+S=\exp X,\ \ \ \ X\sim \mathcal{N}\left(\mu ,\sigma ^{2}\right) ,\ \ \ \ \mu \in \mathbb{R} ,\sigma  >0.
 \end{equation*}
 Se il valore $S$ supererà $k$, l'agente eserciterà il suo diritto ricavando la differenza $S-k$, altrimenti non lo eserciterà e avrà ricavo nullo. Sia quindi $R$ il ricavo dell'agente.
 \begin{enumerate}
-\item Calcolare la probabilità di un ricavo positivo, $\PP\left( R >0\right)$.
-\item Calcolare la probabilità di un ricavo nullo, $\PP\left( R=0\right)$.
+\item Calcolare la probabilità di un ricavo positivo, $\PP\left(R >0\right)$.
+\item Calcolare la probabilità di un ricavo nullo, $\PP\left(R=0\right)$.
 \item Calcolare la legge del ricavo $R$. Si tratta di una variabile aleatoria continua? Discreta? Perché?
-\item Calcolare il ricavo atteso $\EE[ R]$.
-\item Calcolare $\lim\limits _{k\rightarrow 0}\EE[ R]$.
+\item Calcolare il ricavo atteso $\EE[R]$.
+\item Calcolare $\lim\limits _{k\rightarrow 0}\EE[R]$.
 \end{enumerate}
 \Esercizio{}
 
@@ -273,33 +273,33 @@ Un'industria produce su commissione delle sbarre d'acciaio cilindriche, il cui d
 \end{enumerate}
 \Esercizio{}
 
-Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità fissato. Data una variabile aleatoria reale continua $X$, si mostri che
+Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità fissato. Data una variabile aleatoria reale continua $X$, si mostri che
 \begin{enumerate}
 \item $\{X\in \mathbb{Q}\}$ è un evento, ossia $\{X\in \mathbb{Q}\} \in \mathcal{A}$,
-\item $\PP( X\in \mathbb{Q}) =0$.
+\item $\PP(X\in \mathbb{Q}) =0$.
 \end{enumerate}
 \Esercizio{}
 
 Si mostri che, se $X$ è una variabile aleatoria continua, la variabile aleatoria $W=\min\{X,1\}$ può essere continua o no, a seconda della legge di $X$.
 \Esercizio{}
 
-Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge di $Y\ =aX+b$ per $a\neq 0$. In particolare si riconosca la legge di $Y$ per $X$ di legge $\mathcal{N}\left( \mu ,\sigma ^{2}\right)$, $U([ c,d])$, $\mathcal{E}( \lambda )$.
+Data $X$ variabile aleatoria continua di densità $f_{X}$, si determini la legge di $Y\ =aX+b$ per $a\neq 0$. In particolare si riconosca la legge di $Y$ per $X$ di legge $\mathcal{N}\left(\mu ,\sigma ^{2}\right)$, $U([c,d])$, $\mathcal{E}(\lambda)$.
 \Esercizio{}
 
-Data una variabile aleatoria $X\sim U([ -2,-1] \cup [ 1,2])$, calcolarne densità di probabilità $f$, mediane $m$ e, se esiste, media $\mu $.
+Data una variabile aleatoria $X\sim U([-2,-1] \cup [1,2])$, calcolarne densità di probabilità $f$, mediane $m$ e, se esiste, media $\mu $.
 \Esercizio{$\star$}
 
-Data una variabile aleatoria $X\sim U(( 0,2\pi ))$ e un angolo fissato $\vartheta \in \mathbb{R}$, si calcoli la legge di $Y=\sin( X+\vartheta )$.
+Data una variabile aleatoria $X\sim U((0,2\pi))$ e un angolo fissato $\vartheta \in \mathbb{R}$, si calcoli la legge di $Y=\sin(X+\vartheta)$.
 \Esercizio{}
 
-Data $X\sim \mathcal{E}( \lambda )$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
+Data $X\sim \mathcal{E}(\lambda)$, $\lambda  >0$, se ne consideri il suo arrotondamento per eccesso $Y$, ovvero
 \begin{equation*}
-Y=\sum\limits _{k=1}^{\ +\infty } k\Ind_{( k-1,k]}( X) =\lceil X\rceil .
+Y=\sum\limits _{k=1}^{\ +\infty } k\Ind_{(k-1,k]}(X) =\lceil X\rceil .
 \end{equation*}
 Se quindi $X$ rappresenta un tempo d'attesa, $Y$ rappresenta il corrispondente tempo d'attesa per un osservatore stroboscopico. Si mostri che $Y$ è una variabile aleatoria e se ne calcoli la distribuzione.
 \Esercizio{}
 
-Data $X\sim \mathcal{N}( 2,5)$, mostrare che esiste un unico $c$ tale che $\PP(| X| < c) =0.4$. Trovare un valore approssimato di $c$ con metodi di analisi numerica.
+Data $X\sim \mathcal{N}(2,5)$, mostrare che esiste un unico $c$ tale che $\PP(| X| < c) =0.4$. Trovare un valore approssimato di $c$ con metodi di analisi numerica.
 \Esercizio{}
 
 Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un tempo casuale $X$, che si può considerare una variabile aleatoria con legge esponenziale di media $10$ minuti.
@@ -312,7 +312,7 @@ Aldo possiede un vecchio cronometro che, una volta avviato, si arresta dopo un t
 
 Data la funzione $f:\mathbb{R}\rightarrow \mathbb{R}$ definita come
 \begin{equation*}
-f( x) \coloneqq \begin{cases}
+f(x) \coloneqq \begin{cases}
 0 & x< 0\\
 \frac{1}{2} & 0\leq x< \frac{1}{2}\\
 2x-1 & \frac{1}{2} \leq x< 1\\
