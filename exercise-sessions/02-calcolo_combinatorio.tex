@@ -425,7 +425,7 @@ Dato che le persone sono selezionate in modo casuale possiamo considerare una di
 	\begin{equation*}
 		\begin{array}{ l }
 			\PP(A) =\PP\left(\Omega -A\comp\right) =1-\PP\left(A\comp\right)\\
-			A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
+			A\comp =\event{tutte le persone sono nate in giorni diverse}\\
 			A\comp =\{\omega =(\omega_{1} ,\dots ,\omega_{n}) :\omega_{i} \neq \omega_{j} \ \forall i\neq j\}\\
 			\left| A\comp\right| =365\cdot 364\cdots (365-n+1) =\frac{365!}{(365-n) !}\\
 			\implies \PP\left(A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}(365-n) !}\\
@@ -437,7 +437,7 @@ Dato che le persone sono selezionate in modo casuale possiamo considerare una di
 	\begin{equation*}
 		\begin{array}{ l }
 			\PP(A) =\PP\left(\Omega -A\comp\right) =1-\PP\left(A\comp\right)\\
-			A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
+			A\comp =\event{nessuna persona compie gli anni il mio stesso giorno}\\
 			\left| A\comp\right| =364^{n}
 		\end{array}
 	\end{equation*}
@@ -781,7 +781,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 			| \Omega | =10\cdot 9\cdot 8\cdot 7=\frac{10!}{6!}
 		\end{equation*}
 
-		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $(3\cdot 2) \cdot (7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$ palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
+		Sia $A$ l'evento \event{$2$ palline rosse su $4$ estratte}. Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $(3\cdot 2) \cdot (7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$ palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
 
 		\begin{oss}
 			Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline, tenendo conto che $2$ rosse sono indistinguibili e $2$ blu sono indistinguibili.
@@ -801,7 +801,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 		\begin{equation*}
 			| \Omega | =\binom{10}{4}
 		\end{equation*}
-		Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo
+		Sia $A$ l'evento \event{$2$ palline rosse su $4$ estratte}. Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Abbiamo
 		\begin{gather*}
 			\binom{3}{2} \ \text{modi di scegliere le palline rosse}\\
 			\binom{7}{2} \ \text{modi di scegliere le palline blu}\\
@@ -841,7 +841,7 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 	\Omega =\{\omega \subset \{1,\dots ,52\} \ |\ | \omega | =5\} ,\ \ \ \ | \Omega | =\binom{52}{5}
 \end{equation*}
 \begin{enumerate}
-	\item Sia $A$ l'evento "esce un full" (esempio di full: $3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit $)\begin{equation*}
+	\item Sia $A$ l'evento \event{esce un full} (esempio di full: $3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit $)\begin{equation*}
 	| A| =13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}
 	\end{equation*}
 	\begin{enumerate}
@@ -858,7 +858,7 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 			\implies \PP(A) =\frac{| A| }{| \Omega | } =\frac{13\cdot \binom{4}{3} \cdot 12\cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.0014
 		\end{equation*}
 	\end{enumerate}
-	\item Sia $B$ l'evento "esce una doppia coppia" (esempio di doppia coppia: $3\varheartsuit \ 3\vardiamondsuit \ 7\clubsuit \ 7\varheartsuit \ 11\spadesuit $)
+	\item Sia $B$ l'evento \event{esce una doppia coppia} (esempio di doppia coppia: $3\varheartsuit \ 3\vardiamondsuit \ 7\clubsuit \ 7\varheartsuit \ 11\spadesuit $)
 	\begin{equation*}
 		| B| =\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4
 	\end{equation*}
@@ -872,7 +872,7 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 			\implies \PP(B) =\frac{| B| }{| \Omega | } =\frac{\binom{13}{2}\binom{4}{2}\binom{4}{2} \cdot 11\cdot 4}{\binom{52}{5}} \approx 0.0475
 		\end{equation*}
 	\end{enumerate}
-	\item [punto e] Sia $C$ l'evento "esce una scala".
+	\item [punto e] Sia $C$ l'evento \event{esce una scala}.
 	\begin{gather*}
 		| C| =10\cdot 4^{5}\\
 		A\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ |\ J\ Q\ K
@@ -884,7 +884,7 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 			\implies \PP(C) =\frac{| C| }{| \Omega | } =\frac{10\cdot 4^{5}}{\binom{52}{5}}
 		\end{equation*}
 	\end{enumerate}
-	\item [punto h] Sia $D$ l'evento "esce un tris" (esempio di tris: $3\varheartsuit \ 3\vardiamondsuit \ 3\spadesuit \ 4\vardiamondsuit \ 5\varheartsuit $)
+	\item [punto h] Sia $D$ l'evento \event{esce un tris} (esempio di tris: $3\varheartsuit \ 3\vardiamondsuit \ 3\spadesuit \ 4\vardiamondsuit \ 5\varheartsuit $)
 	\begin{equation*}
 		| D| =13\cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4\cdot 4
 	\end{equation*}
