@@ -4,7 +4,7 @@
 
 Richiami
 
-VA: Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\mathcal{A})\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \mathcal{A}$.
+VA: Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\Ac)\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \Ac$.
 
 LEGGE: la legge di una variabile aleatoria reale $X$ è la misura di probabilità $P^{X}(B) =\PP(X\in B) =\PP\left(X^{-1}(B)\right) =\PP(\{\omega \in \Omega :X(\omega) \in B\})$, $\forall B\in \mathcal{B}$.
 \begin{oss}
@@ -160,7 +160,7 @@ p_{X}(x_{k}) =F_{X}(x_{k}) -F_{X}(x_{k-1}) ,\ \ \ \ \forall k\in I
 \begin{oss}
 $(3)$ e $(4)$ ci dicono che: se i punti di $S$ possono essere numerati in modo tale che $x_{h} < x_{k}$ per $h< k$, allora la funzione di ripartizione di una VA discreta è una funzione a gradini, che i gradini sono situati nei punti dell'insieme $S$ (i.e. $S$ è l'insieme dei punti di discontinuità di $F_{X}$) e che l'altezza del gradino corrispondente al punto $x_{k} \in S$ è proprio $p_{X}(x_{k})$ (i.e. $p_{X}$ è l'ampiezza dei salti della funzione di ripartizione $F_{X}$ nei punti di discontinuità).
 
-$(5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \mathcal{A}$ a partire dalla densità di probabilità $p_{X}$.
+$(5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \Ac$ a partire dalla densità di probabilità $p_{X}$.
 \end{oss}
 
 \Esercizio{fatto}
@@ -188,7 +188,7 @@ dove $0< p< 1$ è un parametro fissato. Si ricordi che la notazione $\Ind_{A}$ i
 
 \Esercizio{}
 
-Sia $\Omega =[0,1]$ e si consideri la $\sigma $-algebra di Borel $A=\mathcal{B}([0,1])$. Si definisca $\PP$ la probabilità uniforme su $(\Omega ,\mathcal{A})$, caratterizzata dalla proprietà:
+Sia $\Omega =[0,1]$ e si consideri la $\sigma $-algebra di Borel $A=\mathcal{B}([0,1])$. Si definisca $\PP$ la probabilità uniforme su $(\Omega ,\Ac)$, caratterizzata dalla proprietà:
 \begin{equation*}
 \PP((a,b]) =b-a,\ \text{per ogni} \ a< b,\ \text{con} \ a,b\in [0,1] .
 \end{equation*}
@@ -264,7 +264,7 @@ Sia dunque $X$ una variabile aleatoria discreta con funzione di ripartizione $F$
 
 \Esercizio{fatto}
 
-Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\NN}$, sia $\mathcal{A} =\sigma (E_{k} \ |\ k=1,2,\dots)$ con
+Consideriamo infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$. Sia quindi $\Omega =\{0,1\}^{\NN}$, sia $\Ac =\sigma (E_{k} \ |\ k=1,2,\dots)$ con
 \begin{equation*}
 E_{k} =\text{successo alla prova} \ k,
 \end{equation*}
@@ -282,7 +282,7 @@ X_{n} :\Omega \rightarrow \RR ,\ \ \ \ X_{n}(\omega) =\omega_{n} ,\ \ \ \ n\in \
 \item Si mostri che $V=\liminf\limits_{n} X_{n}$ e $U=\limsup\limits_{n} X_{n}$ sono variabili aleatorie discrete e se ne calcolino le leggi.
 \end{enumerate}
 
-Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $(\Omega ' ,\mathcal{A} ' ,\PP ')$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} ' $ indipendenti e tali che $\PP ' (E_{n} ') =p$, ed avessimo poi posto $X_{n} ' =\Ind_{E_{n} ' }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
+Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $(\Omega ' ,\Ac ' ,\PP ')$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n} ' $ indipendenti e tali che $\PP ' (E_{n} ') =p$, ed avessimo poi posto $X_{n} ' =\Ind_{E_{n} ' }$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$?
 
 \Esercizio{$\star$}
 
@@ -317,7 +317,7 @@ Si consideri $X\sim \mathcal{G}(p)$, variabile aleatoria geometrica di parametro
 \PP(X=k) =p(1-p)^{k-1} ,\ \ \ \ k\in \NN .
 \end{equation*}
 \begin{enumerate}
-\item Mostrare due diversi spazi $(\Omega ,\mathcal{A} ,\PP)$, uno discreto e uno continuo, su cui è possibile definire $X$.
+\item Mostrare due diversi spazi $(\Omega ,\Ac ,\PP)$, uno discreto e uno continuo, su cui è possibile definire $X$.
 \item Calcolare le mode di $X$.
 \item Calcolare la funzione di ripartizione $F$ di $X$.
 \item Calcolare il valore atteso $\EE[X]$.
@@ -428,9 +428,9 @@ sono VA reali. Secondo la definizione dobbiamo mostrare che
 \end{equation*}
 i.e. $X,Y$ sono misurabili.
 \begin{oss}
-Se $(\Omega ,\mathcal{A} ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \mathcal{A}$. Infatti
+Se $(\Omega ,\Ac ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \Ac$. Infatti
 \begin{equation*}
-\Ind_{A} :(\Omega ,\mathcal{A})\rightarrow \{0,1\} \subset \RR
+\Ind_{A} :(\Omega ,\Ac)\rightarrow \{0,1\} \subset \RR
 \end{equation*}
 e
 \begin{equation*}
@@ -438,7 +438,7 @@ e
 \Ind_{A}^{-1}\{0\} =A\comp\\
 \Ind_{A}^{-1}\{1\} =A
 \end{drcases}
-\ \in \mathcal{A} \iff A\in \mathcal{A}
+\ \in \Ac \iff A\in \Ac
 \end{equation*}
 \end{oss}
 
@@ -520,7 +520,7 @@ Quindi
 i.e. $X=Y$ q.c.
 \item
 \begin{theorem}
-Sia $X$ una VA reale definita su $(\Omega ,\mathcal{A} ,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
+Sia $X$ una VA reale definita su $(\Omega ,\Ac ,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
 \begin{equation*}
 \EE[|h(x)|] =\int_{\Omega }| h(X(\omega))| d\PP(\omega) < +\infty \ \ \iff \ \ \int_{\RR}| h(x)| P^{X}(dx) < +\infty 
 \end{equation*}
@@ -543,9 +543,9 @@ Abbiamo già calcolato la legge di $X$ e $Y$: $X\sim Y\sim B(p)$.
 Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
 \item Basta considerare l'identità (vedi esercizio $5$)
 \begin{gather*}
-\Omega '=\{0,1\} ,\ \ \ \ \mathcal{A} '=2^{\Omega '} ,\ \ \ \ \PP =P^{X} ,\ \ \ \ \tilde{X}(\omega) \coloneqq \omega \\
+\Omega '=\{0,1\} ,\ \ \ \ \Ac '=2^{\Omega '} ,\ \ \ \ \PP =P^{X} ,\ \ \ \ \tilde{X}(\omega) \coloneqq \omega \\
 \begin{aligned}
-\tilde{X} =I:(\Omega ',\mathcal{A} ') & \rightarrow (\Omega ',\mathcal{A} ')\\
+\tilde{X} =I:(\Omega ',\Ac ') & \rightarrow (\Omega ',\Ac ')\\
 \omega  & \mapsto \omega 
 \end{aligned}
 \end{gather*}
@@ -597,10 +597,10 @@ Questo ci dice che la VA $X_{n}$ rappresenta l'esito della $n$-esima prova, i.e.
 \item Sono funzioni a valori reali. In particolare $\forall n,\mathrm{Im}(X_{n}) =\{0,1\} \implies $ sono discrete. Resta da verificare che sono VA, ovvero che sono misurabili, i.e.
 \begin{gather*}
 \begin{aligned}
-X_{n}(\Omega ,\mathcal{A}) & \rightarrow (\RR ,\mathcal{B})\\
+X_{n}(\Omega ,\Ac) & \rightarrow (\RR ,\mathcal{B})\\
 \omega  & \mapsto X_{n}(\omega) =\omega_{n}
 \end{aligned}\\
-X_{n}^{-1}(B) \in \mathcal{A} ,\forall B\in \mathcal{B}
+X_{n}^{-1}(B) \in \Ac ,\forall B\in \mathcal{B}
 \end{gather*}
 
 Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$
@@ -622,7 +622,7 @@ Nell'ultimo passaggio bisogna ricordare che
 0, & \omega \notin E_{n}
 \end{cases}
 \end{equation*}
-Dato che $\emptyset ,E_{n}\comp ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
+Dato che $\emptyset ,E_{n}\comp ,\Omega \in \Ac$ abbiamo che $X_{n}$ è misurabile.
 
 \textit{Significato:} esito dell'$n$-esima prova, può essere successo o insuccesso.
 \item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta
@@ -790,7 +790,7 @@ In quegli esercizi abbiamo visto \textit{diversi possibili modi} in cui introdur
 
 Nell'Es. 1 abbiamo considerato uno spazio di probabilità continuo
 \begin{equation*}
-(\Omega ,\mathcal{A} ,\PP) =(\RR ,\mathcal{B} ,\PP_{\text{unif.}})
+(\Omega ,\Ac ,\PP) =(\RR ,\mathcal{B} ,\PP_{\text{unif.}})
 \end{equation*}
 Abbiamo introdotto le VA
 \begin{gather*}
@@ -805,7 +805,7 @@ Y:(\RR ,\mathcal{B} ,\PP_{\text{unif.}}) & \rightarrow (\RR ,\mathcal{B})\\
 \end{gather*}
 Negli Es. 5 e 1.c abbiamo considerato uno spazio di probabilità discreto
 \begin{gather*}
-(\Omega ,\mathcal{A} ,\PP) =\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right)\\
+(\Omega ,\Ac ,\PP) =\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right)\\
 \tilde{\PP}(\{0\}) =1-p,\ \ \ \ \tilde{\PP}(\{1\}) =p
 \end{gather*}
 Abbiamo introdotto la VA
@@ -847,7 +847,7 @@ Vamonos
 
 Richiami Teoria
 \begin{equation*}
-\EE[X] \coloneqq \int_{\Omega } Xd\PP ,\ \ \ \ X:(\Omega ,\mathcal{A} ,\PP)\rightarrow (E,\mathcal{E}) \ \text{VA}
+\EE[X] \coloneqq \int_{\Omega } Xd\PP ,\ \ \ \ X:(\Omega ,\Ac ,\PP)\rightarrow (E,\mathcal{E}) \ \text{VA}
 \end{equation*}
 Se $X$ è una VA discreta con densità $p_{X} :S\rightarrow [0,1]$, allora
 \begin{equation*}
@@ -1079,11 +1079,11 @@ X\sim \mathcal{G}(p) \ \ \ \ \text{i.e.} \ \ \ \ \PP(X=k) =p(1-p)^{k-1} =:\tilde
 
 \textbf{Spazio di probabilità discreto:}
 
-$(\Omega ,\mathcal{A} ,\PP)$ con $\Omega =\NN ,\mathcal{A} =2^{\NN}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
+$(\Omega ,\Ac ,\PP)$ con $\Omega =\NN ,\Ac =2^{\NN}$ e $\PP$ l'unica misura di probabilità su $\Omega $ t.c.
 \begin{equation}
 \PP(k) =\tilde{p}(k) =p(1-p)^{k-1}
 \end{equation}
-Con questa scelta di $(\Omega ,\mathcal{A} ,\PP)$ si ha che $X(\cdotp) \coloneqq I(\cdotp)$
+Con questa scelta di $(\Omega ,\Ac ,\PP)$ si ha che $X(\cdotp) \coloneqq I(\cdotp)$
 \begin{align*}
 X:\left(\NN ,2^{\NN} ,\PP\right) & \rightarrow \NN\\
 \omega  & \rightarrow X(\omega) \coloneqq \omega ,\ \ \ \ X\sim \mathcal{G}(p)
@@ -1100,7 +1100,7 @@ p_{X}(k) & =\PP(X=k)\\
 \begin{oss}
 Dato che le v.c. discrete sono caratterizzate dalla probabilità sugli atomi, nel senso che
 \begin{equation*}
-\forall B\in \mathcal{A} \ \ \ \ \PP(X\in B) =\sum\limits_{k:\ x_{k} \in B\cap S} p_{X}(x_{k})
+\forall B\in \Ac \ \ \ \ \PP(X\in B) =\sum\limits_{k:\ x_{k} \in B\cap S} p_{X}(x_{k})
 \end{equation*}
 caratterizzare $\PP$ sugli atomi, come fatto in (3), significa sostanzialmente dire che $\PP$ è l'unica misura di probabilità su $\left(\NN ,2^{\NN}\right)$ t.c. $\PP =P^{X}$, dove $P^{X}(\cdotp) =\PP(X\in \cdotp)$ è la legge di $X$.
 

@@ -40,7 +40,7 @@ Una moneta viene lanciata due volte. Antonio vince se al primo lancio esce testa
 
 \Esercizio{}
 
-Sia $(\Omega ,\mathcal{A})$ uno spazio di probabilità e siano $A$, $B$ e $C$ tre eventi appartenenti ad $\mathcal{A}$. Esprimere attraverso operazioni insiemistiche i seguenti eventi associati ad $A$, $B$ e $C$:
+Sia $(\Omega ,\Ac)$ uno spazio di probabilità e siano $A$, $B$ e $C$ tre eventi appartenenti ad $\Ac$. Esprimere attraverso operazioni insiemistiche i seguenti eventi associati ad $A$, $B$ e $C$:
 \begin{enumerate}
 	\item almeno un evento si verifica,
 	\item al più un evento si verifica,
@@ -61,7 +61,7 @@ Si costruisca un esempio (o anche più di uno!) di esperimento aleatorio, avendo
 
 \Esercizio{}
 
-Sia $(\Omega ,\mathcal{A})$ uno spazio di probabilità e siano $A$, $B$, $C$ e $D$ quattro eventi appartenenti ad $\mathcal{A}$. Esprimere attraverso operazioni insiemistiche i seguenti eventi associati ad $A$, $B$, $C$ e $D$.
+Sia $(\Omega ,\Ac)$ uno spazio di probabilità e siano $A$, $B$, $C$ e $D$ quattro eventi appartenenti ad $\Ac$. Esprimere attraverso operazioni insiemistiche i seguenti eventi associati ad $A$, $B$, $C$ e $D$.
 \begin{enumerate}
 	\item Esattamente tre eventi su quattro si verificano.
 	\item Si verifica solo $C$.
@@ -85,7 +85,7 @@ Restringere il nostro interesse alla sola moneta, significa considerare solo alc
 
 \Esercizio{}
 
-Per $k=1,2,\NN$, si consideri $\Omega =\{0,1\}^{k}$ lo spazio degli esiti di $1$, $2$ o infinite prove di Bernoulli. In tutti e tre i casi, si consideri l'evento $E=$ \event{successo alla prima prova}, e si descriva esplicitamente la $\sigma$-algebra $\mathcal{A} =\sigma (E)$.
+Per $k=1,2,\NN$, si consideri $\Omega =\{0,1\}^{k}$ lo spazio degli esiti di $1$, $2$ o infinite prove di Bernoulli. In tutti e tre i casi, si consideri l'evento $E=$ \event{successo alla prima prova}, e si descriva esplicitamente la $\sigma$-algebra $\Ac =\sigma (E)$.
 
 \Esercizio{}
 
@@ -93,7 +93,7 @@ Si consideri $\Omega =\{0,1\}^{\NN}$, lo spazio degli esiti di infinite prove di
 \begin{center}
 	$E_{k}=$ \event{successo alla prova $k$},
 \end{center}
-e si consideri la $\sigma $-algebra $\mathcal{A} =\sigma (E_{k} \mid k=1,2,\dots)$. Si individuino i seguenti eventi e se ne mostri l'appartenenza ad $\mathcal{A}$:
+e si consideri la $\sigma $-algebra $\Ac =\sigma (E_{k} \mid k=1,2,\dots)$. Si individuino i seguenti eventi e se ne mostri l'appartenenza ad $\Ac$:
 \begin{enumerate}
 	\item \event{solo insuccessi},
 	\item \event{solo la terza prova dà un successo},
@@ -110,7 +110,7 @@ Si consideri $\Omega =\{1,\dots ,6\}^{k}$, lo spazio degli esiti di infiniti lan
 \begin{center}
 	$E_{k}^{l} =$ \event{faccia $l$ al lancio $k$},
 \end{center}
-e si consideri la $\sigma $-algebra $\mathcal{A} =\sigma \left(E_{k}^{l} \mid l=1,\dots ,6,\ k=1,2,\dots \right)$. Si individuino i seguenti eventi e se ne mostri l'appartenenza ad $\mathcal{A}$:
+e si consideri la $\sigma $-algebra $\Ac =\sigma \left(E_{k}^{l} \mid l=1,\dots ,6,\ k=1,2,\dots \right)$. Si individuino i seguenti eventi e se ne mostri l'appartenenza ad $\Ac$:
 \begin{enumerate}
 	\item esce sempre $1$ nei primi n lanci,
 	\item esce sempre $5$,
@@ -157,15 +157,15 @@ Dopo aver introdotto un opportuno spazio di probabilità per descrivere questo e
 
 \Esercizio{}
 
-Dato uno spazio di probabilità $(\Omega ,\mathcal{A} ,\PP)$, si mostri che:
+Dato uno spazio di probabilità $(\Omega ,\Ac ,\PP)$, si mostri che:
 \begin{enumerate}
-	\item se un evento $A$ è quasi certo, ovvero $\PP(A) =1$, allora $\PP(A\cap B) =\PP(B)$ per ogni $B\in \mathcal{A}$;
+	\item se un evento $A$ è quasi certo, ovvero $\PP(A) =1$, allora $\PP(A\cap B) =\PP(B)$ per ogni $B\in \Ac$;
 	\item se un evento $A$ implica un evento $B$, ovvero $A\subset B$, allora $\PP(A) \leq \PP(B)$.
 \end{enumerate}
 
 \Esercizio{}
 
-Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e siano $A$ e $B$ due eventi appartenenti ad $\mathcal{A}$, con probabilità $\PP(A) =0.4$ e $\PP(B) =0.7$, rispettivamente. Date le seguenti affermazioni dire quali sono certamente false, quali sono sempre vere, quali possono essere vere o false:
+Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità e siano $A$ e $B$ due eventi appartenenti ad $\Ac$, con probabilità $\PP(A) =0.4$ e $\PP(B) =0.7$, rispettivamente. Date le seguenti affermazioni dire quali sono certamente false, quali sono sempre vere, quali possono essere vere o false:
 \begin{enumerate}
 	\item $\PP(A\cup B) =0.4$,
 	\item $\PP(A\cup B) =0.7$,
@@ -182,7 +182,7 @@ Si consideri $\Omega =\{0,1\}^{\NN}$, lo spazio degli esiti di infinite prove di
 \begin{center}
 	$E_{k} =$ \event{successo alla prova $k$},
 \end{center}
-e si consideri la $\sigma $-algebra $\mathcal{A} =\sigma (E_{k} \mid k=1,2,\dots)$. Per ogni $n=1,2,\dots $ si consideri quindi
+e si consideri la $\sigma $-algebra $\Ac =\sigma (E_{k} \mid k=1,2,\dots)$. Per ogni $n=1,2,\dots $ si consideri quindi
 \begin{equation*}
 	A_{n} =\bigcap_{k=1}^{n} E_{k}
 \end{equation*}
@@ -199,7 +199,7 @@ Si supponga ora che $\PP(A_{n}) =\frac{1}{2^{n}}$ per ogni $n$.
 
 \Esercizio{}
 
-Sia $\Omega =[0,1]$ e $\mathcal{A} \coloneqq \mathcal{B}([0,1])$ la $\sigma $-algebra di Borel. Si considerino, per ogni $n\in \NN$, gli insiemi $A_{n} \coloneqq \left[0,\frac{1}{n}\right] \subset \Omega $.
+Sia $\Omega =[0,1]$ e $\Ac \coloneqq \mathcal{B}([0,1])$ la $\sigma $-algebra di Borel. Si considerino, per ogni $n\in \NN$, gli insiemi $A_{n} \coloneqq \left[0,\frac{1}{n}\right] \subset \Omega $.
 \begin{enumerate}
 	\item Determinare gli insiemi $I$ e $U$, definiti come segue:
 	\begin{equation*}
@@ -210,7 +210,7 @@ Sia $\Omega =[0,1]$ e $\mathcal{A} \coloneqq \mathcal{B}([0,1])$ la $\sigma $-al
 
 \Esercizio{$\star$}
 
-Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e sia $A_{n}$ con $n\in \NN$ una successione di eventi.
+Sia $(\Omega ,\Ac ,\PP)$ uno spazio di probabilità e sia $A_{n}$ con $n\in \NN$ una successione di eventi.
 \begin{enumerate}
 	\item Si mostri che se $\PP(A_{n}) =0$ per ogni $n\in \NN$ allora $\PP\left(\bigcup\limits_{n\in \NN} A_{n}\right) =0$.
 	\item Si mostri che se $\PP(A_{n}) =1$ per ogni $n\in \NN$ allora $\PP\left(\bigcap\limits_{n\in \NN} A_{n}\right) =1$.
@@ -218,7 +218,7 @@ Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità e sia $A_{n}$ con $n
 
 \Esercizio{$\star$}
 
-Dato $(\Omega ,\mathcal{A} ,\PP)$ spazio di probabilità, data $A_{n}$ successione di eventi, si provi che
+Dato $(\Omega ,\Ac ,\PP)$ spazio di probabilità, data $A_{n}$ successione di eventi, si provi che
 \begin{equation*}
 	\PP\left(\liminf_{n} A_{n}\right) \leq \liminf_{n}\PP(A_{n}) \leq \limsup_{n}\PP(A_{n})\leq \PP\left(\limsup_{n} A_{n}\right) .
 \end{equation*}
@@ -316,7 +316,7 @@ $A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 
 \begin{enumerate}
 	\item $\bigcup\limits_{k=1}^{\infty } E_{k}\comp$\\
-	$\mathcal{A}$: $E_{k} \in \mathcal{A} \forall k\implies  E_{k}\comp \in \mathcal{A} \forall k\implies  \bigcap\limits_{k=1}^{\infty } E_{k}\comp \in \mathcal{A}$
+	$\Ac$: $E_{k} \in \Ac \forall k\implies  E_{k}\comp \in \Ac \forall k\implies  \bigcap\limits_{k=1}^{\infty } E_{k}\comp \in \Ac$
 	\item $E_{3} \cap \bigcap\limits_{k\neq 3} E_{k}\comp$
 	\item $\bigcap\limits_{k=1}^{\infty } E_{2k}$
 	\item $\bigcup\limits_{n=1}^{\infty }\bigcap\limits_{m\geq n} E_{m} =:\liminf_{n} E_{n}$
@@ -345,18 +345,18 @@ $A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 
 \Soluzione
 
-Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \mathcal{A}$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}\comp \in \mathcal{A}$.
+Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \Ac$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}\comp \in \Ac$.
 \begin{enumerate}
-	\item $\bigcap\limits_{k=1}^{n} E_{k}^{1} \in \mathcal{A}$,
-	\item $\bigcap\limits_{k\geq 1} E_{k}^{5} \in \mathcal{A}$,
-	\item $E_{13}^{3} \cap \left(\bigcap\limits_{k\neq 13}\left[\left(E_{k}^{3}\right)\comp\right]\right) \in \mathcal{A}$,
-	\item $\left(\bigcap\limits_{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits_{k\geq 1} P_{2k}\right) \in \mathcal{A}$,
-	\item $\bigcap\limits_{k\geq 33} E_{k}^{3} \in \mathcal{A}$,
-	\item $\liminf_{k} E_{k}^{3} \in \mathcal{A}$,
-	\item $\liminf_{k} D_{k} \in \mathcal{A}$,
-	\item $\limsup_{k} E_{k}^{6} \in \mathcal{A}$,
-	\item $\left(\liminf_{k}\left(E_{k}^{2}\right)\right)\comp \in \mathcal{A}$,
-	\item $\bigcup_{n}\left(E_{n}^{4} \cap \left(\bigcap_{k\neq n}\left( E_{k}^{4}\right)\comp\right)\right) \in \mathcal{A}$.
+	\item $\bigcap\limits_{k=1}^{n} E_{k}^{1} \in \Ac$,
+	\item $\bigcap\limits_{k\geq 1} E_{k}^{5} \in \Ac$,
+	\item $E_{13}^{3} \cap \left(\bigcap\limits_{k\neq 13}\left[\left(E_{k}^{3}\right)\comp\right]\right) \in \Ac$,
+	\item $\left(\bigcap\limits_{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits_{k\geq 1} P_{2k}\right) \in \Ac$,
+	\item $\bigcap\limits_{k\geq 33} E_{k}^{3} \in \Ac$,
+	\item $\liminf_{k} E_{k}^{3} \in \Ac$,
+	\item $\liminf_{k} D_{k} \in \Ac$,
+	\item $\limsup_{k} E_{k}^{6} \in \Ac$,
+	\item $\left(\liminf_{k}\left(E_{k}^{2}\right)\right)\comp \in \Ac$,
+	\item $\bigcup_{n}\left(E_{n}^{4} \cap \left(\bigcap_{k\neq n}\left( E_{k}^{4}\right)\comp\right)\right) \in \Ac$.
 \end{enumerate}
 
 \Soluzione
@@ -384,7 +384,7 @@ Inoltre, $\Omega $ non è unico, al più è unico l'$\Omega $ \textit{minimale},
 \begin{oss}
 Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in maniera astratta. Le informazioni rilevanti sono le seguenti:
 \begin{equation*}
-(\Omega ,\mathcal{A}) \ \ \ \ | \Omega | =50\ \ \ \ C,M\ \ \ \ \text{tali che} \ \ \ \ C,M\in \mathcal{A} ,| C| =7,| M| =5
+(\Omega ,\Ac) \ \ \ \ | \Omega | =50\ \ \ \ C,M\ \ \ \ \text{tali che} \ \ \ \ C,M\in \Ac ,| C| =7,| M| =5
 \end{equation*}
 \end{oss}
 \begin{enumerate}
@@ -430,7 +430,7 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 
 \textbf{Primo Metodo.}
 
-Introduciamo lo spazio campionario $\Omega =\{U_{c} ,U_{f} ,N_{c} ,N_{f}\}$ per indicare gli urgenti $(U)$ e in non urgenti $(N)$ rispettivamente in città $(_{c})$ e fuori città $(_{f})$. Usiamo come $\sigma $-algebra $\mathcal{A} =2^{\Omega }$. Poniamo:
+Introduciamo lo spazio campionario $\Omega =\{U_{c} ,U_{f} ,N_{c} ,N_{f}\}$ per indicare gli urgenti $(U)$ e in non urgenti $(N)$ rispettivamente in città $(_{c})$ e fuori città $(_{f})$. Usiamo come $\sigma $-algebra $\Ac =2^{\Omega }$. Poniamo:
 \begin{itemize}
 	\item $F=\{N_{f} ,U_{f}\} =$ \event{consegna fuori città}
 	\item $U=\{U_{c} ,U_{f}\} =$ \event{consegna urgente}
@@ -469,7 +469,7 @@ In questo modo possiamo calcolare:
 
 \textbf{Secondo Metodo.}
 
-Con questo metodo mostriamo come non sia necessario introdurre $\Omega $: è possibile fissare un arbitrario spazio di probabilità $(\Omega ,\mathcal{A} ,\PP)$ e definire la probabilità su specifici eventi in $\mathcal{A}$. Siano:
+Con questo metodo mostriamo come non sia necessario introdurre $\Omega $: è possibile fissare un arbitrario spazio di probabilità $(\Omega ,\Ac ,\PP)$ e definire la probabilità su specifici eventi in $\Ac$. Siano:
 \begin{itemize}
 	\item $C=$ \event{consegna in città}
 	\item $U=$ \event{consegna urgente}
@@ -610,7 +610,7 @@ Allora:
 		 & \iff \omega \in E_{k} \ \forall n\in \NN \ \forall k=1,\dots ,n\\
 		 & \iff \omega \in E_{k} \ \forall k
 	\end{align*}
-	$\bigcap\limits_{n\in \NN} A_{n} \in \mathcal{A}$ per le proprietà delle $\sigma $-algebre.
+	$\bigcap\limits_{n\in \NN} A_{n} \in \Ac$ per le proprietà delle $\sigma $-algebre.
 	\item Abbiamo $A_{n} \downarrow A$ con $A\coloneqq \bigcap\limits_{n\in \NN} A_{n}$ infatti
 	\[
 		\begin{cases}
