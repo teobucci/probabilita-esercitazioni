@@ -173,9 +173,9 @@ e sia $\PP$ tale che $\{E_{k}\}_{k\in \NN}$ risulti una famiglia di eventi indip
 	\item Quanto vale la probabilità di ottenere infiniti insuccessi?
 	\item Quanto vale la probabilità di ottenere definitivamente solo successi? Quanto vale la probabilità di ottenere infiniti successi?
 	\item Quanto vale la probabilità di ottenere infiniti successi e infiniti insuccessi?
-	\item Gli eventi "solo insuccessi dalla settima prova in poi" e "$1$ successo nelle prime $10$ prove" sono indipendenti?
-	\item Gli eventi "solo insuccessi dalla settima prova alla decima" e "$1$ successo nelle prime $10$ prove" sono indipendenti?
-	\item Gli eventi "solo insuccessi dalla settima prova alla decima" e "$1$ successo nelle prime $5$ prove" sono indipendenti?
+	\item Gli eventi \event{solo insuccessi dalla settima prova in poi} e \event{$1$ successo nelle prime $10$ prove} sono indipendenti?
+	\item Gli eventi \event{solo insuccessi dalla settima prova alla decima} e \event{$1$ successo nelle prime $10$ prove} sono indipendenti?
+	\item Gli eventi \event{solo insuccessi dalla settima prova alla decima} e \event{$1$ successo nelle prime $5$ prove} sono indipendenti?
 \end{enumerate}
 Cosa sarebbe cambiato se avessimo realizzato in un altro spazio di probabilità $(\Omega,\Ac,\PP)$, diverso dallo spazio di Bernoulli, una successione di eventi $E_{n}$ indipendenti e tali che $\PP(E_{n}) =p$, ovvero se avessimo usato un differente spazio di probabilità per rappresentare infinite prove di Bernoulli indipendenti con probabilità di successo $0< p< 1$? Si motivi adeguatamente la risposta.
 
@@ -219,7 +219,7 @@ Se, invece, si effettuano estrazioni \textbf{con reimmissione}:
 
 \Esercizio{(Urna di Pólya). fatto}
 
-Supponiamo che un'urna contenga $1$ pallina rossa e $1$ pallina bianca. Una pallina è estratta e se ne guarda il colore. Essa viene poi rimessa nell'urna insieme ad una pallina dello stesso colore. Il procedimento è detto di \textit{estrazione con rinforzo}. Sia $R_{i}$ l'evento "all'$i$-esima estrazione viene estratta una pallina rossa" e sia $B_{i}$ l'evento "all'$i$-esima estrazione viene estratta una pallina bianca". Si calcolino:
+Supponiamo che un'urna contenga $1$ pallina rossa e $1$ pallina bianca. Una pallina è estratta e se ne guarda il colore. Essa viene poi rimessa nell'urna insieme ad una pallina dello stesso colore. Il procedimento è detto di \textit{estrazione con rinforzo}. Sia $R_{i}$ l'evento \event{all'$i$-esima estrazione viene estratta una pallina rossa} e sia $B_{i}$ l'evento \event{all'$i$-esima estrazione viene estratta una pallina bianca}. Si calcolino:
 \begin{enumerate}
 	\item $\PP(R_{2})$ e $\PP(R_{3})$,
 	\item sapendo che la seconda estratta è una pallina rossa, è più probabile che la prima pallina estratta sia stata rossa o che sia stata bianca?
@@ -339,8 +339,8 @@ Introdurre $\Omega =$ \event{spazio campionario delle combinazioni di $90$ eleme
 
 Introduciamo gli eventi:
 \begin{gather*}
-	A=\text{"estraggo il 15"}\\
-	A_{k} =\text{"estraggo il} \ 15\ \text{alla} \ k\text{-esima estrazione"}
+	A=\event{estraggo il 15}\\
+	A_{k} =\event{estraggo il $15$ alla $k$-esima estrazione}
 \end{gather*}
 \begin{enumerate}
 	\item
@@ -360,7 +360,7 @@ Introduciamo gli eventi:
 		\left(A_{42} \mid\bigcap_{k=1}^{41} A_{k}\comp\right) =\underbrace{\PP(A_{42}) =\PP(A)}_{\text{primo punto}} \approx 0.0556
 	\end{equation*}
 	Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
-	\item L'evento "almeno un $15$ su $42$ estrazioni" si traduce formalmente in
+	\item L'evento \event{almeno un $15$ su $42$ estrazioni} si traduce formalmente in
 	\begin{equation*}
 		\bigcup_{k=1}^{42} A_{k}
 	\end{equation*}
@@ -389,11 +389,11 @@ Introduciamo gli eventi:
 	\begin{equation*}
 		\PP(A_{1} \mid B_{1}) =\frac{\PP(A_{1} \cap B_{1})}{\PP(B_{1})}
 	\end{equation*}
-	Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come
+	Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero \event{il $15$ estratto $1$ volta} può essere scritto come
 	\begin{equation*}
 		B_{1} =\bigcup_{j=1}^{42}\left(A_{j} \cap \bigcap_{k\neq j} A_{k}\comp\right) =
 	\end{equation*}
-	i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi
+	i.e. $B_{1}$ è unione disgiunta degli eventi \event{$15$ esce solo alla $k$-esima estrazione} e quindi
 	\begin{equation*}
 		\PP(B_{1}) =42\PP(A_{j})\PP\left(\bigcap_{k\neq j} A_{j}\comp\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
 	\end{equation*}
@@ -452,13 +452,13 @@ Allora
 
 Consideriamo l'evento
 \begin{equation*}
-	A=\text{"il pacco scelto inizialmente contiene l'assegno"}
+	A=\event{il pacco scelto inizialmente contiene l'assegno}
 \end{equation*}
 \begin{enumerate}
 	\item $\PP(A) =1/3$
 	\item Introduciamo l'evento
 	\begin{equation*}
-		V_{\text{cons}} =\text{"vinco conservando il pacco scelto inizialmente"}
+		V_{\text{cons}} =\event{vinco conservando il pacco scelto inizialmente}
 	\end{equation*}
 	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:
 	\begin{theorem}
@@ -483,7 +483,7 @@ Consideriamo l'evento
 	\end{enumerate}
 	\item Introduciamo l'evento
 	\begin{equation*}
-		V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
+		V_{\text{camb}} =\event{vinco cambiando il pacco scelto inizialmente}
 	\end{equation*}
 	allora
 	\begin{equation*}
@@ -668,7 +668,7 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 \begin{enumerate}
 	\item Consideriamo l'evento
 	\begin{equation*}
-		V_{\text{tc}} =\text{"vinco giocando a testa o croce tra le due strategie"}
+		V_{\text{tc}} =\event{vinco giocando a testa o croce tra le due strategie}
 	\end{equation*}
 	Supponiamo la moneta equa e, senza perdita di generalità, assegnamo a $T$ la strategia di cambio pacco. Osserviamo che il lancio della moneta è indipendente dagli eventi $V_{\text{camb}}$ e $V_{\text{cons}}$. Usiamo ancora la formula delle probabilità totali, in questo caso con $\Omega =T\cup C$.
 	\begin{align*}
@@ -679,9 +679,9 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 	\end{align*}
 	\item Introduciamo gli eventi
 	\begin{gather*}
-		D=\text{"il conduttore apre il pacco di destra"}\\
-		P_{d} =\text{"il pacco di destra contiene il premio"}\\
-		P_{s} =\text{"il pacco di sinistra contiene il premio"}
+		D=\event{il conduttore apre il pacco di destra}\\
+		P_{d} =\event{il pacco di destra contiene il premio}\\
+		P_{s} =\event{il pacco di sinistra contiene il premio}
 	\end{gather*}
 	Dal testo sappiamo che, poiché in tal caso il vincitore ha il pacco vincente,
 	\begin{equation*}
@@ -782,7 +782,7 @@ Allora
 
 Definiamo l'evento
 \begin{equation*}
-	B_{k} =\ \text{"la } k\text{-esima pallina estratta è bianca"}
+	B_{k} = \event{la $k$-esima pallina estratta è bianca}
 \end{equation*}
 Allora
 \begin{enumerate}
