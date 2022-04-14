@@ -125,33 +125,29 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\Tau}{\mathcal{T}}
-\newcommand{\myNewEmptyPage}{\newpage $ $}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}} % segno di funzione
-%\renewcommand{\epsilon}{\varepsilon}
-%\renewcommand{\theta}{\vartheta}
-%\renewcommand{\rho}{\varrho}
-%\renewcommand{\phi}{\varphi}
-\newcommand{\degree}{^\circ\text{C}} % SIMBOLO GRADI
 \newcommand{\notimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
 \renewcommand{\qed}{\tag*{$\blacksquare$}}
 \newcommand{\latex}{\LaTeX\xspace}
 \newcommand{\tex}{\TeX\xspace}
-\newcommand{\questeq}{\overset{?}{=}} % è vero che?
-\renewcommand{\leqslant}{\leq}
-\renewcommand{\geqslant}{\geq}
+
 \newcommand{\complementary}{^{\mathrm{C}}}
 \renewcommand{\emptyset}{\varnothing} % simbolo insieme vuoto
 \newcommand{\Bot}{\perp \!\!\! \perp} % indipendenza
 \newcommand{\boxedText}[1]{\noindent\fbox{\parbox{\textwidth}{#1}}}
 
-\newcommand{\Ind}{\mathds{1}}
+\newcommand{\Ind}{\mathds{1}} % funzione indicatrice
 \newcommand{\comp}{^{\mathrm{C}}} % alternative ^{\mathrm{C}} ^{\mathrm{c}} ^{\mathsf{c}}
 \newcommand{\iid}{\stackrel{\mathrm{iid}}{\sim}}
-\newcommand{\event}[1]{\emph{``#1''}}
+\newcommand{\event}[1]{\emph{``#1''}} % evento
+
+% variazioni del simbolo "="
+\newcommand{\questeq}{\overset{?}{=}} % è vero che?
 \newcommand{\iideq}{\overset{\text{\tiny iid}}{=}}
 \newcommand{\ideq}{\overset{\text{\tiny id}}{=}}
 \newcommand{\indepeq}{\overset{\perp \!\!\! \perp}{=}}
 
+% lettere bold
 \newcommand{\PP}{\mathbb{P}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\QQ}{\mathbb{Q}}
@@ -159,144 +155,14 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\NN}{\mathbb{N}}
 
+% lettere calligrafiche
 \newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Bc}{\mathcal{B}}
 
 \usepackage{mathtools} % Serve per i due comandi dopo
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % CREA UN COMANDO abs()
 \DeclarePairedDelimiter{\norma}{\lVert}{\rVert} % CREA UN COMANDO norma()
-
-% Simbolo di integrale barrato
-
-\makeatletter
-\newcommand*{\mint}[1]{%
-  % #1: overlay symbol
-  \mint@l{#1}{}%
-}
-\newcommand*{\mint@l}[2]{%
-  % #1: overlay symbol
-  % #2: limits
-  \@ifnextchar\limits{%
-    \mint@l{#1}%
-  }{%
-    \@ifnextchar\nolimits{%
-      \mint@l{#1}%
-    }{%
-      \@ifnextchar\displaylimits{%
-        \mint@l{#1}%
-      }{%
-        \mint@s{#2}{#1}%
-      }%
-    }%
-  }%
-}
-\newcommand*{\mint@s}[2]{%
-  % #1: limits
-  % #2: overlay symbol
-  \@ifnextchar_{%
-    \mint@sub{#1}{#2}%
-  }{%
-    \@ifnextchar^{%
-      \mint@sup{#1}{#2}%
-    }{%
-      \mint@{#1}{#2}{}{}%
-    }%
-  }%
-}
-\def\mint@sub#1#2_#3{%
-  \@ifnextchar^{%
-    \mint@sub@sup{#1}{#2}{#3}%
-  }{%
-    \mint@{#1}{#2}{#3}{}%
-  }%
-}
-\def\mint@sup#1#2^#3{%
-  \@ifnextchar_{%
-    \mint@sup@sub{#1}{#2}{#3}%
-  }{%
-    \mint@{#1}{#2}{}{#3}%
-  }%
-}
-\def\mint@sub@sup#1#2#3^#4{%
-  \mint@{#1}{#2}{#3}{#4}%
-}
-\def\mint@sup@sub#1#2#3_#4{%
-  \mint@{#1}{#2}{#4}{#3}%
-}
-\newcommand*{\mint@}[4]{%
-  % #1: \limits, \nolimits, \displaylimits
-  % #2: overlay symbol: -, =, ...
-  % #3: subscript
-  % #4: superscript
-  \mathop{}%
-  \mkern-\thinmuskip
-  \mathchoice{%
-    \mint@@{#1}{#2}{#3}{#4}%
-        \displaystyle\textstyle\scriptstyle
-  }{%
-    \mint@@{#1}{#2}{#3}{#4}%
-        \textstyle\scriptstyle\scriptstyle
-  }{%
-    \mint@@{#1}{#2}{#3}{#4}%
-        \scriptstyle\scriptscriptstyle\scriptscriptstyle
-  }{%
-    \mint@@{#1}{#2}{#3}{#4}%
-        \scriptscriptstyle\scriptscriptstyle\scriptscriptstyle
-  }%
-  \mkern-\thinmuskip
-  \int#1%
-  \ifx\\#3\\\else_{#3}\fi
-  \ifx\\#4\\\else^{#4}\fi  
-}
-\newcommand*{\mint@@}[7]{%
-  % #1: limits
-  % #2: overlay symbol
-  % #3: subscript
-  % #4: superscript
-  % #5: math style
-  % #6: math style for overlay symbol
-  % #7: math style for subscript/superscript
-  \begingroup
-    \sbox0{$#5\int\m@th$}%
-    \sbox2{$#5\int_{}\m@th$}%
-    \dimen2=\wd0 %
-    % => \dimen2 = width of \int
-    \let\mint@limits=#1\relax
-    \ifx\mint@limits\relax
-      \sbox4{$#5\int_{\kern1sp}^{\kern1sp}\m@th$}%
-      \ifdim\wd4>\wd2 %
-        \let\mint@limits=\nolimits
-      \else
-        \let\mint@limits=\limits
-      \fi
-    \fi
-    \ifx\mint@limits\displaylimits
-      \ifx#5\displaystyle
-        \let\mint@limits=\limits
-      \fi
-    \fi
-    \ifx\mint@limits\limits
-      \sbox0{$#7#3\m@th$}%
-      \sbox2{$#7#4\m@th$}%
-      \ifdim\wd0>\dimen2 %
-        \dimen2=\wd0 %
-      \fi
-      \ifdim\wd2>\dimen2 %
-        \dimen2=\wd2 %
-      \fi
-    \fi
-    \rlap{%
-      $#5%
-        \vcenter{%
-          \hbox to\dimen2{%
-            \hss
-            $#6{#2}\m@th$%
-            \hss
-          }%
-        }%
-      $%
-    }%
-  \endgroup
-}
 
 %----------------------------------------------------------------------------------------
 %	APPENDICE
