@@ -2,7 +2,7 @@
 
 \ParteEsercizi
 
-Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textbf{finito} $n< +\infty $ di risultati possibili. Sia $\Omega =\{\omega_{1} ,\dots ,\omega_{n}\}$ lo spazio campionario associato all'esperimento e $\Ac =\mathcal{P}(\Omega) =2^{\Omega }$.
+Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textit{finito} $n$ di risultati possibili. Sia $\Omega =\{\omega_{1} ,\dots ,\omega_{n}\}$ lo spazio campionario associato all'esperimento e $\Ac =\mathcal{P}(\Omega) =2^{\Omega }$.
 
 Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\cdots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
 
@@ -18,8 +18,8 @@ Dagli assiomi della probabilità segue che:
 
 Pertanto, quando abbiamo a che fare con esperimenti aleatori su spazi di probabilità uniformi procediamo nel seguente modo:
 \begin{enumerate}
-	\item individuiamo $\Omega $ (i.e. i possibili esiti dell'esperimento aleatorio) finito, $| \Omega | < +\infty \ \rightarrow \ \Ac =\mathcal{P}(\Omega) =2^{\Omega }$.
-	\item individuiamo il sottoinsieme $A\subseteq \Omega $ che rappresenta l'evento.
+	\item individuiamo $\Omega $ (i.e. i possibili esiti dell'esperimento aleatorio) finito, $| \Omega | < +\infty$,
+	\item individuiamo il sottoinsieme $A\subseteq \Omega $ che rappresenta l'evento,
 	\item se abbiamo probabilità uniforme, cioè gli eventi sono equiprobabili,
 	\begin{equation*}
 		\boxed{\forall A\in \Ac \ \ \ \ \PP(A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}}
@@ -30,9 +30,9 @@ Il problema si riduce sostanzialmente a contare gli elementi di $\Omega $ e di $
 	\item giustificato dal principio fondamentale del calcolo combinatorio;
 	\item graficamente visualizzabile tramite un \textbf{diagramma ad albero}.
 \end{itemize}
-Il calcolo combinatorio è costituito da tecniche che ci permettono di \textbf{contare} il numero di elementi di un insieme \textbf{senza enumerarli} esplicitamente.
+Il calcolo combinatorio è costituito da tecniche che ci permettono di \textit{contare} il numero di elementi di un insieme \textit{senza enumerarli} esplicitamente.
 
-\textbf{Principio fondamentale del calcolo combinatorio.} Si realizzano $r$ esperimenti. Si supponga che il primo esperimento abbia $n_{1}$ esiti possibili; che per ognuno di essi il secondo abbia $n_{2} \ $esiti possibili; che per ognuno degli esiti dei primi due esperimenti il terzo esperimento abbia $n_{3}$ esiti possibili ecc. Allora, se sequenze distinte di esiti degli $r$ esperimenti producono esiti finali distinti, allora gli $r$ esperimenti hanno in tutto $n_{1} \cdot n_{2} \cdots n_{r}$ esiti possibili.
+\paragraph{Principio fondamentale del calcolo combinatorio.} Si realizzano $r$ esperimenti. Si supponga che il primo esperimento abbia $n_{1}$ esiti possibili; che per ognuno di essi il secondo abbia $n_{2} \ $esiti possibili; che per ognuno degli esiti dei primi due esperimenti il terzo esperimento abbia $n_{3}$ esiti possibili ecc. Allora, se sequenze distinte di esiti degli $r$ esperimenti producono esiti finali distinti, allora gli $r$ esperimenti hanno in tutto $n_{1} \cdot n_{2} \cdots n_{r}$ esiti possibili.
 
 \begin{oss}
 	Il diagramma ad albero è utile per rappresentare tutti i casi possibili: ci permette di avere un'elencazione grafica di tutti gli elementi di $\Omega $ (e/o di $A\in \Ac$).
@@ -42,12 +42,11 @@ Il calcolo combinatorio è costituito da tecniche che ci permettono di \textbf{c
 	Lo schema di scelte successive deve individuare univocamente gli elementi degli insiemi (come da principio).
 \end{oss}
 
-\textbf{Permutazioni, disposizioni e combinazioni.}
-
+\paragraph{Permutazioni, disposizioni e combinazioni.}
 Sono concetti utili per contare gli elementi in un insieme.
 
 \begin{definition}
-	Le permutazioni di $n$ oggetti sono tutti i possibili ordinamenti di $n$ oggetti. Le permutazioni di $n$ oggetti sono pari a:
+	Le \textbf{permutazioni} di $n$ oggetti sono tutti i possibili ordinamenti di $n$ oggetti. Le permutazioni di $n$ oggetti sono pari a:
 	\begin{equation*}
 		\boxed{P_{n} =n!=n(n-1)(n-2) \cdots 1} \ \ \ \ (0!\coloneqq 1)
 	\end{equation*}
@@ -132,7 +131,7 @@ Scommetto sui primi $5$ classificati di una gara con $40$ concorrenti, senza con
 
 \begin{enumerate}
 	\item Qual è la probabilità $p_{n}$ che, in un gruppo di $n$ persone selezionate in modo casuale (nate tutte in un anno non bisestile), almeno due di esse compiano gli anni lo stesso giorno? Quanto deve essere grande $n$ affinché $p_{n}  >\frac{1}{2}$?
-	\item Qual è la probabilità $q_{n}$ che, nel gruppo di $n$ persone, ve ne sia almeno una che compie gli anni il vostro stesso giorno (posto che non siate nati il 29 febbraio)?Quanto deve essere grande $n$ affinché $q_{n}  >\frac{1}{2}$?
+	\item Qual è la probabilità $q_{n}$ che, nel gruppo di $n$ persone, ve ne sia almeno una che compie gli anni il vostro stesso giorno (posto che non siate nati il 29 febbraio)? Quanto deve essere grande $n$ affinché $q_{n}  >\frac{1}{2}$?
 \end{enumerate}
 
 \Esercizio{}
@@ -260,7 +259,7 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 	\end{gather*}
 	Come famiglia ($\sigma $-algebra) degli eventi possibili possiamo scegliere $\Ac \coloneqq \mathcal{P}(\Omega) =2^{\Omega }$. Per quanto riguarda l'assegnazione di una probabilità $\PP$ su $(\Omega ,\Ac)$ osserviamo che se assumiamo che i due non siano truccati e vogliamo che il nostro spazio di probabilità $(\Omega,\Ac,\PP)$ modellizzi questo fatto fisico, dobbiamo ammettere che tutti gli eventi elementari di $\Omega $ abbiano la stessa probabilità $\PP =\frac{1}{| \Omega | } =\frac{1}{36}$. Siamo pertanto in uno spazio campionario con probabilità uniforme. Allora $\forall A\in \Ac ,\PP(A) =\frac{| A| }{| \Omega | } =\frac{| A| }{36}$.
 
-	Sia $A$ l'evento "avere un $6$ al primo lancio", allora
+	Sia $A$ l'evento \event{avere un $6$ al primo lancio}, allora
 	\begin{gather*}
 		A=\{(6,1) ,(6,2) ,(6,3)(6,4) ,(6,5) ,(6,6)\} ,\ \ \ \ | A| =6\\
 		\implies \PP(A) =\frac{| A| }{| \Omega | } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
@@ -270,14 +269,14 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 		In questo caso $\Omega $ ed $A$ hanno pochi elementi e possiamo elencarli senza problemi. Avremmo anche potuto contare gli elementi di $A$ e $\Omega $ senza elencarli con un diagramma ad albero.
 	\end{oss}
 
-	\item Sia $B$ l'evento "la somma dei due risultati è $6$", allora
+	\item Sia $B$ l'evento \event{la somma dei due risultati è $6$}, allora
 	\begin{gather*}
 		B=\{(5,1) ,(2,4) ,(3,3) ,(4,2) ,(1,5)\} ,\ \ \ \ | B| =5\\
 		\implies \PP(B) =\frac{| B| }{| \Omega | } =\frac{5}{36} \approx 0.1389
 	\end{gather*}
 
 	\begin{oss}
-		I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento "la somma dei due dadi è $i$", per $i=1,\dots ,12$,
+		I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento \event{la somma dei due dadi è $i$}, per $i=1,\dots ,12$,
 		\begin{equation*}
 			\begin{array}{ l }
 				\PP(\{2\}) =\PP(\{12\}) =1/36\\
@@ -300,7 +299,7 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 		\Omega =\{(i,j,k) :i,j,k=1,\dots ,6\} =\{1,\dots ,6\}^{3} \ \ \ \ | \Omega | =6^{3} =216
 	\end{equation*}
 
-	Sia $C$ l'evento "la somma dei dadi è $6$"
+	Sia $C$ l'evento \event{la somma dei dadi è $6$}
 	\begin{gather*}
 		\begin{aligned}
 			C= & (\{1,1,4\} ,\{1,4,1\} ,\{4,1,1\} ,\\
@@ -315,12 +314,12 @@ Dato un insieme finito $\Omega $ di cardinalità $| \Omega | $, dimostrare che i
 		\begin{gather*}
 			C=\text{possibili permutazioni di} \ 
 			\begin{cases}
-				\{1,2,3\} & \rightarrow 3!=6\ \text{permutazioni}\\
-				\{2,2,2\} & \rightarrow 1\ \text{permutazione}\\
-				\{1,1,4\} & \rightarrow 3!/2!=3\ \text{permutazioni}
-			\end{cases}\\
-			\implies | C| =6+3+1=10
+				\{1,2,3\} & \to\quad 3!\\
+				\{2,2,2\} & \to\quad 1\\
+				\{1,1,4\} & \to\quad 3!/2!
+			\end{cases}
 		\end{gather*}
+		pertanto $|C|=6+1+3=10$.
 	\end{oss}
 	
 \end{enumerate}
@@ -412,7 +411,7 @@ Se dovessimo rispondere esclusivamente alla seconda domanda potremmo considerare
 \begin{equation*}
 	| \Omega | =C_{5}^{40} =\binom{40}{5} =\frac{40!}{35!\ 5!}
 \end{equation*}
-Se $B$ è l'evento "vinco senza precisare l'ordine", allora
+Se $B$ è l'evento \event{vinco senza precisare l'ordine}, allora
 \begin{equation*}
 	| B| =1\implies \PP(B) =\frac{| B| }{| \Omega | } =\frac{1}{\binom{40}{5}} \approx 1.5\times 10^{-6}
 \end{equation*}
@@ -473,7 +472,7 @@ Possiamo introdurre un unico spazio campionario per rispondere a tutti i punti. 
 \[
 	\Omega =\{\omega \subset \{1,\dots,90\} :| \omega | =6\} \implies | \Omega | =C_{6}^{90} =\binom{90}{6} =622614630
 \]
-In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
+In altre parole, $\Omega $ è l'insieme delle \emph{puntate secche} (ossia schedine con $6$ numeri giocati). La sequenza vincente è assegnata a priori.
 \begin{enumerate}
 	\item Sia $A=$ \event{indovino i primi $6$ numeri estratti}, i.e. azzecco i primi $6$ numeri della sequenza vincente (non mi interessa il jolly).
 	\begin{equation*}
@@ -743,7 +742,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 	| \Omega | =10^{4}
 	\end{equation*}
 
-	Sia $A$ l'evento "$2$ palline rosse su $4$ estratte". Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Ho $3^{2} \cdot 7^{2}$ possibilità di scelta, ma poi dobbiamo considerare tutte le possibili permutazioni $\binom{4}{2} =\frac{4!}{2!2!}$.
+	Sia $A$ l'evento \event{$2$ palline rosse su $4$ estratte}. Quanti modi ho di estrarre $2$ palline rosse e $2$ blu? Ho $3^{2} \cdot 7^{2}$ possibilità di scelta, ma poi dobbiamo considerare tutte le possibili permutazioni $\binom{4}{2} =\frac{4!}{2!2!}$.
 	\begin{equation*}
 		\implies | A| =\binom{4}{2} 3^{2} 7^{2}\implies \PP(A) =\frac{| A| }{| \Omega | } =\binom{4}{2}\frac{3^{2} 7^{2}}{10^{4}} \approx 0.2646.
 	\end{equation*}
