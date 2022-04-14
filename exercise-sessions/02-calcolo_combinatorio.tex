@@ -498,82 +498,79 @@ In altre parole, $\Omega $ è l'insieme delle "puntate secche" (ossia schedine c
 	\end{equation*}
 	Il ragionamento esposto sopra (schema di scelte successive formalmente giustificato dal principio di calcolo combinatorio) può essere graficamente visualizzato tramite uno schema di diagramma ad albero
 
-	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	\begin{figure}[htpb]
+		\centering
+		\begin{tikzpicture}[scale=3]
+		\tikzset{
+		    dot/.style={
+		        draw,
+		        circle,
+		        fill=black,
+		        inner sep=0pt,
+		        minimum size=2pt
+		        },
+		    brace/.style={
+		        decoration={brace,mirror,amplitude=7},
+		        decorate
+		        }
+		}
 
-	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-	%uncomment if require: \path (0,229); %set diagram left start at 0, and has height of 229
+		% primo albero
+		\node[dot] (1) at (0,0) {};
 
-	%Straight Lines [id:da7855330926245441] 
-	\draw    (120,100) -- (200,50) ;
-	\draw [shift={(200,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(120,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da040580577550131336] 
-	\draw    (120,100) -- (200,70) ;
-	\draw [shift={(200,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(120,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da2306425536240584] 
-	\draw    (120,100) -- (200,150) ;
-	\draw [shift={(200,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(120,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da2747219164087562] 
-	\draw    (120,100) -- (200,130) ;
-	\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(120,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da6865956571924272] 
-	\draw    (200,130) -- (280,80) ;
-	\draw [shift={(280,80)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(200,130)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da7503928139510518] 
-	\draw    (200,130) -- (280,100) ;
-	\draw [shift={(280,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(200,130)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da46418143484636754] 
-	\draw    (200,130) -- (280,180) ;
-	\draw [shift={(280,180)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(200,130)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da03557774417074011] 
-	\draw    (200,130) -- (280,160) ;
-	\draw [shift={(280,160)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(200,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da9336686808598069] 
-	\draw    (350,100) -- (430,50) ;
-	\draw [shift={(430,50)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(350,100)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da46944720959200703] 
-	\draw    (350,100) -- (430,70) ;
-	\draw [shift={(430,70)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(350,100)}, rotate = 339.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da3073333322617353] 
-	\draw    (350,100) -- (430,150) ;
-	\draw [shift={(430,150)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(350,100)}, rotate = 32.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	%Straight Lines [id:da1834195966154788] 
-	\draw    (350,100) -- (430,130) ;
-	\draw [shift={(430,130)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-	\draw [shift={(350,100)}, rotate = 20.56] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+		\node[dot] (21) at (1,0.5) {};
+		\node[dot] (22) at (1,0.25) {};
+		\node[dot] (23) at (1,-0.25) {};
+		\node[dot] (24) at (1,-0.5) {};
 
-	% Text Node
-	\draw (311,92.4) node [anchor=north west][inner sep=0.75pt]    {$\cdots $};
-	% Text Node
-	\draw (110,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1^{o} \ \text{num estratto}$};
-	% Text Node
-	\draw (93,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{1} =90\ \text{possibilità}$};
-	% Text Node
-	\draw (194,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-	% Text Node
-	\draw (274,122.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-	% Text Node
-	\draw (424,92.4) node [anchor=north west][inner sep=0.75pt]    {$\vdots $};
-	% Text Node
-	\draw (210,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2^{o} \ \text{num estratto}$};
-	% Text Node
-	\draw (350,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$6^{o} \ \text{num estratto}$};
-	% Text Node
-	\draw (213,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{2} =89\ \text{possibilità}$};
-	% Text Node
-	\draw (353,202.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$n_{6} =84\ \text{possibilità}$};
+		\node at (1,0) {$\vdots$};
 
-	\end{tikzpicture}
+		% secondo albero
+		\node[dot] (31) at (2,0) {};
+		\node[dot] (32) at (2,0.25) {};
+		\node[dot] (33) at (2,-0.50) {};
+		\node[dot] (34) at (2,-0.75) {};
+
+		\node at (2,-0.25) {$\vdots$};
+
+		% puntini
+		\node at (2.5,0) {$\ldots$};
+
+		% ultimo albero
+		\node[dot] (4) at (3,0) {};
+
+		\node[dot] (51) at (4,0.5) {};
+		\node[dot] (52) at (4,0.25) {};
+		\node[dot] (53) at (4,-0.25) {};
+		\node[dot] (54) at (4,-0.5) {};
+
+		% connessione
+		\draw[very thin] (1)--(21);
+		\draw[very thin] (1)--(22);
+		\draw[very thin] (1)--(23);
+		\draw[very thin] (1)--(24);
+
+		\draw[very thin] (23)--(31);
+		\draw[very thin] (23)--(32);
+		\draw[very thin] (23)--(33);
+		\draw[very thin] (23)--(34);
+
+		\draw[very thin] (4)--(51);
+		\draw[very thin] (4)--(52);
+		\draw[very thin] (4)--(53);
+		\draw[very thin] (4)--(54);
+
+		% parentesi
+		\draw [brace] (0,-0.8) --node[below=3mm]{{\tiny $n_1=90$ scelte}} (0.98,-0.8);
+		\draw [brace] (1,-0.8) --node[below=3mm]{{\tiny $n_2=89$ scelte}} (2,-0.8);
+		\draw [brace] (3,-0.8) --node[below=3mm]{{\tiny $n_6=84$ scelte}} (4,-0.8);
+		%\node at (0.5,-1) {{\tiny $n_1=90$ scelte}};
+		%\node at (1.5,-1) {{\tiny $n_2=89$ scelte}};
+		%\node at (3.5,-1) {{\tiny $n_6=84$ scelte}};
+
+		\end{tikzpicture}
+	\end{figure}
+	\FloatBarrier
 
 	L'evento $A=$ \event{indovino i $6$ numeri estratti} è visibile, sull'albero, come una particolare diramazione. Dato che però non ci interessa l'ordine di estrazione consideriamo tutte le possibili permutazioni di $A$, i.e. $| A| =6!$.
 	\item Sia $B=$ \event{indovino $5$ dei $6$ numeri estratti e in più un numero jolly}. Determiniamo ogni esito possibile $B$ come segue:
