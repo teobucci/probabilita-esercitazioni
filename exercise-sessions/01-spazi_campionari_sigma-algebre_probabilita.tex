@@ -384,7 +384,7 @@ Inoltre, $\Omega $ non è unico, al più è unico l'$\Omega $ \textit{minimale},
 \begin{oss}
 Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in maniera astratta. Le informazioni rilevanti sono le seguenti:
 \begin{equation*}
-(\Omega ,\Ac) \ \ \ \ | \Omega | =50\ \ \ \ C,M\ \ \ \ \text{tali che} \ \ \ \ C,M\in \Ac ,| C| =7,| M| =5
+(\Omega ,\Ac) \ \ \ \ |\Omega| =50\ \ \ \ C,M\ \ \ \ \text{tali che} \ \ \ \ C,M\in \Ac ,| C| =7,| M| =5
 \end{equation*}
 \end{oss}
 \begin{enumerate}
@@ -408,12 +408,12 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 	\end{align*}
 	\item In questo caso l'insieme degli eventi $\Omega $ è un insieme discreto (finito). La probabilità è uniforme: gli eventi equiprobabili a priori. Pertanto si ha
 	\begin{equation*}
-		\PP(A) =\frac{| A| }{| \Omega | } =\frac{\text{casi favorevoli}}{\text{casi possibili}}
+		\PP(A) =\frac{| A| }{|\Omega| } =\frac{\text{casi favorevoli}}{\text{casi possibili}}
 	\end{equation*}
 	Allora
 	\begin{enumerate}
-		\item $\PP(C) =\frac{| C| }{| \Omega | } =\frac{7}{50} =0.14$
-		\item $\PP(M) =\frac{| M| }{| \Omega | } =\frac{5}{50} =0.1$
+		\item $\PP(C) =\frac{| C| }{|\Omega| } =\frac{7}{50} =0.14$
+		\item $\PP(M) =\frac{| M| }{|\Omega| } =\frac{5}{50} =0.1$
 		\item $\PP(C\cap M) =\frac{1}{50} =0.02$
 		\item $\PP(C\cup M) =\frac{11}{50} =0.22$
 		\item $\PP\left((C\cup M)\comp\right) =1-0.22=0.78$
@@ -479,10 +479,10 @@ L'insieme $\Omega $ delle possibili consegne è unione dei seguenti eventi, tra 
 \[
 	\begin{array}{lc}
 			& \text{con probabilità}\\
-		C\cap U & a\\
-		C\comp \cap U & b\\
-		C\cap U\comp & c\\
-		C\comp \cap U\comp & d
+		C\phantom{\comp} \cap U      & a\\
+		C         \comp  \cap U      & b\\
+		C\phantom{\comp} \cap U\comp & c\\
+		C         \comp  \cap U\comp & d
 	\end{array}
 \]
 Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richiesta. Stiamo partizionando $\Omega $.
