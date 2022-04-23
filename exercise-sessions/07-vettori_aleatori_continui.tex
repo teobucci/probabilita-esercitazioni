@@ -1,9 +1,332 @@
 %!TEX root = ../main.tex
 
+\newcommand{\RR}{\mathbb{R}}
+
 \ParteEsercizi
 
 \Esercizio{}
 
+\Esercizio{}
+
+\Esercizio{}
+Date $X,Y$ indipendenti ed entrambe di legge $\mathcal{E}(\lambda)$, $\lambda>0$, si calcoli $\PP(Y>X)$.
+
+\Esercizio{}
+Sia $(X,Y)$ un vettore aleatorio con densità
+\begin{equation*}
+f_{(X,Y)}(x,y)=\begin{cases} x(y-x)e^{-y},&0<x<y, \\ 0,&\text{altrove}.\end{cases}
+\end{equation*}
+\begin{enumerate}
+\item [(a)] Calcolare le leggi di $X$ e di $Y$.
+\item [(b)] $X$ e $Y$ sono indipendenti?
+\item [(c)] Calcolare $\PP(X\leq 2,Y\leq 3)$.
+\item [(d)] Calcolare il coefficiente di correlazione $\rho_{X,Y}$.
+\item [(e)] Trovare una diversa densità congiunta avente le stesse densità marginali.
+\end{enumerate}
+
 \ParteSoluzioni
 
 \Soluzione{}
+
+\Soluzione{}
+
+\Soluzione{}
+Il vettore aleatorio $(X,Y):\Omega\to\mathbb{R}^2$ è assolutamente continuo; la sua densità $f_{(X,Y)}(x,y)$, essendo $X$ e $Y$ indipendenti, è data, grazie al seguente teorema, dal prodotto tra le due densità marginali
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=\lambda e^{-\lambda x}\ \Ind_{[0,+\infty)}(x) \\
+&f_Y(y)=\lambda e^{-\lambda y}\ \Ind_{[0,+\infty)}(y)
+\end{aligned}
+\end{gather*}
+\begin{theorem}
+\label{th1}
+$\\$$X\Bot Y\ \Longleftrightarrow\ f_{(X,Y)}(x,y)=f_X(x)\cdot f_Y(y)$.
+\end{theorem}
+Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $(X,Y)\in T$, con $T$ zona del primo quadrante del piano $X\times Y$ che sta sopra la bisettrice $Y=X$, e poi integrare di conseguenza:
+\begin{gather*}
+\begin{aligned}
+\PP(Y>X)&=\PP((X,Y)\in T)= \\
+&=\int_T f_{(X,Y)}(x,y) \text{ d}x\text{d}y= \\
+&=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\text{ d}x\text{d}y= \\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
+&=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\text{ d}x}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
+&=\frac{1}{2}\underbrace{\int_0^{+\infty}2\lambda e^{-2\lambda x}\text{ d}x}_{=1}=\\
+&=\frac{1}{2}
+\end{aligned}
+\end{gather*}
+Esiste un secondo modo, più teorico ma meno calcoloso, per risolvere l'esercizio. Infatti possiamo osservare che
+\begin{equation*}
+1=\PP(X<Y)+\PP(X=Y)+\PP(X>Y)
+\end{equation*}
+Diamo un'occhiata ai tre termini:
+\begin{enumerate}
+\item $\PP(X<Y)$ è la nostra incognita.
+\item $\PP(X=Y)=\PP((X,Y)\in r)$ con $r$ bisettrice del primo quadrante del piano $X\times Y$; ma
+\begin{enumerate} 
+\item [(i)] il vettore $(X,Y)$ è assolutamente continuo rispetto la misura di Lebesgue su $\mathbb{R}^2$
+\item [(ii)] la retta $r$ è un sottospazio di $\mathbb{R}^2$ di dimensione $1$ e di conseguenza ha misura di Lebesgue $m_2=0$
+\end{enumerate}
+$\Rightarrow \PP(X=Y)=0$.
+\item $\PP(X>Y)=\PP(X<Y)$ perché il ruolo di $X$ e $Y$ è interscambiabile dato che hanno la stessa distribuzione.
+\end{enumerate}
+Allora $1=2\ \PP(X<Y)\ \Rightarrow\ \PP(Y>X)=\frac{1}{2}$.
+
+\Soluzione{}
+\begin{nb}
+$\\$Prima di procedere con la risoluzione dell'esercizio vogliamo ricordare i seguenti integrali, in modo tale da rendere più fluidi i futuri passaggi:
+\begin{enumerate}
+\item [$(\alpha)$]
+\begin{gather*}
+\begin{aligned}
+\int te^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}\begin{Bmatrix}
+\text{fattore finito }&f=t \\ \text{fattore differenziale }&g=-e^{-t}
+\end{Bmatrix}=  \\
+&=fg-\int f'g\text{ d}t=\\
+&=-te^{-t}-\int-e^{-t}\text{ d}t=\\
+&=-te^{-t}+\int e^{-t}\text{ d}t=\\
+&=-te^{-t}-e^{-t}=\\
+&=-(t+1)e^{-t}
+\end{aligned}
+\end{gather*}
+\item [$(\alpha^1)$]
+\begin{equation*}
+\int_0^{+\infty} te^{-t}\text{ d}t\overset{\underset{(\alpha)}{}}{=}\left[-(t+1)e^{-t}\right]_0^{+\infty}=1
+\end{equation*}
+\item [$(\beta)$]
+\begin{gather*}
+\begin{aligned}
+\int t^2e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^2e^{-t}-\int-2te^{-t}\text{ d}t=\\
+&=-t^2e^{-t}+2\int te^{-t}\text{ d}t=\\
+&\overset{\underset{(\alpha)}{}}{=}-t^2e^{-t}-2(t+1)e^{-t}=\\
+&=-(t^2+2t+2)e^{-t}
+\end{aligned}
+\end{gather*}
+\item [$(\beta^1)$]
+\begin{equation*}
+\int_0^{+\infty} t^2e^{-t}\text{ d}t\overset{\underset{(\beta)}{}}{=}\left[-(t^2+2t+2)e^{-t}\right]_0^{+\infty}=2
+\end{equation*}
+\item [$(\gamma)$]
+\begin{gather*}
+\begin{aligned}
+\int t^3e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^3e^{-t}-\int-3t^2e^{-t}\text{ d}t=\\
+&=-t^3e^{-t}+3\int t^2e^{-t}\text{ d}t=\\
+&\overset{\underset{(\beta)}{}}{=}-t^3e^{-t}-3(t^2+2t+2)e^{-t}=\\
+&=-(t^3+3t^2+6t+6)e^{-t}
+\end{aligned}
+\end{gather*}
+\item [$(\gamma^1)$]
+\begin{equation*}
+\int_0^{+\infty} t^3e^{-t}\text{ d}t\overset{\underset{(\gamma)}{}}{=}\left[-(t^3+3t^2+6t+6)e^{-t}\right]_0^{+\infty}=6
+\end{equation*}
+\item [$(\delta)$]
+\begin{gather*}
+\begin{aligned}
+\int t^4e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^4e^{-t}-\int-4t^3e^{-t}\text{ d}t=\\
+&=-t^4e^{-t}+4\int t^3e^{-t}\text{ d}t=\\
+&\overset{\underset{(\gamma)}{}}{=}-t^4e^{-t}-4(t^3+3t^2+6t+6)e^{-t}=\\
+&=-(t^4+4t^3+12t^2+24t+24)e^{-t}
+\end{aligned}
+\end{gather*}
+\item [$(\delta^1)$]
+\begin{equation*}
+\int_0^{+\infty} t^4e^{-t}\text{ d}t\overset{\underset{(\delta)}{}}{=}\left[-(t^4+4t^3+12t^2+24t+24)e^{-t}\right]_0^{+\infty}=24
+\end{equation*}
+$\,$
+\end{enumerate}
+con \textit{pp} ad indicare l'integrazione per parti.
+\end{nb}
+Ora possiamo procedere con l'esercizio vero e proprio.
+
+
+\begin{enumerate}
+\item [(a)] Conoscendo la densità congiunta del vettore aleatorio assolutamente continuo $(X,Y)$, per calcolare le leggi marginali usiamo il seguente toerema.
+\begin{theorem}
+\label{th2}
+$\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo di densità $f_{(X,Y)}$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=\int_\RR f_{(X,Y)}(x,y)\text{ d}y&\forall x\in\RR \\
+&f_Y(y)=\int_\RR f_{(X,Y)}(x,y)\text{ d}x&\forall y\in\RR
+\end{aligned}
+\end{gather*}
+Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza tra $X$ e $Y$, come abbiamo fatto nell'esercizio $3$.
+\end{theorem}
+Prima di procedere però è sempre meglio capire come è fatto il supporto della densità congiunta, così da capire quale sarà il supporto delle marginali:
+\begin{equation*}
+S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ f_{(X,Y)}(x,y)>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+\end{equation*}
+\fg{0.5}{figura_1_cap_7}
+Dal grafico della densità congiunta deduciamo un'importante informazione su $X$ e $Y$: $X,Y\geq 0$ quasi certamente, cioè $f_X(x)=0$ per ogni $x<0$ e $f_Y(y)=0$ per ogni $y<0$. Quindi fissiamo $x\geq 0$ e procediamo con il calcolo della prima legge marginale:
+\begin{gather*}
+\begin{aligned}
+f_X(x)&=\int_\RR f_{(X,Y)}(x,y)\text{ d}y= \\
+&=\int_x^{+\infty}x(y-x)e^{-y}\text{ d}y= \\
+&=\begin{Bmatrix}
+t:=y-x \\
+\text{d}t=\text{d}y \\
+y\to x\Rightarrow t\to 0 \\ -y=-t-x
+\end{Bmatrix}= \\
+&=x\int_0^{+\infty}te^{-t-x}\text{ d}t=\\
+&=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\text{ d}t}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=\\
+&=xe^{-x}
+\end{aligned}
+\end{gather*}
+con $(\alpha^2)$ che sintetizza la seguente osservazione: data $T\sim\mathcal{E}(\lambda)$ con $\lambda=1$ si ha per definizione
+\begin{equation*}
+\mathbb{E}[T]:=\int_0^{+\infty}\lambda te^{-t}\text{ d}t=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
+\end{equation*}
+$\,$
+Ora fissiamo $y\geq 0$ e calcoliamo la seconda legge marginale:
+\begin{gather*}
+\begin{aligned}
+f_Y(y)&=\int_\RR f_{(X,Y)}(x,y)\text{ d}x= \\
+&=\int_0^y x(y-x)e^{-y}\text{ d}x= \\
+&=e^{-y}\left( y\int_0^y x\text{ d}x-\int_0^yx^2\text{ d}x  \right)=\\
+&=e^{-y}\left( y\left[\frac{x^2}{2}    \right]_0^y-\left[\frac{x^3}{3}    \right]  \right)=\\
+&=e^{-y}\left( \frac{y^3}{2}  -\frac{y^3}{3} \right)=\\
+&=\frac{1}{6}\ y^3e^{-y}
+\end{aligned}
+\end{gather*}
+Ricapitolando, abbiamo ottenuto
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=xe^{-x}\ \Ind_{[0,+\infty)}(x) \\
+&f_Y(y)=\frac{1}{6}\ y^3e^{-y}\ \Ind_{[0,+\infty)}(y)
+\end{aligned}
+\end{gather*}
+Ricordando che
+\begin{oss}
+$\\$Sia $X\sim\Gamma(\alpha,\lambda)$ con $\alpha,\lambda>0$. Allora
+\begin{gather*}
+\begin{aligned}
+f_X(x)&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}e^{-\lambda x}\ \ \ \ \ x\in\RR \\
+\Gamma(\alpha)&=(\alpha-1)! \\
+\EE[X]&=\frac{\alpha}{\lambda} \\
+Var(X)&=\frac{\alpha}{\lambda^2}
+\end{aligned}
+\end{gather*}
+Ricorda: quando si ha \textit{densità=polinomio}$\cdot$\textit{esponenziale} è quasi sempre una $\Gamma$!
+\end{oss}
+riconosciamo che $X\sim\Gamma(2,1)$ e $Y\sim\Gamma(4,1)$.
+\item [(b)] Abbiamo già visto con i teoremi \ref{th1} e \ref{th2} che se $X\Bot Y$ allora la densità congiunta del vettore $(X,Y)$ fattorizza nelle due marginali. Questo è sufficiente per concludere che in questo caso $X\not\Bot Y$.$\\$In realtà si potrebbe usare anche il seguente teorema
+\begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
+\label{th3}
+$\\$Siano $X$ e $Y$ due variabili aleatorie continue con densità $f_X$ su $S_X$ e $f_Y$ su $S_Y$ tali che $X\Bot Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $f_{(X,Y)}$ su $S_{(X,Y)}$. Allora
+\begin{equation*}
+S_{(X,Y)}=S_X\cdot S_Y
+\end{equation*}
+\end{theorem}
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+S_X&=[0,+\infty) \\
+S_Y&=[0,+\infty) \\
+S_{(X,Y)}&=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+\end{aligned}
+\end{gather*}
+e quindi anche in questo caso concludiamo che $X\not\Bot Y$.
+\item [(c)] Se le variabili $X,Y$ fossero state indipendenti sarebbe stato banale il calcolco:
+\begin{equation*}
+\PP(X\leq 2, Y\leq 3)=\PP(X\leq 2)\cdot \PP(Y\leq 3)
+\end{equation*}
+Tuttavia non lo sono, quindi dobbiamo ricondurre l'evento $X\leq 2, Y\leq 3$ alla coppia $(X,Y)$, cioè
+\begin{gather*}
+\begin{aligned}
+\PP(X\leq 2, Y\leq 3)&=\PP((X,Y)\in(-\infty,2]\times(-\infty,3])=\\
+&=\int_{-\infty}^2\left(\int_{-\infty}^3f_{(X,Y)}(x,y)\text{ d}y   \right)\text{d}x=
+\end{aligned}
+\end{gather*}
+che per 
+\fg{0.5}{figura_2_cap_7}
+diventa
+\begin{gather*}
+\begin{aligned}
+&=\int_0^2\left(\int_x^3x(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
+&=\int_0^2x\left(\underbrace{\int_x^3ye^{-y}\text{ d}y}_{(\alpha)}-x\int_x^3e^{-y}\text{ d}y   \right)\text{d}x=\\
+&=\int_0^2x\left(  \left[-(y+1)e^{-y}     \right]_x^3-x\left[-e^{-y}     \right]_x^3    \right)\text{d}x=\\
+&=\int_0^2 x\left(-4e^{-3}+(x+1)e^{-x}+xe^{-3}-xe^{-x}   \right)\text{d}x=\\
+&=\int_0^2 x\left(-4e^{-3}+e^{-x}+xe^{-3}   \right)\text{d}x=\\
+&=-4e^{-3}\int_0^2 x\text{ d}x+\underbrace{\int_0^2xe^{-x}\text{ d}x}_{(\alpha)}+e^{-3}\int_0^2{x^2}\text{ d}x=\\
+&=-4e^{-3}\left[\frac{x^2}{2}   \right]_0^2+\left[-(x+1)e^{-x}   \right]_0^2+e^{-3}\left[\frac{x^3}{3}   \right]_0^2=\\
+&=-8e^{-3}-3e^{-2}+1+\frac{8}{3}\ e^{-3}=\\
+&=1-3e^{-2}-\frac{16}{3}\ e^{-3}
+\end{aligned}
+\end{gather*}
+\item [(d)] Ricordiamo che
+\begin{oss}
+$\\$Il coefficiente di correlazione lineare si calcola con
+\begin{equation*}
+\rho_{X,Y}:=\frac{Cov(X,Y)}{\sqrt{Var(X)\cdot Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{Var(X)\cdot Var(Y)}}
+\end{equation*}
+\end{oss}
+Al volo possiamo già dire che $\EE[X]=2=Var(X)$ e $\EE[Y]=4=Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il seguente risultato
+\begin{theorem}[Regola del valore atteso per vettori continui]
+\label{th4}
+$\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $f_{(X,Y)}$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
+\begin{enumerate}
+\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot f_{(X,Y)}\in L^1(m_2)$
+\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)f_{(X,Y)}(x,y) \text{ d}x\text{d}y$
+\end{enumerate}
+\end{theorem}
+Quindi
+\begin{gather*}
+\begin{aligned}
+\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xyf_{(X,Y)}(x,y) \text{ d}x\text{d}y=\\
+&=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
+&=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\text{ d}y}_{(\beta)}   \right)\text{d}x-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\text{ d}y}_{(\alpha)}   \right)\text{d}x=\\
+&=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\text{d}x-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\text{d}x=\\
+&=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\text{ d}x-\int_0^{+\infty}x^3(x+1)e^{-x}\text{ d}x=\\
+&=\int_0^{+\infty}x^4e^{-x}   \text{ d}x+2\int_0^{+\infty}x^3e^{-x}   \text{ d}x+2\int_0^{+\infty}x^2e^{-x}   \text{ d}x-\int_0^{+\infty}x^4e^{-x}   \text{ d}x-\int_0^{+\infty}  x^3e^{-x} \text{ d}x=\\
+&=\underbrace{\int_0^{+\infty}x^3e^{-x}   \text{ d}x}_{=6\text{ per }(\gamma^1)}+2\underbrace{\int_0^{+\infty}x^2e^{-x}   \text{ d}x}_{=2\text{ per }(\beta^1)}=\\
+&=6+4=\\
+&=10
+\end{aligned}
+\end{gather*}
+E finalmente
+\begin{equation*}
+\rho_{X,Y}=\frac{10-2\cdot 4}{\sqrt{2\cdot 4}}=\frac{2}{2\sqrt{2}}=\frac{1}{\sqrt{2}}=\frac{\sqrt{2}}{2}
+\end{equation*}
+\item [(e)] Banalmente basta prendere la densità data dal prodotto delle marginali, cioè
+\begin{equation*}
+\widetilde{f}_{(X,Y)}(x,y)=xe^{-x}\ \Ind_{[0,+\infty)}(x)\cdot \frac{1}{6}\ y^3e^{-y}\ \Ind_{[0,+\infty)}(y)
+\end{equation*}
+\end{enumerate}
+
+\Soluzione{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
