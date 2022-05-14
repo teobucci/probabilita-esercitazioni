@@ -8,18 +8,21 @@
 \newcommand{\NNN}{\mathcal{N}}
 \newcommand{\AAA}{\mathcal{A}}
 \newcommand{\EEE}{\mathcal{E}}
+\newcommand{\CCC}{\mathcal{C}}
 \newcommand{\GGG}{\mathcal{G}}
 \newcommand{\PPP}{\mathcal{P}}
 \newcommand{\UUU}{\mathcal{U}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\indep}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
 \newcommand{\Bc}{\mathcal{B}}
+\newcommand{\BBB}{\mathcal{B}}
 \newcommand{\CC}{\mathbb C}
 \newcommand{\dP}{\text{ d}\mathbb{P}}
 \newcommand{\Lu}{\mathcal{L}^1}
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\Cz}{\mathcal{C}^0}
 \newcommand{\Cu}{\mathcal{C}^1}
+\newcommand{\Ct}{\Cz\cap\widetilde{\CCC}^1}
 \newcommand{\SDP}{(\Omega,\AAA,\PP)}
 \newcommand{\SDE}{(E,\EEE)}
 \newcommand{\SDF}{(F,\FFF)}
@@ -40,79 +43,258 @@
 \newcommand{\inte}{\int_{\mathbb{R}}}
 \newcommand{\intf}{\int_{\mathbb{R}^2}}
 
-\ParteEsercizi
+% Introduzione
 
-\Esercizio{}
+\section{Introduzione}
+Vogliamo descrivere uno ad uno gli strumenti che serviranno a svolgere gli esercizi di questo foglio di calcolo.
 
-\Esercizio{}
+\subsection{Integrali multipli}
+Rinfreschiamo dal corso di Analisi 2 le seguenti definizioni.
 
-\Esercizio{}
-Date $X,Y$ indipendenti ed entrambe di legge $\mathcal{E}(\lambda)$, $\lambda>0$, si calcoli $\PP(Y>X)$.
+\begin{definition}[Domini normali]$\\$
+Siano $f_1(x), f_2(x)$ due funzioni continue in $[a,b]\subseteq\RR$ e tali che che $f_1(x)\leq f_2(x)$ $\ \forall x\in[a,b]$. Allora l'insieme
+\[
+D:=\{(x,y)\in\RR^2\ :\ x\in[a,b],\ f_1(x)\leq y\leq f_2(x)   \}
+\]
+è misurabile ed è chiamato dominio normale rispetto all'asse $x$.
+\fg{0.3}{9_1}
+Siano $f_3(y), f_4(y)$ due funzioni continue in $[c,d]\subseteq\RR$ e tali che che $f_3(y)\leq f_4(y)$ $\ \forall y\in[c,d]$. Allora l'insieme
+\[
+E:=\{(x,y)\in\RR^2\ :\ f_3(y)\leq x\leq f_4(y),\ y\in[c,d]   \}
+\]
+è misurabile ed è chiamato dominio normale rispetto all'asse $y$.
+\fg{0.3}{9_2}
+\end{definition}
+Osserviamo che esistono anche domini normali rispetto entrambi gli assi.
 
-\Esercizio{}
-Sia $(X,Y)$ un vettore aleatorio con densità
-\begin{equation*}
-f_{(X,Y)}(x,y)=\begin{cases} x(y-x)e^{-y},&0<x<y, \\ 0,&\text{altrove}.\end{cases}
-\end{equation*}
-\begin{enumerate}
-\item [(a)] Calcolare le leggi di $X$ e di $Y$.
-\item [(b)] $X$ e $Y$ sono indipendenti?
-\item [(c)] Calcolare $\PP(X\leq 2,Y\leq 3)$.
-\item [(d)] Calcolare il coefficiente di correlazione $\rho_{X,Y}$.
-\item [(e)] Trovare una diversa densità congiunta avente le stesse densità marginali.
-\end{enumerate}
+\begin{definition}[Domini normali regolari]$\\$
+Il dominio normale $D$ è detto normale regolare se $f_1,f_2\in\Cu([a,b])$ con $f_1(x)<f_2(x)$ $\ \forall x\in[a,b]$.
 
-\ParteSoluzioni
+Analogamente, il dominio normale $E$ è detto normale regolare se $f_3,f_4\in\Cu([c,d])$ con $f_3(y)<f_4(y)$ $\ \forall y\in[c,d]$.
+\end{definition}
 
-\Soluzione{}
+\begin{definition}[Domini regolari]$\\$
+Un dominio $\Omega\subseteq\RR^2$ si dice regolare se è l'unione finita di domini normali regolari privi di punti interni comuni.
+\end{definition}
+Osserviamo che per costruzione un dominio regolare è chiuso e limitato, quindi è anche compatto.
 
-\Soluzione{}
-
-\Soluzione{}
-Il vettore aleatorio $(X,Y):\Omega\to\mathbb{R}^2$ è assolutamente continuo; la sua densità $f_{(X,Y)}(x,y)$, essendo $X$ e $Y$ indipendenti, è data, grazie al seguente teorema, dal prodotto tra le due densità marginali
-\begin{gather*}
-\begin{aligned}
-&f_X(x)=\lambda e^{-\lambda x}\ \Ind_{[0,+\infty)}(x) \\
-&f_Y(y)=\lambda e^{-\lambda y}\ \Ind_{[0,+\infty)}(y)
-\end{aligned}
-\end{gather*}
-\begin{theorem}
-\label{th1}
-$\\$$X\Bot Y\ \Longleftrightarrow\ f_{(X,Y)}(x,y)=f_X(x)\cdot f_Y(y)$.
+Siamo pronti per enunciare
+\begin{theorem}[Di Fubini]$\\$
+\label{introth1}
+Sia $D$ un dominio normale rispetto all'asse $x$ in $[a,b]$. Allora data $f:D\to\RR$ continua si ha
+\[
+\iint_{D}f(x,y)\dxy=\inta \left(\int_{f_1(x)}^{f_2(x)}f(x,y)\dy  \right)\dx
+\]
+Sia $E$ un dominio normale rispetto all'asse $y$ in $[c,d]$. Allora data $f:R\to\RR$ continua si ha
+\[
+\iint_{E}f(x,y)\dxy=\intaa \left(\int_{f_3(y)}^{f_4(y)}f(x,y)\dx  \right)\dy
+\]
 \end{theorem}
-Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $(X,Y)\in T$, con $T$ zona del primo quadrante del piano $X\times Y$ che sta sopra la bisettrice $Y=X$, e poi integrare di conseguenza:
+
+\begin{theorem}[Di Jacobi]$\\$
+\label{introth2}
+Siano $\Omega,\Omega'\subseteq\RR^2$ due domini regolari. Sia $g:\Omega'\to\Omega$ il campo vettoriale che associa ad ogni coppia $(u,v)\in\Omega'$ la coppia $(x,y)\in\Omega$. Se
+\begin{enumerate}
+\item [(i)] $g$ è biunivoca
+\item [(ii)] $g\in\Cu(\Omega')$
+\item [(iii)] $g$ tale che $\det J_g(u,v)\neq0$ per ogni coppia  $(u,v)\in\Omega'$
+\end{enumerate}
+allora data una funzione $f:\Omega\to\RR$ continua si ha che
 \begin{gather*}
 \begin{aligned}
-\PP(Y>X)&=\PP((X,Y)\in T)= \\
-&=\int_T f_{(X,Y)}(x,y) \text{ d}x\text{d}y= \\
-&=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\text{ d}x\text{d}y= \\
-&=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
-&=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
-&=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\text{ d}x}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
-&=\frac{1}{2}\underbrace{\int_0^{+\infty}2\lambda e^{-2\lambda x}\text{ d}x}_{=1}=\\
-&=\frac{1}{2}
+\iint_\Omega f(x,y)\dxy&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot |\det J_{g^{-1}}(u,v)| \text{ d}u\text{d}v \\
+&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot \frac{1}{|\det J_{g}(u,v)|} \text{ d}u\text{d}v
 \end{aligned}
 \end{gather*}
-Esiste un secondo modo, più teorico ma meno calcoloso, per risolvere l'esercizio. Infatti possiamo osservare che
-\begin{equation*}
-1=\PP(X<Y)+\PP(X=Y)+\PP(X>Y)
-\end{equation*}
-Diamo un'occhiata ai tre termini:
-\begin{enumerate}
-\item $\PP(X<Y)$ è la nostra incognita.
-\item $\PP(X=Y)=\PP((X,Y)\in r)$ con $r$ bisettrice del primo quadrante del piano $X\times Y$; ma
-\begin{enumerate} 
-\item [(i)] il vettore $(X,Y)$ è assolutamente continuo rispetto la misura di Lebesgue su $\mathbb{R}^2$
-\item [(ii)] la retta $r$ è un sottospazio di $\mathbb{R}^2$ di dimensione $1$ e di conseguenza ha misura di Lebesgue $m_2=0$
-\end{enumerate}
-$\Rightarrow \PP(X=Y)=0$.
-\item $\PP(X>Y)=\PP(X<Y)$ perché il ruolo di $X$ e $Y$ è interscambiabile dato che hanno la stessa distribuzione.
-\end{enumerate}
-Allora $1=2\ \PP(X<Y)\ \Rightarrow\ \PP(Y>X)=\frac{1}{2}$.
+\end{theorem}
+Vediamo subito un esempio: calcoliamo l'integrale doppio di $$f(x,y)=e^{2x-y} \text{ su } \Omega=\{(x,y)\in\RR^2\ :\ 2x\leq y\leq2x+5,\ -3x\leq y\leq 15/2-3x  \}$$
+Prima di partire riscriviamo meglio l'insieme di integrazione
+\[
+\Omega=\{(x,y)\in\RR^2\ :\ 0\leq y-2x\leq5,\ 0\leq y+3x\leq 15/2  \}
+\]
+Allora prendendo $g$ tale che
+\[
+(u,v)=(y-2x,y+3x)=g(x,y)
+\]
+si rispettano tutte le ipotesi del teorema di Jacobi (a voi i conti). Allora è ben definita l'inversa di $g$
+\[
+g^{-1}(u,v)=((v-u)/5,(3u+2v)/5)=(x,y)
+\]
+con il suo jacobiano
+\[
+J_{g^{-1}}(u,v)=\begin{pmatrix}
+\frac{\partial ((v-u)/5)}{\partial u} &\frac{\partial ((v-u)/5)}{\partial v}  \\
+\frac{\partial ((3u+2v)/5)}{\partial u} &\frac{\partial ((3u+2v)/5)}{\partial v}  \\
+\end{pmatrix} =\begin{pmatrix}
+-1/5 & 1/5 \\
+3/5 & 2/5 \\
+\end{pmatrix}
+\]
+tale che $\det J_{g^{-1}}(u,v)=-1/5$. Allora
+\begin{gather*}
+\begin{aligned}
+\iint_\Omega e^{2x-y}\dxy&=\iint_{[0,0.5]\times[0,15/2]} e^{-u}\cdot\frac{1}{5}\text{ d}u\text{d}v=\\
+&=\frac{1}{5}\int_0^{0.5}e^{-u}\text{ d}u\int_0^{15/2}1\text{ d}v=\\
+&=\cdots =\\
+&=\frac{3}{2}(1-e^{-5})
+\end{aligned}
+\end{gather*}
+\fg{0.7}{9_3}
+Ora interpreteremo questo importante teorema in funzione delle nozioni probabilistiche del corso.
 
-\Soluzione{}
-\begin{nb}
-$\\$Prima di procedere con la risoluzione dell'esercizio vogliamo ricordare i seguenti integrali, in modo tale da rendere più fluidi i futuri passaggi:
+\subsection{Formule di Jacobi in Probabilità}
+Nel capitolo sulle variabili aleatori continue abbiamo già visto come applicare la formula di Jacobi, anche se abbiamo anche detto che nel caso 1 - dimensionale non si riesce a comprendere la vera portata di tale enunciato, in quanto è più semplice passare per il calcolo della funzione di ripartizione. Per completezza, ecco il teorema
+\begin{theorem}[Di Jacobi per le variabili continue]$\\$
+\label{introth3}
+Sia $X$ variabile aleatoria assolutamente continua con densità $f_X$. Inoltre sia $g:\RR\to\RR$ tale che
+\begin{enumerate}
+\item [(i)] $g$ è iniettiva
+\item [(ii)] $g\in\Cu(\RR)$
+\item [(iii)] $g$ tale che $g'(x)\neq0$ per ogni $x\in\RR$
+\end{enumerate}
+Allora $Y=g(X)$ è una variabile aleatoria assolutamente continua con densità
+\[
+f_Y(y)=\begin{cases}
+f_X(g^{-1}(y))\cdot|(g^{-1}(y))'|   &\text{ se }y\in g(\RR) \\
+0&\text{ altrove, cioè dove }y\not\in g(\RR)
+\end{cases}
+\]
+Attenzione, delle volte se $X$ prende valori in un certo $S\subseteq\RR$ aperto, allora è comodo definire $g:S\to\RR$ perché potrebbero esserci $g$ non iniettive o derivabili in $\RR$ ma iniettive o derivabili in $S$.
+\end{theorem}
+Si veda l'esercizio 7 per un esempio pratico.
+
+Ora vediamo il caso $n$ - dimensionale
+\begin{theorem}[Di Jacobi per i vettori continui]$\\$
+\label{introth4}
+Sia $\SDP$ uno spazio di probabilità e $X:\Omega\to\RR^n$ un vettore aleatorio assolutamente continuo con densità $f_X:\RR^n\to\RR$. Inoltre sia $g:\RR^n\to\RR^n$ una funzione tale che
+\begin{enumerate}
+\item [(i)] $g$ è iniettiva
+\item [(ii)] $g\in\Cu(\RR^n)$
+\item [(iii)] $g$ tale che $\det J_g(x)\neq0$ per ogni $x\in\RR^n$
+\end{enumerate}
+Allora $g:\RR^n\to g(\RR^n)$ è biiettiva, ha inversa $g^{-1}:g(\RR^n)\to\RR^n$ anch'essa di classe $\Cu$, e la variabile aleatoria $Y:=g\circ X:\Omega\to\RR^n$ è assolutamente continua con densità
+\[
+f_Y(y)=\begin{cases}
+f_X(g^{-1}(y))\cdot|\det J_{g^{-1}}(y)|   &\text{ se }y\in g(\RR^n) \\
+0&\text{ altrove, cioè dove }y\not\in g(\RR^^n)
+\end{cases}
+\]
+dove
+\[
+J_{g^{-1}}(y)=\frac{1}{J_g(g^{-1}(y))}
+\]
+Attenzione: $g$ non cambia le dimensioni del vettore; inoltre delle volte se $X$ prende valori in un certo $S\subseteq\RR^n$ aperto (cioè $\PP(X\in S)=1$, $X\in S$ quasi certamente), allora è comodo definire $g:S\to\RR^n$ perché potrebbero esserci $g$ non iniettive o derivabili in $\RR^n$ ma iniettive o derivabili in $S$.
+\end{theorem}
+Si veda l'esercizio 9 per un esempio pratico.
+
+\subsection{Altri teoremi utili}
+Richiamiamo qui altri teoremi che ci servanno per svolgere gli esercizi.
+
+\begin{theorem}[Calcolo delle leggi marginali]
+\label{introth5-}
+$\\$Se il vettore aleatorio $(X,Y)$ è continuo allora $X$ e $Y$ sono variabili aleatorie continue (il viceversa non vale).
+\end{theorem}
+
+\begin{theorem}[Calcolo delle leggi marginali]
+\label{introth5}
+$\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $f_{(X,Y)}$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=\int_\RR f_{(X,Y)}(x,y)\text{ d}y&\forall x\in\RR \\
+&f_Y(y)=\int_\RR f_{(X,Y)}(x,y)\text{ d}x&\forall y\in\RR
+\end{aligned}
+\end{gather*}
+\end{theorem}
+
+Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza, cioè
+\begin{theorem}[Fattorizzazione della legge congiunta]
+\label{introth6}
+$\\$$X\indep Y\ \Longleftrightarrow\ f_{(X,Y)}(x,y)=f_X(x)\cdot f_Y(y)$
+\end{theorem}
+
+\begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
+\label{introth7}
+$\\$Siano $X$ e $Y$ due variabili aleatorie continue e indipendenti con densità rispettivamente $f_X$ su $S_X$ e $f_Y$ su $S_Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $f_{(X,Y)}$ su $S_{(X,Y)}$. Allora deve valere che
+\begin{equation*}
+S_{(X,Y)}=S_X\cdot S_Y
+\end{equation*}
+\end{theorem}
+
+\begin{theorem}[Regola del valore atteso per vettori continui]
+\label{introth8}
+$\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $f_{(X,Y)}$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
+\begin{enumerate}
+\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot f_{(X,Y)}\in L^1(m_2)$
+\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)f_{(X,Y)}(x,y) \text{ d}x\text{d}y$
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Risultato notevole (esercizio 4 del foglio 5)]
+\label{introth9}
+$\\$Data $X$ variabile aleatoria positiva e continua, denotata $F$ la sua funzione di ripartizione, allora
+\[
+\EE[X]=\intc(1-F(x))\dx
+\]
+\end{theorem}
+
+\begin{theorem}[Coefficiente di correlazione unitario]
+\label{introth10}
+$\\$Siano $X,Y\in L^2$ tali che $Var(X),Var(Y)>0$. Allora
+\[
+|\rho_{X,Y}|=1\ \Longleftrightarrow\ \exists a\neq 0,\ \exists b\in\RR\ :\ Y=aX+b
+\]
+\end{theorem}
+
+\begin{theorem}[Alcune proprietà di valore atteso, varianza e covarianza]
+\label{introth11}
+$\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
+\begin{enumerate}
+\item [(a)] $Cov(X,X)=Var(X)$
+\item [(b)] $X\indep Y\ \Longrightarrow\ Cov(X,Y)=0\ \Longrightarrow\ \rho_{X,Y}=0$
+\item [(c)] $\EE(aX+b)=a\EE[X]$
+\item [(d)] $X\indep Y\ \Longrightarrow\ \EE[XY]=\EE[X] \EE[Y]$
+\item [(e)] $Var(aX+b)=a^2Var(X)$
+\item [(f)] $Cov(aX+b,cY+d)=Cov(aX,cY)=acCov(X,Y)$
+\item [(g)] $\rho_{aX+b,cY+d}=\rho_{X,Y}$
+\item [(h)] $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
+\item [(i)] $X\indep Y\ \Longrightarrow\ Var(X+Y)=Var(X)+Var(Y)$
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Bilinearità della covarianza]
+\label{introth12}
+$\\$Dati $X,Y,Z,W\in L^2$ e $a,b,c,d\in\RR$ si ha
+\[
+Cov(aX+bY,cW+dZ)=acCov(X,W)+adCov(X,Z)+bcCov(Y,W)+bdCov(Y,Z)
+\]
+\end{theorem}
+
+\begin{theorem}[Valore atteso e varianza per trasformazioni affini]
+\label{introth13}
+$\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine $Y:=AX+b$ con $A\in\RR^{m\times n},\ b\in\RR^{m}$ è un vettore aleatorio in $\RR^m$ con
+\begin{gather*}
+\begin{aligned}
+\EE[Y]&=A\cdot\EE[X]+b \\
+Var(Y)&=A\cdot Var(X)\cdot A^T
+\end{aligned}
+\end{gather*}
+\end{theorem}
+
+Ora anticipiamo due risultati notevoli che verranno poi dimostrati nelle pagine a seguire.
+\begin{theorem}[Risultato notevole (esercizio 13 del foglio 7)]
+\label{introth14}
+$\\$Date $X$ e $Y$ di legge congiunta continua con densità $f_{(X,Y)}$, si consideri $Z=X+Y$. Allora $Z$ èuna variabile aleatoria continua con densità
+\[
+f_Z(z)=\intb f_{(X,Y)}(z-y,y)\dy
+\]
+\end{theorem}
+\begin{theorem}[Risultato notevole (esercizio 2 del foglio 7)]
+\label{introth15}
+$\\$Due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$ q.o.
+\end{theorem}
+
+\subsection{Qualche integrale notevole}
+ Vogliamo infine ricordare i seguenti integrali (risolti integrando \textit{pp}: per parti), in modo tale da rendere più fluidi i futuri passaggi.
 \begin{enumerate}
 \item [$(\alpha)$]
 \begin{gather*}
@@ -157,64 +339,314 @@ $\\$Prima di procedere con la risoluzione dell'esercizio vogliamo ricordare i se
 \begin{equation*}
 \int_0^{+\infty} t^3e^{-t}\text{ d}t\overset{\underset{(\gamma)}{}}{=}\left[-(t^3+3t^2+6t+6)e^{-t}\right]_0^{+\infty}=6
 \end{equation*}
-\item [$(\delta)$]
-\begin{gather*}
-\begin{aligned}
-\int t^4e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^4e^{-t}-\int-4t^3e^{-t}\text{ d}t=\\
-&=-t^4e^{-t}+4\int t^3e^{-t}\text{ d}t=\\
-&\overset{\underset{(\gamma)}{}}{=}-t^4e^{-t}-4(t^3+3t^2+6t+6)e^{-t}=\\
-&=-(t^4+4t^3+12t^2+24t+24)e^{-t}
-\end{aligned}
-\end{gather*}
-\item [$(\delta^1)$]
-\begin{equation*}
-\int_0^{+\infty} t^4e^{-t}\text{ d}t\overset{\underset{(\delta)}{}}{=}\left[-(t^4+4t^3+12t^2+24t+24)e^{-t}\right]_0^{+\infty}=24
-\end{equation*}
-$\,$
+
 \end{enumerate}
-con \textit{pp} ad indicare l'integrazione per parti.
-\end{nb}
-Ora possiamo procedere con l'esercizio vero e proprio.
 
+% Fine introduzione
 
+\newpage
+
+\ParteEsercizi
+
+\Esercizio{} % es 1 manca sol
+Si esibisca un esempio di due variabili aleatorie continue $X$ e $Y$ con legge congiunta continua. \\
+Si esibisca poi un esempio di due variabili aleatorie continue $X$ e $Y$ con legge congiunta non continua.
+
+\Esercizio{$^\ast$}
+Si mostri che due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$ q.o.
+
+\Esercizio{}
+Date $X,Y$ indipendenti ed entrambe di legge $\mathcal{E}(\lambda)$, $\lambda>0$, si calcoli $\PP(Y>X)$.
+
+\Esercizio{}
+Sia $(X,Y)$ un vettore aleatorio con densità
+\begin{equation*}
+f_{(X,Y)}(x,y)=\begin{cases} x(y-x)e^{-y},&0<x<y, \\ 0,&\text{altrove}.\end{cases}
+\end{equation*}
 \begin{enumerate}
-\item [(a)] Conoscendo la densità congiunta del vettore aleatorio assolutamente continuo $(X,Y)$, per calcolare le leggi marginali usiamo il seguente toerema.
-\begin{theorem}
-\label{th2}
-$\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo di densità $f_{(X,Y)}$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
+\item [(a)] Calcolare le leggi di $X$ e di $Y$.
+\item [(b)] $X$ e $Y$ sono indipendenti?
+\item [(c)] Calcolare $\PP(X\leq 2,Y\leq 3)$.
+\item [(d)] Calcolare il coefficiente di correlazione $\rho_{X,Y}$.
+\item [(e)] Trovare una diversa densità congiunta avente le stesse densità marginali.
+\end{enumerate}
+
+\Esercizio{}
+Sia $(X,Y)$ un vettore aleatorio di densità
+\[
+\fXYxy=\begin{cases}
+xe^{-(x+y)} &\text{se }x>0,y>0 \\
+0 &\text{altrove}
+\end{cases}
+\]
+\begin{enumerate}
+\item [(a)] Quali sono le leggi di $X$ e $Y$? Le variabili aleatorie $X$ e $Y$ sono indipendenti?
+\item [(b)] Calcolare $Var(X+Y)$.
+\item [(c)] Si calcolino i valori attesi di $U=\min(X,Y)$ e $V=\max(X,Y)$.
+\end{enumerate}
+
+\Esercizio{}
+Il vettore aleatorio $(X,Y)$ ha legge uniforme sul quadrato $Q$ di vertici $(0,2),(2,0),(4,2),(2,4)$.
+\begin{enumerate}
+\item [(a)] Qual è la legge di $X$?
+\item [(b)] Quanto vale $\EE[X]$?
+\item [(c)] Quanto vale $\PP(X<Y)$?
+\item [(d)] Quanto vale $\PP(X\leq 2,Y\leq 1)$?
+\item [(e)] $X$ e $Y$ sono indipendenti?
+\end{enumerate}
+
+\Esercizio{}
+Una misura di resistenza in un circuito elettrico eseguita con uno strumento di risoluzione pari a 1 ohm dà lettura di 12 ohm. La resistenza $R$ del circuito risulta pertanto descritta da una variabile aleatoria con distribuzione uniforme tra 11.5 e 12.5 ohm. Sia $M=1/R$ la conduttanza del circuito. 
+\begin{enumerate}
+\item [(a)] $R$ e $M$ hanno legge congiunta continua?
+\item [(b)] Calcolare i valori attesi di $R$ e $M$.
+\item [(c)] Calcolare la matrice varianza di $(R,M)$.
+\item [(d)] Calcolare il coefficiente di correlazione lineare fra $R$ e $M$.
+\item [(e)] Determinare la distribuzione di $M$.
+\end{enumerate}
+
+\Esercizio{ (Problema dell'ago di Buffon)}
+Un ago di lunghezza $l>0$ viene lanciato su un pavimento decorato con linee parallele distanti $d>0$. Qual è la probabilità $p$ che l'ago intersechi almeno una linea?
+
+\Esercizio{}
+Siano $X$ e $Y$ variabili aleatorie indipendenti con legge $\UUU([0,1])$.
+\begin{enumerate}
+\item [(a)] Si scriva la densità di probabilità del vettore aleatorio $(X,Y)$.
+\end{enumerate}
+Si consideri il vettore aleatorio $(U,V)=(X+1,X+Y)$.
+\begin{enumerate}
+\item [(b)] Calcolarne il valore atteso e la matrice varianza.
+\item [(c)] Se ne calcoli la legge.
+\item [(d)] Il vettore ha componenti indipendenti?
+\end{enumerate}
+Si consideri ora il vettore aleatorio $(U,V)=(X+1,X+Y-XY+X^2Y)$.
+\begin{enumerate}
+\item [(e)] Calcolarne il valore atteso.
+\item [(f)] Se ne calcoli la legge.
+\item [(g)] Il vettore ha componenti indipendenti?
+\end{enumerate}
+
+\Esercizio{} % es 10 manca sol
+Verificare che se $X_1,\dots,X_n$ sono variabili aleatorie esponenziali indipendenti di parametri $\lambda_1,\dots,\lambda_n$ rispettivamente, allora
+\[
+X_{(1)}=\min\{X_1,\dots,X_n  \}\sim\EEE(\lambda_1,\dots,\lambda_n)
+\]
+
+\Esercizio{} % es 11 manca sol
+Siano $X_1,\dots,X_n$ sono variabili aleatorie continue i.i.d. con funzione di ripartizione $\CCC^1$ a tratti. 
+\begin{enumerate}
+\item [(a)] Mostrare che $X_{(n)}=\max\{ X_1,\dots,X_n \}$ è una variabile aleatoria continua e determinarne la densità.
+\item [(b)] Mostrare che $X_{(1)}=\min\{ X_1,\dots,X_n \}$ è una variabile aleatoria continua e determinarne la densità.
+\end{enumerate}
+
+\Esercizio{}
+Un componente elettronico è formato da tre elementi indipendenti in serie, ciascuno dei quali ha un tempo di vita esponenziale di parametro $\lambda=0.3,\mu=0.1,\gamma=0,2$ rispettivamente.
+\begin{enumerate}
+\item [(a)] Indichiamo con $T$ il tempo di vita del componente. Qual è la legge di $T$?
+\item [(b)] Per aumentare l'affidabilità e ridurre gli interventi di sostituzione, viene proprosto di aggiungere un componente identico in parallelo. Qual è la legge del tempo di vita $S$ del nuovo complesso?
+\end{enumerate}
+
+\Esercizio{}
+Date $X$ e $Y$ di legge congiunta continua con densità $\fXY$, si consideri $Z=X+Y$. Si mostri che $Z$ è una variabile aleatoria continua con densità
+\[
+f_Z(z)=\intb f_{(X,Y)}(z-y,y)\dy
+\]
+Si mostri questo risultato procedendo nei due seguenti modi:
+\begin{enumerate}
+\item [(a)] Si calcoli la funzione di ripartizione di $Z$ e si determini la densità.
+\item [(b)] Si calcoli la legge di $(Z,Y)$ e si trovi la legge marginale di $Z$.
+\end{enumerate}
+
+\Esercizio{}
+Siano $X$ e $Y$ due variabili aleatorie indipendenti entrambe con distribuzione uniforme su $[0,1]$.
+\begin{enumerate}
+\item [(a)] Determinare media, varianza e legge di $Z=X+Y$.
+\item [(b$^*$)] Si trovi la legge di $T=X+Y-\Ind_{\{ X+Y-1 \}}$.
+\end{enumerate}
+
+\Esercizio{}
+Siano $X$ e $Y$ due variabili aleatorie indipendenti entrambe con distribuzione uniforme su $[0,1]$.
+\begin{enumerate}
+\item [(a)] Determinare la distribuzione congiunta del vettore $(U,V)$ ove $U=XY$ e $V=\dfrac{Y}{X}$.
+\item [(b)] Determinare le marginali di $U$ e $V$.
+\end{enumerate}
+
+\Esercizio{}
+Siano $X\sim\Gamma(\alpha,\lambda)$ e $Y\sim\Gamma(\beta,\lambda)$ due variabili aleatorie indipendenti; determinare la densità della variabile aleatoria $U=\dfrac{X}{Y}$.
+
+\Esercizio{} % es 17 manca sol
+Calcolo delle densità della $t$ d Student e della $F$ di Fisher.
+\begin{enumerate}
+\item [(a)] Siano $Z\sim\NNN(0,1)$ e $X\sim\chi^2(n)$ due variabili aleatorie indipendenti; determinare la densità di $T=\dfrac{Z}{\sqrt{\frac{X}{n}}}$.
+\item [(b)] Siano $X\sim\chi^2(m)$ e $Y\sim\chi^2(n)$ due variabili aleatorie indipendenti; determinare la densità di $F=\dfrac{X/m}{Y/n}$.
+\end{enumerate}
+
+\Esercizio{} % es 18 manca sol
+Siano $X\sim\UUU([-5,3])$ e $Y\sim\UUU([3,5])$ due variabili aleatorie indipendenti.
+\begin{enumerate}
+\item [(a)] Determinare media, varianza e legge di $Z=X+Y$.
+\item [(b)] Si calcoli il coefficiente di correlazione $\rho_{X,Z}$.
+\end{enumerate}
+
+\Esercizio{}
+Sia $(X,Y)$ un vettore aleatorio continuo con densità
+\[
+\fXYxy=\begin{cases} \dfrac{1}{2}(x+y)e^{-(x+y)} &x,y>0 \\ 0&\text{altrove} \end{cases}
+\]
+\begin{enumerate}
+\item [(a)] Si calcoli la media di $(X+Y)^{-1}$.
+\item [(b)] Si determini la legge di $X+Y$.
+\item [(c)] Si calcoli la media di $X+Y$.
+\item [(d)] Si calcolino le marginali di $X,Y$. $X\indep Y$?
+\item [(e)] Si calcoli $Cov(X,Y)$.
+\item [(f)] Si calcoli $\PP(X\geq 1,Y\geq 2)$.
+\end{enumerate}
+
+\Esercizio{} % es 20 manca sol
+Due numeri $X,Y$ vengono scelti a caso indipendentemente con distribuzione uniforme su $[0,1]$.
+\begin{enumerate}
+\item [(a)] Calcolare $\PP(|X-Y|>1/2)$.
+\item [(b)] Sia $Z$ la variabile aleatoria che misura la distanza fra $X$ e $Y$. Qual è la legge di $Z$? Qual è la distanza media fra $X$ e $Y$?
+\end{enumerate}
+
+\Esercizio{} % es 21 manca punto a
+Sia assegnata una successione $N,X_1,X_2,\dots$ di variabili aleatorie indipendenti, tale che $N\sim\GGG(p), p\in(0,1)$, e ciascuna delle $X_i\sim\EEE(\lambda),\lambda>0$. Si ponga $Y=\min\{X_1,\dots,X_N  \}$.
+\begin{enumerate}
+\item [(a$^*$)] Si mostri che $Y$ è una variabile aleatoria.
+\item [(b)] Qual è la legge di $Y$?
+\item [(c)] Qual è il valor atteso di $Y$? 
+\end{enumerate}
+
+\Esercizio{} % es 22 manca sol
+Si mostri che, date due variabili aleatorie indipendenti $X$ e $Y$ in $L^1$, allora necessariamente si ha anche $XY$ in $L^1$. Si mostri però che, se $X$ e $Y$ non sono indipendendenti, allora $XY$ può non essere integrabile.
+
+\Esercizio{$^\ast$} % es 23 manca sol
+Date $n$ variabili aleatorie reali $X_1,\dots,X_n$, si definiscono \emph{statistiche d'ordine}
 \begin{gather*}
 \begin{aligned}
-&f_X(x)=\int_\RR f_{(X,Y)}(x,y)\text{ d}y&\forall x\in\RR \\
-&f_Y(y)=\int_\RR f_{(X,Y)}(x,y)\text{ d}x&\forall y\in\RR
+X_{(1)}&=\min\{X_1,\dots,X_n  \}, \\
+X_{(2)}&=\text{secondo più piccolo valore di }X_1,\dots,X_n, \\
+&\ \vdots \\
+X_{(n)}&=\max\{X_1,\dots,X_n  \}.
 \end{aligned}
 \end{gather*}
-Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza tra $X$ e $Y$, come abbiamo fatto nell'esercizio $3$.
-\end{theorem}
-Prima di procedere però è sempre meglio capire come è fatto il supporto della densità congiunta, così da capire quale sarà il supporto delle marginali:
+\begin{enumerate}
+\item [(a)] Si trovi una formula per $X_{(2)}$ nel caso $n=3$ e una formula per $X_{(3)}$ nel caso $n=4$.
+\item [(b)] Si trovi una formula per $X_{(k)}$ nel caso $n\in\NN,1\leq k\leq n$.
+\item [(c)] Si mostri chele statistiche d'ordine sono variabili aleatorie e che $X_{(1)}\leq X_{(2)}\leq \cdots \leq X_{(n)}$ q.c.
+\item [(d)] Sia $B\in\BBB^n$ un boreliano di $\RR^n$ tale che: se $(y_1,\dots,y_n)\in B$ allora $y_1\leq y_2\leq \cdots\leq y_n$. In altre parole, $B\subset\{(y_1,\dots,y_n)\in\RR^n\ :\ y_1\leq y_2\leq \cdots\leq y_n  \}$. Si esprima l'evento $((X_{(1)},\dots,X_{(n)})\in B)$ in termini di $X_1,\dots,X_n$.
+\item [(e)] Supponiamo ora che $X_1,\dots,X_n$ siano i.i.d. con densità continua $f$. Si mostri che $X_{(1)},\dots,X_{(n)}$ hanno legge congiuntamente continua con densità
+\[
+f_{(X_{(1)},\dots,X_{(n)})}(y_1,\dots,y_n)=\begin{cases}n!\displaystyle\prod_{i=1}^n f(y_i) &y_1\leq y_2\leq \cdots\leq y_n \\ 0&\text{altrimenti}   \end{cases}
+\]
+\end{enumerate}
+
+\Esercizio{}
+Le lunghezze $X$ e $Y$ dei cateti di un triangolo rettangolo sono generate a caso, in modo tale che si tratti di variabili esponenziali indipendenti di stesso parametro $\lambda>0$. Sia $A$ l'area del triangolo, $Z=\frac{Y}{X}$ il rapporto dei cateti e $\alpha$ l'angolo (misurato in radianti) opposto al cateto $Y$.
+\begin{enumerate}
+\item Calcolare il valore atteso dell'area $A$, in funzione di $\lambda$.
+\item Calcolare la funzione di ripartizione di $Z$, notando che non dipende da $\lambda$ e disegnarne il grafico.
+\item Determinare se $Z$ è assolutamente continua e in tal caso calcolarne la densità e disegnarne il grafico.
+\item Calcolare la media di $Z$.
+\item Calcolare la funzione di ripartizione di $\alpha$, notando che non dipende da $\lambda$.
+\item Determinare se $\alpha$ è assolutamente continua e in tal caso calcolarne la densità.
+\end{enumerate}
+
+\ParteSoluzioni
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+La dimostrazione si articola in due parti:
+\begin{enumerate}
+\item [$(\Rightarrow)$] Questo caso è banale, perché basta prendere $h_1(x)=f_X(x)$ e $h_2(y)=f_Y(y)$.
+
+\item [$(\Leftarrow)$] Sappiamo per ipotesi che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$. Allora grazie al teorema (\ref{introth6}) calcoliamo le due marginali come
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=\int_\RR h_1(x)\ h_2(y) \dy=h_1(x)\int_\RR h_2(y) \dy \\
+&f_Y(y)=\int_\RR h_1(x)\ h_2(y) \dx=h_2(y)\int_\RR h_1(x) \dx
+\end{aligned}
+\end{gather*}
+Sfruttando il fatto che per definizione di densità deve essere $\int_\RR\fXYxy\dxy=1$, possiamo calcolare
+\begin{gather*}
+\begin{aligned}
+f_X(x)\ f_Y(y)&=h_1(x)\int_\RR h_2(y) \dy\cdot h_2(y)\int_\RR h_1(x) \dx=\\
+&=h_1(x)\ h_2(y) \cdot \int_\RR h_1(x)\ h_2(y) \dxy=\\
+&=h_1(x)\ h_2(y) \cdot \underbrace{\int_\RR \fXYxy \dxy}_{=1}=\\
+&=h_1(x)\ h_2(y)=\\
+&=\fXYxy
+\end{aligned}
+\end{gather*}
+e quindi concludere che $X$ e $Y$ sono indipendenti.
+\end{enumerate}
+L'enunciato è quindi dimostrato.
+
+\Soluzione{}
+Il vettore aleatorio $(X,Y):\Omega\to\mathbb{R}^2$ è assolutamente continuo; la sua densità $f_{(X,Y)}(x,y)$, essendo $X$ e $Y$ indipendenti, è data, grazie al  teorema (\ref{introth6}), dal prodotto tra le due densità marginali
+\begin{gather*}
+\begin{aligned}
+&f_X(x)=\lambda e^{-\lambda x}\ \Ind_{[0,+\infty)}(x) \\
+&f_Y(y)=\lambda e^{-\lambda y}\ \Ind_{[0,+\infty)}(y)
+\end{aligned}
+\end{gather*}
+Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $(X,Y)\in T$, con $T$ zona del primo quadrante del piano $X\times Y$ che sta sopra la bisettrice $Y=X$, e poi integrare di conseguenza:
+\begin{gather*}
+\begin{aligned}
+\PP(Y>X)&=\PP((X,Y)\in T)= \\
+&=\int_T f_{(X,Y)}(x,y) \text{ d}x\text{d}y= \\
+&=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\text{ d}x\text{d}y= \\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
+&=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\text{ d}x}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
+&=\frac{1}{2}\underbrace{\int_0^{+\infty}2\lambda e^{-2\lambda x}\text{ d}x}_{=1}=\\
+&=\frac{1}{2}
+\end{aligned}
+\end{gather*}
+Esiste un secondo modo, più teorico ma meno calcoloso, per risolvere l'esercizio. Infatti possiamo osservare che
 \begin{equation*}
-S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ f_{(X,Y)}(x,y)>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+1=\PP(X<Y)+\PP(X=Y)+\PP(X>Y)
 \end{equation*}
-\fg{0.5}{figura_1_cap_7}
+Diamo un'occhiata ai tre termini:
+\begin{enumerate}
+\item $\PP(X<Y)$ è la nostra incognita.
+\item $\PP(X=Y)=\PP((X,Y)\in r)$ con $r$ bisettrice del primo quadrante del piano $X\times Y$; ma
+\begin{enumerate} 
+\item [(i)] il vettore $(X,Y)$ è assolutamente continuo rispetto la misura di Lebesgue su $\mathbb{R}^2$
+\item [(ii)] la retta $r$ è un sottospazio di $\mathbb{R}^2$ di dimensione $1$ e di conseguenza ha misura di Lebesgue $m_2=0$
+\end{enumerate}
+$\Longrightarrow \PP(X=Y)=0$.
+\item $\PP(X>Y)=\PP(X<Y)$ perché il ruolo di $X$ e $Y$ è interscambiabile dato che hanno la stessa distribuzione.
+\end{enumerate}
+Allora $1=2\ \PP(X<Y)\ \Longrightarrow\ \PP(Y>X)=\frac{1}{2}$.
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Calcolare le leggi di $X$ e di $Y$.
+
+Conoscendo la densità congiunta del vettore aleatorio assolutamente continuo $(X,Y)$, per calcolare le leggi marginali usiamo il teorema (\ref{introth5}). Prima di procedere però è sempre meglio capire come è fatto il supporto della densità congiunta, così da capire quale sarà il supporto delle marginali:
+\[
+S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ f_{(X,Y)}(x,y)>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+\]
+\fg{0.3}{7_17}
 Dal grafico della densità congiunta deduciamo un'importante informazione su $X$ e $Y$: $X,Y\geq 0$ quasi certamente, cioè $f_X(x)=0$ per ogni $x<0$ e $f_Y(y)=0$ per ogni $y<0$. Quindi fissiamo $x\geq 0$ e procediamo con il calcolo della prima legge marginale:
 \begin{gather*}
 \begin{aligned}
 f_X(x)&=\int_\RR f_{(X,Y)}(x,y)\text{ d}y= \\
 &=\int_x^{+\infty}x(y-x)e^{-y}\text{ d}y= \\
 &=\begin{Bmatrix}
-t:=y-x \\
-\text{d}t=\text{d}y \\
-y\to x\Rightarrow t\to 0 \\ -y=-t-x
+\text{cambio di variabile}\\t:=y-x 
 \end{Bmatrix}= \\
 &=x\int_0^{+\infty}te^{-t-x}\text{ d}t=\\
-&=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\text{ d}t}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=\\
-&=xe^{-x}
+&=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\text{ d}t}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=xe^{-x}
 \end{aligned}
 \end{gather*}
 con $(\alpha^2)$ che sintetizza la seguente osservazione: data $T\sim\mathcal{E}(\lambda)$ con $\lambda=1$ si ha per definizione
 \begin{equation*}
 \mathbb{E}[T]:=\int_0^{+\infty}\lambda te^{-t}\text{ d}t=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
 \end{equation*}
-$\,$
+
 Ora fissiamo $y\geq 0$ e calcoliamo la seconda legge marginale:
 \begin{gather*}
 \begin{aligned}
@@ -244,18 +676,13 @@ f_X(x)&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}e^{-\lambda x}\ \ \ \
 Var(X)&=\frac{\alpha}{\lambda^2}
 \end{aligned}
 \end{gather*}
-Ricorda: quando si ha \textit{densità=polinomio}$\cdot$\textit{esponenziale} è quasi sempre una $\Gamma$!
+(Quando si ha \textit{densità}$=$\textit{polinomio}$\cdot$\textit{esponenziale} è quasi sempre una $\Gamma$!)
 \end{oss}
 riconosciamo che $X\sim\Gamma(2,1)$ e $Y\sim\Gamma(4,1)$.
-\item [(b)] Abbiamo già visto con i teoremi \ref{th1} e \ref{th2} che se $X\Bot Y$ allora la densità congiunta del vettore $(X,Y)$ fattorizza nelle due marginali. Questo è sufficiente per concludere che in questo caso $X\not\Bot Y$.$\\$In realtà si potrebbe usare anche il seguente teorema
-\begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
-\label{th3}
-$\\$Siano $X$ e $Y$ due variabili aleatorie continue con densità $f_X$ su $S_X$ e $f_Y$ su $S_Y$ tali che $X\Bot Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $f_{(X,Y)}$ su $S_{(X,Y)}$. Allora
-\begin{equation*}
-S_{(X,Y)}=S_X\cdot S_Y
-\end{equation*}
-\end{theorem}
-Abbiamo
+\item [(b)] $X$ e $Y$ sono indipendenti?
+
+Abbiamo già visto con il teorema (\ref{introth6}) che se $X\indep Y$ allora la densità congiunta del vettore $(X,Y)$ fattorizza nelle due marginali. Questo è sufficiente per concludere che in questo caso $X\not\indep Y$.$\\$In realtà si potrebbe usare anche il teorema (\ref{introth7}).
+Infatti abbiamo
 \begin{gather*}
 \begin{aligned}
 S_X&=[0,+\infty) \\
@@ -263,8 +690,11 @@ S_Y&=[0,+\infty) \\
 S_{(X,Y)}&=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
 \end{aligned}
 \end{gather*}
-e quindi anche in questo caso concludiamo che $X\not\Bot Y$.
-\item [(c)] Se le variabili $X,Y$ fossero state indipendenti sarebbe stato banale il calcolco:
+e quindi anche in questo caso concludiamo che $X\not\indep Y$.
+
+\item [(c)] Calcolare $\PP(X\leq 2,Y\leq 3)$.
+
+Se le variabili $X,Y$ fossero state indipendenti sarebbe stato banale il calcolco:
 \begin{equation*}
 \PP(X\leq 2, Y\leq 3)=\PP(X\leq 2)\cdot \PP(Y\leq 3)
 \end{equation*}
@@ -276,95 +706,1298 @@ Tuttavia non lo sono, quindi dobbiamo ricondurre l'evento $X\leq 2, Y\leq 3$ all
 \end{aligned}
 \end{gather*}
 che per 
-\fg{0.5}{figura_2_cap_7}
+\fg{0.4}{7_18}
 diventa
 \begin{gather*}
 \begin{aligned}
-&=\int_0^2\left(\int_x^3x(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
-&=\int_0^2x\left(\underbrace{\int_x^3ye^{-y}\text{ d}y}_{(\alpha)}-x\int_x^3e^{-y}\text{ d}y   \right)\text{d}x=\\
-&=\int_0^2x\left(  \left[-(y+1)e^{-y}     \right]_x^3-x\left[-e^{-y}     \right]_x^3    \right)\text{d}x=\\
-&=\int_0^2 x\left(-4e^{-3}+(x+1)e^{-x}+xe^{-3}-xe^{-x}   \right)\text{d}x=\\
-&=\int_0^2 x\left(-4e^{-3}+e^{-x}+xe^{-3}   \right)\text{d}x=\\
-&=-4e^{-3}\int_0^2 x\text{ d}x+\underbrace{\int_0^2xe^{-x}\text{ d}x}_{(\alpha)}+e^{-3}\int_0^2{x^2}\text{ d}x=\\
-&=-4e^{-3}\left[\frac{x^2}{2}   \right]_0^2+\left[-(x+1)e^{-x}   \right]_0^2+e^{-3}\left[\frac{x^3}{3}   \right]_0^2=\\
-&=-8e^{-3}-3e^{-2}+1+\frac{8}{3}\ e^{-3}=\\
+&=\int_0^2\left(\int_x^3x(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\int_0^2x\left(\underbrace{\int_x^3ye^{-y}\text{ d}y}_{(\alpha)}-x\int_x^3e^{-y}\text{ d}y   \right)\text{d}x=\\
+&=\int_0^2x\left(  \left[-(y+1)e^{-y}     \right]_x^3-x\left[-e^{-y}     \right]_x^3    \right)\text{d}x=\int_0^2 x\left(-4e^{-3}+(x+1)e^{-x}+xe^{-3}-xe^{-x}   \right)\text{d}x=\\
+&=\int_0^2 x\left(-4e^{-3}+e^{-x}+xe^{-3}   \right)\text{d}x=-4e^{-3}\int_0^2 x\text{ d}x+\underbrace{\int_0^2xe^{-x}\text{ d}x}_{(\alpha)}+e^{-3}\int_0^2{x^2}\text{ d}x=\\
+&=-4e^{-3}\left[\frac{x^2}{2}   \right]_0^2+\left[-(x+1)e^{-x}   \right]_0^2+e^{-3}\left[\frac{x^3}{3}   \right]_0^2=-8e^{-3}-3e^{-2}+1+\frac{8}{3}\ e^{-3}=\\
 &=1-3e^{-2}-\frac{16}{3}\ e^{-3}
 \end{aligned}
 \end{gather*}
-\item [(d)] Ricordiamo che
+
+\item [(d)] Calcolare il coefficiente di correlazione $\rho_{X,Y}$.
+
+Ricordiamo che
 \begin{oss}
 $\\$Il coefficiente di correlazione lineare si calcola con
 \begin{equation*}
 \rho_{X,Y}:=\frac{Cov(X,Y)}{\sqrt{Var(X)\cdot Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{Var(X)\cdot Var(Y)}}
 \end{equation*}
 \end{oss}
-Al volo possiamo già dire che $\EE[X]=2=Var(X)$ e $\EE[Y]=4=Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il seguente risultato
-\begin{theorem}[Regola del valore atteso per vettori continui]
-\label{th4}
-$\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $f_{(X,Y)}$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
-\begin{enumerate}
-\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot f_{(X,Y)}\in L^1(m_2)$
-\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)f_{(X,Y)}(x,y) \text{ d}x\text{d}y$
-\end{enumerate}
-\end{theorem}
-Quindi
+
+Al volo possiamo già dire che $\EE[X]=2=Var(X)$ e $\EE[Y]=4=Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
 \begin{aligned}
-\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xyf_{(X,Y)}(x,y) \text{ d}x\text{d}y=\\
-&=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
+\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xyf_{(X,Y)}(x,y) \text{ d}x\text{d}y=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\text{ d}y}_{(\beta)}   \right)\text{d}x-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\text{ d}y}_{(\alpha)}   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\text{d}x-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\text{d}x=\\
 &=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\text{ d}x-\int_0^{+\infty}x^3(x+1)e^{-x}\text{ d}x=\\
 &=\int_0^{+\infty}x^4e^{-x}   \text{ d}x+2\int_0^{+\infty}x^3e^{-x}   \text{ d}x+2\int_0^{+\infty}x^2e^{-x}   \text{ d}x-\int_0^{+\infty}x^4e^{-x}   \text{ d}x-\int_0^{+\infty}  x^3e^{-x} \text{ d}x=\\
-&=\underbrace{\int_0^{+\infty}x^3e^{-x}   \text{ d}x}_{=6\text{ per }(\gamma^1)}+2\underbrace{\int_0^{+\infty}x^2e^{-x}   \text{ d}x}_{=2\text{ per }(\beta^1)}=\\
-&=6+4=\\
-&=10
+&=\underbrace{\int_0^{+\infty}x^3e^{-x}   \text{ d}x}_{=6\text{ per }(\gamma^1)}+2\underbrace{\int_0^{+\infty}x^2e^{-x}   \text{ d}x}_{=2\text{ per }(\beta^1)}=6+4=10
 \end{aligned}
 \end{gather*}
 E finalmente
 \begin{equation*}
 \rho_{X,Y}=\frac{10-2\cdot 4}{\sqrt{2\cdot 4}}=\frac{2}{2\sqrt{2}}=\frac{1}{\sqrt{2}}=\frac{\sqrt{2}}{2}
 \end{equation*}
-\item [(e)] Banalmente basta prendere la densità data dal prodotto delle marginali, cioè
+\item [(e)] Trovare una diversa densità congiunta avente le stesse densità marginali.
+
+Banalmente basta prendere la densità data dal prodotto delle marginali, cioè
 \begin{equation*}
 \widetilde{f}_{(X,Y)}(x,y)=xe^{-x}\ \Ind_{[0,+\infty)}(x)\cdot \frac{1}{6}\ y^3e^{-y}\ \Ind_{[0,+\infty)}(y)
 \end{equation*}
 \end{enumerate}
 
 \Soluzione{}
+\begin{enumerate}
+\item [(a)] Quali sono le leggi di $X$ e $Y$? Le variabili aleatorie $X$ e $Y$ sono indipendenti?
 
+Per calcolare le due marginali usiamo il teorema (\ref{introth5}). Quindi, fissato $x>0$, si ha
+\begin{gather*}
+\begin{aligned}
+f_X(x)&=\int_\RR\fXYxy\dy=\\
+&=\intc xe^{-(x+y)}\dy=\\
+&=\left[-xe^{-(x+y)}  \right]_0^{+\infty}=\\
+&=xe^{-x}
+\end{aligned}
+\end{gather*}
+Quindi $f_X(x)=xe^{-x}\ \Ind_{(0,+\infty)}(x)$ e perciò $X\sim\Gamma(2,1)$.
 
+Allo stesso modo fissiamo $y>0$ e calcoliamo
+\begin{gather*}
+\begin{aligned}
+f_Y(y)&=\int_\RR\fXYxy\dy=\\
+&=\intc xe^{-(x+y)}\dx=\\
+&=e^{-y}\underbrace{\intc xe^{-x}\dx}_{=1\text{ per }(\alpha^1)}=\\
+&=e^{-y}
+\end{aligned}
+\end{gather*}
+Quindi $f_Y(y)=e^{-y}\ \Ind_{(0,+\infty)}(y)$ e perciò $Y\sim\Gamma(1,1)\sim\EEE(1)$.
 
+Dato che la congiunta fattorizza nelle due marginali, allora per il teorema (\ref{introth6}) le variabili $X$ e $Y$ sono indipendenti.
+\item [(b)] Calcolare $Var(X+Y)$.
 
+Ricordando che $Var(\Gamma(\alpha,\lambda))=\alpha/\lambda^2$ e $Var(\EEE(\lambda))=1/\lambda^2$ possiamo facilmente calcolare
+\[
+Var(X+Y)\overset{\underset{\indep}{}}{=}Var(X)+Var(Y)=2+1=3
+\]
+\item [(c)] Si calcolino i valori attesi di $U=\min(X,Y)$ e $V=\max(X,Y)$.
 
+Iniziamo da $U$, osservando che per com'è definita si ha $Im(U)\in(0,+\infty)$; allora fissatto $u>0$ abbiamo
+\begin{gather*}
+\begin{aligned}
+F_U(u)&=\PP(U\leq u)=\\
+&=\PP(\min(X,Y)\leq u)=         \\
+&=1- \PP(\min(X,Y)> u)=        \\
+&= 1-\PP(X>u,Y>u)=        \\
+&\overset{\underset{\indep}{}}{=}1-\PP(X>u)\ \PP(Y>u)=         \\
+&= 1-(1-F_X(u))(1-F_Y(u))        \\
+&=F_X(u)+F_Y(u)-F_X(u)\ F_Y(u)         
+\end{aligned}
+\end{gather*}
+Analogamente, fissato $v>0$, esprimiamo anche il $\max$ in funzione delle due funzioni di ripartizione
+\begin{gather*}
+\begin{aligned}
+F_V(v)&=\PP(V\leq v)=\\
+&=\PP(\max(X,Y)\leq v)=         \\
+&=\PP(X\leq v,Y\leq v)=        \\
+&\overset{\underset{\indep}{}}{=}\PP(X\leq v)\ \PP(Y\leq v)=         \\
+&=F_X(v)\ F_Y(v)      
+\end{aligned}
+\end{gather*}
+Dobbiamo quindi calcolarci $F_X$ e $F_Y$ (o le copiamo, tanto sono note, oppure integriamo le $f$ ricavate al punto (a))
+\begin{gather*}
+\begin{aligned}
+&F_X(x)=\int_0^x te^{-t}\dt=1-(x+1)e^{-x}\\  
+&F_Y(y)=\int_0^y e^{-t}=1-e^{-y}
+\end{aligned}
+\end{gather*}
+Riprendiamo il calcolo di $F_U$ e $F_V$
+\begin{gather*}
+\begin{aligned}
+F_U(u)&=F_X(u)+F_Y(u)-F_X(u)\ F_Y(u)=\\
+&=1-(u+1)e^{-u} + 1-e^{-u} -(1-(u+1)e^{-u})(1-e^{-u})=\\ 
+&\overset{\underset{\cdots}{}}{=}1-(u+1)e^{-2u} \\
+F_V(v)&=F_X(v)\ F_Y(v)=\\
+&=(1-(v+1)e^{-v})(1-e^{-v})=\\
+&\overset{\underset{\cdots}{}}{=}(v+1)e^{-2v}-(v+2)e^{-v}+1
+\end{aligned}
+\end{gather*}
+Siamo pronti per calcolare i valori attesi di $U$ e $V$. In particolare faremo vedere per completezza due modi diversi per procedere: per il calcolo di $\EE[U]$ deriviamo $F_U$ trovando $f_U$ e poi usiamo la definizione di $\EE$; per il calcolo di $\EE[V]$ usiamo il risultato notevole (\ref{introth9}). Allora:
+\begin{gather*}
+\begin{aligned}
+f_U(u)&=(F_U(u))'=(2u+1)e^{-2u}\ \Ind_{(0,+\infty)}(u) \\
+\Longrightarrow\ \EE[U]&=\intc u\cdot (2u+1)e^{-2u}\du =\\
+&\overset{\underset{pp}{}}{=}\left[(2u^2+u)(-\frac{1}{2}e^{-2u})   \right]_0^{+\infty} -\intc (4u+1)(-\frac{1}{2}e^{-2u})\du \\
+&\overset{\underset{pp}{}}{=}0+\frac{1}{2}\left\{\left[(4u+1)(-\frac{1}{2}e^{-2u})  \right]_0^{+\infty}+2\intc e^{-2u}\du   \right\}=\\
+&=\frac{1}{4}+\left[ -\frac{1}{2}e^{-2u} \right]_0^{+\infty}=\\
+&=\frac{1}{4}+\frac{1}{2}=\\
+&=\frac{3}{4} \\
+\EE[V]&=\intc (1-F_V(v))\dv=\\
+&=\intc (v+2)e^{-v}-(v+1)e^{-2v}\dv=\\
+&\overset{\underset{pp}{}}{=}\left[-(v+2)e^{-v}+\frac{1}{2}(v+1)e^{-2v}  \right]_0^{+\infty}+\intc e^{-v}\dv-\intc \frac{1}{2}e^{-2v}\dv=\\
+&=2-\frac{1}{2}+\left[-e^{-v}  \right]_0^{+\infty}  + \left[\frac{1}{4}e^{-2v}  \right]_0^{+\infty}=\\
+&=2-\frac{1}{2}+1-\frac{1}{4}=\\
+&=\frac{9}{4}
+\end{aligned}
+\end{gather*}
+\end{enumerate}
 
+\Soluzione{}
+Prima di tutto, il testo dice che $(X,Y)\sim\UUU(Q)$ e dunque
+\[
+\fXYxy=\frac{1}{m(Q)}\ \Ind_Q(x,y)=\frac{1}{8}\ \Ind_Q(x,y)
+\]
+\fg{0.5}{7_7}
+\begin{enumerate}
+\item [(a)] Qual è la legge di $X$?
 
+Per calcolare $f_X$ sfruttiamo il teorema (\ref{introth5}):
+\[
+f_X(x)=\int_\RR\fXYxy\dy
+\]
+Pe risolvere tale integrale usiamo il teorema di Fubini (\ref{introth1}): vedendo $Q$ come dominio normale rispetto all'asse $x$, ossia compreso tra le funzioni $f_1(x)=|x-2|$ e $f_2(x)=4-|x-2|$, fissato $0\leq x\leq4$, possiamo scrivere
+\begin{gather*}
+\begin{aligned}
+f_X(x)&=\int_{|x-2|}^{4-|x-2|}\frac{1}{8}\dy=\\
+&=\left[\frac{1}{8} y  \right]_{|x-2|}^{4-|x-2|}=\\
+&=\frac{1}{2}-\frac{1}{4}|x-2|
+\end{aligned}
+\end{gather*}
+Allora
+\[
+f_X(x)=\left(\frac{1}{4}(2-|x-2|)  \right)\Ind_{[0,4]}(x)
+\]
 
+\item [(b)] Quanto vale $\EE[X]$?
 
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\EE[X]&=\intc x\ f_X(x)\dx=\\
+&=\int_0^4 \frac{1}{4}x(2-|x-2|)\dx=\\
+&=\int_0^4 \frac{1}{2}x\dx-\int_0^4 \frac{1}{4}x|x-2|\dx=\\
+&=\left[\frac{1}{4}x^2\right]_0^4-\left(\int_0^2 -\frac{1}{4}x(x-2)\dx+\int_2^4 \frac{1}{4}x(x-2)\dx  \right)=\\
+&=4+\frac{1}{4}\left[ \frac{x^3}{3}-x^2 \right]_0^2-\frac{1}{4}\left[\frac{x^3}{3}-x^2  \right]_2^4=\\
+&=2
+\end{aligned}
+\end{gather*}
 
+\item [(c)] Quanto vale $\PP(X<Y)$?
 
+L'evento $(X<Y)$ corrisponde all'evento $(Y>X)$, cioè alla zona di piano appartenente a $Q$ e soprastante la bisettrice del primo quadrante:
+\fg{0.4}{7_8}
+Siccome la probabilità è uniforme, la probabilità di "cadere" in metà quadrato è 
+\[
+\PP(X<Y)=\frac{1}{2}
+\]
+oppure
+\[
+\PP(X<Y)=\frac{m(X<Y)}{m(Q)}=\frac{4}{8}=\frac{1}{2}
+\]
 
+\item [(d)] Quanto vale $\PP(X\leq 2,Y\leq 1)$?
 
+Analogamente al punto precedente
+\[
+\PP(X\leq 2,Y\leq 1)=\frac{m(X\leq 2,Y\leq 1)}{m(Q)}=\frac{1/2}{8}=\frac{1}{16}
+\]
+\fg{0.4}{7_9}
 
+\item [(e)] $X$ e $Y$ sono indipendenti?
 
+Sulla scia del punto (a), vediamo $Q$ come dominio normale rispetto all'asse $y$, cioè per $|2-y|\leq x\leq 4-|2-y|$. Allora
+\begin{gather*}
+\begin{aligned}
+f_Y(y)&=\int_\RR\fXYxy\dx=\\
+&=\int_{|2-y|}^{4-|2-y|}\frac{1}{8}\dx=\\
+&=\left[\frac{1}{8} x  \right]_{|2-y|}^{4-|2-y|}
+\end{aligned}
+\end{gather*}
+Quindi
+\[
+f_Y(y)=\left(\frac{1}{4}(2-|y-2|)  \right)\Ind_{[0,4]}(y)
+\]
+e come possiamo notare $\fXY\neq f_X\cdot f_Y$ cioè $X$ e $Y$ non sono indipendenti.
 
+\end{enumerate}
 
+\Soluzione{}
+Siano
+\[
+R\sim\UUU([a,b])\quad \text{con }a=11.5,\ b=12.5\qquad\qquad\qquad M=\frac{1}{R}
+\]
+rispettivamente resistenza e conduttanza di un dato circuito.
 
+\begin{enumerate}
+\item [(a)] $R$ e $M$ hanno legge congiunta continua?
 
+Se per assurdo il vettore $(R,M)$ fosse assolutamente continuo allora dovrebbe esistere
+\[
+f_{(R,M)}:\RR^2\to[0,+\infty)
+\]
+tale che
+\[
+\PP((R,M)\in B)=\int_B f_{(R,M)}\dxy\qquad\forall B\in\BBB(\RR^2)
+\]
+Ma prendendo
+\[
+\overline{B}=\left\{(x,y)\in\RR^2\ :\ 11.5\leq x\leq 12.5,\ y=\frac{1}{x}  \right\}
+\]
+incorriamo in una contraddizione:
+\begin{gather*} 
+\PP((R,M)\in \overline{B})=0\qquad\text{perché l'insieme ha misura di Lebesgue }m_2=0 \\
+\PP((R,M)\in \overline{B})=\PP\left(R=\frac{1}{M}\right)=1\qquad\text{proprio per come sono definite }R\text{ e }M
+\end{gather*}
+Abbiamo quindi sbagliato a presupporre che il vettore $(R,M)$ fosse assolutamente continuo.
 
+\begin{oss} Abbiamo chiarito ancora una volta la non invertibilità del teorema (\ref{introth5-}. \end{oss}
 
+\item [(b-c)] Calcolare i valori attesi di $R$ e $M$. Calcolare la matrice varianza di $(R,M)$.
 
+Dato che $R$ è uniforme:
+\[
+\EE[R]=\frac{a+b}{2}=12 \qquad Var(R)=\frac{(b-a)^2}{12}=\frac{1}{12}=0.08333
+\]
+Invece per $M$:
+\begin{gather*}
+\begin{aligned}
+\EE[M]&=\EE\left[ \frac{1}{R} \right]=\int_\RR \frac{1}{x}\ f_R(x)\dx=\int_\RR \frac{1}{x}\ \frac{1}{b-a}\ \Ind_{[a,b](x)}\dx=\\
+&=\inta \frac{1}{x}\dx=\log\left( \frac{b}{a} \right)=0.08338\\
+\EE[M^2]&=\int_\RR \frac{1}{x^2}\ f_R(x)\dx=\inta \frac{1}{x^2}\dx=6.956\cdot 10^{-3}\\
+\SE Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
+\end{aligned}
+\end{gather*}
 
+Per concludere
+\begin{gather*}
+\begin{aligned}
+Cov(R,M)&=\EE[RM]-\EE[R]\,\EE[M]=1-12\cdot 0.08338 = -5.793\cdot 10^{-4}\\
+Var(R,M)&=
+\begin{pmatrix}
+0.08338 & -5.793\cdot 10^{-4} \\
+-5.793\cdot 10^{-4} & 4.029\cdot 10^{-6} \\
+\end{pmatrix}
+\end{aligned}
+\end{gather*}
 
+\item [(d)] Calcolare il coefficiente di correlazione lineare fra $R$ e $M$.
 
+Dalla definizione di coefficiente di correlazione lineare abbiamo
+\[
+\rho_{R,M}=\frac{Cov(R,M)}{\sqrt{Var(R)}\,\sqrt{Var(M)}}=\frac{-5.793\cdot 10^{-4}}{\sqrt{0.08338}\,\sqrt{4.029\cdot 10^{-6}}}=-0.9998
+\]
+Nonostante sia parecchio invintante, NON possiamo approssimare $\rho_{R,M}=-1$, in quanto per il teorema (\ref{introth10}) $R$ e $M$ dovrebbero essere legate da una relazione lineare, cosa che invece non avviene.
 
+\item [(e)] Determinare la distribuzione di $M$.
 
+Come sempre (siamo nel caso uni - dimensionale !!), per rispondere alla domanda si passa per il calcolo della funzione di ripartizione di $M$. E come sempre, prima di procedere è utile capire com'è fatto il supporto di $M$:
+\[
+S_M=\left\{ t\in\RR\ :\ \frac{1}{b}\leq t\leq\frac{1}{a}  \right\}
+\]
+Allora
+\begin{enumerate}
+\item [(i)] se $t<\dfrac{1}{b}$ allora $F_M(t)=0$
 
+\item [(ii)] se $t>\dfrac{1}{a}$ allora $F_M(t)=1$
 
+\item [(iii)] se $\dfrac{1}{b}\leq t\leq\dfrac{1}{a}$ allora
+\begin{gather*}
+\begin{aligned}
+F_M(t)&=\PP(M\leq t)=\PP\left(\frac{1}{R}\leq t\right)=\PP\left(R\geq\frac{1}{t}\right)=1-F_R\left(\frac{1}{t}\right)=\\
+&=1-\int_{-\infty}^{1/t}\frac{1}{b-a}\ \Ind_{[a,b](x)}\dx=1-\left(\frac{1}{t}-a\right)=12.5-\frac{1}{t}
+\end{aligned}
+\end{gather*}
+\end{enumerate}
+Dunque
+\[
+F_M(t)=
+\begin{cases}
+0                               &\text{se }t<\dfrac{1}{b} \\
+12.5-\dfrac{1}{t}        &\text{se } \dfrac{1}{b}\leq t\leq \dfrac{1}{a}  \\
+1                               &\text{se }t>\dfrac{1}{a}
+\end{cases}
+\]
+Notiamo infine che $F_M\in\Ct$ e quindi $M$ è variabile aleatoria assolutamente continua con densità
+\[
+f_M(t)=F_M'(t)=\frac{1}{t^2}\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(t)
+\]
 
+\begin{oss} Avremmo potuto calcolare $f_M$ anche con la formula di Jacobi (\ref{introth3}), infatti:
+\begin{itemize}
+\item $g(x)=\frac{1}{x}$ iniettiva su $S=(a,b)$ e con immagine $g(S)=\left(\frac{1}{b},\frac{1}{a}\right)$;
+\item $g\in\Cu(S)$;
+\item $g'(x)=-\frac{1}{x^2}\neq 0\quad \forall x\in S$.
+\end{itemize}
+Allora
+\[
+f_M(t)=f_R(g(y))\ |g'(y)|\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(y)=\frac{1}{y^2}\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(y)
+\]
+\end{oss}
 
+\end{enumerate}
 
+\Soluzione{}
+Mettiamo a fuoco la situazione: fissiamo due linee parallele a distanza $d$ sul pavimento e immaginiamo che un ago venga lanciato in modo casuale in tale zona di piano (per "periodicità dell'esperimento" questo è sufficiente)
+\fg{0.5}{7_11}
+Procediamo per passi graduali:
+\begin{enumerate}
 
+\item Riformulazione dell'esperimento in termini astratti.
 
+Osserviamo che la posizione di caduta dell'ago è univocamente determinata dal punto in cui cade il suo baricentro e dall'inclinazione dell'ago rispetto alle linee del pavimento. Viene quindi naturale introdurre le variabili aleatorie
+\begin{gather*}
+\begin{aligned}
+X&=\begin{matrix}
+\text{"distanza del baricentro dell'ago dalla} \\
+\text{linea del pavimento più vicina"}
+\end{matrix} \\
+\Theta &=\begin{matrix}
+\text{"angolo (antiorario) formato dall'ago} \\ 
+\text{rispetto alle linee del pavimento"}
+\end{matrix}
+\end{aligned}
+\end{gather*}
+\fg{0.5}{7_12}
+Possiamo allora supporre
+\begin{align*}
+X&\sim\UUU\left(\left[0,\frac{d}{2}\right]\right) &\SE f_X(x)&=\frac{2}{d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x) \\
+\Theta&\sim\UUU\left(\left[0,\pi\right]\right) &\SE f_\Theta(\vartheta)&=\frac{1}{\pi}\ \Ind_{\left[0,\pi\right]}(\vartheta) \\
+X&\indep\Theta&\SE f_{(X,\Theta)}(x,\vartheta)&=\frac{2}{\pi d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x)\ \Ind_{\left[0,\pi\right]}(\vartheta)
+\end{align*}
 
+\item Caratterizzazione dell'evento di interesse, cioè ci chiediamo quando l'ago intersechi almeno una linea del pavimento.
+\fg{0.5}{7_13}
+Osservando il grafico capiamo che ciò si verifica quando
+\[
+\boxed{X\leq\frac{l}{2}\sin\Theta}
+\]
+Possono verificarsi due casi:
+\begin{enumerate}
 
+\item [(a)] $l\leq d$, cioè può esserci al più un'intersezione
+
+\item [(b)] $l>d$, cioè possono esserci più di un'intersezione
+
+\end{enumerate}
+
+\medskip
+
+\begin{enumerate}
+
+\item [(a)] L'obiettivo è quello di calcolare $\PP\left(\frac{l}{2}\sin\Theta\geq X\right)$.
+
+Detto 
+\[
+A:=\left\{(x,\vartheta)\in \left[0,\frac{d}{2}\right]\times \left[0,\pi\right]\ :\ \frac{l}{2}\sin\vartheta\geq x  \right\}
+\]
+\fg{0.4}{7_14}
+abbiamo
+\begin{gather*}
+\begin{aligned}
+\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\text{d}\vartheta=\\
+&=\frac{2}{\pi d}\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx   \right)\text{d}\vartheta=\\
+&=\frac{l}{\pi d}\int_0^\pi \sin\vartheta\text{ d}\vartheta=\\
+&=\frac{2l}{\pi d}
+\end{aligned}
+\end{gather*}
+
+\item [(b)] Siamo sempre interessati alla probabilità dell'evento $A$. Tuttavia in questo caso:
+\fg{0.6}{7_15}
+
+Denotiamo con $B$ il nuovo insieme di interesse. Allora possiamo vedere $B=B_1\cup B_2\cup B_3=A-V$:
+\fg{0.6}{7_16}
+
+Quindi
+\begin{gather}
+\begin{aligned}
+\label{eqn_7_8}
+\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\text{d}\vartheta=\\
+&=\frac{2}{\pi d}\int_B 1\dx\text{d}\vartheta=\\
+&=\frac{2}{\pi d}\ m_2(B)=\\
+&=\frac{2}{\pi d}\ (m_2(A)-m_2(V))=\\
+&=\frac{2}{\pi d}\left[\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta - \int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta  \right]
+\end{aligned}
+\end{gather}
+
+Calcoliamo separatamente i due integrali
+
+\begin{gather*}
+\begin{aligned}
+\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta &=\int_0^\pi \frac{l}{2}\sin\vartheta\text{ d}\vartheta=l \\
+\int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta&=\int_{\vartheta_1}^{\vartheta_2} \left(\frac{l}{2}\sin\vartheta-\frac{d}{2}\right)\text{d}\vartheta= \\
+&=\left[-\frac{l}{2}\cos\vartheta  \right]_{\vartheta_1}^{\vartheta_2}-\left[\frac{d}{2}\vartheta  \right]_{\vartheta_1}^{\vartheta_2}=\\
+&=\frac{l}{2}\cos\vartheta_1-\frac{l}{2}\cos\vartheta_2-\frac{d}{2}\vartheta_2+\frac{d}{2}\vartheta_1 \\
+&\overset{\underset{\text{oss}}{}}{=}l\sqrt{1-\left(\frac{d}{l}\right)^2}-\frac{d}{2}\left(\pi-2\arcsin \left(\frac{d}{l}\right) \right)
+\end{aligned}
+\end{gather*}
+
+\begin{oss}$\\$
+Sono state usate le seguenti proprietà trigonometriche
+\[
+\cos(\arcsin(x))=\sqrt{1-x^2}\qquad \cos(\alpha-\beta)=\cos\alpha\,\cos\beta+\sin\alpha\,\sin\beta
+\]
+\end{oss}
+
+Riprendendo quindi l'equazione (\ref{eqn_7_8}) otteniamo
+\[
+\PP(A)=\frac{2}{\pi d}\left(l-l\sqrt{1-\left(\frac{d}{l}\right)^2}+\frac{\pi d}{2}-d\arcsin\left(\frac{d}{l}\right)  \right)=\frac{2l}{\pi d}\left(1-\sqrt{1-\left(\frac{d}{l}\right)^2}\right)+1-\frac{\pi }{2}\arcsin\left(\frac{d}{l}\right)
+\]
+
+\end{enumerate}
+
+\end{enumerate}
+
+In conclusione
+
+\[
+\PP(A)=
+\begin{cases}
+\dfrac{2l}{\pi d}    &\text{se }l\leq d \\
+\dfrac{2l}{\pi d}\left(1-\sqrt{1-\left(\dfrac{d}{l}\right)^2}\right)+1-\dfrac{\pi }{2}\arcsin\left(\dfrac{d}{l}\right) &\text{se }l> d
+\end{cases}
+\]
+
+\begin{oss}[Importanza storica dell'esperimento]$\\$
+Consideriamo $l\leq d$. Abbiamo trovato che $p=\PP(A)=\dfrac{2l}{\pi d}$ e quindi
+\[
+\pi=\dfrac{2l}{p d}=2ap^{-1}
+\]
+con $a$:="rapporto tra lunghezza dell'ago e distanza tra le linee del pavimento".
+
+Interpretando la probabilità in maniera frequentista come $p=f/t$ dove $f$ rappresenta il numero di esperimenti favorevoli (cioè ago interseca linea) e $t$ il numero di esperimenti totali, abbiamo che
+\[
+p=\displaystyle\lim_{t\to+\infty}\frac{f}{t}
+\]
+Se il numero di esperimenti è abbastanza grande si può allora ottenere un'approssimazione probabilistica di $\pi$:
+\[
+\pi=2ap^{-1}=2a\displaystyle\lim_{t\to+\infty}\frac{t}{f}\SE \pi\approx 2a\frac{t}{f}
+\]
+Si lasciano di seguito alcuni link con simulazioni: \\
+\url{https://datagenetics.com/blog/may42015/index.html} \\
+\url{https://www.maplesoft.com/support/help/Maple/view.aspx?path=MathApps%2FBuffonsNeedleProblem}
+\end{oss}
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Si scriva la densità di probabilità del vettore aleatorio $(X,Y)$.
+
+Siccome $X,Y$ sono VAR assolutamente continue e indipendenti allora il vettore aleatorio $(X,Y)$ è assolutamente continuo e la sua legge congiunta è
+\[
+\fXYxy=f_X(x)\cdot f_Y(y)=\Ind_{[0,1]}(x)\cdot \Ind_{[0,1]}(y)=_{[0,1]^2}(x,y)
+\]
+cioè $(X,Y)\sim\UUU\left([0,1]^2\right)$.
+
+\item [(b)] Si consideri il vettore aleatorio $(U,V)=(X+1,X+Y)$. Calcolarne il valore atteso e la matrice varianza.
+
+Abbiamo
+\[
+\mathbb{E}\left[\begin{pmatrix}
+U \\ V
+\end{pmatrix}\right] =
+\begin{pmatrix}
+\mathbb{E}[U] \\ \mathbb{E}[V]
+\end{pmatrix} = 
+\begin{pmatrix}
+\mathbb{E}[X+1] \\ \mathbb{E}[X+Y]
+\end{pmatrix} = 
+\begin{pmatrix}
+\mathbb{E}[X]+1 \\ \mathbb{E}[X] +\mathbb{E}[Y]
+\end{pmatrix} =
+\begin{pmatrix}
+1/2+1 \\ 1/2+1/2
+\end{pmatrix} = 
+\begin{pmatrix}
+3/2 \\ 1
+\end{pmatrix}
+\]
+\begin{gather*}
+\begin{aligned}
+Var(U)&=Var(X+1)=Var(X)=1/12 \\
+Var(V)&=Var(X+Y)=Var(X)+Var(Y)+\underbrace{2Cov(X,Y)}_{0\text{ perché }X\indep Y}=1/6 \\
+Cov(U,V)&=Cov(X+1,X+Y)=\\
+&=\underbrace{Cov(X,X)}_{Var(X)}+\underbrace{Cov(X,Y)}_{0}+\underbrace{Cov(1,X)}_{0}+\underbrace{Cov(1,Y)}_{0}=Var(X)=1/12 \\
+Var(U,V)&=\begin{pmatrix}
+ \dfrac{1}{12}& \dfrac{1}{12} \\
+\, & \, \\
+\dfrac{1}{12} &\dfrac{1}{6}  \\
+\end{pmatrix}  
+\end{aligned}
+\end{gather*}
+In alternativa si poteva usare il teorema (\ref{introth13}), dopo aver introdotto l'opportuna trasformazione affine $(U,V)=A\,(X,Y)+b$. Introdurre tale trasformazione non è utile solo per calcolare valore atteso e matrice varianza, ma anche per ricavare la legge del vettore trasformato. Vediamo nel prossimo punto come fare.
+
+\item [(c)] Se ne calcoli la legge.
+
+Vediamo il vettore $(U,V)$ come
+\[
+\begin{pmatrix}
+U \\ V
+\end{pmatrix}  
+=
+g \begin{pmatrix}
+X \\ Y
+\end{pmatrix} 
+=
+\underbrace{\begin{pmatrix}
+1 & 0 \\
+1 & 1 \\
+\end{pmatrix}}_{A}\begin{pmatrix}
+X \\ Y
+\end{pmatrix}+\underbrace{\begin{pmatrix}
+1 \\0
+\end{pmatrix}}_{b} 
+\]
+In tal caso $g:\RR^2\to\RR^2$ è iniettiva, $\Cu$ e ha jacobiano $J_g=A$ con $\det A=1\neq 0$.
+
+\begin{oss}$\\$
+Se nel caso 1D $(mx+q)'=m$ nel caso $n$D $(AX+b)'=J_{Ax+b}=A$.
+\end{oss}
+
+Possiamo quindi applicare la formula di Jacobi (\ref{introth4}) con $g^{-1}:g(\RR^2)\to\RR^2$ tale che
+\begin{gather*}
+\begin{aligned}
+f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
+&=\Ind_{[0,1]^2}(g^{-1}(u,v))\cdot\frac{1}{|\det J_g(g^{-1}(u,v))|}=\\
+&=\Ind_{g([0,1]^2)}(u,v)\cdot\frac{1}{|\det A|}=\\
+&=\Ind_Q(u,v)
+\end{aligned}
+\end{gather*}
+\fg{0.6}{7_19}
+Quindi $(U,V)\sim\UUU(Q)$.
+
+\item [(d)] Il vettore ha componenti indipendenti?
+
+Confrontando $f_{(U,V)}$ con $f_U$ e $f_V$ capiamo che $f_{(U,V)}\neq f_U\cdot f_V$ quindi $U$ e $V$ non sono indipendenti.
+
+\begin{oss}Del resto, quando l'insieme di arrivo ha linee di perimetro oblique le due variabili non possono essere indipendenti, perché tali linee avranno forma $y=mx+q$ e quindi apppunto $y$ dipende da $x$ e viceversa. 
+\end{oss}
+
+\item [(e)] Si consideri ora il vettore aleatorio $(U,V)=(X+1,X+Y-XY+X^2Y)$. Calcolarne il valore atteso.
+
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\EE[U]&=\EE[X+1]=3/2 \\
+\EE[V]&=\EE[X]+\EE[Y]-\EE[X]\,\EE[Y]+\EE[X^2]\,\EE[Y]=11/12 \\
+\SE \EE[(U,V)]&=(3/2,11/12)
+\end{aligned}
+\end{gather*}
+
+\item [(f)] Se ne calcoli la legge.
+
+Vediamo
+\[
+\begin{pmatrix}
+U \\ V
+\end{pmatrix}  
+=
+g \begin{pmatrix}
+X \\ Y
+\end{pmatrix}
+=
+\begin{pmatrix}
+X+1 \\ X+Y-XY+X^2Y
+\end{pmatrix}
+\]
+quindi 
+\begin{itemize}
+\item $g$ iniettiva;
+\item $g\in\Cu$;
+\item determinante dello jacobiano
+$$
+\det J_g(x,y)=\det \begin{pmatrix}
+\dfrac{\partial (x+1)}{\partial x} &\dfrac{\partial (x+1)}{\partial y}  \\
+\, & \, \\
+\dfrac{\partial (x+y-xy+x^2y)}{\partial x}   &  \dfrac{\partial (x+y-xy+x^2y)}{\partial y}  \\
+\end{pmatrix}
+= \det
+\begin{pmatrix}
+1 & 0 \\
+\, &\, \\
+1-y+2xy & 1-x+x^2 \\
+\end{pmatrix} 
+$$
+diverso da zero $\forall (x,y)\in S=[0,1]^2$.
+\end{itemize}
+La trasformazione $g$ soddisfa quindi le ipotesi del teorema di Jacobi (\ref{introth4}), e possiamo allora cercare $g^{-1}(u,v)$:
+\[
+\begin{cases} u=x+1 \\ v=x+y-xy+x^2y  \end{cases}\SE \begin{cases} x=u-1 \\ y=\frac{v-x}{1-x+x^2}\end{cases}\SE g^{-1}(u,v)=\begin{pmatrix}
+u-1 \\ \, \\\dfrac{v-u+1}{u^2-3u+3}
+\end{pmatrix}
+\]
+Allora
+\begin{gather*}
+\begin{aligned}
+f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
+&=\Ind_{[0,1]^2}(g^{-1}(u,v))\cdot\frac{1}{|\det J_g(g^{-1}(u,v))|}=\\
+&=\Ind_{g([0,1]^2)}(u,v)\cdot\frac{1}{1-(u-1)+(u-1)^2}=\\
+&=\Ind_{g(S)}(u,v)\cdot\frac{1}{u^2-3u+3}
+\end{aligned}
+\end{gather*}
+Ora manca da calcolare $g(S)$:
+\begin{gather*}
+g(S)=g(\{(x,y)\in\RR^2\ :\ 0\leq x,y\leq 1 \}) \\
+\SE \begin{cases}0\leq x\leq 1\SE 0\leq u-1\leq 1\SE 1\leq u \leq 2 \\ 0\leq y\leq 1\SE 0\leq \frac{v-u+1}{u^2-3u+3} \leq 1 \SE u-1\leq v\leq u^2-2u+2   \end{cases} \\
+\SE g(S)=\{(u,v)\in\RR^2\ :\ 1\leq u \leq 2,\ u-1\leq v\leq u^2-2u+2 \}=Q\\
+\, \\
+\SE f_{(U,V)}(u,v)=\Ind_Q(u,v)\ \frac{1}{u^2-3u+3}
+\end{gather*}
+\fg{0.6}{7_20}
+
+\item [(g)] Il vettore ha componenti indipendenti?
+
+Per quanto detto al punto (d), a maggior ragione in questo caso, è impossibile che $U$ e $V$ siano indipendenti.
+
+\end{enumerate}
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+Siano 
+\begin{align*}
+E_1&\sim\EEE(\lambda)=\EEE(0.3) \\
+E_2&\sim\EEE(\mu)=\EEE(0.1) \\
+E_3&\sim\EEE(\gamma)=\EEE(0.2)
+\end{align*}
+Sia $T$ la variabile aleatoria che modellizza il tempo di vita del componente elettronico formato dal collegamento in serie dei tre sottocomponenti indipendenti che hanno un tempo di vita modellizzato rispettivamente da $E_1,E_2,E_3$.
+
+\begin{enumerate}
+\item [(a)] Qual è la legge di $T$?
+
+Dato che gli elementi sono collegati in serie, l'apparecchio si guasta non appena se ne guasta uno, quindi
+\[
+T=\min\{E_1,E_2,E_3 \}
+\]
+Possiamo anche osservare che, poiché $E_i\geq 0$ q.c. $\forall i = 1:3$, si ha $T\geq 0$ q.c. Allora con l'obiettivo di determinare la legge di $T$, fissiamo un $t\geq 0$ e calcoliamo la sua funzione di ripartizione:
+\begin{gather*}
+\begin{aligned}
+F_T(t)&=\PP(T\leq t)=1-\PP(T>t)= \\
+&=1-\PP(\min\{E_1,E_2,E_3 \}>t)=\\
+&=1-\PP(E_1>t,E_2>t,E_3>t)=\\
+&\overset{\underset{\indep}{}}{=}1-\PP(E_1>t)\,\PP(E_2>t)\,\PP(E_3>t)=\\
+&=1-(1-F_{E_1}(t))\,(1-F_{E_2}(t))\,(1-F_{E_3}(t))
+\end{aligned}
+\end{gather*}
+Ricordando che
+\begin{oss}$\\$
+Se $X\sim\EEE(\lambda)$ allora
+\[
+F_X(x)=\left(1-e^{-\lambda x}\right)\Ind_{[0,+\infty)}(x)
+\]
+\end{oss}
+otteniamo
+\begin{gather*}
+F_T(t)=1-\left(e^{-\lambda t}\right)\,\left(e^{-\mu t}\right)\,\left(e^{-\gamma t}\right)=1-e^{-(\lambda+\mu+\gamma)t} \\
+\SE F_T(t)=\left(1-e^{-(\lambda+\mu+\gamma)t} \right)\Ind_{[0,+\infty)}(t) \\
+\SE T\sim\EEE(\lambda+\mu+\gamma)=\EEE(0.6)
+\end{gather*}
+
+\item [(b)] Per aumentare l'affidabilità e ridurre gli interventi di sostituzione, viene proprosto di aggiungere un componente identico in parallelo. Qual è la legge del tempo di vita $S$ del nuovo complesso?
+
+Siano $C_1$ e $C_2$ i due componenti identici collegati in parallelo che formano il componente complessivo $C_{\text{TOT}}$, rispettivamente di vita $T,P,S$. Sappiamo che $T\sim\EEE(0.6)\sim P$ e per costruzione è lecito supporre $T\indep P$.
+
+Dato che $C_1$ e $C_2$ sono collegati in parallelo, $C_{\text{TOT}}$ si guasterà quando $C_1$ e $C_2$ saranno entrambi guasti, perciò
+\[
+S=\max\{T,P\}
+\]
+Analogamente al punto precedente, fissato $s\geq 0$ si ha:
+\begin{gather*}
+\begin{aligned}
+F_S(s)&=\PP(S\leq s)=\\
+&=\PP(\max\{T,P \}\leq s)=\\
+&=\PP(T\leq s,P\leq s)=\\
+&\overset{\underset{\indep}{}}{=}\PP(T\leq s)\,\PP(P\leq s)=\\
+&=F_T(s)\,F_P(s)=\\
+&=\left(1-e^{-0.6s}  \right)^2\\
+\SE F_S(s)&=\left(1-e^{-0.6s}  \right)^2\Ind_{[0,+\infty)}(s)
+\end{aligned}
+\end{gather*}
+Essendo $\CCC^\infty$, possiamo calcolare
+\[
+f_S(s)=F_S'(s)=\left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\Ind_{[0,+\infty)}(s)
+\]
+\end{enumerate}
+
+\begin{oss}$\\$
+Quanto abbiamo quadagnato rispetto al punto (a)?
+Prima avevamo
+\[
+\EE[T]=\frac{1}{0.6}=1.6667
+\]
+Ora
+\[
+\EE[S]=\intc \left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\ds=2.5
+\]
+Fare una sostituzione ogni 30 mesi rispetto a farla ogni 20 mesi può essere molto più conveniente!
+\end{oss}
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Si calcoli la funzione di ripartiione di $Z$ e si determini la densità.
+
+Per definizione
+\[
+F_Z(z)=\PP(Z\leq z)=\PP(X+Y\leq z)
+\]
+Come sempre, vediamo l'insieme $(X+Y\leq z)$ in funzione del vettore $(X,Y)$, cioè
+\[
+\PP(X+Y\leq z)=\PP((X,Y)\in R_Z)
+\]
+con 
+\[
+R_Z=\{(x,y)\in\RR^2\ :\ -\infty\leq x\leq z-y,\ -\infty\leq y\leq +\infty  \}
+\]
+Allora
+\begin{gather*}
+\begin{aligned}
+F_Z(z)&=\PP((X,Y)\in R_Z)=\\
+&=\int_{R_Z}\fXYxy\dxy =\\
+&=\intb \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy
+\end{aligned}
+\end{gather*}
+Arrivati a questo punto è conveniente applicare un cambio di variabili di integrazioni (per l'integrale interno): poniamo $w:=x+y$ in modo tale che l'integrale che va da $-\infty$ a $z-y$ diventi della sola funzione della $z$, dato che dovremo appunto ricavarci la densità di $Z$. Così facendo, per $x\to z-y$ si ha $w\to z$, mentre $\dx=\dw$, e possiamo quindi scambiare l'integrale più esterno con quello più interno:
+\begin{gather*}
+\begin{aligned}
+F_Z(z)&=\intb \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy=\\
+&=\intb \left(\int_{-\infty}^{z}\fXY(w-y,y)\dw   \right)\dy=\\
+&=\int_{-\infty}^{z}\left(\intb \fXY(w-y,y)\dy    \right)\dw
+\end{aligned}
+\end{gather*}
+Questo ci dice che $Z$ è una variabile aleatoria assolutamente continua di densità pari a $F_Z'(x)$, cioè l'integranda dell'integrale sopra valutata in $z$:
+\begin{gather*}
+\begin{aligned}
+f_Z(z)&=F_Z'(x)=\\
+&=\intb \fXY(z-y,y)\dy
+\end{aligned}
+\end{gather*}
+E con questo si conclude la dimostrazione.
+\fg{0.5}{9_4}
+
+\item [(b)] Si calcoli la legge di $(Z,Y)$ e si trovi la legge marginale di $Z$.
+
+Il vettore $(Z,Y)$ può essere visto come una trasformazione affine del vettore $(X,Y)$, cioè
+\[
+\begin{pmatrix}
+Z \\ Y
+\end{pmatrix} =\begin{pmatrix}
+X+Y \\ Y
+\end{pmatrix} = \underbrace{\begin{pmatrix}
+1 & 1 \\
+0 &  1\\
+\end{pmatrix}}_{A}\begin{pmatrix}
+X \\ Y
+\end{pmatrix}
+\]
+Allora la funzione
+\[
+g\begin{pmatrix}
+x \\ y
+\end{pmatrix}=A\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+\]
+è $\Cu$, è biiettiva perché $\det(A)=1\neq0$ ed ha jacobiano $J_g(x,y)=\det(A)=1\neq0$; in particolare è ben definita l'inversa di $g$
+\[
+g^{-1}\begin{pmatrix}
+u \\ v
+\end{pmatrix} =A^{-1}\begin{pmatrix}
+u \\ v
+\end{pmatrix} = \begin{pmatrix}
+1 & -1 \\
+0 &  1\\
+\end{pmatrix}\begin{pmatrix}
+u \\ v
+\end{pmatrix}=\begin{pmatrix}
+u-v \\ v
+\end{pmatrix}
+\]
+Allora grazie alla formula di Jacobi (\ref{introth4}) possiamo calcolare la congiunta
+\[
+f_{(Z,Y)}(z,y)=\fXY(g^{-1}(z,y))\ \frac{1}{\underbrace{|\det J_g(z,y)|}_{=1\ \forall z,y}}=\fXY(z-y,y)
+\]
+e dedurne, grazie al teorema (\ref{introth5}), che
+\[
+f_Z(z)=\intb \fXY(z-y,y)\dy
+\]
+E con questo si conclude la dimostrazione.
+\end{enumerate}
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Determinare media, varianza e legge di $Z=X+Y$.
+
+Abbiamo
+\[
+\EE[Z]=\EE[X]+\EE[Y]=\frac{1}{2}+\frac{1}{2}=1\qquad Var(Z)\overset{\underset{\indep}{}}{=}Var(X)+Var(Z)=\frac{1}{12}+\frac{1}{12}=\frac{1}{6}
+\]
+Per calcolare la legge di $Z$ usiamo il risultato notevole dell'esercizio precedente: $Z$ è variabile aleatoria assolutamente conitnua con densità
+\[
+f_Z(z)=\int_\RR \fXY(z-y,y)\dy
+\]
+Osserviamo che
+\begin{itemize}
+\item $\fXYxy\overset{\underset{\indep}{}}{=}f_X(x)\cdot f_Y(y)\overset{\underset{\UUU}{}}{=}\Ind_{[0,1]^2}(x,y)$
+\item $Z\in[0,2]$ q.c.
+\end{itemize}
+Allora
+\[
+f_Z(z)=
+\begin{cases}
+\int_\RR\Ind_{[0,1]^2}(z-y,y)\dy &z\in[0,2] \\
+0 &\text{altrove}
+\end{cases}
+\]
+Vediamo com'è fatta $\Ind_{[0,1]^2}(z-y,y)$: per definizione si ha
+\[
+\Ind_{[0,1]^2}(z-y,y)=
+\begin{cases}
+1 &(z-y,y)\in[0,1]^2 \\
+0 &\text{altrove}
+\end{cases}
+\]
+E $(z-y,y)\in[0,1]^2$ cosa vuol dire? Vuol dire $z-y\in[0,1]$ e $y\in[0,1]$, quindi
+\[
+\begin{cases}
+0\leq y\leq 1 \\
+0\leq z-y \leq 1
+\end{cases}
+\SE
+\begin{cases}
+0\leq y\leq 1 \\
+-z\leq -y \leq 1-z
+\end{cases}
+\SE
+\begin{cases}
+0\leq y\leq 1 \\
+z-1\leq y \leq z
+\end{cases}
+\]
+Allora detto 
+\[
+R=\{(z,y)\in\RR^2\ :\ z\in[0,2],\ 0\leq y\leq 1,\ z-i\leq y\leq z  \}
+\]
+
+\fg{0.5}{7_21}
+
+si ha che
+\[
+\Ind_{[0,1]^2}(z-y,y)=\Ind_R(z,y)
+\]
+e quindi
+\[
+f_Z(z)=
+\begin{cases}
+\int_\RR\Ind_R(z,y)\dy &z\in[0,2] \\
+0 &\text{altrove}
+\end{cases}
+=
+\begin{cases}
+\int_0^z\dy=z &z\in[0,1] \\
+\int_{z-1}^1\dy=2-z  &z\in[1,2] \\
+0 &\text{altrove}
+\end{cases}
+\]
+che volendo si può riscrivere in
+\[
+f_Z(z)=
+\begin{cases}
+\int_{\max(0,z-1)}^{\min(z,1)}\dy=\min(z,1)-\max(0,z-1)=\min(z,2-z) &z\in[0,2] \\
+0 &\text{altrove}
+\end{cases}
+\]
+
+\fg{0.5}{7_22}
+
+\begin{oss} Tale legge vedremo nel capitolo successivo che è il risultato della convoluzione delle due caratteristiche. \end{oss}
+
+\item [(b$^*$)] Si trovi la legge di $T=X+Y-\Ind_{\{ X+Y-1 \}}$.
+
+Siamo nel caso 1D, perciò per trovare la legge di $T$ passiamo per il calcolo della funzione di ripartizione. E come sempre, prima di farlo, cerchiamo di capire com'è fatto il supporto di $T$: $X+Y\in[0,2]$ q.c. allora
+\begin{itemize}
+\item se $X+Y\in[0,1]$ allora $\Ind_{\{ X+Y-1 \}}=0$ e quindi $T\in[0,1]$
+\item se $X+Y\in[1,2]$ allora $\Ind_{\{ X+Y-1 \}}=1$ e quindi $T\in[1,2]-1=[0,1]$
+\end{itemize}
+Deduciamo che $T\in[0,1]$ q.c.
+
+Allora, fissato $t\in[0,1]$, la funzione di ripartizione è
+\begin{gather*}
+\begin{aligned}
+F_T(t)&=\PP\left(X+Y-\Ind_{\{ X+Y-1 \}}\leq t  \right)=\\
+&=\PP(X+Y-1\leq t,X+Y>1)+\PP(X+Y\leq t,X+Y\leq 1)=\\
+&=\PP(1<X+Y\leq t+1)+\PP(X+Y\leq t)=\\
+&=\int_1^{t+1}2-z\dz+\int_0^tz\dz=\\
+&=t
+\end{aligned}
+\end{gather*}
+
+Quindi
+\[
+F_T(t)=
+\begin{cases}
+0 &t<0 \\
+t &t\in[0,1] \\
+1 &t>1
+\end{cases}
+\SE T\sim\UUU([0,1])
+\]
+
+\end{enumerate}
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Determinare la distribuzione congiunta del vettore $(U,V)$ ove $U=XY$ e $V=\dfrac{Y}{X}$.
+
+Vediamo
+\[
+(U,V)=g(X,Y)=(XY,Y/X)
+\]
+con $g:S=(0,+\infty)^2\to(0,+\infty)^2$. Possiamo dire che
+\begin{itemize}
+\item $g$ è iniettiva in $S$
+\item $g\in\Cu(S)$
+\item $\det J_g(x,y)\neq 0\ \ \forall (x,y)\in S$ perché
+\[
+J_g(x,y)=
+\begin{bmatrix}
+y & x \\
+-y/x^2 & 1/x \\
+\end{bmatrix}
+\SE \det J_g(x,y)=2y/x
+\]
+\end{itemize}
+Cerchiamo dunque, se esiste, $g^{-1}$: presi $(u,v)\in(0,+\infty)^2$ si ha
+\[
+\begin{cases}u=xy \\ v=y/x \end{cases}
+\SE
+\begin{cases}x=u/y \\ y=vx\end{cases} 
+\SE
+\begin{cases}x=u/y \\ y^2=uv\end{cases} 
+\SE
+\begin{cases}x=u/y \\ y=\sqrt{uv} \end{cases} 
+\SE
+\begin{cases}x=\sqrt{u/v} \\ y=\sqrt{uv} \end{cases}
+\]
+Quindi $g^{-1}$ è ben definita, cioè $g^{-1}:g(S)=(0,+\infty)^2\to S=(0,+\infty)^2$ con $g^{-1}(u,v)=(\sqrt{u/v}, \sqrt{uv})$.
+
+Allora grazie alla formula di Jacobi (\ref{introth4}) la congiunta vale
+\begin{gather*}
+\begin{aligned}
+f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
+&=\Ind_{[0,1]^2}(g^{-1}(u,v))\cdot\frac{1}{|\det J_g(g^{-1}(u,v))|}=\\
+&=\Ind_{[0,1]^2}(\sqrt{u/v},\sqrt{uv})\cdot\frac{1}{2\sqrt{uv}/\sqrt{u/v}}=\\
+&=\Ind_{[0,1]^2}(\sqrt{u/v},\sqrt{uv})\cdot\frac{1}{2v}
+\end{aligned}
+\end{gather*}
+Vediamo com'è fatta $\Ind_{[0,1]^2}(\sqrt{u/v},\sqrt{uv})$:
+\[
+\begin{cases}0\leq\sqrt{u/v}\leq 1  \\ 0\leq \sqrt{uv}\leq 1 \end{cases}
+\SE
+\begin{cases}0\leq\sqrt{u}\leq \sqrt{v}  \\ 0\leq \sqrt{uv}\leq 1 \end{cases}
+\SE
+\begin{cases}0\leq u\leq v  \\ u\leq v\leq 1/u \end{cases}
+\]
+Quindi detto $I=\{(u,v)\in(0,+\infty)^2\ :\ u\in[0,1],\ v\in[u,1/u]  \}$ si ha
+\[
+f_{(U,V)}(u,v)=\frac{1}{2v}\ \Ind_I(u,v)=\frac{1}{2v}\ \Ind_{[0,1]}(u)\ \Ind_{[u,1/u]}(v)
+\]
+
+\item [(b)] Determinare le marginali di $U$ e $V$.
+
+Usando il teorema (\ref{introth5}) abbiamo
+\begin{gather*}
+\begin{aligned}
+u\in[0,1]&\SE f_{U}(u)=\intb f_{(U,V)}(u,v)\dv=\int_u^{1/u}\frac{1}{2v}\dv=-\log u \\
+&\SE  f_{U}(u)=-\log u \ \Ind_{[0,1]}(u) \\
+v\in[0,1]&\SE f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_0^v \frac{1}{2v}\du=\frac{1}{2} \\
+v\in[1,+\infty)&\SE f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_1^{1/v} \frac{1}{2v}\du=\frac{1}{2v^2} \\
+&\SE f_V(v)=\frac{1}{2}\ \Ind_{[0,1]}(v)+\frac{1}{2v^2}\ \Ind_{[1,+\infty)}(v)
+\end{aligned}
+\end{gather*}
+
+\end{enumerate}
+
+\Soluzione{}
+Dato che $X$ e $Y$ sono $>0$ q.c. allora $U>0$ q.c. 
+
+Sia quindi $t>0$. Abbiamo
+\begin{gather*}
+\begin{aligned}
+F_U(t)&=\PP(U\leq t)=\PP(X/Y\leq t)=\PP(Y\geq X/t)=\PP((X,Y)\in R)=\\
+&=\left\{ R=\{(x,y)\in\RR^2\ :\ y\geq 0,\ 0\leq x\leq ty \} \right\}=\\
+&=\int_R \fXYxy\dxy\overset{\underset{\indep}{}}{=}\int_R f_X(x)\cdot f_Y(y)\dxy=\\
+&=\int_0^{+\infty}\left(\int_0^{ty}\frac{\lambda^{\alpha+\beta}}{\Gamma(\alpha)\,\Gamma(\beta)}\ x^{\alpha-1}\ y^{\beta-1}\ e^{-\lambda(x+y)}\dx\right)\dy
+\end{aligned}
+\end{gather*}
+Per risolvere tale integrale procediamo in maniera analoga al punto (a) dell'esercizio 13, cioè "facciamo saltar fuori" la funzione di ripartizione di $t$ tramite un cambio di variabili: ponendo $z=x/y$ abbiamo
+\begin{gather*}
+\begin{aligned}
+F_U(t)&=\int_0^{+\infty}\left(\int_0^{t}\frac{\lambda^{\alpha+\beta}}{\Gamma(\alpha)\,\Gamma(\beta)}\ (yz)^{\alpha-1}\ y^{\beta-1}\ e^{-\lambda(yz+y)}\ y\dz\right)\dy= \\
+&=\int_0^t\left (\int_0^{+\infty}\frac{\lambda^{\alpha+\beta}}{\Gamma(\alpha)\,\Gamma(\beta)}\ y^{\alpha+\beta-1}\ z^{\alpha-1}\ e^{-\lambda(z+1)y}\dy\right)\dz
+\end{aligned}
+\end{gather*}
+Moltiplicando e dividendo per un'opportuna quantità, ci riconduciamo alla densità di una $\Gamma(\alpha+\beta,\lambda(z+1))$ per risolvere l'integrale interno:
+\begin{gather*}
+\begin{aligned}
+F_U(t)&=\int_0^t z^{\alpha-1}\ \frac{\Gamma(\alpha+\beta)}{(z+1)^{\alpha+\beta)}\,\Gamma(\alpha)\,\Gamma(\beta)}\ \left (\underbrace{\int_0^{+\infty}\frac{(\lambda(z+1))^{\alpha+\beta}}{\Gamma(\alpha+\beta)}\ y^{(\alpha+\beta)-1}\ e^{-(\lambda(z+1))y}\dy}_{=1}\right)\dz=\\
+&=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\,\Gamma(\beta)}\int_0^t\frac{z^{\alpha-1}}{(z+1)^{\alpha+\beta}}\dz
+\end{aligned}
+\end{gather*}
+E quindi
+\[
+f_U(t)=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\,\Gamma(\beta)}\ \frac{t^{\alpha-1}}{(t+1)^{\alpha+\beta}}\ \Ind_{(0,+\infty)}(t)
+\]
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a)] Si calcoli la media di $(X+Y)^{-1}$.
+
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\EE\left[ \frac{1}{X+Y} \right]&=\int_{\RR^2}\frac{1}{x+y}\ \fXYxy \dxy=\\
+&=\int_{\RR^2}\frac{1}{2}e^{-(x+y)}\dxy=\\
+&=\frac{1}{2}\intc e^{-x}\dx\intc e^{-y}\dy=\frac{1}{2}
+\end{aligned}
+\end{gather*}
+
+\item [(b)] Si determini la legge di $X+Y$.
+
+Usando il risultato notevole dell'esercizio 13 (\ref{introth14}) abbiamo che $Z=X+Y$ è variabile aleatoria assolutamente continua con densità, per $z>0$, data da
+\begin{gather*}
+\begin{aligned}
+f_Z(z)&=\int_\RR\fXY(z-y,y)\dy=\\
+&=\int_0^z\fXY(z-y,y)\dy=\\
+&=\int_0^z\frac{1}{2}ze^{-z}\dy=\frac{1}{2}z^2e^{-z}
+\end{aligned}
+\end{gather*}
+Quindi $Z\sim\Gamma(3,1)$.
+
+\item [(c)] Si calcoli la media di $X+Y$.
+
+Il valore atteso di una $\Gamma$ è noto, perciò $\EE[X+Y]=3/1=3$.
+
+\item [(d)] Si calcolino le marginali di $X,Y$. $X\indep Y$?
+
+Grazie al teorema (\ref{introth5}):
+\begin{gather*}
+\begin{aligned}
+f_X(x)&=\int_\RR \fXYxy\dy=\\
+&=\intc \frac{1}{2}(x+y)e^{-(x+y)}\dy=\\
+&=\frac{1}{2}xe^{-x}\underbrace{\intc e^{-y}\dy}_{1}+\frac{1}{2}e^{-x}\underbrace{\intc ye^{-y}\dy}_{1\text{ per }\left(\alpha^1\right)}=\frac{1}{2}(x+1)e^{-x}
+\end{aligned}
+\end{gather*}
+Per simmetria $f_Y(y)=\dfrac{1}{2}(y+1)e^{-y}$, da cui segue che $X\not\indep Y$.
+
+\item [(e)] Si calcoli $Cov(X,Y)$.
+
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\EE[X]&=\intc \frac{1}{2}x(x+1)e^{-x}\dx=\frac{3}{2}=\EE[Y] \\
+\EE[XY]&=\intc \frac{1}{2}xy(x+y)e^{-(x+y)}\dxy=2
+\SE Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
+\end{aligned}
+\end{gather*}
+
+\item [(f)] Si calcoli $\PP(X\geq 1,Y\geq 2)$.
+
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\PP(X\geq 1,Y\geq 2)&=\int_1^{+\infty}\int_2^{+\infty} \frac{1}{2}(x+y)e^{-(x+y)}\dxy=\\
+&=\int_1^{+\infty}\left[-\frac{1}{2}(x+y)e^{-(x+y)}-\frac{1}{2}e^{-(x+y)}  \right]_2^{+\infty}\dx=\\
+&=\frac{5}{2}e^{-3}\approx 0.1245
+\end{aligned}
+\end{gather*}
+
+\end{enumerate}
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+\begin{enumerate}
+\item [(a$^*$)] Si mostri che $Y$ è una variabile aleatoria.
+
+Manca % manca
+
+\item [(b)] Qual è la legge di $Y$?
+
+Con l'obiettivo di determinare la legge di $Y$, fissiamo $y\geq 0$ perché per costruzione $Y\geq 0$, e calcoliamo la sua funzione di ripartizione:
+\[
+F_Y(y)=\PP(Y\leq y)=1-\PP(Y>y)
+\]
+Concentriamoci su $\PP(Y>y)$:
+\begin{gather*}
+\begin{aligned}
+\PP(Y>y)&=\PP\left(\min\{X_1,\dots,X_N  \}>y  \right)=\\
+&=\PP\left(X_1>y,\dots,X_N>y,\bigcup_{n=1}^\infty (N=n)  \right)=\\
+&=\PP\left(\bigcup_{n=1}^\infty(X_1>y,\dots,X_n>y, N=n)  \right)=\\
+&=\sum_{n=1}^\infty \PP(X_1>y,\dots,X_n>y, N=n)=\\
+&\overset{\underset{\indep}{}}{=}\sum_{n=1}^\infty \PP(X_1>y)\cdots\PP(X_n>y)\ \PP(N=n)=\\
+&=\sum_{n=1}^\infty (1-F_{X_1}(y))\cdots (1-F_{X_n}(y))\ \PP(N=n)=\\
+&=\sum_{n=1}^\infty e^{-n\lambda y}\ p(1-p)^{n-1}=\\
+&=\sum_{n=0}^\infty e^{-(n+1)\lambda y}\ p(1-p)^{n}=\\
+&=pe^{-\lambda y} \underbrace{\sum_{n=0}^\infty \left((1-p)e^{-\lambda y}  \right)^n}_{\text{serie geom.}}=\\
+&=\frac{pe^{-\lambda y}}{1-(1-p)e^{-\lambda y}}
+\end{aligned}
+\end{gather*}
+Quindi
+\[
+F_Y(y)=\left(1-\frac{pe^{-\lambda y}}{1-(1-p)e^{-\lambda y}}  \right)\Ind_{[0,+\infty)}(y)=\frac{1-e^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\ \Ind_{[0,+\infty)}(y)
+\]
+
+\item [(c)] Qual è il valor atteso di $Y$? 
+
+Dato che $Y$ è una variabile aleatoria continua e positiva possiamo usare il risultato notevole (\ref{introth9}):
+\begin{gather*}
+\begin{aligned}
+\EE[Y]&=\int_0^{+\infty}(1-F_Y(y))\dy=\\
+&=\intc \frac{pe^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
+&=\frac{p}{\lambda(1-p)}\intc \frac{\lambda(1-p)e^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
+&=\frac{p}{\lambda(1-p)}\left[\log |1-(1-p)e^{-\lambda y}|  \right]_0^{+\infty}=\\
+&=\frac{p}{\lambda(1-p)}(-\log |p|)=\\
+&=-\frac{1}{\lambda}\, \frac{p}{1-p}\, \log p
+\end{aligned}
+\end{gather*}
+
+\end{enumerate}
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+Manca
+
+\Soluzione{}
+Siano $X\sim Y\sim\EEE(\lambda)$ con $X\indep Y$ tali che
+
+\fg{0.4}{7_1}
+
+\begin{enumerate}
+\item Calcolare il valore atteso dell'area $A$, in funzione di $\lambda$.
+
+Osservando che $A=XY/2$ abbiamo
+\[
+\EE[A]=\EE\left[ \frac{XY}{2} \right]=\frac{1}{2}\ \EE[XY]\overset{\underset{\indep}{}}{=}\frac{1}{2}\ \EE[X]\ \EE[Y]=\frac{1}{2\lambda^2}
+\]
+
+\item Calcolare la funzione di ripartizione di $Z$, notando che non dipende da $\lambda$, e disegnarne il grafico.
+
+Dato che $X,Y>0$ q.c. si ha $Z>0$ q.c. quindi, fissato $z>0$, la funzione di ripartizione di $Z$ è
+\[
+F_Z(z)=\PP(Z\leq z)=\PP\left(\frac{Y}{X}\leq z \right)=\PP(Y\leq zX)
+\] 
+Come sempre, conviene vedere $(Y\leq zX)$ in funzione del vettore $(X,Y)$, quindi detto
+\[
+R_Z:=\{(x,y)\in\RR^2\ :\ x>0,\ 0<y<zx\}
+\]
+
+\fg{0.4}{7_6}
+
+abbiamo 
+\begin{gather*}
+\begin{aligned}
+F_Z(z)&=\PP((X,Y)\in R_Z)= \\
+&=\int_{R_Z}\fXYxy\dxy= \\
+&\overset{\underset{\indep}{}}{=}\int_{R_Z}f_X(x)\ f_Y(y)\dxy=\\
+&=\int_{R_Z}\lambda^2e^{-\lambda(x+y)}\dxy=\\
+&=\lambda^2\intc e^{-\lambda x} \left( \int_0^{zx}e^{-\lambda y}\dy  \right)\dx=\\
+&=\lambda^2\intc e^{-\lambda x} \left[-\frac{1}{\lambda}\ e^{-\lambda y}  \right]_0^{zx}\dx=\\
+&=\lambda\intc e^{-\lambda x} \left( -e^{-\lambda zx}+1  \right)\dx=\\
+&=\lambda\intc \left(e^{-\lambda x} -e^{-\lambda (z+1)x}  \right)\dx=\\
+&=\lambda\left[-\frac{1}{\lambda}\ e^{-\lambda x}+\frac{1}{\lambda(z+1)}\ e^{-\lambda (z+1)x}  \right]_0^{+\infty}=\\
+&=\lambda\left(\frac{1}{\lambda}-\frac{1}{\lambda(z+1)} \right)=\\
+&=1-\frac{1}{z+1}=\\
+&=\frac{z}{z+1}
+\end{aligned}
+\end{gather*}
+Quindi
+\[
+F_Z(z)=
+\begin{cases}
+0 &\text{se }z\leq 0 \\
+\displaystyle\frac{z}{1+z} &\text{se }z>0
+\end{cases}
+\]
+\fg{0.5}{7_2}
+
+\item Determinare se $Z$ è assolutamente continua e in tal caso calcolarne la densità e disegnarne il grafico.
+
+Dato che $F_Z\in\Cz\cap\widetilde{\mathcal{C}}^1$ allora $Z$ è una variabile aleatoria assolutamente continua con densità
+\[
+f_Z(z)=F_Z'(z)=
+\begin{cases}
+0 &\text{se }z\leq 0 \\
+\displaystyle\frac{1}{(1+z)^2} &\text{se }z>0
+\end{cases}
+\]
+\fg{0.5}{7_3}
+
+\item Calcolare la media di $Z$.
+
+Abbiamo
+\begin{gather*}
+\begin{aligned}
+\EE[Z]&=\int_\RR z\ f_Z(z)\dz=\\
+&=\intc\frac{z}{(1+z)^2}\dz=\\
+&=\left\{ \frac{z}{(1+z)^2}=\frac{1}{1+z}-\frac{1}{(1+z)^2}  \right\}=\\
+&=\intc\frac{1}{1+z}\dz-\intc\frac{1}{(1+z)^2}\dz=\\
+&=\big[\log |1+z|  \big]_0^{+\infty}-\left[-\frac{1}{1+z}  \right]_0^{+\infty}=\\
+&=+\infty
+\end{aligned}
+\end{gather*}
+
+\item Calcolare la funzione di ripartizione di $\alpha$, notando che non dipende da $\lambda$.
+
+Osserviamo che $\displaystyle\alpha=\arctan\left(\frac{Y}{X}\right)$ e che $\displaystyle \text{Im}(\alpha)=\left(0,\frac{\pi}{2}\right)$. Allora
+\begin{itemize}
+\item Per $t\leq 0$ si ha $F_\alpha(t)=0$
+\item Per $t\geq\pi/2$ si ha $F_\alpha(t)=1$
+\item Per $t\in(0,\pi/2)$ si ha
+\begin{gather*}
+\begin{aligned}
+F_\alpha(t)&=\PP(\alpha\leq t)=\\
+&=\PP\left(\arctan\left(\frac{Y}{Z}\right)\leq t\right)=\\
+&=\PP\left(\frac{Y}{X}\leq\tan(t)\right)=\\
+&=\PP(Z\leq\tan(t))=\\
+&=F_Z(\tan(t))=\\
+&=\frac{\tan(t)}{1+\tan(t)}
+\end{aligned}
+\end{gather*}
+\end{itemize}
+
+Quindi
+\[
+\begin{cases}
+0 &\text{se }t\leq 0 \\
+\displaystyle\frac{\tan(t)}{1+\tan(t)} &\text{se }\displaystyle t\in\left(0,\frac{\pi}{2}\right) \\
+1 &\text{se }\displaystyle t\geq \frac{\pi}{2}
+\end{cases}
+\]
+\fg{0.5}{7_4}
+
+\item Determinare se $\alpha$ è assolutamente continua e in tal caso calcolarne la densità.
+
+Analogamente al punto 3, osserviamo che $F_\alpha\in\Cz\cap\widetilde{\mathcal{C}}^1$ quindi $\alpha$ è una variabile aleatoria assolutamente continua con densità
+\[
+\begin{cases}
+0 &\text{se }\displaystyle t\not\in\left(0,\frac{\pi}{2}\right) \\
+\displaystyle\frac{1+\tan^2(t)}{(1+\tan(t))^2} &\text{se }\displaystyle t\in\left(0,\frac{\pi}{2}\right)
+\end{cases}
+\]
+\fg{0.5}{7_5}
+\end{enumerate}
