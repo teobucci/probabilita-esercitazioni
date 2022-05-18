@@ -196,7 +196,7 @@ $\\$Data $X$ variabile aleatoria positiva e continua, denotata $F$ la sua funzio
 
 \begin{theorem}[Coefficiente di correlazione unitario]
 \label{introth10}
-$\\$Siano $X,Y\in L^2$ tali che $Var(X),Var(Y)>0$. Allora
+$\\$Siano $X,Y\in L^2$ tali che $\Var(X),\Var(Y)>0$. Allora
 \[
 |\rho_{X,Y}|=1\ \Longleftrightarrow\ \exists a\neq 0,\ \exists b\in\RR\ :\ Y=aX+b
 \]
@@ -206,15 +206,15 @@ $\\$Siano $X,Y\in L^2$ tali che $Var(X),Var(Y)>0$. Allora
 \label{introth11}
 $\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
 \begin{enumerate}
-\item [(a)] $Cov(X,X)=Var(X)$
-\item [(b)] $X\indep Y\ \Longrightarrow\ Cov(X,Y)=0\ \Longrightarrow\ \rho_{X,Y}=0$
+\item [(a)] $\Cov(X,X)=\Var(X)$
+\item [(b)] $X\indep Y\ \Longrightarrow\ \Cov(X,Y)=0\ \Longrightarrow\ \rho_{X,Y}=0$
 \item [(c)] $\EE(aX+b)=a\EE[X]$
 \item [(d)] $X\indep Y\ \Longrightarrow\ \EE[XY]=\EE[X] \EE[Y]$
-\item [(e)] $Var(aX+b)=a^2Var(X)$
-\item [(f)] $Cov(aX+b,cY+d)=Cov(aX,cY)=acCov(X,Y)$
+\item [(e)] $\Var(aX+b)=a^2\Var(X)$
+\item [(f)] $\Cov(aX+b,cY+d)=\Cov(aX,cY)=ac\Cov(X,Y)$
 \item [(g)] $\rho_{aX+b,cY+d}=\rho_{X,Y}$
-\item [(h)] $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
-\item [(i)] $X\indep Y\ \Longrightarrow\ Var(X+Y)=Var(X)+Var(Y)$
+\item [(h)] $\Var(X+Y)=\Var(X)+\Var(Y)+2\Cov(X,Y)$
+\item [(i)] $X\indep Y\ \Longrightarrow\ \Var(X+Y)=\Var(X)+\Var(Y)$
 \end{enumerate}
 \end{theorem}
 
@@ -222,7 +222,7 @@ $\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
 \label{introth12}
 $\\$Dati $X,Y,Z,W\in L^2$ e $a,b,c,d\in\RR$ si ha
 \[
-Cov(aX+bY,cW+dZ)=acCov(X,W)+adCov(X,Z)+bcCov(Y,W)+bdCov(Y,Z)
+\Cov(aX+bY,cW+dZ)=ac\Cov(X,W)+ad\Cov(X,Z)+bc\Cov(Y,W)+bd\Cov(Y,Z)
 \]
 \end{theorem}
 
@@ -232,7 +232,7 @@ $\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine
 \begin{gather*}
 \begin{aligned}
 \EE[Y]&=A\cdot\EE[X]+b \\
-Var(Y)&=A\cdot Var(X)\cdot A^T
+\Var(Y)&=A\cdot \Var(X)\cdot A^T
 \end{aligned}
 \end{gather*}
 \end{theorem}
@@ -338,7 +338,7 @@ xe^{-(x+y)} &\text{se }x>0,y>0 \\
 \]
 \begin{enumerate}
 \item [(a)] Quali sono le leggi di $X$ e $Y$? Le variabili aleatorie $X$ e $Y$ sono indipendenti?
-\item [(b)] Calcolare $Var(X+Y)$.
+\item [(b)] Calcolare $\Var(X+Y)$.
 \item [(c)] Si calcolino i valori attesi di $U=\min(X,Y)$ e $V=\max(X,Y)$.
 \end{enumerate}
 
@@ -455,7 +455,7 @@ Sia $(X,Y)$ un vettore aleatorio continuo con densità
 \item [(b)] Si determini la legge di $X+Y$.
 \item [(c)] Si calcoli la media di $X+Y$.
 \item [(d)] Si calcolino le marginali di $X,Y$. $X\indep Y$?
-\item [(e)] Si calcoli $Cov(X,Y)$.
+\item [(e)] Si calcoli $\Cov(X,Y)$.
 \item [(f)] Si calcoli $\PP(X\geq 1,Y\geq 2)$.
 \end{enumerate}
 
@@ -630,7 +630,7 @@ $\\$Sia $X\sim\Gamma(\alpha,\lambda)$ con $\alpha,\lambda>0$. Allora
 f_X(x)&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}e^{-\lambda x}\ \ \ \ \ x\in\RR \\
 \Gamma(\alpha)&=(\alpha-1)! \\
 \EE[X]&=\frac{\alpha}{\lambda} \\
-Var(X)&=\frac{\alpha}{\lambda^2}
+\Var(X)&=\frac{\alpha}{\lambda^2}
 \end{aligned}
 \end{gather*}
 (Quando si ha \textit{densità}$=$\textit{polinomio}$\cdot$\textit{esponenziale} è quasi sempre una $\Gamma$!)
@@ -681,11 +681,11 @@ Ricordiamo che
 \begin{oss}
 $\\$Il coefficiente di correlazione lineare si calcola con
 \begin{equation*}
-\rho_{X,Y}\coloneqq\frac{Cov(X,Y)}{\sqrt{Var(X)\cdot Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{Var(X)\cdot Var(Y)}}
+\rho_{X,Y}\coloneqq\frac{\Cov(X,Y)}{\sqrt{\Var(X)\cdot \Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{\Var(X)\cdot \Var(Y)}}
 \end{equation*}
 \end{oss}
 
-Al volo possiamo già dire che $\EE[X]=2=Var(X)$ e $\EE[Y]=4=Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
+Al volo possiamo già dire che $\EE[X]=2=\Var(X)$ e $\EE[Y]=4=\Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
 \begin{aligned}
 \EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \text{ d}x\text{d}y=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
@@ -735,11 +735,11 @@ f_Y(y)&=\int_\RR\fXYxy\dy=\\
 Quindi $f_Y(y)=e^{-y}\ \Ind_{(0,+\infty)}(y)$ e perciò $Y\sim\Gamma(1,1)\sim\Ec(1)$.
 
 Dato che la congiunta fattorizza nelle due marginali, allora per il teorema (\ref{introth6}) le variabili $X$ e $Y$ sono indipendenti.
-\item [(b)] Calcolare $Var(X+Y)$.
+\item [(b)] Calcolare $\Var(X+Y)$.
 
-Ricordando che $Var(\Gamma(\alpha,\lambda))=\alpha/\lambda^2$ e $Var(\Ec(\lambda))=1/\lambda^2$ possiamo facilmente calcolare
+Ricordando che $\Var(\Gamma(\alpha,\lambda))=\alpha/\lambda^2$ e $\Var(\Ec(\lambda))=1/\lambda^2$ possiamo facilmente calcolare
 \[
-Var(X+Y)\overset{\underset{\indep}{}}{=}Var(X)+Var(Y)=2+1=3
+\Var(X+Y)\overset{\underset{\indep}{}}{=}\Var(X)+\Var(Y)=2+1=3
 \]
 \item [(c)] Si calcolino i valori attesi di $U=\min(X,Y)$ e $V=\max(X,Y)$.
 
@@ -917,7 +917,7 @@ Abbiamo quindi sbagliato a presupporre che il vettore $(R,M)$ fosse assolutament
 
 Dato che $R$ è uniforme:
 \[
-\EE[R]=\frac{a+b}{2}=12 \qquad Var(R)=\frac{(b-a)^2}{12}=\frac{1}{12}=0.08333
+\EE[R]=\frac{a+b}{2}=12 \qquad \Var(R)=\frac{(b-a)^2}{12}=\frac{1}{12}=0.08333
 \]
 Invece per $M$:
 \begin{gather*}
@@ -925,15 +925,15 @@ Invece per $M$:
 \EE[M]&=\EE\left[ \frac{1}{R} \right]=\int_\RR \frac{1}{x}\ f_R(x)\dx=\int_\RR \frac{1}{x}\ \frac{1}{b-a}\ \Ind_{[a,b](x)}\dx=\\
 &=\int_{a}^{b} \frac{1}{x}\dx=\log\left( \frac{b}{a} \right)=0.08338\\
 \EE[M^2]&=\int_\RR \frac{1}{x^2}\ f_R(x)\dx=\int_{a}^{b} \frac{1}{x^2}\dx=6.956\cdot 10^{-3}\\
-\implies Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
+\implies \Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
 \end{aligned}
 \end{gather*}
 
 Per concludere
 \begin{gather*}
 \begin{aligned}
-Cov(R,M)&=\EE[RM]-\EE[R]\,\EE[M]=1-12\cdot 0.08338 = -5.793\cdot 10^{-4}\\
-Var(R,M)&=
+\Cov(R,M)&=\EE[RM]-\EE[R]\,\EE[M]=1-12\cdot 0.08338 = -5.793\cdot 10^{-4}\\
+\Var(R,M)&=
 \begin{pmatrix}
 0.08338 & -5.793\cdot 10^{-4} \\
 -5.793\cdot 10^{-4} & 4.029\cdot 10^{-6} \\
@@ -945,7 +945,7 @@ Var(R,M)&=
 
 Dalla definizione di coefficiente di correlazione lineare abbiamo
 \[
-\rho_{R,M}=\frac{Cov(R,M)}{\sqrt{Var(R)}\,\sqrt{Var(M)}}=\frac{-5.793\cdot 10^{-4}}{\sqrt{0.08338}\,\sqrt{4.029\cdot 10^{-6}}}=-0.9998
+\rho_{R,M}=\frac{\Cov(R,M)}{\sqrt{\Var(R)}\,\sqrt{\Var(M)}}=\frac{-5.793\cdot 10^{-4}}{\sqrt{0.08338}\,\sqrt{4.029\cdot 10^{-6}}}=-0.9998
 \]
 Nonostante sia parecchio invintante, NON possiamo approssimare $\rho_{R,M}=-1$, in quanto per il teorema (\ref{introth10}) $R$ e $M$ dovrebbero essere legate da una relazione lineare, cosa che invece non avviene.
 
@@ -1173,11 +1173,11 @@ U \\ V
 \]
 \begin{gather*}
 \begin{aligned}
-Var(U)&=Var(X+1)=Var(X)=1/12 \\
-Var(V)&=Var(X+Y)=Var(X)+Var(Y)+\underbrace{2Cov(X,Y)}_{0\text{ perché }X\indep Y}=1/6 \\
-Cov(U,V)&=Cov(X+1,X+Y)=\\
-&=\underbrace{Cov(X,X)}_{Var(X)}+\underbrace{Cov(X,Y)}_{0}+\underbrace{Cov(1,X)}_{0}+\underbrace{Cov(1,Y)}_{0}=Var(X)=1/12 \\
-Var(U,V)&=\begin{pmatrix}
+\Var(U)&=\Var(X+1)=\Var(X)=1/12 \\
+\Var(V)&=\Var(X+Y)=\Var(X)+\Var(Y)+\underbrace{2\Cov(X,Y)}_{0\text{ perché }X\indep Y}=1/6 \\
+\Cov(U,V)&=\Cov(X+1,X+Y)=\\
+&=\underbrace{\Cov(X,X)}_{\Var(X)}+\underbrace{\Cov(X,Y)}_{0}+\underbrace{\Cov(1,X)}_{0}+\underbrace{\Cov(1,Y)}_{0}=\Var(X)=1/12 \\
+\Var(U,V)&=\begin{pmatrix}
  \dfrac{1}{12}& \dfrac{1}{12} \\
 \, & \, \\
 \dfrac{1}{12} &\dfrac{1}{6}  \\
@@ -1492,7 +1492,7 @@ E con questo si conclude la dimostrazione.
 
 Abbiamo
 \[
-\EE[Z]=\EE[X]+\EE[Y]=\frac{1}{2}+\frac{1}{2}=1\qquad Var(Z)\overset{\underset{\indep}{}}{=}Var(X)+Var(Z)=\frac{1}{12}+\frac{1}{12}=\frac{1}{6}
+\EE[Z]=\EE[X]+\EE[Y]=\frac{1}{2}+\frac{1}{2}=1\qquad \Var(Z)\overset{\underset{\indep}{}}{=}\Var(X)+\Var(Z)=\frac{1}{12}+\frac{1}{12}=\frac{1}{6}
 \]
 Per calcolare la legge di $Z$ usiamo il risultato notevole dell'esercizio precedente: $Z$ è variabile aleatoria assolutamente conitnua con densità
 \[
@@ -1758,14 +1758,14 @@ f_X(x)&=\int_\RR \fXYxy\dy=\\
 \end{gather*}
 Per simmetria $f_Y(y)=\dfrac{1}{2}(y+1)e^{-y}$, da cui segue che $X\not\indep Y$.
 
-\item [(e)] Si calcoli $Cov(X,Y)$.
+\item [(e)] Si calcoli $\Cov(X,Y)$.
 
 Abbiamo
 \begin{gather*}
 \begin{aligned}
 \EE[X]&=\int_{0}^{+\infty} \frac{1}{2}x(x+1)e^{-x}\dx=\frac{3}{2}=\EE[Y] \\
 \EE[XY]&=\int_{0}^{+\infty} \frac{1}{2}xy(x+y)e^{-(x+y)}\dxy=2
-\implies Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
+\implies \Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
 \end{aligned}
 \end{gather*}
 

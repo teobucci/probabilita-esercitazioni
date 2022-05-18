@@ -877,12 +877,12 @@ e la linearità di $\EE$\begin{equation*}
 
 Se $X\in L^{2}(\PP)$, i.e. $\EE\left[ X^{2}\right] < +\infty $, allora
 \begin{equation*}
-\mathrm{Var}[ X] \coloneqq \EE( X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
+\Var[ X] \coloneqq \EE( X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
 \end{equation*}
 
 Usiamo
 \begin{equation*}
-\mathrm{Var}[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -( np)^{2}
+\Var[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -( np)^{2}
 \end{equation*}
 
 Resta da calcolare $\EE\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che
@@ -971,7 +971,7 @@ pattern radius = 1pt}\makeatletter
 Mettendo insieme i pezzi
 \begin{gather*}
 \begin{aligned}
-\mathrm{Var}[ X] & =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\\
+\Var[ X] & =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\\
  & =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right] +2\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right] -(\EE[ X])^{2}\\
  & =np+2p^{2}\frac{n( n-1)}{2} -( np)^{2}\\
  & =np( 1+p( n-1) -np)\\
@@ -979,7 +979,7 @@ Mettendo insieme i pezzi
  & =np( 1-p)
 \end{aligned}\\
 \\
-\boxed{\mathrm{Var}[ X] =np( 1-p)}
+\boxed{\Var[ X] =np( 1-p)}
 \end{gather*}
 \item Teoria. Ricordiamo che
 
@@ -1041,11 +1041,11 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
  & =\lambda  & 
 \end{align*}
 \item \begin{equation*}
-\mathrm{Var}[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
+\Var[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
 \end{equation*}
 
 Per esercizio, calcolare $\EE\left[ X^{2}\right]$ e concludere:\begin{equation*}
-X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda 
+X\sim \mathcal{P}( \lambda ) \implies \Var[ X] =\lambda 
 \end{equation*}
 \item Si procede come in Es. 7.
 \item hahahah

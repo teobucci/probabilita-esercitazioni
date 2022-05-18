@@ -266,7 +266,7 @@ si provi che per ogni coppia di interi $(k,n)$ con $1\leq k\leq n$, la variabile
 \Esercizio{} %10
 Siano $X$ e $Y$ variabili aleatorie congiuntamente gaussiane
 \begin{enumerate}
-\item [(a$^*$)] Si descriva l'immagine $S$ del vettore aleatorio $(X,Y)$ al variare di $\mu_X,\mu_Y,\sigma_X,\sigma_Y, Cov(X,Y)$.
+\item [(a$^*$)] Si descriva l'immagine $S$ del vettore aleatorio $(X,Y)$ al variare di $\mu_X,\mu_Y,\sigma_X,\sigma_Y, \Cov(X,Y)$.
 \item [(b)] Si mostri che $(X,Y)$ ammette densità continua $\fXY\iff\sigma_X>0,\sigma_Y>0,|\rho_{X,Y}|<1$.
 \item [(c)] Si mostri che, quando $(X,Y)$ ammette densità continua, si ha
 \begin{gather*}
@@ -370,7 +370,7 @@ Si consideri il vettore aleatorio $(X_\alpha,Y_\alpha)\sim\Nc\left(\begin{pmatri
 Siano $X$ e $Z$ due variabili aleatorie indipendenti tali che $X\sim\Nc(0,1)$ e $Z$ abbia legge: $\PP(Z=1)=1/2$ e $\PP(Z=-1)=1/2$. Si ponga $Y=ZX$.
 \begin{enumerate}
 \item [(a)] Che legge ha $Y$?
-\item [(b)] Calcolare $Cov(X,Y)$.
+\item [(b)] Calcolare $\Cov(X,Y)$.
 \item [(c)] Mostrare che $X+Y$ non è una variabile aleatoria gaussiana.
 \item [(d)] $(X,Y)$ è un vettore gaussiano?
 \item [(e)] $X$ e $Y$ sono indipendenti?
@@ -558,7 +558,7 @@ Allora
 \begin{aligned}
 &\varphi_X(u)=\frac{\sin(au)}{au}\overset{\underset{\text{TY}}{}}{\simeq}\frac{au-\frac{(au)^3}{3!}+o(u^3)}{au}=1-\frac{(au)^2}{6}+o(u^2) \\
 &\varphi_X'(0)=\left[-\frac{a^2}{3}u+o(u) \right]_{u=0}=0\implies\EE[X]=0\\
-&\varphi_X''(0)=\left[-\frac{a^2}{3} \right]_{u=0}=-\frac{a^2}{3}\implies\EE[X^2]=\frac{a^2}{3}\implies Var(X)=\frac{a^2}{3}\\
+&\varphi_X''(0)=\left[-\frac{a^2}{3} \right]_{u=0}=-\frac{a^2}{3}\implies\EE[X^2]=\frac{a^2}{3}\implies \Var(X)=\frac{a^2}{3}\\
 \end{aligned}
 \end{gather*}
 
@@ -584,7 +584,7 @@ X\sim  \Uc([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\le
 \]
 Per quanto riguarda media e varianza
 \[
-\EE[X]\overset{\underset{\dots}{}}{=}\frac{a+b}{2} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{(a+b)^2-ab}{3}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{(b-a)^2}{12}
+\EE[X]\overset{\underset{\dots}{}}{=}\frac{a+b}{2} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{(a+b)^2-ab}{3}\qquad \Var(X)\overset{\underset{\dots}{}}{=}\frac{(b-a)^2}{12}
 \]
 
 \item [(c)] Si mostri che $X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
@@ -619,7 +619,7 @@ X\sim\Ec(\lambda),\ \lambda>0\iff\varphi_X(u)=\frac{\lambda}{\lambda-iu}
 \]
 Per quanto riguarda media e varianza
 \[
-\EE[X]\overset{\underset{\dots}{}}{=}\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
+\EE[X]\overset{\underset{\dots}{}}{=}\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad \Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
 \]
 
 \item [(d)] Si mostri che $X$ tale che $-X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
@@ -636,7 +636,7 @@ X\text{ tale che }-X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}
 \]
 e
 \[
-\EE[X]\overset{\underset{\dots}{}}{=}-\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
+\EE[X]\overset{\underset{\dots}{}}{=}-\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad \Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
 \]
 \end{enumerate}
 
@@ -663,9 +663,9 @@ Dato che $X\sim\Uc([0,2]),\ Y\sim\Uc([0,1]),\ X\indep Y$ possiamo subito calcola
 \EE[(X,Y)]=\left(\EE[X],\EE[Y]\right)=\left(1,\frac{1}{2}\right)
 \]
 \[
-Var(X,Y)=\begin{pmatrix}
-Var(X) & Cov(X,Y) \\
-Cov(X,Y) & Var(Y) \\
+\Var(X,Y)=\begin{pmatrix}
+\Var(X) & \Cov(X,Y) \\
+\Cov(X,Y) & \Var(Y) \\
 \end{pmatrix}=\begin{pmatrix}
 1/3 & 0 \\
 0 & 1/12 \\
@@ -733,7 +733,7 @@ Allora
 \begin{gather*}
 \begin{aligned}
 &\EE[(Z,W,J)]=A\EE[(X,Y)]+b=\begin{pmatrix} 3/2 \\ -3/2  \\-1 \end{pmatrix}   \\
-&Var(Z,W,J)=AVar(X,Y)A^T=\begin{pmatrix}
+&\Var(Z,W,J)=A\Var(X,Y)A^T=\begin{pmatrix}
 17/12 & -1/12 & -2/3 \\
 -1/12 &  1/12& 0 \\
  -2/3& 0 & 1/3 \\
