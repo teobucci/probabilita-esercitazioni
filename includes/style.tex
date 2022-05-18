@@ -29,7 +29,7 @@
 \usepackage{dsfont} % per \mathds{} (funzione indicatrice)
 \usepackage{amsmath,amssymb,amsthm} % amssymb carica anche amsfonts
 \usepackage{tikz}
-\usetikzlibrary{positioning,shapes.misc,intersections,shapes.symbols,patterns,fadings,shadows.blur}
+\usetikzlibrary{positioning,shapes.misc,intersections,shapes.symbols,patterns,fadings,shadows.blur,decorations.pathreplacing}
 \usepackage{mathdots}
 \usepackage{cancel}
 \usepackage{color}
@@ -134,23 +134,9 @@
 \newcommand{\event}[1]{\emph{``#1''}} % evento
 
 % variazioni del simbolo "="
-\newcommand{\questeq}{\overset{?}{=}} % è vero che?
 \newcommand{\iideq}{\overset{\text{\tiny iid}}{=}}
 \newcommand{\ideq}{\overset{\text{\tiny id}}{=}}
 \newcommand{\indepeq}{\overset{\perp \!\!\! \perp}{=}}
-
-% lettere bold
-\newcommand{\PP}{\mathbb{P}}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\QQ}{\mathbb{Q}}
-\newcommand{\EE}{\mathbb{E}}
-\newcommand{\ZZ}{\mathbb{Z}}
-\newcommand{\NN}{\mathbb{N}}
-
-% lettere calligrafiche
-\newcommand{\Ac}{\mathcal{A}}
-\newcommand{\Pc}{\mathcal{P}}
-\newcommand{\Bc}{\mathcal{B}}
 
 \newcommand{\boxedText}[1]{\noindent\fbox{\parbox{\textwidth}{#1}}}
 

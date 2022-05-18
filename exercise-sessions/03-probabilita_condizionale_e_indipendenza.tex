@@ -304,9 +304,9 @@ Osserviamo innanzitutto che lo spazio campionario è $\Omega =\{1,\dots,12\}$. O
 	allora $A,B,D$ non sono indipendenti. L'indipendenza è un concetto più forte dell'indipendenza a coppie.
 	\item
 	\begin{gather*}
-		\PP(A\mid E) =\frac{1}{2} =\PP(A) \implies A\Bot E\\
-		\PP(B\mid E) =\frac{1}{2} =\PP(B) \implies B\Bot E\\
-		\underbrace{\PP(A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\PP(A)\PP(B)\PP(E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\Bot B\Bot E
+		\PP(A\mid E) =\frac{1}{2} =\PP(A) \implies A\indep E\\
+		\PP(B\mid E) =\frac{1}{2} =\PP(B) \implies B\indep E\\
+		\underbrace{\PP(A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\PP(A)\PP(B)\PP(E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\indep B\indep E
 	\end{gather*}
 	\item $\dots$
 \end{enumerate}
@@ -379,7 +379,7 @@ sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e q
 	Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
 	\begin{gather*}
 		\left(\bigcup_{k} A_{k}\right) =\left(\left(\bigcup_{k} A_{k}\right)\comp\right)\comp =\left(\bigcap_{k} A_{k}\comp\right)\comp ,\ \ \ \ \PP\left(A\comp\right) =1-\PP(A) ,\\
-		A_{k} \Bot \text{allora} \ A_{k}\comp \Bot ,
+		A_{k} \indep \text{allora} \ A_{k}\comp \indep ,
 	\end{gather*}
 	quindi
 	\begin{align*}
@@ -407,7 +407,7 @@ sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e q
 
 	Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)
 	\begin{align*}
-		\PP(A_{1} \cap B_{1}) & =\PP\left(A_{1} \cap \bigcap_{k=2}^{42} A_{k}\comp\right)\overset{\Bot }{=}\PP(A_{1})\prod_{k=2}^{42}\PP\left(A_{k}\comp\right)\\
+		\PP(A_{1} \cap B_{1}) & =\PP\left(A_{1} \cap \bigcap_{k=2}^{42} A_{k}\comp\right)\overset{\indep }{=}\PP(A_{1})\prod_{k=2}^{42}\PP\left(A_{k}\comp\right)\\
 		 & =\PP(A_{1})\prod_{k=2}^{42}(1-\PP(A_{k})) =\\
 		 & =\PP(A)(1-\PP(A))^{41} =\frac{1}{18}\left(1-\frac{1}{18}\right)^{41}
 	\end{align*}
@@ -423,7 +423,7 @@ sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e q
 	Allora
 	\begin{align*}
 		\PP(A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP(A_{1} \cap A_{2} \cap B_{2})}{\PP(B_{2})} =\frac{\PP\left(A_{1} \cap A_{2} \cap \bigcap_{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
-		 & \overset{\Bot }{=}\frac{\PP(A_{1})\PP(A_{2})\PP\left(\bigcap_{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
+		 & \overset{\indep }{=}\frac{\PP(A_{1})\PP(A_{2})\PP\left(\bigcap_{k=3}^{42} A_{k}\comp\right)}{\PP(B_{2})}\\
 		 & =\frac{\PP(A)\PP(A)(1-\PP(A))^{40}}{\PP(B_{2})}\\
 		 & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 	\end{align*}
@@ -448,7 +448,8 @@ quindi
 \begin{oss}
 Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
 \end{oss}
-\item Introduciamo i nuovi eventi $B_{k} =$ "il $15$ è estratto $k$ volte".\begin{equation*}
+\item Introduciamo i nuovi eventi $B_{k} =$ \event{il $15$ è estratto $k$ volte}.
+\begin{equation*}
 \PP(A_{1} \mid B_{1}) =\frac{\PP(A_{1} \cap B_{1})}{\PP(B_{1})}
 \end{equation*}
 
