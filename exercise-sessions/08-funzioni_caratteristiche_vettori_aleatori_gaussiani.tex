@@ -911,7 +911,7 @@ Ricordando che
 \begin{gather*}
 \begin{aligned}
 &f_X(x)=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}\ e^{-\lambda x}\ \Ind_{(0,+\infty)}(x) \\
-&\Gamma(\alpha)=\intc t^{\alpha-1}\ e^{-t}\dt \\
+&\Gamma(\alpha)=\int_{0}^{+\infty} t^{\alpha-1}\ e^{-t}\dt \\
 &\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}
 \end{aligned}
 \end{gather*}
@@ -920,11 +920,11 @@ abbiamo
 \begin{aligned}
 \varphi_X(u)&=\EE\left[e^{iuX}  \right]=\\
 &=\int_\RR e^{iux}\ \frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}\ e^{-\lambda x}\ \Ind_{(0,+\infty)}(x)\dx=\\
-&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\intc x^{\alpha-1}\ e^{-(\lambda-iu) x}\dx=\\
+&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} x^{\alpha-1}\ e^{-(\lambda-iu) x}\dx=\\
 &=\{ y:=(\lambda-iu)x \}=\\
-&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\intc \frac{y^{\alpha-1}}{(\lambda-iu)^{\alpha-1}}\ e^{-y}\ \frac{\text{d}y}{\lambda-iu}=\\
-&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ \frac{1}{(\lambda-iu)^{\alpha}}\intc y^{\alpha-1}\ e^{-y}\dy =\\
-&=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha\ \frac{1}{\Gamma(\alpha)}\underbrace{\intc y^{\alpha-1}\ e^{-y}\dy}_{\Gamma(\alpha)}=\\
+&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} \frac{y^{\alpha-1}}{(\lambda-iu)^{\alpha-1}}\ e^{-y}\ \frac{\text{d}y}{\lambda-iu}=\\
+&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ \frac{1}{(\lambda-iu)^{\alpha}}\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy =\\
+&=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha\ \frac{1}{\Gamma(\alpha)}\underbrace{\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy}_{\Gamma(\alpha)}=\\
 &=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha
 \end{aligned}
 \end{gather*}

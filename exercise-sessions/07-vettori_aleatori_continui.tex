@@ -1,23 +1,5 @@
 %!TEX root = ../main.tex
 
-\newcommand{\fXYxy}{f_{(X,Y)}(x,y)}
-\newcommand{\fXY}{f_{(X,Y)}}
-\newcommand{\indep}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
-\newcommand{\Lu}{\mathcal{L}^1}
-\newcommand{\Cz}{\mathcal{C}^0}
-\newcommand{\Cu}{\mathcal{C}^1}
-\newcommand{\Ct}{\Cz\cap\widetilde{\Cc}^1}
-\newcommand{\SDP}{(\Omega,\Ac,\PP)}
-\newcommand{\SDE}{(E,\Ec)}
-\newcommand{\SDF}{(F,\FFF)}
-\newcommand{\inta}{\int_{a}^{b}}
-\newcommand{\intaa}{\int_{c}^{d}}
-\newcommand{\intb}{\int_{-\infty}^{+\infty}}
-\newcommand{\intc}{\int_{0}^{+\infty}}
-\newcommand{\intd}{\int_{0}^{1}}
-\newcommand{\inte}{\int_{\mathbb{R}}}
-\newcommand{\intf}{\int_{\mathbb{R}^2}}
-
 % Introduzione
 
 \section{Introduzione}
@@ -58,11 +40,11 @@ Siamo pronti per enunciare
 \label{introth1}
 Sia $D$ un dominio normale rispetto all'asse $x$ in $[a,b]$. Allora data $f:D\to\RR$ continua si ha
 \[
-\iint_{D}f(x,y)\dxy=\inta \left(\int_{f_1(x)}^{f_2(x)}f(x,y)\dy  \right)\dx
+\iint_{D}f(x,y)\dxy=\int_{a}^{b} \left(\int_{f_1(x)}^{f_2(x)}f(x,y)\dy  \right)\dx
 \]
 Sia $E$ un dominio normale rispetto all'asse $y$ in $[c,d]$. Allora data $f:R\to\RR$ continua si ha
 \[
-\iint_{E}f(x,y)\dxy=\intaa \left(\int_{f_3(y)}^{f_4(y)}f(x,y)\dx  \right)\dy
+\iint_{E}f(x,y)\dxy=\int_{c}^{d} \left(\int_{f_3(y)}^{f_4(y)}f(x,y)\dx  \right)\dy
 \]
 \end{theorem}
 
@@ -208,7 +190,7 @@ $\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con leg
 \label{introth9}
 $\\$Data $X$ variabile aleatoria positiva e continua, denotata $F$ la sua funzione di ripartizione, allora
 \[
-\EE[X]=\intc(1-F(x))\dx
+\EE[X]=\int_{0}^{+\infty}(1-F(x))\dx
 \]
 \end{theorem}
 
@@ -260,7 +242,7 @@ Ora anticipiamo due risultati notevoli che verranno poi dimostrati nelle pagine 
 \label{introth14}
 $\\$Date $X$ e $Y$ di legge congiunta continua con densità $f_{(X,Y)}$, si consideri $Z=X+Y$. Allora $Z$ èuna variabile aleatoria continua con densità
 \[
-f_Z(z)=\intb f_{(X,Y)}(z-y,y)\dy
+f_Z(z)=\int_{-\infty}^{+\infty} f_{(X,Y)}(z-y,y)\dy
 \]
 \end{theorem}
 \begin{theorem}[Risultato notevole (esercizio 2 del foglio 7)]
@@ -424,7 +406,7 @@ Un componente elettronico è formato da tre elementi indipendenti in serie, cias
 \Esercizio{}
 Date $X$ e $Y$ di legge congiunta continua con densità $\fXY$, si consideri $Z=X+Y$. Si mostri che $Z$ è una variabile aleatoria continua con densità
 \[
-f_Z(z)=\intb f_{(X,Y)}(z-y,y)\dy
+f_Z(z)=\int_{-\infty}^{+\infty} f_{(X,Y)}(z-y,y)\dy
 \]
 Si mostri questo risultato procedendo nei due seguenti modi:
 \begin{enumerate}
@@ -734,7 +716,7 @@ Per calcolare le due marginali usiamo il teorema (\ref{introth5}). Quindi, fissa
 \begin{gather*}
 \begin{aligned}
 f_X(x)&=\int_\RR\fXYxy\dy=\\
-&=\intc xe^{-(x+y)}\dy=\\
+&=\int_{0}^{+\infty} xe^{-(x+y)}\dy=\\
 &=\left[-xe^{-(x+y)}  \right]_0^{+\infty}=\\
 &=xe^{-x}
 \end{aligned}
@@ -745,8 +727,8 @@ Allo stesso modo fissiamo $y>0$ e calcoliamo
 \begin{gather*}
 \begin{aligned}
 f_Y(y)&=\int_\RR\fXYxy\dy=\\
-&=\intc xe^{-(x+y)}\dx=\\
-&=e^{-y}\underbrace{\intc xe^{-x}\dx}_{=1\text{ per }(\alpha^1)}=\\
+&=\int_{0}^{+\infty} xe^{-(x+y)}\dx=\\
+&=e^{-y}\underbrace{\int_{0}^{+\infty} xe^{-x}\dx}_{=1\text{ per }(\alpha^1)}=\\
 &=e^{-y}
 \end{aligned}
 \end{gather*}
@@ -805,15 +787,15 @@ Siamo pronti per calcolare i valori attesi di $U$ e $V$. In particolare faremo v
 \begin{gather*}
 \begin{aligned}
 f_U(u)&=(F_U(u))'=(2u+1)e^{-2u}\ \Ind_{(0,+\infty)}(u) \\
-\Longrightarrow\ \EE[U]&=\intc u\cdot (2u+1)e^{-2u}\du =\\
-&\overset{\underset{pp}{}}{=}\left[(2u^2+u)(-\frac{1}{2}e^{-2u})   \right]_0^{+\infty} -\intc (4u+1)(-\frac{1}{2}e^{-2u})\du \\
-&\overset{\underset{pp}{}}{=}0+\frac{1}{2}\left\{\left[(4u+1)(-\frac{1}{2}e^{-2u})  \right]_0^{+\infty}+2\intc e^{-2u}\du   \right\}=\\
+\Longrightarrow\ \EE[U]&=\int_{0}^{+\infty} u\cdot (2u+1)e^{-2u}\du =\\
+&\overset{\underset{pp}{}}{=}\left[(2u^2+u)(-\frac{1}{2}e^{-2u})   \right]_0^{+\infty} -\int_{0}^{+\infty} (4u+1)(-\frac{1}{2}e^{-2u})\du \\
+&\overset{\underset{pp}{}}{=}0+\frac{1}{2}\left\{\left[(4u+1)(-\frac{1}{2}e^{-2u})  \right]_0^{+\infty}+2\int_{0}^{+\infty} e^{-2u}\du   \right\}=\\
 &=\frac{1}{4}+\left[ -\frac{1}{2}e^{-2u} \right]_0^{+\infty}=\\
 &=\frac{1}{4}+\frac{1}{2}=\\
 &=\frac{3}{4} \\
-\EE[V]&=\intc (1-F_V(v))\dv=\\
-&=\intc (v+2)e^{-v}-(v+1)e^{-2v}\dv=\\
-&\overset{\underset{pp}{}}{=}\left[-(v+2)e^{-v}+\frac{1}{2}(v+1)e^{-2v}  \right]_0^{+\infty}+\intc e^{-v}\dv-\intc \frac{1}{2}e^{-2v}\dv=\\
+\EE[V]&=\int_{0}^{+\infty} (1-F_V(v))\dv=\\
+&=\int_{0}^{+\infty} (v+2)e^{-v}-(v+1)e^{-2v}\dv=\\
+&\overset{\underset{pp}{}}{=}\left[-(v+2)e^{-v}+\frac{1}{2}(v+1)e^{-2v}  \right]_0^{+\infty}+\int_{0}^{+\infty} e^{-v}\dv-\int_{0}^{+\infty} \frac{1}{2}e^{-2v}\dv=\\
 &=2-\frac{1}{2}+\left[-e^{-v}  \right]_0^{+\infty}  + \left[\frac{1}{4}e^{-2v}  \right]_0^{+\infty}=\\
 &=2-\frac{1}{2}+1-\frac{1}{4}=\\
 &=\frac{9}{4}
@@ -852,7 +834,7 @@ f_X(x)=\left(\frac{1}{4}(2-|x-2|)  \right)\Ind_{[0,4]}(x)
 Abbiamo
 \begin{gather*}
 \begin{aligned}
-\EE[X]&=\intc x\ f_X(x)\dx=\\
+\EE[X]&=\int_{0}^{+\infty} x\ f_X(x)\dx=\\
 &=\int_0^4 \frac{1}{4}x(2-|x-2|)\dx=\\
 &=\int_0^4 \frac{1}{2}x\dx-\int_0^4 \frac{1}{4}x|x-2|\dx=\\
 &=\left[\frac{1}{4}x^2\right]_0^4-\left(\int_0^2 -\frac{1}{4}x(x-2)\dx+\int_2^4 \frac{1}{4}x(x-2)\dx  \right)=\\
@@ -941,8 +923,8 @@ Invece per $M$:
 \begin{gather*}
 \begin{aligned}
 \EE[M]&=\EE\left[ \frac{1}{R} \right]=\int_\RR \frac{1}{x}\ f_R(x)\dx=\int_\RR \frac{1}{x}\ \frac{1}{b-a}\ \Ind_{[a,b](x)}\dx=\\
-&=\inta \frac{1}{x}\dx=\log\left( \frac{b}{a} \right)=0.08338\\
-\EE[M^2]&=\int_\RR \frac{1}{x^2}\ f_R(x)\dx=\inta \frac{1}{x^2}\dx=6.956\cdot 10^{-3}\\
+&=\int_{a}^{b} \frac{1}{x}\dx=\log\left( \frac{b}{a} \right)=0.08338\\
+\EE[M^2]&=\int_\RR \frac{1}{x^2}\ f_R(x)\dx=\int_{a}^{b} \frac{1}{x^2}\dx=6.956\cdot 10^{-3}\\
 \implies Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
 \end{aligned}
 \end{gather*}
@@ -996,7 +978,7 @@ F_M(t)=
 1                               &\text{se }t>\dfrac{1}{a}
 \end{cases}
 \]
-Notiamo infine che $F_M\in\Ct$ e quindi $M$ è variabile aleatoria assolutamente continua con densità
+Notiamo infine che $F_M\in\Cz\cap\widetilde{\Cc}^1$ e quindi $M$ è variabile aleatoria assolutamente continua con densità
 \[
 f_M(t)=F_M'(t)=\frac{1}{t^2}\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(t)
 \]
@@ -1408,7 +1390,7 @@ Prima avevamo
 \]
 Ora
 \[
-\EE[S]=\intc \left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\ds=2.5
+\EE[S]=\int_{0}^{+\infty} \left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\ds=2.5
 \]
 Fare una sostituzione ogni 30 mesi rispetto a farla ogni 20 mesi può essere molto più conveniente!
 \end{oss}
@@ -1434,22 +1416,22 @@ Allora
 \begin{aligned}
 F_Z(z)&=\PP((X,Y)\in R_Z)=\\
 &=\int_{R_Z}\fXYxy\dxy =\\
-&=\intb \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy
+&=\int_{-\infty}^{+\infty} \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy
 \end{aligned}
 \end{gather*}
 Arrivati a questo punto è conveniente applicare un cambio di variabili di integrazioni (per l'integrale interno): poniamo $w:=x+y$ in modo tale che l'integrale che va da $-\infty$ a $z-y$ diventi della sola funzione della $z$, dato che dovremo appunto ricavarci la densità di $Z$. Così facendo, per $x\to z-y$ si ha $w\to z$, mentre $\dx=\dw$, e possiamo quindi scambiare l'integrale più esterno con quello più interno:
 \begin{gather*}
 \begin{aligned}
-F_Z(z)&=\intb \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy=\\
-&=\intb \left(\int_{-\infty}^{z}\fXY(w-y,y)\dw   \right)\dy=\\
-&=\int_{-\infty}^{z}\left(\intb \fXY(w-y,y)\dy    \right)\dw
+F_Z(z)&=\int_{-\infty}^{+\infty} \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy=\\
+&=\int_{-\infty}^{+\infty} \left(\int_{-\infty}^{z}\fXY(w-y,y)\dw   \right)\dy=\\
+&=\int_{-\infty}^{z}\left(\int_{-\infty}^{+\infty} \fXY(w-y,y)\dy    \right)\dw
 \end{aligned}
 \end{gather*}
 Questo ci dice che $Z$ è una variabile aleatoria assolutamente continua di densità pari a $F_Z'(x)$, cioè l'integranda dell'integrale sopra valutata in $z$:
 \begin{gather*}
 \begin{aligned}
 f_Z(z)&=F_Z'(x)=\\
-&=\intb \fXY(z-y,y)\dy
+&=\int_{-\infty}^{+\infty} \fXY(z-y,y)\dy
 \end{aligned}
 \end{gather*}
 E con questo si conclude la dimostrazione.
@@ -1499,7 +1481,7 @@ f_{(Z,Y)}(z,y)=\fXY(g^{-1}(z,y))\ \frac{1}{\underbrace{|\det J_g(z,y)|}_{=1\ \fo
 \]
 e dedurne, grazie al teorema (\ref{introth5}), che
 \[
-f_Z(z)=\intb \fXY(z-y,y)\dy
+f_Z(z)=\int_{-\infty}^{+\infty} \fXY(z-y,y)\dy
 \]
 E con questo si conclude la dimostrazione.
 \end{enumerate}
@@ -1688,10 +1670,10 @@ f_{(U,V)}(u,v)=\frac{1}{2v}\ \Ind_I(u,v)=\frac{1}{2v}\ \Ind_{[0,1]}(u)\ \Ind_{[u
 Usando il teorema (\ref{introth5}) abbiamo
 \begin{gather*}
 \begin{aligned}
-u\in[0,1]&\implies f_{U}(u)=\intb f_{(U,V)}(u,v)\dv=\int_u^{1/u}\frac{1}{2v}\dv=-\log u \\
+u\in[0,1]&\implies f_{U}(u)=\int_{-\infty}^{+\infty} f_{(U,V)}(u,v)\dv=\int_u^{1/u}\frac{1}{2v}\dv=-\log u \\
 &\implies  f_{U}(u)=-\log u \ \Ind_{[0,1]}(u) \\
-v\in[0,1]&\implies f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_0^v \frac{1}{2v}\du=\frac{1}{2} \\
-v\in[1,+\infty)&\implies f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_1^{1/v} \frac{1}{2v}\du=\frac{1}{2v^2} \\
+v\in[0,1]&\implies f_V(v)=\int_{-\infty}^{+\infty} f_{(U,V)}(u,v)\du=\int_0^v \frac{1}{2v}\du=\frac{1}{2} \\
+v\in[1,+\infty)&\implies f_V(v)=\int_{-\infty}^{+\infty} f_{(U,V)}(u,v)\du=\int_1^{1/v} \frac{1}{2v}\du=\frac{1}{2v^2} \\
 &\implies f_V(v)=\frac{1}{2}\ \Ind_{[0,1]}(v)+\frac{1}{2v^2}\ \Ind_{[1,+\infty)}(v)
 \end{aligned}
 \end{gather*}
@@ -1744,7 +1726,7 @@ Abbiamo
 \begin{aligned}
 \EE\left[ \frac{1}{X+Y} \right]&=\int_{\RR^2}\frac{1}{x+y}\ \fXYxy \dxy=\\
 &=\int_{\RR^2}\frac{1}{2}e^{-(x+y)}\dxy=\\
-&=\frac{1}{2}\intc e^{-x}\dx\intc e^{-y}\dy=\frac{1}{2}
+&=\frac{1}{2}\int_{0}^{+\infty} e^{-x}\dx\int_{0}^{+\infty} e^{-y}\dy=\frac{1}{2}
 \end{aligned}
 \end{gather*}
 
@@ -1770,8 +1752,8 @@ Grazie al teorema (\ref{introth5}):
 \begin{gather*}
 \begin{aligned}
 f_X(x)&=\int_\RR \fXYxy\dy=\\
-&=\intc \frac{1}{2}(x+y)e^{-(x+y)}\dy=\\
-&=\frac{1}{2}xe^{-x}\underbrace{\intc e^{-y}\dy}_{1}+\frac{1}{2}e^{-x}\underbrace{\intc ye^{-y}\dy}_{1\text{ per }\left(\alpha^1\right)}=\frac{1}{2}(x+1)e^{-x}
+&=\int_{0}^{+\infty} \frac{1}{2}(x+y)e^{-(x+y)}\dy=\\
+&=\frac{1}{2}xe^{-x}\underbrace{\int_{0}^{+\infty} e^{-y}\dy}_{1}+\frac{1}{2}e^{-x}\underbrace{\int_{0}^{+\infty} ye^{-y}\dy}_{1\text{ per }\left(\alpha^1\right)}=\frac{1}{2}(x+1)e^{-x}
 \end{aligned}
 \end{gather*}
 Per simmetria $f_Y(y)=\dfrac{1}{2}(y+1)e^{-y}$, da cui segue che $X\not\indep Y$.
@@ -1781,8 +1763,8 @@ Per simmetria $f_Y(y)=\dfrac{1}{2}(y+1)e^{-y}$, da cui segue che $X\not\indep Y$
 Abbiamo
 \begin{gather*}
 \begin{aligned}
-\EE[X]&=\intc \frac{1}{2}x(x+1)e^{-x}\dx=\frac{3}{2}=\EE[Y] \\
-\EE[XY]&=\intc \frac{1}{2}xy(x+y)e^{-(x+y)}\dxy=2
+\EE[X]&=\int_{0}^{+\infty} \frac{1}{2}x(x+1)e^{-x}\dx=\frac{3}{2}=\EE[Y] \\
+\EE[XY]&=\int_{0}^{+\infty} \frac{1}{2}xy(x+y)e^{-(x+y)}\dxy=2
 \implies Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
 \end{aligned}
 \end{gather*}
@@ -1841,8 +1823,8 @@ Dato che $Y$ è una variabile aleatoria continua e positiva possiamo usare il ri
 \begin{gather*}
 \begin{aligned}
 \EE[Y]&=\int_0^{+\infty}(1-F_Y(y))\dy=\\
-&=\intc \frac{pe^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
-&=\frac{p}{\lambda(1-p)}\intc \frac{\lambda(1-p)e^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
+&=\int_{0}^{+\infty} \frac{pe^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
+&=\frac{p}{\lambda(1-p)}\int_{0}^{+\infty} \frac{\lambda(1-p)e^{-\lambda y}}{1-(1-p)e^{-\lambda y}}\dy=\\
 &=\frac{p}{\lambda(1-p)}\left[\log |1-(1-p)e^{-\lambda y}|  \right]_0^{+\infty}=\\
 &=\frac{p}{\lambda(1-p)}(-\log |p|)=\\
 &=-\frac{1}{\lambda}\, \frac{p}{1-p}\, \log p
@@ -1890,10 +1872,10 @@ F_Z(z)&=\PP((X,Y)\in R_Z)= \\
 &=\int_{R_Z}\fXYxy\dxy= \\
 &\overset{\underset{\indep}{}}{=}\int_{R_Z}f_X(x)\ f_Y(y)\dxy=\\
 &=\int_{R_Z}\lambda^2e^{-\lambda(x+y)}\dxy=\\
-&=\lambda^2\intc e^{-\lambda x} \left( \int_0^{zx}e^{-\lambda y}\dy  \right)\dx=\\
-&=\lambda^2\intc e^{-\lambda x} \left[-\frac{1}{\lambda}\ e^{-\lambda y}  \right]_0^{zx}\dx=\\
-&=\lambda\intc e^{-\lambda x} \left( -e^{-\lambda zx}+1  \right)\dx=\\
-&=\lambda\intc \left(e^{-\lambda x} -e^{-\lambda (z+1)x}  \right)\dx=\\
+&=\lambda^2\int_{0}^{+\infty} e^{-\lambda x} \left( \int_0^{zx}e^{-\lambda y}\dy  \right)\dx=\\
+&=\lambda^2\int_{0}^{+\infty} e^{-\lambda x} \left[-\frac{1}{\lambda}\ e^{-\lambda y}  \right]_0^{zx}\dx=\\
+&=\lambda\int_{0}^{+\infty} e^{-\lambda x} \left( -e^{-\lambda zx}+1  \right)\dx=\\
+&=\lambda\int_{0}^{+\infty} \left(e^{-\lambda x} -e^{-\lambda (z+1)x}  \right)\dx=\\
 &=\lambda\left[-\frac{1}{\lambda}\ e^{-\lambda x}+\frac{1}{\lambda(z+1)}\ e^{-\lambda (z+1)x}  \right]_0^{+\infty}=\\
 &=\lambda\left(\frac{1}{\lambda}-\frac{1}{\lambda(z+1)} \right)=\\
 &=1-\frac{1}{z+1}=\\
@@ -1928,9 +1910,9 @@ Abbiamo
 \begin{gather*}
 \begin{aligned}
 \EE[Z]&=\int_\RR z\ f_Z(z)\dz=\\
-&=\intc\frac{z}{(1+z)^2}\dz=\\
+&=\int_{0}^{+\infty}\frac{z}{(1+z)^2}\dz=\\
 &=\left\{ \frac{z}{(1+z)^2}=\frac{1}{1+z}-\frac{1}{(1+z)^2}  \right\}=\\
-&=\intc\frac{1}{1+z}\dz-\intc\frac{1}{(1+z)^2}\dz=\\
+&=\int_{0}^{+\infty}\frac{1}{1+z}\dz-\int_{0}^{+\infty}\frac{1}{(1+z)^2}\dz=\\
 &=\big[\log |1+z|  \big]_0^{+\infty}-\left[-\frac{1}{1+z}  \right]_0^{+\infty}=\\
 &=+\infty
 \end{aligned}
