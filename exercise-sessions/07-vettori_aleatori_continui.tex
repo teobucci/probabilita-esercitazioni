@@ -182,7 +182,7 @@ S_{(X,Y)}=S_X\cdot S_Y
 $\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $\fXY$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
 \begin{enumerate}
 \item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot \fXY\in L^1(m_2)$
-\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)\fXYxy \text{ d}x\text{d}y$
+\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)\fXYxy \dxy$
 \end{enumerate}
 \end{theorem}
 
@@ -552,8 +552,8 @@ Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $
 \begin{gather*}
 \begin{aligned}
 \PP(Y>X)&=\PP((X,Y)\in T)= \\
-&=\int_T \fXYxy \text{ d}x\text{d}y= \\
-&=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\text{ d}x\text{d}y= \\
+&=\int_T \fXYxy \dxy= \\
+&=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\dxy= \\
 &=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
 &=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
 &=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\text{ d}x}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
@@ -688,7 +688,7 @@ $\\$Il coefficiente di correlazione lineare si calcola con
 Al volo possiamo già dire che $\EE[X]=2=\Var(X)$ e $\EE[Y]=4=\Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
 \begin{aligned}
-\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \text{ d}x\text{d}y=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
+\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \dxy=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\text{ d}y}_{(\beta)}   \right)\text{d}x-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\text{ d}y}_{(\alpha)}   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\text{d}x-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\text{d}x=\\
 &=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\text{ d}x-\int_0^{+\infty}x^3(x+1)e^{-x}\text{ d}x=\\
