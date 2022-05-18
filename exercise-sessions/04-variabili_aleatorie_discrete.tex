@@ -817,7 +817,7 @@ Richiami**************
 \item $n$ i.e. il numero di prove effettuate
 \item $p$ i.e. la probabilità di successo della singola prova di Bernoulli $( 0\leq p\leq 1)$.
 \end{itemize}
-\item Formalmente $X\sim B( n,p)$ si scrive come somma di $n$ VA $\Bot $ $X_{i} \sim B( p)$ (bernoulliane di parametro $p$)\begin{equation*}
+\item Formalmente $X\sim B( n,p)$ si scrive come somma di $n$ VA $\indep $ $X_{i} \sim B( p)$ (bernoulliane di parametro $p$)\begin{equation*}
 X=\sum\limits _{i=1}^{n} X_{i}
 \end{equation*}
 \item La distribuzione di probabilità di $X\sim B( n,p)$, dimostrata formalmente nel punto (4) di Es. 5, è la probabilità di avere $k$ successi in $n$ prove, con probabilità di successo $p$\begin{equation*}
@@ -867,7 +867,7 @@ i.e. se $X\sim B( n,p)$, allora $\boxed{\EE[ X] =np}$.
 
 Utilizziamo il fatto che
 \begin{equation*}
-X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \Bot 
+X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \indep 
 \end{equation*}
 
 e la linearità di $\EE$\begin{equation*}
@@ -887,7 +887,7 @@ Usiamo
 
 Resta da calcolare $\EE\left[ X^{2}\right]$, lo facciamo sfruttando il fatto che
 \begin{gather*}
-X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \Bot X_{j} ,\forall i\neq j\\
+X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \indep X_{j} ,\forall i\neq j\\
 \EE\left[ X^{2}\right] =\EE\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
 \end{gather*}
 
@@ -904,7 +904,7 @@ X_{i} \sim B( p) ,\forall i,\ \ \ \ \EE\left[ X_{i}^{2}\right] \coloneqq \sum\li
 Poi
 \begin{align*}
 \text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\PP( E_{i} \cap E_{j})\\
- & \overset{\Bot }{=}\sum\limits _{i< j}\PP( E_{i})\PP( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
+ & \overset{\indep }{=}\sum\limits _{i< j}\PP( E_{i})\PP( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
  & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
 \end{align*}
 
@@ -1053,7 +1053,7 @@ X\sim \mathcal{P}( \lambda ) \implies \mathrm{Var}[ X] =\lambda
 
 \Soluzione
 \begin{oss}
-$\PP( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\Bot $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP( X=k) =p( 1-p)^{k-1}$.
+$\PP( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\indep $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP( X=k) =p( 1-p)^{k-1}$.
 \end{oss}
 \begin{enumerate}
 \item Abbiamo

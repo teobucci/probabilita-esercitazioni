@@ -19,12 +19,12 @@ Siano $A,B\in \mathcal{A}$ e sia $\{E_{n}\}_{n\in \mathbb{N}} \subseteq \mathcal
 \item \textit{Bayes}: se $\PP( A) ,\PP( E_{n})  >0,\forall n\in \mathbb{N}$ allora $\PP( E_{n} \mid A) =\frac{\PP( A\mid E_{n})\PP( E_{n})}{\sum\limits _{n}\PP( A\mid E_{n})\PP( E_{n})}$.
 \end{enumerate}
 \begin{definition}
-$A$ e $B$ sono indipendenti $( A\Bot B)$ se $\PP( A\cap B) =\PP( A)\PP( B)$.
+$A$ e $B$ sono indipendenti $( A\indep B)$ se $\PP( A\cap B) =\PP( A)\PP( B)$.
 \end{definition}
 \textbf{Proprietà.}
 \begin{enumerate}
-\item $A\Bot B\iff \PP( A\mid B) =\PP( A)$.
-\item $A\Bot B\iff A\Bot B\complementary \iff A\complementary \Bot B\iff A\complementary \Bot B\complementary$.
+\item $A\indep B\iff \PP( A\mid B) =\PP( A)$.
+\item $A\indep B\iff A\indep B\complementary \iff A\complementary \indep B\iff A\complementary \indep B\complementary$.
 \end{enumerate}
 \begin{definition}
 Sia $( \Omega ,\mathcal{A} ,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
@@ -299,9 +299,9 @@ dunque sì.
 
 allora $A,B,D$ non sono indipendenti. L'indipendenza è un concetto più forte dell'indipendenza a coppie.
 \item \begin{gather*}
-\PP( A\mid E) =\frac{1}{2} =\PP( A) \implies A\Bot E\\
-\PP( B\mid E) =\frac{1}{2} =\PP( B) \implies B\Bot E\\
-\underbrace{\PP( A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\PP( A)\PP( B)\PP( E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\Bot B\Bot E
+\PP( A\mid E) =\frac{1}{2} =\PP( A) \implies A\indep E\\
+\PP( B\mid E) =\frac{1}{2} =\PP( B) \implies B\indep E\\
+\underbrace{\PP( A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\PP( A)\PP( B)\PP( E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\indep B\indep E
 \end{gather*}
 \item $\dots $
 \end{enumerate}
@@ -341,7 +341,7 @@ $\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
 \left( A_{42} \mid \bigcap _{k=1}^{41} A_{k}\complementary\right)
 \end{equation*}
 
-sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP( A\mid B) =\PP( A)$ se $A\Bot B$, si ha
+sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP( A\mid B) =\PP( A)$ se $A\indep B$, si ha
 \begin{equation*}
 \left( A_{42} \mid\bigcap _{k=1}^{41} A_{k}\complementary\right) =\underbrace{\PP( A_{42}) =\PP( A)}_{\text{primo punto}} \approx 0.0556
 \end{equation*}
@@ -361,7 +361,7 @@ Per calcolare $\PP$ potremmo usare la relazione (si osservi che gli $A_{j}$ sono
 Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
 \begin{gather*}
 \left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)\complementary\right)\complementary =\left(\bigcap _{k} A_{k}\complementary\right)\complementary ,\ \ \ \ \PP\left( A\complementary\right) =1-\PP( A) ,\\
-A_{k} \Bot \text{allora} \ A_{k}\complementary \Bot ,
+A_{k} \indep \text{allora} \ A_{k}\complementary \indep ,
 \end{gather*}
 
 quindi
@@ -391,7 +391,7 @@ i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima est
 ci sono $42$ modi per scegliere $j$ (la $j$-esima estrazione in cui esce $15$); per un $j$ fissato stiamo usando il fatto che l'unione degli eventi è disgiunta.
 
 Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)\begin{align*}
-\PP( A_{1} \cap B_{1}) & =\PP\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}\complementary\right)\overset{\Bot }{=}\PP( A_{1})\prod _{k=2}^{42}\PP\left( A_{k}\complementary\right)\\
+\PP( A_{1} \cap B_{1}) & =\PP\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}\complementary\right)\overset{\indep }{=}\PP( A_{1})\prod _{k=2}^{42}\PP\left( A_{k}\complementary\right)\\
  & =\PP( A_{1})\prod _{k=2}^{42}( 1-\PP( A_{k})) =\\
  & =\PP( A)( 1-\PP( A))^{41} =\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}
 \end{align*}
@@ -409,7 +409,7 @@ B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq
 Allora
 \begin{align*}
 \PP( A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP( A_{1} \cap A_{2} \cap B_{2})}{\PP( B_{2})} =\frac{\PP\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\complementary\right)}{\PP( B_{2})}\\
- & \overset{\Bot }{=}\frac{\PP( A_{1})\PP( A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\complementary\right)}{\PP( B_{2})}\\
+ & \overset{\indep }{=}\frac{\PP( A_{1})\PP( A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\complementary\right)}{\PP( B_{2})}\\
  & =\frac{\PP( A)\PP( A)( 1-\PP( A))^{40}}{\PP( B_{2})}\\
  & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 \end{align*}
@@ -757,7 +757,7 @@ Dove $\PP( R_{3} \mid R_{1} \cap R_{2})\PP( R_{1} \cap R_{2}) =\PP( R_{3} \mid R
 \begin{enumerate}
 \item $\PP( B\mid A) =\frac{1}{5000} =0.0002\ =\ 0.02\%$
 \item $B\cap C=\emptyset $
-\item $A\Bot C$
+\item $A\indep C$
 \item $D=B\cup C$
 \item $\PP( B\mid A,D) =\frac{\PP( B,A,D)}{\PP( A,D)} =\frac{\PP( B,A)}{\PP( B,A) +\PP( C,A)} =\frac{1}{1+\frac{\PP( C,A)}{\PP( B,A)}} =\frac{1}{1+\frac{\PP( C\mid A)}{\PP( B\mid A)}} =\frac{1}{1+\frac{\PP( C)}{\PP( B\mid A)}}$
 \item Poiché $\PP( C) \leq \PP( D) =\frac{1}{100000}$, vale
