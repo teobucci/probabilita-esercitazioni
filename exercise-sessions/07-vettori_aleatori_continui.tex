@@ -2,7 +2,6 @@
 
 \newcommand{\fXYxy}{f_{(X,Y)}(x,y)}
 \newcommand{\fXY}{f_{(X,Y)}}
-\newcommand{\SE}{\ \Longrightarrow\ } % => con spazi
 \newcommand{\NNN}{\mathcal{N}}
 \newcommand{\AAA}{\mathcal{A}}
 \newcommand{\EEE}{\mathcal{E}}
@@ -953,7 +952,7 @@ Invece per $M$:
 \EE[M]&=\EE\left[ \frac{1}{R} \right]=\int_\RR \frac{1}{x}\ f_R(x)\dx=\int_\RR \frac{1}{x}\ \frac{1}{b-a}\ \Ind_{[a,b](x)}\dx=\\
 &=\inta \frac{1}{x}\dx=\log\left( \frac{b}{a} \right)=0.08338\\
 \EE[M^2]&=\int_\RR \frac{1}{x^2}\ f_R(x)\dx=\inta \frac{1}{x^2}\dx=6.956\cdot 10^{-3}\\
-\SE Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
+\implies Var(M)&=\EE[M^2]-\EE[M]^2=4.029\cdot 10^{-6}
 \end{aligned}
 \end{gather*}
 
@@ -1049,9 +1048,9 @@ X&=\begin{matrix}
 \fg{0.5}{7_12}
 Possiamo allora supporre
 \begin{align*}
-X&\sim\UUU\left(\left[0,\frac{d}{2}\right]\right) &\SE f_X(x)&=\frac{2}{d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x) \\
-\Theta&\sim\UUU\left(\left[0,\pi\right]\right) &\SE f_\Theta(\vartheta)&=\frac{1}{\pi}\ \Ind_{\left[0,\pi\right]}(\vartheta) \\
-X&\indep\Theta&\SE f_{(X,\Theta)}(x,\vartheta)&=\frac{2}{\pi d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x)\ \Ind_{\left[0,\pi\right]}(\vartheta)
+X&\sim\UUU\left(\left[0,\frac{d}{2}\right]\right) &\implies f_X(x)&=\frac{2}{d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x) \\
+\Theta&\sim\UUU\left(\left[0,\pi\right]\right) &\implies f_\Theta(\vartheta)&=\frac{1}{\pi}\ \Ind_{\left[0,\pi\right]}(\vartheta) \\
+X&\indep\Theta&\implies f_{(X,\Theta)}(x,\vartheta)&=\frac{2}{\pi d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x)\ \Ind_{\left[0,\pi\right]}(\vartheta)
 \end{align*}
 
 \item Caratterizzazione dell'evento di interesse, cioè ci chiediamo quando l'ago intersechi almeno una linea del pavimento.
@@ -1159,7 +1158,7 @@ p=\displaystyle\lim_{t\to+\infty}\frac{f}{t}
 \]
 Se il numero di esperimenti è abbastanza grande si può allora ottenere un'approssimazione probabilistica di $\pi$:
 \[
-\pi=2ap^{-1}=2a\displaystyle\lim_{t\to+\infty}\frac{t}{f}\SE \pi\approx 2a\frac{t}{f}
+\pi=2ap^{-1}=2a\displaystyle\lim_{t\to+\infty}\frac{t}{f}\implies \pi\approx 2a\frac{t}{f}
 \]
 Si lasciano di seguito alcuni link con simulazioni: \\
 \url{https://datagenetics.com/blog/may42015/index.html} \\
@@ -1267,7 +1266,7 @@ Abbiamo
 \begin{aligned}
 \EE[U]&=\EE[X+1]=3/2 \\
 \EE[V]&=\EE[X]+\EE[Y]-\EE[X]\,\EE[Y]+\EE[X^2]\,\EE[Y]=11/12 \\
-\SE \EE[(U,V)]&=(3/2,11/12)
+\implies \EE[(U,V)]&=(3/2,11/12)
 \end{aligned}
 \end{gather*}
 
@@ -1309,7 +1308,7 @@ diverso da zero $\forall (x,y)\in S=[0,1]^2$.
 \end{itemize}
 La trasformazione $g$ soddisfa quindi le ipotesi del teorema di Jacobi (\ref{introth4}), e possiamo allora cercare $g^{-1}(u,v)$:
 \[
-\begin{cases} u=x+1 \\ v=x+y-xy+x^2y  \end{cases}\SE \begin{cases} x=u-1 \\ y=\frac{v-x}{1-x+x^2}\end{cases}\SE g^{-1}(u,v)=\begin{pmatrix}
+\begin{cases} u=x+1 \\ v=x+y-xy+x^2y  \end{cases}\implies \begin{cases} x=u-1 \\ y=\frac{v-x}{1-x+x^2}\end{cases}\implies g^{-1}(u,v)=\begin{pmatrix}
 u-1 \\ \, \\\dfrac{v-u+1}{u^2-3u+3}
 \end{pmatrix}
 \]
@@ -1325,10 +1324,10 @@ f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
 Ora manca da calcolare $g(S)$:
 \begin{gather*}
 g(S)=g(\{(x,y)\in\RR^2\ :\ 0\leq x,y\leq 1 \}) \\
-\SE \begin{cases}0\leq x\leq 1\SE 0\leq u-1\leq 1\SE 1\leq u \leq 2 \\ 0\leq y\leq 1\SE 0\leq \frac{v-u+1}{u^2-3u+3} \leq 1 \SE u-1\leq v\leq u^2-2u+2   \end{cases} \\
-\SE g(S)=\{(u,v)\in\RR^2\ :\ 1\leq u \leq 2,\ u-1\leq v\leq u^2-2u+2 \}=Q\\
+\implies \begin{cases}0\leq x\leq 1\implies 0\leq u-1\leq 1\implies 1\leq u \leq 2 \\ 0\leq y\leq 1\implies 0\leq \frac{v-u+1}{u^2-3u+3} \leq 1 \implies u-1\leq v\leq u^2-2u+2   \end{cases} \\
+\implies g(S)=\{(u,v)\in\RR^2\ :\ 1\leq u \leq 2,\ u-1\leq v\leq u^2-2u+2 \}=Q\\
 \, \\
-\SE f_{(U,V)}(u,v)=\Ind_Q(u,v)\ \frac{1}{u^2-3u+3}
+\implies f_{(U,V)}(u,v)=\Ind_Q(u,v)\ \frac{1}{u^2-3u+3}
 \end{gather*}
 \fg{0.6}{7_20}
 
@@ -1380,8 +1379,8 @@ F_X(x)=\left(1-e^{-\lambda x}\right)\Ind_{[0,+\infty)}(x)
 otteniamo
 \begin{gather*}
 F_T(t)=1-\left(e^{-\lambda t}\right)\,\left(e^{-\mu t}\right)\,\left(e^{-\gamma t}\right)=1-e^{-(\lambda+\mu+\gamma)t} \\
-\SE F_T(t)=\left(1-e^{-(\lambda+\mu+\gamma)t} \right)\Ind_{[0,+\infty)}(t) \\
-\SE T\sim\EEE(\lambda+\mu+\gamma)=\EEE(0.6)
+\implies F_T(t)=\left(1-e^{-(\lambda+\mu+\gamma)t} \right)\Ind_{[0,+\infty)}(t) \\
+\implies T\sim\EEE(\lambda+\mu+\gamma)=\EEE(0.6)
 \end{gather*}
 
 \item [(b)] Per aumentare l'affidabilità e ridurre gli interventi di sostituzione, viene proprosto di aggiungere un componente identico in parallelo. Qual è la legge del tempo di vita $S$ del nuovo complesso?
@@ -1401,7 +1400,7 @@ F_S(s)&=\PP(S\leq s)=\\
 &\overset{\underset{\indep}{}}{=}\PP(T\leq s)\,\PP(P\leq s)=\\
 &=F_T(s)\,F_P(s)=\\
 &=\left(1-e^{-0.6s}  \right)^2\\
-\SE F_S(s)&=\left(1-e^{-0.6s}  \right)^2\Ind_{[0,+\infty)}(s)
+\implies F_S(s)&=\left(1-e^{-0.6s}  \right)^2\Ind_{[0,+\infty)}(s)
 \end{aligned}
 \end{gather*}
 Essendo $\CCC^\infty$, possiamo calcolare
@@ -1553,12 +1552,12 @@ E $(z-y,y)\in[0,1]^2$ cosa vuol dire? Vuol dire $z-y\in[0,1]$ e $y\in[0,1]$, qui
 0\leq y\leq 1 \\
 0\leq z-y \leq 1
 \end{cases}
-\SE
+\implies
 \begin{cases}
 0\leq y\leq 1 \\
 -z\leq -y \leq 1-z
 \end{cases}
-\SE
+\implies
 \begin{cases}
 0\leq y\leq 1 \\
 z-1\leq y \leq z
@@ -1630,7 +1629,7 @@ F_T(t)=
 t &t\in[0,1] \\
 1 &t>1
 \end{cases}
-\SE T\sim\UUU([0,1])
+\implies T\sim\UUU([0,1])
 \]
 
 \end{enumerate}
@@ -1654,19 +1653,19 @@ J_g(x,y)=
 y & x \\
 -y/x^2 & 1/x \\
 \end{bmatrix}
-\SE \det J_g(x,y)=2y/x
+\implies \det J_g(x,y)=2y/x
 \]
 \end{itemize}
 Cerchiamo dunque, se esiste, $g^{-1}$: presi $(u,v)\in(0,+\infty)^2$ si ha
 \[
 \begin{cases}u=xy \\ v=y/x \end{cases}
-\SE
+\implies
 \begin{cases}x=u/y \\ y=vx\end{cases} 
-\SE
+\implies
 \begin{cases}x=u/y \\ y^2=uv\end{cases} 
-\SE
+\implies
 \begin{cases}x=u/y \\ y=\sqrt{uv} \end{cases} 
-\SE
+\implies
 \begin{cases}x=\sqrt{u/v} \\ y=\sqrt{uv} \end{cases}
 \]
 Quindi $g^{-1}$ è ben definita, cioè $g^{-1}:g(S)=(0,+\infty)^2\to S=(0,+\infty)^2$ con $g^{-1}(u,v)=(\sqrt{u/v}, \sqrt{uv})$.
@@ -1683,9 +1682,9 @@ f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
 Vediamo com'è fatta $\Ind_{[0,1]^2}(\sqrt{u/v},\sqrt{uv})$:
 \[
 \begin{cases}0\leq\sqrt{u/v}\leq 1  \\ 0\leq \sqrt{uv}\leq 1 \end{cases}
-\SE
+\implies
 \begin{cases}0\leq\sqrt{u}\leq \sqrt{v}  \\ 0\leq \sqrt{uv}\leq 1 \end{cases}
-\SE
+\implies
 \begin{cases}0\leq u\leq v  \\ u\leq v\leq 1/u \end{cases}
 \]
 Quindi detto $I=\{(u,v)\in(0,+\infty)^2\ :\ u\in[0,1],\ v\in[u,1/u]  \}$ si ha
@@ -1698,11 +1697,11 @@ f_{(U,V)}(u,v)=\frac{1}{2v}\ \Ind_I(u,v)=\frac{1}{2v}\ \Ind_{[0,1]}(u)\ \Ind_{[u
 Usando il teorema (\ref{introth5}) abbiamo
 \begin{gather*}
 \begin{aligned}
-u\in[0,1]&\SE f_{U}(u)=\intb f_{(U,V)}(u,v)\dv=\int_u^{1/u}\frac{1}{2v}\dv=-\log u \\
-&\SE  f_{U}(u)=-\log u \ \Ind_{[0,1]}(u) \\
-v\in[0,1]&\SE f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_0^v \frac{1}{2v}\du=\frac{1}{2} \\
-v\in[1,+\infty)&\SE f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_1^{1/v} \frac{1}{2v}\du=\frac{1}{2v^2} \\
-&\SE f_V(v)=\frac{1}{2}\ \Ind_{[0,1]}(v)+\frac{1}{2v^2}\ \Ind_{[1,+\infty)}(v)
+u\in[0,1]&\implies f_{U}(u)=\intb f_{(U,V)}(u,v)\dv=\int_u^{1/u}\frac{1}{2v}\dv=-\log u \\
+&\implies  f_{U}(u)=-\log u \ \Ind_{[0,1]}(u) \\
+v\in[0,1]&\implies f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_0^v \frac{1}{2v}\du=\frac{1}{2} \\
+v\in[1,+\infty)&\implies f_V(v)=\intb f_{(U,V)}(u,v)\du=\int_1^{1/v} \frac{1}{2v}\du=\frac{1}{2v^2} \\
+&\implies f_V(v)=\frac{1}{2}\ \Ind_{[0,1]}(v)+\frac{1}{2v^2}\ \Ind_{[1,+\infty)}(v)
 \end{aligned}
 \end{gather*}
 
@@ -1793,7 +1792,7 @@ Abbiamo
 \begin{aligned}
 \EE[X]&=\intc \frac{1}{2}x(x+1)e^{-x}\dx=\frac{3}{2}=\EE[Y] \\
 \EE[XY]&=\intc \frac{1}{2}xy(x+y)e^{-(x+y)}\dxy=2
-\SE Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
+\implies Cov(X,Y)&=\EE[XY]-\EE[X]\,\EE[Y]=2-\frac{9}{4}-\frac{1}{4}
 \end{aligned}
 \end{gather*}
 

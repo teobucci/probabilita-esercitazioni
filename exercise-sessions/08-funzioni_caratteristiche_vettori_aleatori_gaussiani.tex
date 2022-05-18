@@ -126,10 +126,10 @@ Prima procedere con le soluzioni degli esercizi, ci teniamo a fare ulteriori pre
 
 Abbiamo già visto che: 
 \begin{itemize}
-\item $X\sim\delta_t\SE\varphi_X(u)=e^{iut}$
-\item $X\sim\PPP(\lambda)\SE\varphi_X(u)=e^{ \lambda (e^{i u}-1)}$
-\item $Z\sim\NNN(0,1)\SE\varphi_X(u)=e^{-u^2/2}$
-\item $X\sim\NNN(\mu,\sigma^2)\SE\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}$
+\item $X\sim\delta_t\implies\varphi_X(u)=e^{iut}$
+\item $X\sim\PPP(\lambda)\implies\varphi_X(u)=e^{ \lambda (e^{i u}-1)}$
+\item $Z\sim\NNN(0,1)\implies\varphi_X(u)=e^{-u^2/2}$
+\item $X\sim\NNN(\mu,\sigma^2)\implies\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}$
 \end{itemize}
 tuttavia utilizzando il teorema (\ref{La funzione caratteristica di una probabilità caratterizza la probabilità}) possiamo dire che l'implicazione vale anche in senso opposto, ovvero (parafrasando tale teorema)
 \begin{theorem}
@@ -143,7 +143,7 @@ X\sim\delta_t,\ t\in\RR\iff\varphi_X(u)=e^{iut} \qquad X\sim\PPP(\lambda),\ \lam
 \[
 Z\sim\NNN(0,1)\iff\varphi_X(u)=e^{-u^2/2} \qquad X\sim\NNN(\mu,\sigma^2),\ \mu\in\RR,\ \sigma^2>0\iff\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}
 \]
-I richiami al teorema (\ref{caratterizzazione della f caratteristica}) verranno omessi, e verrà dimostrato quindi solo il $\SE$.
+I richiami al teorema (\ref{caratterizzazione della f caratteristica}) verranno omessi, e verrà dimostrato quindi solo il $\implies$.
 
 Verrà anche omesso il riferimento alla definizione (\ref{carmom}) quando scriveremo $\varphi_X(u)=\EE\left[e^{i \langle u|X\rangle}\right]$.
 
@@ -186,8 +186,8 @@ Siano $ n,m \in \NN$, $p\in [0, 1]$ e $\varphi_X$ la funzione caratteristica di 
 \begin{enumerate}
 \item [(a)] Si mostri che $X\sim B(p)\iff\varphi_X(u)=pe^{iu}+1-p$.
 \item [(b)] Si mostri che $X\sim B(n,p)\iff\varphi_X(u)=\left(pe^{iu}+1-p  \right)^n$.
-\item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\SE X_1+\cdots+X_n\sim B(n,p)$.
-\item [(d)] Si mostri che $X\sim B(n,p)\indep Y\sim B(m,p)\SE X+Y\sim B(n+m,p)$.
+\item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\implies X_1+\cdots+X_n\sim B(n,p)$.
+\item [(d)] Si mostri che $X\sim B(n,p)\indep Y\sim B(m,p)\implies X+Y\sim B(n+m,p)$.
 \end{enumerate}
 
 \Esercizio{} %3
@@ -237,10 +237,10 @@ Per ogni $\alpha>0$ e $\lambda>0$, la funzione caratteristica di una variabile a
 \varphi_X(u)=\left( \frac{\lambda}{\lambda-iu} \right)^\alpha
 \]
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\SE X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
-\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\SE X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
-\item [(c)] Si mostri che $Z\sim\NNN(0,1)\SE Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
-\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\SE Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
+\item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\implies X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
+\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
+\item [(c)] Si mostri che $Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
+\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
 \end{enumerate}
 
 \Esercizio{} %9
@@ -410,7 +410,7 @@ Calcoliamo la funzione di ripartizione di $Y$:
 \begin{aligned}
 \varphi_Y(u)&=\EE\left[e^{i\langle u|Y \rangle}  \right]=\\
 &=\EE\left[e^{-i\langle u|X \rangle}  \right]=\\
-&=\{z=re^{i\phi}\SE \overline{z}=re^{-i\phi}  \}=\\
+&=\{z=re^{i\phi}\implies \overline{z}=re^{-i\phi}  \}=\\
 &=\EE\left[\overline{e^{i\langle u|X \rangle}  }\right]=\\
 &=\overline{\EE\left[e^{i\langle u|X \rangle}  \right]}=\\
 &=\overline{\varphi}_X(u)
@@ -482,7 +482,7 @@ Quindi
 X\sim B(n,p),\ n\in\NN,\ p\in[0,1]\iff\varphi_X(u)=\left(pe^{iu}+1-p\right)^n
 \]
 
-\item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\SE X_1+\cdots+X_n\sim B(n,p)$.
+\item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\implies X_1+\cdots+X_n\sim B(n,p)$.
 
 Dato che le bernoulliane sono i.i.d. possiamo applicare il corollario (\ref{Legge della somma di variabili indipendenti}) per calcolare la funzione caratteristica della somma $X_1+\cdot+X_n$:
 \[
@@ -490,10 +490,10 @@ Dato che le bernoulliane sono i.i.d. possiamo applicare il corollario (\ref{Legg
 \]
 Allora grazie al punto (b) possiamo concludere che 
 \[
-X_1,\dots,X_n\iid B(p),\ n\in\NN,\ p\in[0,1] \SE X_1+\cdots+X_n\sim B(n,p)
+X_1,\dots,X_n\iid B(p),\ n\in\NN,\ p\in[0,1] \implies X_1+\cdots+X_n\sim B(n,p)
 \]
 
-\item [(d)] Si mostri che $X\sim B(n,p)\indep Y\sim B(m,p)\SE X+Y\sim B(n+m,p)$.
+\item [(d)] Si mostri che $X\sim B(n,p)\indep Y\sim B(m,p)\implies X+Y\sim B(n+m,p)$.
 
 Analogamente al punto precedente, per il corollario (\ref{Legge della somma di variabili indipendenti}) si ha
 \[
@@ -501,7 +501,7 @@ Analogamente al punto precedente, per il corollario (\ref{Legge della somma di v
 \]
 Dunque in generale
 \[
-\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim B(n_k,p),\ n_k\in\NN\ \forall k,\ p\in[0,1]\end{cases} \SE X_1+\cdots+X_n\sim B(n_1+\cdots+n_n,p)
+\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim B(n_k,p),\ n_k\in\NN\ \forall k,\ p\in[0,1]\end{cases} \implies X_1+\cdots+X_n\sim B(n_1+\cdots+n_n,p)
 \]
 \end{enumerate}
 
@@ -548,17 +548,17 @@ La funzione $\dfrac{\sin(au)}{au}=:\text{sinc}(au)$ è detta \emph{seno cardinal
 \end{oss}
 Per calcolare media e varianza di $X$ sfruttiamo il teorema (\ref{teo dei momenti}), cioè
 \[
-X\in L^1\SE\varphi_X\in\Cu,\ \EE[X]=\frac{1}{i}\varphi_X'(0)=-i\varphi_X'(0)
+X\in L^1\implies\varphi_X\in\Cu,\ \EE[X]=\frac{1}{i}\varphi_X'(0)=-i\varphi_X'(0)
 \]
 \[
-X\in L^2\SE\varphi_X\in\mathcal{C}^2,\ \EE[X^2]=\frac{1}{i^2}\varphi_X''(0)=-\varphi_X''(0)
+X\in L^2\implies\varphi_X\in\mathcal{C}^2,\ \EE[X^2]=\frac{1}{i^2}\varphi_X''(0)=-\varphi_X''(0)
 \]
 Allora
 \begin{gather*}
 \begin{aligned}
 &\varphi_X(u)=\frac{\sin(au)}{au}\overset{\underset{\text{TY}}{}}{\simeq}\frac{au-\frac{(au)^3}{3!}+o(u^3)}{au}=1-\frac{(au)^2}{6}+o(u^2) \\
-&\varphi_X'(0)=\left[-\frac{a^2}{3}u+o(u) \right]_{u=0}=0\SE\EE[X]=0\\
-&\varphi_X''(0)=\left[-\frac{a^2}{3} \right]_{u=0}=-\frac{a^2}{3}\SE\EE[X^2]=\frac{a^2}{3}\SE Var(X)=\frac{a^2}{3}\\
+&\varphi_X'(0)=\left[-\frac{a^2}{3}u+o(u) \right]_{u=0}=0\implies\EE[X]=0\\
+&\varphi_X''(0)=\left[-\frac{a^2}{3} \right]_{u=0}=-\frac{a^2}{3}\implies\EE[X^2]=\frac{a^2}{3}\implies Var(X)=\frac{a^2}{3}\\
 \end{aligned}
 \end{gather*}
 
@@ -568,7 +568,7 @@ Notiamo che possiamo ricondurci ad un'uniforme simmetrica semplicemente trasland
 \fg{0.5}{8_2}
 Grazie a questa traslazione possiamo scrivere $X$ in termini dell'uniforme simmetrica
 \[
-Y:=X-\frac{a+b}{2}\sim\UUU\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\SE X=\frac{a+b}{2}+Y
+Y:=X-\frac{a+b}{2}\sim\UUU\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\implies X=\frac{a+b}{2}+Y
 \]
 Allora
 \begin{gather*}
@@ -651,8 +651,8 @@ La densità congiunta del vettore $(X,Y)$ vale
 Inoltre $X\indep Y$ perché la congiunta fattorizza nelle due marginali
 \begin{gather*}
 \begin{aligned}
-&f_X(x)=\frac{1}{2}\ \Ind_{[0,2]}(x)\SE X\sim\UUU([0,2])\\
-&f_Y(y)=\Ind_{[0,1]}(y)\SE Y\sim\UUU([0,1])
+&f_X(x)=\frac{1}{2}\ \Ind_{[0,2]}(x)\implies X\sim\UUU([0,2])\\
+&f_Y(y)=\Ind_{[0,1]}(y)\implies Y\sim\UUU([0,1])
 \end{aligned}
 \end{gather*}
 
@@ -847,7 +847,7 @@ Detta quindi $Y=X_1+\cdots+X_n$, per il corollario (\ref{Legge della somma di va
 \]
 Grazie a questo possiamo concludere che 
 \[
-\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\PPP(\lambda_k),\ \lambda_k>0\ \forall k\end{cases} \SE X_1+\cdots+X_n\sim\PPP(\lambda_1+\cdots+\lambda_n)
+\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\PPP(\lambda_k),\ \lambda_k>0\ \forall k\end{cases} \implies X_1+\cdots+X_n\sim\PPP(\lambda_1+\cdots+\lambda_n)
 \]
 
 \item [(b)] Si supponga ora che $X_1,X_2,X_3\iid\PPP(\lambda)$. Calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$. 
@@ -871,7 +871,7 @@ Grazie all'ipotesi di indipendenza
 &\PP(\{1,0,0  \})=\lambda e^{-3\lambda} \\
 &\PP(\{2,0,0  \})=\frac{1}{2}\lambda^2 e^{-3\lambda} \\
 &\PP(\{1,1,0  \})=\PP(\{ 1,0,1 \})=\lambda^2 e^{-3\lambda} \\
-\SE & \PP(X_1+X_2+X_3< 3\, , \,X_1\geq 1)=\lambda e^{-3\lambda}\left(1+\frac{1}{2}\lambda +2\lambda   \right)=\lambda e^{-3\lambda}\left(1+\frac{5}{2}\lambda  \right)
+\implies & \PP(X_1+X_2+X_3< 3\, , \,X_1\geq 1)=\lambda e^{-3\lambda}\left(1+\frac{1}{2}\lambda +2\lambda   \right)=\lambda e^{-3\lambda}\left(1+\frac{5}{2}\lambda  \right)
 \end{aligned}
 \end{gather*}
 Inoltre $\PP(X_1\geq 1)=1-\PP(X_1=0)=1-e^{-\lambda}$.
@@ -936,7 +936,7 @@ Se $Z\sim\EEE(\lambda)$ allora $Z\sim\Gamma(1,\lambda)$, in quanto
 \end{oss}
 \begin{enumerate}
 
-\item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\SE X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
+\item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\implies X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
 
 Grazie al corollario (\ref{Legge della somma di variabili indipendenti}):
 \[
@@ -946,10 +946,10 @@ che è proprio la funzione caratteristica di una $\Gamma(\alpha+\beta,\lambda)$.
 
 Quindi in generale
 \[
-\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\Gamma(\alpha_k,\lambda),\ \alpha_k>0\ \forall k,\ \lambda>0\end{cases} \SE X_1+\cdots+X_n\sim\Gamma(\alpha_1+\cdots+\alpha_n,\lambda)
+\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\Gamma(\alpha_k,\lambda),\ \alpha_k>0\ \forall k,\ \lambda>0\end{cases} \implies X_1+\cdots+X_n\sim\Gamma(\alpha_1+\cdots+\alpha_n,\lambda)
 \]
 
-\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\SE X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
+\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
 
 Avendo già osservato che $\EEE(\lambda)\equiv\Gamma(1,\lambda)$, e sfruttando il punto (a), possiamo dire che
 \[
@@ -957,10 +957,10 @@ X_1,\dots,X_n\sim\Gamma(\underbrace{1+\cdots+1}_{n\text{ volte}},\lambda)=\Gamma
 \]
 Quindi
 \[
-X_1,\dots,X_n\iid\EEE(\lambda),\ n\in\NN,\ \lambda>0\SE X_1+\cdots+X_n\sim\Gamma(n,\lambda)
+X_1,\dots,X_n\iid\EEE(\lambda),\ n\in\NN,\ \lambda>0\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)
 \]
 
-\item [(c)] Si mostri che $Z\sim\NNN(0,1)\SE Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
+\item [(c)] Si mostri che $Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
 
 Ricordando che
 \[
@@ -983,13 +983,13 @@ che è proprio la densità di una $\Gamma\left(\frac{1}{2},\frac{1}{2} \right)$.
 
 Quindi
 \[
-Z\sim\NNN(0,1)\SE Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)
+Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)
 \]
 \begin{oss}
 Il calcolo mediante la funzione caratteristica è lasciato al lettore.
 \end{oss}
 
-\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\SE Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
+\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
 
 Sappiamo già che $\forall k=1:n\ \ Z_k^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$ e che $Z_1^2,\dots,Z_n^2$ sono indipendenti perché lo sono per ipotesi $Z_1,\dots,Z_n$. Allora per il punto (a) possiamo concludere che
 \[
@@ -997,7 +997,7 @@ Q\sim\Gamma\left(\underbrace{\frac{1}{2}+\cdots+\frac{1}{2}}_{n\text{ volte}}, \
 \]
 In generale
 \[
-Z_1,\dots,Z_n\iid\NNN(0,1)\SE Z_1^2+\cdots+Z_n^2\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)
+Z_1,\dots,Z_n\iid\NNN(0,1)\implies Z_1^2+\cdots+Z_n^2\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)
 \]
 \end{enumerate}
 
@@ -1090,7 +1090,7 @@ Questa distribuzione trova particolare utilizzo nella inferenza bayesiana perch�
 
 Viene definita in termini della \emph{funzione beta} $(\mathrm{B})$ di Eulero (prende infatti da qui il nome):
 \[
-X\sim\text{Beta}(\alpha,\beta)\SE f_X(x)=\frac{1}{\mathrm{B}(\alpha,\beta)}\ x^{\alpha-1}\ (1-x)^{\beta-1}\ \Ind_{(0,1)}(x)
+X\sim\text{Beta}(\alpha,\beta)\implies f_X(x)=\frac{1}{\mathrm{B}(\alpha,\beta)}\ x^{\alpha-1}\ (1-x)^{\beta-1}\ \Ind_{(0,1)}(x)
 \]
 dove
 \[
@@ -1123,7 +1123,7 @@ A questo punto sfruttiamo il punto (a) di questo esercizio:
 X=S_k \\
 Y=Z
 \end{cases}
-\SE
+\implies
 \begin{cases}
 T=X+Y=S_n \\
 U=X/(X+Y)=S_{k/n}
@@ -1136,7 +1136,7 @@ Per quanto riguarda il valore atteso:
 \EE[S_k]=\EE\left[\frac{S_k}{S_n}\ S_n   \right]\overset{\underset{\indep}{}}{=}\EE[S_{k/n}]\ \EE[S_n]
 \]
 \[
-\SE \EE[S_{k/n}]=\frac{\EE[S_k]}{\EE[S_n]}=\frac{k/\lambda}{n/\lambda}=\frac{k}{n}
+\implies \EE[S_{k/n}]=\frac{\EE[S_k]}{\EE[S_n]}=\frac{k/\lambda}{n/\lambda}=\frac{k}{n}
 \]
 \end{enumerate}
 
