@@ -166,7 +166,7 @@ $\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $\fXY
 Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza, cioè
 \begin{theorem}[Fattorizzazione della legge congiunta]
 \label{introth6}
-$\\$$X\indep Y\ \Longleftrightarrow\ \fXYxy=f_X(x)\cdot f_Y(y)$
+$\\$$X\indep Y \iff \fXYxy=f_X(x)\cdot f_Y(y)$
 \end{theorem}
 
 \begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
@@ -181,7 +181,7 @@ S_{(X,Y)}=S_X\cdot S_Y
 \label{introth8}
 $\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $\fXY$. Allora $\forall h:\RR^2\to\RR$ boreliana e $\forall h:\RR^2\to[0,+\infty)$
 \begin{enumerate}
-\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot \fXY\in L^1(m_2)$
+\item [i)] $h\in L^1(P^{(X,Y)}) \iff h\cdot \fXY\in L^1(m_2)$
 \item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)\fXYxy \dxy$
 \end{enumerate}
 \end{theorem}
@@ -198,7 +198,7 @@ $\\$Data $X$ variabile aleatoria positiva e continua, denotata $F$ la sua funzio
 \label{introth10}
 $\\$Siano $X,Y\in L^2$ tali che $\Var(X),\Var(Y)>0$. Allora
 \[
-|\rho_{X,Y}|=1\ \Longleftrightarrow\ \exists a\neq 0,\ \exists b\in\RR\ :\ Y=aX+b
+|\rho_{X,Y}|=1 \iff \exists a\neq 0,\ \exists b\in\RR\ :\ Y=aX+b
 \]
 \end{theorem}
 
@@ -207,14 +207,14 @@ $\\$Siano $X,Y\in L^2$ tali che $\Var(X),\Var(Y)>0$. Allora
 $\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
 \begin{enumerate}
 \item [(a)] $\Cov(X,X)=\Var(X)$
-\item [(b)] $X\indep Y\ \Longrightarrow\ \Cov(X,Y)=0\ \Longrightarrow\ \rho_{X,Y}=0$
+\item [(b)] $X\indep Y \implies \Cov(X,Y)=0 \implies \rho_{X,Y}=0$
 \item [(c)] $\EE(aX+b)=a\EE[X]$
-\item [(d)] $X\indep Y\ \Longrightarrow\ \EE[XY]=\EE[X] \EE[Y]$
+\item [(d)] $X\indep Y \implies \EE[XY]=\EE[X] \EE[Y]$
 \item [(e)] $\Var(aX+b)=a^2\Var(X)$
 \item [(f)] $\Cov(aX+b,cY+d)=\Cov(aX,cY)=ac\Cov(X,Y)$
 \item [(g)] $\rho_{aX+b,cY+d}=\rho_{X,Y}$
 \item [(h)] $\Var(X+Y)=\Var(X)+\Var(Y)+2\Cov(X,Y)$
-\item [(i)] $X\indep Y\ \Longrightarrow\ \Var(X+Y)=\Var(X)+\Var(Y)$
+\item [(i)] $X\indep Y \implies \Var(X+Y)=\Var(X)+\Var(Y)$
 \end{enumerate}
 \end{theorem}
 
@@ -517,9 +517,9 @@ Manca
 \Soluzione{}
 La dimostrazione si articola in due parti:
 \begin{enumerate}
-\item [$(\Rightarrow)$] Questo caso è banale, perché basta prendere $h_1(x)=f_X(x)$ e $h_2(y)=f_Y(y)$.
+\item [$(\implies)$] Questo caso è banale, perché basta prendere $h_1(x)=f_X(x)$ e $h_2(y)=f_Y(y)$.
 
-\item [$(\Leftarrow)$] Sappiamo per ipotesi che $\fXYxy=h_1(x)\ h_2(y)$. Allora grazie al teorema (\ref{introth6}) calcoliamo le due marginali come
+\item [$(\impliedby)$] Sappiamo per ipotesi che $\fXYxy=h_1(x)\ h_2(y)$. Allora grazie al teorema (\ref{introth6}) calcoliamo le due marginali come
 \begin{gather*}
 \begin{aligned}
 &f_X(x)=\int_\RR h_1(x)\ h_2(y) \dy=h_1(x)\int_\RR h_2(y) \dy \\
@@ -573,10 +573,10 @@ Diamo un'occhiata ai tre termini:
 \item [(i)] il vettore $(X,Y)$ è assolutamente continuo rispetto la misura di Lebesgue su $\mathbb{R}^2$
 \item [(ii)] la retta $r$ è un sottospazio di $\mathbb{R}^2$ di dimensione $1$ e di conseguenza ha misura di Lebesgue $m_2=0$
 \end{enumerate}
-$\Longrightarrow \PP(X=Y)=0$.
+$\implies \PP(X=Y)=0$.
 \item $\PP(X>Y)=\PP(X<Y)$ perché il ruolo di $X$ e $Y$ è interscambiabile dato che hanno la stessa distribuzione.
 \end{enumerate}
-Allora $1=2\ \PP(X<Y)\ \Longrightarrow\ \PP(Y>X)=\frac{1}{2}$.
+Allora $1=2\ \PP(X<Y) \implies \PP(Y>X)=\frac{1}{2}$.
 
 \Soluzione{}
 \begin{enumerate}
@@ -787,7 +787,7 @@ Siamo pronti per calcolare i valori attesi di $U$ e $V$. In particolare faremo v
 \begin{gather*}
 \begin{aligned}
 f_U(u)&=(F_U(u))'=(2u+1)e^{-2u}\ \Ind_{(0,+\infty)}(u) \\
-\Longrightarrow\ \EE[U]&=\int_{0}^{+\infty} u\cdot (2u+1)e^{-2u}\du =\\
+\implies \EE[U]&=\int_{0}^{+\infty} u\cdot (2u+1)e^{-2u}\du =\\
 &\overset{\underset{pp}{}}{=}\left[(2u^2+u)(-\frac{1}{2}e^{-2u})   \right]_0^{+\infty} -\int_{0}^{+\infty} (4u+1)(-\frac{1}{2}e^{-2u})\du \\
 &\overset{\underset{pp}{}}{=}0+\frac{1}{2}\left\{\left[(4u+1)(-\frac{1}{2}e^{-2u})  \right]_0^{+\infty}+2\int_{0}^{+\infty} e^{-2u}\du   \right\}=\\
 &=\frac{1}{4}+\left[ -\frac{1}{2}e^{-2u} \right]_0^{+\infty}=\\

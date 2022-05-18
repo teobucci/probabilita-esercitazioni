@@ -40,7 +40,7 @@ Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di le
 \label{La funzione caratteristica di una probabilità caratterizza la probabilità}
 La funzione caratteristica $\widehat{\PP}$ di una probabilità $\PP$ su $(\RR^n, \Bc^n)$ caratterizza $\PP$, ovvero
 \[
-\widehat{\PP}(u)=\widehat{\QQ}(u) \ \forall u \in \RR^n\ \Longleftrightarrow\ \PP(B)=\QQ(B) \ \forall B \in \Bc^n
+\widehat{\PP}(u)=\widehat{\QQ}(u) \ \forall u \in \RR^n \iff \PP(B)=\QQ(B) \ \forall B \in \Bc^n
 \]
 \end{theorem}
 \begin{theorem}$\\$
@@ -73,7 +73,7 @@ Per risolvere quest'integrale si usa un trucco: applicando il teorema (\ref{teo 
 L'integrale si è così trasformato in un \emph{problema di Cauchy} ben posto:
   $$\begin{cases}
     \varphi_X'(u)=-u\varphi_X(u) \\ \varphi_X(0)=1
-  \end{cases} \quad \Longrightarrow \quad \varphi_X(u)=e^{-\frac{u^2}{2}}$$
+  \end{cases} \quad \implies \quad \varphi_X(u)=e^{-\frac{u^2}{2}}$$
 Siano $X:\SDP\to(\RR^n,\Bc^n)$ un vettore aleatorio e $Y:\SDP\to(\RR^m,\Bc^m)$ con $A\in\RR^{m\times m},b\in\RR^m$ la trasformazione affine $Y=AX+b$.
 \begin{theorem}$\\$
 \label{t_affine_t}
@@ -112,12 +112,12 @@ Quest'ultimo esempio semplifica tantissimo il calcolo delle funzioni caratterist
 \label{Fattorizzazione della funzione caratteristica per famiglie di VA}
 $\\$
 Sia $X = (X_1,  \dots, X_n):\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio. Allora
-      $$\big\{X_k\big\}_{k=1}^{n} \text{ famiglia di VAR} \indep\ \Longleftrightarrow\ \varphi_X(u_1, \dots, u_n) = \prod_{k=1}^{n} \varphi_{X_k} (u_k) \quad \forall u \in \RR^n$$
+      $$\big\{X_k\big\}_{k=1}^{n} \text{ famiglia di VAR} \indep \iff \varphi_X(u_1, \dots, u_n) = \prod_{k=1}^{n} \varphi_{X_k} (u_k) \quad \forall u \in \RR^n$$
 \end{theorem}
 \begin{corollario}[Legge della somma di variabili indipendenti]$\\$
 \label{Legge della somma di variabili indipendenti}
 Siano $X_1, \dots , X_n$ VAR indipendenti. Allora
-  $$Y = \sum_{k=1}^{n} X_k\ \Longrightarrow\ \varphi_Y(u) = \varphi_{\sum X_k} (u) = \prod_{k=1}^{n} \varphi_{X_k}(u) \quad \forall u \in \RR$$
+  $$Y = \sum_{k=1}^{n} X_k \implies \varphi_Y(u) = \varphi_{\sum X_k} (u) = \prod_{k=1}^{n} \varphi_{X_k}(u) \quad \forall u \in \RR$$
 \end{corollario}
 
 %
