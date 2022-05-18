@@ -134,14 +134,14 @@ Abbiamo già visto che:
 tuttavia utilizzando il teorema (\ref{La funzione caratteristica di una probabilità caratterizza la probabilità}) possiamo dire che l'implicazione vale anche in senso opposto, ovvero (parafrasando tale teorema)
 \begin{theorem}
 \label{caratterizzazione della f caratteristica}
-Date $X,Y:\Omega\to\RR^n$ si ha $P^X=P^Y\SESOLOSE\varphi_X=\varphi_Y$.
+Date $X,Y:\Omega\to\RR^n$ si ha $P^X=P^Y\iff\varphi_X=\varphi_Y$.
 \end{theorem}
 Ecco quindi i primi quattro risultati notevoli di questo capitolo
 \[
-X\sim\delta_t,\ t\in\RR\SESOLOSE\varphi_X(u)=e^{iut} \qquad X\sim\PPP(\lambda),\ \lambda>0\SESOLOSE\varphi_X(u)=e^{ \lambda (e^{i u}-1)}
+X\sim\delta_t,\ t\in\RR\iff\varphi_X(u)=e^{iut} \qquad X\sim\PPP(\lambda),\ \lambda>0\iff\varphi_X(u)=e^{ \lambda (e^{i u}-1)}
 \]
 \[
-Z\sim\NNN(0,1)\SESOLOSE\varphi_X(u)=e^{-u^2/2} \qquad X\sim\NNN(\mu,\sigma^2),\ \mu\in\RR,\ \sigma^2>0\SESOLOSE\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}
+Z\sim\NNN(0,1)\iff\varphi_X(u)=e^{-u^2/2} \qquad X\sim\NNN(\mu,\sigma^2),\ \mu\in\RR,\ \sigma^2>0\iff\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}
 \]
 I richiami al teorema (\ref{caratterizzazione della f caratteristica}) verranno omessi, e verrà dimostrato quindi solo il $\SE$.
 
@@ -184,8 +184,8 @@ Sia $\varphi_X$ la funzione caratteristica di una variabile aleatoria reale $X$,
 \Esercizio{} %2
 Siano $ n,m \in \NN$, $p\in [0, 1]$ e $\varphi_X$ la funzione caratteristica di una variabile aleatoria $X$.
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim B(p)\SESOLOSE\varphi_X(u)=pe^{iu}+1-p$.
-\item [(b)] Si mostri che $X\sim B(n,p)\SESOLOSE\varphi_X(u)=\left(pe^{iu}+1-p  \right)^n$.
+\item [(a)] Si mostri che $X\sim B(p)\iff\varphi_X(u)=pe^{iu}+1-p$.
+\item [(b)] Si mostri che $X\sim B(n,p)\iff\varphi_X(u)=\left(pe^{iu}+1-p  \right)^n$.
 \item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\SE X_1+\cdots+X_n\sim B(n,p)$.
 \item [(d)] Si mostri che $X\sim B(n,p)\indep Y\sim B(m,p)\SE X+Y\sim B(n+m,p)$.
 \end{enumerate}
@@ -193,16 +193,16 @@ Siano $ n,m \in \NN$, $p\in [0, 1]$ e $\varphi_X$ la funzione caratteristica di 
 \Esercizio{} %3
 Data una variabile aleatoria reale $X$, si mostri che
 \[
-X\sim \GGG(p),\ p\in(0,1)\SESOLOSE \varphi_X(u)=\frac{pe^{iu}}{1-e^{iu}(1-p)}
+X\sim \GGG(p),\ p\in(0,1)\iff \varphi_X(u)=\frac{pe^{iu}}{1-e^{iu}(1-p)}
 \]
 
 \Esercizio{} %4
 Sia $X$ una variabile aleatoria reale.
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim \UUU([-a,a])\SESOLOSE\varphi_X(u)=\dfrac{\sin(au)}{au}$.
-\item [(b)] Si mostri che $X\sim  \UUU([a,b])\SESOLOSE\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
-\item [(c)] Si mostri che $X\sim\EEE(\lambda)\SESOLOSE\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
-\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\SESOLOSE\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
+\item [(a)] Si mostri che $X\sim \UUU([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
+\item [(b)] Si mostri che $X\sim  \UUU([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
+\item [(c)] Si mostri che $X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
+\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
 \end{enumerate}
 Si calcolino valore atteso e varianza per queste variabili aleatorie a partire dalle loro funzioni caratteristiche.
 
@@ -228,7 +228,7 @@ Siano $X_1,\dots,X_n$ variabili aleatorie indipendenti, con $X_k\sim\PPP(\lambda
 \Esercizio{} %7
 Date $X_1,\dots,X_n$ variabili aleatorie reali i.i.d. si mostri che
 \[
-\overline{X}_n=\displaystyle\frac{1}{n}\sum_{k=1}^n X_k,\ n\in\NN\SESOLOSE \varphi_{\overline{X}_n}(u)=\left(\varphi_{X_1}\left(\frac{u}{n}\right)\right)^n
+\overline{X}_n=\displaystyle\frac{1}{n}\sum_{k=1}^n X_k,\ n\in\NN\iff \varphi_{\overline{X}_n}(u)=\left(\varphi_{X_1}\left(\frac{u}{n}\right)\right)^n
 \]
 
 \Esercizio{} %8
@@ -267,7 +267,7 @@ si provi che per ogni coppia di interi $(k,n)$ con $1\leq k\leq n$, la variabile
 Siano $X$ e $Y$ variabili aleatorie congiuntamente gaussiane
 \begin{enumerate}
 \item [(a$^*$)] Si descriva l'immagine $S$ del vettore aleatorio $(X,Y)$ al variare di $\mu_X,\mu_Y,\sigma_X,\sigma_Y, Cov(X,Y)$.
-\item [(b)] Si mostri che $(X,Y)$ ammette densità continua $\fXY\SESOLOSE\sigma_X>0,\sigma_Y>0,|\rho_{X,Y}|<1$.
+\item [(b)] Si mostri che $(X,Y)$ ammette densità continua $\fXY\iff\sigma_X>0,\sigma_Y>0,|\rho_{X,Y}|<1$.
 \item [(c)] Si mostri che, quando $(X,Y)$ ammette densità continua, si ha
 \begin{gather*}
 \begin{aligned}
@@ -442,7 +442,7 @@ che è quanto volevasi dimostrare.
 
 \Soluzione{} %2
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim B(p)\SESOLOSE\varphi_X(u)=pe^{iu}+1-p$.
+\item [(a)] Si mostri che $X\sim B(p)\iff\varphi_X(u)=pe^{iu}+1-p$.
 
 Ricordiamo che la densità di una bernoulliana è
 \[
@@ -459,10 +459,10 @@ Allora la funzione caratteristica di $X$ è
 \end{gather*}
 Quindi
 \[
-X\sim B(p),\ p\in[0,1]\SESOLOSE\varphi_X(u)=pe^{iu}+1-p
+X\sim B(p),\ p\in[0,1]\iff\varphi_X(u)=pe^{iu}+1-p
 \]
 
-\item [(b)] Si mostri che $X\sim B(n,p)\SESOLOSE\varphi_X(u)=\left(pe^{iu}+1-p  \right)^n$.
+\item [(b)] Si mostri che $X\sim B(n,p)\iff\varphi_X(u)=\left(pe^{iu}+1-p  \right)^n$.
 
 Ricordiamo che la densità di una binomiale è
 \[
@@ -479,7 +479,7 @@ Allora la funzione caratteristica di $X$ è
 \end{gather*}
 Quindi
 \[
-X\sim B(n,p),\ n\in\NN,\ p\in[0,1]\SESOLOSE\varphi_X(u)=\left(pe^{iu}+1-p\right)^n
+X\sim B(n,p),\ n\in\NN,\ p\in[0,1]\iff\varphi_X(u)=\left(pe^{iu}+1-p\right)^n
 \]
 
 \item [(c)] Si mostri che $X_1,\dots,X_n\iid B(p)\SE X_1+\cdots+X_n\sim B(n,p)$.
@@ -524,7 +524,7 @@ possiamo calcolare la funzione caratteristica di $X$ nel seguente modo:
 
 \Soluzione{} %4
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim \UUU([-a,a])\SESOLOSE\varphi_X(u)=\dfrac{\sin(au)}{au}$.
+\item [(a)] Si mostri che $X\sim \UUU([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
 
 Calcoliamo la funzione caratteristica di $X$:
 \begin{gather*}
@@ -540,7 +540,7 @@ Calcoliamo la funzione caratteristica di $X$:
 \end{gather*}
 Quindi
 \[
-X\sim \UUU([-a,a]),\ a\in[0,+\infty)\SESOLOSE\varphi_X(u)=\frac{\sin(au)}{au}=\text{sinc}(au)
+X\sim \UUU([-a,a]),\ a\in[0,+\infty)\iff\varphi_X(u)=\frac{\sin(au)}{au}=\text{sinc}(au)
 \]
 \begin{oss}
 La funzione $\dfrac{\sin(au)}{au}=:\text{sinc}(au)$ è detta \emph{seno cardinale}.
@@ -562,7 +562,7 @@ Allora
 \end{aligned}
 \end{gather*}
 
-\item [(b)] Si mostri che $X\sim  \UUU([a,b])\SESOLOSE\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
+\item [(b)] Si mostri che $X\sim  \UUU([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
 
 Notiamo che possiamo ricondurci ad un'uniforme simmetrica semplicemente traslando di $\dfrac{a+b}{2}$:
 \fg{0.5}{8_2}
@@ -580,14 +580,14 @@ Allora
 \end{gather*}
 Quindi
 \[
-X\sim  \UUU([a,b]),\ a,b\in\RR\SESOLOSE\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left( \frac{b-a}{2}u \right)
+X\sim  \UUU([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left( \frac{b-a}{2}u \right)
 \]
 Per quanto riguarda media e varianza
 \[
 \EE[X]\overset{\underset{\dots}{}}{=}\frac{a+b}{2} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{(a+b)^2-ab}{3}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{(b-a)^2}{12}
 \]
 
-\item [(c)] Si mostri che $X\sim\EEE(\lambda)\SESOLOSE\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
+\item [(c)] Si mostri che $X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
 
 Calcoliamo la funzione caratteristica di $X$:
 \begin{gather*}
@@ -615,14 +615,14 @@ Sapendo che nel confronto tra un esponenziale tendente a zero e un numero comple
 \end{nb}
 Quindi
 \[
-X\sim\EEE(\lambda),\ \lambda>0\SESOLOSE\varphi_X(u)=\frac{\lambda}{\lambda-iu}
+X\sim\EEE(\lambda),\ \lambda>0\iff\varphi_X(u)=\frac{\lambda}{\lambda-iu}
 \]
 Per quanto riguarda media e varianza
 \[
 \EE[X]\overset{\underset{\dots}{}}{=}\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
 \]
 
-\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\SESOLOSE\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
+\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
 
 Osserviamo che $f_X(x)=\lambda e^{\lambda x}\ \Ind_{(-\infty,0]}(x)$. Allora
 \[
@@ -632,7 +632,7 @@ Ovviamente nell'ultima equaglianza si è usato un discorso analogo al \textbf{NB
 
 Si ha
 \[
-X\text{ tale che }-X\sim\EEE(\lambda)\SESOLOSE\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}
+X\text{ tale che }-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}
 \]
 e
 \[
@@ -905,7 +905,7 @@ Al posto di $X_1$ sarebbe andata bene qualsiasi altra $X_k$.
 \Soluzione{} %8
 Prima di procedere dimostriamo il risultato notevole
 \[
-X\sim\Gamma(\alpha,\lambda),\ \alpha>0,\ \lambda>0\SESOLOSE\varphi_X(u)=\left( \frac{\lambda}{\lambda-iu} \right)^\alpha
+X\sim\Gamma(\alpha,\lambda),\ \alpha>0,\ \lambda>0\iff\varphi_X(u)=\left( \frac{\lambda}{\lambda-iu} \right)^\alpha
 \]
 Ricordando che
 \begin{gather*}
@@ -1038,9 +1038,9 @@ che è $\neq 0\ \ \forall(x,y)\in(0,+\infty)^2$.
 Possiamo quindi procedere a esplicitare l'inversa di $g$:
 \[
 \begin{cases}t=x+y\\u=\frac{x}{x+y}\end{cases}
-\SESOLOSE
+\iff
 \begin{cases}\frac{x}{t}=u\\y=t-x\end{cases}
-\SESOLOSE
+\iff
 \begin{cases}x=tu\\y=t(1-u)\end{cases}
 \]
 cioè
