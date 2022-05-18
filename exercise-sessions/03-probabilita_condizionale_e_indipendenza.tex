@@ -18,12 +18,12 @@ Siano $A,B\in \Ac$ e sia $\{E_{n}\}_{n\in \NN} \subseteq \Ac$ una partizione dis
 	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \NN$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})}$.
 \end{enumerate}
 \begin{definition}
-	$A$ e $B$ sono indipendenti $(A\Bot B)$ se $\PP(A\cap B) =\PP(A)\PP(B)$.
+$A$ e $B$ sono indipendenti $( A\indep B)$ se $\PP( A\cap B) =\PP( A)\PP( B)$.
 \end{definition}
 \textbf{Proprietà.}
 \begin{enumerate}
-	\item $A\Bot B\iff \PP(A\mid B) =\PP(A)$.
-	\item $A\Bot B\iff A\Bot B\comp \iff A\comp \Bot B\iff A\comp \Bot B\comp$.
+\item $A\indep B\iff \PP( A\mid B) =\PP( A)$.
+\item $A\indep B\iff A\indep B\complementary \iff A\complementary \indep B\iff A\complementary \indep B\complementary$.
 \end{enumerate}
 \begin{definition}
 	Sia $(\Omega,\Ac,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
@@ -272,7 +272,7 @@ Siano $A$, $B$ e $C$ eventi indipendenti e si supponga $\PP(A\cap B) \neq 0$.
 
 \Esercizio{}
 
-Sia $I$ un insieme arbitrario. Data una famiglia $(A_{i})_{i\in I}$ di eventi indipendenti, se per ogni $i$ si pone $B_{i} =A_{i}$ oppure $B_{i} =A_{i}\comp$, allora anche $(B_{i})_{i\in I}$ risulta una famiglia di eventi indipendenti.
+Sia $I$ un insieme arbitrario. Data una famiglia $( A_{i})_{i\in I}$ di eventi indipendenti, se per ogni $i$ si pone $B_{i} =A_{i}$ oppure $B_{i} =A_{i}\complementary$, allora anche $( B_{i})_{i\in I}$ risulta una famiglia di eventi indipendenti.
 
 \ParteSoluzioni
 
@@ -311,6 +311,20 @@ Osserviamo innanzitutto che lo spazio campionario è $\Omega =\{1,\dots,12\}$. O
 	\item $\dots$
 \end{enumerate}
 
+dunque sì.
+\item Gli eventi $A,B,D$ sono indipendenti?\begin{align*}
+\PP( A\cap B\cap D) & \questeq \PP( A)\PP( B)\PP( D)\\
+\frac{1}{2} & \neq \frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{1}{2} =\frac{1}{8}
+\end{align*}
+
+allora $A,B,D$ non sono indipendenti. L'indipendenza è un concetto più forte dell'indipendenza a coppie.
+\item \begin{gather*}
+\PP( A\mid E) =\frac{1}{2} =\PP( A) \implies A\indep E\\
+\PP( B\mid E) =\frac{1}{2} =\PP( B) \implies B\indep E\\
+\underbrace{\PP( A\cap B\cap E)}_{\frac{1}{6}} =\underbrace{\PP( A)\PP( B)\PP( E)}_{\frac{1}{2} \cdotp \frac{1}{2} \cdotp \frac{2}{3}} \implies A\indep B\indep E
+\end{gather*}
+\item $\dots $
+\end{enumerate}
 \Soluzione
 
 Manca.
@@ -350,23 +364,15 @@ Introduciamo gli eventi:
 
 	$\binom{89}{4}\rightarrow $azzecco il numero $15$ e basta, quindi per gli altri $4$ numeri devo considerare tutte le possibilità.
 
-	$\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
-	\item L'evento che ci interessa è
-	\begin{equation*}
-		\left(A_{42} \mid \bigcap_{k=1}^{41} A_{k}\comp\right)
-	\end{equation*}
-	sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP(A\mid B) =\PP(A)$ se $A\Bot B$, si ha
-	\begin{equation*}
-		\left(A_{42} \mid\bigcap_{k=1}^{41} A_{k}\comp\right) =\underbrace{\PP(A_{42}) =\PP(A)}_{\text{primo punto}} \approx 0.0556
-	\end{equation*}
-	Nel primo passaggio, di fatto quello che succede è che le precedenti estrazioni non influenzano il risultato.
-	\item L'evento \event{almeno un $15$ su $42$ estrazioni} si traduce formalmente in
-	\begin{equation*}
-		\bigcup_{k=1}^{42} A_{k}
-	\end{equation*}
-	Dobbiamo quindi calcolare $\PP\left(\bigcup_{k=1}^{42} A_{k}\right)$.
+$\binom{90}{5}\rightarrow $tutte le possibili cinquine che posso estrarre.
+\item L'evento che ci interessa è\begin{equation*}
+\left( A_{42} \mid \bigcap _{k=1}^{41} A_{k}\complementary\right)
+\end{equation*}
 
-	Ricordiamo che l'unica informazione che possiamo sfruttare è che gli evento $A_{j} ,j=1,\dots,42$ sono \textit{indipendenti}.
+sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e quindi, ricordando la proprietà $\PP( A\mid B) =\PP( A)$ se $A\indep B$, si ha
+\begin{equation*}
+\left( A_{42} \mid\bigcap _{k=1}^{41} A_{k}\complementary\right) =\underbrace{\PP( A_{42}) =\PP( A)}_{\text{primo punto}} \approx 0.0556
+\end{equation*}
 
 	Per calcolare $\PP$ potremmo usare la relazione (si osservi che gli $A_{j}$ sono indipendenti \textit{non disgiunti}): $\PP(A\cup B) =\PP(A) +\PP(B) -\PP(A\cap B)$, ma diventa più complicata avendo $42$ eventi.
 
@@ -425,6 +431,67 @@ Introduciamo gli eventi:
 	\begin{oss}
 		Osserviamo che in tutto l'esercizio non abbiamo fatto altro che usare la probabilità che esca il $15$ in una singola estrazione, infatti sfruttando l'\textbf{indipendenza} degli eventi ci siamo sempre ricondotti a calcolare le probabilità richieste utilizzando $\PP(A)$. Pertanto se interpretiamo $\PP(A)$ come probabilità di successo, semplifichiamo!
 	\end{oss}
+
+Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
+\begin{gather*}
+\left(\bigcup _{k} A_{k}\right) =\left(\left(\bigcup _{k} A_{k}\right)\complementary\right)\complementary =\left(\bigcap _{k} A_{k}\complementary\right)\complementary ,\ \ \ \ \PP\left( A\complementary\right) =1-\PP( A) ,\\
+A_{k} \indep \text{allora} \ A_{k}\complementary \indep ,
+\end{gather*}
+
+quindi
+\begin{align*}
+\PP\left(\bigcup _{k=1}^{42} A_{k}\right) & =\PP\left(\bigcap _{k} A_{k}\complementary\right)\complementary =1-\PP\left(\bigcap _{k} A_{k}\complementary\right) =1-\prod _{k=1}^{42}\PP\left( A_{k}\complementary\right)\\
+ & =1-\prod _{k=1}^{42}\PP\left( A\complementary\right) =1-\left[\PP\left( A\complementary\right)\right]^{42}\\
+ & =1-\left( 1-\frac{1}{18}\right)^{42} \approx 0.9093
+\end{align*}
+
+\begin{oss}
+Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
+\end{oss}
+\item Introduciamo i nuovi eventi $B_{k} =$ "il $15$ è estratto $k$ volte".\begin{equation*}
+\PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})}
+\end{equation*}
+
+Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come
+\begin{equation*}
+B_{1} =\bigcup _{j=1}^{42}\left( A_{j} \cap \bigcap _{k\neq j} A_{k}\complementary\right) =
+\end{equation*}
+
+i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi
+\begin{equation*}
+\PP( B_{1}) =42\PP( A_{j})\PP\left(\bigcap _{k\neq j} A_{j}\complementary\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
+\end{equation*}
+
+ci sono $42$ modi per scegliere $j$ (la $j$-esima estrazione in cui esce $15$); per un $j$ fissato stiamo usando il fatto che l'unione degli eventi è disgiunta.
+
+Calcoliamo ora il numeratore, ricordando che $A_{1}$ ci dice che il $15$ è estratto alla prima estrazione, quindi vorrà dire che nelle successive $41$ non è più estratto (questa è l'informazione che ci dà $B_{1}$)\begin{align*}
+\PP( A_{1} \cap B_{1}) & =\PP\left( A_{1} \cap \bigcap _{k=2}^{42} A_{k}\complementary\right)\overset{\indep }{=}\PP( A_{1})\prod _{k=2}^{42}\PP\left( A_{k}\complementary\right)\\
+ & =\PP( A_{1})\prod _{k=2}^{42}( 1-\PP( A_{k})) =\\
+ & =\PP( A)( 1-\PP( A))^{41} =\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}
+\end{align*}
+
+Infine
+\begin{equation*}
+\PP( A_{1} \mid B_{1}) =\frac{\PP( A_{1} \cap B_{1})}{\PP( B_{1})} =\frac{\frac{1}{18}\left( 1-\frac{1}{18}\right)^{41}}{42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}} =\frac{1}{42} \approx 0.0238
+\end{equation*}
+\item Osserviamo che
+\begin{gather*}
+B_{2} =\bigcup _{i,j=1}^{42}\left( A_{j} \cap A_{i} \cap \bigcap _{k\neq i,k\neq j} A_{k}\complementary\right)\\
+\PP( B_{2}) =\underbrace{\binom{42}{2}}_{\text{modi per} \ i,j}\PP( A_{j})\PP( A_{i})\PP\left(\bigcap _{k\neq i,k\neq j} A_{k}\complementary\right) =\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}
+\end{gather*}
+
+Allora
+\begin{align*}
+\PP( A_{1} \cap A_{2} \mid B_{2}) & =\frac{\PP( A_{1} \cap A_{2} \cap B_{2})}{\PP( B_{2})} =\frac{\PP\left( A_{1} \cap A_{2} \cap \bigcap _{k=3}^{42} A_{k}\complementary\right)}{\PP( B_{2})}\\
+ & \overset{\indep }{=}\frac{\PP( A_{1})\PP( A_{2})\PP\left(\bigcap _{k=3}^{42} A_{k}\complementary\right)}{\PP( B_{2})}\\
+ & =\frac{\PP( A)\PP( A)( 1-\PP( A))^{40}}{\PP( B_{2})}\\
+ & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
+\end{align*}
+
+\begin{oss}
+Osserviamo che in tutto l'esercizio non abbiamo fatto altro che usare la probabilità che esca il $15$ in una singola estrazione, infatti sfruttando l'\textbf{indipendenza} degli eventi ci siamo sempre ricondotti a calcolare le probabilità richieste utilizzando $\PP( A)$. Pertanto se interpretiamo $\PP( A)$ come probabilità di successo, semplifichiamo!
+\end{oss}
+
 \end{enumerate}
 
 \textbf{[Metodo 2]}
@@ -437,10 +504,10 @@ Possiamo ridurre il nostro esperimento aleatorio a $42$ prove di Bernoulli ripet
 \end{itemize}
 Allora
 \begin{enumerate}
-	\item $\PP(A) =1/18$
-	\item $\PP\left(A_{42} \mid \bigcup_{k=1}^{41} A_{k}\comp\right) =\PP(A_{42}) =\PP(A) =p$
-	\item $\PP\left(\bigcup_{k=1}^{42} A_{k}\right) =1-\PP\left(\bigcap_{k=1}^{42} A_{k}\comp\right) =1-\prod_{k=1}^{42}\PP\left(A_{k}\comp\right) =1-(1-p)^{42}$
-	\item $B_{1} =$ \event{solo un successo}.
+	\item $\PP( A) =1/18$
+	\item $\PP\left( A_{42} \mid \bigcup _{k=1}^{41} A_{k}\complementary\right) =\PP( A_{42}) =\PP( A) =p$
+	\item $\PP\left(\bigcup _{k=1}^{42} A_{k}\right) =1-\PP\left(\bigcap _{k=1}^{42} A_{k}\complementary\right) =1-\prod _{k=1}^{42}\PP\left( A_{k}\complementary\right) =1-( 1-p)^{42}$
+	\item $B_{1} =$ solo un successo.
 
 	$\PP(B_{1}) =42p(1-p)^{41} \implies \PP(A_{1} \mid B_{1}) =\frac{p(1-p)^{41}}{42p(1-p)^{41}} =\frac{1}{42}$
 	\item $B_{2} =$ \event{solo due successi}.
@@ -455,41 +522,45 @@ Consideriamo l'evento
 	A=\event{il pacco scelto inizialmente contiene l'assegno}
 \end{equation*}
 \begin{enumerate}
-	\item $\PP(A) =1/3$
+	\item $\PP( A) =1/3$
 	\item Introduciamo l'evento
 	\begin{equation*}
-		V_{\text{cons}} =\event{vinco conservando il pacco scelto inizialmente}
+	V_{\text{cons}} =\text{"vinco conservando il pacco scelto inizialmente"}
 	\end{equation*}
-	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:
-	\begin{theorem}
-		Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Si $A\in \Ac$ e $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $, allora
-		\begin{equation*}
-			\PP(A) =\sum\limits_{k\in \NN}\PP(A\mid E_{k})\PP(E_{k})
-		\end{equation*}
+
+	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:\begin{theorem}
+	Sia $( \Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
+	\begin{equation*}
+	\PP( A) =\sum\limits _{k\in \mathbb{N}}\PP( A\mid E_{k})\PP( E_{k})
+	\end{equation*}
 	\end{theorem}
+
 	La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero
 	\begin{equation*}
-		\Omega =A\cup A\comp
+	\Omega =A\cup A\complementary
 	\end{equation*}
+
 	Tutti i possibili eventi sono: o il pacco scelto inizialmente contiene l'assegno, o non lo contiene. Quindi
 	\begin{equation*}
-		\PP(V_{\text{cons}}) =\PP(V_{\text{cons}} \mid A)\PP(A) +\PP\left(V_{\text{cons}} \mid A\comp\right)\PP\left(A\comp\right) =\frac{1}{3}
+	\PP( V_{\text{cons}}) =\PP( V_{\text{cons}} \mid A)\PP( A) +\PP\left( V_{\text{cons}} \mid A\complementary\right)\PP\left( A\complementary\right) =\frac{1}{3}
 	\end{equation*}
 	\begin{enumerate}
-		\item $\PP(V_{\text{cons}} \mid A) =1$, se ho scelto inizialmente il pacco contenente l'assegno e conservo il pacco, allora sono sicuro di vincere.
-		\item $\PP(A) =\frac{1}{3}$
-		\item $\PP\left(V_{\text{cons}} \mid A\comp\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
-		\item $\PP\left(A\comp\right) =1-\PP(A) =1-\frac{1}{3} =\frac{2}{3}$
+	\item $\PP( V_{\text{cons}} \mid A) =1$, se ho scelto inizialmente il pacco contenente l'assegno e conservo il pacco, allora sono sicuro di vincere.
+	\item $\PP( A) =\frac{1}{3}$
+	\item $\PP\left( V_{\text{cons}} \mid A\complementary\right) =0$, se so che non ho scelto il pacco contenente l'assegno e lo conservo, allora sono sicuro di perdere.
+	\item $\PP\left( A\complementary\right) =1-\PP( A) =1-\frac{1}{3} =\frac{2}{3}$
 	\end{enumerate}
 	\item Introduciamo l'evento
 	\begin{equation*}
-		V_{\text{camb}} =\event{vinco cambiando il pacco scelto inizialmente}
+	V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
 	\end{equation*}
+
 	allora
 	\begin{equation*}
-		\PP(V_{\text{camb}}) =\underbrace{\PP(V_{\text{camb}} \mid A)}_{0}\underbrace{\PP(A)}_{\frac{1}{3}} +\underbrace{\PP\left(V_{\text{camb}} \mid A\comp\right)}_{1}\underbrace{\PP\left(A\comp\right)}_{\frac{2}{3}} =\frac{2}{3}
+	\PP( V_{\text{camb}}) =\underbrace{\PP( V_{\text{camb}} \mid A)}_{0}\underbrace{\PP( A)}_{\frac{1}{3}} +\underbrace{\PP\left( V_{\text{camb}} \mid A\complementary\right)}_{1}\underbrace{\PP\left( A\complementary\right)}_{\frac{2}{3}} =\frac{2}{3}
 	\end{equation*}
 \end{enumerate}
+
 Dai punti appena visti si vede immediatamente che la probabilità di vittoria dipende dalla strategia! Possiamo rappresentare il risultato graficamente.
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -766,14 +837,14 @@ Allora
 \Soluzione
 
 \begin{enumerate}
-	\item $\PP(B\mid A) =\frac{1}{5000} =0.0002$
+	\item $\PP( B\mid A) =\frac{1}{5000} =0.0002\ =\ 0.02\%$
 	\item $B\cap C=\emptyset $
-	\item $A\Bot C$
+	\item $A\indep C$
 	\item $D=B\cup C$
-	\item $\PP(B\mid A,D) =\frac{\PP(B,A,D)}{\PP(A,D)} =\frac{\PP(B,A)}{\PP(B,A) +\PP(C,A)} =\frac{1}{1+\frac{\PP(C,A)}{\PP(B,A)}} =\frac{1}{1+\frac{\PP(C\mid A)}{\PP(B\mid A)}} =\frac{1}{1+\frac{\PP(C)}{\PP(B\mid A)}}$
-	\item Poiché $\PP(C) \leq \PP(D) =\frac{1}{100000}$, vale
+	\item $\PP( B\mid A,D) =\frac{\PP( B,A,D)}{\PP( A,D)} =\frac{\PP( B,A)}{\PP( B,A) +\PP( C,A)} =\frac{1}{1+\frac{\PP( C,A)}{\PP( B,A)}} =\frac{1}{1+\frac{\PP( C\mid A)}{\PP( B\mid A)}} =\frac{1}{1+\frac{\PP( C)}{\PP( B\mid A)}}$
+	\item Poiché $\PP( C) \leq \PP( D) =\frac{1}{100000}$, vale
 	\begin{equation*}
-		\PP(B\mid A,D) \geq \frac{1}{1+\frac{\PP(D)}{\PP(B\mid A)}} =\frac{1}{1+\frac{5}{100}} =\frac{20}{21} =0.9524
+	\PP( B\mid A,D) \geq \frac{1}{1+\frac{\PP( D)}{\PP( B\mid A)}} =\frac{1}{1+\frac{5}{100}} =\frac{20}{21} =0.9524=95.24\%
 	\end{equation*}
 	\item Sì è il caso che Ferrero continui ad indagare su Ambrogio.
 \end{enumerate}
@@ -786,15 +857,14 @@ Definiamo l'evento
 \end{equation*}
 Allora
 \begin{enumerate}
-	\item $\PP(B_{1}) =\frac{1}{2}$
-	\item $\PP(B_{2} \mid B_{1}) =\frac{1}{2}$. Si rinforzano solo le rosse: dato che la prima estratta è bianca, alla seconda estrazione mi troverò ancora davanti un'urna con $1B$ e $1R$.
-	\item Con la formula delle probabilità totali e ricordando $\Omega =B_{1} \cup B_{1}\comp$ (alla prima deve essere estratta $B$ o $R$)
+	\item $\PP( B_{1}) =\frac{1}{2}$
+	\item $\PP( B_{2} \mid B_{1}) =\frac{1}{2}$. Si rinforzano solo le rosse: dato che la prima estratta è bianca, alla seconda estrazione mi troverò ancora davanti un'urna con $1B$ e $1R$.
+	\item Con la formula delle probabilità totali e ricordando $\Omega =B_{1} \cup B_{1}\complementary$ (alla prima deve essere estratta $B$ o $R$)
 	\begin{equation*}
-		\PP(B_{2}) =\underbrace{\PP(B_{2} \mid B_{1})}_{\frac{1}{2}}\underbrace{\PP(B_{1})}_{\frac{1}{2}} +\PP\left(B_{2} \mid B_{1}\comp\right)\underbrace{\PP\left(B_{1}\comp\right)}_{\frac{1}{2}}
+		\PP( B_{2}) =\underbrace{\PP( B_{2} \mid B_{1})}_{\frac{1}{2}}\underbrace{\PP( B_{1})}_{\frac{1}{2}} +\PP\left( B_{2} \mid B_{1}\complementary\right)\underbrace{\PP\left( B_{1}\complementary\right)}_{\frac{1}{2}}
 	\end{equation*}
-	Ora, $\PP\left(B_{2} \mid B_{1}\comp\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\PP(B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
 
-	Visivamente può essere utile fare un diagramma ad albero
+	Ora, $\PP\left( B_{2} \mid B_{1}\complementary\right) =\frac{1}{3}$, infatti se alla prima estrazione è uscita $R$, alla seconda estrazione nell'urna ci sono $2B$ e $1R$. Allora $\PP( B_{2}) =\frac{1}{4} +\frac{1}{6} =\frac{5}{12}$.
 
 	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
@@ -864,7 +934,7 @@ Allora
 	Stiamo sfruttando il fatto che c'è rinforzo solo delle rosse e \textit{non} che abbiamo prove ripetute indipendenti!
 	\item $
 	\begin{aligned}
-		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\comp\right) & =\PP\left(B_{1}\comp\right)\PP\left(B_{2}\comp \mid B_{1}\comp\right) \cdots \PP\left(B_{n}\comp \mid B_{1}\comp \cap \cdots \cap B_{n-1}\comp\right)\\
+		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\complementary\right) & =\PP\left(B_{1}\complementary\right)\PP\left(B_{2}\complementary \mid B_{1}\complementary\right) \cdots \PP\left(B_{n}\complementary \mid B_{1}\complementary \cap \cdots \cap B_{n-1}\complementary\right)\\
 		 & =\frac{1}{\cancel{2}} \cdotp \frac{\cancel{2}}{\cancel{3}} \cdots \frac{1}{n+1} =\frac{1}{n+1}
 	\end{aligned}$
 
@@ -874,10 +944,11 @@ Allora
 	Abbiamo sfruttato la continuità dall'alto di $\PP$.
 	\item $
 	\begin{aligned}
-		\PP\left(\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits_{k=1}^{\infty } B_{k}\comp\right)\right) & =\underbrace{\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right)}_{0} +\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\comp\right) & \text{(unione disgiunta)}\\
-		 & =\lim\limits_{n\rightarrow \infty }\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\comp\right) & \text{(continuità)}\\
+		\PP\left(\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits_{k=1}^{\infty } B_{k}\complementary\right)\right) & =\underbrace{\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right)}_{0} +\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\complementary\right) & \text{(unione disgiunta)}\\
+		 & =\lim\limits_{n\rightarrow \infty }\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\complementary\right) & \text{(continuità)}\\
 		 & =\lim\limits_{n\rightarrow \infty }\frac{1}{n+1} =0 & 
 	\end{aligned}$
+
 \end{enumerate}
 
 \Soluzione

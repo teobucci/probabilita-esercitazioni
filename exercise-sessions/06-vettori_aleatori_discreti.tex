@@ -4,13 +4,13 @@
 
 \Esercizio{}
 
-Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definite sul medesimo spazio di probabilità, si consideri il coefficiente di correlazione $\rho_{X,Y} =\frac{\mathrm{Cov} (X,Y)}{\sigma_{X} \sigma_{Y}}$. Si mostri che:
+Date due variabili aleatorie reali X e Y di varianza finita e non nulla, definite sul medesimo spazio di probabilità, si consideri il coefficiente di correlazione $\rho _{X,Y} =\frac{\Cov (X,Y)}{\sigma _{X} \sigma _{Y}}$. Si mostri che:
 \begin{enumerate}[a)]
-	\item se $X$ e $Y$ sono indipendenti, allora $\rho_{X,Y} =0$
-	\item $\rho_{aX+b,cY+d} =\rho_{X,Y}$ per ogni $a,c >0,b,d\in \RR$
-	\item $\rho_{X,aX+b} =a/|a|$, per ogni $a\neq 0$
-	\item $\mathrm{Var}\left(\frac{1}{\sigma_{Y}} Y-\frac{\rho_{X,Y}}{\sigma_{X}} X\right)=1-\rho_{X,Y}^{2}$
-	\item $| \rho_{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \RR$. Suggerimento: utilizzare il punto d
+	\item se $X$ e $Y$ sono indipendenti, allora $\rho _{X,Y} =0$
+	\item $\rho _{aX+b,cY+d} =\rho _{X,Y}$ per ogni $a,c >0,b,d\in \mathbb{R}$
+	\item $\rho _{X,aX+b} =a/|a|$, per ogni $a\neq 0$
+	\item $\Var\left(\frac{1}{\sigma _{Y}} Y-\frac{\rho _{X,Y}}{\sigma _{X}} X\right)=1-\rho _{X,Y}^{2}$
+	\item $| \rho _{X,Y}| =1$ implica $Y=aX+b$ per qualche $a\neq 0,b\in \mathbb{R}$. Suggerimento: utilizzare il punto d
 \end{enumerate}
 
 \Esercizio{$\star$}
@@ -23,14 +23,14 @@ matrice varianza di $X$. Suggerimento: si supponga inizialmente che $\EE[X]=0$ e
 
 Date $X_{1} ,\dots ,X_{n}$ variabili aleatorie reali i.i.d. con momento secondo finito, introdotti
 \begin{gather*}
-\mu =\EE[X_{k}] ,\ \ \sigma^{2} =\mathrm{Var}(X_{k}) ,\\
-\overline{X}_{n} =\frac{1}{n}\sum_{k=1}^{n} X_{k} ,\ \ S_{n}^{2} =\frac{1}{n-1}\sum_{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} ,\ \ W_{n}^{2} =\frac{1}{n}\sum_{k=1}^{n}(X_{k} -\mu)^{2}
+\mu =\EE[ X_{k}] ,\ \ \sigma ^{2} =\Var( X_{k}) ,\\
+\overline{X}_{n} =\frac{1}{n}\sum _{k=1}^{n} X_{k} ,\ \ S_{n}^{2} =\frac{1}{n-1}\sum _{k=1}^{n}( X_{k} -\overline{X}_{n})^{2} ,\ \ W_{n}^{2} =\frac{1}{n}\sum _{k=1}^{n}( X_{k} -\mu )^{2}
 \end{gather*}
 si mostri che:
 \begin{enumerate}[a)]
-	\item $\EE[\overline{X}_{n}] =\mu ,\mathrm{Var}(\overline{X}_{n}) =\sigma^{2} /n$
-	\item\label{esercizio3b} $\sum_{k=1}^{n} X_{k}^{2} =\sum_{k=1}^{n}(X_{k} -\overline{X}_{n})^{2} +n\overline{X}_{n}^{2}$
-	\item $\EE\left[S_{n}^{2}\right] =\EE\left[W_{n}^{2}\right] =\sigma^{2}$
+	\item $\EE[\overline{X}_{n}] =\mu ,\Var(\overline{X}_{n}) =\sigma ^{2} /n$
+	\item\label{esercizio3b} $\sum _{k=1}^{n} X_{k}^{2} =\sum _{k=1}^{n}( X_{k} -\overline{X}_{n})^{2} +n\overline{X}_{n}^{2}$
+	\item $\EE\left[ S_{n}^{2}\right] =\EE\left[ W_{n}^{2}\right] =\sigma ^{2}$
 \end{enumerate}
 
 \Esercizio{}
@@ -147,8 +147,8 @@ Siano $T_{1}$ e $T_{2}$ variabili aleatorie indipendenti di legge geometrica di 
 Siano $X,\ Z,\ W$ variabili aleatorie indipendenti con $Z$ e $W$ entrambe con legge di Poisson di parametro $\lambda  >0$ e $X\sim \mathrm{Be} (p),p\in (0,1)$. Definiamo la variabile aleatoria $Y=XZ+W$
 \begin{enumerate}[a)]
 	\item Determinare le leggi di $(X,Y)$ e $Y$
-	\item Calcolare $\EE[Y]$ e $\operatorname{Var} (Y)$
-	\item Calcolare $\mathrm{Cov} (X,Y)$. Le variabili aleatorie $X$ e $Y$ sono indipendenti?
+	\item Calcolare $\EE [Y]$ e $\operatorname{Var} (Y)$
+	\item Calcolare $\Cov (X,Y)$. Le variabili aleatorie $X$ e $Y$ sono indipendenti?
 \end{enumerate}
 
 \Esercizio{}
@@ -196,9 +196,9 @@ Si consideri l'estrazione di $n$ palline da un'urna contenente $B$ palline bianc
 	\item Qual è il valore atteso di $Y?$
 	\item Le $X_{k}$ sono indipendenti?
 	\item $Y$ e $X_{1}$ sono indipendenti?
-	\item Calcolare $\mathrm{Cov}(X_{1} ,X_{2})$
+	\item Calcolare $\Cov( X_{1} ,X_{2})$
 \end{enumerate}
-$(\mathrm{g})$ Calcolare $\mathrm{Var} (Y)$ per $n=2$
+$(\mathrm{g} )$ Calcolare $\Var (Y)$ per $n=2$
 
 \Esercizio{}
 
@@ -219,8 +219,8 @@ Suggerimento: per il punto \ref{esercizio3b} dell'Esercizio \ref{sec:ese3}, si h
 \begin{enumerate}[a),resume]
 	\item Se nelle prime $10$ prove vengono registrati $2$ successi, con quale probabilità almeno un successo si è verificato nelle prime $2$ prove?
 	\item Se nelle prime $10$ prove viene registrato almeno un successo, con quale probabilità le prime $8$ prove danno esattamente un successo?
-	\item Introdotte anche $Z=$ \event{numero di prove necessarie per il primo successo} e $W=$ \event{numero di insuccessi prima del primo successo}, calcolare le leggi congiunte delle coppie $(Z,W),(Y,Z)$ $(Y,W).$ Sono coppie di variabili aleatorie indipendenti?
-	\item Determinare il coefficiente di correlazione $\rho_{Z,W}$ e la covarianza $\mathrm{Cov} (Z,W)$
+	\item Introdotte anche $Z=$ "numero di prove necessarie per il primo successo" e $W=$ "numero di insuccessi prima del primo successo", calcolare le leggi congiunte delle coppie $(Z,W),(Y,Z)$ $(Y,W).$ Sono coppie di variabili aleatorie indipendenti?
+	\item Determinare il coefficiente di correlazione $\rho _{Z,W}$ e la covarianza $\Cov (Z,W)$
 \end{enumerate}
 cosa sarebbe cambiato se avessimo realizzato una successione di variabili aleatorie $X_{n}$ i.i.d., $X_{n} \sim \mathrm{Be} (p)$, in un altro spazio di probabilità $(\Omega,\Ac,\PP)$?
 

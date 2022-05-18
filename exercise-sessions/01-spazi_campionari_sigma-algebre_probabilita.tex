@@ -167,13 +167,13 @@ Dato uno spazio di probabilità $(\Omega,\Ac,\PP)$, si mostri che:
 
 Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità e siano $A$ e $B$ due eventi appartenenti ad $\Ac$, con probabilità $\PP(A) =0.4$ e $\PP(B) =0.7$, rispettivamente. Date le seguenti affermazioni dire quali sono certamente false, quali sono sempre vere, quali possono essere vere o false:
 \begin{enumerate}
-	\item $\PP(A\cup B) =0.4$,
-	\item $\PP(A\cup B) =0.7$,
-	\item $\PP(A\cup B) \geq 0.7$,
-	\item $\PP(A\cup B) =1.1$,
-	\item $\PP(A\cap B) =0.28$,
-	\item $\PP\left(B\cap A\comp\right) \geq 0.3$,
-	\item $\PP\left(A\cap B\comp\right) \leq 0.3$.
+	\item $\PP( A\cup B) =0.4$,
+	\item $\PP( A\cup B) =0.7$,
+	\item $\PP( A\cup B) \geq 0.7$,
+	\item $\PP( A\cup B) =1.1$,
+	\item $\PP( A\cap B) =0.28$,
+	\item $\PP\left( B\cap A\complementary\right) \geq 0.3$,
+	\item $\PP\left( A\cap B\complementary\right) \leq 0.3$.
 \end{enumerate}
 
 \Esercizio{}
@@ -261,16 +261,16 @@ Vediamo la soluzione dell'esercizio.
 	\item $\Omega =\{(t,t) ,(t,c) ,(c,t) ,(c,c)\}$
 	\item
 	\begin{enumerate}
-		\item $A=\{(t,t) ,(t,c)\}$
-		\item $B=\{(t,c) ,(c,c)\}$
-		\item $A\comp$
-		\item $B\comp$
-		\item $A\cap B=\{(t,c)\}$
-		\item $A\cap B\comp$
-		\item $A\comp \cap B$
+		\item $A=\{( t,t) ,( t,c)\}$
+		\item $B=\{( t,c) ,( c,c)\}$
+		\item $A\complementary$
+		\item $B\complementary$
+		\item $A\cap B=\{( t,c)\}$
+		\item $A\cap B\complementary$
+		\item $A\complementary \cap B$
 		\item $A\cup B$
-		\item $A\comp \cap B\comp =\{(c,t)\}$
-		\item $\left(A\cap B\comp\right) \cup \left(A\comp \cap B\right) =\{(t,t) ,(c,c)\}$
+		\item $A\complementary \cap B\complementary =\{( c,t)\}$
+		\item $\left( A\cap B\complementary\right) \cup \left( A\complementary \cap B\right) =\{( t,t) ,( c,c)\}$
 		\item $\emptyset $
 		\item $\Omega $
 	\end{enumerate}
@@ -280,11 +280,11 @@ Vediamo la soluzione dell'esercizio.
 
 \begin{enumerate}
 	\item $A\cup B\cup C$
-	\item $\left(A\cap B\comp \cap C\comp\right) \cup \left(A\comp \cap B\cap C\comp\right) \cup \left(A\comp \cap B\comp \cap C\right) \cup \left(A\comp \cap B\comp \cap C\comp\right)$
-	\item $\left(A\comp \cap B\comp \cap C\comp\right)$
-	\item $(A\cap B\cap C)$
-	\item $\left(A\cap B\comp \cap C\comp\right) \cup \left(A\comp \cap B\cap C\comp\right) \cup \left(A\comp \cap B\comp \cap C\right)$
-	\item $\left(A\comp \cap B\cap C\right) \cup \left(A\cap B\comp \cap C\right) \cup \left(A\cap B\cap C\comp\right)$
+	\item $\left( A\cap B\complementary \cap C\complementary\right) \cup \left( A\complementary \cap B\cap C\complementary\right) \cup \left( A\complementary \cap B\complementary \cap C\right) \cup \left( A\complementary \cap B\complementary \cap C\complementary\right)$
+	\item $\left( A\complementary \cap B\complementary \cap C\complementary\right)$
+	\item $( A\cap B\cap C)$
+	\item $\left( A\cap B\complementary \cap C\complementary\right) \cup \left( A\complementary \cap B\cap C\complementary\right) \cup \left( A\complementary \cap B\complementary \cap C\right)$
+	\item $\left( A\complementary \cap B\cap C\right) \cup \left( A\cap B\complementary \cap C\right) \cup \left( A\cap B\cap C\complementary\right)$
 	\item $A\subset B$
 	\item $A\cap C=\emptyset $
 	\item $B\cup C=\Omega $
@@ -293,9 +293,9 @@ Vediamo la soluzione dell'esercizio.
 \Soluzione
 
 \begin{enumerate}
-	\item $\left(A\cap B\cap C\cap D\comp\right) \cup \left(A\cap B\cap C\comp \cap D\right) \cup \left(A\cap B\comp \cap C\cap D\right) \cup \left(A\comp \cap B\cap C\cap D\right)$
-	\item $A\comp \cap B\comp \cap C\cap D\comp$
-	\item $\left(A\comp \cap B\comp \cap C\cap D\comp\right) \cup \left(A\comp \cap B\comp \cap C\comp \cap D\right)$
+	\item $\left( A\cap B\cap C\cap D\complementary\right) \cup \left( A\cap B\cap C\complementary \cap D\right) \cup \left( A\cap B\complementary \cap C\cap D\right) \cup \left( A\complementary \cap B\cap C\cap D\right)$
+	\item $A\complementary \cap B\complementary \cap C\cap D\complementary$
+	\item $\left( A\complementary \cap B\complementary \cap C\cap D\complementary\right) \cup \left( A\complementary \cap B\complementary \cap C\complementary \cap D\right)$
 	\item $A\cup B\cup C\cup D$
 \end{enumerate}
 
@@ -310,16 +310,15 @@ Vediamo la soluzione dell'esercizio.
 
 \Soluzione
 
-$A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
+$A=\sigma ( E) =\left\{E,E\complementary ,\emptyset ,\Omega \right\}$.
 
 \Soluzione
 
 \begin{enumerate}
-	\item $\bigcup\limits_{k=1}^{\infty } E_{k}\comp$\\
-	$\Ac$: $E_{k} \in \Ac \forall k\implies  E_{k}\comp \in \Ac \forall k\implies  \bigcap\limits_{k=1}^{\infty } E_{k}\comp \in \Ac$
-	\item $E_{3} \cap \bigcap\limits_{k\neq 3} E_{k}\comp$
-	\item $\bigcap\limits_{k=1}^{\infty } E_{2k}$
-	\item $\bigcup\limits_{n=1}^{\infty }\bigcap\limits_{m\geq n} E_{m} =:\liminf_{n} E_{n}$
+	\item $\bigcup\limits _{k=1}^{\infty } E_{k}\complementary$. Vediamo l'appartenenza ad $\mathcal{A}$: $E_{k} \in \mathcal{A} \forall k\implies  E_{k}\complementary \in \mathcal{A} \forall k\implies  \bigcap\limits _{k=1}^{\infty } E_{k}\complementary \in \mathcal{A}$
+	\item $E_{3} \cap \bigcap\limits _{k\neq 3} E_{k}\complementary$
+	\item $\bigcap\limits _{k=1}^{\infty } E_{2k}$
+	\item $\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m} =:\liminf _{n} E_{n}$
 	\begin{oss}
 		\begin{align*}
 			\omega \in \liminf_{n} E_{n} & \ \ \iff \ \ \omega \in \bigcup_{n=1}^{\infty }\bigcap_{m\geq n} E_{m}\\
@@ -339,24 +338,24 @@ $A=\sigma (E) =\left\{E,E\comp ,\emptyset ,\Omega \right\}$.
 		i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \NN$.\\
 		i.e. ho infiniti successi.
 	\end{oss}
-	\item $\left(\liminf\limits_{n} E_{n}\right)\comp =\underbrace{\left(\bigcup\limits_{n=1}^{\infty }\bigcap\limits_{m\geq n} E_{m}\right)\comp =\bigcap\limits_{n=1}^{\infty }\bigcup\limits_{m\geq n} E_{m}\comp}_{\text{Leggi di De Morgan}} =:\limsup\limits_{n} E_{n}\comp$
-	\item $\bigcup\limits_{l\in \NN}\left(E_{l} \cap \bigcap\limits_{k\neq l} E_{k}\comp\right)$
+	\item $\left(\liminf\limits _{n} E_{n}\right)\complementary =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m}\right)\complementary =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m}\complementary}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}\complementary$
+	\item $\bigcup\limits _{l\in \mathbb{N}}\left( E_{l} \cap \bigcap\limits _{k\neq l} E_{k}\complementary\right)$
 \end{enumerate}
 
 \Soluzione
 
-Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \Ac$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}\comp \in \Ac$.
+Sia $D_{k} =E_{k}^{1} \cup E_{k}^{3} \cup E_{k}^{5} \in \mathcal{A}$ e sia $P_{k} =E_{k}^{2} \cup E_{k}^{4} \cup E_{k}^{6} =D_{k}\complementary \in \mathcal{A}$.
 \begin{enumerate}
-	\item $\bigcap\limits_{k=1}^{n} E_{k}^{1} \in \Ac$,
-	\item $\bigcap\limits_{k\geq 1} E_{k}^{5} \in \Ac$,
-	\item $E_{13}^{3} \cap \left(\bigcap\limits_{k\neq 13}\left[\left(E_{k}^{3}\right)\comp\right]\right) \in \Ac$,
-	\item $\left(\bigcap\limits_{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits_{k\geq 1} P_{2k}\right) \in \Ac$,
-	\item $\bigcap\limits_{k\geq 33} E_{k}^{3} \in \Ac$,
-	\item $\liminf_{k} E_{k}^{3} \in \Ac$,
-	\item $\liminf_{k} D_{k} \in \Ac$,
-	\item $\limsup_{k} E_{k}^{6} \in \Ac$,
-	\item $\left(\liminf_{k}\left(E_{k}^{2}\right)\right)\comp \in \Ac$,
-	\item $\bigcup_{n}\left(E_{n}^{4} \cap \left(\bigcap_{k\neq n}\left( E_{k}^{4}\right)\comp\right)\right) \in \Ac$.
+	\item $\bigcap\limits _{k=1}^{n} E_{k}^{1} \in \mathcal{A}$,
+	\item $\bigcap\limits _{k\geq 1} E_{k}^{5} \in \mathcal{A}$,
+	\item $E_{13}^{3} \cap \left(\bigcap\limits _{k\neq 13}\left[\left( E_{k}^{3}\right)\complementary\right]\right) \in \mathcal{A}$,
+	\item $\left(\bigcap\limits _{k\geq 0} D_{2k+1}\right) \cap \left(\bigcap\limits _{k\geq 1} P_{2k}\right) \in \mathcal{A}$,
+	\item $\bigcap\limits _{k\geq 33} E_{k}^{3} \in \mathcal{A}$,
+	\item $\liminf _{k} E_{k}^{3} \in \mathcal{A}$,
+	\item $\liminf _{k} D_{k} \in \mathcal{A}$,
+	\item $\limsup _{k} E_{k}^{6} \in \mathcal{A}$,
+	\item $\left(\liminf _{k}\left( E_{k}^{2}\right)\right)\complementary \in \mathcal{A}$,
+	\item $\bigcup _{n}\left( E_{n}^{4} \cap \left(\bigcap _{k\neq n}\left( E_{k}^{4}\right)\complementary\right)\right) \in \mathcal{A}$.
 \end{enumerate}
 
 \Soluzione
@@ -392,15 +391,15 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 	\item $M$
 	\item $C\cap M$
 	\item $C\cup M$
-	\item $(C\cup M)\comp$
-	\item $(C\cup M) \setminus (C\cap M)$
+	\item $( C\cup M)\complementary$
+	\item $( C\cup M) \setminus ( C\cap M)$
 \end{enumerate}
 
 	Per rispondere era necessario ricordare che le operazioni logiche tra insiemi si traducono in operazioni insiemistiche:
 	\begin{align*}
 		\emptyset  & =\text{evento impossibile}\\
 		\Omega  & =\text{evento certo}\\
-		A\comp & =\text{contrario di} \ A\\
+		A\complementary & =\text{contrario di} \ A\\
 		A\cup B & \iff A\ \text{oppure} \ B\\
 		A\cap B & \iff A\ \text{e} \ B\\
 		A\cap B=\emptyset  & \iff A\ \text{e} \ B\ \text{incompatibili}\\
@@ -412,11 +411,11 @@ Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in ma
 	\end{equation*}
 	Allora
 	\begin{enumerate}
-		\item $\PP(C) =\frac{| C| }{|\Omega| } =\frac{7}{50} =0.14$
-		\item $\PP(M) =\frac{| M| }{|\Omega| } =\frac{5}{50} =0.1$
-		\item $\PP(C\cap M) =\frac{1}{50} =0.02$
-		\item $\PP(C\cup M) =\frac{11}{50} =0.22$
-		\item $\PP\left((C\cup M)\comp\right) =1-0.22=0.78$
+		\item $\PP( C) =\frac{| C| }{| \Omega | } =\frac{7}{50} =0.14$
+		\item $\PP( M) =\frac{| M| }{| \Omega | } =\frac{5}{50} =0.1$
+		\item $\PP( C\cap M) =\frac{1}{50} =0.02$
+		\item $\PP( C\cup M) =\frac{11}{50} =0.22$
+		\item $\PP\left(( C\cup M)\complementary\right) =1-0.22=0.78$
 		\item Procediamo come segue
 		\begin{align*}
 			\PP((C\cup M) \setminus (C\cap M)) & \underbrace{=\PP(C\cup M) -\overbrace{\PP((C\cup M) \cap (C\cap M))}^{\PP(C\cap M)}}_{\PP(A\setminus B) =\PP(A) -\PP(A\cap B)}\\
@@ -478,11 +477,11 @@ Con questo metodo mostriamo come non sia necessario introdurre $\Omega $: è pos
 L'insieme $\Omega $ delle possibili consegne è unione dei seguenti eventi, tra loro incompatibili:
 \[
 	\begin{array}{lc}
-			& \text{con probabilità}\\
-		C\phantom{\comp} \cap U      & a\\
-		C         \comp  \cap U      & b\\
-		C\phantom{\comp} \cap U\comp & c\\
-		C         \comp  \cap U\comp & d
+													   & \text{con probabilità}\\
+		C\phantom{\complementary} \cap U               & a\\
+		C         \complementary  \cap U               & b\\
+		C\phantom{\complementary} \cap U\complementary & c\\
+		C         \complementary  \cap U\complementary & d
 	\end{array}
 \]
 Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richiesta. Stiamo partizionando $\Omega $.
@@ -504,11 +503,11 @@ Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richie
 	% Text Node
 	\draw (237,22.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
 	% Text Node
-	\draw (237,62.4) node [anchor=north west][inner sep=0.75pt]    {$C\comp$};
+	\draw (237,62.4) node [anchor=north west][inner sep=0.75pt]    {$C\complementary$};
 	% Text Node
 	\draw (274,100.4) node [anchor=north west][inner sep=0.75pt]    {$U$};
 	% Text Node
-	\draw (312,100.4) node [anchor=north west][inner sep=0.75pt]    {$U\comp$};
+	\draw (312,100.4) node [anchor=north west][inner sep=0.75pt]    {$U\complementary$};
 
 
 	\end{tikzpicture}
@@ -517,27 +516,27 @@ Stiamo costruendo $\Omega $ come insieme delle possibili modalità di una richie
 
 I dati si traducono come segue:
 \begin{itemize}
-	\item $0.4=\PP\left(C\comp\right) =\PP\left(\left(C\comp \cap U\right) \cup \left(C\comp \cap U\comp\right)\right)=\PP\left(C\comp \cap U\right) +\PP\left(C\comp \cap U\comp\right)=b+d$
-	\item $0.3=\PP(U) =\PP\left(\left(C\comp \cap U\right) \cup (C\cap U)\right)=\PP\left(C\comp \cap U\right) +\PP(C\cap U)=b+a$
-	\item $0.4=\PP\left(U\comp \cap C\right) =c$
+	\item $0.4=\PP\left( C\complementary\right) =\PP\left(\left( C\complementary \cap U\right) \cup \left( C\complementary \cap U\complementary\right)\right)=\PP\left( C\complementary \cap U\right) +\PP\left( C\complementary \cap U\complementary\right)=b+d$
+	\item $0.3=\PP( U) =\PP\left(\left( C\complementary \cap U\right) \cup ( C\cap U)\right)=\PP\left( C\complementary \cap U\right) +\PP( C\cap U)=b+a$
+	\item $0.4=\PP\left( U\complementary \cap C\right) =c$
 \end{itemize}
 
 Si ricava allora:
 \begin{equation*}
 	a=0.2,\qquad b=0.1,\qquad c=0.4,\qquad d=0.3.
 \end{equation*}
-Quindi la probabilità che ci sia una consegna urgente in città è $\PP(U\cap C) =a=0.2$ e la probabilità che ci sia una consegna urgente fuori città è $\PP\left(U\cap C\comp\right) =b=0.1$.
+Quindi la probabilità che ci sia una consegna urgente in città è $\PP(U\cap C) =a=0.2$ e la probabilità che ci sia una consegna urgente fuori città è $\PP\left(U\cap C\complementary\right) =b=0.1$.
 
 \Soluzione
 
 \begin{enumerate}
 	\item Scriviamo $B$ come unione disgiunta di insiemi:
 	\[
-		B=(B\setminus A) \cup (A\cap B) =\left(B\cap A\comp\right) \cup (A\cap B)
+		B=(B\setminus A) \cup (A\cap B) =\left(B\cap A\complementary\right) \cup (A\cap B)
 	\]
 	Dimostriamo le due disuguaglianze.
 	\begin{enumerate}
-		\item $\PP(B) =\overbrace{\PP\left(\left(B\cap A\comp\right) \cup (A\cap B)\right) =\underbrace{\PP\left(B\cap A\comp\right)}_{\geq 0} +\PP(A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geq \PP(A\cap B)$
+		\item $\PP(B) =\overbrace{\PP\left(\left(B\cap A\complementary\right) \cup (A\cap B)\right) =\underbrace{\PP\left(B\cap A\complementary\right)}_{\geq 0} +\PP(A\cap B)}^{\text{perché gli insiemi sono disgiunti}} \geq \PP(A\cap B)$
 		\item $\PP(A\cap B) =\PP(A) +\PP(B) -\underbrace{\PP(A\cap B)}_{\leq 1} \geq \underbrace{\PP(A)}_{=1} +\PP(B) -1=\PP(B)$
 	\end{enumerate}
 	Quindi abbiamo $\PP(A\cap B) =\PP(B)$.
@@ -574,19 +573,19 @@ Allora:
 	\item V/F (è plausibile)
 	\item V, infatti
 	\begin{equation*}
-		\PP(B) =\PP(A\cap B) +\PP\left(B\cap A\comp\right)
+		\PP( B) =\PP( A\cap B) +\PP\left( B\cap A\complementary\right)
 	\end{equation*}
 	pertanto
 	\begin{equation*}
-		\PP\left(B\cap A\comp\right) =\underbrace{\PP(B)}_{=0.7} -\underbrace{\PP(A\cap B)}_{\leq 0.4} \geq 0.7-0.4=0.3
+		\PP\left( B\cap A\complementary\right) =\underbrace{\PP( B)}_{=0.7} -\underbrace{\PP( A\cap B)}_{\leq 0.4} \geq 0.7-0.4=0.3
 	\end{equation*}
 	\item V, infatti
 	\begin{equation*}
 		\begin{cases}
-			\PP\left(A\cap B\comp\right) \leq \PP(A) =0.4\\
-			\PP\left(A\cap B\comp\right) \leq \PP\left(B\comp\right) =1-\PP(B) =1-0.7=0.3
+			\PP\left( A\cap B\complementary\right) \leq \PP( A) =0.4\\
+			\PP\left( A\cap B\complementary\right) \leq \PP\left( B\complementary\right) =1-\PP( B) =1-0.7=0.3
 		\end{cases}
-		\implies \PP\left(A\cap B\comp\right) \leq 0.3
+		\implies \PP\left( A\cap B\complementary\right) \leq 0.3
 	\end{equation*}
 \end{enumerate}
 

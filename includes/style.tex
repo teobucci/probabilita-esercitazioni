@@ -7,18 +7,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	FONTS
+% FONTS AND LANGUAGE
 %----------------------------------------------------------------------------------------
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage[utf8]{inputenc} % Required for including letters with accents
-\usepackage{dsfont} % per funzione indicatrice
+\usepackage[italian]{babel}
 
 %----------------------------------------------------------------------------------------
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
-\usepackage[italian]{babel} % Italian language/hyphenation
 
 \usepackage{latexsym}
 
@@ -28,31 +26,25 @@
 %	FIGURE MATHCHA
 %----------------------------------------------------------------------------------------
 
-\usepackage{amsmath}
-%\usepackage[fleqn]{amsmath}  % per avere l'allineamento a sinistra delle equazioni
-\usepackage{amssymb} % carica anche \usepackage{amsfonts}
-\usepackage{amsthm}
+\usepackage{dsfont} % per \mathds{} (funzione indicatrice)
+\usepackage{amsmath,amssymb,amsthm} % amssymb carica anche amsfonts
 \usepackage{tikz}
+\usetikzlibrary{positioning,shapes.misc,intersections,shapes.symbols,patterns,fadings,shadows.blur}
 \usepackage{mathdots}
 \usepackage{cancel}
 \usepackage{color}
 \usepackage{siunitx}
 \usepackage{array}
 \usepackage{multirow}
-%\usepackage{gensymb} % The gensymb package provides a number of ‘generic’ macros, which produce the same output in text and math mode: \degree \celsius \perthousand \ohm \micro
 \usepackage{makecell}
 \usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage{caption}\captionsetup{belowskip=12pt,aboveskip=4pt}
+\usepackage{caption}
+\captionsetup{belowskip=12pt,aboveskip=4pt}
 \usepackage{subcaption}
-\usetikzlibrary{fadings}
-\usetikzlibrary{patterns}
-\usetikzlibrary{shadows.blur}
-\usetikzlibrary{decorations.pathreplacing} % per gli underbrace
-\usepackage{placeins} % The placeins package gives the command \FloatBarrier, which will make sure any floats will be put in before this point
+\usepackage{placeins} % \FloatBarrier
 \usepackage{flafter}  % The flafter package ensures that floats don't appear until after they appear in the code.
 \usepackage[shortlabels]{enumitem}
-\usepackage{stackengine} % per avere \addstackgap[5pt]{tabular}
+\usepackage[italian]{varioref}
 
 
 %----------------------------------------------------------------------------------------
@@ -124,20 +116,20 @@
 %	COMANDI PERSONALIZZATI
 %----------------------------------------------------------------------------------------
 
-\newcommand{\Tau}{\mathcal{T}}
-\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % segno di funzione
-\newcommand{\notimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
-\renewcommand{\qed}{\tag*{$\blacksquare$}}
 \newcommand{\latex}{\LaTeX\xspace}
 \newcommand{\tex}{\TeX\xspace}
 
-\newcommand{\complementary}{^{\mathrm{C}}}
-\renewcommand{\emptyset}{\varnothing} % simbolo insieme vuoto
-\newcommand{\Bot}{\perp \!\!\! \perp} % indipendenza
-\newcommand{\boxedText}[1]{\noindent\fbox{\parbox{\textwidth}{#1}}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\Ind}{\mathds{1}} % indicatrice
 
-\newcommand{\Ind}{\mathds{1}} % funzione indicatrice
-\newcommand{\comp}{^{\mathrm{C}}} % alternative ^{\mathrm{C}} ^{\mathrm{c}} ^{\mathsf{c}}
+\newcommand{\transpose}{^{\mathrm{T}}}
+\newcommand{\complementary}{^{\mathrm{C}}} % alternative ^{\mathrm{C}} ^{\mathrm{c}} ^{\mathsf{c}}
+\newcommand{\degree}{^\circ\text{C}} % simbolo gradi
+
+\newcommand{\notimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+\newcommand{\questeq}{\overset{?}{=}} % è vero che?
+
+\newcommand{\indep}{\perp \!\!\! \perp} % indipendenza
 \newcommand{\iid}{\stackrel{\mathrm{iid}}{\sim}}
 \newcommand{\event}[1]{\emph{``#1''}} % evento
 
@@ -160,9 +152,98 @@
 \newcommand{\Pc}{\mathcal{P}}
 \newcommand{\Bc}{\mathcal{B}}
 
-\usepackage{mathtools} % Serve per i due comandi dopo
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % CREA UN COMANDO abs()
-\DeclarePairedDelimiter{\norma}{\lVert}{\rVert} % CREA UN COMANDO norma()
+\newcommand{\boxedText}[1]{\noindent\fbox{\parbox{\textwidth}{#1}}}
+
+\renewcommand{\qed}{\tag*{$\blacksquare$}}
+\renewcommand{\emptyset}{\varnothing} % simbolo insieme vuoto
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\hat}{\widehat}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+
+\usepackage{mathtools} % Serve per i comandi dopo
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\sca}{\left\langle}{\right\rangle}
+
+% Bold
+% \newcommand{\AA}{\mathbb{A}} already defined in LaTeX
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\JJ}{\mathbb{J}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\SS}{\mathbb{S}} already defined in LaTeX
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\UU}{\mathbb{U}}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\YY}{\mathbb{Y}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+% Calligraphic
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
+
+% differenziale
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\dx}{\de x}
+\newcommand{\dy}{\de y}
+\newcommand{\dt}{\de t}
+\newcommand{\ds}{\de s}
+\newcommand{\dz}{\de z}
+\newcommand{\dw}{\de w}
+\newcommand{\du}{\de u}
+\newcommand{\dv}{\de v}
+\newcommand{\dxy}{\de x \de y}
+\newcommand{\dP}{\de\PP}
+
+\newcommand{\SDP}{(\Omega,\Ac,\PP)} % spazio di probabilità
+\newcommand{\Cz}{\Cc^0}
+\newcommand{\Cu}{\Cc^1}
+\newcommand{\Lu}{\mathcal{L}^1}
+
+\newcommand{\fXY}{f_{(X,Y)}}
+\newcommand{\fXYxy}{\fXY(x,y)}
 
 %----------------------------------------------------------------------------------------
 %	APPENDICE
@@ -343,12 +424,12 @@ innerbottommargin=5pt]{dimBox}
 
 \usepackage[hidelinks]{hyperref} % Rende l'indice interattivo e hidelinks nasconde il bordo rosso dai riferimenti
 
-%% Questo fa si che la numerazione dei capitoli venga resettata se si inizia una nuova "Parte"
-% \makeatletter
-% \@addtoreset{chapter}{part}
-% \makeatother 
+\usepackage{glossaries} % certain packages that must be loaded before glossaries, if they are required: hyperref, babel, polyglossia, inputenc and fontenc
+\setacronymstyle{long-short}
 
-\newcommand{\nocontentsline}[3]{} % QUESTO COMANDO E QUELLO DOPO SERVONO PER AVERE IL COMANDO \tocless DA METTERE PRIMA DI UNA SEZIONE CHE NON VOGLIO FAR APPARIRE NELL'INDICE
+% Questo comando e quello dopo servono per avere il comando \tocless da mettere prima di una sezione che non voglio far apparire nell'indice
+\newcommand{\nocontentsline}[3]{}
 \newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
-\usepackage[textsize=tiny, textwidth=1.5cm]{todonotes} %add disable to options to not show in pdf
 
+%\usepackage{showframe}
+\usepackage[textsize=tiny, textwidth=1.5cm]{todonotes} %add disable to options to not show in pdf
