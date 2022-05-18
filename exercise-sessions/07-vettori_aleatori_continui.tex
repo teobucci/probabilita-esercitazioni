@@ -11,13 +11,13 @@ Rinfreschiamo dal corso di Analisi 2 le seguenti definizioni.
 \begin{definition}[Domini normali]$\\$
 Siano $f_1(x), f_2(x)$ due funzioni continue in $[a,b]\subseteq\RR$ e tali che che $f_1(x)\leq f_2(x)$ $\ \forall x\in[a,b]$. Allora l'insieme
 \[
-D:=\{(x,y)\in\RR^2\ :\ x\in[a,b],\ f_1(x)\leq y\leq f_2(x)   \}
+D\coloneqq\{(x,y)\in\RR^2\ :\ x\in[a,b],\ f_1(x)\leq y\leq f_2(x)   \}
 \]
 è misurabile ed è chiamato dominio normale rispetto all'asse $x$.
 \fg{0.3}{9_1}
 Siano $f_3(y), f_4(y)$ due funzioni continue in $[c,d]\subseteq\RR$ e tali che che $f_3(y)\leq f_4(y)$ $\ \forall y\in[c,d]$. Allora l'insieme
 \[
-E:=\{(x,y)\in\RR^2\ :\ f_3(y)\leq x\leq f_4(y),\ y\in[c,d]   \}
+E\coloneqq\{(x,y)\in\RR^2\ :\ f_3(y)\leq x\leq f_4(y),\ y\in[c,d]   \}
 \]
 è misurabile ed è chiamato dominio normale rispetto all'asse $y$.
 \fg{0.3}{9_2}
@@ -129,7 +129,7 @@ Sia $\SDP$ uno spazio di probabilità e $X:\Omega\to\RR^n$ un vettore aleatorio 
 \item [(ii)] $g\in\Cu(\RR^n)$
 \item [(iii)] $g$ tale che $\det J_g(x)\neq0$ per ogni $x\in\RR^n$
 \end{enumerate}
-Allora $g:\RR^n\to g(\RR^n)$ è biiettiva, ha inversa $g^{-1}:g(\RR^n)\to\RR^n$ anch'essa di classe $\Cu$, e la variabile aleatoria $Y:=g\circ X:\Omega\to\RR^n$ è assolutamente continua con densità
+Allora $g:\RR^n\to g(\RR^n)$ è biiettiva, ha inversa $g^{-1}:g(\RR^n)\to\RR^n$ anch'essa di classe $\Cu$, e la variabile aleatoria $Y\coloneqq g\circ X:\Omega\to\RR^n$ è assolutamente continua con densità
 \[
 f_Y(y)=\begin{cases}
 f_X(g^{-1}(y))\cdot|\det J_{g^{-1}}(y)|   &\text{ se }y\in g(\RR^n) \\
@@ -228,7 +228,7 @@ Cov(aX+bY,cW+dZ)=acCov(X,W)+adCov(X,Z)+bcCov(Y,W)+bdCov(Y,Z)
 
 \begin{theorem}[Valore atteso e varianza per trasformazioni affini]
 \label{introth13}
-$\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine $Y:=AX+b$ con $A\in\RR^{m\times n},\ b\in\RR^{m}$ è un vettore aleatorio in $\RR^m$ con
+$\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine $Y\coloneqq AX+b$ con $A\in\RR^{m\times n},\ b\in\RR^{m}$ è un vettore aleatorio in $\RR^m$ con
 \begin{gather*}
 \begin{aligned}
 \EE[Y]&=A\cdot\EE[X]+b \\
@@ -584,7 +584,7 @@ Allora $1=2\ \PP(X<Y)\ \Longrightarrow\ \PP(Y>X)=\frac{1}{2}$.
 
 Conoscendo la densità congiunta del vettore aleatorio assolutamente continuo $(X,Y)$, per calcolare le leggi marginali usiamo il teorema (\ref{introth5}). Prima di procedere però è sempre meglio capire come è fatto il supporto della densità congiunta, così da capire quale sarà il supporto delle marginali:
 \[
-S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ \fXYxy>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+S_{(X,Y)}\coloneqq\{(x,y)\in\RR^2\ \big|\ \fXYxy>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
 \]
 \fg{0.3}{7_17}
 Dal grafico della densità congiunta deduciamo un'importante informazione su $X$ e $Y$: $X,Y\geq 0$ quasi certamente, cioè $f_X(x)=0$ per ogni $x<0$ e $f_Y(y)=0$ per ogni $y<0$. Quindi fissiamo $x\geq 0$ e procediamo con il calcolo della prima legge marginale:
@@ -593,7 +593,7 @@ Dal grafico della densità congiunta deduciamo un'importante informazione su $X$
 f_X(x)&=\int_\RR \fXYxy\text{ d}y= \\
 &=\int_x^{+\infty}x(y-x)e^{-y}\text{ d}y= \\
 &=\begin{Bmatrix}
-\text{cambio di variabile}\\t:=y-x 
+\text{cambio di variabile}\\t\coloneqq y-x 
 \end{Bmatrix}= \\
 &=x\int_0^{+\infty}te^{-t-x}\text{ d}t=\\
 &=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\text{ d}t}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=xe^{-x}
@@ -601,7 +601,7 @@ f_X(x)&=\int_\RR \fXYxy\text{ d}y= \\
 \end{gather*}
 con $(\alpha^2)$ che sintetizza la seguente osservazione: data $T\sim\mathcal{E}(\lambda)$ con $\lambda=1$ si ha per definizione
 \begin{equation*}
-\mathbb{E}[T]:=\int_0^{+\infty}\lambda te^{-t}\text{ d}t=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
+\mathbb{E}[T]\coloneqq\int_0^{+\infty}\lambda te^{-t}\text{ d}t=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
 \end{equation*}
 
 Ora fissiamo $y\geq 0$ e calcoliamo la seconda legge marginale:
@@ -681,7 +681,7 @@ Ricordiamo che
 \begin{oss}
 $\\$Il coefficiente di correlazione lineare si calcola con
 \begin{equation*}
-\rho_{X,Y}:=\frac{Cov(X,Y)}{\sqrt{Var(X)\cdot Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{Var(X)\cdot Var(Y)}}
+\rho_{X,Y}\coloneqq\frac{Cov(X,Y)}{\sqrt{Var(X)\cdot Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{Var(X)\cdot Var(Y)}}
 \end{equation*}
 \end{oss}
 
@@ -1049,7 +1049,7 @@ Possono verificarsi due casi:
 
 Detto 
 \[
-A:=\left\{(x,\vartheta)\in \left[0,\frac{d}{2}\right]\times \left[0,\pi\right]\ :\ \frac{l}{2}\sin\vartheta\geq x  \right\}
+A\coloneqq\left\{(x,\vartheta)\in \left[0,\frac{d}{2}\right]\times \left[0,\pi\right]\ :\ \frac{l}{2}\sin\vartheta\geq x  \right\}
 \]
 \fg{0.4}{7_14}
 abbiamo
@@ -1123,7 +1123,7 @@ Consideriamo $l\leq d$. Abbiamo trovato che $p=\PP(A)=\dfrac{2l}{\pi d}$ e quind
 \[
 \pi=\dfrac{2l}{p d}=2ap^{-1}
 \]
-con $a$:="rapporto tra lunghezza dell'ago e distanza tra le linee del pavimento".
+con $a\coloneqq$ "rapporto tra lunghezza dell'ago e distanza tra le linee del pavimento".
 
 Interpretando la probabilità in maniera frequentista come $p=f/t$ dove $f$ rappresenta il numero di esperimenti favorevoli (cioè ago interseca linea) e $t$ il numero di esperimenti totali, abbiamo che
 \[
@@ -1419,7 +1419,7 @@ F_Z(z)&=\PP((X,Y)\in R_Z)=\\
 &=\int_{-\infty}^{+\infty} \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy
 \end{aligned}
 \end{gather*}
-Arrivati a questo punto è conveniente applicare un cambio di variabili di integrazioni (per l'integrale interno): poniamo $w:=x+y$ in modo tale che l'integrale che va da $-\infty$ a $z-y$ diventi della sola funzione della $z$, dato che dovremo appunto ricavarci la densità di $Z$. Così facendo, per $x\to z-y$ si ha $w\to z$, mentre $\dx=\dw$, e possiamo quindi scambiare l'integrale più esterno con quello più interno:
+Arrivati a questo punto è conveniente applicare un cambio di variabili di integrazioni (per l'integrale interno): poniamo $w\coloneqq x+y$ in modo tale che l'integrale che va da $-\infty$ a $z-y$ diventi della sola funzione della $z$, dato che dovremo appunto ricavarci la densità di $Z$. Così facendo, per $x\to z-y$ si ha $w\to z$, mentre $\dx=\dw$, e possiamo quindi scambiare l'integrale più esterno con quello più interno:
 \begin{gather*}
 \begin{aligned}
 F_Z(z)&=\int_{-\infty}^{+\infty} \left(\int_{-\infty}^{z-y}\fXYxy\dx   \right)\dy=\\
@@ -1860,7 +1860,7 @@ F_Z(z)=\PP(Z\leq z)=\PP\left(\frac{Y}{X}\leq z \right)=\PP(Y\leq zX)
 \] 
 Come sempre, conviene vedere $(Y\leq zX)$ in funzione del vettore $(X,Y)$, quindi detto
 \[
-R_Z:=\{(x,y)\in\RR^2\ :\ x>0,\ 0<y<zx\}
+R_Z\coloneqq\{(x,y)\in\RR^2\ :\ x>0,\ 0<y<zx\}
 \]
 
 \fg{0.4}{7_6}

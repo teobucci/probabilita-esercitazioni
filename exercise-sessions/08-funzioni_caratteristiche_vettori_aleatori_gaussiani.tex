@@ -6,7 +6,7 @@ Sia $\PP$ una probabilità su $(\RR,\Bc)$, la funzione caratteristica (o \emph{t
 \begin{gather*}
 \begin{aligned}
 \widehat{\PP}=\varphi: \RR^n &\to \CC\\
-u&\mapsto\varphi (u):= \int_{\RR^n}e^{i\langle u|x\rangle}\ \PP(\text{d}x)
+u&\mapsto\varphi (u)\coloneqq \int_{\RR^n}e^{i\langle u|x\rangle}\ \PP(\text{d}x)
 \end{aligned}
 \end{gather*}
 \end{definition}
@@ -568,7 +568,7 @@ Notiamo che possiamo ricondurci ad un'uniforme simmetrica semplicemente trasland
 \fg{0.5}{8_2}
 Grazie a questa traslazione possiamo scrivere $X$ in termini dell'uniforme simmetrica
 \[
-Y:=X-\frac{a+b}{2}\sim\Uc\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\implies X=\frac{a+b}{2}+Y
+Y\coloneqq X-\frac{a+b}{2}\sim\Uc\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\implies X=\frac{a+b}{2}+Y
 \]
 Allora
 \begin{gather*}
@@ -603,7 +603,7 @@ Calcoliamo la funzione caratteristica di $X$:
 \end{gather*}
 \begin{nb}
 Ma perché $\displaystyle\lim_{t\to+\infty}e^{(iu-\lambda)t}=0$? \\
-Considerando il numero complesso $z:=e^{(iu-\lambda)t}$ possiamo scrivere
+Considerando il numero complesso $z\coloneqq e^{(iu-\lambda)t}$ possiamo scrivere
 \[
 z=e^{-\lambda t}\cdot e^{iut}=z_1\cdot z_2
 \]
@@ -921,7 +921,7 @@ abbiamo
 \varphi_X(u)&=\EE\left[e^{iuX}  \right]=\\
 &=\int_\RR e^{iux}\ \frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}\ e^{-\lambda x}\ \Ind_{(0,+\infty)}(x)\dx=\\
 &=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} x^{\alpha-1}\ e^{-(\lambda-iu) x}\dx=\\
-&=\{ y:=(\lambda-iu)x \}=\\
+&=\{ y\coloneqq(\lambda-iu)x \}=\\
 &=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} \frac{y^{\alpha-1}}{(\lambda-iu)^{\alpha-1}}\ e^{-y}\ \frac{\text{d}y}{\lambda-iu}=\\
 &=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ \frac{1}{(\lambda-iu)^{\alpha}}\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy =\\
 &=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha\ \frac{1}{\Gamma(\alpha)}\underbrace{\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy}_{\Gamma(\alpha)}=\\
