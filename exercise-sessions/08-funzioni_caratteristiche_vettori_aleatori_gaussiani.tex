@@ -234,7 +234,7 @@ Date $X_1,\dots,X_n$ variabili aleatorie reali i.i.d. si mostri che
 \Esercizio{} %8
 Per ogni $\alpha>0$ e $\lambda>0$, la funzione caratteristica di una variabile aleatoria $X\sim\Gamma(\alpha,\lambda)$ è data da
 \[
-\varphi_X(u)=\left( \frac{\lambda}{\lambda-iu} \right)^\alpha
+\varphi_X(u)=\left(\frac{\lambda}{\lambda-iu} \right)^\alpha
 \]
 \begin{enumerate}
 \item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\implies X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
@@ -580,7 +580,7 @@ Allora
 \end{gather*}
 Quindi
 \[
-X\sim  \Uc([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left( \frac{b-a}{2}u \right)
+X\sim  \Uc([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left(\frac{b-a}{2}u \right)
 \]
 Per quanto riguarda media e varianza
 \[
@@ -597,7 +597,7 @@ Calcoliamo la funzione caratteristica di $X$:
 &=\int_0^{+\infty}e^{iux}\ \lambda e^{-\lambda x}\dx=\\
 &=\lambda\int_0^{+\infty}e^{(iu-\lambda)x}\dx=\\
 &=\lambda\left[\frac{1}{iu-\lambda}\ e^{(iu-\lambda)x}   \right]_0^{+\infty}=\\
-&=\displaystyle\frac{\lambda}{iu-\lambda}\left( \underbrace{\lim_{x\to+\infty}e^{(iu-\lambda)x}}_{0}-\underbrace{\lim_{x\to 0}e^{(iu-\lambda)x}}_{1}   \right)=\\
+&=\displaystyle\frac{\lambda}{iu-\lambda}\left(\underbrace{\lim_{x\to+\infty}e^{(iu-\lambda)x}}_{0}-\underbrace{\lim_{x\to 0}e^{(iu-\lambda)x}}_{1}   \right)=\\
 &=\frac{\lambda}{\lambda-iu}
 \end{aligned}
 \end{gather*}
@@ -905,7 +905,7 @@ Al posto di $X_1$ sarebbe andata bene qualsiasi altra $X_k$.
 \Soluzione{} %8
 Prima di procedere dimostriamo il risultato notevole
 \[
-X\sim\Gamma(\alpha,\lambda),\ \alpha>0,\ \lambda>0\iff\varphi_X(u)=\left( \frac{\lambda}{\lambda-iu} \right)^\alpha
+X\sim\Gamma(\alpha,\lambda),\ \alpha>0,\ \lambda>0\iff\varphi_X(u)=\left(\frac{\lambda}{\lambda-iu} \right)^\alpha
 \]
 Ricordando che
 \begin{gather*}
@@ -976,7 +976,7 @@ Allora
 f_{Z^2}(t)&=f_Z(\sqrt{t})\ (\sqrt{t})'-f_Z(-\sqrt{t})\ (-\sqrt{t})ì=\\
 &=\frac{1}{\sqrt{2\pi}}\ e^{-t^2/2}\left(\frac{1}{2\sqrt{t}}-\frac{1}{-2\sqrt{t}}  \right)=\\
 &=\frac{1}{\sqrt{2\pi t}}\ e^{-t^2/2}=\\
-&=\frac{\left( \frac{1}{2}  \right)^{1/2}}{\Gamma\left( \frac{1}{2}  \right)}\ t^{\frac{1}{2}-1}\ e^{-\frac{1}{2}t}
+&=\frac{\left(\frac{1}{2}  \right)^{1/2}}{\Gamma\left(\frac{1}{2}  \right)}\ t^{\frac{1}{2}-1}\ e^{-\frac{1}{2}t}
 \end{aligned}
 \end{gather*}
 che è proprio la densità di una $\Gamma\left(\frac{1}{2},\frac{1}{2} \right)$.
@@ -993,7 +993,7 @@ Il calcolo mediante la funzione caratteristica è lasciato al lettore.
 
 Sappiamo già che $\forall k=1:n\ \ Z_k^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$ e che $Z_1^2,\dots,Z_n^2$ sono indipendenti perché lo sono per ipotesi $Z_1,\dots,Z_n$. Allora per il punto (a) possiamo concludere che
 \[
-Q\sim\Gamma\left(\underbrace{\frac{1}{2}+\cdots+\frac{1}{2}}_{n\text{ volte}}, \frac{1}{2}  \right)=\Gamma\left(  \frac{n}{2},\frac{1}{2} \right)=\chi^2(n)
+Q\sim\Gamma\left(\underbrace{\frac{1}{2}+\cdots+\frac{1}{2}}_{n\text{ volte}}, \frac{1}{2}  \right)=\Gamma\left( \frac{n}{2},\frac{1}{2} \right)=\chi^2(n)
 \]
 In generale
 \[

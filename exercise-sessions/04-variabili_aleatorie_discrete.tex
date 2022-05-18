@@ -603,11 +603,11 @@ X_{n}(\Omega ,\Ac) & \rightarrow (\RR ,\mathcal{B})\\
 X_{n}^{-1}(B) \in \Ac ,\forall B\in \mathcal{B}
 \end{gather*}
 
-Ci basta verificarlo su insiemi della forma $B=( -\infty ,t]$
+Ci basta verificarlo su insiemi della forma $B=(-\infty ,t]$
 \begin{align*}
-X_{n}^{-1}((-\infty ,t]) & =\{\omega \in \Omega :X_{n}(\omega) \in ( -\infty ,t]\}\\
- & =\{\omega \in \Omega :\Ind_{E_{n}}(\omega) \in ( -\infty ,t]\}\\
- & =\Ind_{E_{n}}^{-1}( -\infty ,t] =
+X_{n}^{-1}((-\infty ,t]) & =\{\omega \in \Omega :X_{n}(\omega) \in (-\infty ,t]\}\\
+ & =\{\omega \in \Omega :\Ind_{E_{n}}(\omega) \in (-\infty ,t]\}\\
+ & =\Ind_{E_{n}}^{-1}(-\infty ,t] =
 \begin{cases}
 \emptyset , & t< 0\\
 E_{n}\complementary , & 0\leq t< 1\\
@@ -628,8 +628,8 @@ Dato che $\emptyset ,E_{n}\complementary ,\Omega \in \Ac$ abbiamo che $X_{n}$ è
 \item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta
 \begin{gather*}
 x\in \{0,1\}\\
-\PP( X_{n} =1) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =1\}) =\PP\left( X_{n}^{-1}(\{1\})\right) =\PP( E_{n}) =p\\
-\PP( X_{n} =0) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\PP\left( X_{n}^{-1}(\{0\})\right) =\PP\left( E_{n}\complementary\right) =1-p
+\PP(X_{n} =1) =\PP(\{\omega \in \Omega :X_{n}(\omega) =1\}) =\PP\left(X_{n}^{-1}(\{1\})\right) =\PP(E_{n}) =p\\
+\PP(X_{n} =0) =\PP(\{\omega \in \Omega :X_{n}(\omega) =0\}) =\PP\left(X_{n}^{-1}(\{0\})\right) =\PP\left(E_{n}\complementary\right) =1-p
 \end{gather*}
 
 quindi
@@ -668,11 +668,11 @@ Densità discreta:
 \begin{gather*}
 p_{Y_{n}} :\{0,\dots ,n\}\rightarrow [0,1]\\
 \begin{aligned}
-p_{Y_{n}}( 0) & =\PP( Y_{n} =0) =\PP( X_{1} +\cdots +X_{n} =0) =\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right) =( 1-p)^{n}\\
-p_{Y_{n}}( 1) & =\PP( Y_{n} =1) =\PP( X_{1} +\cdots +X_{n} =1) =\PP\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\complementary\right)\\
- & =\sum\limits _{i=1}^{n}\PP( E_{i})\prod _{j\neq i}\PP\left( E_{j}\complementary\right) =np( 1-p)^{n-1}\\
-p_{Y_{n}}( k) & =\PP( Y_{n} =k) =\PP( X_{1} +\cdots +X_{n} =k) =\PP\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\complementary\right]\right)\\
- & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\prod _{j\in J} \PP( E_{j})\prod _{j\notin J}\PP\left( E_{j}\complementary\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
+p_{Y_{n}}(0) & =\PP(Y_{n} =0) =\PP(X_{1} +\cdots +X_{n} =0) =\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right) =(1-p)^{n}\\
+p_{Y_{n}}(1) & =\PP(Y_{n} =1) =\PP(X_{1} +\cdots +X_{n} =1) =\PP\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\complementary\right)\\
+ & =\sum\limits _{i=1}^{n}\PP(E_{i})\prod _{j\neq i}\PP\left(E_{j}\complementary\right) =np(1-p)^{n-1}\\
+p_{Y_{n}}(k) & =\PP(Y_{n} =k) =\PP(X_{1} +\cdots +X_{n} =k) =\PP\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\complementary\right]\right)\\
+ & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\prod _{j\in J} \PP(E_{j})\prod _{j\notin J}\PP\left(E_{j}\complementary\right) =\binom{n}{k} p^{k}(1-p)^{n-k}
 \end{aligned}
 \end{gather*}
 
@@ -688,13 +688,13 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 \textit{Interpretazione:} la distribuzione binomiale $B\left(n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
 \item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left(Z\right) =\NN \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\NN \cup \left\{+\infty \right\}\rightarrow \left[0,1\right]$. Sia $k\in \NN$ fissato
 \begin{equation*}
-p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\complementary \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
+p_{Z}(k) =\underbrace{\PP(Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\complementary \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p(1-p)^{k-1}
 \end{equation*}
 
 $Z$ è il numero minimo di prove per dare un successo.
 \begin{align*}
-\overbrace{p_{Z}( +\infty ) =\PP( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\complementary\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right)\\
- & =\lim _{n\rightarrow \infty }( 1-p)^{n} =0
+\overbrace{p_{Z}(+\infty) =\PP(Z=+\infty)}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\complementary\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right)\\
+ & =\lim _{n\rightarrow \infty }(1-p)^{n} =0
 \end{align*}
 
 \begin{oss}
@@ -834,7 +834,7 @@ Richiami**************
 \item $n$ i.e. il numero di prove effettuate
 \item $p$ i.e. la probabilità di successo della singola prova di Bernoulli $(0\leq p\leq 1)$.
 \end{itemize}
-\item Formalmente $X\sim B( n,p)$ si scrive come somma di $n$ VA $\indep $ $X_{i} \sim B( p)$ (bernoulliane di parametro $p$)\begin{equation*}
+\item Formalmente $X\sim B(n,p)$ si scrive come somma di $n$ VA $\indep $ $X_{i} \sim B(p)$ (bernoulliane di parametro $p$)\begin{equation*}
 X=\sum\limits _{i=1}^{n} X_{i}
 \end{equation*}
 \item La distribuzione di probabilità di $X\sim B(n,p)$, dimostrata formalmente nel punto (4) di Es. 5, è la probabilità di avere $k$ successi in $n$ prove, con probabilità di successo $p$
@@ -885,7 +885,7 @@ i.e. se $X\sim B(n,p)$, allora $\boxed{\EE[X] =np}$.
 
 Utilizziamo il fatto che
 \begin{equation*}
-X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B( p) ,\ \ \ \ X_{i} \indep 
+X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X_{i} \sim B(p) ,\ \ \ \ X_{i} \indep 
 \end{equation*}
 e la linearità di $\EE$
 \begin{equation*}
@@ -895,15 +895,15 @@ e la linearità di $\EE$
 
 Se $X\in L^{2}(\PP)$, i.e. $\EE\left[X^{2}\right] < +\infty $, allora
 \begin{equation*}
-\Var[ X] \coloneqq \EE( X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
+\Var[ X] \coloneqq \EE(X-\EE[ X])^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}
 \end{equation*}
 Usiamo
 \begin{equation*}
-\Var[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -( np)^{2}
+\Var[ X] =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{(1)}{=}\EE\left[ X^{2}\right] -(np)^{2}
 \end{equation*}
 Resta da calcolare $\EE\left[X^{2}\right]$, lo facciamo sfruttando il fatto che
 \begin{gather*}
-X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B( p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \indep X_{j} ,\forall i\neq j\\
+X=\sum\limits _{i=1}^{n} X_{i} ,\ \ \ \ X\sim B(p) ,\forall i=0,\dots ,n,\ \ \ \ X_{i} \indep X_{j} ,\forall i\neq j\\
 \EE\left[ X^{2}\right] =\EE\left[\left(\sum\limits _{i=1}^{n} X_{i}\right)^{2}\right] =\underbrace{\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right]}_{\text{(a)}} +2\underbrace{\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]}_{\text{(b)}}
 \end{gather*}
 
@@ -917,9 +917,9 @@ X_{i} \sim B(p) ,\forall i,\ \ \ \ \EE\left[X_{i}^{2}\right] \coloneqq \sum\limi
 \end{equation*}
 Poi
 \begin{align*}
-\text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\PP( E_{i} \cap E_{j})\\
- & \overset{\indep }{=}\sum\limits _{i< j}\PP( E_{i})\PP( E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
- & \overset{\text{(b2)}}{=} p^{2}\frac{n( n-1)}{2}
+\text{(b)} & =\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right]\overset{\text{lin.}}{=}\sum\limits _{i< j} \EE[ X_{i} X_{j}]\overset{\text{(b1)}}{=}\sum\limits _{i< j}\PP(E_{i} \cap E_{j})\\
+ & \overset{\indep }{=}\sum\limits _{i< j}\PP(E_{i})\PP(E_{j}) =\sum\limits _{i< j} p^{2} =p^{2}\sum\limits _{i< j} 1\\
+ & \overset{\text{(b2)}}{=} p^{2}\frac{n(n-1)}{2}
 \end{align*}
 Il passaggio (b1) è giustificato da
 \begin{align*}
@@ -985,13 +985,13 @@ Mettendo insieme i pezzi
 \begin{aligned}
 \Var[ X] & =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\\
  & =\EE\left[\sum\limits _{i=1}^{n} X_{i}^{2}\right] +2\EE\left[\sum\limits _{i< j} X_{i} X_{j}\right] -(\EE[ X])^{2}\\
- & =np+2p^{2}\frac{n( n-1)}{2} -( np)^{2}\\
- & =np( 1+p( n-1) -np)\\
- & =np( 1+pn-p-np)\\
- & =np( 1-p)
+ & =np+2p^{2}\frac{n(n-1)}{2} -(np)^{2}\\
+ & =np(1+p(n-1) -np)\\
+ & =np(1+pn-p-np)\\
+ & =np(1-p)
 \end{aligned}\\
 \\
-\boxed{\Var[ X] =np( 1-p)}
+\boxed{\Var[ X] =np(1-p)}
 \end{gather*}
 \item Teoria. Ricordiamo che
 
@@ -1054,11 +1054,11 @@ Una VA con questa densità è detta VA di Poisson di parametro $\lambda $. Scriv
  & =\lambda  & 
 \end{align*}
 \item \begin{equation*}
-\Var[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{( 1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
+\Var[ X] =\EE[ X-\EE[ X]]^{2} =\EE\left[ X^{2}\right] -(\EE[ X])^{2}\overset{(1)}{=}\EE\left[ X^{2}\right] -\lambda ^{2}
 \end{equation*}
 
 Per esercizio, calcolare $\EE\left[ X^{2}\right]$ e concludere:\begin{equation*}
-X\sim \mathcal{P}( \lambda ) \implies \Var[ X] =\lambda 
+X\sim \mathcal{P}(\lambda) \implies \Var[ X] =\lambda 
 \end{equation*}
 \item Si procede come in Es. 7.
 \item hahahah
@@ -1067,7 +1067,7 @@ X\sim \mathcal{P}( \lambda ) \implies \Var[ X] =\lambda
 \Soluzione
 
 \begin{oss}
-$\PP( X=k) =p( 1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\indep $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP( X=k) =p( 1-p)^{k-1}$.
+$\PP(X=k) =p(1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\indep $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP(X=k) =p(1-p)^{k-1}$.
 \end{oss}
 \begin{enumerate}
 \item Abbiamo
