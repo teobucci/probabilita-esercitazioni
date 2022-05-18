@@ -29,7 +29,7 @@ Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di le
 \[
 \varphi_X(u)=\EE\left[e^{iuX}\right]=e^{iut}
 \]
-\emph{Esempio}. Sia $X\sim\PPP(\lambda)$ con $\lambda\in\RR_+$. Allora
+\emph{Esempio}. Sia $X\sim\Pc(\lambda)$ con $\lambda\in\RR_+$. Allora
 \begin{gather*}
 \begin{aligned}
 \varphi_X(u) &=\EE[e^{i u X}] =\sum_{k=0}^{{+\infty}}e^{i u k}\ e^{-\lambda}\ \frac{\lambda^k}{k!}=e^{-\lambda}\sum_{k=0}^{{+\infty}}\frac{(\lambda e^{i u})^k}{k!}=\\
@@ -50,7 +50,7 @@ Sia $X=(X_1,\dots,X_n):\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio tale che per qual
 \frac{\partial^m}{\partial u_{k_1} \cdots \partial u_{k_m}}\ \varphi(u)=i^m\ \EE\left[X_{k_1} \cdots X_{k_m}\ e^{i \langle u|x\rangle}\right] \qquad \forall u \in \RR^n
 \]
 \end{theorem}
-\emph{Esempio}. Data $X\sim \NNN(0,1)$ si vuole calcolare $\varphi_X(u)$. \\
+\emph{Esempio}. Data $X\sim \Nc(0,1)$ si vuole calcolare $\varphi_X(u)$. \\
 Prima di tutto osserviamo che $X\in L^m$ $\forall m\geq 1$. Sostituendo nella definizione di funzione caratteristica la densità della normale standard si ottiene
   \begin{equation*}
     \varphi_X (u) = \EE[e^{i u X}]=\int_{\RR}e^{iut}\ \frac{e^{-\frac{t^2}{2}}}{\sqrt{2\pi}}\dt
@@ -83,7 +83,7 @@ La funzione caratteristica del vettore $Y$ dato dalla trasformazione affine $Y=A
 \]
 \end{theorem}
 \emph{Esempio}. Calcolare la funzione caratteristica di una normale generica.\\
-Sia $X\sim N(\mu,\sigma^2)$. Allora basta vedere $X=\mu+\sigma Z$, con $Z=\dfrac{X-\mu}{\sigma}\sim \NNN(0,1)$. Allora
+Sia $X\sim N(\mu,\sigma^2)$. Allora basta vedere $X=\mu+\sigma Z$, con $Z=\dfrac{X-\mu}{\sigma}\sim \Nc(0,1)$. Allora
 $$\varphi_X (u)=e^{i u \mu}\ \varphi_Z(\sigma u)=  e^{i u \mu}\ e^{-\sigma^2u^2/2} =e^{i u \mu-\sigma^2u^2/2}$$
 \emph{Esempio}. Calcolare la funzione caratteristica della somma di variabili aleatorie.\\
 Siano $X=(X_1,  \dots,  X_n) \sim \varphi_X $ e $ Y=\displaystyle\sum_{k=1}^{n}X_k$. Allora vedendo $Y$ come trasformazione affine
@@ -127,9 +127,9 @@ Prima procedere con le soluzioni degli esercizi, ci teniamo a fare ulteriori pre
 Abbiamo già visto che: 
 \begin{itemize}
 \item $X\sim\delta_t\implies\varphi_X(u)=e^{iut}$
-\item $X\sim\PPP(\lambda)\implies\varphi_X(u)=e^{ \lambda (e^{i u}-1)}$
-\item $Z\sim\NNN(0,1)\implies\varphi_X(u)=e^{-u^2/2}$
-\item $X\sim\NNN(\mu,\sigma^2)\implies\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}$
+\item $X\sim\Pc(\lambda)\implies\varphi_X(u)=e^{ \lambda (e^{i u}-1)}$
+\item $Z\sim\Nc(0,1)\implies\varphi_X(u)=e^{-u^2/2}$
+\item $X\sim\Nc(\mu,\sigma^2)\implies\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}$
 \end{itemize}
 tuttavia utilizzando il teorema (\ref{La funzione caratteristica di una probabilità caratterizza la probabilità}) possiamo dire che l'implicazione vale anche in senso opposto, ovvero (parafrasando tale teorema)
 \begin{theorem}
@@ -138,10 +138,10 @@ Date $X,Y:\Omega\to\RR^n$ si ha $P^X=P^Y\iff\varphi_X=\varphi_Y$.
 \end{theorem}
 Ecco quindi i primi quattro risultati notevoli di questo capitolo
 \[
-X\sim\delta_t,\ t\in\RR\iff\varphi_X(u)=e^{iut} \qquad X\sim\PPP(\lambda),\ \lambda>0\iff\varphi_X(u)=e^{ \lambda (e^{i u}-1)}
+X\sim\delta_t,\ t\in\RR\iff\varphi_X(u)=e^{iut} \qquad X\sim\Pc(\lambda),\ \lambda>0\iff\varphi_X(u)=e^{ \lambda (e^{i u}-1)}
 \]
 \[
-Z\sim\NNN(0,1)\iff\varphi_X(u)=e^{-u^2/2} \qquad X\sim\NNN(\mu,\sigma^2),\ \mu\in\RR,\ \sigma^2>0\iff\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}
+Z\sim\Nc(0,1)\iff\varphi_X(u)=e^{-u^2/2} \qquad X\sim\Nc(\mu,\sigma^2),\ \mu\in\RR,\ \sigma^2>0\iff\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}
 \]
 I richiami al teorema (\ref{caratterizzazione della f caratteristica}) verranno omessi, e verrà dimostrato quindi solo il $\implies$.
 
@@ -193,16 +193,16 @@ Siano $ n,m \in \NN$, $p\in [0, 1]$ e $\varphi_X$ la funzione caratteristica di 
 \Esercizio{} %3
 Data una variabile aleatoria reale $X$, si mostri che
 \[
-X\sim \GGG(p),\ p\in(0,1)\iff \varphi_X(u)=\frac{pe^{iu}}{1-e^{iu}(1-p)}
+X\sim \Gc(p),\ p\in(0,1)\iff \varphi_X(u)=\frac{pe^{iu}}{1-e^{iu}(1-p)}
 \]
 
 \Esercizio{} %4
 Sia $X$ una variabile aleatoria reale.
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim \UUU([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
-\item [(b)] Si mostri che $X\sim  \UUU([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
-\item [(c)] Si mostri che $X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
-\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
+\item [(a)] Si mostri che $X\sim \Uc([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
+\item [(b)] Si mostri che $X\sim  \Uc([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
+\item [(c)] Si mostri che $X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
+\item [(d)] Si mostri che $X$ tale che $-X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
 \end{enumerate}
 Si calcolino valore atteso e varianza per queste variabili aleatorie a partire dalle loro funzioni caratteristiche.
 
@@ -219,10 +219,10 @@ Sia $(X,Y)$ un vettore aleatorio uniformemente distribuito sul rettangolo $R=\{0
 \end{itemize}
 
 \Esercizio{} %6
-Siano $X_1,\dots,X_n$ variabili aleatorie indipendenti, con $X_k\sim\PPP(\lambda_k),\ k=1,\dots,n$.
+Siano $X_1,\dots,X_n$ variabili aleatorie indipendenti, con $X_k\sim\Pc(\lambda_k),\ k=1,\dots,n$.
 \begin{itemize}
-\item [(a)] Mostrare che $X_1+\cdots+X_n\sim\PPP(\lambda_1+\cdots+\lambda_n)$.
-\item [(b)] Si supponga ora che $X_1,X_2,X_3\iid\PPP(\lambda)$. Calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$. 
+\item [(a)] Mostrare che $X_1+\cdots+X_n\sim\Pc(\lambda_1+\cdots+\lambda_n)$.
+\item [(b)] Si supponga ora che $X_1,X_2,X_3\iid\Pc(\lambda)$. Calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$. 
 \end{itemize}
 
 \Esercizio{} %7
@@ -238,9 +238,9 @@ Per ogni $\alpha>0$ e $\lambda>0$, la funzione caratteristica di una variabile a
 \]
 \begin{enumerate}
 \item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\implies X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
-\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
-\item [(c)] Si mostri che $Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
-\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
+\item [(b)] Si mostri che $X_1,\dots,X_n\iid\Ec(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
+\item [(c)] Si mostri che $Z\sim\Nc(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
+\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\Nc(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
 \end{enumerate}
 
 \Esercizio{} %9
@@ -256,7 +256,7 @@ Si mostri che $(T,U)$ ammette densità continua e la si calcoli.
 \[
 f_U(u)=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\ \Gamma(\beta)}\ u^{\alpha-1}\ (1-u)^{\beta-1}\ \Ind_{(0,1)}(u).
 \]
-\item [(d$^\ast$)] Sia $(X_n)_{n\in\NN}$ una successione di variabili aleatorie, con $X_1,X_2,\dots\iid\EEE(\lambda)$. Posto
+\item [(d$^\ast$)] Sia $(X_n)_{n\in\NN}$ una successione di variabili aleatorie, con $X_1,X_2,\dots\iid\Ec(\lambda)$. Posto
 \[
 S_n=X_1+\dots+X_n
 \]
@@ -291,20 +291,20 @@ Il coefficiente di correlazione è $\rho_{X,Y}=1/2$.
 \end{enumerate}
 
 \Esercizio{} %12
-Date $X$ e $Y$ indipendenti di legge $\NNN(0,1)$, si trovi la legge congiunta di $U=X+Y$ e $V=X-Y$. $U\indep V$?
+Date $X$ e $Y$ indipendenti di legge $\Nc(0,1)$, si trovi la legge congiunta di $U=X+Y$ e $V=X-Y$. $U\indep V$?
 
 \Esercizio{} %13
-Siano $X$ e $Y$ due variabili aleatorie indipendenti, tali che $X\sim\NNN(0,1)$ ed $Y\sim\NNN(0,4)$.
+Siano $X$ e $Y$ due variabili aleatorie indipendenti, tali che $X\sim\Nc(0,1)$ ed $Y\sim\Nc(0,4)$.
 \begin{enumerate}
 \item Determinare la legge di $Z=X+Y$.
 \item Determinare la matrice varianza del vettore $(X,Z)$.
 \item Determinare la legge congiunta di $X$ e $Z$. Ammette densità continua? Se sì, quale?
 \item Determinare la funzione caratteristica di $(X,Z)$.
-\item Sia $W\sim\NNN(1,2)$, indipendente dal vettore $(X,Z)$. Qual è la legge di $(X,Z,W)$?
+\item Sia $W\sim\Nc(1,2)$, indipendente dal vettore $(X,Z)$. Qual è la legge di $(X,Z,W)$?
 \end{enumerate}
 
 \Esercizio{} %14
-Dati $X\sim\NNN(0,1)$ e $a>0$, si consideri $\begin{cases}X,&|X|<a,\\-X,&|X|\geq a.  \end{cases}$
+Dati $X\sim\Nc(0,1)$ e $a>0$, si consideri $\begin{cases}X,&|X|<a,\\-X,&|X|\geq a.  \end{cases}$
 \begin{enumerate}
 \item [(a)] Si trovi la legge di $Y$.
 \item [(b)] Si stabilisca se i vettori $(X,X)$ e $(X,Y)$ sono gaussiani.
@@ -313,7 +313,7 @@ Dati $X\sim\NNN(0,1)$ e $a>0$, si consideri $\begin{cases}X,&|X|<a,\\-X,&|X|\geq
 \end{enumerate}
 
 \Esercizio{} %15
-Sia $X=(X_1,X_2,X_3$ un vettore gaussiano $\NNN(\mu,C)$, dove
+Sia $X=(X_1,X_2,X_3$ un vettore gaussiano $\Nc(\mu,C)$, dove
 \[
 \mu=\begin{pmatrix}
 0 \\0
@@ -354,7 +354,7 @@ Sia $(X,Y)$ un vettore aleatorio con funzione caratteristica
 \end{enumerate}
 
 \Esercizio{} %18
-Si consideri il vettore aleatorio $(X_\alpha,Y_\alpha)\sim\NNN\left(\begin{pmatrix}
+Si consideri il vettore aleatorio $(X_\alpha,Y_\alpha)\sim\Nc\left(\begin{pmatrix}
 0 \\1
 \end{pmatrix},\begin{pmatrix}
 2\alpha &1 \\1&1
@@ -367,7 +367,7 @@ Si consideri il vettore aleatorio $(X_\alpha,Y_\alpha)\sim\NNN\left(\begin{pmatr
 \end{enumerate}
 
 \Esercizio{} %19
-Siano $X$ e $Z$ due variabili aleatorie indipendenti tali che $X\sim\NNN(0,1)$ e $Z$ abbia legge: $\PP(Z=1)=1/2$ e $\PP(Z=-1)=1/2$. Si ponga $Y=ZX$.
+Siano $X$ e $Z$ due variabili aleatorie indipendenti tali che $X\sim\Nc(0,1)$ e $Z$ abbia legge: $\PP(Z=1)=1/2$ e $\PP(Z=-1)=1/2$. Si ponga $Y=ZX$.
 \begin{enumerate}
 \item [(a)] Che legge ha $Y$?
 \item [(b)] Calcolare $Cov(X,Y)$.
@@ -377,23 +377,23 @@ Siano $X$ e $Z$ due variabili aleatorie indipendenti tali che $X\sim\NNN(0,1)$ e
 \end{enumerate}
 
 \Esercizio{} %20
-Si provi che se $X_1,\dots,X_n$ sono variabili aleatorie i.i.d. $\NNN(\mu,\sigma^2)$, con $\sigma^2>0$, allora 
+Si provi che se $X_1,\dots,X_n$ sono variabili aleatorie i.i.d. $\Nc(\mu,\sigma^2)$, con $\sigma^2>0$, allora 
 \[
 \sum_{k=1}^{n}\frac{(X_k-\mu)^2}{\sigma^2}\sim\chi^2(n)=\Gamma\left(\frac{n}{2},\frac{1}{2}  \right).
 \]
 
 \Esercizio{} %21
-Sia $X=(X_1,\dots,X_n)\sim\NNN(\mu,C)$ un vettore aleatorio gaussiano con $C$ invertibile. Si mostri che la variabile aleatoria $(X-\mu)^TC^{-1}(X-\mu)$ ha legge $\chi^2(n)$.
+Sia $X=(X_1,\dots,X_n)\sim\Nc(\mu,C)$ un vettore aleatorio gaussiano con $C$ invertibile. Si mostri che la variabile aleatoria $(X-\mu)^TC^{-1}(X-\mu)$ ha legge $\chi^2(n)$.
 
 \Esercizio{} %22
-Siano $X_1,\dots,X_n$ variabili aleatorie reali i.i.d. $\NNN(\mu,\sigma^2)$.  Si considerino
+Siano $X_1,\dots,X_n$ variabili aleatorie reali i.i.d. $\Nc(\mu,\sigma^2)$.  Si considerino
 \[
 \overline{X}_n=\frac{1}{n}\sum_{k=1}^nX_k,\qquad Y_k=X_k-\overline{X}_n,\qquad S_n^2=\frac{1}{n-1}\sum_{k=1}^n(X_k-\overline{X}_n)^2.
 \]
 \begin{enumerate}
 \item [(a)] Si calcoli $\varphi_{(\overline{X}_n,Y_1,\dots,Y_n)}$.
 \item [(b)] Se ne deduca l'indipendenza di $\overline{X}_n$ e $S_n^2$.
-\item [(c)] Si mostri che $Z=\dfrac{\overline{X}_n-\mu}{\sigma/\sqrt{n}}\sim\NNN(0,1)$.
+\item [(c)] Si mostri che $Z=\dfrac{\overline{X}_n-\mu}{\sigma/\sqrt{n}}\sim\Nc(0,1)$.
 \item [(d)] Sapendo che $Q=\dfrac{n-1}{\sigma^2}\ S_n^2\sim\chi^2(n-1)$, si calcoli la funzione caratteristica di $\varphi_{(\overline{X}_n,S_n^2)}$.
 \item [(e)] Si calcolino le funzioni caratteristiche $\varphi_{(\overline{X}_n^2,S_n^2)}$ e $\varphi_{\overline{X}_n^2+S_n^2}$ nel caso $\mu=0$.
 \item [(f$^*$)] Si trovi la densità continua della variabile aleatoria $T=\dfrac{\overline{X}_n-\mu}{\sqrt{S_n^2/n}}$.
@@ -524,7 +524,7 @@ possiamo calcolare la funzione caratteristica di $X$ nel seguente modo:
 
 \Soluzione{} %4
 \begin{enumerate}
-\item [(a)] Si mostri che $X\sim \UUU([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
+\item [(a)] Si mostri che $X\sim \Uc([-a,a])\iff\varphi_X(u)=\dfrac{\sin(au)}{au}$.
 
 Calcoliamo la funzione caratteristica di $X$:
 \begin{gather*}
@@ -540,7 +540,7 @@ Calcoliamo la funzione caratteristica di $X$:
 \end{gather*}
 Quindi
 \[
-X\sim \UUU([-a,a]),\ a\in[0,+\infty)\iff\varphi_X(u)=\frac{\sin(au)}{au}=\text{sinc}(au)
+X\sim \Uc([-a,a]),\ a\in[0,+\infty)\iff\varphi_X(u)=\frac{\sin(au)}{au}=\text{sinc}(au)
 \]
 \begin{oss}
 La funzione $\dfrac{\sin(au)}{au}=:\text{sinc}(au)$ è detta \emph{seno cardinale}.
@@ -562,13 +562,13 @@ Allora
 \end{aligned}
 \end{gather*}
 
-\item [(b)] Si mostri che $X\sim  \UUU([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
+\item [(b)] Si mostri che $X\sim  \Uc([a,b])\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \dfrac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}$.
 
 Notiamo che possiamo ricondurci ad un'uniforme simmetrica semplicemente traslando di $\dfrac{a+b}{2}$:
 \fg{0.5}{8_2}
 Grazie a questa traslazione possiamo scrivere $X$ in termini dell'uniforme simmetrica
 \[
-Y:=X-\frac{a+b}{2}\sim\UUU\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\implies X=\frac{a+b}{2}+Y
+Y:=X-\frac{a+b}{2}\sim\Uc\left(\left[-\frac{b-a}{2},\frac{b-a}{2}\right]\right)\implies X=\frac{a+b}{2}+Y
 \]
 Allora
 \begin{gather*}
@@ -580,14 +580,14 @@ Allora
 \end{gather*}
 Quindi
 \[
-X\sim  \UUU([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left( \frac{b-a}{2}u \right)
+X\sim  \Uc([a,b]),\ a,b\in\RR\iff\varphi_X(u)=e^{iu\frac{a+b}{2}}\ \frac{\sin\left(\frac{b-a}{2}u\right)}{\frac{b-a}{2}u}=e^{iu\frac{a+b}{2}}\ \text{sinc}\left( \frac{b-a}{2}u \right)
 \]
 Per quanto riguarda media e varianza
 \[
 \EE[X]\overset{\underset{\dots}{}}{=}\frac{a+b}{2} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{(a+b)^2-ab}{3}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{(b-a)^2}{12}
 \]
 
-\item [(c)] Si mostri che $X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
+\item [(c)] Si mostri che $X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda-iu}$.
 
 Calcoliamo la funzione caratteristica di $X$:
 \begin{gather*}
@@ -615,14 +615,14 @@ Sapendo che nel confronto tra un esponenziale tendente a zero e un numero comple
 \end{nb}
 Quindi
 \[
-X\sim\EEE(\lambda),\ \lambda>0\iff\varphi_X(u)=\frac{\lambda}{\lambda-iu}
+X\sim\Ec(\lambda),\ \lambda>0\iff\varphi_X(u)=\frac{\lambda}{\lambda-iu}
 \]
 Per quanto riguarda media e varianza
 \[
 \EE[X]\overset{\underset{\dots}{}}{=}\frac{1}{\lambda} \qquad \EE[X^2]\overset{\underset{\dots}{}}{=}\frac{2}{\lambda^2}\qquad Var(X)\overset{\underset{\dots}{}}{=}\frac{1}{\lambda^2}
 \]
 
-\item [(d)] Si mostri che $X$ tale che $-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
+\item [(d)] Si mostri che $X$ tale che $-X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}$.
 
 Osserviamo che $f_X(x)=\lambda e^{\lambda x}\ \Ind_{(-\infty,0]}(x)$. Allora
 \[
@@ -632,7 +632,7 @@ Ovviamente nell'ultima equaglianza si è usato un discorso analogo al \textbf{NB
 
 Si ha
 \[
-X\text{ tale che }-X\sim\EEE(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}
+X\text{ tale che }-X\sim\Ec(\lambda)\iff\varphi_X(u)=\dfrac{\lambda}{\lambda+iu}
 \]
 e
 \[
@@ -651,14 +651,14 @@ La densità congiunta del vettore $(X,Y)$ vale
 Inoltre $X\indep Y$ perché la congiunta fattorizza nelle due marginali
 \begin{gather*}
 \begin{aligned}
-&f_X(x)=\frac{1}{2}\ \Ind_{[0,2]}(x)\implies X\sim\UUU([0,2])\\
-&f_Y(y)=\Ind_{[0,1]}(y)\implies Y\sim\UUU([0,1])
+&f_X(x)=\frac{1}{2}\ \Ind_{[0,2]}(x)\implies X\sim\Uc([0,2])\\
+&f_Y(y)=\Ind_{[0,1]}(y)\implies Y\sim\Uc([0,1])
 \end{aligned}
 \end{gather*}
 
 \item [(b)] Si calcolino valore atteso e matrice varianza di $(X,Y)$.
 
-Dato che $X\sim\UUU([0,2]),\ Y\sim\UUU([0,1]),\ X\indep Y$ possiamo subito calcolare
+Dato che $X\sim\Uc([0,2]),\ Y\sim\Uc([0,1]),\ X\indep Y$ possiamo subito calcolare
 \[
 \EE[(X,Y)]=\left(\EE[X],\EE[Y]\right)=\left(1,\frac{1}{2}\right)
 \]
@@ -835,9 +835,9 @@ Usando sempre il teorema (\ref{t_affine_t}):
 
 \Soluzione{} %6
 \begin{itemize}
-\item [(a)] Mostrare che $X_1+\cdots+X_n\sim\PPP(\lambda_1+\cdots+\lambda_n)$.
+\item [(a)] Mostrare che $X_1+\cdots+X_n\sim\Pc(\lambda_1+\cdots+\lambda_n)$.
 
-È già stato dimostrato che se $X\sim\PPP(\lambda)$ allora
+È già stato dimostrato che se $X\sim\Pc(\lambda)$ allora
 \[
 \varphi_X(u)=e^{\lambda(e^{iu}-1)}
 \]
@@ -847,10 +847,10 @@ Detta quindi $Y=X_1+\cdots+X_n$, per il corollario (\ref{Legge della somma di va
 \]
 Grazie a questo possiamo concludere che 
 \[
-\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\PPP(\lambda_k),\ \lambda_k>0\ \forall k\end{cases} \implies X_1+\cdots+X_n\sim\PPP(\lambda_1+\cdots+\lambda_n)
+\begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\Pc(\lambda_k),\ \lambda_k>0\ \forall k\end{cases} \implies X_1+\cdots+X_n\sim\Pc(\lambda_1+\cdots+\lambda_n)
 \]
 
-\item [(b)] Si supponga ora che $X_1,X_2,X_3\iid\PPP(\lambda)$. Calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$. 
+\item [(b)] Si supponga ora che $X_1,X_2,X_3\iid\Pc(\lambda)$. Calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$. 
 
 Per calcolare $\PP(X_1+X_2+X_3\geq 3\,|\,X_1\geq 1)$ osserviamo che $X_1,X_2,X_3$ sono VA discrete che q.c. assumono valori in $\{0,1,\dots  \}$. Dunque
 \[
@@ -929,9 +929,9 @@ abbiamo
 \end{aligned}
 \end{gather*}
 \begin{oss}
-Se $Z\sim\EEE(\lambda)$ allora $Z\sim\Gamma(1,\lambda)$, in quanto
+Se $Z\sim\Ec(\lambda)$ allora $Z\sim\Gamma(1,\lambda)$, in quanto
 \[
-\varphi_{\Gamma(1,\lambda)}(u)=\left(\frac{\lambda}{\lambda-iu}\right)^1=\frac{\lambda}{\lambda-iu}=\varphi_{\EEE(\lambda)}(u)
+\varphi_{\Gamma(1,\lambda)}(u)=\left(\frac{\lambda}{\lambda-iu}\right)^1=\frac{\lambda}{\lambda-iu}=\varphi_{\Ec(\lambda)}(u)
 \]
 \end{oss}
 \begin{enumerate}
@@ -949,18 +949,18 @@ Quindi in generale
 \begin{cases}X_1,\dots,X_n\text{ indipendenti}\\X_k\sim\Gamma(\alpha_k,\lambda),\ \alpha_k>0\ \forall k,\ \lambda>0\end{cases} \implies X_1+\cdots+X_n\sim\Gamma(\alpha_1+\cdots+\alpha_n,\lambda)
 \]
 
-\item [(b)] Si mostri che $X_1,\dots,X_n\iid\EEE(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
+\item [(b)] Si mostri che $X_1,\dots,X_n\iid\Ec(\lambda)\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)$.
 
-Avendo già osservato che $\EEE(\lambda)\equiv\Gamma(1,\lambda)$, e sfruttando il punto (a), possiamo dire che
+Avendo già osservato che $\Ec(\lambda)\equiv\Gamma(1,\lambda)$, e sfruttando il punto (a), possiamo dire che
 \[
 X_1,\dots,X_n\sim\Gamma(\underbrace{1+\cdots+1}_{n\text{ volte}},\lambda)=\Gamma(n,\lambda)
 \]
 Quindi
 \[
-X_1,\dots,X_n\iid\EEE(\lambda),\ n\in\NN,\ \lambda>0\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)
+X_1,\dots,X_n\iid\Ec(\lambda),\ n\in\NN,\ \lambda>0\implies X_1+\cdots+X_n\sim\Gamma(n,\lambda)
 \]
 
-\item [(c)] Si mostri che $Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
+\item [(c)] Si mostri che $Z\sim\Nc(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$.
 
 Ricordando che
 \[
@@ -983,13 +983,13 @@ che è proprio la densità di una $\Gamma\left(\frac{1}{2},\frac{1}{2} \right)$.
 
 Quindi
 \[
-Z\sim\NNN(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)
+Z\sim\Nc(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)
 \]
 \begin{oss}
 Il calcolo mediante la funzione caratteristica è lasciato al lettore.
 \end{oss}
 
-\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\NNN(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
+\item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\Nc(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
 
 Sappiamo già che $\forall k=1:n\ \ Z_k^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)$ e che $Z_1^2,\dots,Z_n^2$ sono indipendenti perché lo sono per ipotesi $Z_1,\dots,Z_n$. Allora per il punto (a) possiamo concludere che
 \[
@@ -997,7 +997,7 @@ Q\sim\Gamma\left(\underbrace{\frac{1}{2}+\cdots+\frac{1}{2}}_{n\text{ volte}}, \
 \]
 In generale
 \[
-Z_1,\dots,Z_n\iid\NNN(0,1)\implies Z_1^2+\cdots+Z_n^2\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)
+Z_1,\dots,Z_n\iid\Nc(0,1)\implies Z_1^2+\cdots+Z_n^2\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)
 \]
 \end{enumerate}
 
@@ -1106,7 +1106,7 @@ dunque deduciamo che possiamo esmprimere la \emph{funzione beta} di Eulero in te
 \]
 \end{oss}
 
-\item [(d$^\ast$)] Sia $(X_n)_{n\in\NN}$ una successione di variabili aleatorie, con $X_1,X_2,\dots\iid\EEE(\lambda)$. Posto
+\item [(d$^\ast$)] Sia $(X_n)_{n\in\NN}$ una successione di variabili aleatorie, con $X_1,X_2,\dots\iid\Ec(\lambda)$. Posto
 \[
 S_n=X_1+\dots+X_n
 \]

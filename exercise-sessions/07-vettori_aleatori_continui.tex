@@ -2,22 +2,13 @@
 
 \newcommand{\fXYxy}{f_{(X,Y)}(x,y)}
 \newcommand{\fXY}{f_{(X,Y)}}
-\newcommand{\NNN}{\mathcal{N}}
-\newcommand{\AAA}{\mathcal{A}}
-\newcommand{\EEE}{\mathcal{E}}
-\newcommand{\CCC}{\mathcal{C}}
-\newcommand{\GGG}{\mathcal{G}}
-\newcommand{\PPP}{\mathcal{P}}
-\newcommand{\UUU}{\mathcal{U}}
 \newcommand{\indep}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
-\newcommand{\BBB}{\mathcal{B}}
-\newcommand{\dP}{\text{ d}\mathbb{P}}
 \newcommand{\Lu}{\mathcal{L}^1}
 \newcommand{\Cz}{\mathcal{C}^0}
 \newcommand{\Cu}{\mathcal{C}^1}
-\newcommand{\Ct}{\Cz\cap\widetilde{\CCC}^1}
-\newcommand{\SDP}{(\Omega,\AAA,\PP)}
-\newcommand{\SDE}{(E,\EEE)}
+\newcommand{\Ct}{\Cz\cap\widetilde{\Cc}^1}
+\newcommand{\SDP}{(\Omega,\Ac,\PP)}
+\newcommand{\SDE}{(E,\Ec)}
 \newcommand{\SDF}{(F,\FFF)}
 \newcommand{\inta}{\int_{a}^{b}}
 \newcommand{\intaa}{\int_{c}^{d}}
@@ -393,7 +384,7 @@ Una misura di resistenza in un circuito elettrico eseguita con uno strumento di 
 Un ago di lunghezza $l>0$ viene lanciato su un pavimento decorato con linee parallele distanti $d>0$. Qual è la probabilità $p$ che l'ago intersechi almeno una linea?
 
 \Esercizio{}
-Siano $X$ e $Y$ variabili aleatorie indipendenti con legge $\UUU([0,1])$.
+Siano $X$ e $Y$ variabili aleatorie indipendenti con legge $\Uc([0,1])$.
 \begin{enumerate}
 \item [(a)] Si scriva la densità di probabilità del vettore aleatorio $(X,Y)$.
 \end{enumerate}
@@ -413,11 +404,11 @@ Si consideri ora il vettore aleatorio $(U,V)=(X+1,X+Y-XY+X^2Y)$.
 \Esercizio{} % es 10 manca sol
 Verificare che se $X_1,\dots,X_n$ sono variabili aleatorie esponenziali indipendenti di parametri $\lambda_1,\dots,\lambda_n$ rispettivamente, allora
 \[
-X_{(1)}=\min\{X_1,\dots,X_n  \}\sim\EEE(\lambda_1,\dots,\lambda_n)
+X_{(1)}=\min\{X_1,\dots,X_n  \}\sim\Ec(\lambda_1,\dots,\lambda_n)
 \]
 
 \Esercizio{} % es 11 manca sol
-Siano $X_1,\dots,X_n$ sono variabili aleatorie continue i.i.d. con funzione di ripartizione $\CCC^1$ a tratti. 
+Siano $X_1,\dots,X_n$ sono variabili aleatorie continue i.i.d. con funzione di ripartizione $\Cc^1$ a tratti. 
 \begin{enumerate}
 \item [(a)] Mostrare che $X_{(n)}=\max\{ X_1,\dots,X_n \}$ è una variabile aleatoria continua e determinarne la densità.
 \item [(b)] Mostrare che $X_{(1)}=\min\{ X_1,\dots,X_n \}$ è una variabile aleatoria continua e determinarne la densità.
@@ -461,12 +452,12 @@ Siano $X\sim\Gamma(\alpha,\lambda)$ e $Y\sim\Gamma(\beta,\lambda)$ due variabili
 \Esercizio{} % es 17 manca sol
 Calcolo delle densità della $t$ d Student e della $F$ di Fisher.
 \begin{enumerate}
-\item [(a)] Siano $Z\sim\NNN(0,1)$ e $X\sim\chi^2(n)$ due variabili aleatorie indipendenti; determinare la densità di $T=\dfrac{Z}{\sqrt{\frac{X}{n}}}$.
+\item [(a)] Siano $Z\sim\Nc(0,1)$ e $X\sim\chi^2(n)$ due variabili aleatorie indipendenti; determinare la densità di $T=\dfrac{Z}{\sqrt{\frac{X}{n}}}$.
 \item [(b)] Siano $X\sim\chi^2(m)$ e $Y\sim\chi^2(n)$ due variabili aleatorie indipendenti; determinare la densità di $F=\dfrac{X/m}{Y/n}$.
 \end{enumerate}
 
 \Esercizio{} % es 18 manca sol
-Siano $X\sim\UUU([-5,3])$ e $Y\sim\UUU([3,5])$ due variabili aleatorie indipendenti.
+Siano $X\sim\Uc([-5,3])$ e $Y\sim\Uc([3,5])$ due variabili aleatorie indipendenti.
 \begin{enumerate}
 \item [(a)] Determinare media, varianza e legge di $Z=X+Y$.
 \item [(b)] Si calcoli il coefficiente di correlazione $\rho_{X,Z}$.
@@ -494,7 +485,7 @@ Due numeri $X,Y$ vengono scelti a caso indipendentemente con distribuzione unifo
 \end{enumerate}
 
 \Esercizio{} % es 21 manca punto a
-Sia assegnata una successione $N,X_1,X_2,\dots$ di variabili aleatorie indipendenti, tale che $N\sim\GGG(p), p\in(0,1)$, e ciascuna delle $X_i\sim\EEE(\lambda),\lambda>0$. Si ponga $Y=\min\{X_1,\dots,X_N  \}$.
+Sia assegnata una successione $N,X_1,X_2,\dots$ di variabili aleatorie indipendenti, tale che $N\sim\Gc(p), p\in(0,1)$, e ciascuna delle $X_i\sim\Ec(\lambda),\lambda>0$. Si ponga $Y=\min\{X_1,\dots,X_N  \}$.
 \begin{enumerate}
 \item [(a$^*$)] Si mostri che $Y$ è una variabile aleatoria.
 \item [(b)] Qual è la legge di $Y$?
@@ -518,7 +509,7 @@ X_{(n)}&=\max\{X_1,\dots,X_n  \}.
 \item [(a)] Si trovi una formula per $X_{(2)}$ nel caso $n=3$ e una formula per $X_{(3)}$ nel caso $n=4$.
 \item [(b)] Si trovi una formula per $X_{(k)}$ nel caso $n\in\NN,1\leq k\leq n$.
 \item [(c)] Si mostri chele statistiche d'ordine sono variabili aleatorie e che $X_{(1)}\leq X_{(2)}\leq \cdots \leq X_{(n)}$ q.c.
-\item [(d)] Sia $B\in\BBB^n$ un boreliano di $\RR^n$ tale che: se $(y_1,\dots,y_n)\in B$ allora $y_1\leq y_2\leq \cdots\leq y_n$. In altre parole, $B\subset\{(y_1,\dots,y_n)\in\RR^n\ :\ y_1\leq y_2\leq \cdots\leq y_n  \}$. Si esprima l'evento $((X_{(1)},\dots,X_{(n)})\in B)$ in termini di $X_1,\dots,X_n$.
+\item [(d)] Sia $B\in\Bc^n$ un boreliano di $\RR^n$ tale che: se $(y_1,\dots,y_n)\in B$ allora $y_1\leq y_2\leq \cdots\leq y_n$. In altre parole, $B\subset\{(y_1,\dots,y_n)\in\RR^n\ :\ y_1\leq y_2\leq \cdots\leq y_n  \}$. Si esprima l'evento $((X_{(1)},\dots,X_{(n)})\in B)$ in termini di $X_1,\dots,X_n$.
 \item [(e)] Supponiamo ora che $X_1,\dots,X_n$ siano i.i.d. con densità continua $f$. Si mostri che $X_{(1)},\dots,X_{(n)}$ hanno legge congiuntamente continua con densità
 \[
 f_{(X_{(1)},\dots,X_{(n)})}(y_1,\dots,y_n)=\begin{cases}n!\displaystyle\prod_{i=1}^n f(y_i) &y_1\leq y_2\leq \cdots\leq y_n \\ 0&\text{altrimenti}   \end{cases}
@@ -759,12 +750,12 @@ f_Y(y)&=\int_\RR\fXYxy\dy=\\
 &=e^{-y}
 \end{aligned}
 \end{gather*}
-Quindi $f_Y(y)=e^{-y}\ \Ind_{(0,+\infty)}(y)$ e perciò $Y\sim\Gamma(1,1)\sim\EEE(1)$.
+Quindi $f_Y(y)=e^{-y}\ \Ind_{(0,+\infty)}(y)$ e perciò $Y\sim\Gamma(1,1)\sim\Ec(1)$.
 
 Dato che la congiunta fattorizza nelle due marginali, allora per il teorema (\ref{introth6}) le variabili $X$ e $Y$ sono indipendenti.
 \item [(b)] Calcolare $Var(X+Y)$.
 
-Ricordando che $Var(\Gamma(\alpha,\lambda))=\alpha/\lambda^2$ e $Var(\EEE(\lambda))=1/\lambda^2$ possiamo facilmente calcolare
+Ricordando che $Var(\Gamma(\alpha,\lambda))=\alpha/\lambda^2$ e $Var(\Ec(\lambda))=1/\lambda^2$ possiamo facilmente calcolare
 \[
 Var(X+Y)\overset{\underset{\indep}{}}{=}Var(X)+Var(Y)=2+1=3
 \]
@@ -831,7 +822,7 @@ f_U(u)&=(F_U(u))'=(2u+1)e^{-2u}\ \Ind_{(0,+\infty)}(u) \\
 \end{enumerate}
 
 \Soluzione{}
-Prima di tutto, il testo dice che $(X,Y)\sim\UUU(Q)$ e dunque
+Prima di tutto, il testo dice che $(X,Y)\sim\Uc(Q)$ e dunque
 \[
 \fXYxy=\frac{1}{m(Q)}\ \Ind_Q(x,y)=\frac{1}{8}\ \Ind_Q(x,y)
 \]
@@ -912,7 +903,7 @@ e come possiamo notare $\fXY\neq f_X\cdot f_Y$ cioè $X$ e $Y$ non sono indipend
 \Soluzione{}
 Siano
 \[
-R\sim\UUU([a,b])\quad \text{con }a=11.5,\ b=12.5\qquad\qquad\qquad M=\frac{1}{R}
+R\sim\Uc([a,b])\quad \text{con }a=11.5,\ b=12.5\qquad\qquad\qquad M=\frac{1}{R}
 \]
 rispettivamente resistenza e conduttanza di un dato circuito.
 
@@ -925,7 +916,7 @@ f_{(R,M)}:\RR^2\to[0,+\infty)
 \]
 tale che
 \[
-\PP((R,M)\in B)=\int_B f_{(R,M)}\dxy\qquad\forall B\in\BBB(\RR^2)
+\PP((R,M)\in B)=\int_B f_{(R,M)}\dxy\qquad\forall B\in\Bc(\RR^2)
 \]
 Ma prendendo
 \[
@@ -1048,8 +1039,8 @@ X&=\begin{matrix}
 \fg{0.5}{7_12}
 Possiamo allora supporre
 \begin{align*}
-X&\sim\UUU\left(\left[0,\frac{d}{2}\right]\right) &\implies f_X(x)&=\frac{2}{d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x) \\
-\Theta&\sim\UUU\left(\left[0,\pi\right]\right) &\implies f_\Theta(\vartheta)&=\frac{1}{\pi}\ \Ind_{\left[0,\pi\right]}(\vartheta) \\
+X&\sim\Uc\left(\left[0,\frac{d}{2}\right]\right) &\implies f_X(x)&=\frac{2}{d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x) \\
+\Theta&\sim\Uc\left(\left[0,\pi\right]\right) &\implies f_\Theta(\vartheta)&=\frac{1}{\pi}\ \Ind_{\left[0,\pi\right]}(\vartheta) \\
 X&\indep\Theta&\implies f_{(X,\Theta)}(x,\vartheta)&=\frac{2}{\pi d}\ \Ind_{\left[0,\frac{d}{2}\right]}(x)\ \Ind_{\left[0,\pi\right]}(\vartheta)
 \end{align*}
 
@@ -1173,7 +1164,7 @@ Siccome $X,Y$ sono VAR assolutamente continue e indipendenti allora il vettore a
 \[
 \fXYxy=f_X(x)\cdot f_Y(y)=\Ind_{[0,1]}(x)\cdot \Ind_{[0,1]}(y)=_{[0,1]^2}(x,y)
 \]
-cioè $(X,Y)\sim\UUU\left([0,1]^2\right)$.
+cioè $(X,Y)\sim\Uc\left([0,1]^2\right)$.
 
 \item [(b)] Si consideri il vettore aleatorio $(U,V)=(X+1,X+Y)$. Calcolarne il valore atteso e la matrice varianza.
 
@@ -1250,7 +1241,7 @@ f_{(U,V)}(u,v)&=\fXY(g^{-1}(u,v))\cdot |\det J_{g^{-1}}(u,v)|=\\
 \end{aligned}
 \end{gather*}
 \fg{0.6}{7_19}
-Quindi $(U,V)\sim\UUU(Q)$.
+Quindi $(U,V)\sim\Uc(Q)$.
 
 \item [(d)] Il vettore ha componenti indipendenti?
 
@@ -1346,9 +1337,9 @@ Manca
 \Soluzione{}
 Siano 
 \begin{align*}
-E_1&\sim\EEE(\lambda)=\EEE(0.3) \\
-E_2&\sim\EEE(\mu)=\EEE(0.1) \\
-E_3&\sim\EEE(\gamma)=\EEE(0.2)
+E_1&\sim\Ec(\lambda)=\Ec(0.3) \\
+E_2&\sim\Ec(\mu)=\Ec(0.1) \\
+E_3&\sim\Ec(\gamma)=\Ec(0.2)
 \end{align*}
 Sia $T$ la variabile aleatoria che modellizza il tempo di vita del componente elettronico formato dal collegamento in serie dei tre sottocomponenti indipendenti che hanno un tempo di vita modellizzato rispettivamente da $E_1,E_2,E_3$.
 
@@ -1371,7 +1362,7 @@ F_T(t)&=\PP(T\leq t)=1-\PP(T>t)= \\
 \end{gather*}
 Ricordando che
 \begin{oss}$\\$
-Se $X\sim\EEE(\lambda)$ allora
+Se $X\sim\Ec(\lambda)$ allora
 \[
 F_X(x)=\left(1-e^{-\lambda x}\right)\Ind_{[0,+\infty)}(x)
 \]
@@ -1380,12 +1371,12 @@ otteniamo
 \begin{gather*}
 F_T(t)=1-\left(e^{-\lambda t}\right)\,\left(e^{-\mu t}\right)\,\left(e^{-\gamma t}\right)=1-e^{-(\lambda+\mu+\gamma)t} \\
 \implies F_T(t)=\left(1-e^{-(\lambda+\mu+\gamma)t} \right)\Ind_{[0,+\infty)}(t) \\
-\implies T\sim\EEE(\lambda+\mu+\gamma)=\EEE(0.6)
+\implies T\sim\Ec(\lambda+\mu+\gamma)=\Ec(0.6)
 \end{gather*}
 
 \item [(b)] Per aumentare l'affidabilità e ridurre gli interventi di sostituzione, viene proprosto di aggiungere un componente identico in parallelo. Qual è la legge del tempo di vita $S$ del nuovo complesso?
 
-Siano $C_1$ e $C_2$ i due componenti identici collegati in parallelo che formano il componente complessivo $C_{\text{TOT}}$, rispettivamente di vita $T,P,S$. Sappiamo che $T\sim\EEE(0.6)\sim P$ e per costruzione è lecito supporre $T\indep P$.
+Siano $C_1$ e $C_2$ i due componenti identici collegati in parallelo che formano il componente complessivo $C_{\text{TOT}}$, rispettivamente di vita $T,P,S$. Sappiamo che $T\sim\Ec(0.6)\sim P$ e per costruzione è lecito supporre $T\indep P$.
 
 Dato che $C_1$ e $C_2$ sono collegati in parallelo, $C_{\text{TOT}}$ si guasterà quando $C_1$ e $C_2$ saranno entrambi guasti, perciò
 \[
@@ -1403,7 +1394,7 @@ F_S(s)&=\PP(S\leq s)=\\
 \implies F_S(s)&=\left(1-e^{-0.6s}  \right)^2\Ind_{[0,+\infty)}(s)
 \end{aligned}
 \end{gather*}
-Essendo $\CCC^\infty$, possiamo calcolare
+Essendo $\Cc^\infty$, possiamo calcolare
 \[
 f_S(s)=F_S'(s)=\left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\Ind_{[0,+\infty)}(s)
 \]
@@ -1527,7 +1518,7 @@ f_Z(z)=\int_\RR \fXY(z-y,y)\dy
 \]
 Osserviamo che
 \begin{itemize}
-\item $\fXYxy\overset{\underset{\indep}{}}{=}f_X(x)\cdot f_Y(y)\overset{\underset{\UUU}{}}{=}\Ind_{[0,1]^2}(x,y)$
+\item $\fXYxy\overset{\underset{\indep}{}}{=}f_X(x)\cdot f_Y(y)\overset{\underset{\Uc}{}}{=}\Ind_{[0,1]^2}(x,y)$
 \item $Z\in[0,2]$ q.c.
 \end{itemize}
 Allora
@@ -1629,7 +1620,7 @@ F_T(t)=
 t &t\in[0,1] \\
 1 &t>1
 \end{cases}
-\implies T\sim\UUU([0,1])
+\implies T\sim\Uc([0,1])
 \]
 
 \end{enumerate}
@@ -1867,7 +1858,7 @@ Manca
 Manca
 
 \Soluzione{}
-Siano $X\sim Y\sim\EEE(\lambda)$ con $X\indep Y$ tali che
+Siano $X\sim Y\sim\Ec(\lambda)$ con $X\indep Y$ tali che
 
 \fg{0.4}{7_1}
 
