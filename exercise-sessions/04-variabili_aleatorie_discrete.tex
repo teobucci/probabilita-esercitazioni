@@ -427,7 +427,7 @@ Se $( \Omega ,\mathcal{A} ,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è 
 e
 \begin{equation*}
 \begin{drcases}
-\Ind_{A}^{-1}\{0\} =A\comp\\
+\Ind_{A}^{-1}\{0\} =A\complementary\\
 \Ind_{A}^{-1}\{1\} =A
 \end{drcases}
 \ \in \mathcal{A} \iff A\in \mathcal{A}
@@ -593,7 +593,7 @@ X_{n}^{-1}(( -\infty ,t]) & =\{\omega \in \Omega :X_{n}( \omega ) \in ( -\infty 
  & =\{\omega \in \Omega :\Ind_{E_{n}}( \omega ) \in ( -\infty ,t]\}\\
  & =\Ind_{E_{n}}^{-1}( -\infty ,t] =\begin{cases}
 \emptyset , & t< 0\\
-E_{n}\comp , & 0\leq t< 1\\
+E_{n}\complementary , & 0\leq t< 1\\
 \Omega , & t\geq 1
 \end{cases}
 \end{align*}
@@ -606,14 +606,14 @@ Nell'ultimo passaggio bisogna ricordare che
 \end{cases}
 \end{equation*}
 
-Dato che $\emptyset ,E_{n}\comp ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
+Dato che $\emptyset ,E_{n}\complementary ,\Omega \in \mathcal{A}$ abbiamo che $X_{n}$ è misurabile.
 
 \textit{Significato:} esito dell'$n$-esima prova, può essere successo o insuccesso.
 \item Le $X_{n}$ sono VA discrete, quindi hanno una densità discreta
 \begin{gather*}
 x\in \{0,1\}\\
 \PP( X_{n} =1) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =1\}) =\PP\left( X_{n}^{-1}(\{1\})\right) =\PP( E_{n}) =p\\
-\PP( X_{n} =0) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\PP\left( X_{n}^{-1}(\{0\})\right) =\PP\left( E_{n}\comp\right) =1-p
+\PP( X_{n} =0) =\PP(\{\omega \in \Omega :X_{n}( \omega ) =0\}) =\PP\left( X_{n}^{-1}(\{0\})\right) =\PP\left( E_{n}\complementary\right) =1-p
 \end{gather*}
 
 quindi
@@ -649,11 +649,11 @@ Descrive il numero di successi in $n$ prove di Bernoulli.
 Densità discreta:\begin{gather*}
 p_{Y_{n}} :\{0,\dots ,n\}\rightarrow [ 0,1]\\
 \begin{aligned}
-p_{Y_{n}}( 0) & =\PP( Y_{n} =0) =\PP( X_{1} +\cdots +X_{n} =0) =\PP\left(\bigcap _{j=1}^{n} E_{j}\comp\right) =( 1-p)^{n}\\
-p_{Y_{n}}( 1) & =\PP( Y_{n} =1) =\PP( X_{1} +\cdots +X_{n} =1) =\PP\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\comp\right)\\
- & =\sum\limits _{i=1}^{n}\PP( E_{i})\prod _{j\neq i}\PP\left( E_{j}\comp\right) =np( 1-p)^{n-1}\\
-p_{Y_{n}}( k) & =\PP( Y_{n} =k) =\PP( X_{1} +\cdots +X_{n} =k) =\PP\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\comp\right]\right)\\
- & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\prod _{j\in J} \PP( E_{j})\prod _{j\notin J}\PP\left( E_{j}\comp\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
+p_{Y_{n}}( 0) & =\PP( Y_{n} =0) =\PP( X_{1} +\cdots +X_{n} =0) =\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right) =( 1-p)^{n}\\
+p_{Y_{n}}( 1) & =\PP( Y_{n} =1) =\PP( X_{1} +\cdots +X_{n} =1) =\PP\left(\bigcup _{i=1}^{n} E_{i}\bigcap _{j\neq i}^{n} E_{j}\complementary\right)\\
+ & =\sum\limits _{i=1}^{n}\PP( E_{i})\prod _{j\neq i}\PP\left( E_{j}\complementary\right) =np( 1-p)^{n-1}\\
+p_{Y_{n}}( k) & =\PP( Y_{n} =k) =\PP( X_{1} +\cdots +X_{n} =k) =\PP\left(\bigcup\limits _{J\subset \{1..n\} ,| J| =k}\left[\bigcap _{j\in J} E_{j} \cap \bigcap _{j\notin J}^{n} E_{j}\complementary\right]\right)\\
+ & =\sum\limits _{J\subset \{1..n\} ,| J| =k}\prod _{j\in J} \PP( E_{j})\prod _{j\notin J}\PP\left( E_{j}\complementary\right) =\binom{n}{k} p^{k}( 1-p)^{n-k}
 \end{aligned}
 \end{gather*}
 
@@ -668,11 +668,11 @@ Questo risultato non è vero in generale. La somma di VA bernoulliane è binomia
 \textit{Interpretazione:} la distribuzione binomiale $B\left( n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
 \item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left( Z\right) =\mathbb{N} \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\mathbb{N} \cup \left\{+\infty \right\}\rightarrow \left[ 0,1\right]$. Sia $k\in \mathbb{N}$ fissato
 \begin{equation*}
-p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\comp \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
+p_{Z}( k) =\underbrace{\PP( Z=k) =\PP\left(\bigcap\limits _{j=1}^{k-1} E_{j}\complementary \cap E_{k}\right)}_{Z\coloneqq \min\{n\in \mathbb{N} :X_{n} =1\}} =p( 1-p)^{k-1}
 \end{equation*}
 
 $Z$ è il numero minimo di prove per dare un successo.\begin{align*}
-\overbrace{p_{Z}( +\infty ) =\PP( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\comp\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\comp\right)\\
+\overbrace{p_{Z}( +\infty ) =\PP( Z=+\infty )}^{\text{i.e. sempre insuccessi}} & =\PP\left(\bigcap _{j\in \mathbb{N}} E_{j}\complementary\right) =\lim _{n\rightarrow \infty }\PP\left(\bigcap _{j=1}^{n} E_{j}\complementary\right)\\
  & =\lim _{n\rightarrow \infty }( 1-p)^{n} =0
 \end{align*}
 

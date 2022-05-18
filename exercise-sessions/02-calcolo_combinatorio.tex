@@ -516,30 +516,30 @@ Se $B$ è l'evento "vinco senza precisare l'ordine", allora
 
 Dato che le persone sono selezionate in modo casuale possiamo considerare una distribuzione uniforme. Pertanto, una volta determinato $( \Omega ,\mathcal{A})$ avremo che $\PP( A) =\frac{| A| }{| \Omega | }$.
 \begin{enumerate}
-\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dots 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\comp$ e avremo:\begin{equation*}
+\item Costruiamo $\Omega $: abbiamo $n$ persone, ognuna delle quali ha $365$ possibilità di essere nata in un dato giorno $\implies \Omega =\{1\dots 365\}^{n} ,| \Omega | =365^{n}$. Calcoliamo la probabilità che le $n$ persone siano nate tutte in giorni diversi, i.e. detto $A=$ "almeno due persone compiono gli anni lo stesso giorno", calcoliamo $A\complementary$ e avremo:\begin{equation*}
 \begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
-A\comp =\text{"tutte le persone sono nate in giorni diverse"}\\
-A\comp =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
-\left| A\comp\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\frac{365!}{365^{n}( 365-n) !}
+\PP( A) =\PP\left( \Omega -A\complementary\right) =1-\PP\left( A\complementary\right)\\
+A\complementary =\text{"tutte le persone sono nate in giorni diverse"}\\
+A\complementary =\{\omega =( \omega _{1} ,\dots ,\omega _{n}) :\omega _{i} \neq \omega _{j} \ \forall i\neq j\}\\
+\left| A\complementary\right| =365\cdot 364\cdots ( 365-n+1) =\frac{365!}{( 365-n) !}\\
+\implies \PP\left( A\complementary\right) =\frac{\left| A\complementary\right| }{| \Omega | } =\frac{365!}{365^{n}( 365-n) !}\\
+\implies \PP( A) =1-\PP\left( A\complementary\right) =1-\frac{365!}{365^{n}( 365-n) !}
 \end{array}
 \end{equation*}
 
 Si può calcolare $n$ per cui $p_{n}  >\frac{1}{2}$: $n=23$.
 \item Come nel punto precedente, possiamo considerare $\Omega =\{365\}^{n}$. Sia $A=$ "almeno una persona compie gli anni il mio stesso giorno", anche in questo caso ci conviene calcolare la probabilità dell'evento complementare:\begin{equation*}
 \begin{array}{ l }
-\PP( A) =\PP\left( \Omega -A\comp\right) =1-\PP\left( A\comp\right)\\
-A\comp =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
-\left| A\comp\right| =364^{n}
+\PP( A) =\PP\left( \Omega -A\complementary\right) =1-\PP\left( A\complementary\right)\\
+A\complementary =\text{"nessuna persona compie gli anni il mio stesso giorno"}\\
+\left| A\complementary\right| =364^{n}
 \end{array}
 \end{equation*}
 
 Ci sono $n$ persone e ognuna di esse \textit{non} compie gli anni lo stesso giorno del mio compleanno: per ognuna di esse abbiamo $364$ possibilità (i restanti giorni dell'anno).\begin{equation*}
 \begin{array}{ l }
-\implies \PP\left( A\comp\right) =\frac{\left| A\comp\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
-\implies \PP( A) =1-\PP\left( A\comp\right) =1-\left(\frac{364}{365}\right)^{n}
+\implies \PP\left( A\complementary\right) =\frac{\left| A\complementary\right| }{| \Omega | } =\frac{364^{n}}{365^{n}} =\left(\frac{364}{365}\right)^{n}\\
+\implies \PP( A) =1-\PP\left( A\complementary\right) =1-\left(\frac{364}{365}\right)^{n}
 \end{array}
 \end{equation*}
 
