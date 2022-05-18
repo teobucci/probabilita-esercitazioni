@@ -439,12 +439,12 @@ Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose
 \PP(A_{1} \mid B_{1}) =\frac{\PP(A_{1} \cap B_{1})}{\PP(B_{1})}
 \end{equation*}
 
-Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero "il $15$ estratto $1$ volta" può essere scritto come
+Anche in questo caso dobbiamo \textit{scrivere gli eventi usando le informazioni che abbiamo}. Osserviamo allora che $B_{1}$, ovvero \event{il $15$ estratto $1$ volta} può essere scritto come
 \begin{equation*}
 B_{1} =\bigcup _{j=1}^{42}\left(A_{j} \cap \bigcap _{k\neq j} A_{k}\complementary\right) =
 \end{equation*}
 
-i.e. $B_{1}$ è unione disgiunta degli eventi "$15$ esce solo alla $k$-esima estrazione" e quindi
+i.e. $B_{1}$ è unione disgiunta degli eventi \event{$15$ esce solo alla $k$-esima estrazione} e quindi
 \begin{equation*}
 \PP(B_{1}) =42\PP(A_{j})\PP\left(\bigcap _{k\neq j} A_{j}\complementary\right) =42\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{41}
 \end{equation*}
@@ -512,7 +512,7 @@ Consideriamo l'evento
 	\item $\PP(A) =1/3$
 	\item Introduciamo l'evento
 	\begin{equation*}
-	V_{\text{cons}} =\text{"vinco conservando il pacco scelto inizialmente"}
+	V_{\text{cons}} =\event{vinco conservando il pacco scelto inizialmente}
 	\end{equation*}
 
 	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:\begin{theorem}
@@ -539,7 +539,7 @@ Consideriamo l'evento
 	\end{enumerate}
 	\item Introduciamo l'evento
 	\begin{equation*}
-	V_{\text{camb}} =\text{"vinco cambiando il pacco scelto inizialmente"}
+	V_{\text{camb}} =\event{vinco cambiando il pacco scelto inizialmente}
 	\end{equation*}
 
 	allora
@@ -633,7 +633,7 @@ Ad esempio, per rispondere terzo punto ci interessano solo gli eventi in cui ala
 Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella vittoriosa è solo una, i.e. $\PP(V_{\text{cons}}) =\frac{1}{3}$.
 
 \begin{oss}
-	Intuitivamente: il conduttore aprendo un pacco ci sta dando delle informazioni in più: è come se, con la sua informazione, ci dicesse "il pacco rimasto (non il tuo) ha $\frac{2}{3}$ di probabilità di essere il pacco vincente". Cioè se prima avevo una probabilità di $\frac{2}{3}$ "distribuita su $2$ pacchi", adesso questa probabilità è tutta "concentrata sull'altro pacco". Quindi mi conviene cambiare pacco perché questo ha una probabilità più alta $\left(\frac{2}{3}\right)$ rispetto al mio $\left(\frac{1}{3}\right)$ di contenere l'assegno.
+	Intuitivamente: il conduttore aprendo un pacco ci sta dando delle informazioni in più: è come se, con la sua informazione, ci dicesse ``il pacco rimasto (non il tuo) ha $\frac{2}{3}$ di probabilità di essere il pacco vincente''. Cioè se prima avevo una probabilità di $\frac{2}{3}$ \emph{distribuita su $2$ pacchi}, adesso questa probabilità è tutta \emph{concentrata sull'altro pacco}. Quindi mi conviene cambiare pacco perché questo ha una probabilità più alta $\left(\frac{2}{3}\right)$ rispetto al mio $\left(\frac{1}{3}\right)$ di contenere l'assegno.
 
 
 	% Pattern Info
