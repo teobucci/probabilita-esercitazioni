@@ -154,11 +154,11 @@ $\\$Se il vettore aleatorio $(X,Y)$ è continuo allora $X$ e $Y$ sono variabili 
 
 \begin{theorem}[Calcolo delle leggi marginali]
 \label{introth5}
-$\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $f_{(X,Y)}$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
+$\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $\fXY$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
 \begin{gather*}
 \begin{aligned}
-&f_X(x)=\int_\RR f_{(X,Y)}(x,y)\text{ d}y&\forall x\in\RR \\
-&f_Y(y)=\int_\RR f_{(X,Y)}(x,y)\text{ d}x&\forall y\in\RR
+&f_X(x)=\int_\RR \fXYxy\text{ d}y&\forall x\in\RR \\
+&f_Y(y)=\int_\RR \fXYxy\text{ d}x&\forall y\in\RR
 \end{aligned}
 \end{gather*}
 \end{theorem}
@@ -166,12 +166,12 @@ $\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $f_{(
 Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza, cioè
 \begin{theorem}[Fattorizzazione della legge congiunta]
 \label{introth6}
-$\\$$X\indep Y\ \Longleftrightarrow\ f_{(X,Y)}(x,y)=f_X(x)\cdot f_Y(y)$
+$\\$$X\indep Y\ \Longleftrightarrow\ \fXYxy=f_X(x)\cdot f_Y(y)$
 \end{theorem}
 
 \begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
 \label{introth7}
-$\\$Siano $X$ e $Y$ due variabili aleatorie continue e indipendenti con densità rispettivamente $f_X$ su $S_X$ e $f_Y$ su $S_Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $f_{(X,Y)}$ su $S_{(X,Y)}$. Allora deve valere che
+$\\$Siano $X$ e $Y$ due variabili aleatorie continue e indipendenti con densità rispettivamente $f_X$ su $S_X$ e $f_Y$ su $S_Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $\fXY$ su $S_{(X,Y)}$. Allora deve valere che
 \begin{equation*}
 S_{(X,Y)}=S_X\cdot S_Y
 \end{equation*}
@@ -179,10 +179,10 @@ S_{(X,Y)}=S_X\cdot S_Y
 
 \begin{theorem}[Regola del valore atteso per vettori continui]
 \label{introth8}
-$\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $f_{(X,Y)}$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
+$\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $\fXY$. Allora $\forall h:\RR^2\to\RR$ borelliana e $\forall h:\RR^2\to[0,+\infty)$
 \begin{enumerate}
-\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot f_{(X,Y)}\in L^1(m_2)$
-\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)f_{(X,Y)}(x,y) \text{ d}x\text{d}y$
+\item [i)] $h\in L^1(P^{(X,Y)})\ \Longleftrightarrow\ h\cdot \fXY\in L^1(m_2)$
+\item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)\fXYxy \text{ d}x\text{d}y$
 \end{enumerate}
 \end{theorem}
 
@@ -240,14 +240,14 @@ Var(Y)&=A\cdot Var(X)\cdot A^T
 Ora anticipiamo due risultati notevoli che verranno poi dimostrati nelle pagine a seguire.
 \begin{theorem}[Risultato notevole (esercizio 13 del foglio 7)]
 \label{introth14}
-$\\$Date $X$ e $Y$ di legge congiunta continua con densità $f_{(X,Y)}$, si consideri $Z=X+Y$. Allora $Z$ èuna variabile aleatoria continua con densità
+$\\$Date $X$ e $Y$ di legge congiunta continua con densità $\fXY$, si consideri $Z=X+Y$. Allora $Z$ èuna variabile aleatoria continua con densità
 \[
-f_Z(z)=\int_{-\infty}^{+\infty} f_{(X,Y)}(z-y,y)\dy
+f_Z(z)=\int_{-\infty}^{+\infty} \fXY(z-y,y)\dy
 \]
 \end{theorem}
 \begin{theorem}[Risultato notevole (esercizio 2 del foglio 7)]
 \label{introth15}
-$\\$Due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$ q.o.
+$\\$Due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $\fXYxy=h_1(x)\ h_2(y)$ q.o.
 \end{theorem}
 
 \subsection{Qualche integrale notevole}
@@ -310,7 +310,7 @@ Si esibisca un esempio di due variabili aleatorie continue $X$ e $Y$ con legge c
 Si esibisca poi un esempio di due variabili aleatorie continue $X$ e $Y$ con legge congiunta non continua.
 
 \Esercizio{$^\ast$}
-Si mostri che due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$ q.o.
+Si mostri che due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $\fXYxy=h_1(x)\ h_2(y)$ q.o.
 
 \Esercizio{}
 Date $X,Y$ indipendenti ed entrambe di legge $\mathcal{E}(\lambda)$, $\lambda>0$, si calcoli $\PP(Y>X)$.
@@ -318,7 +318,7 @@ Date $X,Y$ indipendenti ed entrambe di legge $\mathcal{E}(\lambda)$, $\lambda>0$
 \Esercizio{}
 Sia $(X,Y)$ un vettore aleatorio con densità
 \begin{equation*}
-f_{(X,Y)}(x,y)=\begin{cases} x(y-x)e^{-y},&0<x<y, \\ 0,&\text{altrove}.\end{cases}
+\fXYxy=\begin{cases} x(y-x)e^{-y},&0<x<y, \\ 0,&\text{altrove}.\end{cases}
 \end{equation*}
 \begin{enumerate}
 \item [(a)] Calcolare le leggi di $X$ e di $Y$.
@@ -406,7 +406,7 @@ Un componente elettronico è formato da tre elementi indipendenti in serie, cias
 \Esercizio{}
 Date $X$ e $Y$ di legge congiunta continua con densità $\fXY$, si consideri $Z=X+Y$. Si mostri che $Z$ è una variabile aleatoria continua con densità
 \[
-f_Z(z)=\int_{-\infty}^{+\infty} f_{(X,Y)}(z-y,y)\dy
+f_Z(z)=\int_{-\infty}^{+\infty} \fXY(z-y,y)\dy
 \]
 Si mostri questo risultato procedendo nei due seguenti modi:
 \begin{enumerate}
@@ -519,7 +519,7 @@ La dimostrazione si articola in due parti:
 \begin{enumerate}
 \item [$(\Rightarrow)$] Questo caso è banale, perché basta prendere $h_1(x)=f_X(x)$ e $h_2(y)=f_Y(y)$.
 
-\item [$(\Leftarrow)$] Sappiamo per ipotesi che $f_{(X,Y)}(x,y)=h_1(x)\ h_2(y)$. Allora grazie al teorema (\ref{introth6}) calcoliamo le due marginali come
+\item [$(\Leftarrow)$] Sappiamo per ipotesi che $\fXYxy=h_1(x)\ h_2(y)$. Allora grazie al teorema (\ref{introth6}) calcoliamo le due marginali come
 \begin{gather*}
 \begin{aligned}
 &f_X(x)=\int_\RR h_1(x)\ h_2(y) \dy=h_1(x)\int_\RR h_2(y) \dy \\
@@ -541,7 +541,7 @@ e quindi concludere che $X$ e $Y$ sono indipendenti.
 L'enunciato è quindi dimostrato.
 
 \Soluzione{}
-Il vettore aleatorio $(X,Y):\Omega\to\mathbb{R}^2$ è assolutamente continuo; la sua densità $f_{(X,Y)}(x,y)$, essendo $X$ e $Y$ indipendenti, è data, grazie al  teorema (\ref{introth6}), dal prodotto tra le due densità marginali
+Il vettore aleatorio $(X,Y):\Omega\to\mathbb{R}^2$ è assolutamente continuo; la sua densità $\fXYxy$, essendo $X$ e $Y$ indipendenti, è data, grazie al  teorema (\ref{introth6}), dal prodotto tra le due densità marginali
 \begin{gather*}
 \begin{aligned}
 &f_X(x)=\lambda e^{-\lambda x}\ \Ind_{[0,+\infty)}(x) \\
@@ -552,7 +552,7 @@ Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $
 \begin{gather*}
 \begin{aligned}
 \PP(Y>X)&=\PP((X,Y)\in T)= \\
-&=\int_T f_{(X,Y)}(x,y) \text{ d}x\text{d}y= \\
+&=\int_T \fXYxy \text{ d}x\text{d}y= \\
 &=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\text{ d}x\text{d}y= \\
 &=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
 &=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
@@ -584,13 +584,13 @@ Allora $1=2\ \PP(X<Y)\ \Longrightarrow\ \PP(Y>X)=\frac{1}{2}$.
 
 Conoscendo la densità congiunta del vettore aleatorio assolutamente continuo $(X,Y)$, per calcolare le leggi marginali usiamo il teorema (\ref{introth5}). Prima di procedere però è sempre meglio capire come è fatto il supporto della densità congiunta, così da capire quale sarà il supporto delle marginali:
 \[
-S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ f_{(X,Y)}(x,y)>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
+S_{(X,Y)}:=\{(x,y)\in\RR^2\ \big|\ \fXYxy>0   \}=\{(x,y)\in\RR^2\ \big|\ 0<x<y   \}
 \]
 \fg{0.3}{7_17}
 Dal grafico della densità congiunta deduciamo un'importante informazione su $X$ e $Y$: $X,Y\geq 0$ quasi certamente, cioè $f_X(x)=0$ per ogni $x<0$ e $f_Y(y)=0$ per ogni $y<0$. Quindi fissiamo $x\geq 0$ e procediamo con il calcolo della prima legge marginale:
 \begin{gather*}
 \begin{aligned}
-f_X(x)&=\int_\RR f_{(X,Y)}(x,y)\text{ d}y= \\
+f_X(x)&=\int_\RR \fXYxy\text{ d}y= \\
 &=\int_x^{+\infty}x(y-x)e^{-y}\text{ d}y= \\
 &=\begin{Bmatrix}
 \text{cambio di variabile}\\t:=y-x 
@@ -607,7 +607,7 @@ con $(\alpha^2)$ che sintetizza la seguente osservazione: data $T\sim\mathcal{E}
 Ora fissiamo $y\geq 0$ e calcoliamo la seconda legge marginale:
 \begin{gather*}
 \begin{aligned}
-f_Y(y)&=\int_\RR f_{(X,Y)}(x,y)\text{ d}x= \\
+f_Y(y)&=\int_\RR \fXYxy\text{ d}x= \\
 &=\int_0^y x(y-x)e^{-y}\text{ d}x= \\
 &=e^{-y}\left( y\int_0^y x\text{ d}x-\int_0^yx^2\text{ d}x  \right)=\\
 &=e^{-y}\left( y\left[\frac{x^2}{2}    \right]_0^y-\left[\frac{x^3}{3}    \right]  \right)=\\
@@ -659,7 +659,7 @@ Tuttavia non lo sono, quindi dobbiamo ricondurre l'evento $X\leq 2, Y\leq 3$ all
 \begin{gather*}
 \begin{aligned}
 \PP(X\leq 2, Y\leq 3)&=\PP((X,Y)\in(-\infty,2]\times(-\infty,3])=\\
-&=\int_{-\infty}^2\left(\int_{-\infty}^3f_{(X,Y)}(x,y)\text{ d}y   \right)\text{d}x=
+&=\int_{-\infty}^2\left(\int_{-\infty}^3\fXYxy\text{ d}y   \right)\text{d}x=
 \end{aligned}
 \end{gather*}
 che per 
@@ -688,7 +688,7 @@ $\\$Il coefficiente di correlazione lineare si calcola con
 Al volo possiamo già dire che $\EE[X]=2=Var(X)$ e $\EE[Y]=4=Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
 \begin{aligned}
-\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xyf_{(X,Y)}(x,y) \text{ d}x\text{d}y=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
+\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \text{ d}x\text{d}y=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\text{ d}y}_{(\beta)}   \right)\text{d}x-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\text{ d}y}_{(\alpha)}   \right)\text{d}x=\\
 &=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\text{d}x-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\text{d}x=\\
 &=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\text{ d}x-\int_0^{+\infty}x^3(x+1)e^{-x}\text{ d}x=\\
