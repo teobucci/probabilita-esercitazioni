@@ -22,7 +22,7 @@ per ogni $u,x\in\RR^n$.
 \label{carmom}
 Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di legge $P^X$. La funzione caratteristica di $X$ è $\widehat P^X =\varphi_X:\RR^n\to \CC$ definita come
 \[
-\varphi_X(u)=\int_{\RR^n}e^{i \langle u|X\rangle}\ P^X(\dx)=\EE\left[e^{i \langle u|X\rangle}\right]=\int_\Omega e^{i \langle u|X\rangle}\dP
+\varphi_X(u)=\int_{\RR^n}e^{i \langle u|X\rangle}\ P^X(\dx)=\EE\left[e^{i \langle u|X\rangle}\right]=\int_\Omega e^{i \langle u|X\rangle}\dPP
 \]
 \end{definition}
 \emph{Esempio}. Sia $X\sim\delta_t$ con $t\in\RR$. Allora
@@ -1165,3 +1165,204 @@ Per quanto riguarda il valore atteso:
 \Soluzione{} %21
 
 \Soluzione{} %22
+
+Vediamo di ricapitolare quello che sappiamo già sulla media campionaria:
+
+\begin{enumerate}
+
+\item [(i)] date $X_1,\dots,X_n$ VAR i.i.d. tali che $\EE\left[X_k \right]=\mu$ e $Var(X_k)=\sigma^2$ si ha
+$$
+\overline{X}_n = \frac{1}{n}\sum_{k=1}^n X_k \qquad \EE\left[\overline{X}_n\right]=\mu \qquad Var\left(\overline{X}_n\right)=\frac{\sigma^2}{n}
+$$
+(esercizio 3 foglio 6)
+
+\item [(ii)] date $X_1,\dots,X_n$ VAR i.i.d. si ha
+$$
+\varphi_{\overline{X}_n}(u)=\left(\varphi_{X_1}\left(\frac{u}{n}\right)\right)^n
+$$
+(esercizio 7 foglio 8)
+
+\end{enumerate}
+
+In questo caso le $X_1,\dots,X_n$ sono i.i.d. $\Nc\left(\mu,\sigma^2\right)$ e dunque dal punto (i) deduciamo che
+$$
+\boxed{\overline{X}_n\sim\Nc\left(\mu,\frac{\sigma^2}{n}\right)}
+$$
+mentre dal punto (ii) che 
+$$
+\boxed{\varphi_{\overline{X}_n}(u)=\left(\varphi_{X_1}\left(\frac{u}{n}\right)\right)^n=e^{i\mu u-\frac{1}{2}\,\frac{\sigma^2}{n}\, u^2}}
+$$
+Iniziamo con l'esercizio vero e proprio.
+
+\begin{enumerate}
+\item [(a)] Si calcoli $\varphi_{\left(\overline{X}_n,Y_1,\dots,Y_n\right)}$.
+
+Per calcolare 
+$$
+\varphi_{(\overline{X}_n,Y_1,\dots,Y_n)}(u) \qquad \text{ con } \qquad u=\left(u_1,\dots,u_{n+1}\right)
+$$
+è utile vedere $\left(\overline{X}_n,Y_1,\dots,Y_n\right)$ come trasformazione affine di $(X_1,\dots,X_n)$:
+$$
+\displaystyle \underbrace{\begin{pmatrix}
+\overline{X}_{n}\\
+Y_{1}\\
+\vdots \\
+\vdots \\
+Y_{n}
+\end{pmatrix}}_{\in \mathbb{R}^{n+1}} =\underbrace{\begin{pmatrix}
+\textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}} & \textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}} & \textcolor[rgb]{0.15,0.11,0.85}{\cdots } & \textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}}\\
+\textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\cdots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}}\\
+\textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\ddots } & \textcolor[rgb]{0.05,0.69,0.11}{\vdots }\\
+\textcolor[rgb]{0.05,0.69,0.11}{\vdots } & \textcolor[rgb]{0.05,0.69,0.11}{\ddots } & \textcolor[rgb]{0.82,0.01,0.11}{\ddots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}}\\
+\textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\cdots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}}
+\end{pmatrix}}_{A \in \mathbb{R}^{n+1,n}}\underbrace{\begin{pmatrix}
+X_{1}\\
+X_{2}\\
+\vdots \\
+X_{n}
+\end{pmatrix}}_{\in \mathbb{R}^{n}}
+$$
+Allora per il teorema (\ref{t_affine_t})
+$$
+\varphi_{(\overline{X}_n,Y_1,\dots,Y_n)}(u)=\underbrace{e^{i\langle u|b\rangle}}_{=1} \ \varphi_{(X_1,\dots,X_n)}\left(A^T  u\right)
+$$
+Vediamo com'è fatto il vettore $\left(A^T  u\right)$:
+$$
+A^{T} u=\begin{pmatrix}
+\textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}} & \textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\cdots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}}\\
+\textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\ddots } & \textcolor[rgb]{0.05,0.69,0.11}{\vdots }\\
+\textcolor[rgb]{0.15,0.11,0.85}{\vdots } & \textcolor[rgb]{0.05,0.69,0.11}{\vdots } & \textcolor[rgb]{0.05,0.69,0.11}{\ddots } & \textcolor[rgb]{0.82,0.01,0.11}{\ddots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}}\\
+\textcolor[rgb]{0.15,0.11,0.85}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.05,0.69,0.11}{\cdots } & \textcolor[rgb]{0.05,0.69,0.11}{-}\textcolor[rgb]{0.05,0.69,0.11}{\frac{1}{n}} & \textcolor[rgb]{0.82,0.01,0.11}{1-}\textcolor[rgb]{0.82,0.01,0.11}{\frac{1}{n}}
+\end{pmatrix}\begin{pmatrix}
+u_{1}\\
+u_{2}\\
+\vdots \\
+\vdots \\
+u_{n+1}
+\end{pmatrix} =\begin{pmatrix}
+\dfrac{u_{1}}{n} +\left( u_{2} -\dfrac{1}{n}\displaystyle\sum _{j=2}^{n+1} u_{j}\right)\\
+\vdots \\
+\vdots \\
+\dfrac{u_{1}}{n} +\left( u_{n+1} -\dfrac{1}{n}\displaystyle\sum _{j=2}^{n+1} u_{j}\right)
+\end{pmatrix}
+$$
+Invece $\varphi_{(X_1,\dots,X_n)}$ vale:
+$$
+\varphi_{(X_1,\dots,X_n)}(v_1,\dots,v_n)\overset{\underset{\indep}{}}{=}\varphi_{X_1}(v_1)\cdots\varphi_{X_n}(v_n)=\exp\left\{i\mu\sum_{k=1}^n v_k-\frac{1}{2}\sigma^2\sum_{k=1}^n v_k^2  \right\}
+$$
+Però nel nostro caso il vettore $v$ è $A^T u$, quindi calcoliamoci
+\begin{gather*}
+\begin{aligned}
+&\sum_{k=1}^n v_k=u_1 &\text{(il resto si semplifica)} \\
+&\sum_{k=1}^n v_k^2=\frac{u_1^2}{n^2}+\sum_{k=2}^{n+1}\left(u_k-\frac{1}{n}\sum_{j=2}^{n+1}h_j \right)^2 &\text{(il doppio prodotto si semplifica)}
+\end{aligned}
+\end{gather*}
+Finalmente possiamo riprendere il calcolo 
+\begin{gather*}
+\begin{aligned}
+\varphi_{(\overline{X}_n,Y_1,\dots,Y_n)}(u)&=\varphi_{(X_1,\dots,X_n)}\left(A^T  u\right)= \\
+&=\exp\left\{i\mu u_1-\frac{1}{2}\,\frac{\sigma^2}{n}\, u_1^2\right\}\cdot \exp\left\{-\frac{1}{2}\sigma^2 \sum_{k=2}^{n+1}\left(u_k-\frac{1}{n}\sum_{j=2}^{n+1}h_j \right)^2  \right\} \\
+&=\varphi_{\overline{X}_n}(u_1)\cdot \varphi_{(Y_1,\dots,Y_n)}(u_2,\dots,u_{n+1})
+\end{aligned}
+\end{gather*}
+
+\item [(b)] Se ne deduca l'indipendenza di $\overline{X}_n$ e $S_n^2$.
+
+Abbiamo appena dimostrato che $\varphi_{(\overline{X}_n,Y_1,\dots,Y_n)}$ si fattorizza in $\varphi_{\overline{X}_n}\cdot \varphi_{(Y_1,\dots,Y_n)}$, quindi 
+$$
+\overline{X}_n\indep(Y_1,\dots,Y_n)
+$$
+Ma 
+$$
+S_n^2=\frac{1}{n-1}\sum_{k=1}^n\left( X_k-\overline{X}_n  \right)^2 = \frac{1}{n-1}\sum_{k=1}^n Y_k^2
+$$
+cioè è una funzione del vettore  $(Y_1,\dots,Y_n)$. 
+
+Questo è sufficiente per concludere che 
+$$
+\boxed{\overline{X}_n\indep S_n^2}
+$$
+
+\item [(c)] Si mostri che $Z=\dfrac{\overline{X}_n-\mu}{\sigma/\sqrt{n}}\sim\Nc(0,1)$.
+
+$Z$ è una variabile aleatoria gaussiana in quanto dipende solamente da $\overline{X}_n$ (e altre costanti), che è a sua volta variabile aleatoria gaussiana. Allora
+\begin{gather*}
+\begin{aligned}
+&\EE[Z]=\EE\left[\frac{\overline{X}_n-\mu}{\sigma/\sqrt{n}} \right]=\frac{\EE\left[\overline{X}_n\right]-\mu}{\sigma/\sqrt{n}}=0 \\
+&Var(Z)=Var\left(\frac{\overline{X}_n-\mu}{\sigma/\sqrt{n}} \right)=\frac{1}{\sigma^2/n}\ Var\left(\overline{X}_n\right)=1
+\end{aligned}
+\end{gather*}
+Allora $Z\sim\Nc(0,1)$.
+
+\item [(d)] Sapendo che $Q=\dfrac{n-1}{\sigma^2}\ S_n^2\sim\chi^2(n-1)$, si calcoli la funzione caratteristica di $\varphi_{(\overline{X}_n,S_n^2)}$.
+
+Ricordando che $\chi^2(n-1)=\Gamma\left(\frac{n-1}{2},\frac{1}{2} \right)$ e che la funzione caratteristica di $X\sim\Gamma(\alpha,\lambda)$ vale
+$$
+\varphi_X(u)=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha
+$$
+possiamo dire che
+\begin{gather*}
+\begin{aligned}
+\varphi_{(\overline{X}_n,S_n^2)}(u,v)\overset{\underset{\indep}{}}{=}&\varphi_{\overline{X}_n}(u)\cdot\varphi_{S^2_n}(v)= \\
+=&\varphi_{\overline{X}_n}(u)\cdot\varphi_{\frac{\sigma^2}{n-1}Q}(v)= \\
+=&\varphi_{\overline{X}_n}(u)\cdot\varphi_{Q}\left(\frac{\sigma^2}{n-1}\,v\right)= \\
+=&\exp\left\{i\mu u-\frac{1}{2}\,\frac{\sigma^2}{n}\, u^2\right\}\cdot\left(\frac{1/2}{1/2-i\frac{\sigma^2}{n-1}v}\right)^{\frac{n-1}{2}} =\\
+=&\exp\left\{i\mu u-\frac{1}{2}\,\frac{\sigma^2}{n}\, u^2\right\}\cdot\left(\frac{1}{1-2i\frac{\sigma^2}{n-1}v}\right)^{\frac{n-1}{2}}
+\end{aligned}
+\end{gather*}
+
+\item [(e)] Si calcolino le funzioni caratteristiche $\varphi_{\left(\overline{X}_n^2,S_n^2\right)}$ e $\varphi_{\overline{X}_n^2+S_n^2}$ nel caso $\mu=0$.
+
+Cerchiamo di capire la legge di $\overline{X}_n^2$. Sappiamo già che
+$$
+Z=\left.\frac{\overline{X}_n-\mu}{\sigma/\sqrt{n}}\right|_{\mu=0}=\frac{\overline{X}_n}{\sigma/\sqrt{n}} \implies \overline{X}_n=\frac{\sigma}{\sqrt{n}}Z \implies \overline{X}_n^2= \frac{\sigma^2}{n}Z^2
+$$ 
+Inoltre grazie al punto (d) dell'esercizio 8 foglio 8, sappiamo anche che la somma dei quadrati di VA i.i.d. gaussiane standard è una chi-quadro. Allora
+\begin{gather*}
+\overline{X}_n^2= \frac{\sigma^2}{n}Z^2\sim\frac{\sigma^2}{n}\chi^2(1)\sim\frac{\sigma^2}{n}\ \Gamma\left(\frac{1}{2},\frac{1}{2}\right) \\
+\implies \varphi_{\left(\overline{X}_n^2\right)}(u)=\varphi_{\left(\frac{\sigma^2}{n}\,\Gamma\left(\frac{1}{2},\frac{1}{2}\right)\right)}(u)=\varphi_{\left(\Gamma\left(\frac{1}{2},\frac{1}{2}\right)\right)}\left(\frac{\sigma^2}{n}u  \right)=\left(\frac{1}{1-2i\frac{\sigma^2}{n}u}\right)^{\frac{1}{2}}
+\end{gather*}
+Dunque
+$$
+\varphi_{\left(\overline{X}_n^2,S_n^2\right)}=\left(\frac{1}{1-2i\frac{\sigma^2}{n}u}\right)^{\frac{1}{2}} \left(\frac{1}{1-2i\frac{\sigma^2}{n-1}v}\right)^{\frac{n-1}{2}}
+$$
+Per il corollario (\ref{Legge della somma di variabili indipendenti}) tale funzione caratteristica è anche la funzione caratteristica di $\overline{X}_n^2+S_n^2$, cioè
+$$
+\varphi_{\left(\overline{X}_n^2,S_n^2\right)}=\left(\frac{1}{1-2i\frac{\sigma^2}{n}u}\right)^{\frac{1}{2}} \left(\frac{1}{1-2i\frac{\sigma^2}{n-1}v}\right)^{\frac{n-1}{2}}=\varphi_{\overline{X}_n^2+S_n^2}
+$$
+
+\item [(f$^*$)] Si trovi la densità continua della variabile aleatoria $T=\dfrac{\overline{X}_n-\mu}{\sqrt{S_n^2/n}}$.
+
+Il trucco per arrivare alla soluzione sta nell'esplicitare la dipendenza di $T$ da $Z$ e $Q$ moltiplicando e dividendo per opportune quantità
+$$
+T=\frac{\overline{X}_n-\mu}{\sqrt{S_n^2/n}}\overset{\underset{\dots}{}}{=}\frac{Z}{\sqrt{Q/(n-1)}}
+$$
+in modo tale da poter sfruttare l'indipendenza tra $Z$ e $Q$.
+
+A questo punto per determinare la legge di $T$ o si passa per il calcolo della funzione di ripartizione oppure si cerca di utilizzare in maniera furba la formula di Jacobi (\ref{introth3}), vedendo:
+$$ T = g_1(Z,Q) $$
+Ricordandoci che nel caso 1D tali passaggi sono più complessi rispetto al calcolo di $F_T$ nella nostra testa si potrebbe accendere una lampadina:
+$$
+\begin{pmatrix}
+T \\ Q
+\end{pmatrix}
+=
+g \begin{pmatrix}
+Z \\ Q
+\end{pmatrix}
+=
+\begin{pmatrix}
+g_1(Z,Q) \\ Q
+\end{pmatrix}  
+$$
+Allora possiamo applicare la ben più comoda formula di Jacobi (\ref{introth4}) nel caso 2D per trovare la congiunta $f_{(T,Q)}$ e poi la marginale $f_T$ grazie al teorema (\ref{introth5}). 
+
+Svolgendo i suddetti passaggi si dovrebbe ottenere
+$$
+f_T(x)=\frac{\Gamma\left(\frac{n}{2}\right)}{\Gamma\left(\frac{n-1}{2}\right)}\ \frac{1}{\sqrt{\pi(n-1)}}\ \frac{1}{\left(1+\frac{x^2}{n-1}\right)^{\frac{n}{2}}} \qquad x\in\RR
+$$
+e quindi $T\sim t(n-1)$, cioè ha distribuzione $t$ di Student a $n-1$ gradi di liberta.
+
+\fg{0.7}{8_3}
+
+\end{enumerate}
