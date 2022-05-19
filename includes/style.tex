@@ -236,6 +236,17 @@
 \newcommand{\fXY}{f_{(X,Y)}}
 \newcommand{\fXYxy}{\fXY(x,y)}
 
+
+% spaziature https://tex.stackexchange.com/questions/438612/space-between-exists-and-forall
+% questo aggiunge un piccolo spazio dopo \forall
+\let\oldforall\forall
+\renewcommand{\forall}{\oldforall \, }
+% questo aggiunge un piccolo spazio dopo \exists
+\let\oldexist\exists
+\renewcommand{\exists}{\oldexist \: }
+% questo aggiunge un comando \existsu per l'esiste ed è unico
+\newcommand\existu{\oldexist! \: }
+
 %----------------------------------------------------------------------------------------
 %	APPENDICE
 %----------------------------------------------------------------------------------------
