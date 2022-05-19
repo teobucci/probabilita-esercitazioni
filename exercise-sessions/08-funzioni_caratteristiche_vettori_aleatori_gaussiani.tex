@@ -6,7 +6,7 @@ Sia $\PP$ una probabilità su $(\RR,\Bc)$, la funzione caratteristica (o \emph{t
 \begin{gather*}
 \begin{aligned}
 \widehat{\PP}=\varphi: \RR^n &\to \CC\\
-u&\mapsto\varphi (u)\coloneqq \int_{\RR^n}e^{i\langle u|x\rangle}\ \PP(\text{d}x)
+u&\mapsto\varphi (u)\coloneqq \int_{\RR^n}e^{i\langle u|x\rangle}\ \PP(\dx)
 \end{aligned}
 \end{gather*}
 \end{definition}
@@ -22,7 +22,7 @@ per ogni $u,x\in\RR^n$.
 \label{carmom}
 Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di legge $P^X$. La funzione caratteristica di $X$ è $\widehat P^X =\varphi_X:\RR^n\to \CC$ definita come
 \[
-\varphi_X(u)=\int_{\RR^n}e^{i \langle u|X\rangle}\ P^X(\text{d}x)=\EE\left[e^{i \langle u|X\rangle}\right]=\int_\Omega e^{i \langle u|X\rangle}\dP
+\varphi_X(u)=\int_{\RR^n}e^{i \langle u|X\rangle}\ P^X(\dx)=\EE\left[e^{i \langle u|X\rangle}\right]=\int_\Omega e^{i \langle u|X\rangle}\dP
 \]
 \end{definition}
 \emph{Esempio}. Sia $X\sim\delta_t$ con $t\in\RR$. Allora
@@ -922,7 +922,7 @@ abbiamo
 &=\int_\RR e^{iux}\ \frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}\ e^{-\lambda x}\ \Ind_{(0,+\infty)}(x)\dx=\\
 &=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} x^{\alpha-1}\ e^{-(\lambda-iu) x}\dx=\\
 &=\{ y\coloneqq(\lambda-iu)x \}=\\
-&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} \frac{y^{\alpha-1}}{(\lambda-iu)^{\alpha-1}}\ e^{-y}\ \frac{\text{d}y}{\lambda-iu}=\\
+&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_{0}^{+\infty} \frac{y^{\alpha-1}}{(\lambda-iu)^{\alpha-1}}\ e^{-y}\ \frac{\dy}{\lambda-iu}=\\
 &=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ \frac{1}{(\lambda-iu)^{\alpha}}\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy =\\
 &=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha\ \frac{1}{\Gamma(\alpha)}\underbrace{\int_{0}^{+\infty} y^{\alpha-1}\ e^{-y}\dy}_{\Gamma(\alpha)}=\\
 &=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha

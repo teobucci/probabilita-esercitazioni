@@ -59,8 +59,8 @@ Siano $\Omega,\Omega'\subseteq\RR^2$ due domini regolari. Sia $g:\Omega'\to\Omeg
 allora data una funzione $f:\Omega\to\RR$ continua si ha che
 \begin{gather*}
 \begin{aligned}
-\iint_\Omega f(x,y)\dxy&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot |\det J_{g^{-1}}(u,v)| \text{ d}u\text{d}v \\
-&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot \frac{1}{|\det J_{g}(u,v)|} \text{ d}u\text{d}v
+\iint_\Omega f(x,y)\dxy&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot |\det J_{g^{-1}}(u,v)| \duv \\
+&=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot \frac{1}{|\det J_{g}(u,v)|} \duv
 \end{aligned}
 \end{gather*}
 \end{theorem}
@@ -90,8 +90,8 @@ J_{g^{-1}}(u,v)=\begin{pmatrix}
 tale che $\det J_{g^{-1}}(u,v)=-1/5$. Allora
 \begin{gather*}
 \begin{aligned}
-\iint_\Omega e^{2x-y}\dxy&=\iint_{[0,0.5]\times[0,15/2]} e^{-u}\cdot\frac{1}{5}\text{ d}u\text{d}v=\\
-&=\frac{1}{5}\int_0^{0.5}e^{-u}\text{ d}u\int_0^{15/2}1\text{ d}v=\\
+\iint_\Omega e^{2x-y}\dxy&=\iint_{[0,0.5]\times[0,15/2]} e^{-u}\cdot\frac{1}{5}\duv=\\
+&=\frac{1}{5}\int_0^{0.5}e^{-u}\du\int_0^{15/2}1\dv=\\
 &=\cdots =\\
 &=\frac{3}{2}(1-e^{-5})
 \end{aligned}
@@ -157,8 +157,8 @@ $\\$Se il vettore aleatorio $(X,Y)$ è continuo allora $X$ e $Y$ sono variabili 
 $\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $\fXY$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
 \begin{gather*}
 \begin{aligned}
-&f_X(x)=\int_\RR \fXYxy\text{ d}y&\forall x\in\RR \\
-&f_Y(y)=\int_\RR \fXYxy\text{ d}x&\forall y\in\RR
+&f_X(x)=\int_\RR \fXYxy\dy&\forall x\in\RR \\
+&f_Y(y)=\int_\RR \fXYxy\dx&\forall y\in\RR
 \end{aligned}
 \end{gather*}
 \end{theorem}
@@ -256,45 +256,45 @@ $\\$Due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipe
 \item [$(\alpha)$]
 \begin{gather*}
 \begin{aligned}
-\int te^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}\begin{Bmatrix}
+\int te^{-t}\dt&\overset{\underset{\textit{pp}}{}}{=}\begin{Bmatrix}
 \text{fattore finito }&f=t \\ \text{fattore differenziale }&g=-e^{-t}
 \end{Bmatrix}=  \\
-&=fg-\int f'g\text{ d}t=\\
-&=-te^{-t}-\int-e^{-t}\text{ d}t=\\
-&=-te^{-t}+\int e^{-t}\text{ d}t=\\
+&=fg-\int f'g\dt=\\
+&=-te^{-t}-\int-e^{-t}\dt=\\
+&=-te^{-t}+\int e^{-t}\dt=\\
 &=-te^{-t}-e^{-t}=\\
 &=-(t+1)e^{-t}
 \end{aligned}
 \end{gather*}
 \item [$(\alpha^1)$]
 \begin{equation*}
-\int_0^{+\infty} te^{-t}\text{ d}t\overset{\underset{(\alpha)}{}}{=}\left[-(t+1)e^{-t}\right]_0^{+\infty}=1
+\int_0^{+\infty} te^{-t}\dt\overset{\underset{(\alpha)}{}}{=}\left[-(t+1)e^{-t}\right]_0^{+\infty}=1
 \end{equation*}
 \item [$(\beta)$]
 \begin{gather*}
 \begin{aligned}
-\int t^2e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^2e^{-t}-\int-2te^{-t}\text{ d}t=\\
-&=-t^2e^{-t}+2\int te^{-t}\text{ d}t=\\
+\int t^2e^{-t}\dt&\overset{\underset{\textit{pp}}{}}{=}-t^2e^{-t}-\int-2te^{-t}\dt=\\
+&=-t^2e^{-t}+2\int te^{-t}\dt=\\
 &\overset{\underset{(\alpha)}{}}{=}-t^2e^{-t}-2(t+1)e^{-t}=\\
 &=-(t^2+2t+2)e^{-t}
 \end{aligned}
 \end{gather*}
 \item [$(\beta^1)$]
 \begin{equation*}
-\int_0^{+\infty} t^2e^{-t}\text{ d}t\overset{\underset{(\beta)}{}}{=}\left[-(t^2+2t+2)e^{-t}\right]_0^{+\infty}=2
+\int_0^{+\infty} t^2e^{-t}\dt\overset{\underset{(\beta)}{}}{=}\left[-(t^2+2t+2)e^{-t}\right]_0^{+\infty}=2
 \end{equation*}
 \item [$(\gamma)$]
 \begin{gather*}
 \begin{aligned}
-\int t^3e^{-t}\text{ d}t&\overset{\underset{\textit{pp}}{}}{=}-t^3e^{-t}-\int-3t^2e^{-t}\text{ d}t=\\
-&=-t^3e^{-t}+3\int t^2e^{-t}\text{ d}t=\\
+\int t^3e^{-t}\dt&\overset{\underset{\textit{pp}}{}}{=}-t^3e^{-t}-\int-3t^2e^{-t}\dt=\\
+&=-t^3e^{-t}+3\int t^2e^{-t}\dt=\\
 &\overset{\underset{(\beta)}{}}{=}-t^3e^{-t}-3(t^2+2t+2)e^{-t}=\\
 &=-(t^3+3t^2+6t+6)e^{-t}
 \end{aligned}
 \end{gather*}
 \item [$(\gamma^1)$]
 \begin{equation*}
-\int_0^{+\infty} t^3e^{-t}\text{ d}t\overset{\underset{(\gamma)}{}}{=}\left[-(t^3+3t^2+6t+6)e^{-t}\right]_0^{+\infty}=6
+\int_0^{+\infty} t^3e^{-t}\dt\overset{\underset{(\gamma)}{}}{=}\left[-(t^3+3t^2+6t+6)e^{-t}\right]_0^{+\infty}=6
 \end{equation*}
 
 \end{enumerate}
@@ -554,10 +554,10 @@ Allora per calcolare $\PP(Y>X)$ basta semplicemente vedere l'evento $Y>X$ come $
 \PP(Y>X)&=\PP((X,Y)\in T)= \\
 &=\int_T \fXYxy \dxy= \\
 &=\int_0^{+\infty} \int_{x}^{+\infty}\lambda^2e^{-\lambda x}e^{-\lambda y}\dxy= \\
-&=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \text{ d}y  \right)\text{ d}x= \\
-&=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\text{ d}x=\\
-&=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\text{ d}x}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
-&=\frac{1}{2}\underbrace{\int_0^{+\infty}2\lambda e^{-2\lambda x}\text{ d}x}_{=1}=\\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left(\int_{x}^{+\infty} \lambda e^{-\lambda y}  \dy  \right)\dx= \\
+&=\int_0^{+\infty}\lambda e^{-\lambda x} \left[ e^{-\lambda y}  \right]_x^{+\infty}\dx=\\
+&=\underbrace{\int_0^{+\infty}\lambda e^{-2\lambda x}\dx}_{\text{riconduco a }\mathcal{E}(2\lambda)}=\\
+&=\frac{1}{2}\underbrace{\int_0^{+\infty}2\lambda e^{-2\lambda x}\dx}_{=1}=\\
 &=\frac{1}{2}
 \end{aligned}
 \end{gather*}
@@ -590,26 +590,26 @@ S_{(X,Y)}\coloneqq\{(x,y)\in\RR^2\ \big|\ \fXYxy>0   \}=\{(x,y)\in\RR^2\ \big|\ 
 Dal grafico della densità congiunta deduciamo un'importante informazione su $X$ e $Y$: $X,Y\geq 0$ quasi certamente, cioè $f_X(x)=0$ per ogni $x<0$ e $f_Y(y)=0$ per ogni $y<0$. Quindi fissiamo $x\geq 0$ e procediamo con il calcolo della prima legge marginale:
 \begin{gather*}
 \begin{aligned}
-f_X(x)&=\int_\RR \fXYxy\text{ d}y= \\
-&=\int_x^{+\infty}x(y-x)e^{-y}\text{ d}y= \\
+f_X(x)&=\int_\RR \fXYxy\dy= \\
+&=\int_x^{+\infty}x(y-x)e^{-y}\dy= \\
 &=\begin{Bmatrix}
 \text{cambio di variabile}\\t\coloneqq y-x 
 \end{Bmatrix}= \\
-&=x\int_0^{+\infty}te^{-t-x}\text{ d}t=\\
-&=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\text{ d}t}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=xe^{-x}
+&=x\int_0^{+\infty}te^{-t-x}\dt=\\
+&=xe^{-x}\underbrace{\int_0^{+\infty}te^{-t}\dt}_{=1 \text{ per } (\alpha^1)\text{ o per }(\alpha^2)}=xe^{-x}
 \end{aligned}
 \end{gather*}
 con $(\alpha^2)$ che sintetizza la seguente osservazione: data $T\sim\mathcal{E}(\lambda)$ con $\lambda=1$ si ha per definizione
 \begin{equation*}
-\mathbb{E}[T]\coloneqq\int_0^{+\infty}\lambda te^{-t}\text{ d}t=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
+\mathbb{E}[T]\coloneqq\int_0^{+\infty}\lambda te^{-t}\dt=\cdots=\frac{1}{\lambda}=\frac{1}{1}=1
 \end{equation*}
 
 Ora fissiamo $y\geq 0$ e calcoliamo la seconda legge marginale:
 \begin{gather*}
 \begin{aligned}
-f_Y(y)&=\int_\RR \fXYxy\text{ d}x= \\
-&=\int_0^y x(y-x)e^{-y}\text{ d}x= \\
-&=e^{-y}\left( y\int_0^y x\text{ d}x-\int_0^yx^2\text{ d}x  \right)=\\
+f_Y(y)&=\int_\RR \fXYxy\dx= \\
+&=\int_0^y x(y-x)e^{-y}\dx= \\
+&=e^{-y}\left( y\int_0^y x\dx-\int_0^yx^2\dx  \right)=\\
 &=e^{-y}\left( y\left[\frac{x^2}{2}    \right]_0^y-\left[\frac{x^3}{3}    \right]  \right)=\\
 &=e^{-y}\left( \frac{y^3}{2}  -\frac{y^3}{3} \right)=\\
 &=\frac{1}{6}\ y^3e^{-y}
@@ -659,7 +659,7 @@ Tuttavia non lo sono, quindi dobbiamo ricondurre l'evento $X\leq 2, Y\leq 3$ all
 \begin{gather*}
 \begin{aligned}
 \PP(X\leq 2, Y\leq 3)&=\PP((X,Y)\in(-\infty,2]\times(-\infty,3])=\\
-&=\int_{-\infty}^2\left(\int_{-\infty}^3\fXYxy\text{ d}y   \right)\text{d}x=
+&=\int_{-\infty}^2\left(\int_{-\infty}^3\fXYxy\dy   \right)\dx=
 \end{aligned}
 \end{gather*}
 che per 
@@ -667,9 +667,9 @@ che per
 diventa
 \begin{gather*}
 \begin{aligned}
-&=\int_0^2\left(\int_x^3x(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\int_0^2x\left(\underbrace{\int_x^3ye^{-y}\text{ d}y}_{(\alpha)}-x\int_x^3e^{-y}\text{ d}y   \right)\text{d}x=\\
-&=\int_0^2x\left(  \left[-(y+1)e^{-y}     \right]_x^3-x\left[-e^{-y}     \right]_x^3    \right)\text{d}x=\int_0^2 x\left(-4e^{-3}+(x+1)e^{-x}+xe^{-3}-xe^{-x}   \right)\text{d}x=\\
-&=\int_0^2 x\left(-4e^{-3}+e^{-x}+xe^{-3}   \right)\text{d}x=-4e^{-3}\int_0^2 x\text{ d}x+\underbrace{\int_0^2xe^{-x}\text{ d}x}_{(\alpha)}+e^{-3}\int_0^2{x^2}\text{ d}x=\\
+&=\int_0^2\left(\int_x^3x(y-x)e^{-y}\dy   \right)\dx=\int_0^2x\left(\underbrace{\int_x^3ye^{-y}\dy}_{(\alpha)}-x\int_x^3e^{-y}\dy   \right)\dx=\\
+&=\int_0^2x\left(  \left[-(y+1)e^{-y}     \right]_x^3-x\left[-e^{-y}     \right]_x^3    \right)\dx=\int_0^2 x\left(-4e^{-3}+(x+1)e^{-x}+xe^{-3}-xe^{-x}   \right)\dx=\\
+&=\int_0^2 x\left(-4e^{-3}+e^{-x}+xe^{-3}   \right)\dx=-4e^{-3}\int_0^2 x\dx+\underbrace{\int_0^2xe^{-x}\dx}_{(\alpha)}+e^{-3}\int_0^2{x^2}\dx=\\
 &=-4e^{-3}\left[\frac{x^2}{2}   \right]_0^2+\left[-(x+1)e^{-x}   \right]_0^2+e^{-3}\left[\frac{x^3}{3}   \right]_0^2=-8e^{-3}-3e^{-2}+1+\frac{8}{3}\ e^{-3}=\\
 &=1-3e^{-2}-\frac{16}{3}\ e^{-3}
 \end{aligned}
@@ -688,12 +688,12 @@ $\\$Il coefficiente di correlazione lineare si calcola con
 Al volo possiamo già dire che $\EE[X]=2=\Var(X)$ e $\EE[Y]=4=\Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
 \begin{aligned}
-\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \dxy=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\text{ d}y   \right)\text{d}x=\\
-&=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\text{ d}y}_{(\beta)}   \right)\text{d}x-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\text{ d}y}_{(\alpha)}   \right)\text{d}x=\\
-&=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\text{d}x-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\text{d}x=\\
-&=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\text{ d}x-\int_0^{+\infty}x^3(x+1)e^{-x}\text{ d}x=\\
-&=\int_0^{+\infty}x^4e^{-x}   \text{ d}x+2\int_0^{+\infty}x^3e^{-x}   \text{ d}x+2\int_0^{+\infty}x^2e^{-x}   \text{ d}x-\int_0^{+\infty}x^4e^{-x}   \text{ d}x-\int_0^{+\infty}  x^3e^{-x} \text{ d}x=\\
-&=\underbrace{\int_0^{+\infty}x^3e^{-x}   \text{ d}x}_{=6\text{ per }(\gamma^1)}+2\underbrace{\int_0^{+\infty}x^2e^{-x}   \text{ d}x}_{=2\text{ per }(\beta^1)}=6+4=10
+\EE[XY]&\overset{\underset{\text{ii)}}{}}{=}\int_{\RR^2}xy\fXYxy \dxy=\int_0^{+\infty}x^2\left(\int_x^{+\infty}y(y-x)e^{-y}\dy   \right)\dx=\\
+&=\int_0^{+\infty}x^2\left(\underbrace{\int_x^{+\infty}y^2e^{-y}\dy}_{(\beta)}   \right)\dx-\int_0^{+\infty}x^3\left(\underbrace{\int_x^{+\infty}ye^{-y}\dy}_{(\alpha)}   \right)\dx=\\
+&=\int_0^{+\infty}x^2\left[-(y^2+2y+2)e^{-y} \right]_x^{+\infty}\dx-\int_0^{+\infty}x^3\left[-(y+1)e^{-y} \right]_x^{+\infty}\dx=\\
+&=\int_0^{+\infty}x^2(x^2+2x+2)e^{-x}\dx-\int_0^{+\infty}x^3(x+1)e^{-x}\dx=\\
+&=\int_0^{+\infty}x^4e^{-x}   \dx+2\int_0^{+\infty}x^3e^{-x}   \dx+2\int_0^{+\infty}x^2e^{-x}   \dx-\int_0^{+\infty}x^4e^{-x}   \dx-\int_0^{+\infty}  x^3e^{-x} \dx=\\
+&=\underbrace{\int_0^{+\infty}x^3e^{-x}   \dx}_{=6\text{ per }(\gamma^1)}+2\underbrace{\int_0^{+\infty}x^2e^{-x}   \dx}_{=2\text{ per }(\beta^1)}=6+4=10
 \end{aligned}
 \end{gather*}
 E finalmente
@@ -1055,9 +1055,9 @@ A\coloneqq\left\{(x,\vartheta)\in \left[0,\frac{d}{2}\right]\times \left[0,\pi\r
 abbiamo
 \begin{gather*}
 \begin{aligned}
-\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\text{d}\vartheta=\\
-&=\frac{2}{\pi d}\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx   \right)\text{d}\vartheta=\\
-&=\frac{l}{\pi d}\int_0^\pi \sin\vartheta\text{ d}\vartheta=\\
+\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\dteta=\\
+&=\frac{2}{\pi d}\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx   \right)\dteta=\\
+&=\frac{l}{\pi d}\int_0^\pi \sin\vartheta\dteta=\\
 &=\frac{2l}{\pi d}
 \end{aligned}
 \end{gather*}
@@ -1072,11 +1072,11 @@ Quindi
 \begin{gather}
 \begin{aligned}
 \label{eqn_7_8}
-\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\text{d}\vartheta=\\
-&=\frac{2}{\pi d}\int_B 1\dx\text{d}\vartheta=\\
+\PP(A)&=\int_A f_{(X,\Theta)}(x,\vartheta)\dx\dteta=\\
+&=\frac{2}{\pi d}\int_B 1\dx\dteta=\\
 &=\frac{2}{\pi d}\ m_2(B)=\\
 &=\frac{2}{\pi d}\ (m_2(A)-m_2(V))=\\
-&=\frac{2}{\pi d}\left[\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta - \int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta  \right]
+&=\frac{2}{\pi d}\left[\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\dteta - \int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\dteta  \right]
 \end{aligned}
 \end{gather}
 
@@ -1084,8 +1084,8 @@ Calcoliamo separatamente i due integrali
 
 \begin{gather*}
 \begin{aligned}
-\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta &=\int_0^\pi \frac{l}{2}\sin\vartheta\text{ d}\vartheta=l \\
-\int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\text{d}\vartheta&=\int_{\vartheta_1}^{\vartheta_2} \left(\frac{l}{2}\sin\vartheta-\frac{d}{2}\right)\text{d}\vartheta= \\
+\int_0^\pi \left(\int_0^{\frac{l}{2}\sin\vartheta}1\dx \right)\dteta &=\int_0^\pi \frac{l}{2}\sin\vartheta\dteta=l \\
+\int_{\vartheta_1}^{\vartheta_2} \left(\int_{\frac{d}{2}}^{\frac{l}{2}\sin\vartheta}1\dx \right)\dteta&=\int_{\vartheta_1}^{\vartheta_2} \left(\frac{l}{2}\sin\vartheta-\frac{d}{2}\right)\dteta= \\
 &=\left[-\frac{l}{2}\cos\vartheta  \right]_{\vartheta_1}^{\vartheta_2}-\left[\frac{d}{2}\vartheta  \right]_{\vartheta_1}^{\vartheta_2}=\\
 &=\frac{l}{2}\cos\vartheta_1-\frac{l}{2}\cos\vartheta_2-\frac{d}{2}\vartheta_2+\frac{d}{2}\vartheta_1 \\
 &\overset{\underset{\text{oss}}{}}{=}l\sqrt{1-\left(\frac{d}{l}\right)^2}-\frac{d}{2}\left(\pi-2\arcsin \left(\frac{d}{l}\right) \right)
