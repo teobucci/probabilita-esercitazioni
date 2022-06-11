@@ -1,3 +1,5 @@
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
 # Crowd-writing Esercitazioni di Probabilità
 ## Scopo
 Lo scopo di questa repository è raccogliere l'aiuto del pubblico per trascrivere le **Esercitazioni di Probabilità** per il corso di Laurea in Ingegneria Matematica al Politecnico di Milano nell'anno accademico 2019-2020 per produrre un documento completo (non ufficiale) a cura degli studenti per gli studenti. :books:
@@ -32,3 +34,6 @@ Ottima domanda Rick, ecco alcune motivazioni:
 |10|Convergenza di variabili aleatorie|non iniziata||
 |11|Legge dei Grandi Numeri. Teorema Centrale del Limite|non iniziata||
 |12|Catene di Markov|non iniziata||
+
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/deed.it
