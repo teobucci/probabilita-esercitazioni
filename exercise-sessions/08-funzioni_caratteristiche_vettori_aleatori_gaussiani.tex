@@ -1,7 +1,9 @@
 %!TEX root = ../main.tex
 
+\chapter{Funzioni caratteristiche. Vettori aleatori gaussiani}
+
 Vediamo le principali definizioni e i principali teoremi che serviranno per affrontare gi esercizi di questo capitolo:
-\begin{definition}$\\$
+\begin{defn}$\\$
 Sia $\PP$ una probabilità su $(\RR,\Bc)$, la funzione caratteristica (o \emph{trasformata di Fourier}) di $\PP$ è la funzione
 \begin{gather*}
 \begin{aligned}
@@ -9,7 +11,7 @@ Sia $\PP$ una probabilità su $(\RR,\Bc)$, la funzione caratteristica (o \emph{t
 u&\mapsto\varphi (u)\coloneqq \int_{\RR^n}e^{i\langle u|x\rangle}\ \PP(\dx)
 \end{aligned}
 \end{gather*}
-\end{definition}
+\end{defn}
 Dalla \emph{formula di Eulero} sappiamo che $e^{i \vartheta}=\cos(\vartheta) + i \sin (\vartheta)$ e $|e^{i \vartheta}|=1$ per ogni $\vartheta\in\RR$. Ne discende che
 \begin{gather*}
 \begin{aligned}
@@ -18,13 +20,13 @@ Dalla \emph{formula di Eulero} sappiamo che $e^{i \vartheta}=\cos(\vartheta) + i
 \end{aligned}
 \end{gather*}
 per ogni $u,x\in\RR^n$.
-\begin{definition}$\\$
+\begin{defn}$\\$
 \label{carmom}
 Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di legge $P^X$. La funzione caratteristica di $X$ è $\widehat P^X =\varphi_X:\RR^n\to \CC$ definita come
 \[
 \varphi_X(u)=\int_{\RR^n}e^{i \langle u|X\rangle}\ P^X(\dx)=\EE\left[e^{i \langle u|X\rangle}\right]=\int_\Omega e^{i \langle u|X\rangle}\dPP
 \]
-\end{definition}
+\end{defn}
 \emph{Esempio}. Sia $X\sim\delta_t$ con $t\in\RR$. Allora
 \[
 \varphi_X(u)=\EE\left[e^{iuX}\right]=e^{iut}
@@ -36,20 +38,20 @@ Sia $X:\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio (continuo, discreto, altro) di le
 &=\left\{ \sum_{k=0}^{+\infty}\frac{x^k}{k!}=e^x\ \ \ \forall x\in\RR  \right\}=e^{-\lambda}\ e^{\lambda e^{iu}}=e^{ \lambda (e^{i u}-1)}
 \end{aligned}
 \end{gather*}
-\begin{theorem}[La funzione caratteristica di una probabilità caratterizza la probabilità]$\\$
+\begin{thm}[La funzione caratteristica di una probabilità caratterizza la probabilità]$\\$
 \label{La funzione caratteristica di una probabilità caratterizza la probabilità}
 La funzione caratteristica $\widehat{\PP}$ di una probabilità $\PP$ su $(\RR^n, \Bc^n)$ caratterizza $\PP$, ovvero
 \[
 \widehat{\PP}(u)=\widehat{\QQ}(u) \ \forall u \in \RR^n \iff \PP(B)=\QQ(B) \ \forall B \in \Bc^n
 \]
-\end{theorem}
-\begin{theorem}$\\$
+\end{thm}
+\begin{thm}$\\$
 \label{teo dei momenti}
 Sia $X=(X_1,\dots,X_n):\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio tale che per qualche $m\in\NN$ si abbia \\ $X_k \in L^m (\PP)$ $\forall k=1, \dots,  n$. Allora $\varphi_X\in \mathcal{C}^m(\RR^n,\CC)$ e
 \[
 \frac{\partial^m}{\partial u_{k_1} \cdots \partial u_{k_m}}\ \varphi(u)=i^m\ \EE\left[X_{k_1} \cdots X_{k_m}\ e^{i \langle u|x\rangle}\right] \qquad \forall u \in \RR^n
 \]
-\end{theorem}
+\end{thm}
 \emph{Esempio}. Data $X\sim \Nc(0,1)$ si vuole calcolare $\varphi_X(u)$. \\
 Prima di tutto osserviamo che $X\in L^m$ $\forall m\geq 1$. Sostituendo nella definizione di funzione caratteristica la densità della normale standard si ottiene
   \begin{equation*}
@@ -75,13 +77,13 @@ L'integrale si è così trasformato in un \emph{problema di Cauchy} ben posto:
     \varphi_X'(u)=-u\varphi_X(u) \\ \varphi_X(0)=1
   \end{cases} \quad \implies \quad \varphi_X(u)=e^{-\frac{u^2}{2}}$$
 Siano $X:\SDP\to(\RR^n,\Bc^n)$ un vettore aleatorio e $Y:\SDP\to(\RR^m,\Bc^m)$ con $A\in\RR^{m\times m},b\in\RR^m$ la trasformazione affine $Y=AX+b$.
-\begin{theorem}$\\$
+\begin{thm}$\\$
 \label{t_affine_t}
 La funzione caratteristica del vettore $Y$ dato dalla trasformazione affine $Y=AX+b$ è
 \[
 \varphi_Y(u)=e^{i\langle u|b\rangle} \ \varphi_X\left(A^T  u\right) \ \ \ \forall u \in \RR^m
 \]
-\end{theorem}
+\end{thm}
 \emph{Esempio}. Calcolare la funzione caratteristica di una normale generica.\\
 Sia $X\sim N(\mu,\sigma^2)$. Allora basta vedere $X=\mu+\sigma Z$, con $Z=\dfrac{X-\mu}{\sigma}\sim \Nc(0,1)$. Allora
 $$\varphi_X (u)=e^{i u \mu}\ \varphi_Z(\sigma u)=  e^{i u \mu}\ e^{-\sigma^2u^2/2} =e^{i u \mu-\sigma^2u^2/2}$$
@@ -102,23 +104,23 @@ possiamo calcolare
       \begin{pmatrix} 1 \\ \vdots \\ 1 \end{pmatrix} u
     \right) = \varphi_X(u,  \dots,  u)
 \]
-\begin{oss}$\\$
+\begin{rem}$\\$
 Quest'ultimo esempio semplifica tantissimo il calcolo delle funzioni caratteristiche marginali di un vettore. Infatti dato $X=(X_1,  \dots,  X_n) \sim \varphi_X $ per calcolare la funzione caratteristica $\varphi_{X_k}$ vediamo $X_k=(0,\dots,0,1,0,\dots,0)X=vX$ e dunque
 \[
 \varphi_{X_k}(u) = \varphi_X\left(v u\right)=\varphi_X(v)=\varphi_X(0,\dots,0,u,0,  \dots,  0)
 \]
-\end{oss}
-\begin{theorem}[Fattorizzazione della funzione caratteristica per famiglie di VA]
+\end{rem}
+\begin{thm}[Fattorizzazione della funzione caratteristica per famiglie di VA]
 \label{Fattorizzazione della funzione caratteristica per famiglie di VA}
 $\\$
 Sia $X = (X_1,  \dots, X_n):\SDP\to(\RR^n,\Bc^n)$ vettore aleatorio. Allora
       $$\big\{X_k\big\}_{k=1}^{n} \text{ famiglia di VAR} \indep \iff \varphi_X(u_1, \dots, u_n) = \prod_{k=1}^{n} \varphi_{X_k} (u_k) \quad \forall u \in \RR^n$$
-\end{theorem}
-\begin{corollario}[Legge della somma di variabili indipendenti]$\\$
+\end{thm}
+\begin{coro}[Legge della somma di variabili indipendenti]$\\$
 \label{Legge della somma di variabili indipendenti}
 Siano $X_1, \dots , X_n$ VAR indipendenti. Allora
   $$Y = \sum_{k=1}^{n} X_k \implies \varphi_Y(u) = \varphi_{\sum X_k} (u) = \prod_{k=1}^{n} \varphi_{X_k}(u) \quad \forall u \in \RR$$
-\end{corollario}
+\end{coro}
 
 %
 
@@ -132,10 +134,10 @@ Abbiamo già visto che:
 \item $X\sim\Nc(\mu,\sigma^2)\implies\varphi_X(u)=e^{iu\mu-\sigma^2u^2/2}$
 \end{itemize}
 tuttavia utilizzando il teorema (\ref{La funzione caratteristica di una probabilità caratterizza la probabilità}) possiamo dire che l'implicazione vale anche in senso opposto, ovvero (parafrasando tale teorema)
-\begin{theorem}
+\begin{thm}
 \label{caratterizzazione della f caratteristica}
 Date $X,Y:\Omega\to\RR^n$ si ha $P^X=P^Y\iff\varphi_X=\varphi_Y$.
-\end{theorem}
+\end{thm}
 Ecco quindi i primi quattro risultati notevoli di questo capitolo
 \[
 X\sim\delta_t,\ t\in\RR\iff\varphi_X(u)=e^{iut} \qquad X\sim\Pc(\lambda),\ \lambda>0\iff\varphi_X(u)=e^{ \lambda (e^{i u}-1)}
@@ -542,10 +544,10 @@ Quindi
 \[
 X\sim \Uc([-a,a]),\ a\in[0,+\infty)\iff\varphi_X(u)=\frac{\sin(au)}{au}=\text{sinc}(au)
 \]
-\begin{oss}
+\begin{rem}
 La funzione $\dfrac{\sin(au)}{au}=:\text{sinc}(au)$ è detta \emph{seno cardinale}.
 \fg{0.5}{8_1}
-\end{oss}
+\end{rem}
 Per calcolare media e varianza di $X$ sfruttiamo il teorema (\ref{teo dei momenti}), cioè
 \[
 X\in L^1\implies\varphi_X\in\Cu,\ \EE[X]=\frac{1}{i}\varphi_X'(0)=-i\varphi_X'(0)
@@ -601,7 +603,7 @@ Calcoliamo la funzione caratteristica di $X$:
 &=\frac{\lambda}{\lambda-iu}
 \end{aligned}
 \end{gather*}
-\begin{nb}
+\begin{rem}
 Ma perché $\displaystyle\lim_{t\to+\infty}e^{(iu-\lambda)t}=0$? \\
 Considerando il numero complesso $z\coloneqq e^{(iu-\lambda)t}$ possiamo scrivere
 \[
@@ -612,7 +614,7 @@ Sapendo che nel confronto tra un esponenziale tendente a zero e un numero comple
 \[
 \displaystyle\lim_{t\to+\infty}z=0
 \]
-\end{nb}
+\end{rem}
 Quindi
 \[
 X\sim\Ec(\lambda),\ \lambda>0\iff\varphi_X(u)=\frac{\lambda}{\lambda-iu}
@@ -683,7 +685,7 @@ Grazie al teorema (\ref{Fattorizzazione della funzione caratteristica per famigl
 \end{aligned}
 \end{gather*}
 
-\begin{oss}
+\begin{rem}
 Senza usare il teorema (\ref{Fattorizzazione della funzione caratteristica per famiglie di VA}):
 \begin{gather*}
 \begin{aligned}
@@ -691,7 +693,7 @@ Senza usare il teorema (\ref{Fattorizzazione della funzione caratteristica per f
 &=\varphi_X(u)\cdot \varphi_Y(v)=\dots
 \end{aligned}
 \end{gather*}
-\end{oss}
+\end{rem}
 
 \item [(d)] Siano $Z=2X-Y,\ W=Y-2,\ J=-X$. Il vettore aleatorio $(Z,W,J)$ ammette densità continua?
 
@@ -774,7 +776,7 @@ Quindi, riprendendo $\varphi_{(X,Y)}$ dal punto (c), abbiamo
 \end{aligned}
 \end{gather*}
 
-\begin{oss}
+\begin{rem}
 Senza usare il teorema (\ref{t_affine_t}):
 \begin{gather*}
 \begin{aligned}
@@ -788,11 +790,11 @@ Senza usare il teorema (\ref{t_affine_t}):
 &=\dots
 \end{aligned}
 \end{gather*}
-\end{oss}
+\end{rem}
 
-\begin{oss}$\\$
+\begin{rem}$\\$
 Anche se $(Z,W,J)$ non ammette densità congiunta continua la funzione caratteristica è ben definita, anzi, caratterizza proprio $P^{(Z,W,J)}$.
-\end{oss}
+\end{rem}
 
 \item [(g)] Si ricavino le funzioni caratteristiche di $(Z,W)$ e $(W,J)$ in termini della funzione caratteristica di $(Z,W,J)$.
 
@@ -898,9 +900,9 @@ Ma dato che le $X_k$ sono identicamente distribuite, cioè $\varphi_{X_i}=\varph
 \] 
 che conclude la dimostrazione.
 \\
-\begin{nb}
+\begin{rem}
 Al posto di $X_1$ sarebbe andata bene qualsiasi altra $X_k$.
-\end{nb}
+\end{rem}
 
 \Soluzione{} %8
 Prima di procedere dimostriamo il risultato notevole
@@ -928,12 +930,12 @@ abbiamo
 &=\left(\frac{\lambda}{\lambda-iu}\right)^\alpha
 \end{aligned}
 \end{gather*}
-\begin{oss}
+\begin{rem}
 Se $Z\sim\Ec(\lambda)$ allora $Z\sim\Gamma(1,\lambda)$, in quanto
 \[
 \varphi_{\Gamma(1,\lambda)}(u)=\left(\frac{\lambda}{\lambda-iu}\right)^1=\frac{\lambda}{\lambda-iu}=\varphi_{\Ec(\lambda)}(u)
 \]
-\end{oss}
+\end{rem}
 \begin{enumerate}
 
 \item [(a)] Si mostri che $X\sim\Gamma(\alpha,\lambda)\indep Y\sim\Gamma(\beta,\lambda)\implies X+Y\sim\Gamma(\alpha+\beta,\lambda)$.
@@ -985,9 +987,9 @@ Quindi
 \[
 Z\sim\Nc(0,1)\implies Z^2\sim\Gamma\left(\frac{1}{2},\frac{1}{2}\right)=\chi^2(1)
 \]
-\begin{oss}
+\begin{rem}
 Il calcolo mediante la funzione caratteristica è lasciato al lettore.
-\end{oss}
+\end{rem}
 
 \item [(d)] Si mostri che $Q=Z_1^2+\cdots+Z_n^2$, con $Z_1,\dots,Z_n\iid\Nc(0,1)\implies Q\sim\Gamma\left(\frac{n}{2},\frac{1}{2}\right)=\chi^2(n)$.
 
@@ -1084,7 +1086,7 @@ f_U(u)=\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\ \Gamma(\beta)}\ u^{\alpha-1}\
 
 Abbiamo già provato (punto (a) esercizio 8) che $T\sim\Gamma(\alpha+\beta,\lambda)$; invece come diretta conseguenza del punto (b) soprastante abbiamo che $U\sim\text{Beta}(\alpha,\beta)$. 
 
-\begin{oss}[Distribuzione Beta]$\\$
+\begin{rem}[Distribuzione Beta]$\\$
 In teoria delle probabilità e in statistica la distribuzione Beta è una distribuzione di probabilità continua definita da due parametri $\alpha>0$ e $\beta>0$  sull'intervallo unitario $[0,1]$. \\
 Questa distribuzione trova particolare utilizzo nella inferenza bayesiana perché governa la probabilità uniforme $p\in[0,1]$ di successo di un processo di Bernoulli dopo aver osservato $\alpha -1$ \emph{successi} e $ \beta -1$ \emph{fallimenti}. in altre parole modellizza l'incertezza del parametro $p$ a posteriori. 
 
@@ -1104,7 +1106,7 @@ dunque deduciamo che possiamo esmprimere la \emph{funzione beta} di Eulero in te
 \[
 \mathrm{B}(\alpha,\beta)=\frac{\Gamma(\alpha)\ \Gamma(\beta)}{\Gamma(\alpha+\beta)}
 \]
-\end{oss}
+\end{rem}
 
 \item [(d$^\ast$)] Sia $(X_n)_{n\in\NN}$ una successione di variabili aleatorie, con $X_1,X_2,\dots\iid\Ec(\lambda)$. Posto
 \[

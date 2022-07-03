@@ -1,13 +1,15 @@
 %!TEX root = ../main.tex
 
+\chapter{Probabilità condizionale e indipendenza}
+
 \ParteEsercizi
 
-\begin{definition}
+\begin{defn}
 	Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Siano $A,B\in \Ac$ con $\PP(B)  >0$. Si definisce \textbf{probabilità condizionata} di $A$ dato $B$, $\PP(A\mid B)$, la quantità
 	\begin{equation*}
 		\PP(A\mid B) =\frac{\PP(A\cap B)}{\PP(B)}
 	\end{equation*}
-\end{definition}
+\end{defn}
 \textbf{Proprietà.}
 
 Siano $A,B\in \Ac$ e sia $\{E_{n}\}_{n\in \NN} \subseteq \Ac$ una partizione discreta di $\Omega $:
@@ -17,20 +19,20 @@ Siano $A,B\in \Ac$ e sia $\{E_{n}\}_{n\in \NN} \subseteq \Ac$ una partizione dis
 	\item \textit{Probabilità totali}: se $\PP(E_{n})  >0,\forall n\in \NN$ allora $\PP(A) =\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})$.
 	\item \textit{Bayes}: se $\PP(A) ,\PP(E_{n})  >0,\forall n\in \NN$ allora $\PP(E_{n} \mid A) =\frac{\PP(A\mid E_{n})\PP(E_{n})}{\sum\limits_{n}\PP(A\mid E_{n})\PP(E_{n})}$.
 \end{enumerate}
-\begin{definition}
+\begin{defn}
 $A$ e $B$ sono indipendenti $(A\indep B)$ se $\PP(A\cap B) =\PP(A)\PP(B)$.
-\end{definition}
+\end{defn}
 \textbf{Proprietà.}
 \begin{enumerate}
 \item $A\indep B\iff \PP(A\mid B) =\PP(A)$.
 \item $A\indep B\iff A\indep B\complementary \iff A\complementary \indep B\iff A\complementary \indep B\complementary$.
 \end{enumerate}
-\begin{definition}
+\begin{defn}
 	Sia $(\Omega,\Ac,\PP)$. Dati $\{A_{i}\}_{i\in I}$ gli eventi $A_{i}$ si dicono indipendenti se $\forall $ sottoinsieme di indici $J\subset I$ si ha
 	\begin{equation*}
 		\PP\left(\bigcap_{i\in I} A_{i}\right) =\prod_{i\in J}\PP(A_{i})
 	\end{equation*}
-\end{definition}
+\end{defn}
 
 \Esercizio{}
 
@@ -374,9 +376,9 @@ sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e q
 		 & =1-\left(1-\frac{1}{18}\right)^{42} \approx 0.9093
 	\end{align*}
 
-	\begin{oss}
+	\begin{rem}
 		Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
-	\end{oss}
+	\end{rem}
 	\item Introduciamo i nuovi eventi $B_{k} =$ \event{il $15$ è estratto $k$ volte}.
 	\begin{equation*}
 		\PP(A_{1} \mid B_{1}) =\frac{\PP(A_{1} \cap B_{1})}{\PP(B_{1})}
@@ -414,9 +416,9 @@ sfruttiamo il fatto che \textit{le estrazioni sono indipendenti dal passato} e q
 		 & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 	\end{align*}
 
-	\begin{oss}
+	\begin{rem}
 		Osserviamo che in tutto l'esercizio non abbiamo fatto altro che usare la probabilità che esca il $15$ in una singola estrazione, infatti sfruttando l'\textbf{indipendenza} degli eventi ci siamo sempre ricondotti a calcolare le probabilità richieste utilizzando $\PP(A)$. Pertanto se interpretiamo $\PP(A)$ come probabilità di successo, semplifichiamo!
-	\end{oss}
+	\end{rem}
 
 Dato che la proprietà di indipendenza la si sfrutta quando si considerano \textit{intersezioni} di insiemi procediamo come segue. Scriviamo
 \begin{gather*}
@@ -431,9 +433,9 @@ quindi
  & =1-\left(1-\frac{1}{18}\right)^{42} \approx 0.9093
 \end{align*}
 
-\begin{oss}
+\begin{rem}
 Osserviamo (ma lo sapevamo già!) che questo punto e il precedente sono due cose diverse.
-\end{oss}
+\end{rem}
 \item Introduciamo i nuovi eventi $B_{k} =$ \event{il $15$ è estratto $k$ volte}.
 \begin{equation*}
 \PP(A_{1} \mid B_{1}) =\frac{\PP(A_{1} \cap B_{1})}{\PP(B_{1})}
@@ -475,9 +477,9 @@ Allora
  & =\frac{\left(\frac{1}{18}\right)^{2}\left(\frac{17}{18}\right)^{40}}{\binom{42}{2}\left(\frac{1}{18}\right)\left(\frac{1}{18}\right)\left(\frac{17}{18}\right)^{40}} =\frac{1}{\binom{42}{2}} \approx 0.0012
 \end{align*}
 
-\begin{oss}
+\begin{rem}
 Osserviamo che in tutto l'esercizio non abbiamo fatto altro che usare la probabilità che esca il $15$ in una singola estrazione, infatti sfruttando l'\textbf{indipendenza} degli eventi ci siamo sempre ricondotti a calcolare le probabilità richieste utilizzando $\PP(A)$. Pertanto se interpretiamo $\PP(A)$ come probabilità di successo, semplifichiamo!
-\end{oss}
+\end{rem}
 
 \end{enumerate}
 
@@ -515,12 +517,12 @@ Consideriamo l'evento
 	V_{\text{cons}} =\event{vinco conservando il pacco scelto inizialmente}
 	\end{equation*}
 
-	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:\begin{theorem}
+	Per rispondere a questa domanda ci è utile ricorrere alla formula delle probabilità totali:\begin{thm}
 	Sia $(\Omega ,\mathcal{A} ,\PP)$ uno spazio di probabilità. Si $A\in \mathcal{A}$ e $\{E_{k}\}_{k\in \mathbb{N}} \subset \mathcal{A}$ una partizione discreta di $\Omega $, allora
 	\begin{equation*}
 	\PP(A) =\sum\limits _{k\in \mathbb{N}}\PP(A\mid E_{k})\PP(E_{k})
 	\end{equation*}
-	\end{theorem}
+	\end{thm}
 
 	La partizione di $\Omega $ la costruiamo usando \textit{le informazioni della prima scelta}, ovvero
 	\begin{equation*}
@@ -632,7 +634,7 @@ Ad esempio, per rispondere terzo punto ci interessano solo gli eventi in cui ala
 
 Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella vittoriosa è solo una, i.e. $\PP(V_{\text{cons}}) =\frac{1}{3}$.
 
-\begin{oss}
+\begin{rem}
 	Intuitivamente: il conduttore aprendo un pacco ci sta dando delle informazioni in più: è come se, con la sua informazione, ci dicesse ``il pacco rimasto (non il tuo) ha $\frac{2}{3}$ di probabilità di essere il pacco vincente''. Cioè se prima avevo una probabilità di $\frac{2}{3}$ \emph{distribuita su $2$ pacchi}, adesso questa probabilità è tutta \emph{concentrata sull'altro pacco}. Quindi mi conviene cambiare pacco perché questo ha una probabilità più alta $\left(\frac{2}{3}\right)$ rispetto al mio $\left(\frac{1}{3}\right)$ di contenere l'assegno.
 
 
@@ -722,7 +724,7 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 
 
 	\end{tikzpicture}
-\end{oss}
+\end{rem}
 \begin{enumerate}
 	\item Consideriamo l'evento
 	\begin{equation*}
@@ -750,16 +752,16 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 		\boxed{\PP(A\mid D) =?}
 	\end{equation*}
 	ovvero la probabilità che il pacco scelto inizialmente contenga il premio, sapendo che il conduttore ha aperto il pacco di destra. Per calcolarla usiamo la formula di Bayes.
-	\begin{theorem}
+	\begin{thm}
 		Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Siano $A\in \Ac$, $\{E_{k}\}_{k\in \NN} \subset \Ac$ una partizione discreta di $\Omega $. Se $\PP(A) ,\PP(E_{k})  >0,\forall k\in \NN$, allora
 		\begin{equation*}
 			\PP(E_{k} \mid A) =\frac{\PP(A\mid E_{k})\PP(E_{k})}{\sum_{k}\PP(A\mid E_{k})\PP(E_{k})}
 		\end{equation*}
-	\end{theorem}
+	\end{thm}
 
-	\begin{oss}
+	\begin{rem}
 		La prima idea sarebbe stata quella di usare la formula di Bayes nella forma $\PP(A\mid D) =\frac{\PP(D\mid A)\PP(A)}{\PP(D)}$. Questa formula è però inutile nel nostro caso perché \textbf{non} sappiamo quanto vale $\PP(D)$. Utilizziamo quindi la formula sopra proposta.
-	\end{oss}
+	\end{rem}
 
 	La partizione di $\Omega $ è data da $\{A,P_{d} ,P_{s}\}$, questi $3$ eventi ci dicono che pacco sta il premio. Allora
 	\begin{align*}
@@ -767,9 +769,9 @@ Analogamente, se non cambiamo (rami destri), su tre possibili situazioni quella 
 		 & =\frac{\frac{p}{3}}{\frac{p}{3} +\frac{1}{3}} =\frac{p}{p+1}
 	\end{align*}
 
-	\begin{oss}
+	\begin{rem}
 		In questo caso l'informazione che abbiamo è una info \textit{storica}: dai dati che abbiamo raccolto abbiamo una informazione in più sul gioco e questa informazione \textit{non} dipende dalla scelta del conduttore. La probabilità $\PP$ si \textit{aggiorna} con questa nuova informazione (Teorema di Bayes).
-	\end{oss}
+	\end{rem}
 
 	Analizziamo alcuni casi di valori di $p$
 	\begin{enumerate}

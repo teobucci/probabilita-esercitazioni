@@ -1,14 +1,16 @@
 %!TEX root = ../main.tex
 
+\chapter{Calcolo combinatorio}
+
 \ParteEsercizi
 
 Ci occuperemo di esperimenti aleatori che ammettono solo un numero \textit{finito} $n$ di risultati possibili. Sia $\Omega =\{\omega_{1} ,\dots ,\omega_{n}\}$ lo spazio campionario associato all'esperimento e $\Ac =\mathcal{P}(\Omega) =2^{\Omega }$.
 
 Supponiamo che la natura dell'esperimento aleatorio ci suggerisca di assumere $p_{1} =p_{2} =\cdots =p_{n} =p$, i.e. di assegnare la stessa probabilità ad ogni evento elementare. In questo caso si parla di \textbf{spazio di probabilità uniforme}.
 
-\begin{oss}
+\begin{rem}
 	In generale non è sempre lecito supporre che la probabilità sia uniforme.
-\end{oss}
+\end{rem}
 
 Dagli assiomi della probabilità segue che:
 
@@ -34,64 +36,64 @@ Il calcolo combinatorio è costituito da tecniche che ci permettono di \textit{c
 
 \paragraph{Principio fondamentale del calcolo combinatorio.} Si realizzano $r$ esperimenti. Si supponga che il primo esperimento abbia $n_{1}$ esiti possibili; che per ognuno di essi il secondo abbia $n_{2} \ $esiti possibili; che per ognuno degli esiti dei primi due esperimenti il terzo esperimento abbia $n_{3}$ esiti possibili ecc. Allora, se sequenze distinte di esiti degli $r$ esperimenti producono esiti finali distinti, allora gli $r$ esperimenti hanno in tutto $n_{1} \cdot n_{2} \cdots n_{r}$ esiti possibili.
 
-\begin{oss}
+\begin{rem}
 	Il diagramma ad albero è utile per rappresentare tutti i casi possibili: ci permette di avere un'elencazione grafica di tutti gli elementi di $\Omega $ (e/o di $A\in \Ac$).
-\end{oss}
+\end{rem}
 
-\begin{oss}
+\begin{rem}
 	Lo schema di scelte successive deve individuare univocamente gli elementi degli insiemi (come da principio).
-\end{oss}
+\end{rem}
 
 \paragraph{Permutazioni, disposizioni e combinazioni.}
 Sono concetti utili per contare gli elementi in un insieme.
 
-\begin{definition}
+\begin{defn}
 	Le \textbf{permutazioni} di $n$ oggetti sono tutti i possibili ordinamenti di $n$ oggetti. Le permutazioni di $n$ oggetti sono pari a:
 	\begin{equation*}
 		\boxed{P_{n} =n!=n(n-1)(n-2) \cdots 1} \ \ \ \ (0!\coloneqq 1)
 	\end{equation*}
 	Ho $n$ scelte per il primo oggetto, $(n-1)$ scelte per il secondo ecc.
-\end{definition}
+\end{defn}
 
-\begin{oss}
+\begin{rem}
 	Vi sono
 	\begin{equation*}
 		\boxed{P_{n}^{n_{1} ,n_{2} ,\dots ,n_{r}} =\frac{n!}{n_{1} !\ n_{2} !\cdots n_{r} !}}
 	\end{equation*}
 	permutazioni di un insieme di $n$ oggetti, dei quali $n_{1}$ sono identici tra loro, $n_{2}$ sono identici tra loro e distinti dai precedenti, $\dots $, $n_{r}$ sono identici e distinti dai precedenti.
-\end{oss}
+\end{rem}
 
 \textit{Esempio.} Classifica di $n$ persone, ci sono $n!$ possibili ordinamenti delle persone.
 
 Supponiamo di avere un insieme $E$ formato da $n$ oggetti \textbf{distinti}, da cui ne estraiamo $r$.
-\begin{definition}
+\begin{defn}
 	Le \textbf{disposizioni con ripetizione di classe }$r$ sono le stringhe di $r$ elementi di $E$. Il modello è quello dell'\textit{estrazione con reimmissione} da un'urna contenente $n$ oggetti. Ogni volta lo rimetto nell'urna. Ogni volta ho $n$ modi di scegliere:
 	\begin{equation*}
 		\boxed{D'^{n}_{r} =\underbrace{n\cdot n\cdots n}_{r\ \text{volte}} =n^{r}}
 	\end{equation*}
-\end{definition}
+\end{defn}
 
-\begin{definition}
+\begin{defn}
 	Le \textbf{disposizioni senza ripetizione di classe} $r$ sono le $r$-ple ordinate di elementi di $E$ senza ripetizione (deve essere $r\leq n$). Il modello è quello dell'\textit{estrazione senza reimmissione} da un'urna contenente $n$ oggetti. Ogni volta ho un modo in meno di scegliere. \textit{L'ordine conta}.
 	\begin{equation*}
 		\boxed{D_{r}^{n} =n(n-1)(n-2) \cdots (n-r+1) =\frac{n!}{(n-r) !}}
 	\end{equation*}
-\end{definition}
+\end{defn}
 
-\begin{oss}
+\begin{rem}
 	Le permutazioni sono un caso particolare di disposizioni senza ripetizione: $n!=D_{n}^{n}$.
-\end{oss}
+\end{rem}
 
 \textit{Esempio.} I primi $r$ classificati in una gara di $n$ persone.
 
-\begin{definition}
+\begin{defn}
 	Ogni sottoinsieme di $E$ di cardinalità $r\leq n$ è detto \textbf{combinazione di classe} $r$ di $E$. Il modello è quello di un'\textit{estrazione simultanea} di $r$ oggetti da un'urna che ne contiene $n$ $(r\leq n)$. Simile alle disposizioni, ma qui \textit{l'ordine non conta}.
 	\begin{equation*}
 		\boxed{C_{r}^{n} =\binom{n}{r} =\frac{n!}{r!(n-r) !}}
 	\end{equation*}
-\end{definition}
+\end{defn}
 
-\begin{oss}
+\begin{rem}
 Per determinare $C_{r}^{n}$ basta osservare che: ogni fissata combinazione di classe $r$ dà luogo a $r!$ disposizioni di classe $r$, i.e. ho $r!$ possibili modi di permutare gli oggetti:
 	\begin{equation*}
 		D_{r}^{n} =r!\ C_{r}^{n}
@@ -104,7 +106,7 @@ Per determinare $C_{r}^{n}$ basta osservare che: ogni fissata combinazione di cl
 	\begin{equation*}
 		r!\ C_{r}^{n} =\frac{n!}{(n-r) !} \implies C_{r}^{n} =\frac{n!}{r!(n-r) !} =\binom{n}{r}
 	\end{equation*}
-\end{oss}
+\end{rem}
 
 \Esercizio{}
 
@@ -265,9 +267,9 @@ Dato un insieme finito $\Omega $ di cardinalità $|\Omega| $, dimostrare che il 
 		\implies \PP(A) =\frac{| A| }{|\Omega| } =\frac{6}{36} =\frac{1}{6} \approx 0.1667
 	\end{gather*}
 
-	\begin{oss}
+	\begin{rem}
 		In questo caso $\Omega $ ed $A$ hanno pochi elementi e possiamo elencarli senza problemi. Avremmo anche potuto contare gli elementi di $A$ e $\Omega $ senza elencarli con un diagramma ad albero.
-	\end{oss}
+	\end{rem}
 
 	\item Sia $B$ l'evento \event{la somma dei due risultati è $6$}, allora
 	\begin{gather*}
@@ -275,7 +277,7 @@ Dato un insieme finito $\Omega $ di cardinalità $|\Omega| $, dimostrare che il 
 		\implies \PP(B) =\frac{| B| }{|\Omega| } =\frac{5}{36} \approx 0.1389
 	\end{gather*}
 
-	\begin{oss}
+	\begin{rem}
 		I risultati della somma non sono equiprobabili. Infatti, se assumiamo che i due dadi non siano truccati, denotando con $\{i\}$ l'evento \event{la somma dei due dadi è $i$}, per $i=1,\dots ,12$,
 		\begin{equation*}
 			\begin{array}{ l }
@@ -292,7 +294,7 @@ Dato un insieme finito $\Omega $ di cardinalità $|\Omega| $, dimostrare che il 
 			\PP(\{i\}) =\frac{1}{11} \ \ \ \ 11=|\Omega| \ \text{con} \ \Omega =\{2,3,\dots ,12\}
 		\end{equation*}
 		$\Omega =$ spazio degli eventi elementari, somma degli esiti del lancio dei due dadi. Lo spazio di probabilità così costruito è matematicamente corretto, ma non ha nulla a che fare con la realtà fisica dell'esperimento.
-	\end{oss}
+	\end{rem}
 
 	\item Lanciando $3$ volte il dado lo spazio campionario diventa
 	\begin{equation*}
@@ -309,7 +311,7 @@ Dato un insieme finito $\Omega $ di cardinalità $|\Omega| $, dimostrare che il 
 		\implies \PP(C) =\frac{| C| }{|\Omega| } =\frac{10}{6^{3}} \approx 0.0463
 	\end{gather*}
 
-	\begin{oss}
+	\begin{rem}
 		Avremmo potuto risolvere l'esercizio anche sfruttando il concetto di permutazioni, definendo
 		\begin{gather*}
 			C=\text{possibili permutazioni di} \ 
@@ -320,7 +322,7 @@ Dato un insieme finito $\Omega $ di cardinalità $|\Omega| $, dimostrare che il 
 			\end{cases}
 		\end{gather*}
 		pertanto $|C|=6+1+3=10$.
-	\end{oss}
+	\end{rem}
 	
 \end{enumerate}
 
@@ -479,13 +481,13 @@ In altre parole, $\Omega $ è l'insieme delle \emph{puntate secche} (ossia sched
 		| A| =1\implies \PP(A) =| A| /|\Omega| =1/\binom{90}{6} \approx 1.6\times 10^{-9}
 	\end{equation*}
 
-	\begin{oss}
+	\begin{rem}
 		Si sarebbe potuto rispondere alla domanda anche introducendo $\Omega $ come lo spazio delle disposizioni anziché combinazioni (confronta con Es. 2.3.2.)
 		\begin{gather*}
 			\Omega =\{(\omega_{1} ,\dots ,\omega_{6}) :\omega_{i} \in \{1,\dots,90\} \ \forall i=1,\dots,6,\ \omega_{i} \neq \omega_{j} \ \forall i\neq j\}\\
 			|\Omega| =D_{6}^{90} =\underbrace{90\cdot 89\cdot 88\cdot 87\cdot 86\cdot 85}_{6\ \text{termini}} =\frac{90!}{84!}
 		\end{gather*}
-	\end{oss}
+	\end{rem}
 
 	Sia $A=$ \event{indovino i primi $6$ numeri estratti}.
 	\begin{equation*}
@@ -681,7 +683,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 
 		Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità e siano $A_{1} ,\dots ,A_{n} \in \Ac$ tale che $\PP(A_{1} \cap A_{2} \cap \cdots \cap A_{n-1})  >0$. Allora $\PP\left(\bigcap_{n} A_{n}\right) =\PP(A_{1})\PP(A_{2} |A_{1}) \cdots \PP(A_{n} |A_{1} \cap \cdots \cap A_{n-1})$.
 
-		\begin{oss}
+		\begin{rem}
 			Questo è esattamente il caso che ci interessa, perché quando estraiamo la $k$-esima pallina dobbiamo tenere conto del fatto che ne abbiamo estratte $k-1$ prima. Abbiamo allora:
 			\begin{align*}
 				\PP(\{\omega \}) & =\PP(\{\omega_{1} ,\dots ,\omega_{k}\})\\
@@ -691,7 +693,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 				 & =\frac{1}{n} \ \frac{1}{n-1} \cdots \frac{1}{n-(k-1)}\\
 				 & =\frac{1}{n(n-1) \cdots (n-k+1)} =\frac{1}{|\Omega| }
 			\end{align*}
-		\end{oss}
+		\end{rem}
 
 		$(\impliedby)$ Esercizio.
 		\item Sia $A$ come nel primo punto. Non abbiamo ripetizioni, perché stiamo considerando estrazioni senza reimmissione, dunque
@@ -761,7 +763,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 
 		Sia $A$ l'evento \event{$2$ palline rosse su $4$ estratte}. Quanti modi abbiamo di estrarre $2$ palline rosse e $2$ blue? In totale abbiamo $(3\cdot 2) \cdot (7\cdot 6)$ possibilità di ottenere questa configurazione, però dobbiamo considerare tutti i possibili modi in cui le $2$ palline rosse possono disporsi su $4$ ($=$ palline estratte) posti i.e. dobbiamo considerare tutte le $\binom{4}{2}$ possibili configurazioni.
 
-		\begin{oss}
+		\begin{rem}
 			Possiamo pensare anche pensare il tutto come il modo di permutare le $4$ palline, tenendo conto che $2$ rosse sono indistinguibili e $2$ blu sono indistinguibili.
 			\begin{gather*}
 				\binom{4}{2} =\frac{4!}{2!2!} =\frac{4\cdot 3\cdot 2}{4} =6\ \text{possibili modi}\\
@@ -769,7 +771,7 @@ Poiché \textit{distinti}, possiamo enumerare gli oggetti dell'urna da $1$ a $n$
 				| A| =\binom{4}{2} \cdot (3\cdot 2) \cdot (7\cdot 6)\\
 				\PP A) =\frac{| A| }{|\Omega| } =\frac{\binom{4}{2} \cdot (3\cdot 2) \cdot (7\cdot 6)}{10\cdot 9\cdot 8\cdot 7} \approx 0.3
 			\end{gather*}
-		\end{oss}
+		\end{rem}
 
 		\item Metodo $2$
 		\begin{equation*}
@@ -827,9 +829,9 @@ Introduciamo $\Omega $ come lo spazio delle combinazioni di $52$ elementi di cla
 		\item ho $\binom{4}{3}$ possibilità di scegliere il seme (posso pensarlo come ad un'urna in cui ho $4$ semi e ne estraggo $3$, es. estratto $\varheartsuit ,\spadesuit ,\vardiamondsuit $)
 		\item ho $12$ possibilità per scegliere il tipo della coppia (es. scelgo il $6$)
 
-		\begin{oss}
+		\begin{rem}
 			In questo caso considero $13\cdot 12$ possibilità per il tipo e NON $\binom{13}{2}$ perché i casi $(3\varheartsuit \ 3\spadesuit \ 3\vardiamondsuit \ 6\varheartsuit \ 6\clubsuit) \neq (6\varheartsuit \ 6\spadesuit \ 6\vardiamondsuit \ 3\varheartsuit \ 3\clubsuit)$, differenza con il punto successivo
-		\end{oss}
+		\end{rem}
 
 		\item ho $\binom{4}{2}$ possibilità di scegliere il seme (es. $\varheartsuit ,\clubsuit $)
 		\begin{equation*}

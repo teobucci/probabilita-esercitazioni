@@ -1,6 +1,8 @@
 %!TEX root = ../main.tex
 % aspell --mode=tex --lang=it check 01-spazi_campionari_sigma-algebre_probabilita.tex
 
+\chapter{Spazi campionari, sigma-algebre, probabilità}
+
 \ParteEsercizi
 
 \Esercizio{}
@@ -319,7 +321,7 @@ $A=\sigma (E) =\left\{E,E\complementary ,\emptyset ,\Omega \right\}$.
 	\item $E_{3} \cap \bigcap\limits _{k\neq 3} E_{k}\complementary$
 	\item $\bigcap\limits _{k=1}^{\infty } E_{2k}$
 	\item $\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m} =:\liminf _{n} E_{n}$
-	\begin{oss}
+	\begin{rem}
 		\begin{align*}
 			\omega \in \liminf_{n} E_{n} & \ \ \iff \ \ \omega \in \bigcup_{n=1}^{\infty }\bigcap_{m\geq n} E_{m}\\
 			 & \ \ \iff \ \ \exists \overline{n} \in \NN :\ \omega \in \bigcap_{m\geq \overline{n}} E_{m}\\
@@ -327,9 +329,9 @@ $A=\sigma (E) =\left\{E,E\complementary ,\emptyset ,\Omega \right\}$.
 		\end{align*}
 		i.e. $\omega $ sta in tutti gli $E_{m}$ tranne al più un numero finito di essi.\\
 		i.e. ho successi in tutte le prove al più un numero finito di esse.
-	\end{oss}
+	\end{rem}
 	\item $\bigcap\limits_{n=1}^{\infty }\bigcup\limits_{m\geq n} E_{m} =:\limsup_{n} E_{n}$
-	\begin{oss}
+	\begin{rem}
 		\begin{align*}
 			\omega \in \limsup_{n} E_{n} & \ \ \iff \ \ \omega \in \bigcap_{n=1}^{\infty }\bigcup_{m\geq n} E_{m}\\
 			 & \ \ \iff \ \ \forall n\in \NN ,\ \omega \in \bigcup_{m\geq n} E_{m}\\
@@ -337,7 +339,7 @@ $A=\sigma (E) =\left\{E,E\complementary ,\emptyset ,\Omega \right\}$.
 		\end{align*}
 		i.e. $\omega $ sta in $E_{m}$ per infiniti $n\in \NN$.\\
 		i.e. ho infiniti successi.
-	\end{oss}
+	\end{rem}
 	\item $\left(\liminf\limits _{n} E_{n}\right)\complementary =\underbrace{\left(\bigcup\limits _{n=1}^{\infty }\bigcap\limits _{m\geq n} E_{m}\right)\complementary =\bigcap\limits _{n=1}^{\infty }\bigcup\limits _{m\geq n} E_{m}\complementary}_{\text{Leggi di De Morgan}} =:\limsup\limits _{n} E_{n}\complementary$
 	\item $\bigcup\limits _{l\in \mathbb{N}}\left(E_{l} \cap \bigcap\limits _{k\neq l} E_{k}\complementary\right)$
 \end{enumerate}
@@ -380,12 +382,12 @@ Inoltre, $\Omega $ non è unico, al più è unico l'$\Omega $ \textit{minimale},
 		\item $M=$ \event{il premio piace a Marco} $=\{7,\dots ,11\}$ (ci deve essere un elemento comune)
 	\end{itemize}
 
-\begin{oss}
+\begin{rem}
 Non è necessario introdurre esplicitamente $\Omega $, possiamo fare tutto in maniera astratta. Le informazioni rilevanti sono le seguenti:
 \begin{equation*}
 (\Omega ,\Ac) \ \ \ \ |\Omega| =50\ \ \ \ C,M\ \ \ \ \text{tali che} \ \ \ \ C,M\in \Ac ,| C| =7,| M| =5
 \end{equation*}
-\end{oss}
+\end{rem}
 \begin{enumerate}
 	\item $C$
 	\item $M$
@@ -458,13 +460,13 @@ In questo modo possiamo calcolare:
 	\item la probabilità di consegna urgente in città
 	$\PP(\{U_{c}\}) =\PP(U) -\PP(\{U_{f}\}) =0.3-0.1=0.2$
 \end{enumerate}
-\begin{oss}
+\begin{rem}
 	Per avere i valori di probabilità di tutti i mattoncini possiamo anche calcolare
 	\begin{equation*}
 		\PP(\{N_{f}\}) =1-\PP(\{U_{f}\}) -\PP(\{U_{c}\}) -\PP(\{N_{c}\}) =1-0.1-0.2-0.4=0.3
 	\end{equation*}
 	In altri termini $\{N_{f}\} ,\{U_{f}\} ,\{N_{c}\} ,\{U_{c}\}$ rappresentano una partizione di $\Omega $. Sapendo le probabilità di questi eventi, ricaviamo le probabilità di qualsiasi evento.
-\end{oss}
+\end{rem}
 
 \textbf{Secondo Metodo.}
 

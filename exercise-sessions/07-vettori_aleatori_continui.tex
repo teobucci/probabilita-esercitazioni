@@ -1,6 +1,6 @@
 %!TEX root = ../main.tex
 
-% Introduzione
+\chapter{Vettori aleatori continui}
 
 \section{Introduzione}
 Vogliamo descrivere uno ad uno gli strumenti che serviranno a svolgere gli esercizi di questo foglio di calcolo.
@@ -8,7 +8,7 @@ Vogliamo descrivere uno ad uno gli strumenti che serviranno a svolgere gli eserc
 \subsection{Integrali multipli}
 Rinfreschiamo dal corso di Analisi 2 le seguenti definizioni.
 
-\begin{definition}[Domini normali]$\\$
+\begin{defn}[Domini normali]$\\$
 Siano $f_1(x), f_2(x)$ due funzioni continue in $[a,b]\subseteq\RR$ e tali che che $f_1(x)\leq f_2(x)$ $\ \forall x\in[a,b]$. Allora l'insieme
 \[
 D\coloneqq\{(x,y)\in\RR^2\ :\ x\in[a,b],\ f_1(x)\leq y\leq f_2(x)   \}
@@ -21,22 +21,22 @@ E\coloneqq\{(x,y)\in\RR^2\ :\ f_3(y)\leq x\leq f_4(y),\ y\in[c,d]   \}
 \]
 è misurabile ed è chiamato dominio normale rispetto all'asse $y$.
 \fg{0.3}{9_2}
-\end{definition}
+\end{defn}
 Osserviamo che esistono anche domini normali rispetto entrambi gli assi.
 
-\begin{definition}[Domini normali regolari]$\\$
+\begin{defn}[Domini normali regolari]$\\$
 Il dominio normale $D$ è detto normale regolare se $f_1,f_2\in\Cu([a,b])$ con $f_1(x)<f_2(x)$ $\ \forall x\in[a,b]$.
 
 Analogamente, il dominio normale $E$ è detto normale regolare se $f_3,f_4\in\Cu([c,d])$ con $f_3(y)<f_4(y)$ $\ \forall y\in[c,d]$.
-\end{definition}
+\end{defn}
 
-\begin{definition}[Domini regolari]$\\$
+\begin{defn}[Domini regolari]$\\$
 Un dominio $\Omega\subseteq\RR^2$ si dice regolare se è l'unione finita di domini normali regolari privi di punti interni comuni.
-\end{definition}
+\end{defn}
 Osserviamo che per costruzione un dominio regolare è chiuso e limitato, quindi è anche compatto.
 
 Siamo pronti per enunciare
-\begin{theorem}[Di Fubini]$\\$
+\begin{thm}[Di Fubini]$\\$
 \label{introth1}
 Sia $D$ un dominio normale rispetto all'asse $x$ in $[a,b]$. Allora data $f:D\to\RR$ continua si ha
 \[
@@ -46,9 +46,9 @@ Sia $E$ un dominio normale rispetto all'asse $y$ in $[c,d]$. Allora data $f:R\to
 \[
 \iint_{E}f(x,y)\dxy=\int_{c}^{d} \left(\int_{f_3(y)}^{f_4(y)}f(x,y)\dx  \right)\dy
 \]
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Di Jacobi]$\\$
+\begin{thm}[Di Jacobi]$\\$
 \label{introth2}
 Siano $\Omega,\Omega'\subseteq\RR^2$ due domini regolari. Sia $g:\Omega'\to\Omega$ il campo vettoriale che associa ad ogni coppia $(u,v)\in\Omega'$ la coppia $(x,y)\in\Omega$. Se
 \begin{enumerate}
@@ -63,7 +63,7 @@ allora data una funzione $f:\Omega\to\RR$ continua si ha che
 &=\iint_{\Omega'}f\left(g^{-1}(u,v)\right)\cdot \frac{1}{|\det J_{g}(u,v)|} \duv
 \end{aligned}
 \end{gather*}
-\end{theorem}
+\end{thm}
 Vediamo subito un esempio: calcoliamo l'integrale doppio di $$f(x,y)=e^{2x-y} \text{ su } \Omega=\{(x,y)\in\RR^2\ :\ 2x\leq y\leq2x+5,\ -3x\leq y\leq 15/2-3x  \}$$
 Prima di partire riscriviamo meglio l'insieme di integrazione
 \[
@@ -101,7 +101,7 @@ Ora interpreteremo questo importante teorema in funzione delle nozioni probabili
 
 \subsection{Formule di Jacobi in Probabilità}
 Nel capitolo sulle variabili aleatori continue abbiamo già visto come applicare la formula di Jacobi, anche se abbiamo anche detto che nel caso 1 - dimensionale non si riesce a comprendere la vera portata di tale enunciato, in quanto è più semplice passare per il calcolo della funzione di ripartizione. Per completezza, ecco il teorema
-\begin{theorem}[Di Jacobi per le variabili continue]$\\$
+\begin{thm}[Di Jacobi per le variabili continue]$\\$
 \label{introth3}
 Sia $X$ variabile aleatoria assolutamente continua con densità $f_X$. Inoltre sia $g:\RR\to\RR$ tale che
 \begin{enumerate}
@@ -117,11 +117,11 @@ f_X(g^{-1}(y))\cdot|(g^{-1}(y))'|   &\text{ se }y\in g(\RR) \\
 \end{cases}
 \]
 Attenzione, delle volte se $X$ prende valori in un certo $S\subseteq\RR$ aperto, allora è comodo definire $g:S\to\RR$ perché potrebbero esserci $g$ non iniettive o derivabili in $\RR$ ma iniettive o derivabili in $S$.
-\end{theorem}
+\end{thm}
 Si veda l'esercizio 7 per un esempio pratico.
 
 Ora vediamo il caso $n$ - dimensionale
-\begin{theorem}[Di Jacobi per i vettori continui]$\\$
+\begin{thm}[Di Jacobi per i vettori continui]$\\$
 \label{introth4}
 Sia $\SDP$ uno spazio di probabilità e $X:\Omega\to\RR^n$ un vettore aleatorio assolutamente continuo con densità $f_X:\RR^n\to\RR$. Inoltre sia $g:\RR^n\to\RR^n$ una funzione tale che
 \begin{enumerate}
@@ -141,18 +141,18 @@ dove
 J_{g^{-1}}(y)=\frac{1}{J_g(g^{-1}(y))}
 \]
 Attenzione: $g$ non cambia le dimensioni del vettore; inoltre delle volte se $X$ prende valori in un certo $S\subseteq\RR^n$ aperto (cioè $\PP(X\in S)=1$, $X\in S$ quasi certamente), allora è comodo definire $g:S\to\RR^n$ perché potrebbero esserci $g$ non iniettive o derivabili in $\RR^n$ ma iniettive o derivabili in $S$.
-\end{theorem}
+\end{thm}
 Si veda l'esercizio 9 per un esempio pratico.
 
 \subsection{Altri teoremi utili}
 Richiamiamo qui altri teoremi che ci servanno per svolgere gli esercizi.
 
-\begin{theorem}[Calcolo delle leggi marginali]
+\begin{thm}[Calcolo delle leggi marginali]
 \label{introth5-}
 $\\$Se il vettore aleatorio $(X,Y)$ è continuo allora $X$ e $Y$ sono variabili aleatorie continue (il viceversa non vale).
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Calcolo delle leggi marginali]
+\begin{thm}[Calcolo delle leggi marginali]
 \label{introth5}
 $\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $\fXY$ allora $X,Y$ sono variabili aleatorie assolutamente continue, con densità
 \begin{gather*}
@@ -161,48 +161,48 @@ $\\$Se $(X,Y)$ è un vettore aleatorio assolutamente continuo con densità $\fXY
 &f_Y(y)=\int_\RR \fXYxy\dx&\forall y\in\RR
 \end{aligned}
 \end{gather*}
-\end{theorem}
+\end{thm}
 
 Tale enunciato non può essere invertito, a meno che non si aggiunga l'ipotesi di indipendenza, cioè
-\begin{theorem}[Fattorizzazione della legge congiunta]
+\begin{thm}[Fattorizzazione della legge congiunta]
 \label{introth6}
 $\\$$X\indep Y \iff \fXYxy=f_X(x)\cdot f_Y(y)$
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Condizione necessaria sui supporti per l'indipendenza]
+\begin{thm}[Condizione necessaria sui supporti per l'indipendenza]
 \label{introth7}
 $\\$Siano $X$ e $Y$ due variabili aleatorie continue e indipendenti con densità rispettivamente $f_X$ su $S_X$ e $f_Y$ su $S_Y$. Sia $(X,Y)$ il vettore aleatorio continuo con densità $\fXY$ su $S_{(X,Y)}$. Allora deve valere che
 \begin{equation*}
 S_{(X,Y)}=S_X\cdot S_Y
 \end{equation*}
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Regola del valore atteso per vettori continui]
+\begin{thm}[Regola del valore atteso per vettori continui]
 \label{introth8}
 $\\$Sia $(X,Y)$ vettore aleatorio continuo su $(\Omega,\mathcal{A},\PP)$ con legge $P^{(X,Y)}$ e densità $\fXY$. Allora $\forall h:\RR^2\to\RR$ boreliana e $\forall h:\RR^2\to[0,+\infty)$
 \begin{enumerate}
 \item [i)] $h\in L^1(P^{(X,Y)}) \iff h\cdot \fXY\in L^1(m_2)$
 \item [ii)] $\EE[h(X,Y)]=\int_{\RR^2}h(x,y)\fXYxy \dxy$
 \end{enumerate}
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Risultato notevole (esercizio 4 del foglio 5)]
+\begin{thm}[Risultato notevole (esercizio 4 del foglio 5)]
 \label{introth9}
 $\\$Data $X$ variabile aleatoria positiva e continua, denotata $F$ la sua funzione di ripartizione, allora
 \[
 \EE[X]=\int_{0}^{+\infty}(1-F(x))\dx
 \]
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Coefficiente di correlazione unitario]
+\begin{thm}[Coefficiente di correlazione unitario]
 \label{introth10}
 $\\$Siano $X,Y\in L^2$ tali che $\Var(X),\Var(Y)>0$. Allora
 \[
 |\rho_{X,Y}|=1 \iff \exists a\neq 0,\ \exists b\in\RR\ :\ Y=aX+b
 \]
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Alcune proprietà di valore atteso, varianza e covarianza]
+\begin{thm}[Alcune proprietà di valore atteso, varianza e covarianza]
 \label{introth11}
 $\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
 \begin{enumerate}
@@ -216,17 +216,17 @@ $\\$Siano $X,Y\in L^2$ e $a,b,c,d\in\RR$. Allora valgono:
 \item [(h)] $\Var(X+Y)=\Var(X)+\Var(Y)+2\Cov(X,Y)$
 \item [(i)] $X\indep Y \implies \Var(X+Y)=\Var(X)+\Var(Y)$
 \end{enumerate}
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Bilinearità della covarianza]
+\begin{thm}[Bilinearità della covarianza]
 \label{introth12}
 $\\$Dati $X,Y,Z,W\in L^2$ e $a,b,c,d\in\RR$ si ha
 \[
 \Cov(aX+bY,cW+dZ)=ac\Cov(X,W)+ad\Cov(X,Z)+bc\Cov(Y,W)+bd\Cov(Y,Z)
 \]
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Valore atteso e varianza per trasformazioni affini]
+\begin{thm}[Valore atteso e varianza per trasformazioni affini]
 \label{introth13}
 $\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine $Y\coloneqq AX+b$ con $A\in\RR^{m\times n},\ b\in\RR^{m}$ è un vettore aleatorio in $\RR^m$ con
 \begin{gather*}
@@ -235,20 +235,20 @@ $\\$Sia $X:\Omega\to\RR^n$ un vettore aleatorio. Allora la trasformazione affine
 \Var(Y)&=A\cdot \Var(X)\cdot A^T
 \end{aligned}
 \end{gather*}
-\end{theorem}
+\end{thm}
 
 Ora anticipiamo due risultati notevoli che verranno poi dimostrati nelle pagine a seguire.
-\begin{theorem}[Risultato notevole (esercizio 13 del foglio 7)]
+\begin{thm}[Risultato notevole (esercizio 13 del foglio 7)]
 \label{introth14}
 $\\$Date $X$ e $Y$ di legge congiunta continua con densità $\fXY$, si consideri $Z=X+Y$. Allora $Z$ èuna variabile aleatoria continua con densità
 \[
 f_Z(z)=\int_{-\infty}^{+\infty} \fXY(z-y,y)\dy
 \]
-\end{theorem}
-\begin{theorem}[Risultato notevole (esercizio 2 del foglio 7)]
+\end{thm}
+\begin{thm}[Risultato notevole (esercizio 2 del foglio 7)]
 \label{introth15}
 $\\$Due variabili aleatorie $X$ e $Y$ sono variabili aleatorie continue e indipendenti se e solo se sono congiuntamente continue con densità fattorizzabile, cioè esistono due funzioni $h_1:\RR\to\RR$ e $h_2:\RR\to\RR$ tali che $\fXYxy=h_1(x)\ h_2(y)$ q.o.
-\end{theorem}
+\end{thm}
 
 \subsection{Qualche integrale notevole}
  Vogliamo infine ricordare i seguenti integrali (risolti integrando \textit{pp}: per parti), in modo tale da rendere più fluidi i futuri passaggi.
@@ -622,7 +622,7 @@ Ricapitolando, abbiamo ottenuto
 \end{aligned}
 \end{gather*}
 Ricordando che
-\begin{oss}
+\begin{rem}
 $\\$Sia $X\sim\Gamma(\alpha,\lambda)$ con $\alpha,\lambda>0$. Allora
 \begin{gather*}
 \begin{aligned}
@@ -633,7 +633,7 @@ f_X(x)&=\frac{\lambda^\alpha}{\Gamma(\alpha)}\ x^{\alpha-1}e^{-\lambda x}\ \ \ \
 \end{aligned}
 \end{gather*}
 (Quando si ha \textit{densità}$=$\textit{polinomio}$\cdot$\textit{esponenziale} è quasi sempre una $\Gamma$!)
-\end{oss}
+\end{rem}
 riconosciamo che $X\sim\Gamma(2,1)$ e $Y\sim\Gamma(4,1)$.
 \item [(b)] $X$ e $Y$ sono indipendenti?
 
@@ -677,12 +677,12 @@ diventa
 \item [(d)] Calcolare il coefficiente di correlazione $\rho_{X,Y}$.
 
 Ricordiamo che
-\begin{oss}
+\begin{rem}
 $\\$Il coefficiente di correlazione lineare si calcola con
 \begin{equation*}
 \rho_{X,Y}\coloneqq\frac{\Cov(X,Y)}{\sqrt{\Var(X)\cdot \Var(Y)}}=\frac{\EE[XY]-\EE[X]\cdot\EE[Y]}{\sqrt{\Var(X)\cdot \Var(Y)}}
 \end{equation*}
-\end{oss}
+\end{rem}
 
 Al volo possiamo già dire che $\EE[X]=2=\Var(X)$ e $\EE[Y]=4=\Var(Y)$. Invece per $\EE[XY]$ sfruttiamo il teorema (\ref{introth8})
 \begin{gather*}
@@ -910,7 +910,7 @@ incorriamo in una contraddizione:
 \end{gather*}
 Abbiamo quindi sbagliato a presupporre che il vettore $(R,M)$ fosse assolutamente continuo.
 
-\begin{oss} Abbiamo chiarito ancora una volta la non invertibilità del teorema (\ref{introth5-}. \end{oss}
+\begin{rem} Abbiamo chiarito ancora una volta la non invertibilità del teorema (\ref{introth5-}. \end{rem}
 
 \item [(b-c)] Calcolare i valori attesi di $R$ e $M$. Calcolare la matrice varianza di $(R,M)$.
 
@@ -982,7 +982,7 @@ Notiamo infine che $F_M\in\Cz\cap\widetilde{\Cc}^1$ e quindi $M$ è variabile al
 f_M(t)=F_M'(t)=\frac{1}{t^2}\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(t)
 \]
 
-\begin{oss} Avremmo potuto calcolare $f_M$ anche con la formula di Jacobi (\ref{introth3}), infatti:
+\begin{rem} Avremmo potuto calcolare $f_M$ anche con la formula di Jacobi (\ref{introth3}), infatti:
 \begin{itemize}
 \item $g(x)=\frac{1}{x}$ iniettiva su $S=(a,b)$ e con immagine $g(S)=\left(\frac{1}{b},\frac{1}{a}\right)$;
 \item $g\in\Cu(S)$;
@@ -992,7 +992,7 @@ Allora
 \[
 f_M(t)=f_R(g(y))\ |g'(y)|\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(y)=\frac{1}{y^2}\ \Ind_{\left(\frac{1}{b},\frac{1}{a}\right)}(y)
 \]
-\end{oss}
+\end{rem}
 
 \end{enumerate}
 
@@ -1085,12 +1085,12 @@ Calcoliamo separatamente i due integrali
 \end{aligned}
 \end{gather*}
 
-\begin{oss}$\\$
+\begin{rem}$\\$
 Sono state usate le seguenti proprietà trigonometriche
 \[
 \cos(\arcsin(x))=\sqrt{1-x^2}\qquad \cos(\alpha-\beta)=\cos\alpha\,\cos\beta+\sin\alpha\,\sin\beta
 \]
-\end{oss}
+\end{rem}
 
 Riprendendo quindi l'equazione (\ref{eqn_7_8}) otteniamo
 \[
@@ -1111,7 +1111,7 @@ In conclusione
 \end{cases}
 \]
 
-\begin{oss}[Importanza storica dell'esperimento]$\\$
+\begin{rem}[Importanza storica dell'esperimento]$\\$
 Consideriamo $l\leq d$. Abbiamo trovato che $p=\PP(A)=\dfrac{2l}{\pi d}$ e quindi
 \[
 \pi=\dfrac{2l}{p d}=2ap^{-1}
@@ -1129,7 +1129,7 @@ Se il numero di esperimenti è abbastanza grande si può allora ottenere un'appr
 Si lasciano di seguito alcuni link con simulazioni: \\
 \url{https://datagenetics.com/blog/may42015/index.html} \\
 \url{https://www.maplesoft.com/support/help/Maple/view.aspx?path=MathApps%2FBuffonsNeedleProblem}
-\end{oss}
+\end{rem}
 
 \Soluzione{}
 \begin{enumerate}
@@ -1202,9 +1202,9 @@ X \\ Y
 \]
 In tal caso $g:\RR^2\to\RR^2$ è iniettiva, $\Cu$ e ha jacobiano $J_g=A$ con $\det A=1\neq 0$.
 
-\begin{oss}$\\$
+\begin{rem}$\\$
 Se nel caso 1D $(mx+q)'=m$ nel caso $n$D $(AX+b)'=J_{Ax+b}=A$.
-\end{oss}
+\end{rem}
 
 Possiamo quindi applicare la formula di Jacobi (\ref{introth4}) con $g^{-1}:g(\RR^2)\to\RR^2$ tale che
 \begin{gather*}
@@ -1222,8 +1222,8 @@ Quindi $(U,V)\sim\Uc(Q)$.
 
 Confrontando $f_{(U,V)}$ con $f_U$ e $f_V$ capiamo che $f_{(U,V)}\neq f_U\cdot f_V$ quindi $U$ e $V$ non sono indipendenti.
 
-\begin{oss}Del resto, quando l'insieme di arrivo ha linee di perimetro oblique le due variabili non possono essere indipendenti, perché tali linee avranno forma $y=mx+q$ e quindi apppunto $y$ dipende da $x$ e viceversa. 
-\end{oss}
+\begin{rem}Del resto, quando l'insieme di arrivo ha linee di perimetro oblique le due variabili non possono essere indipendenti, perché tali linee avranno forma $y=mx+q$ e quindi apppunto $y$ dipende da $x$ e viceversa. 
+\end{rem}
 
 \item [(e)] Si consideri ora il vettore aleatorio $(U,V)=(X+1,X+Y-XY+X^2Y)$. Calcolarne il valore atteso.
 
@@ -1336,12 +1336,12 @@ F_T(t)&=\PP(T\leq t)=1-\PP(T>t)= \\
 \end{aligned}
 \end{gather*}
 Ricordando che
-\begin{oss}$\\$
+\begin{rem}$\\$
 Se $X\sim\Ec(\lambda)$ allora
 \[
 F_X(x)=\left(1-e^{-\lambda x}\right)\Ind_{[0,+\infty)}(x)
 \]
-\end{oss}
+\end{rem}
 otteniamo
 \begin{gather*}
 F_T(t)=1-\left(e^{-\lambda t}\right)\,\left(e^{-\mu t}\right)\,\left(e^{-\gamma t}\right)=1-e^{-(\lambda+\mu+\gamma)t} \\
@@ -1375,7 +1375,7 @@ f_S(s)=F_S'(s)=\left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\Ind_{[0,+\i
 \]
 \end{enumerate}
 
-\begin{oss}$\\$
+\begin{rem}$\\$
 Quanto abbiamo quadagnato rispetto al punto (a)?
 Prima avevamo
 \[
@@ -1386,7 +1386,7 @@ Ora
 \EE[S]=\int_{0}^{+\infty} \left(1.2\left(1-e^{-0.6s}  \right)e^{-0.6s}  \right)\ds=2.5
 \]
 Fare una sostituzione ogni 30 mesi rispetto a farla ogni 20 mesi può essere molto più conveniente!
-\end{oss}
+\end{rem}
 
 \Soluzione{}
 \begin{enumerate}
@@ -1565,7 +1565,7 @@ f_Z(z)=
 
 \fg{0.5}{7_22}
 
-\begin{oss} Tale legge vedremo nel capitolo successivo che è il risultato della convoluzione delle due caratteristiche. \end{oss}
+\begin{rem} Tale legge vedremo nel capitolo successivo che è il risultato della convoluzione delle due caratteristiche. \end{rem}
 
 \item [(b$^*$)] Si trovi la legge di $T=X+Y-\Ind_{\{ X+Y-1 \}}$.
 

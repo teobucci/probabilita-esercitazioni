@@ -1,5 +1,7 @@
 %!TEX root = ../main.tex
 
+\chapter{Variabili aleatorie discrete}
+
 \ParteEsercizi
 
 Richiami
@@ -7,25 +9,25 @@ Richiami
 VA: Sia $(\Omega,\Ac,\PP)$ uno spazio di probabilità. Una funzione $X:(\Omega ,\Ac)\rightarrow (\RR ,\mathcal{B})$ si dice variabile aleatoria reale se è misurabile, i.e. $\forall B\in \mathcal{B} ,X^{-1}(B) \in \Ac$.
 
 LEGGE: la legge di una variabile aleatoria reale $X$ è la misura di probabilità $P^{X}(B) =\PP(X\in B) =\PP\left(X^{-1}(B)\right) =\PP(\{\omega \in \Omega :X(\omega) \in B\})$, $\forall B\in \mathcal{B}$.
-\begin{oss}
+\begin{rem}
 	La legge è univocamente determinata dalla funzione di ripartizione, ossia $F:\RR\rightarrow \RR$ tale che $F(t) =\PP(X\leq t) =P^{X}((-\infty ,t])$. La funzione di ripartizione è definita su tutto $\RR$ e si definisce solo per le VA reali.
-\end{oss}
-\begin{oss}
+\end{rem}
+\begin{rem}
 Somme, prodotti, limiti di VA reali sono VA reali.
-\end{oss}
+\end{rem}
 Funzioni boreliane: una funzione $f:(\RR ,\mathcal{B})\rightarrow (\RR ,\mathcal{B})$ si dice boreliana se è misurabile.
-\begin{oss}
+\begin{rem}
 Sono boreliane le funzioni continue e generalmente continue (i.e. continue a tratti).
-\end{oss}
-\begin{oss}
+\end{rem}
+\begin{rem}
 Composizione di VA reali con funzioni boreliane sono VA reali.
-\end{oss}
+\end{rem}
 VA discrete: una VA reale $X$ si dice \textbf{discreta} se assume con probabilità $1$ valori in un insieme $S$ al più numerabile $\PP(X\in S) =1$. $\iff $Una VA reale $X$ si dice discreta se e solo se $P^{X}$ è discreta, ossia $\exists S\subset \RR$ al più numerabile e $p_{X} :S\rightarrow [0,1]$ tale che $P^{X}(B) =\sum\limits_{x\in B\cap S} p_{X}(x)$, $\forall B\in \mathcal{B}$.
 
 La funzione $p_{X}$ si dice \textbf{densità discreta} di $X$. Si dice \textbf{supporto} di $P^{X}$ l'insieme $S_{X} =\{x\in \RR :p_{X}(x)  >0\}$.
-\begin{oss}
+\begin{rem}
 Posso, ma non per forza, pensare $S=S_{X}$.
-\end{oss}
+\end{rem}
 Graficamente
 
 
@@ -58,9 +60,9 @@ Graficamente
 
 \end{tikzpicture}
 
-\begin{oss}
+\begin{rem}
 Se $X$ è VA reale con funzione di ripartizione $F_{X}$ costante a tratti, allora $X$ è discreta. $S$ sarà l'insieme dei punti di discontinuità e $p_{X}$ l'ampiezza dei salti.
-\end{oss}
+\end{rem}
 Esempio. Sia $X$ la VA che indica il numero di teste ottenute in un lancio di $3$ monete non truccate. Si può calcolare
 \begin{equation*}
 \PP(X\leq x) =F_{X}(x) =
@@ -134,13 +136,13 @@ Esempio. Sia $X$ la VA che indica il numero di teste ottenute in un lancio di $3
 $S$ è l'insieme dei punti di discontinuità di $F$: infatti la VA assume i valori in $S=\{0,1,2,3\}$.
 
 $p_{X}(x) =\PP(X=x)$, per esempio $p_{X}(2) =\PP(X=2) =F_{X}(2) -F_{X}(2)^{-} =\frac{7}{8} -\frac{1}{2} =\frac{3}{8}$ che è l'ampiezza del salto da $1$ a $2$, i.e. $p_{X}(x)$ rappresenta l'ampiezza dei salti.
-\begin{oss}
+\begin{rem}
 $\Omega \ \text{discreto} \implies \mathrm{Im}(X) \ \text{discreta} \implies X\ \text{discreta} .$
-\end{oss}
+\end{rem}
 Possiamo riassumere quanto detto sopra nella seguente
-\begin{theorem}
+\begin{thm}
 Sia $X:\Omega \rightarrow S\subset \RR$ una VA discreta che assume, con probabilità $1$, valori in $S=\{x_{k} :k\in I\}$, $I\subset \mathbb{Z}$. Allora
-\end{theorem}
+\end{thm}
 \begin{enumerate}
 \item $0\leq p_{X}(x) \leq 1,\forall x\in \RR$ e $p_{X}(x) =0,\forall x\notin S$
 \item $\sum\limits_{k\in I} p_{X}(k) =1$
@@ -157,11 +159,11 @@ p_{X}(x_{k}) =F_{X}(x_{k}) -F_{X}(x_{k-1}) ,\ \ \ \ \forall k\in I
 \PP(X\in B) =\sum\limits_{k:x_{k} \in B} p_{X}(x_{k})
 \end{equation*}
 \end{enumerate}
-\begin{oss}
+\begin{rem}
 $(3)$ e $(4)$ ci dicono che: se i punti di $S$ possono essere numerati in modo tale che $x_{h} < x_{k}$ per $h< k$, allora la funzione di ripartizione di una VA discreta è una funzione a gradini, che i gradini sono situati nei punti dell'insieme $S$ (i.e. $S$ è l'insieme dei punti di discontinuità di $F_{X}$) e che l'altezza del gradino corrispondente al punto $x_{k} \in S$ è proprio $p_{X}(x_{k})$ (i.e. $p_{X}$ è l'ampiezza dei salti della funzione di ripartizione $F_{X}$ nei punti di discontinuità).
 
 $(5)$ ci dice che è possibile costruire la probabilità di ogni evento $B\in \Ac$ a partire dalla densità di probabilità $p_{X}$.
-\end{oss}
+\end{rem}
 
 \Esercizio{fatto}
 
@@ -427,7 +429,7 @@ sono VA reali. Secondo la definizione dobbiamo mostrare che
 \forall B\in \mathcal{B} ,\ \ \ \ X^{-1}(B) \in \mathcal{B} ,\ \ \ \ Y^{-1}(B) \in \mathcal{B} ,
 \end{equation*}
 i.e. $X,Y$ sono misurabili.
-\begin{oss}
+\begin{rem}
 Se $(\Omega,\Ac,\PP)$ è uno spazio di probabilità, $X=\Ind_{A}$ è misurabile $\iff A\in \Ac$. Infatti
 \begin{equation*}
 \Ind_{A} :(\Omega ,\Ac)\rightarrow \{0,1\} \subset \RR
@@ -440,7 +442,7 @@ e
 \end{drcases}
 \ \in \Ac \iff A\in \Ac
 \end{equation*}
-\end{oss}
+\end{rem}
 
 Quindi per verificare che $X$ è una VA ci basterà verificare che $[0,p] \in \mathcal{B}$. Questo è vero perché $[0,p]$ è chiuso. Quindi $X$ è VA reale.
 
@@ -490,9 +492,9 @@ $X$ è una VA reale discreta Bernoulliana di parametro $p$.
 
 Stabilire se $Y$ è discreta è meno immediato, infatti $\mathrm{Im}(Y) =(-\infty ,0] \cup [ 1,+\infty)$.
 
-\begin{oss}
+\begin{rem}
 Sappiamo che se $Y$ assume valori discreti, allora $Y$ è una VA discreta, ma non è necessariamente vero il viceversa.
-\end{oss}
+\end{rem}
 
 Quindi da $\mathrm{Im}(Y)$ non possiamo dedurre nulla.
 
@@ -519,7 +521,7 @@ Quindi
 \end{equation*}
 i.e. $X=Y$ q.c.
 \item
-\begin{theorem}
+\begin{thm}
 Sia $X$ una VA reale definita su $(\Omega,\Ac,\PP)$ e sia $h:\RR\rightarrow \RR$ boreliana. Allora
 \begin{equation*}
 \EE[|h(x)|] =\int_{\Omega }| h(X(\omega))| d\PP(\omega) < +\infty \ \ \iff \ \ \int_{\RR}| h(x)| P^{X}(dx) < +\infty 
@@ -534,7 +536,7 @@ Se, in particolare, $X$ è discreta con densità $p_{X}$
 \begin{equation*}
 \EE[h(X)] =\sum\limits_{x\in S} h(x) p_{X}(x) \ \ \ \ \EE[X] =\sum\limits_{x\in S} xp_{X}(x)
 \end{equation*}
-\end{theorem}
+\end{thm}
 
 Abbiamo già calcolato la legge di $X$ e $Y$: $X\sim Y\sim B(p)$.
 \begin{equation*}
@@ -550,9 +552,9 @@ Poiché $X=Y$ q.c., $X$ e $Y$ hanno lo stesso valore atteso.
 \end{aligned}
 \end{gather*}
 
-\begin{oss}
+\begin{rem}
 In generale è sempre possibile costruire uno spazio di probabilità $(\Omega ,\mathcal{F} ,\PP)$ e una VA $X$ su di esso che ha $p(\cdotp)$ come densità, i.e. tale che $p_{X}(x) =p(x)$. Infatti basta prendere $\Omega =S,\mathcal{F} =\mathcal{P}(S)$ e $p$ l'unica misura di probabilità su $S$ tale che $\PP(\{x_{k}\}) =p(x_{k})$ con $k\in I$. È immediato verificare che la VA discreta $X(\omega) =\omega ,\forall \omega \in \Omega $ ha densità $p(\cdotp)$.
-\end{oss}
+\end{rem}
 \end{enumerate}
 
 \Soluzione
@@ -591,9 +593,9 @@ Da (1) e (2) si allora che
 \forall \omega \in \Omega ,\ \ \ \ X_{n}\left(\omega \right) =\Ind_{E_{n}}\left(\omega \right) ,\ \ \ \ \text{i.e.} \ \ \ \ X_{n} =\Ind_{E_{n}}
 \end{equation*}
 
-\begin{oss}
+\begin{rem}
 Questo ci dice che la VA $X_{n}$ rappresenta l'esito della $n$-esima prova, i.e. $1$ se otteniamo un successo, $0$ altrimenti.
-\end{oss}
+\end{rem}
 \item Sono funzioni a valori reali. In particolare $\forall n,\mathrm{Im}(X_{n}) =\{0,1\} \implies $ sono discrete. Resta da verificare che sono VA, ovvero che sono misurabili, i.e.
 \begin{gather*}
 \begin{aligned}
@@ -681,9 +683,9 @@ i.e.
 \forall k,\ \ \ \ p_{Y_{n}}\left(k\right) =\binom{n}{k} p^{k}\left(1-p\right)^{n-k} ,\ \ \ \ Y_{n} \sim B\left(n,p\right)
 \end{equation*}
 la somma di $n$ Bernoulliane di parametro $p$ è una Binomiale $B\left(n,p\right)$.
-\begin{oss}
+\begin{rem}
 Questo risultato non è vero in generale. La somma di VA bernoulliane è binomiale solo se queste sono indipendenti e con la stessa probabilità di successo $p$.
-\end{oss}
+\end{rem}
 
 \textit{Interpretazione:} la distribuzione binomiale $B\left(n,p\right)$ descrive la probabilità del numero di successi in $n$ prove di Bernoulli indipendenti e con la stessa probabilità di successo $p$.
 \item $Z$ è VA (perché minimo di VA) a valori in $\mathrm{Im}\left(Z\right) =\NN \cup \left\{+\infty \right\} \implies $ VA discreta. Densità discreta: $p_{Z} :\NN \cup \left\{+\infty \right\}\rightarrow \left[0,1\right]$. Sia $k\in \NN$ fissato
@@ -697,7 +699,7 @@ $Z$ è il numero minimo di prove per dare un successo.
  & =\lim _{n\rightarrow \infty }(1-p)^{n} =0
 \end{align*}
 
-\begin{oss}
+\begin{rem}
 Potevamo calcolare $p_{Z}(+\infty)$ anche nel seguente modo
 \begin{align*}
 p_{Z}(+\infty) & =1-\sum\limits_{k=1}^{\infty } p_{Z}(k) =1-p\sum\limits_{k=1}^{\infty }(1-p)^{k-1} =1-p\sum\limits_{k=0}^{\infty }(1-p)^{k}\\
@@ -707,7 +709,7 @@ dove abbiamo usato la serie geometrica
 \begin{equation*}
 \sum\limits_{n=0}^{\infty } q^{n} =\frac{1}{1-q} ,\ \ \ \ |q| < 1.
 \end{equation*}
-\end{oss}
+\end{rem}
 
 Quindi
 \begin{equation*}
@@ -784,7 +786,7 @@ Analogamente si mostra che
 U\sim B(1) ,\ \ \ \ U=1\ \text{q.c.}
 \end{equation*}
 \end{enumerate}
-\begin{oss}
+\begin{rem}
 Alcune considerazioni Es. 1 ed Es. 5.
 
 In quegli esercizi abbiamo visto \textit{diversi possibili modi} in cui introdurre una VA con distribuzione di Bernoulli.
@@ -818,7 +820,7 @@ Z:\left(\{0,1\} ,\sigma (\{0\}) ,\tilde{\PP}\right) & \rightarrow (\RR ,\mathcal
 \\
 \implies Z\sim B(p)
 \end{gather*}
-\end{oss}
+\end{rem}
 
 \Soluzione
 
@@ -1066,9 +1068,9 @@ X\sim \mathcal{P}(\lambda) \implies \Var[ X] =\lambda
 
 \Soluzione
 
-\begin{oss}
+\begin{rem}
 $\PP(X=k) =p(1-p)^{k-1}$ rappresenta la probabilità che il primo successo richieda l'esecuzione di $k$ prove $\indep $, ognuna con probabilità di successo $p$. Se la probabilità di successo è $p$ in ogni prova, allora la probabilità che alla $k$ esima prova si ottenga il primo successo è $\PP(X=k) =p(1-p)^{k-1}$.
-\end{oss}
+\end{rem}
 \begin{enumerate}
 \item Abbiamo
 \begin{gather*}
@@ -1096,7 +1098,7 @@ p_{X}(k) & =\PP(X=k)\\
  & =\tilde{p}(k) =p(1-p)^{k-1}
 \end{align*}
 
-\begin{oss}
+\begin{rem}
 Dato che le v.c. discrete sono caratterizzate dalla probabilità sugli atomi, nel senso che
 \begin{equation*}
 \forall B\in \Ac \ \ \ \ \PP(X\in B) =\sum\limits_{k:\ x_{k} \in B\cap S} p_{X}(x_{k})
@@ -1104,7 +1106,7 @@ Dato che le v.c. discrete sono caratterizzate dalla probabilità sugli atomi, ne
 caratterizzare $\PP$ sugli atomi, come fatto in (3), significa sostanzialmente dire che $\PP$ è l'unica misura di probabilità su $\left(\NN ,2^{\NN}\right)$ t.c. $\PP =P^{X}$, dove $P^{X}(\cdotp) =\PP(X\in \cdotp)$ è la legge di $X$.
 
 La misura che dobbiamo mettere su $\left(\NN ,2^{\NN}\right)$ è proprio la legge immagine di una v.c. geometrica di parametro $p$. Poi basta considerare su questo spazio di probabilità la v.c. $X=I$ e abbiamo immediatamente $X\sim \mathcal{G}(p)$.
-\end{oss}
+\end{rem}
 
 \textbf{Spazio di probabilità continuo:}
 
