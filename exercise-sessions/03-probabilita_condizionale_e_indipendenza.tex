@@ -797,18 +797,18 @@ Allora
 	\item $\PP(R_{1}) =\frac{r}{r+b}$
 	\item $\PP(R_{1} \cap B_{2}) =\PP(B_{2} \mid R_{1})\PP(R_{1}) =\frac{b}{r+b-1} \cdotp \frac{r}{r+b} =\frac{rb}{(r+b)(r+b-1)}$
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP((B_{1} \cap R_{2}) \cup (R_{1} \cap B_{2})) & =\underbrace{\PP(B_{1} \cap R_{2})}_{\underbrace{\PP(R_{1} \mid B_{1})}_{\frac{r}{r+b-1}}\underbrace{\PP(B_{1})}_{\frac{b}{r+b}}} +\underbrace{\PP(R_{1} \cap B_{2})}_{\frac{rb}{(r+b)(r+b-1)}}\\
 		 & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\underbrace{\PP((B_{1} \cap R_{2}) \cap (R_{1} \cap B_{2}))}_{0}\\
 		 & =\frac{2rb}{(r+b-1)(r+b)}
 	\end{aligned}$
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP(R_{2}) & =\PP(R_{2} \mid B_{1})\PP(B_{1}) +\PP(R_{2} \mid R_{1})\PP(R_{1})\\
 		 & =\frac{rb}{(r+b-1)(r+b)} +\frac{(r-1) b}{(r+b-1)(r+b)} =\frac{r}{b+r}
 	\end{aligned}$
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP(R_{3}) & =\PP(R_{3} \mid R_{1} \cap R_{2})\PP(R_{1} \cap R_{2}) +\\
 		 & \ \ \ \ \ \ \ \ +\PP(R_{3} \mid B_{1} \cap B_{2})\PP(B_{1} \cap B_{2}) +\\
 		 & \ \ \ \ \ \ \ \ +\PP(R_{3} \mid B_{1} \cap R_{2})\PP(B_{1} \cap R_{2}) +\\
@@ -915,14 +915,14 @@ Allora
 	\end{align*}
 	\item $\PP(B_{1} \mid B_{2}) =\frac{\PP(B_{2} \mid B_{1})\PP(B_{1})}{\PP(B_{2})} =\frac{3}{5}$
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\right) & \overset{\text{Thm} \ 3.3\ JP}{=}\PP(B_{1})\PP(B_{2} \mid B_{1})\PP(B_{3} \mid B_{1} \cap B_{2}) \cdots \PP(B_{n} \mid B_{1} \cap \cdots \cap B_{n-1})\\
 		 & =\left(\frac{1}{2}\right)^{n}
 	\end{aligned}$
 	
 	Stiamo sfruttando il fatto che c'è rinforzo solo delle rosse e \textit{non} che abbiamo prove ripetute indipendenti!
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\complementary\right) & =\PP\left(B_{1}\complementary\right)\PP\left(B_{2}\complementary \mid B_{1}\complementary\right) \cdots \PP\left(B_{n}\complementary \mid B_{1}\complementary \cap \cdots \cap B_{n-1}\complementary\right)\\
 		 & =\frac{1}{\cancel{2}} \cdotp \frac{\cancel{2}}{\cancel{3}} \cdots \frac{1}{n+1} =\frac{1}{n+1}
 	\end{aligned}$
@@ -932,7 +932,7 @@ Allora
 
 	Abbiamo sfruttato la continuità dall'alto di $\PP$.
 	\item $
-	\begin{aligned}
+	\begin{aligned}[t]
 		\PP\left(\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right) \cup \left(\bigcap\limits_{k=1}^{\infty } B_{k}\complementary\right)\right) & =\underbrace{\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\right)}_{0} +\PP\left(\bigcap\limits_{k=1}^{\infty } B_{k}\complementary\right) & \text{(unione disgiunta)}\\
 		 & =\lim\limits_{n\rightarrow \infty }\PP\left(\bigcap\limits_{k=1}^{n} B_{k}\complementary\right) & \text{(continuità)}\\
 		 & =\lim\limits_{n\rightarrow \infty }\frac{1}{n+1} =0 & 
